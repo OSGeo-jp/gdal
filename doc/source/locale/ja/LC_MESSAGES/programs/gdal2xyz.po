@@ -21,19 +21,19 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:5
 msgid "gdal2xyz"
-msgstr ""
+msgstr "gdal2xyz"
 
 #: ../../source/programs/gdal2xyz.rst:9
 msgid "Translates a raster file into `xyz` format."
-msgstr ""
+msgstr "ラスターファイルを `xyz` フォーマットに変換する。"
 
 #: ../../source/programs/gdal2xyz.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "あらすじ"
 
 #: ../../source/programs/gdal2xyz.rst:28
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal2xyz.rst:30
 msgid ""
@@ -44,15 +44,15 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:33
 msgid "Select more then one band"
-msgstr ""
+msgstr "複数のバンドを選択する"
 
 #: ../../source/programs/gdal2xyz.rst:34
 msgid "Skip or replace nodata value"
-msgstr ""
+msgstr "ノデータの値をスキップまたは置換する"
 
 #: ../../source/programs/gdal2xyz.rst:35
 msgid "Return the output as numpy arrays."
-msgstr ""
+msgstr "出力をnumpy配列で返す。"
 
 #: ../../source/programs/gdal2xyz.rst:39
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了する"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:47
 msgid "How many rows/cols to skip in each iteration."
-msgstr ""
+msgstr "各反復でスキップする行数/列数。"
 
 #: ../../source/programs/gdal2xyz.rst:51
 msgid ""
@@ -90,15 +90,15 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:63
 msgid "Select all input bands."
-msgstr ""
+msgstr "すべての入力バンドを選択する。"
 
 #: ../../source/programs/gdal2xyz.rst:67
 msgid "Use comma instead of space as a delimiter."
-msgstr ""
+msgstr "区切り文字として、スペースの代わりにカンマを使用する。"
 
 #: ../../source/programs/gdal2xyz.rst:71
 msgid "Exclude the output lines with nodata value (as determined by srcnodata)"
-msgstr ""
+msgstr "srcnodataによって決定される）nodata値を持つ出力行を除外する"
 
 #: ../../source/programs/gdal2xyz.rst:75
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:87
 msgid "Show help message and exit."
-msgstr ""
+msgstr "ヘルプメッセージを表示して終了する。"
 
 #: ../../source/programs/gdal2xyz.rst:91
 msgid ""
@@ -127,11 +127,11 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:96
 msgid "The destination file name."
-msgstr ""
+msgstr "保存先のファイル名。"
 
 #: ../../source/programs/gdal2xyz.rst:100
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal2xyz.rst:107
 msgid ""
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ../../source/programs/gdal2xyz.rst:114
 msgid "Caveats"
-msgstr ""
+msgstr "注意事項"
 
 #: ../../source/programs/gdal2xyz.rst:116
 msgid ""
