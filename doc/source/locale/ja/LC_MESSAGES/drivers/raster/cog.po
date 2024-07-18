@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/cog.rst:13
 msgid "This driver supports the creation of Cloud Optimized GeoTIFF (COG)"
-msgstr ""
+msgstr "このドライバーは、Cloud Optimized GeoTIFF (COG)の作成をサポートします。"
 
 #: ../../source/drivers/raster/cog.rst:15
 msgid ""
