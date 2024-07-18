@@ -45,12 +45,22 @@ msgid ""
 "and the map displays very fast in the web browser. You only need to "
 "upload the generated directory onto a web server."
 msgstr ""
+"このユーティリティは、小さなタイルとメタデータを含むディレクトリを生成し、"
+"OSGeoタイルマップサービス仕様に従います。Google Maps、OpenLayers、"
+"Leafletをベースにした簡単なウェブページとビューアも生成されるため、"
+"誰でも快適にオンラインで地図を探索でき、特別なソフトウェア（例えばMapServer）を"
+"インストールしたり設定したりする必要がなく、ウェブブラウザで地図が非常に速く表示されます。"
+"生成されたディレクトリをウェブサーバーにアップロードするだけです。"
+
 
 #: ../../source/programs/gdal2tiles.rst:40
 msgid ""
 "GDAL2Tiles also creates the necessary metadata for Google Earth (KML "
 "SuperOverlay), in case the supplied map uses EPSG:4326 projection."
 msgstr ""
+"GDAL2Tilesは、提供された地図がEPSG:4326投影法を使用している場合、"
+"Google Earth用の必要なメタデータ（KML SuperOverlay）も作成します。"
+
 
 #: ../../source/programs/gdal2tiles.rst:43
 msgid ""
