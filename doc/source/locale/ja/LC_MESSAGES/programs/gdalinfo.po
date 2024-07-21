@@ -313,7 +313,7 @@ msgid ""
 "-json:"
 msgstr ""
 "上記の度、分、秒で表された角の座標を10進数で表したい場合は "
-"ｇdalinfo -jsonのメンバー ``wgs84Extent`` について調べてください:"
+"gdalinfo -jsonのメンバー ``wgs84Extent`` について調べてください:"
 
 
 #: ../../source/programs/gdalinfo.rst:203
