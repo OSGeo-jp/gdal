@@ -6,18 +6,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GDAL \n"
+"Project-Id-Version: GDAL\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 03:46+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-07-05 04:35+0900\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
-"Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: ../../source/community/code_of_conduct.rst:5
 #: ../../source/community/index.rst:16
@@ -26,23 +27,28 @@ msgstr "行動規範"
 
 #: ../../source/community/code_of_conduct.rst:7
 msgid ""
-"This code of conduct governs how we behave in any GDAL forum or event and"
-" whenever we will be judged by our actions. We expect it to be honored by"
-" everyone who participates in the GDAL community formally or informally, "
-"or claims any affiliation with the project."
+"This code of conduct governs how we behave in any GDAL forum or event "
+"and whenever we will be judged by our actions. We expect it to be "
+"honored by everyone who participates in the GDAL community formally or "
+"informally, or claims any affiliation with the project."
 msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:13
 msgid "Introduction"
-msgstr "紹介"
+msgstr "はじめに"
 
 #: ../../source/community/code_of_conduct.rst:15
 msgid ""
-"This code of conduct governs how we behave in any GDAL forum or event and"
-" whenever we will be judged by our actions. We expect it to be honored by"
-" everyone who participates in the GDAL community formally or informally, "
-"or claims any affiliation with the GDAL project."
+"This code of conduct governs how we behave in any GDAL forum or event "
+"and whenever we will be judged by our actions. We expect it to be "
+"honored by everyone who participates in the GDAL community formally or "
+"informally, or claims any affiliation with the GDAL project."
 msgstr ""
+"この行動規範は、私たちがGDALのフォーラムやイベントにおいてどのように振る"
+"舞うか、また、私たちの行動によってどのような判断が下されるかを規定するも"
+"のです。私たちは、GDALコミュニティに公式または非公式に参加するすべての"
+"人、あるいはGDALプロジェクトとの関係を主張するすべての人が、この行動規範"
+"を守ることを期待します。"
 
 #: ../../source/community/code_of_conduct.rst:20
 msgid ""
@@ -55,14 +61,16 @@ msgstr ""
 #: ../../source/community/code_of_conduct.rst:25
 msgid ""
 "This code is not exhaustive or complete. It serves to distill our common "
-"understanding of a collaborative, shared environment and goals. We expect"
-" it to be followed in spirit as much as in the letter, so that it can "
-"enrich all of us and the technical communities in which we participate."
+"understanding of a collaborative, shared environment and goals. We "
+"expect it to be followed in spirit as much as in the letter, so that it "
+"can enrich all of us and the technical communities in which we "
+"participate."
 msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:31
 msgid "Diversity Statement"
 msgstr "多様性に関する声明"
+
 
 #: ../../source/community/code_of_conduct.rst:33
 msgid ""
@@ -86,9 +94,9 @@ msgid ""
 "public methods of communication for project-related messages, unless "
 "discussing something sensitive. This applies to messages for help or "
 "project-related support, too; not only is a public support request much "
-"more likely to result in an answer to a question, it also makes sure that"
-" any inadvertent mistakes made by people answering will be more easily "
-"detected and corrected."
+"more likely to result in an answer to a question, it also makes sure "
+"that any inadvertent mistakes made by people answering will be more "
+"easily detected and corrected."
 msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:50
@@ -102,9 +110,9 @@ msgid ""
 "frustration from time to time, but we do not allow frustration to turn "
 "into a personal attack. A community where people feel uncomfortable or "
 "threatened is not a productive one. Note that we have a multi-cultural, "
-"multi-lingual community and some of us are non-native speakers. We should"
-" be respectful when dealing with other community members as well as with "
-"people outside our community."
+"multi-lingual community and some of us are non-native speakers. We "
+"should be respectful when dealing with other community members as well "
+"as with people outside our community."
 msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:60
@@ -159,9 +167,10 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:89
 msgid ""
-"Try to bring new ideas to a conversation so that each mail adds something"
-" unique to the thread, keeping in mind that the rest of the thread still "
-"contains the other messages with arguments that have already been made."
+"Try to bring new ideas to a conversation so that each mail adds "
+"something unique to the thread, keeping in mind that the rest of the "
+"thread still contains the other messages with arguments that have "
+"already been made."
 msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:93
@@ -249,15 +258,15 @@ msgstr 報告ガイドライン""
 
 #: ../../source/community/code_of_conduct.rst:125
 msgid ""
-"If you believe someone is breaking this code of conduct, you may reply to"
-" them, and point to this code of conduct. Such messages may be in public "
-"or in private, whatever is most appropriate. Assume good faith; it is "
-"more likely that participants are unaware of their bad behavior than that"
-" they intentionally try to degrade the quality of the discussion. Should "
-"there be difficulties in dealing with the situation, you may report your "
-"concerns to event staff, a forum leader or the GDAL Board. Serious or "
-"persistent offenders may be expelled from the event or forum by event "
-"organizers or forum leaders."
+"If you believe someone is breaking this code of conduct, you may reply "
+"to them, and point to this code of conduct. Such messages may be in "
+"public or in private, whatever is most appropriate. Assume good faith; "
+"it is more likely that participants are unaware of their bad behavior "
+"than that they intentionally try to degrade the quality of the "
+"discussion. Should there be difficulties in dealing with the situation, "
+"you may report your concerns to event staff, a forum leader or the GDAL "
+"Board. Serious or persistent offenders may be expelled from the event or "
+"forum by event organizers or forum leaders."
 msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:134
@@ -272,8 +281,8 @@ msgstr "クレジット"
 
 #: ../../source/community/code_of_conduct.rst:139
 msgid ""
-"GDAL re-uses the `OSGeo Code of Conduct <https://www.osgeo.org/resources"
-"/osgeo-code-of-conduct/>`__"
+"GDAL re-uses the `OSGeo Code of Conduct <https://www.osgeo.org/resources/"
+"osgeo-code-of-conduct/>`__"
 msgstr ""
 
 #: ../../source/community/index.rst:5
@@ -324,8 +333,8 @@ msgid ""
 "Visit http://github.com/OSGeo/GDAL to file issues you might be having "
 "with the software. GitHub is also where you can obtain a current "
 "development version of the software in the `git`_ revision control "
-"system. The GDAL project is eager to take contributions in all forms, and"
-" we welcome those who are willing to roll up their sleeves and start "
+"system. The GDAL project is eager to take contributions in all forms, "
+"and we welcome those who are willing to roll up their sleeves and start "
 "filing tickets, pushing code, generating builds, and answering questions."
 msgstr ""
 
@@ -335,10 +344,10 @@ msgstr "会話"
 
 #: ../../source/community/index.rst:56
 msgid ""
-"You can find some GDAL developers in the IRC channel #gdal on "
-"`Libera.Chat`_. This mechanism is usually reserved for active meetings "
-"and other outreach with the community. The `Mailing List`_ and `GitHub`_ "
-"avenues are going to be more productive communication channels in most "
+"You can find some GDAL developers in the IRC channel #gdal on `Libera."
+"Chat`_. This mechanism is usually reserved for active meetings and other "
+"outreach with the community. The `Mailing List`_ and `GitHub`_ avenues "
+"are going to be more productive communication channels in most "
 "situations."
 msgstr ""
 
@@ -348,8 +357,8 @@ msgstr "ソーシャルメディア"
 
 #: ../../source/community/index.rst:69
 msgid ""
-"You can follow GDAL official news on Mastodon: "
-"https://mastodon.social/@gdal / @gdal@mastodon.social"
+"You can follow GDAL official news on Mastodon: https://mastodon.social/"
+"@gdal / @gdal@mastodon.social"
 msgstr ""
 
 #: ../../source/community/index.rst:73
@@ -381,20 +390,20 @@ msgstr "ガバナンスとコミュニティ参加"
 
 #: ../../source/community/index.rst:87
 msgid ""
-"Originally, GDAL has been lead by Frank Warmerdam, the original author of"
-" much of GDAL/OGR, though with contributions and input from a variety of "
-"people. As of February 2006 GDAL/OGR became a founding project of the "
-"`Open Source Geospatial Foundation (OSGeo) <https://www.osgeo.org/>`_ and"
-" began a transition to a more community oriented governance model - in "
-"keeping with OSGeo expectations."
+"Originally, GDAL has been lead by Frank Warmerdam, the original author "
+"of much of GDAL/OGR, though with contributions and input from a variety "
+"of people. As of February 2006 GDAL/OGR became a founding project of the "
+"`Open Source Geospatial Foundation (OSGeo) <https://www.osgeo.org/>`_ "
+"and began a transition to a more community oriented governance model - "
+"in keeping with OSGeo expectations."
 msgstr ""
 
 #: ../../source/community/index.rst:94
 msgid ""
-"Membership as an OSGeo project provides assurances that a variety of best"
-" practices are being employed by the GDAL/OGR project, and that users and"
-" contributors can be assured of responsible project operation and "
-"continuity of the project. In particular:"
+"Membership as an OSGeo project provides assurances that a variety of "
+"best practices are being employed by the GDAL/OGR project, and that "
+"users and contributors can be assured of responsible project operation "
+"and continuity of the project. In particular:"
 msgstr ""
 
 #: ../../source/community/index.rst:98
@@ -411,8 +420,8 @@ msgstr ""
 
 #: ../../source/community/index.rst:101
 msgid ""
-"Part of the systems infrastructure used by the project is provided by the"
-" foundation, with responsible backup and redundancy to minimize "
+"Part of the systems infrastructure used by the project is provided by "
+"the foundation, with responsible backup and redundancy to minimize "
 "disruptions."
 msgstr ""
 
@@ -496,9 +505,9 @@ msgstr "GDALサービスプロバイダー"
 #: ../../source/community/index.rst:139
 msgid ""
 "GDAL is developed and supported by a rich ecosystem of businesses and "
-"individuals around the world. You can consult a list of "
-":ref:`service_providers` who can assist you in getting the best out of "
-"your GDAL investment."
+"individuals around the world. You can consult a list of :ref:"
+"`service_providers` who can assist you in getting the best out of your "
+"GDAL investment."
 msgstr ""
 
 #: ../../source/community/service_providers.rst:7
@@ -509,11 +518,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:10
 msgid ""
-"In this page we provide a list of service providers who can assist you in"
-" getting the best out of your GDAL investment. Their services can range "
-"from training and technical support to help you get started, all the way "
-"to specialized development and support services to advance the software "
-"and support your organization's mission-critical applications."
+"In this page we provide a list of service providers who can assist you "
+"in getting the best out of your GDAL investment. Their services can "
+"range from training and technical support to help you get started, all "
+"the way to specialized development and support services to advance the "
+"software and support your organization's mission-critical applications."
 msgstr ""
 
 #: ../../source/community/service_providers.rst:20
@@ -540,8 +549,8 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:37
 msgid ""
-"Core Contributor organizations have GDAL Committers and/or PSC members as"
-" part of their team and as such they are the closest to the core "
+"Core Contributor organizations have GDAL Committers and/or PSC members "
+"as part of their team and as such they are the closest to the core "
 "development of the software and are usually the best to go to for "
 "support."
 msgstr ""
@@ -585,14 +594,14 @@ msgstr "ロゴ　ホブ"
 
 #: ../../source/community/service_providers.rst:64
 msgid ""
-"`Hobu, Inc.`_ (United States) is a `sam.gov "
-"<https://sam.gov>`__-registered company founded by Howard Butler with "
-"more than twenty years experience supporting the creation, enhancement, "
-"and management of geospatial open source geospatial software such as "
-"`PDAL <https://pdal.io>`__, GDAL/OGR, PROJ, and open standards such as "
-"`GeoJSON <https://datatracker.ietf.org/doc/html/rfc7946>`__, `PROJJSON "
-"<https://proj.org/en/latest/specifications/projjson.html>`__, and `Cloud "
-"Optimized Point Cloud <https://copc.io/>`__."
+"`Hobu, Inc.`_ (United States) is a `sam.gov <https://sam.gov>`__-"
+"registered company founded by Howard Butler with more than twenty years "
+"experience supporting the creation, enhancement, and management of "
+"geospatial open source geospatial software such as `PDAL <https://pdal."
+"io>`__, GDAL/OGR, PROJ, and open standards such as `GeoJSON <https://"
+"datatracker.ietf.org/doc/html/rfc7946>`__, `PROJJSON <https://proj.org/"
+"en/latest/specifications/projjson.html>`__, and `Cloud Optimized Point "
+"Cloud <https://copc.io/>`__."
 msgstr ""
 
 #: ../../source/community/service_providers.rst:74
@@ -603,8 +612,8 @@ msgstr "貢献者"
 msgid ""
 "The Contributors listed here usually have power users and experienced "
 "integrators as part of their team who are recognized in the GDAL "
-"community for their contributions to various aspects of the software over"
-" the years and are very well positioned to assist you with GDAL."
+"community for their contributions to various aspects of the software "
+"over the years and are very well positioned to assist you with GDAL."
 msgstr ""
 
 #: ../../source/community/service_providers.rst:83
@@ -688,4 +697,3 @@ msgid ""
 "The steps to add a company to the service providers list are outlined in "
 "the :ref:`rfc-79` document."
 msgstr ""
-

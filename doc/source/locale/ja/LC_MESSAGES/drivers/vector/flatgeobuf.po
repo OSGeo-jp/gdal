@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -22,11 +22,11 @@ msgstr ""
 #: ../../source/drivers/vector/flatgeobuf.rst:4
 #: ../../source/drivers/vector/flatgeobuf.rst:8
 msgid "FlatGeobuf"
-msgstr ""
+msgstr "FlatGeobuf"
 
 #: ../../source/drivers/vector/flatgeobuf.rst:-1
 msgid "Driver short name"
-msgstr ""
+msgstr "ドライバー短縮名"
 
 #: ../../source/drivers/vector/flatgeobuf.rst:12
 msgid ""
@@ -38,11 +38,11 @@ msgstr ""
 
 #: ../../source/drivers/vector/flatgeobuf.rst:18
 msgid "Driver capabilities"
-msgstr ""
+msgstr "ドライバーの機能"
 
 #: ../../source/drivers/vector/flatgeobuf.rst:27
 msgid "Multi layer support"
-msgstr ""
+msgstr "マルチレイヤーサポート"
 
 #: ../../source/drivers/vector/flatgeobuf.rst:29
 msgid ""

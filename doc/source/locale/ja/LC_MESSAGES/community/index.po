@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:54
 msgid "Chat"
-msgstr ""
+msgstr "チャット"
 
 #: ../../source/community/index.rst:56
 msgid ""
@@ -91,7 +91,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:67
 msgid "Social media"
-msgstr ""
+msgstr "ソーシャルメディア"
 
 #: ../../source/community/index.rst:69
 msgid ""
@@ -101,7 +101,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:73
 msgid "Conference"
-msgstr ""
+msgstr "カンファレンス"
 
 #: ../../source/community/index.rst:-1
 msgid "FOSS4G 2023"

@@ -81,18 +81,18 @@ html: generated_rst_files
 	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS) $(LA)"
 	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)/$(LA)" $(SPHINXOPTS) $(O)
 	# Hack to hide the TOC
-	sed 's/<div class="toctree-wrapper compound">/<div class="toctree-wrapper compound" style="display: none;">/' < "$(BUILDDIR)/html/drivers/raster/index.html" > "$(BUILDDIR)/html/drivers/raster/index.html.mod"
-	mv "$(BUILDDIR)/html/drivers/raster/index.html.mod" "$(BUILDDIR)/html/drivers/raster/index.html"
-	sed 's/<div class="toctree-wrapper compound">/<div class="toctree-wrapper compound" style="display: none;">/' < "$(BUILDDIR)/html/drivers/vector/index.html" > "$(BUILDDIR)/html/drivers/vector/index.html.mod"
-	mv "$(BUILDDIR)/html/drivers/vector/index.html.mod" "$(BUILDDIR)/html/drivers/vector/index.html"
-	sed "s/python_api_ref\.html/\.\.\/python\/index\.html/" < "$(BUILDDIR)/html/api/index.html" > "$(BUILDDIR)/html/api/index.html.mod"
-	mv "$(BUILDDIR)/html/api/index.html.mod" "$(BUILDDIR)/html/api/index.html"
-	sed 's/<div class="toctree-wrapper compound">/<div class="toctree-wrapper compound" style="display: none;">/' < "$(BUILDDIR)/html/sponsors/index.html" > "$(BUILDDIR)/html/sponsors/index.html.mod"
-	mv "$(BUILDDIR)/html/sponsors/index.html.mod" "$(BUILDDIR)/html/sponsors/index.html"
-	rm -rf $(BUILDDIR)/html/doxygen
-	cp -r $(BUILDDIR)/doxygen_html $(BUILDDIR)/html/doxygen
-	ln -sf ../latex/gdal.pdf $(BUILDDIR)/html
-	cp -f "source/sponsors/Sustainable GDAL Sponsorship Prospectus.pdf" $(BUILDDIR)/html/sponsors
+	sed 's/<div class="toctree-wrapper compound">/<div class="toctree-wrapper compound" style="display: none;">/' < "$(BUILDDIR)/$(LA)/html/drivers/raster/index.html" > "$(BUILDDIR)/$(LA)/html/drivers/raster/index.html.mod"
+	mv "$(BUILDDIR)/$(LA)/html/drivers/raster/index.html.mod" "$(BUILDDIR)/$(LA)/html/drivers/raster/index.html"
+	sed 's/<div class="toctree-wrapper compound">/<div class="toctree-wrapper compound" style="display: none;">/' < "$(BUILDDIR)/$(LA)/html/drivers/vector/index.html" > "$(BUILDDIR)/$(LA)/html/drivers/vector/index.html.mod"
+	mv "$(BUILDDIR)/$(LA)/html/drivers/vector/index.html.mod" "$(BUILDDIR)/$(LA)/html/drivers/vector/index.html"
+	sed "s/python_api_ref\.html/\.\.\/python\/index\.html/" < "$(BUILDDIR)/$(LA)/html/api/index.html" > "$(BUILDDIR)/$(LA)/html/api/index.html.mod"
+	mv "$(BUILDDIR)/$(LA)/html/api/index.html.mod" "$(BUILDDIR)/$(LA)/html/api/index.html"
+	sed 's/<div class="toctree-wrapper compound">/<div class="toctree-wrapper compound" style="display: none;">/' < "$(BUILDDIR)/$(LA)/html/sponsors/index.html" > "$(BUILDDIR)/$(LA)/html/sponsors/index.html.mod"
+	mv "$(BUILDDIR)/$(LA)/html/sponsors/index.html.mod" "$(BUILDDIR)/$(LA)/html/sponsors/index.html"
+	rm -rf $(BUILDDIR)/$(LA)/html/doxygen
+	cp -r $(BUILDDIR)/doxygen_html $(BUILDDIR)/$(LA)/html/doxygen
+	ln -sf ../latex/gdal.pdf $(BUILDDIR)/$(LA)/html
+	cp -f "source/sponsors/Sustainable GDAL Sponsorship Prospectus.pdf" $(BUILDDIR)/$(LA)/html/sponsors
 
 man: generated_rst_files
 	$(SPHINXBUILD) -M man "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
