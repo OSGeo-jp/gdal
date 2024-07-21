@@ -21,23 +21,23 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:5
 msgid "GPKG -- GeoPackage raster"
-msgstr ""
+msgstr "GPKG -- GeoPackage ラスター"
 
 #: ../../source/drivers/raster/gpkg.rst:-1
 msgid "Driver short name"
-msgstr ""
+msgstr "ドライバー・ショートネーム"
 
 #: ../../source/drivers/raster/gpkg.rst:7
 msgid "GPKG"
-msgstr ""
+msgstr GPKG""
 
 #: ../../source/drivers/raster/gpkg.rst:-1
 msgid "Build dependencies"
-msgstr ""
+msgstr "ビルドの依存関係"
 
 #: ../../source/drivers/raster/gpkg.rst:9
 msgid "libsqlite3 (and any or all of PNG, JPEG, WEBP drivers)"
-msgstr ""
+msgstr "libsqlite3 (および PNG、JPEG、WEBP ドライバのいずれかまたはすべて)"
 
 #: ../../source/drivers/raster/gpkg.rst:11
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:22
 msgid "Naming and conventions for extensions"
-msgstr ""
+msgstr "エクステンションの命名と規約"
 
 #: ../../source/drivers/raster/gpkg.rst:24
 msgid ""
@@ -78,31 +78,31 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:31
 msgid "Various kind of input datasets can be converted to GeoPackage raster :"
-msgstr ""
+msgstr "さまざまな種類の入力データセットを GeoPackage ラスターに変換できます："
 
 #: ../../source/drivers/raster/gpkg.rst:33
 msgid "Single band grey level"
-msgstr ""
+msgstr "シングルバンド グレーレベル"
 
 #: ../../source/drivers/raster/gpkg.rst:34
 msgid "Single band with R,G,B or R,G,B,A color table"
-msgstr ""
+msgstr "R,G,BまたはR,G,B,Aカラーテーブル付きシングルバンド"
 
 #: ../../source/drivers/raster/gpkg.rst:35
 msgid "Two bands: first band with grey level, second band with alpha channel"
-msgstr ""
+msgstr "2つのバンド：最初のバンドはグレーレベル、2番目のバンドはアルファチャンネル"
 
 #: ../../source/drivers/raster/gpkg.rst:36
 msgid "Three bands: Red, Green, Blue"
-msgstr ""
+msgstr "3つのバンド： 赤、緑、青"
 
 #: ../../source/drivers/raster/gpkg.rst:37
 msgid "Four band: Red, Green, Blue, Alpha"
-msgstr ""
+msgstr "4バンド： 赤、緑、青、アルファ"
 
 #: ../../source/drivers/raster/gpkg.rst:39
 msgid "GeoPackage rasters only support Byte data type."
-msgstr ""
+msgstr "GeoPackage ラスターは Byte データ型のみをサポートしています。"
 
 #: ../../source/drivers/raster/gpkg.rst:41
 msgid ""
@@ -124,11 +124,11 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:50
 msgid "Driver capabilities"
-msgstr ""
+msgstr "ドライバーの能力"
 
 #: ../../source/drivers/raster/gpkg.rst:61
 msgid "Opening options"
-msgstr ""
+msgstr "オープニング・オプション"
 
 #: ../../source/drivers/raster/gpkg.rst:63
 msgid ""
@@ -157,7 +157,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:83
 msgid "|about-open-options| The following open options are available:"
-msgstr ""
+msgstr "|about-open-options|次のオープン・オプションが利用できる："
 
 #: ../../source/drivers/raster/gpkg.rst:169
 msgid ""
@@ -238,15 +238,15 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:225
 msgid "Tile formats"
-msgstr ""
+msgstr "タイトルフォーマット"
 
 #: ../../source/drivers/raster/gpkg.rst:228
 msgid "Tiled rasters"
-msgstr ""
+msgstr "タイル状ラスター"
 
 #: ../../source/drivers/raster/gpkg.rst:230
 msgid "This section only applies for raster of Byte data type."
-msgstr ""
+msgstr "このセクションはByteデータ型のラスターにのみ適用される。"
 
 #: ../../source/drivers/raster/gpkg.rst:232
 msgid ""
@@ -300,7 +300,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:271
 msgid "Tiled gridded coverage data"
-msgstr ""
+msgstr "タイル状のグリッド・カバレッジ・データ"
 
 #: ../../source/drivers/raster/gpkg.rst:273
 msgid ""
@@ -332,7 +332,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:298
 msgid "Tiling schemes"
-msgstr ""
+msgstr "タイリング・スキーム"
 
 #: ../../source/drivers/raster/gpkg.rst:300
 msgid ""
@@ -438,23 +438,23 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:373
 msgid "all zoom levels must have the same origin"
-msgstr ""
+msgstr "すべてのズームレベルは同じ原点でなければならない"
 
 #: ../../source/drivers/raster/gpkg.rst:374
 msgid "consecutive zoom levels defer by a resolution of a factor of two."
-msgstr ""
+msgstr "連続したズーム・レベルは、2倍の分解能で延期される。"
 
 #: ../../source/drivers/raster/gpkg.rst:375
 msgid "all zoom levels must have the same tile dimension"
-msgstr ""
+msgstr "すべてのズームレベルは同じタイル寸法でなければならない。"
 
 #: ../../source/drivers/raster/gpkg.rst:376
 msgid "variable matrix width tile set are not supported."
-msgstr ""
+msgstr "可変マトリックス幅のタイルセットはサポートされていない。"
 
 #: ../../source/drivers/raster/gpkg.rst:381
 msgid "Nodata value"
-msgstr ""
+msgstr "ノデータ値"
 
 #: ../../source/drivers/raster/gpkg.rst:383
 msgid ""
@@ -477,53 +477,53 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:393
 msgid "On writing, for PNG tiles, the behavior is the following one:"
-msgstr ""
+msgstr "PNGタイルの場合、書き込み時の動作は以下のようになる："
 
 #: ../../source/drivers/raster/gpkg.rst:396
 #: ../../source/drivers/raster/gpkg.rst:405
 #: ../../source/drivers/raster/gpkg.rst:415
 msgid "GDAL data type"
-msgstr ""
+msgstr "GDALデータ型"
 
 #: ../../source/drivers/raster/gpkg.rst:396
 msgid "Input GDAL nodata value"
-msgstr ""
+msgstr "入力GDALノデータ値"
 
 #: ../../source/drivers/raster/gpkg.rst:396
 #: ../../source/drivers/raster/gpkg.rst:405
 #: ../../source/drivers/raster/gpkg.rst:415
 msgid "null_value in GPKG gpkg_2d_gridded_coverage_ancillary"
-msgstr ""
+msgstr "GPKG gpkg_2d_gridded_coverage_ancillary の null_value"
 
 #: ../../source/drivers/raster/gpkg.rst:397
 #: ../../source/drivers/raster/gpkg.rst:406
 #: ../../source/drivers/raster/gpkg.rst:407
 #: ../../source/drivers/raster/gpkg.rst:416
 msgid "Int16"
-msgstr ""
+msgstr "Int16"
 
 #: ../../source/drivers/raster/gpkg.rst:397
 #: ../../source/drivers/raster/gpkg.rst:399
 msgid "Any"
-msgstr ""
+msgstr "どんなものでも"
 
 #: ../../source/drivers/raster/gpkg.rst:397
 #: ../../source/drivers/raster/gpkg.rst:399
 #: ../../source/drivers/raster/gpkg.rst:416
 #: ../../source/drivers/raster/gpkg.rst:418
 msgid "65535"
-msgstr ""
+msgstr "65535"
 
 #: ../../source/drivers/raster/gpkg.rst:398
 #: ../../source/drivers/raster/gpkg.rst:408
 #: ../../source/drivers/raster/gpkg.rst:417
 msgid "UInt16"
-msgstr ""
+msgstr "UInt16"
 
 #: ../../source/drivers/raster/gpkg.rst:398
 #: ../../source/drivers/raster/gpkg.rst:417
 msgid "X (if coverage offset == 0 and coverage scale == 1)"
-msgstr ""
+msgstr "X (if coverage offset == 0 and coverage scale == 1)"
 
 #: ../../source/drivers/raster/gpkg.rst:398
 #: ../../source/drivers/raster/gpkg.rst:407
@@ -531,50 +531,50 @@ msgstr ""
 #: ../../source/drivers/raster/gpkg.rst:409
 #: ../../source/drivers/raster/gpkg.rst:417
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: ../../source/drivers/raster/gpkg.rst:399
 #: ../../source/drivers/raster/gpkg.rst:409
 #: ../../source/drivers/raster/gpkg.rst:418
 msgid "Float32"
-msgstr ""
+msgstr "Float32"
 
 #: ../../source/drivers/raster/gpkg.rst:402
 msgid "On reading, for PNG tiles, the behavior is the following one:"
-msgstr ""
+msgstr "On reading, for PNG tiles, the behavior is the following one:"
 
 #: ../../source/drivers/raster/gpkg.rst:405
 msgid "Exposed GDAL nodata value"
-msgstr ""
+msgstr "Exposed GDAL nodata value"
 
 #: ../../source/drivers/raster/gpkg.rst:406
 msgid ">= 32768"
-msgstr ""
+msgstr ">= 32768"
 
 #: ../../source/drivers/raster/gpkg.rst:406
 #: ../../source/drivers/raster/gpkg.rst:416
 msgid "-32768"
-msgstr ""
+msgstr "-32768"
 
 #: ../../source/drivers/raster/gpkg.rst:407
 msgid "X <= 32767"
-msgstr ""
+msgstr ""X <= 32767"
 
 #: ../../source/drivers/raster/gpkg.rst:412
 msgid "Thus, perfect roundtripping is achieved in the following cases:"
-msgstr ""
+msgstr "したがって、完全なラウンドトリッピングは次のような場合に達成される："
 
 #: ../../source/drivers/raster/gpkg.rst:415
 msgid "GDAL nodata value"
-msgstr ""
+msgstr "GDALノデータ値"
 
 #: ../../source/drivers/raster/gpkg.rst:422
 msgid "Creation options"
-msgstr ""
+msgstr "「創造オプション"
 
 #: ../../source/drivers/raster/gpkg.rst:424
 msgid "|about-creation-options| The following creation options are available:"
-msgstr ""
+msgstr "|about-creation-options|以下の作成オプションが利用可能です："
 
 #: ../../source/drivers/raster/gpkg.rst:502
 msgid ""
@@ -596,7 +596,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:623
 msgid "Overviews"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/drivers/raster/gpkg.rst:625
 msgid ""
@@ -618,7 +618,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:638
 msgid "Metadata"
-msgstr ""
+msgstr "メタデータ"
 
 #: ../../source/drivers/raster/gpkg.rst:640
 msgid ""
@@ -671,7 +671,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:672
 msgid "IMAGE_STRUCTURE metadata item"
-msgstr ""
+msgstr "IMAGE_STRUCTUREメタデータ項目"
 
 #: ../../source/drivers/raster/gpkg.rst:676
 msgid ""
@@ -707,35 +707,35 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:693
 msgid "NODATA_VALUE=integer between 0 and 255. Applies only for Byte data."
-msgstr ""
+msgstr "NODATA_VALUE=0～255の整数。Byteデータにのみ適用されます。"
 
 #: ../../source/drivers/raster/gpkg.rst:696
 msgid "Example:"
-msgstr ""
+msgstr "例"
 
 #: ../../source/drivers/raster/gpkg.rst:712
 msgid "Level of support of GeoPackage Extensions"
-msgstr ""
+msgstr "「GeoPackage Extensionsのサポートレベル"
 
 #: ../../source/drivers/raster/gpkg.rst:714
 msgid "(Restricted to those have a raster scope)"
-msgstr ""
+msgstr "(ラスタースコープを持つものに限る）"
 
 #: ../../source/drivers/raster/gpkg.rst:716
 msgid "Extensions"
-msgstr ""
+msgstr "拡張"
 
 #: ../../source/drivers/raster/gpkg.rst:719
 msgid "Extension name"
-msgstr ""
+msgstr "拡張子名"
 
 #: ../../source/drivers/raster/gpkg.rst:720
 msgid "OGC adopted extension ?"
-msgstr ""
+msgstr "OGC採用の拡張機能？"
 
 #: ../../source/drivers/raster/gpkg.rst:721
 msgid "Supported by GDAL?"
-msgstr ""
+msgstr "GDALによって援助される‽"
 
 #: ../../source/drivers/raster/gpkg.rst:722
 msgid ""
@@ -752,7 +752,7 @@ msgstr ""
 #: ../../source/drivers/raster/gpkg.rst:732
 #: ../../source/drivers/raster/gpkg.rst:735
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: ../../source/drivers/raster/gpkg.rst:725
 msgid ""
@@ -762,7 +762,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:728
 msgid "`Metadata <http://www.geopackage.org/guidance/extensions/metadata.html>`__"
-msgstr ""
+msgstr "メタデータ <http://www.geopackage.org/guidance/extensions/metadata.html>`__"
 
 #: ../../source/drivers/raster/gpkg.rst:731
 msgid ""
@@ -791,7 +791,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:739
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/drivers/raster/gpkg.rst:741
 msgid ""
@@ -801,7 +801,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:748
 msgid "Translation of a GeoTIFF into GeoPackage using WebP tiles"
-msgstr ""
+msgstr "WebPタイルを使ったGeoTIFFのGeoPackageへの変換"
 
 #: ../../source/drivers/raster/gpkg.rst:754
 msgid ""
@@ -811,7 +811,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:761
 msgid "Building of overviews of an existing GeoPackage, and forcing JPEG tiles"
-msgstr ""
+msgstr "既存のGeoPackageの概要を構築し、JPEGタイルを強制する。"
 
 #: ../../source/drivers/raster/gpkg.rst:768
 msgid ""
@@ -821,15 +821,15 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:775
 msgid "Reprojection of an input dataset to GeoPackage"
-msgstr ""
+msgstr "GeoPackageへの入力データセットの再投影"
 
 #: ../../source/drivers/raster/gpkg.rst:781
 msgid "Open a specific raster table in a GeoPackage"
-msgstr ""
+msgstr "GeoPackageで特定のラスターテーブルを開く"
 
 #: ../../source/drivers/raster/gpkg.rst:790
 msgid "Raster SQL functions"
-msgstr ""
+msgstr "ラスターSQL関数"
 
 #: ../../source/drivers/raster/gpkg.rst:792
 msgid ""
@@ -846,15 +846,15 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:799
 msgid "It takes 5 arguments:"
-msgstr ""
+msgstr "引数は5つ："
 
 #: ../../source/drivers/raster/gpkg.rst:801
 msgid "a string with the layer/table name"
-msgstr ""
+msgstr "レイヤー/テーブル名の文字列"
 
 #: ../../source/drivers/raster/gpkg.rst:802
 msgid "a band number (numbering starting at 1)"
-msgstr ""
+msgstr "バンド番号（1から始まる番号）"
 
 #: ../../source/drivers/raster/gpkg.rst:803
 msgid ""
@@ -865,19 +865,19 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:806
 msgid "georeferenced X value or column number"
-msgstr ""
+msgstr "ジオリファレンスX値または列番号"
 
 #: ../../source/drivers/raster/gpkg.rst:807
 msgid "georeferenced Y value or line number"
-msgstr ""
+msgstr "地理参照Y値または行番号"
 
 #: ../../source/drivers/raster/gpkg.rst:815
 msgid "See Also"
-msgstr ""
+msgstr "こちらも参照"
 
 #: ../../source/drivers/raster/gpkg.rst:817
 msgid ":ref:`GeoPackage vector <vector.gpkg>` documentation page"
-msgstr ""
+msgstr ":ref:`GeoPackage vector <vector.gpkg>` ドキュメントページ"
 
 #: ../../source/drivers/raster/gpkg.rst:818
 msgid ""
@@ -899,19 +899,19 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:825
 msgid "`SQLite <http://sqlite.org/>`__"
-msgstr ""
+msgstr "SQLite <http://sqlite.org/>`__"
 
 #: ../../source/drivers/raster/gpkg.rst:826
 msgid ":ref:`PNG driver <raster.png>` documentation page"
-msgstr ""
+msgstr ":ref:`PNG ドライバ <raster.png>` ドキュメントページ"
 
 #: ../../source/drivers/raster/gpkg.rst:827
 msgid ":ref:`JPEG driver <raster.jpeg>` documentation page"
-msgstr ""
+msgstr ":ref:`JPEG ドライバー <raster.jpeg>` ドキュメントページ"
 
 #: ../../source/drivers/raster/gpkg.rst:828
 msgid ":ref:`WEBP driver <raster.webp>` documentation page"
-msgstr ""
+msgstr ":ref:`WEBP ドライバ <raster.webp>` ドキュメントページ"
 
 #: ../../source/drivers/raster/gpkg.rst:829
 msgid ""
@@ -929,7 +929,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:837
 msgid "Other notes"
-msgstr ""
+msgstr "その他の注意事項　"
 
 #: ../../source/drivers/raster/gpkg.rst:839
 msgid ""

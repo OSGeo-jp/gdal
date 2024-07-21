@@ -25,7 +25,7 @@ msgstr "共通移植ライブラリ C API"
 
 #: ../../source/api/cpl.rst:13
 msgid "cpl_conv.h"
-msgstr ""
+msgstr cpl_conv.h""
 
 #: ../../source/api/cpl.rst ../../source/api/gdal_alg.rst
 #: ../../source/api/gdalwarp_cpp.rst ../../source/api/gnm_cpp.rst
@@ -256,7 +256,7 @@ msgstr "公開メンバー"
 
 #: ../../source/api/cpl.rst:19
 msgid "cpl_csv.h"
-msgstr ""
+msgstr "cpl_csv.h"
 
 #: ../../source/api/cpl.rst ../../source/api/gdal_alg.rst
 #: ../../source/api/gdalwarp_cpp.rst ../../source/api/gnm_cpp.rst
@@ -267,41 +267,41 @@ msgstr "列挙"
 
 #: ../../source/api/cpl.rst:25
 msgid "cpl_compressor.h"
-msgstr ""
+msgstr "cpl_compressor.h"
 
 #: ../../source/api/cpl.rst
 msgid "Param input_data"
-msgstr ""
+msgstr "Param input_data"
 
 #: ../../source/api/cpl.rst
 msgid "Param input_size"
-msgstr ""
+msgstr "Param input_size"
 
 #: ../../source/api/cpl.rst
 msgid "Param output_data"
-msgstr ""
+msgstr "Param output_data"
 
 #: ../../source/api/cpl.rst
 msgid "Param output_size"
-msgstr ""
+msgstr "Param output_size"
 
 #: ../../source/api/cpl.rst
 msgid "Param options"
-msgstr ""
+msgstr "パラメータ・オプション"
 
 #: ../../source/api/cpl.rst
 msgid "Param compressor_user_data"
-msgstr ""
+msgstr "パラメータ　compressor_user_data"
 
 #: ../../source/api/cpl.rst ../../source/api/gdal_alg.rst
 #: ../../source/api/gdalabstractmdarray_cpp.rst
 #: ../../source/api/raster_c_api.rst
 msgid "Return"
-msgstr ""
+msgstr "戻る"
 
 #: ../../source/api/cpl.rst:31
 msgid "cpl_error.h"
-msgstr ""
+msgstr "cpl_error.h"
 
 #: ../../source/api/cpl.rst ../../source/api/cpl_cpp.rst
 #: ../../source/api/gdalabstractmdarray_cpp.rst
@@ -315,73 +315,73 @@ msgstr ""
 #: ../../source/api/ogrgeometry_cpp.rst ../../source/api/ogrlayer_cpp.rst
 #: ../../source/api/ogrspatialref.rst ../../source/api/vector_c_api.rst
 msgid "Public Functions"
-msgstr ""
+msgstr "公共の機能"
 
 #: ../../source/api/cpl.rst ../../source/api/cpl_cpp.rst
 #: ../../source/api/gdalwarp_cpp.rst ../../source/api/ogrfeaturestyle_cpp.rst
 #: ../../source/api/ogrspatialref.rst
 msgid "Private Members"
-msgstr ""
+msgstr "プライベートなメンバー"
 
 #: ../../source/api/cpl.rst:37
 msgid "cpl_http.h"
-msgstr ""
+msgstr "cpl_http.h"
 
 #: ../../source/api/cpl.rst
 msgid "Param pszURL"
-msgstr ""
+msgstr "パラメーター pszURL"
 
 #: ../../source/api/cpl.rst
 msgid "Param papszOptions"
-msgstr ""
+msgstr "パラメーター papszOptions"
 
 #: ../../source/api/cpl.rst
 msgid "Param pfnProgress"
-msgstr ""
+msgstr "パラメーター pfnProgress"
 
 #: ../../source/api/cpl.rst
 msgid "Param pProgressArg"
-msgstr ""
+msgstr "パラメーター pProgressArg"
 
 #: ../../source/api/cpl.rst
 msgid "Param pfnWrite"
-msgstr ""
+msgstr "パラメーター　pfnWrite"
 
 #: ../../source/api/cpl.rst
 msgid "Param pWriteArg"
-msgstr ""
+msgstr "パラメーター pWriteArg"
 
 #: ../../source/api/cpl.rst ../../source/api/gdalabstractmdarray_cpp.rst
 #: ../../source/api/raster_c_api.rst
 msgid "Param pUserData"
-msgstr ""
+msgstr "パラメーター pUserData"
 
 #: ../../source/api/cpl.rst ../../source/api/cpl_cpp.rst
 #: ../../source/api/gdalabstractmdarray_cpp.rst
 #: ../../source/api/gdaldataset_cpp.rst ../../source/api/ogrgeometry_cpp.rst
 #: ../../source/api/ogrlayer_cpp.rst
 msgid "Public Types"
-msgstr ""
+msgstr "公共のタイトル"
 
 #: ../../source/api/cpl.rst:43
 msgid "cpl_minixml.h"
-msgstr ""
+msgstr "cpl_minixml.h"
 
 #: ../../source/api/cpl.rst:49
 msgid "cpl_multiproc.h"
-msgstr ""
+msgstr "cpl_multiproc.h"
 
 #: ../../source/api/cpl.rst:55
 msgid "cpl_port.h"
-msgstr ""
+msgstr "cpl_port.h"
 
 #: ../../source/api/cpl.rst:61
 msgid "cpl_progress.h"
-msgstr ""
+msgstr "cpl_progress.h"
 
 #: ../../source/api/cpl.rst:67
 msgid "cpl_string.h"
-msgstr ""
+msgstr "cpl_string.h"
 
 #: ../../source/api/cpl.rst ../../source/api/cpl_cpp.rst
 #: ../../source/api/gdaldataset_cpp.rst ../../source/api/gdaldriver_cpp.rst
@@ -391,45 +391,45 @@ msgstr ""
 #: ../../source/api/ogrgeometry_cpp.rst ../../source/api/ogrlayer_cpp.rst
 #: ../../source/api/ogrspatialref.rst
 msgid "Public Static Functions"
-msgstr ""
+msgstr "パブリック静的関数"
 
 #: ../../source/api/cpl.rst ../../source/api/gdalwarp_cpp.rst
 #: ../../source/api/gnm_cpp.rst ../../source/api/ogrfeaturestyle_cpp.rst
 #: ../../source/api/ogrspatialref.rst
 msgid "Private Functions"
-msgstr ""
+msgstr "公共の機能"
 
 #: ../../source/api/cpl.rst:73
 msgid "cpl_time.h"
-msgstr ""
+msgstr "cpl_time.h""
 
 #: ../../source/api/cpl.rst:79
 msgid "cpl_virtualmem.h"
-msgstr ""
+msgstr "cpl_virtualmem.h"
 
 #: ../../source/api/cpl.rst
 msgid "Param ctxt"
-msgstr ""
+msgstr "パラメーター ctxt"
 
 #: ../../source/api/cpl.rst
 msgid "Param nOffset"
-msgstr ""
+msgstr "パラメーター nOffset"
 
 #: ../../source/api/cpl.rst
 msgid "Param pPageToFill"
-msgstr ""
+msgstr "パラメーター pPageToFill"
 
 #: ../../source/api/cpl.rst
 msgid "Param nToFill"
-msgstr ""
+msgstr "パラメーター nToFill"
 
 #: ../../source/api/cpl.rst
 msgid "Param pPageToBeEvicted"
-msgstr ""
+msgstr "パラメーター　PageToBeEvicted"
 
 #: ../../source/api/cpl.rst
 msgid "Param nToBeEvicted"
-msgstr ""
+msgstr "パラメーター nToBeEvicted"
 
 #: ../../source/api/cpl.rst:85
 msgid "cpl_vsi_error.h"

@@ -69,7 +69,8 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:31
 msgid "Diversity Statement"
-msgstr "ダイバーシティ・ステートメント"
+msgstr "多様性に関する声明"
+
 
 #: ../../source/community/code_of_conduct.rst:33
 msgid ""
@@ -81,11 +82,11 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:39
 msgid "We strive to:"
-msgstr ""
+msgstr 私たちは次のことに努めます。:""
 
 #: ../../source/community/code_of_conduct.rst:41
 msgid "Be open."
-msgstr ""
+msgstr "開けています。"
 
 #: ../../source/community/code_of_conduct.rst:43
 msgid ""
@@ -100,7 +101,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:50
 msgid "Be empathetic, welcoming, friendly, and patient."
-msgstr ""
+msgstr "共感的で、歓迎的で、フレンドリーで、忍耐強くありましょう。"
 
 #: ../../source/community/code_of_conduct.rst:52
 msgid ""
@@ -116,7 +117,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:60
 msgid "Be collaborative."
-msgstr ""
+msgstr "協力的になってください。"
 
 #: ../../source/community/code_of_conduct.rst:62
 msgid ""
@@ -130,7 +131,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:68
 msgid "Be inquisitive."
-msgstr ""
+msgstr "好奇心を持ってください"
 
 #: ../../source/community/code_of_conduct.rst:70
 msgid ""
@@ -142,7 +143,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:75
 msgid "Be careful in the words that we choose."
-msgstr ""
+msgstr "私たちが選ぶ言葉には注意してください。"
 
 #: ../../source/community/code_of_conduct.rst:77
 msgid ""
@@ -153,7 +154,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:81
 msgid "Be concise."
-msgstr ""
+msgstr "簡潔にしてください。"
 
 #: ../../source/community/code_of_conduct.rst:83
 msgid ""
@@ -180,7 +181,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:95
 msgid "Step down considerately."
-msgstr ""
+msgstr "慎重に降りてください。"
 
 #: ../../source/community/code_of_conduct.rst:97
 msgid ""
@@ -195,7 +196,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:106
 msgid "Anti-Harassment"
-msgstr ""
+msgstr "ハラスメント防止"
 
 #: ../../source/community/code_of_conduct.rst:108
 msgid ""
@@ -211,23 +212,23 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:112
 msgid "Offensive comments, excessive or unnecessary profanity."
-msgstr ""
+msgstr "攻撃的なコメント、過度または不必要な冒涜です。"
 
 #: ../../source/community/code_of_conduct.rst:113
 msgid "Intimidation, violent threats or demands."
-msgstr ""
+msgstr "脅迫、暴力的な脅し、要求です。"
 
 #: ../../source/community/code_of_conduct.rst:114
 msgid "Sustained disruption of sessions or events."
-msgstr ""
+msgstr "セッションやイベントの継続的な妨害です。"
 
 #: ../../source/community/code_of_conduct.rst:115
 msgid "Stalking, harassing photography or recording."
-msgstr ""
+msgstr "ストーカー行為、嫌がらせの写真撮影や録音です。"
 
 #: ../../source/community/code_of_conduct.rst:116
 msgid "Unwelcome physical contact or sexual attention."
-msgstr ""
+msgstr "歓迎されない身体的接触や性的注目です。"
 
 #: ../../source/community/code_of_conduct.rst:117
 msgid ""
@@ -249,11 +250,11 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:120
 msgid "Advocating for, or encouraging, any of the above behavior."
-msgstr ""
+msgstr "上記の行為を擁護する、または奨励する。"
 
 #: ../../source/community/code_of_conduct.rst:123
 msgid "Reporting Guidelines"
-msgstr ""
+msgstr 報告ガイドライン""
 
 #: ../../source/community/code_of_conduct.rst:125
 msgid ""
@@ -276,7 +277,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:137
 msgid "Credits"
-msgstr ""
+msgstr "クレジット"
 
 #: ../../source/community/code_of_conduct.rst:139
 msgid ""
@@ -286,7 +287,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:5
 msgid "Community"
-msgstr ""
+msgstr "共同体"
 
 #: ../../source/community/index.rst:7
 msgid ""
@@ -310,7 +311,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:32
 msgid "Mailing List"
-msgstr ""
+msgstr "メーリングリスト"
 
 #: ../../source/community/index.rst:34
 msgid ""
@@ -321,11 +322,11 @@ msgstr ""
 
 #: ../../source/community/index.rst:38
 msgid "http://lists.osgeo.org/mailman/listinfo/gdal-dev"
-msgstr ""
+msgstr "http://lists.osgeo.org/mailman/listinfo/gdal-dev"
 
 #: ../../source/community/index.rst:42
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: ../../source/community/index.rst:44
 msgid ""
@@ -339,7 +340,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:54
 msgid "Chat"
-msgstr ""
+msgstr "会話"
 
 #: ../../source/community/index.rst:56
 msgid ""
@@ -352,7 +353,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:67
 msgid "Social media"
-msgstr ""
+msgstr "ソーシャルメディア"
 
 #: ../../source/community/index.rst:69
 msgid ""
@@ -362,11 +363,11 @@ msgstr ""
 
 #: ../../source/community/index.rst:73
 msgid "Conference"
-msgstr ""
+msgstr "衝突"
 
 #: ../../source/community/index.rst:-1
 msgid "FOSS4G 2023"
-msgstr ""
+msgstr "FOSS4G 2023"
 
 #: ../../source/community/index.rst:79
 msgid ""
@@ -385,7 +386,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:85
 msgid "OSGeo Project Membership"
-msgstr ""
+msgstr "ガバナンスとコミュニティ参加"
 
 #: ../../source/community/index.rst:87
 msgid ""
@@ -426,7 +427,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:107
 msgid "Project Steering Committee"
-msgstr ""
+msgstr "プロジェクト運営委員会"
 
 #: ../../source/community/index.rst:109
 msgid ""
@@ -439,55 +440,55 @@ msgstr ""
 
 #: ../../source/community/index.rst:114
 msgid "Frank Warmerdam      (@warmerdam)"
-msgstr ""
+msgstr "フランク・ウォーマーダム       (@warmerdam)"
 
 #: ../../source/community/index.rst:115
 msgid "Daniel Morissette    (@dmorissette)"
-msgstr ""
+msgstr "ダニエル・モリセット     (@dmorissette)"
 
 #: ../../source/community/index.rst:116
 msgid "Howard Butler        (@hobu)"
-msgstr ""
+msgstr "ハワード・バトラー　　　(@hobu) "
 
 #: ../../source/community/index.rst:117
 msgid "Tamas Szekeres       (@szekerest)"
-msgstr ""
+msgstr "タマス・セケレス       (@szekerest)"
 
 #: ../../source/community/index.rst:118
 msgid "Even Rouault (chair) (@rouault)"
-msgstr ""
+msgstr "イーブン・ルオー（議長） (@rouault)"
 
 #: ../../source/community/index.rst:119
 msgid "Jukka Rahkonen       (@jratike80)"
-msgstr ""
+msgstr "ユッカ・ラフコネン       (@jratike80)"
 
 #: ../../source/community/index.rst:120
 msgid "Kurt Schwehr         (@schwehr)"
-msgstr ""
+msgstr "クルト・シュヴェール (@schwehr)"
 
 #: ../../source/community/index.rst:121
 msgid "Norman Barker        (@normanb)"
-msgstr ""
+msgstr "ノーマン・バーカー (@normanb)"
 
 #: ../../source/community/index.rst:122
 msgid "Sean Gillies         (@sgillies)"
-msgstr ""
+msgstr "ショーン・ギリーズ (@sgillies)"
 
 #: ../../source/community/index.rst:123
 msgid "Javier Jimenez Shaw  (@jjimenezshaw)"
-msgstr ""
+msgstr "ハビエル・ヒメネス・ショー (@jjimenezshaw)"
 
 #: ../../source/community/index.rst:125
 msgid "Past members:"
-msgstr ""
+msgstr "以前のメンバー:"
 
 #: ../../source/community/index.rst:127
 msgid "Andrey Kiselev       (@strezen) (retired in 2019)"
-msgstr ""
+msgstr "アンドレイ・キセレフ       (@strezen) (retired in 2019)"
 
 #: ../../source/community/index.rst:128
 msgid "Mateusz Łoskot       (@mloskot) (retired in 2023)"
-msgstr ""
+msgstr "「マテウス・ワスコット（@mloskot）（2023年引退）"
 
 #: ../../source/community/index.rst:130
 msgid ""
@@ -499,7 +500,7 @@ msgstr ""
 #: ../../source/community/index.rst:135
 #: ../../source/community/service_providers.rst:5
 msgid "GDAL Service Providers"
-msgstr ""
+msgstr "GDALサービスプロバイダー"
 
 #: ../../source/community/index.rst:139
 msgid ""
@@ -569,11 +570,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:50
 msgid "|logo_spatialys|"
-msgstr ""
+msgstr "|ロゴ　スぺシャリス|"
 
 #: ../../source/community/service_providers.rst
 msgid "logo_spatialys"
-msgstr ""
+msgstr "ロゴ　スぺシャリス"
 
 #: ../../source/community/service_providers.rst:54
 msgid ""
@@ -585,11 +586,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:60
 msgid "|logo_hobu|"
-msgstr ""
+msgstr "|ロゴ　ホブ|"
 
 #: ../../source/community/service_providers.rst
 msgid "logo_hobu"
-msgstr ""
+msgstr "ロゴ　ホブ"
 
 #: ../../source/community/service_providers.rst:64
 msgid ""
@@ -605,7 +606,7 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:74
 msgid "Contributors"
-msgstr ""
+msgstr "貢献者"
 
 #: ../../source/community/service_providers.rst:76
 msgid ""
@@ -617,11 +618,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:83
 msgid "None listed yet."
-msgstr ""
+msgstr "未だ登録されていない"
 
 #: ../../source/community/service_providers.rst:87
 msgid "Other Service Providers"
-msgstr ""
+msgstr "その他のサービスプロバイダー"
 
 #: ../../source/community/service_providers.rst:89
 msgid ""
@@ -631,11 +632,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:94
 msgid "|logo_faunalia|"
-msgstr ""
+msgstr "|ロゴ_faunalia|"
 
 #: ../../source/community/service_providers.rst
 msgid "logo_faunalia"
-msgstr ""
+msgstr "ロゴ_faunalia"
 
 #: ../../source/community/service_providers.rst:98
 msgid ""
@@ -649,11 +650,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:102
 msgid "|logo_kartoza|"
-msgstr ""
+msgstr "|ロゴ_kartoza|"
 
 #: ../../source/community/service_providers.rst
 msgid "logo_kartoza"
-msgstr ""
+msgstr "ロゴ_kartoza"
 
 #: ../../source/community/service_providers.rst:106
 msgid ""
@@ -665,11 +666,11 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:110
 msgid "|logo_mundialis|"
-msgstr ""
+msgstr "|ロゴ_mundialis|"
 
 #: ../../source/community/service_providers.rst
 msgid "logo_mundialis"
-msgstr ""
+msgstr "ロゴ_mundialis"
 
 #: ../../source/community/service_providers.rst:114
 msgid ""
@@ -689,7 +690,7 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:158
 msgid "How to Add a Company"
-msgstr ""
+msgstr "会社に入る方法"
 
 #: ../../source/community/service_providers.rst:160
 msgid ""
