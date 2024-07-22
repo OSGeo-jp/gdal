@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../source/programs/gdal_translate.rst:9
 msgid "Converts raster data between different formats."
-msgstr ""
+msgstr "ラスター データを異なる形式間で変換します"
 
 #: ../../source/programs/gdal_translate.rst:14
 msgid "Synopsis"
