@@ -29,7 +29,7 @@ msgstr "ラスターファイルを `xyz` フォーマットに変換する。"
 
 #: ../../source/programs/gdal2xyz.rst:14
 msgid "Synopsis"
-msgstr "あらすじ"
+msgstr "概要"
 
 #: ../../source/programs/gdal2xyz.rst:28
 msgid "Description"
@@ -98,7 +98,7 @@ msgstr "区切り文字として、スペースの代わりにカンマを使用
 
 #: ../../source/programs/gdal2xyz.rst:71
 msgid "Exclude the output lines with nodata value (as determined by srcnodata)"
-msgstr "srcnodataによって決定される）nodata値を持つ出力行を除外する"
+msgstr "(srcnodataによって決定される)nodata値を持つ出力行を除外する"
 
 #: ../../source/programs/gdal2xyz.rst:75
 msgid ""
@@ -124,6 +124,8 @@ msgid ""
 "The source dataset name. It can be either file name, URL of data source "
 "or subdataset name for multi-dataset files."
 msgstr ""
+"ソースデータセット名。ファイル名、データソースのURL、またはマルチデータセットファイルの場合は"
+"サブデータセット名のいずれかになります。"
 
 #: ../../source/programs/gdal2xyz.rst:96
 msgid "The destination file name."
@@ -150,4 +152,6 @@ msgid ""
 "gdal2xyz output values with a limited precision. Use ``gdal_translate -of"
 " XYZ`` if more precision is desired."
 msgstr ""
+"gdal2xyz の出力の精度は限定されています。さらに高い精度が必要な場合は ``gdal_translate -of"
+" XYZ`` を使用してください。"
 

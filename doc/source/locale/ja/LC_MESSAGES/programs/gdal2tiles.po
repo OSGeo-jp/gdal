@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../source/programs/gdal2tiles.rst:9
 msgid "Generates directory with TMS tiles, KMLs and simple web viewers."
-msgstr ""
+msgstr "TMSタイルが格納されたディレクトリ、KML、簡易ウェブビューアを生成します。"
 
 #: ../../source/programs/gdal2tiles.rst:14
 msgid "Synopsis"
@@ -48,7 +48,7 @@ msgstr ""
 "このユーティリティは、小さなタイルとメタデータを含むディレクトリを生成し、"
 "OSGeoタイルマップサービス仕様に従います。Google Maps、OpenLayers、"
 "Leafletをベースにした簡単なウェブページとビューアも生成されるため、"
-"誰でも快適にオンラインで地図を探索でき、特別なソフトウェア（例えばMapServer）を"
+"誰でも快適にオンラインで地図を探索でき、特別なソフトウェア(例えばMapServer)を"
 "インストールしたり設定したりする必要がなく、ウェブブラウザで地図が非常に速く表示されます。"
 "生成されたディレクトリをウェブサーバーにアップロードするだけです。"
 
@@ -59,7 +59,7 @@ msgid ""
 "SuperOverlay), in case the supplied map uses EPSG:4326 projection."
 msgstr ""
 "GDAL2Tilesは、提供された地図がEPSG:4326投影法を使用している場合、"
-"Google Earth用の必要なメタデータ（KML SuperOverlay）も作成します。"
+"Google Earth用の必要なメタデータ(KML SuperOverlay)も作成します。"
 
 
 #: ../../source/programs/gdal2tiles.rst:43

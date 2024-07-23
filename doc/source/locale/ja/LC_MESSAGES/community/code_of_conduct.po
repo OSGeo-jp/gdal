@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:5
 msgid "Code of Conduct"
-msgstr ""
+msgstr "行動規範"
 
 #: ../../source/community/code_of_conduct.rst:7
 msgid ""
@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:13
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../source/community/code_of_conduct.rst:15
 msgid ""
@@ -42,6 +42,11 @@ msgid ""
 " everyone who participates in the GDAL community formally or informally, "
 "or claims any affiliation with the GDAL project."
 msgstr ""
+"この行動規範は、私たちがGDALのフォーラムやイベントにおいてどのように振る"
+"舞うか、また、私たちの行動によってどのような判断が下されるかを規定するも"
+"のです。私たちは、GDALコミュニティに公式または非公式に参加するすべての"
+"人、あるいはGDALプロジェクトとの関係を主張するすべての人が、この行動規範"
+"を守ることを期待します。"
 
 #: ../../source/community/code_of_conduct.rst:20
 msgid ""
@@ -61,7 +66,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:31
 msgid "Diversity Statement"
-msgstr ""
+msgstr "ダイバーシティ・ステートメント"
 
 #: ../../source/community/code_of_conduct.rst:33
 msgid ""
@@ -73,7 +78,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:39
 msgid "We strive to:"
-msgstr ""
+msgstr "私たちは次のことに努めます:"
 
 #: ../../source/community/code_of_conduct.rst:41
 msgid "Be open."

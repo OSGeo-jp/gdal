@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../source/community/code_of_conduct.rst:39
 msgid "We strive to:"
-msgstr ""
+msgstr "私たちは次のことに努めます:"
 
 #: ../../source/community/code_of_conduct.rst:41
 msgid "Be open."
