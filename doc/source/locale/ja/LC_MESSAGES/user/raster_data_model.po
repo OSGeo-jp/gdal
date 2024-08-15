@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../source/user/raster_data_model.rst:40
 msgid "Affine GeoTransform"
-msgstr ""
+msgstr "アフィン地理変換"
 
 #: ../../source/user/raster_data_model.rst:42
 msgid ""
@@ -159,6 +159,9 @@ msgid ""
 " first, and most commonly used is the affine transform (the other is "
 "GCPs)."
 msgstr ""
+"GDAL データセットは, ラスタの位置 (ピクセル/行座標) と地理参照座標の関係を"
+"2 つの方法で記述します. 最初の最も一般的に使用される方法はアフィン変換です"
+"(もう 1 つの方法は GCPs です)."
 
 #: ../../source/user/raster_data_model.rst:44
 msgid ""
@@ -166,6 +169,9 @@ msgid ""
 ":cpp:func:`GDALDataset::GetGeoTransform` which map pixel/line coordinates"
 " into georeferenced space using the following relationship:"
 msgstr ""
+"アフィン変換は, ピクセル/行座標を地理参照空間にマッピングするために "
+":cpp:func:`GDALDataset::GetGeoTransform` によって返される 6 つの係数で構成されます. "
+"これらは以下の関係を使用してピクセル/行座標を地理参照空間にマッピングします:"
 
 #: ../../source/user/raster_data_model.rst:51
 msgid ""
@@ -174,6 +180,8 @@ msgid ""
 "(GT(0),GT(3)) position is the top left corner of the top left pixel of "
 "the raster."
 msgstr ""
+"北向きの画像の場合, GT(2) と GT(4) の係数は 0 で, GT(1) はピクセル幅, GT(5) はピクセル高さです. "
+"(GT(0),GT(3)) の位置はラスタの左上隅の最上左側ピクセルの座標です."
 
 #: ../../source/user/raster_data_model.rst:53
 msgid ""
@@ -183,10 +191,13 @@ msgid ""
 "bottom right pixel. The pixel/line location of the center of the top left"
 " pixel would therefore be (0.5,0.5)."
 msgstr ""
+"上記のピクセル/行座標は,左上隅の左上ピクセルが (0.0,0.0) で, "
+"右下隅の右下ピクセルの(width_in_pixels,height_in_pixels) までです. "
+"左上ピクセルの中心のピクセル/行の位置は (0.5,0.5) です."
 
 #: ../../source/user/raster_data_model.rst:56
 msgid "GCPs"
-msgstr ""
+msgstr "GCPs"
 
 #: ../../source/user/raster_data_model.rst:58
 msgid ""
