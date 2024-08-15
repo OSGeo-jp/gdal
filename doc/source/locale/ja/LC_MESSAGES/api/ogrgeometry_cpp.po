@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,17 +17,21 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/ogrgeometry_cpp.rst:10
 msgid "OGRGeometry C++ API"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:12
-msgid "Include file: ogr_geometry.h"
+#: ../../source/api/ogrgeometry_cpp.rst:13
+msgid "Include file"
 msgstr ""
 
 #: ../../source/api/ogrgeometry_cpp.rst:15
+msgid ":file:`ogr_geometry.h`"
+msgstr ""
+
+#: ../../source/api/ogrgeometry_cpp.rst:18
 msgid "OGRGeometryFactory class"
 msgstr ""
 
@@ -43,7 +47,7 @@ msgstr ""
 msgid "Returns"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:22
+#: ../../source/api/ogrgeometry_cpp.rst:25
 msgid "OGRGeometry class"
 msgstr ""
 
@@ -51,75 +55,82 @@ msgstr ""
 msgid "Public Functions"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:29
+#: ../../source/api/ogrgeometry_cpp.rst:32
 msgid "OGRPoint class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:36
-msgid "OGRLineString class"
-msgstr ""
-
-#: ../../source/api/ogrgeometry_cpp.rst:43
-msgid "OGRLinearRing class"
-msgstr ""
-
-#: ../../source/api/ogrgeometry_cpp.rst:50
-msgid "OGRCircularString class"
-msgstr ""
-
-#: ../../source/api/ogrgeometry_cpp.rst:57
-msgid "OGRCurve class"
+#: ../../source/api/ogrgeometry_cpp.rst:39
+msgid "OGRSimpleCurve class"
 msgstr ""
 
 #: ../../source/api/ogrgeometry_cpp.rst
 msgid "Public Types"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:64
+#: ../../source/api/ogrgeometry_cpp.rst:46
+msgid "OGRLineString class"
+msgstr ""
+
+#: ../../source/api/ogrgeometry_cpp.rst:53
+msgid "OGRLinearRing class"
+msgstr ""
+
+#: ../../source/api/ogrgeometry_cpp.rst:60
+msgid "OGRCircularString class"
+msgstr ""
+
+#: ../../source/api/ogrgeometry_cpp.rst:67
+msgid "OGRCurve class"
+msgstr ""
+
+#: ../../source/api/ogrgeometry_cpp.rst:74
 msgid "OGRSurface class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:71
+#: ../../source/api/ogrgeometry_cpp.rst:81
 msgid "OGRPolygon class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:78
+#: ../../source/api/ogrgeometry_cpp.rst:88
 msgid "OGRCurvePolygon class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:85
+#: ../../source/api/ogrgeometry_cpp.rst:95
 msgid "OGRMultiPoint class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:92
+#: ../../source/api/ogrgeometry_cpp.rst:102
 msgid "OGRMultiLineString class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:99
+#: ../../source/api/ogrgeometry_cpp.rst:109
 msgid "OGRMultiPolygon class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:106
+#: ../../source/api/ogrgeometry_cpp.rst:116
 msgid "OGRGeometryCollection class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:113
+#: ../../source/api/ogrgeometry_cpp.rst:123
 msgid "OGRMultiCurve class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:120
+#: ../../source/api/ogrgeometry_cpp.rst:130
 msgid "OGRMultiSurface class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:127
+#: ../../source/api/ogrgeometry_cpp.rst:137
 msgid "OGRPolyhedralSurface class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:134
+#: ../../source/api/ogrgeometry_cpp.rst:144
 msgid "OGRTriangle class"
 msgstr ""
 
-#: ../../source/api/ogrgeometry_cpp.rst:141
+#: ../../source/api/ogrgeometry_cpp.rst:151
 msgid "OGRTriangulatedSurface class"
 msgstr ""
+
+#~ msgid "Include file: ogr_geometry.h"
+#~ msgstr ""
 

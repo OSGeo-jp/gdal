@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/arrow.rst:4
 msgid "(Geo)Arrow IPC File Format / Stream"
@@ -121,21 +121,84 @@ msgid ""
 "package with:"
 msgstr ""
 
-#: ../../source/drivers/vector/arrow.rst:121
+#: ../../source/drivers/vector/arrow.rst:120
+msgid "Standalone plugin compilation"
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:124
+msgid ""
+"While this driver may be built as part of a whole GDAL build, either in "
+"libgdal itself, or as a plugin, it is also possible to only build this "
+"driver as a plugin, against an already built libgdal."
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:128
+msgid ""
+"The version of the GDAL sources used to build the driver must match the "
+"version of the libgdal it is built against."
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:131
+msgid ""
+"For example, from a \"build_arrow\" directory under the root of the GDAL "
+"source tree:"
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:139
+msgid ""
+"Note that such a plugin, when used against a libgdal not aware of it, "
+"will be systematically loaded at GDAL driver initialization time, and "
+"will not benefit from `deferred plugin loading capabilities <rfc-96>`. "
+"For that, libgdal itself must be built with the CMake variable "
+"OGR_REGISTER_DRIVER_ARROW_FOR_LATER_PLUGIN=ON set."
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:145
+msgid "Arrow VSI file system"
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:149
+msgid ""
+"Starting with GDAL 3.10 and Arrow 16.0, any GDAL Virtual File System can "
+"be used (in a read-only context) wherever the Arrow C++ library expects a"
+" URI, in particular outside of the context of the OGR Arrow driver, by:"
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:153
+msgid ""
+"loading the libgdal.so/dll library (or the ogr_Arrow.so/dll plugin "
+"library if the Arrow driver is built as a library) with the "
+"arrow::fs::LoadFileSystemFactories() function (cf `Defining new "
+"filesystems <https://arrow.apache.org/docs/cpp/io.html#defining-new-"
+"filesystems>`__) Note: if the Arrow driver is fully loaded, e.g. by "
+"querying "
+"GetGDALDriverManager()->GetDriverByName(\"ARROW\")->GetMetadata(), the "
+"Arrow VSI file system will be also registered."
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:160
+msgid ""
+"Prefixing any GDAL file name with the ``vsi://`` URI scheme prefix. In "
+"addition to any potential vsi prefix in the GDAL file name. So the "
+"``/vsicurl/http://example.com`` GDAL file name becomes the "
+"``vsi:///vsicurl/http://example.com`` Arrow URI."
+msgstr ""
+
+#: ../../source/drivers/vector/arrow.rst:165
 msgid "Links"
 msgstr ""
 
-#: ../../source/drivers/vector/arrow.rst:123
+#: ../../source/drivers/vector/arrow.rst:167
 msgid ""
 "`Feather File Format "
 "<https://arrow.apache.org/docs/python/feather.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/arrow.rst:125
+#: ../../source/drivers/vector/arrow.rst:169
 msgid "`GeoArrow specification <https://github.com/geopandas/geo-arrow-spec>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/arrow.rst:127
+#: ../../source/drivers/vector/arrow.rst:171
 msgid "Related driver: :ref:`Parquet driver <vector.parquet>`"
 msgstr ""
 

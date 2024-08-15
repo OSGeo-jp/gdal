@@ -41,33 +41,39 @@ msgstr "ラスタープログラム"
 
 #: ../../source/programs/index.rst:67
 msgid ":ref:`Common options <raster_common_options>`"
-msgstr ""
+msgstr ":ref:`共通オプション <raster_common_options>`"
 
 #: ../../source/programs/index.rst:68
 msgid ""
 ":ref:`gdal-config`: Determines various information about a GDAL "
 "installation."
 msgstr ""
+":ref:`gdal-config`: GDALインストール時の様々な情報を "
+"決定します."
 
 #: ../../source/programs/index.rst:69
 msgid ""
 ":ref:`gdal2tiles`: Generates directory with TMS tiles, KMLs and simple "
 "web viewers."
 msgstr ""
+":ref:`gdal2tiles`: TMSタイル、KML、シンプルなウェブビューアを含むディレクトリ"
+"を生成します."
 
 #: ../../source/programs/index.rst:70
 msgid ":ref:`gdal2xyz`: Translates a raster file into xyz format."
-msgstr ""
+msgstr ":ref:`gdal2xyz`: ラスタファイルをxyz形式に変換します."
 
 #: ../../source/programs/index.rst:71
 msgid ":ref:`gdal_calc`: Command line raster calculator with numpy syntax."
-msgstr ""
+msgstr ":ref:`gdal_calc`: numpy文法を利用したコマンドラインラスタ計算機."
 
 #: ../../source/programs/index.rst:72
 msgid ""
 ":ref:`gdal_contour`: Builds vector contour lines from a raster elevation "
 "model."
 msgstr ""
+":ref:`gdal_contour`: ラスタ標高モデルからベクター等高線を作成"
+"します."
 
 #: ../../source/programs/index.rst:73
 msgid ":ref:`gdal_create`: Create a raster file (without source dataset)."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-24 16:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/python/utilities.rst:9
 msgid "Python Utilities"
@@ -28,371 +28,193 @@ msgid "Raster Utilities"
 msgstr ""
 
 #: of osgeo.gdal.BuildVRT:1
-msgid "Build a VRT from a list of datasets."
+msgid "Build a VRT from a list of datasets. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.BuildVRT osgeo.gdal.BuildVRTOptions osgeo.gdal.DEMProcessing
-#: osgeo.gdal.DEMProcessingOptions osgeo.gdal.Grid osgeo.gdal.GridOptions
-#: osgeo.gdal.Info osgeo.gdal.MultiDimInfo osgeo.gdal.MultiDimTranslate
-#: osgeo.gdal.MultiDimTranslateOptions osgeo.gdal.Nearblack
-#: osgeo.gdal.NearblackOptions osgeo.gdal.Rasterize osgeo.gdal.RasterizeOptions
-#: osgeo.gdal.Translate osgeo.gdal.TranslateOptions osgeo.gdal.VectorTranslate
-#: osgeo.gdal.VectorTranslateOptions osgeo.gdal.Warp osgeo.gdal.WarpOptions
-msgid "Parameters"
-msgstr ""
-
-#: of osgeo.gdal.BuildVRT:3
-msgid "Output dataset name."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRT:4
+#: of osgeo.gdal.BuildVRT:3 osgeo.gdal.MultiDimTranslate:3
 msgid ""
-"An array of Dataset objects or filenames, or a Dataset object or a "
-"filename."
+"destName --- Output dataset name srcDSOrSrcDSTab --- an array of Dataset "
+"objects or filenames, or a Dataset object or a filename"
 msgstr ""
 
-#: of osgeo.gdal.BuildVRT:5
+#: of osgeo.gdal.BuildVRT:6 osgeo.gdal.DEMProcessing:7 osgeo.gdal.Grid:6
+#: osgeo.gdal.Info:5 osgeo.gdal.MultiDimInfo:5 osgeo.gdal.MultiDimTranslate:6
+#: osgeo.gdal.Nearblack:6 osgeo.gdal.Rasterize:6 osgeo.gdal.Translate:6
+#: osgeo.gdal.VectorTranslate:6 osgeo.gdal.Warp:6
+msgid "Keyword arguments are :"
+msgstr ""
+
+#: of osgeo.gdal.BuildVRT:6
 msgid ""
-"options: return of gdal.BuildVRTOptions(), string or array of strings, "
-"other keywords arguments of gdal.BuildVRTOptions(). If options is "
-"provided as a gdal.BuildVRTOptions() object, other keywords are ignored."
+"options --- return of gdal.BuildVRTOptions(), string or array of strings "
+"other keywords arguments of gdal.BuildVRTOptions()"
+msgstr ""
+
+#: of osgeo.gdal.BuildVRT:8
+msgid ""
+"If options is provided as a gdal.BuildVRTOptions() object, other keywords"
+" are ignored."
 msgstr ""
 
 #: of osgeo.gdal.BuildVRTOptions:1
-msgid "Create a BuildVRTOptions() object that can be passed to gdal.BuildVRT()"
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:3 osgeo.gdal.DEMProcessingOptions:3
-#: osgeo.gdal.GridOptions:3 osgeo.gdal.MultiDimTranslateOptions:3
-#: osgeo.gdal.NearblackOptions:3 osgeo.gdal.RasterizeOptions:3
-#: osgeo.gdal.TranslateOptions:3 osgeo.gdal.VectorTranslateOptions:3
-#: osgeo.gdal.WarpOptions:3
 msgid ""
-"can be be an array of strings, a string or let empty and filled from "
-"other keywords."
+"Create a BuildVRTOptions() object that can be passed to gdal.BuildVRT() "
+"Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.BuildVRTOptions:5
-msgid "'highest', 'lowest', 'average', 'user'."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:6
-msgid "output bounds as (minX, minY, maxX, maxY) in target SRS."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:8 osgeo.gdal.BuildVRTOptions:9
-msgid "output resolution in target SRS."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:10
-msgid "whether to force output bounds to be multiple of output resolution."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:11
+#: of osgeo.gdal.BuildVRTOptions:3
 msgid ""
-"whether each source file goes into a separate stacked band in the VRT "
-"band."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:12
-msgid "array of band numbers (index start at 1)."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:13
-msgid ""
-"whether to add an alpha mask band to the VRT when the source raster have "
-"none."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:14
-msgid "resampling mode."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:15
-msgid "assigned output SRS."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:16
-msgid ""
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords.. resolution --- 'highest', 'lowest', "
+"'average', 'user'. outputBounds --- output bounds as (minX, minY, maxX, "
+"maxY) in target SRS. xRes, yRes --- output resolution in target SRS. "
+"targetAlignedPixels --- whether to force output bounds to be multiple of "
+"output resolution. separate --- whether each source file goes into a "
+"separate stacked band in the VRT band. bandList --- array of band numbers"
+" (index start at 1). addAlpha --- whether to add an alpha mask band to "
+"the VRT when the source raster have none. resampleAlg --- resampling "
+"mode. outputSRS --- assigned output SRS. allowProjectionDifference --- "
 "whether to accept input datasets have not the same projection. Note: they"
-" will *not* be reprojected."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:18
-msgid "source nodata value(s)."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:19
-msgid "nodata values at the VRT band level."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:20
-msgid "whether to make the VRT band not report the NoData value."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:21
-msgid "set to True if warnings should be failures"
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:22
-msgid "callback method."
-msgstr ""
-
-#: of osgeo.gdal.BuildVRTOptions:23
-msgid "user data for callback."
+" will *not* be reprojected. srcNodata --- source nodata value(s). "
+"VRTNodata --- nodata values at the VRT band level. hideNodata --- whether"
+" to make the VRT band not report the NoData value. callback --- callback "
+"method. callback_data --- user data for callback."
 msgstr ""
 
 #: of osgeo.gdal.DEMProcessing:1
-msgid "Apply a DEM processing."
+msgid "Apply a DEM processing. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.DEMProcessing:3 osgeo.gdal.Grid:3
-#: osgeo.gdal.MultiDimTranslate:3 osgeo.gdal.Translate:3
-msgid "Output dataset name"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessing:4 osgeo.gdal.Grid:4 osgeo.gdal.Info:3
-#: osgeo.gdal.MultiDimInfo:3 osgeo.gdal.Nearblack:4 osgeo.gdal.Rasterize:4
-#: osgeo.gdal.Translate:4 osgeo.gdal.VectorTranslate:4
-msgid "a Dataset object or a filename"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessing:5
+#: of osgeo.gdal.DEMProcessing:3
 msgid ""
-"one of \"hillshade\", \"slope\", \"aspect\", \"color-relief\", \"TRI\", "
-"\"TPI\", \"Roughness\""
+"destName --- Output dataset name srcDS --- a Dataset object or a filename"
+" processing --- one of \"hillshade\", \"slope\", \"aspect\", \"color-"
+"relief\", \"TRI\", \"TPI\", \"Roughness\""
 msgstr ""
 
-#: of osgeo.gdal.DEMProcessing:6
+#: of osgeo.gdal.DEMProcessing:7
 msgid ""
-"options: return of gdal.DEMProcessingOptions(), string or array of "
-"strings, other keywords arguments of gdal.DEMProcessingOptions(). If "
-"options is provided as a gdal.DEMProcessingOptions() object, other "
+"options --- return of gdal.DEMProcessingOptions(), string or array of "
+"strings other keywords arguments of gdal.DEMProcessingOptions()"
+msgstr ""
+
+#: of osgeo.gdal.DEMProcessing:9
+msgid ""
+"If options is provided as a gdal.DEMProcessingOptions() object, other "
 "keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.DEMProcessingOptions:1
 msgid ""
 "Create a DEMProcessingOptions() object that can be passed to "
-"gdal.DEMProcessing()"
+"gdal.DEMProcessing() Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.DEMProcessingOptions:4
+#: of osgeo.gdal.DEMProcessingOptions:3
 msgid ""
-"(mandatory for \"color-relief\") name of file that contains palette "
-"definition for the \"color-relief\" processing."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:5 osgeo.gdal.GridOptions:4
-#: osgeo.gdal.MultiDimTranslateOptions:4 osgeo.gdal.NearblackOptions:4
-#: osgeo.gdal.RasterizeOptions:4 osgeo.gdal.TranslateOptions:4
-#: osgeo.gdal.WarpOptions:4
-msgid "output format (\"GTiff\", etc...)"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:6 osgeo.gdal.GridOptions:8
-#: osgeo.gdal.MultiDimTranslateOptions:5 osgeo.gdal.NearblackOptions:5
-#: osgeo.gdal.RasterizeOptions:6 osgeo.gdal.TranslateOptions:14
-#: osgeo.gdal.WarpOptions:23
-msgid "list of creation options"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:7
-msgid "whether to compute values at raster edges."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:8
-msgid ""
-"'Horn' (default) or 'ZevenbergenThorne' for hillshade, slope or aspect. "
-"'Wilson' (default) or 'Riley' for TRI"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:9
-msgid "source band number to use"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:10
-msgid ""
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. colorFilename --- (mandatory for \"color-"
+"relief\") name of file that contains palette definition for the \"color-"
+"relief\" processing. format --- output format (\"GTiff\", etc...) "
+"creationOptions --- list of creation options computeEdges --- whether to "
+"compute values at raster edges. alg --- 'Horn' (default) or "
+"'ZevenbergenThorne' for hillshade, slope or aspect. 'Wilson' (default) or"
+" 'Riley' for TRI band --- source band number to use zFactor --- "
 "(hillshade only) vertical exaggeration used to pre-multiply the "
-"elevations."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:11
-msgid "ratio of vertical units to horizontal."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:12
-msgid ""
+"elevations. scale --- ratio of vertical units to horizontal. azimuth --- "
 "(hillshade only) azimuth of the light, in degrees. 0 if it comes from the"
 " top of the raster, 90 from the east, ... The default value, 315, should "
 "rarely be changed as it is the value generally used to generate shaded "
-"maps."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:13
-msgid ""
-"(hillshade only) altitude of the light, in degrees. 90 if the light comes"
-" from above the DEM, 0 if it is raking light."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:14
-msgid ""
-"(hillshade only) whether to compute combined shading, a combination of "
-"slope and oblique shading. Only one of combined, multiDirectional and "
-"igor can be specified."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:15
-msgid ""
-"(hillshade only) whether to compute multi-directional shading. Only one "
-"of combined, multiDirectional and igor can be specified."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:16
-msgid ""
-"(hillshade only) whether to use Igor's hillshading from Maperitive.  Only"
-" one of combined, multiDirectional and igor can be specified."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:17
-msgid "(slope only) \"degree\" or \"percent\"."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:18
-msgid ""
-"(aspect only) whether to return trigonometric angle instead of azimuth. "
-"Thus 0deg means East, 90deg North, 180deg West, 270deg South."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:19
-msgid ""
-"(aspect only) whether to return 0 for flat areas with slope=0, instead of"
-" -9999."
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:20
-msgid ""
-"adds an alpha band to the output file (only for processing = 'color-"
-"relief')"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:21
-msgid ""
-"(color-relief only) Determines how color entries are selected from an "
-"input value. Can be \"nearest_color_entry\", \"exact_color_entry\" or "
-"\"linear_interpolation\". Defaults to \"linear_interpolation\""
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:22 osgeo.gdal.GridOptions:26
-#: osgeo.gdal.MultiDimTranslateOptions:14 osgeo.gdal.NearblackOptions:12
-#: osgeo.gdal.RasterizeOptions:41 osgeo.gdal.TranslateOptions:34
-#: osgeo.gdal.VectorTranslateOptions:31 osgeo.gdal.WarpOptions:42
-msgid "callback method"
-msgstr ""
-
-#: of osgeo.gdal.DEMProcessingOptions:23 osgeo.gdal.GridOptions:27
-#: osgeo.gdal.MultiDimTranslateOptions:15 osgeo.gdal.NearblackOptions:13
-#: osgeo.gdal.RasterizeOptions:42 osgeo.gdal.TranslateOptions:35
-#: osgeo.gdal.VectorTranslateOptions:32 osgeo.gdal.WarpOptions:43
-msgid "user data for callback"
+"maps. altitude ---(hillshade only) altitude of the light, in degrees. 90 "
+"if the light comes from above the DEM, 0 if it is raking light. combined "
+"--- (hillshade only) whether to compute combined shading, a combination "
+"of slope and oblique shading. Only one of combined, multiDirectional and "
+"igor can be specified. multiDirectional --- (hillshade only) whether to "
+"compute multi-directional shading. Only one of combined, multiDirectional"
+" and igor can be specified. igor --- (hillshade only) whether to use "
+"Igor's hillshading from Maperitive.  Only one of combined, "
+"multiDirectional and igor can be specified. slopeformat --- (slope only) "
+"\"degree\" or \"percent\". trigonometric --- (aspect only) whether to "
+"return trigonometric angle instead of azimuth. Thus 0deg means East, "
+"90deg North, 180deg West, 270deg South. zeroForFlat --- (aspect only) "
+"whether to return 0 for flat areas with slope=0, instead of -9999. "
+"addAlpha --- adds an alpha band to the output file (only for processing ="
+" 'color-relief') colorSelection --- (color-relief only) Determines how "
+"color entries are selected from an input value. Can be "
+"\"nearest_color_entry\", \"exact_color_entry\" or "
+"\"linear_interpolation\". Defaults to \"linear_interpolation\" callback "
+"--- callback method callback_data --- user data for callback"
 msgstr ""
 
 #: of osgeo.gdal.Grid:1
-msgid "Create raster from the scattered data."
+msgid "Create raster from the scattered data. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.Grid:5
+#: of osgeo.gdal.Grid:3 osgeo.gdal.Translate:3
+msgid "destName --- Output dataset name srcDS --- a Dataset object or a filename"
+msgstr ""
+
+#: of osgeo.gdal.Grid:6
 msgid ""
-"options: return of gdal.GridOptions(), string or array of strings, other "
-"keywords arguments of gdal.GridOptions() If options is provided as a "
-"gdal.GridOptions() object, other keywords are ignored."
+"options --- return of gdal.GridOptions(), string or array of strings "
+"other keywords arguments of gdal.GridOptions()"
+msgstr ""
+
+#: of osgeo.gdal.Grid:8
+msgid ""
+"If options is provided as a gdal.GridOptions() object, other keywords are"
+" ignored."
 msgstr ""
 
 #: of osgeo.gdal.GridOptions:1
-msgid "Create a GridOptions() object that can be passed to gdal.Grid()"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:5 osgeo.gdal.RasterizeOptions:5
-#: osgeo.gdal.TranslateOptions:5 osgeo.gdal.WarpOptions:17
-msgid "output type (gdalconst.GDT_Byte, etc...)"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:6 osgeo.gdal.RasterizeOptions:11
-#: osgeo.gdal.TranslateOptions:8 osgeo.gdal.WarpOptions:10
-msgid "width of the output raster in pixel"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:7 osgeo.gdal.RasterizeOptions:12
-#: osgeo.gdal.TranslateOptions:9 osgeo.gdal.WarpOptions:11
-msgid "height of the output raster in pixel"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:9 osgeo.gdal.TranslateOptions:22
-msgid "assigned output bounds: [ulx, uly, lrx, lry]"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:11 osgeo.gdal.RasterizeOptions:9
-#: osgeo.gdal.TranslateOptions:24
-msgid "assigned output SRS"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:12 osgeo.gdal.RasterizeOptions:16
-msgid "nodata value"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:13
 msgid ""
-"e.g "
+"Create a GridOptions() object that can be passed to gdal.Grid() Keyword "
+"arguments are :"
+msgstr ""
+
+#: of osgeo.gdal.GridOptions:3
+msgid ""
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"GTiff\", etc...) "
+"outputType --- output type (gdalconst.GDT_Byte, etc...) width --- width "
+"of the output raster in pixel height --- height of the output raster in "
+"pixel creationOptions --- list of creation options outputBounds --- "
+"assigned output bounds: [ulx, uly, lrx, lry] outputSRS --- assigned "
+"output SRS noData --- nodata value algorithm --- e.g "
 "\"invdist:power=2.0:smoothing=0.0:radius1=0.0:radius2=0.0:angle=0.0:max_points=0:min_points=0:nodata=0.0\""
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:14 osgeo.gdal.VectorTranslateOptions:21
-msgid "list of layers to convert"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:15 osgeo.gdal.RasterizeOptions:36
-#: osgeo.gdal.VectorTranslateOptions:10
-msgid "SQL statement to apply to the source dataset"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:16 osgeo.gdal.RasterizeOptions:38
-#: osgeo.gdal.VectorTranslateOptions:12
-msgid "WHERE clause to apply to source layer(s)"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:17 osgeo.gdal.VectorTranslateOptions:17
-msgid "spatial filter as (minX, minY, maxX, maxY) bounding box"
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:18
-msgid ""
-"Identifies an attribute field on the features to be used to get a Z value"
-" from. This value overrides Z value read from feature geometry record."
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:20
-msgid ""
-"Addition to the attribute field on the features to be used to get a Z "
-"value from. The addition should be the same unit as Z value. The result "
-"value will be Z value + Z increase value. The default value is 0."
-msgstr ""
-
-#: of osgeo.gdal.GridOptions:23
-msgid ""
-"Multiplication ratio for Z field. This can be used for shift from e.g. "
-"foot to meters or from  elevation to deep. The result value will be (Z "
-"value + Z increase value) * Z multiply value. The default value is 1."
+" layers --- list of layers to convert SQLStatement --- SQL statement to "
+"apply to the source dataset where --- WHERE clause to apply to source "
+"layer(s) spatFilter --- spatial filter as (minX, minY, maxX, maxY) "
+"bounding box zfield --- Identifies an attribute field on the features to "
+"be used to get a Z value from. This value overrides Z value read from "
+"feature geometry record. z_increase --- Addition to the attribute field "
+"on the features to be used to get a Z value from. The addition should be "
+"the same unit as Z value. The result value will be Z value + Z increase "
+"value. The default value is 0. z_multiply - Multiplication ratio for Z "
+"field. This can be used for shift from e.g. foot to meters or from  "
+"elevation to deep. The result value will be (Z value + Z increase value) "
+"* Z multiply value.  The default value is 1. callback --- callback method"
+" callback_data --- user data for callback"
 msgstr ""
 
 #: of osgeo.gdal.Info:1 osgeo.gdal.MultiDimInfo:1
-msgid "Return information on a dataset."
+msgid "Return information on a dataset. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.Info:4
+#: of osgeo.gdal.Info:3 osgeo.gdal.MultiDimInfo:3
+msgid "ds --- a Dataset object or a filename"
+msgstr ""
+
+#: of osgeo.gdal.Info:5
 msgid ""
-"options: return of gdal.InfoOptions(), string or array of strings other "
-"keywords arguments of gdal.InfoOptions(). If options is provided as a "
-"gdal.InfoOptions() object, other keywords are ignored."
+"options --- return of gdal.InfoOptions(), string or array of strings "
+"other keywords arguments of gdal.InfoOptions()"
+msgstr ""
+
+#: of osgeo.gdal.Info:7
+msgid ""
+"If options is provided as a gdal.InfoOptions() object, other keywords are"
+" ignored."
 msgstr ""
 
 #: of osgeo.gdal.InfoOptions:1
@@ -403,416 +225,238 @@ msgid ""
 msgstr ""
 
 #: of osgeo.gdal.Nearblack:1
-msgid "Convert nearly black/white borders to exact value."
+msgid "Convert nearly black/white borders to exact value. Arguments are :"
 msgstr ""
 
 #: of osgeo.gdal.Nearblack:3 osgeo.gdal.Rasterize:3
-#: osgeo.gdal.VectorTranslate:3 osgeo.gdal.Warp:3
-msgid "Output dataset name or object"
+#: osgeo.gdal.VectorTranslate:3
+msgid ""
+"destNameOrDestDS --- Output dataset name or object srcDS --- a Dataset "
+"object or a filename"
 msgstr ""
 
-#: of osgeo.gdal.Nearblack:5
+#: of osgeo.gdal.Nearblack:6
 msgid ""
-"options: return of gdal.NearblackOptions(), string or array of strings, "
-"other keywords arguments of gdal.NearblackOptions(). If options is "
-"provided as a gdal.NearblackOptions() object, other keywords are ignored."
+"options --- return of gdal.NearblackOptions(), string or array of strings"
+" other keywords arguments of gdal.NearblackOptions()"
+msgstr ""
+
+#: of osgeo.gdal.Nearblack:8
+msgid ""
+"If options is provided as a gdal.NearblackOptions() object, other "
+"keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.NearblackOptions:1
-msgid "Create a NearblackOptions() object that can be passed to gdal.Nearblack()"
+msgid ""
+"Create a NearblackOptions() object that can be passed to gdal.Nearblack()"
+" Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.NearblackOptions:6
+#: of osgeo.gdal.NearblackOptions:3
 msgid ""
-"whether to search for nearly white (255) pixels instead of nearly black "
-"pixels."
-msgstr ""
-
-#: of osgeo.gdal.NearblackOptions:7
-msgid ""
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"GTiff\", etc...) "
+"creationOptions --- list of creation options white --- whether to search "
+"for nearly white (255) pixels instead of nearly black pixels. colors --- "
 "list of colors  to search for, e.g. ((0,0,0),(255,255,255)). The pixels "
-"that are considered as the collar are set to 0"
-msgstr ""
-
-#: of osgeo.gdal.NearblackOptions:8
-msgid ""
-"number of non-black (or other searched colors specified with white / "
-"colors) pixels that can be encountered before the giving up search "
-"inwards. Defaults to 2."
-msgstr ""
-
-#: of osgeo.gdal.NearblackOptions:9
-msgid ""
-"select how far from black, white or custom colors the pixel values can be"
-" and still considered near black, white or custom color.  Defaults to 15."
-msgstr ""
-
-#: of osgeo.gdal.NearblackOptions:10
-msgid "adds an alpha band to the output file."
-msgstr ""
-
-#: of osgeo.gdal.NearblackOptions:11
-msgid "adds a mask band to the output file."
+"that are considered as the collar are set to 0 maxNonBlack --- number of "
+"non-black (or other searched colors specified with white / colors) pixels"
+" that can be encountered before the giving up search inwards. Defaults to"
+" 2. nearDist --- select how far from black, white or custom colors the "
+"pixel values can be and still considered near black, white or custom "
+"color.  Defaults to 15. setAlpha --- adds an alpha band to the output "
+"file. setMask --- adds a mask band to the output file. callback --- "
+"callback method callback_data --- user data for callback"
 msgstr ""
 
 #: of osgeo.gdal.Rasterize:1
-msgid "Burns vector geometries into a raster"
+msgid "Burns vector geometries into a raster Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.Rasterize:5
+#: of osgeo.gdal.Rasterize:6
 msgid ""
-"options: return of gdal.RasterizeOptions(), string or array of strings, "
-"other keywords arguments of gdal.RasterizeOptions() If options is "
-"provided as a gdal.RasterizeOptions() object, other keywords are ignored."
+"options --- return of gdal.RasterizeOptions(), string or array of strings"
+" other keywords arguments of gdal.RasterizeOptions()"
+msgstr ""
+
+#: of osgeo.gdal.Rasterize:8
+msgid ""
+"If options is provided as a gdal.RasterizeOptions() object, other "
+"keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.RasterizeOptions:1
-msgid "Create a RasterizeOptions() object that can be passed to gdal.Rasterize()"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:7
-msgid "assigned output bounds: [minx, miny, maxx, maxy]"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:10 osgeo.gdal.WarpOptions:31
-msgid "list of transformer options"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:13 osgeo.gdal.RasterizeOptions:14
-#: osgeo.gdal.WarpOptions:7 osgeo.gdal.WarpOptions:8
-msgid "output resolution in target SRS"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:15 osgeo.gdal.WarpOptions:9
-msgid "whether to force output bounds to be multiple of output resolution"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:17
 msgid ""
-"Value or list of values to pre-initialize the output image bands with.  "
-"However, it is not marked as the nodata value in the output file.   If "
-"only one value is given, the same value is used in all the bands."
+"Create a RasterizeOptions() object that can be passed to gdal.Rasterize()"
+" Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.RasterizeOptions:19
-msgid "Value or list of values to pre-initialize the output image bands with."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:19
-msgid "However, it is not marked as the nodata value in the output file."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:20
-msgid "If only one value is given, the same value is used in all the bands."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:21
-msgid "list of output bands to burn values into"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:22
+#: of osgeo.gdal.RasterizeOptions:3
 msgid ""
-"whether to invert rasterization, i.e. burn the fixed burn value, or the "
-"burn value associated with the first feature into all parts of the image "
-"not inside the provided a polygon."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:25
-msgid ""
-"whether to enable the ALL_TOUCHED rasterization option so that all pixels"
-" touched by lines or polygons will be updated, not just those on the line"
-" render path, or whose center point is within the polygon."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:28
-msgid ""
-"list of fixed values to burn into each band for all objects. Excusive "
-"with attribute."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:30
-msgid ""
-"identifies an attribute field on the features to be used for a burn-in "
-"value. The value will be burned into all output bands. Excusive with "
-"burnValues."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:32
-msgid ""
-"whether to indicate that a burn value should be extracted from the \"Z\" "
-"values of the feature. These values are added to the burn value given by "
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"GTiff\", etc...) "
+"outputType --- output type (gdalconst.GDT_Byte, etc...) creationOptions "
+"--- list of creation options outputBounds --- assigned output bounds: "
+"[minx, miny, maxx, maxy] outputSRS --- assigned output SRS "
+"transformerOptions --- list of transformer options width --- width of the"
+" output raster in pixel height --- height of the output raster in pixel "
+"xRes, yRes --- output resolution in target SRS targetAlignedPixels --- "
+"whether to force output bounds to be multiple of output resolution noData"
+" --- nodata value initValues --- Value or list of values to pre-"
+"initialize the output image bands with.  However, it is not marked as the"
+" nodata value in the output file.  If only one value is given, the same "
+"value is used in all the bands. bands --- list of output bands to burn "
+"values into inverse --- whether to invert rasterization, i.e. burn the "
+"fixed burn value, or the burn value associated  with the first feature "
+"into all parts of the image not inside the provided a polygon. allTouched"
+" -- whether to enable the ALL_TOUCHED rasterization option so that all "
+"pixels touched by lines or polygons will be updated, not just those on "
+"the line render path, or whose center point is within the polygon. "
+"burnValues -- list of fixed values to burn into each band for all "
+"objects. Excusive with attribute. attribute --- identifies an attribute "
+"field on the features to be used for a burn-in value. The value will be "
+"burned into all output bands. Excusive with burnValues. useZ --- whether "
+"to indicate that a burn value should be extracted from the \"Z\" values "
+"of the feature. These values are added to the burn value given by "
 "burnValues or attribute if provided. As of now, only points and lines are"
-" drawn in 3D."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:35
-msgid "list of layers from the datasource that will be used for input features."
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:37 osgeo.gdal.VectorTranslateOptions:11
-msgid "SQL dialect ('OGRSQL', 'SQLITE', ...)"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:39
-msgid "optimization mode ('RASTER', 'VECTOR')"
-msgstr ""
-
-#: of osgeo.gdal.RasterizeOptions:40
-msgid "set to True to use additive mode instead of replace when burning values"
+" drawn in 3D. layers --- list of layers from the datasource that will be "
+"used for input features. SQLStatement --- SQL statement to apply to the "
+"source dataset SQLDialect --- SQL dialect ('OGRSQL', 'SQLITE', ...) where"
+" --- WHERE clause to apply to source layer(s) optim --- optimization mode"
+" ('RASTER', 'VECTOR') add --- set to True to use additive mode instead of"
+" replace when burning values callback --- callback method callback_data "
+"--- user data for callback"
 msgstr ""
 
 #: of osgeo.gdal.Translate:1
-msgid "Convert a dataset."
+msgid "Convert a dataset. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.Translate:5
+#: of osgeo.gdal.Translate:6
 msgid ""
-"options: return of gdal.TranslateOptions(), string or array of strings "
-"other keywords arguments of gdal.TranslateOptions(). If options is "
-"provided as a gdal.TranslateOptions() object, other keywords are ignored."
+"options --- return of gdal.TranslateOptions(), string or array of strings"
+" other keywords arguments of gdal.TranslateOptions()"
+msgstr ""
+
+#: of osgeo.gdal.Translate:8
+msgid ""
+"If options is provided as a gdal.TranslateOptions() object, other "
+"keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.TranslateOptions:1
-msgid "Create a TranslateOptions() object that can be passed to gdal.Translate()"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:6
-msgid "array of band numbers (index start at 1)"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:7
-msgid "mask band to generate or not (\"none\", \"auto\", \"mask\", 1, ...)"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:10
-msgid "width of the output raster in percentage (100 = original width)"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:11
-msgid "height of the output raster in percentage (100 = original height)"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:12
-msgid "output horizontal resolution"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:13
-msgid "output vertical resolution"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:15
-msgid "subwindow in pixels to extract: [left_x, top_y, width, height]"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:16
-msgid "subwindow in projected coordinates to extract: [ulx, uly, lrx, lry]"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:17
-msgid "SRS in which projWin is expressed"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:18
-msgid "strict mode"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:19
-msgid "unscale values with scale and offset metadata"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:20
 msgid ""
-"list of scale parameters, each of the form [src_min,src_max] or "
-"[src_min,src_max,dst_min,dst_max]"
+"Create a TranslateOptions() object that can be passed to gdal.Translate()"
+" Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.TranslateOptions:21
-msgid "list of exponentiation parameters"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:23
-msgid "list of metadata options"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:25
-msgid "ignore GCP in the raster"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:26
-msgid "list of GCPs"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:27
-msgid "nodata value (or \"none\" to unset it)"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:28
-msgid "Color palette expansion mode: \"gray\", \"rgb\", \"rgba\""
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:29
-msgid "whether to calculate statistics"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:30
-msgid "whether to write source RAT"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:31
-msgid "whether to copy XMP metadata"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:32 osgeo.gdal.WarpOptions:22
-msgid "resampling mode"
-msgstr ""
-
-#: of osgeo.gdal.TranslateOptions:33 osgeo.gdal.WarpOptions:41
-msgid "To specify which overview level of source files must be used"
+#: of osgeo.gdal.TranslateOptions:3
+msgid ""
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"GTiff\", etc...) "
+"outputType --- output type (gdalconst.GDT_Byte, etc...) bandList --- "
+"array of band numbers (index start at 1) maskBand --- mask band to "
+"generate or not (\"none\", \"auto\", \"mask\", 1, ...) width --- width of"
+" the output raster in pixel height --- height of the output raster in "
+"pixel widthPct --- width of the output raster in percentage (100 = "
+"original width) heightPct --- height of the output raster in percentage "
+"(100 = original height) xRes --- output horizontal resolution yRes --- "
+"output vertical resolution creationOptions --- list of creation options "
+"srcWin --- subwindow in pixels to extract: [left_x, top_y, width, height]"
+" projWin --- subwindow in projected coordinates to extract: [ulx, uly, "
+"lrx, lry] projWinSRS --- SRS in which projWin is expressed strict --- "
+"strict mode unscale --- unscale values with scale and offset metadata "
+"scaleParams --- list of scale parameters, each of the form "
+"[src_min,src_max] or [src_min,src_max,dst_min,dst_max] exponents --- list"
+" of exponentiation parameters outputBounds --- assigned output bounds: "
+"[ulx, uly, lrx, lry] metadataOptions --- list of metadata options "
+"outputSRS --- assigned output SRS nogcp --- ignore GCP in the raster GCPs"
+" --- list of GCPs noData --- nodata value (or \"none\" to unset it) "
+"rgbExpand --- Color palette expansion mode: \"gray\", \"rgb\", \"rgba\" "
+"stats --- whether to calculate statistics rat --- whether to write source"
+" RAT resampleAlg --- resampling mode callback --- callback method "
+"callback_data --- user data for callback"
 msgstr ""
 
 #: of osgeo.gdal.Warp:1
-msgid "Warp one or several datasets."
+msgid "Warp one or several datasets. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.MultiDimTranslate:4 osgeo.gdal.Warp:4
+#: of osgeo.gdal.Warp:3
 msgid ""
-"an array of Dataset objects or filenames, or a Dataset object or a "
-"filename"
+"destNameOrDestDS --- Output dataset name or object srcDSOrSrcDSTab --- an"
+" array of Dataset objects or filenames, or a Dataset object or a filename"
 msgstr ""
 
-#: of osgeo.gdal.Warp:5
+#: of osgeo.gdal.Warp:6
 msgid ""
-"options: return of gdal.WarpOptions(), string or array of strings, other "
-"keywords arguments of gdal.WarpOptions(). If options is provided as a "
-"gdal.WarpOptions() object, other keywords are ignored."
+"options --- return of gdal.WarpOptions(), string or array of strings "
+"other keywords arguments of gdal.WarpOptions()"
+msgstr ""
+
+#: of osgeo.gdal.Warp:8
+msgid ""
+"If options is provided as a gdal.WarpOptions() object, other keywords are"
+" ignored."
 msgstr ""
 
 #: of osgeo.gdal.WarpOptions:1
-msgid "Create a WarpOptions() object that can be passed to gdal.Warp()"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:5
-msgid "output bounds as (minX, minY, maxX, maxY) in target SRS"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:6
 msgid ""
-"SRS in which output bounds are expressed, in the case they are not "
-"expressed in dstSRS"
+"Create a WarpOptions() object that can be passed to gdal.Warp() Keyword "
+"arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.VectorTranslateOptions:6 osgeo.gdal.WarpOptions:12
-msgid "source SRS"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:13
-msgid "output SRS"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:8 osgeo.gdal.WarpOptions:14
-msgid "coordinate operation as a PROJ string or WKT string"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:15
+#: of osgeo.gdal.WarpOptions:3
 msgid ""
-"whether to force the last band of the input dataset to be considered as "
-"an alpha band"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:16
-msgid "whether to force the creation of an output alpha band"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:18
-msgid "working type (gdalconst.GDT_Byte, etc...)"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:19
-msgid "list of warping options"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:20
-msgid "error threshold for approximation transformer (in pixels)"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:21
-msgid "size of working buffer in MB"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:24
-msgid "source nodata value(s)"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:25
-msgid "output nodata value(s)"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:26
-msgid "whether to multithread computation and I/O operations"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:27
-msgid "whether to use Thin Plate Spline GCP transformer"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:28
-msgid "whether to use RPC transformer"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:29
-msgid "whether to use GeoLocation array transformer"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:30
-msgid "order of polynomial GCP interpolation"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:32
-msgid "cutline dataset name"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:33
-msgid "cutline layer name"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:34
-msgid "cutline WHERE clause"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:35
-msgid "cutline SQL statement"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:36
-msgid "cutline blend distance in pixels"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:37
-msgid "whether to use cutline extent for output bounds"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:38
-msgid "whether to copy source metadata"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:39
-msgid "metadata data conflict value"
-msgstr ""
-
-#: of osgeo.gdal.WarpOptions:40
-msgid "whether to force color interpretation of input bands to output bands"
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"GTiff\", etc...) "
+"outputBounds --- output bounds as (minX, minY, maxX, maxY) in target SRS "
+"outputBoundsSRS --- SRS in which output bounds are expressed, in the case"
+" they are not expressed in dstSRS xRes, yRes --- output resolution in "
+"target SRS targetAlignedPixels --- whether to force output bounds to be "
+"multiple of output resolution width --- width of the output raster in "
+"pixel height --- height of the output raster in pixel srcSRS --- source "
+"SRS dstSRS --- output SRS coordinateOperation -- coordinate operation as "
+"a PROJ string or WKT string srcAlpha --- whether to force the last band "
+"of the input dataset to be considered as an alpha band dstAlpha --- "
+"whether to force the creation of an output alpha band outputType --- "
+"output type (gdalconst.GDT_Byte, etc...) workingType --- working type "
+"(gdalconst.GDT_Byte, etc...) warpOptions --- list of warping options "
+"errorThreshold --- error threshold for approximation transformer (in "
+"pixels) warpMemoryLimit --- size of working buffer in MB resampleAlg --- "
+"resampling mode creationOptions --- list of creation options srcNodata "
+"--- source nodata value(s) dstNodata --- output nodata value(s) "
+"multithread --- whether to multithread computation and I/O operations tps"
+" --- whether to use Thin Plate Spline GCP transformer rpc --- whether to "
+"use RPC transformer geoloc --- whether to use GeoLocation array "
+"transformer polynomialOrder --- order of polynomial GCP interpolation "
+"transformerOptions --- list of transformer options cutlineDSName --- "
+"cutline dataset name cutlineLayer --- cutline layer name cutlineWhere ---"
+" cutline WHERE clause cutlineSQL --- cutline SQL statement cutlineBlend "
+"--- cutline blend distance in pixels cropToCutline --- whether to use "
+"cutline extent for output bounds copyMetadata --- whether to copy source "
+"metadata metadataConflictValue --- metadata data conflict value "
+"setColorInterpretation --- whether to force color interpretation of input"
+" bands to output bands overviewLevel --- To specify which overview level "
+"of source files must be used callback --- callback method callback_data "
+"--- user data for callback"
 msgstr ""
 
 #: ../../source/api/python/utilities.rst:75
 msgid "Multidimensional Raster Utilities"
 msgstr ""
 
-#: of osgeo.gdal.MultiDimInfo:4
+#: of osgeo.gdal.MultiDimInfo:5
 msgid ""
-"options: return of gdal.MultiDimInfoOptions(), string or array of strings"
-" other keywords arguments of gdal.MultiDimInfoOptions(). If options is "
-"provided as a gdal.MultiDimInfoOptions() object, other keywords are "
-"ignored."
+"options --- return of gdal.MultiDimInfoOptions(), string or array of "
+"strings other keywords arguments of gdal.MultiDimInfoOptions()"
+msgstr ""
+
+#: of osgeo.gdal.MultiDimInfo:7
+msgid ""
+"If options is provided as a gdal.MultiDimInfoOptions() object, other "
+"keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.MultiDimInfoOptions:1
@@ -823,45 +467,41 @@ msgid ""
 msgstr ""
 
 #: of osgeo.gdal.MultiDimTranslate:1
-msgid "MultiDimTranslate one or several datasets."
+msgid "MultiDimTranslate one or several datasets. Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.MultiDimTranslate:5
+#: of osgeo.gdal.MultiDimTranslate:6
 msgid ""
-"options: return of gdal.MultiDimTranslateOptions(), string or array of "
-"strings other keywords arguments of gdal.MultiDimTranslateOptions(). If "
-"options is provided as a gdal.MultiDimTranslateOptions() object, other "
-"keywords are ignored."
+"options --- return of gdal.MultiDimTranslateOptions(), string or array of"
+" strings other keywords arguments of gdal.MultiDimTranslateOptions()"
+msgstr ""
+
+#: of osgeo.gdal.MultiDimTranslate:8
+msgid ""
+"If options is provided as a gdal.MultiDimTranslateOptions() object, other"
+" keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.MultiDimTranslateOptions:1
 msgid ""
 "Create a MultiDimTranslateOptions() object that can be passed to "
-"gdal.MultiDimTranslate()"
+"gdal.MultiDimTranslate() Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.MultiDimTranslateOptions:6
+#: of osgeo.gdal.MultiDimTranslateOptions:3
 msgid ""
-"list of array specifications, each of them being an array name or "
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"GTiff\", etc...) "
+"creationOptions --- list of creation options arraySpecs -- list of array "
+"specifications, each of them being an array name or "
 "\"name={src_array_name},dstname={dst_name},transpose=[1,0],view=[:,::-1]\""
-msgstr ""
-
-#: of osgeo.gdal.MultiDimTranslateOptions:8
-msgid ""
-"list of group specifications, each of them being a group name or "
-"\"name={src_array_name},dstname={dst_name},recursive=no\""
-msgstr ""
-
-#: of osgeo.gdal.MultiDimTranslateOptions:10
-msgid ""
-"list of subset specifications, each of them being like "
-"\"{dim_name}({min_val},{max_val})\" or \"{dim_name}({slice_va})\""
-msgstr ""
-
-#: of osgeo.gdal.MultiDimTranslateOptions:12
-msgid ""
-"list of dimension scaling specifications, each of them being like "
-"\"{dim_name}({scale_factor})\""
+" groupSpecs -- list of group specifications, each of them being a group "
+"name or \"name={src_array_name},dstname={dst_name},recursive=no\" "
+"subsetSpecs -- list of subset specifications, each of them being like "
+"\"{dim_name}({min_val},{max_val})\" or \"{dim_name}({slice_va})\" "
+"scaleAxesSpecs -- list of dimension scaling specifications, each of them "
+"being like \"{dim_name}({scale_factor})\" callback --- callback method "
+"callback_data --- user data for callback"
 msgstr ""
 
 #: ../../source/api/python/utilities.rst:86
@@ -869,106 +509,869 @@ msgid "Vector Utilities"
 msgstr ""
 
 #: of osgeo.gdal.VectorTranslate:1
-msgid "Convert one vector dataset"
+msgid "Convert one vector dataset Arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.VectorTranslate:5
+#: of osgeo.gdal.VectorTranslate:6
 msgid ""
-"options: return of gdal.VectorTranslateOptions(), string or array of "
-"strings, other keywords arguments of gdal.VectorTranslateOptions(). If "
-"options is provided as a gdal.VectorTranslateOptions() object, other "
+"options --- return of gdal.VectorTranslateOptions(), string or array of "
+"strings other keywords arguments of gdal.VectorTranslateOptions()"
+msgstr ""
+
+#: of osgeo.gdal.VectorTranslate:8
+msgid ""
+"If options is provided as a gdal.VectorTranslateOptions() object, other "
 "keywords are ignored."
 msgstr ""
 
 #: of osgeo.gdal.VectorTranslateOptions:1
 msgid ""
 "Create a VectorTranslateOptions() object that can be passed to "
-"gdal.VectorTranslate()"
+"gdal.VectorTranslate() Keyword arguments are :"
 msgstr ""
 
-#: of osgeo.gdal.VectorTranslateOptions:4
-msgid "format (\"ESRI Shapefile\", etc...)"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:5
-msgid "None for creation, 'update', 'append', 'upsert', 'overwrite'"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:7
-msgid "output SRS (with reprojection if reproject = True)"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:9
-msgid "whether to do reprojection"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:13
-msgid "list of fields to select"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:14
+#: of osgeo.gdal.VectorTranslateOptions:3
 msgid ""
-"whether to add new fields found in source layers (to be used with "
-"accessMode == 'append' or 'upsert')"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:15
-msgid "whether to drop NOT NULL constraints on newly created fields"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:16
-msgid "whether to treat empty string values as NULL"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:18
-msgid ""
-"SRS in which the spatFilter is expressed. If not specified, it is assumed"
-" to be the one of the layer(s)"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:19
-msgid "list of dataset creation options"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:20
-msgid "list of layer creation options"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:22
-msgid "output layer name"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:23
-msgid "output layer geometry type ('POINT', ....)"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:24
-msgid "output dimension ('XY', 'XYZ', 'XYM', 'XYZM', 'layer_dim')"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:25
-msgid "maximum distance between consecutive nodes of a line geometry"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:26
-msgid "run MakeValid() on geometries"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:27
-msgid "name of field to use to set the Z component of geometries"
-msgstr ""
-
-#: of osgeo.gdal.VectorTranslateOptions:28
-msgid ""
+"options --- can be be an array of strings, a string or let empty and "
+"filled from other keywords. format --- output format (\"ESRI Shapefile\","
+" etc...) accessMode --- None for creation, 'update', 'append', "
+"'overwrite' srcSRS --- source SRS dstSRS --- output SRS (with "
+"reprojection if reproject = True) coordinateOperation -- coordinate "
+"operation as a PROJ string or WKT string reproject --- whether to do "
+"reprojection SQLStatement --- SQL statement to apply to the source "
+"dataset SQLDialect --- SQL dialect ('OGRSQL', 'SQLITE', ...) where --- "
+"WHERE clause to apply to source layer(s) selectFields --- list of fields "
+"to select addFields --- whether to add new fields found in source layers "
+"(to be used with accessMode == 'append') forceNullable --- whether to "
+"drop NOT NULL constraints on newly created fields emptyStrAsNull --- "
+"whether to treat empty string values as NULL spatFilter --- spatial "
+"filter as (minX, minY, maxX, maxY) bounding box spatSRS --- SRS in which "
+"the spatFilter is expressed. If not specified, it is assumed to be the "
+"one of the layer(s) datasetCreationOptions --- list of dataset creation "
+"options layerCreationOptions --- list of layer creation options layers "
+"--- list of layers to convert layerName --- output layer name "
+"geometryType --- output layer geometry type ('POINT', ....) dim --- "
+"output dimension ('XY', 'XYZ', 'XYM', 'XYZM', 'layer_dim') "
+"segmentizeMaxDist --- maximum distance between consecutive nodes of a "
+"line geometry makeValid --- run MakeValid() on geometries zField --- name"
+" of field to use to set the Z component of geometries resolveDomains --- "
 "whether to create an additional field for each field associated with a "
-"coded field domain."
+"coded field domain. skipFailures --- whether to skip failures limit -- "
+"maximum number of features to read per layer callback --- callback method"
+" callback_data --- user data for callback"
 msgstr ""
 
-#: of osgeo.gdal.VectorTranslateOptions:29
-msgid "whether to skip failures"
-msgstr ""
+#~ msgid "Build a VRT from a list of datasets."
+#~ msgstr ""
 
-#: of osgeo.gdal.VectorTranslateOptions:30
-msgid "maximum number of features to read per layer"
-msgstr ""
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Output dataset name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An array of Dataset objects or "
+#~ "filenames, or a Dataset object or "
+#~ "a filename."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.BuildVRTOptions(), "
+#~ "string or array of strings, other "
+#~ "keywords arguments of gdal.BuildVRTOptions(). "
+#~ "If options is provided as a "
+#~ "gdal.BuildVRTOptions() object, other keywords "
+#~ "are ignored."
+#~ msgstr ""
+
+#~ msgid "Create a BuildVRTOptions() object that can be passed to gdal.BuildVRT()"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "can be be an array of strings, "
+#~ "a string or let empty and filled"
+#~ " from other keywords."
+#~ msgstr ""
+
+#~ msgid "'highest', 'lowest', 'average', 'user'."
+#~ msgstr ""
+
+#~ msgid "output bounds as (minX, minY, maxX, maxY) in target SRS."
+#~ msgstr ""
+
+#~ msgid "output resolution in target SRS."
+#~ msgstr ""
+
+#~ msgid "whether to force output bounds to be multiple of output resolution."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether each source file goes into "
+#~ "a separate stacked band in the VRT"
+#~ " band."
+#~ msgstr ""
+
+#~ msgid "array of band numbers (index start at 1)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to add an alpha mask band"
+#~ " to the VRT when the source "
+#~ "raster have none."
+#~ msgstr ""
+
+#~ msgid "resampling mode."
+#~ msgstr ""
+
+#~ msgid "assigned output SRS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to accept input datasets have"
+#~ " not the same projection. Note: they"
+#~ " will *not* be reprojected."
+#~ msgstr ""
+
+#~ msgid "source nodata value(s)."
+#~ msgstr ""
+
+#~ msgid "nodata values at the VRT band level."
+#~ msgstr ""
+
+#~ msgid "whether to make the VRT band not report the NoData value."
+#~ msgstr ""
+
+#~ msgid "set to True if warnings should be failures"
+#~ msgstr ""
+
+#~ msgid "callback method."
+#~ msgstr ""
+
+#~ msgid "user data for callback."
+#~ msgstr ""
+
+#~ msgid "Apply a DEM processing."
+#~ msgstr ""
+
+#~ msgid "Output dataset name"
+#~ msgstr ""
+
+#~ msgid "a Dataset object or a filename"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "one of \"hillshade\", \"slope\", \"aspect\","
+#~ " \"color-relief\", \"TRI\", \"TPI\", "
+#~ "\"Roughness\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.DEMProcessingOptions(), "
+#~ "string or array of strings, other "
+#~ "keywords arguments of gdal.DEMProcessingOptions()."
+#~ " If options is provided as a "
+#~ "gdal.DEMProcessingOptions() object, other keywords"
+#~ " are ignored."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a DEMProcessingOptions() object that"
+#~ " can be passed to gdal.DEMProcessing()"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(mandatory for \"color-relief\") name of"
+#~ " file that contains palette definition "
+#~ "for the \"color-relief\" processing."
+#~ msgstr ""
+
+#~ msgid "output format (\"GTiff\", etc...)"
+#~ msgstr ""
+
+#~ msgid "list of creation options"
+#~ msgstr ""
+
+#~ msgid "whether to compute values at raster edges."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "'Horn' (default) or 'ZevenbergenThorne' for"
+#~ " hillshade, slope or aspect. 'Wilson' "
+#~ "(default) or 'Riley' for TRI"
+#~ msgstr ""
+
+#~ msgid "source band number to use"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(hillshade only) vertical exaggeration used"
+#~ " to pre-multiply the elevations."
+#~ msgstr ""
+
+#~ msgid "ratio of vertical units to horizontal."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(hillshade only) azimuth of the light,"
+#~ " in degrees. 0 if it comes from"
+#~ " the top of the raster, 90 from"
+#~ " the east, ... The default value, "
+#~ "315, should rarely be changed as "
+#~ "it is the value generally used to"
+#~ " generate shaded maps."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(hillshade only) altitude of the light,"
+#~ " in degrees. 90 if the light "
+#~ "comes from above the DEM, 0 if "
+#~ "it is raking light."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(hillshade only) whether to compute "
+#~ "combined shading, a combination of slope"
+#~ " and oblique shading. Only one of "
+#~ "combined, multiDirectional and igor can "
+#~ "be specified."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(hillshade only) whether to compute "
+#~ "multi-directional shading. Only one of "
+#~ "combined, multiDirectional and igor can "
+#~ "be specified."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(hillshade only) whether to use Igor's"
+#~ " hillshading from Maperitive.  Only one "
+#~ "of combined, multiDirectional and igor "
+#~ "can be specified."
+#~ msgstr ""
+
+#~ msgid "(slope only) \"degree\" or \"percent\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(aspect only) whether to return "
+#~ "trigonometric angle instead of azimuth. "
+#~ "Thus 0deg means East, 90deg North, "
+#~ "180deg West, 270deg South."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(aspect only) whether to return 0 "
+#~ "for flat areas with slope=0, instead "
+#~ "of -9999."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "adds an alpha band to the output"
+#~ " file (only for processing = "
+#~ "'color-relief')"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(color-relief only) Determines how color"
+#~ " entries are selected from an input"
+#~ " value. Can be \"nearest_color_entry\", "
+#~ "\"exact_color_entry\" or \"linear_interpolation\". "
+#~ "Defaults to \"linear_interpolation\""
+#~ msgstr ""
+
+#~ msgid "callback method"
+#~ msgstr ""
+
+#~ msgid "user data for callback"
+#~ msgstr ""
+
+#~ msgid "Create raster from the scattered data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.GridOptions(), string"
+#~ " or array of strings, other keywords"
+#~ " arguments of gdal.GridOptions() If options"
+#~ " is provided as a gdal.GridOptions() "
+#~ "object, other keywords are ignored."
+#~ msgstr ""
+
+#~ msgid "Create a GridOptions() object that can be passed to gdal.Grid()"
+#~ msgstr ""
+
+#~ msgid "output type (gdalconst.GDT_Byte, etc...)"
+#~ msgstr ""
+
+#~ msgid "width of the output raster in pixel"
+#~ msgstr ""
+
+#~ msgid "height of the output raster in pixel"
+#~ msgstr ""
+
+#~ msgid "assigned output bounds: [ulx, uly, lrx, lry]"
+#~ msgstr ""
+
+#~ msgid "assigned output SRS"
+#~ msgstr ""
+
+#~ msgid "nodata value"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "e.g "
+#~ "\"invdist:power=2.0:smoothing=0.0:radius1=0.0:radius2=0.0:angle=0.0:max_points=0:min_points=0:nodata=0.0\""
+#~ msgstr ""
+
+#~ msgid "list of layers to convert"
+#~ msgstr ""
+
+#~ msgid "SQL statement to apply to the source dataset"
+#~ msgstr ""
+
+#~ msgid "WHERE clause to apply to source layer(s)"
+#~ msgstr ""
+
+#~ msgid "spatial filter as (minX, minY, maxX, maxY) bounding box"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Identifies an attribute field on the "
+#~ "features to be used to get a "
+#~ "Z value from. This value overrides "
+#~ "Z value read from feature geometry "
+#~ "record."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Addition to the attribute field on "
+#~ "the features to be used to get "
+#~ "a Z value from. The addition "
+#~ "should be the same unit as Z "
+#~ "value. The result value will be Z"
+#~ " value + Z increase value. The "
+#~ "default value is 0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Multiplication ratio for Z field. This"
+#~ " can be used for shift from "
+#~ "e.g. foot to meters or from  "
+#~ "elevation to deep. The result value "
+#~ "will be (Z value + Z increase "
+#~ "value) * Z multiply value. The "
+#~ "default value is 1."
+#~ msgstr ""
+
+#~ msgid "Return information on a dataset."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.InfoOptions(), string"
+#~ " or array of strings other keywords"
+#~ " arguments of gdal.InfoOptions(). If "
+#~ "options is provided as a "
+#~ "gdal.InfoOptions() object, other keywords are"
+#~ " ignored."
+#~ msgstr ""
+
+#~ msgid "Convert nearly black/white borders to exact value."
+#~ msgstr ""
+
+#~ msgid "Output dataset name or object"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.NearblackOptions(), "
+#~ "string or array of strings, other "
+#~ "keywords arguments of gdal.NearblackOptions(). "
+#~ "If options is provided as a "
+#~ "gdal.NearblackOptions() object, other keywords "
+#~ "are ignored."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a NearblackOptions() object that "
+#~ "can be passed to gdal.Nearblack()"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to search for nearly white "
+#~ "(255) pixels instead of nearly black "
+#~ "pixels."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of colors  to search for, "
+#~ "e.g. ((0,0,0),(255,255,255)). The pixels that"
+#~ " are considered as the collar are "
+#~ "set to 0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "number of non-black (or other "
+#~ "searched colors specified with white /"
+#~ " colors) pixels that can be "
+#~ "encountered before the giving up search"
+#~ " inwards. Defaults to 2."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "select how far from black, white "
+#~ "or custom colors the pixel values "
+#~ "can be and still considered near "
+#~ "black, white or custom color.  Defaults"
+#~ " to 15."
+#~ msgstr ""
+
+#~ msgid "adds an alpha band to the output file."
+#~ msgstr ""
+
+#~ msgid "adds a mask band to the output file."
+#~ msgstr ""
+
+#~ msgid "Burns vector geometries into a raster"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.RasterizeOptions(), "
+#~ "string or array of strings, other "
+#~ "keywords arguments of gdal.RasterizeOptions() "
+#~ "If options is provided as a "
+#~ "gdal.RasterizeOptions() object, other keywords "
+#~ "are ignored."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a RasterizeOptions() object that "
+#~ "can be passed to gdal.Rasterize()"
+#~ msgstr ""
+
+#~ msgid "assigned output bounds: [minx, miny, maxx, maxy]"
+#~ msgstr ""
+
+#~ msgid "list of transformer options"
+#~ msgstr ""
+
+#~ msgid "output resolution in target SRS"
+#~ msgstr ""
+
+#~ msgid "whether to force output bounds to be multiple of output resolution"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Value or list of values to pre-"
+#~ "initialize the output image bands with."
+#~ "  However, it is not marked as "
+#~ "the nodata value in the output "
+#~ "file.   If only one value is "
+#~ "given, the same value is used in"
+#~ " all the bands."
+#~ msgstr ""
+
+#~ msgid "Value or list of values to pre-initialize the output image bands with."
+#~ msgstr ""
+
+#~ msgid "However, it is not marked as the nodata value in the output file."
+#~ msgstr ""
+
+#~ msgid "If only one value is given, the same value is used in all the bands."
+#~ msgstr ""
+
+#~ msgid "list of output bands to burn values into"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to invert rasterization, i.e. "
+#~ "burn the fixed burn value, or the"
+#~ " burn value associated with the first"
+#~ " feature into all parts of the "
+#~ "image not inside the provided a "
+#~ "polygon."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to enable the ALL_TOUCHED "
+#~ "rasterization option so that all pixels"
+#~ " touched by lines or polygons will"
+#~ " be updated, not just those on "
+#~ "the line render path, or whose "
+#~ "center point is within the polygon."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of fixed values to burn into"
+#~ " each band for all objects. Excusive"
+#~ " with attribute."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "identifies an attribute field on the "
+#~ "features to be used for a burn-"
+#~ "in value. The value will be burned"
+#~ " into all output bands. Excusive with"
+#~ " burnValues."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to indicate that a burn "
+#~ "value should be extracted from the "
+#~ "\"Z\" values of the feature. These "
+#~ "values are added to the burn value"
+#~ " given by burnValues or attribute if"
+#~ " provided. As of now, only points "
+#~ "and lines are drawn in 3D."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of layers from the datasource "
+#~ "that will be used for input "
+#~ "features."
+#~ msgstr ""
+
+#~ msgid "SQL dialect ('OGRSQL', 'SQLITE', ...)"
+#~ msgstr ""
+
+#~ msgid "optimization mode ('RASTER', 'VECTOR')"
+#~ msgstr ""
+
+#~ msgid "set to True to use additive mode instead of replace when burning values"
+#~ msgstr ""
+
+#~ msgid "Convert a dataset."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.TranslateOptions(), "
+#~ "string or array of strings other "
+#~ "keywords arguments of gdal.TranslateOptions(). "
+#~ "If options is provided as a "
+#~ "gdal.TranslateOptions() object, other keywords "
+#~ "are ignored."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a TranslateOptions() object that "
+#~ "can be passed to gdal.Translate()"
+#~ msgstr ""
+
+#~ msgid "array of band numbers (index start at 1)"
+#~ msgstr ""
+
+#~ msgid "mask band to generate or not (\"none\", \"auto\", \"mask\", 1, ...)"
+#~ msgstr ""
+
+#~ msgid "width of the output raster in percentage (100 = original width)"
+#~ msgstr ""
+
+#~ msgid "height of the output raster in percentage (100 = original height)"
+#~ msgstr ""
+
+#~ msgid "output horizontal resolution"
+#~ msgstr ""
+
+#~ msgid "output vertical resolution"
+#~ msgstr ""
+
+#~ msgid "subwindow in pixels to extract: [left_x, top_y, width, height]"
+#~ msgstr ""
+
+#~ msgid "subwindow in projected coordinates to extract: [ulx, uly, lrx, lry]"
+#~ msgstr ""
+
+#~ msgid "SRS in which projWin is expressed"
+#~ msgstr ""
+
+#~ msgid "strict mode"
+#~ msgstr ""
+
+#~ msgid "unscale values with scale and offset metadata"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of scale parameters, each of "
+#~ "the form [src_min,src_max] or "
+#~ "[src_min,src_max,dst_min,dst_max]"
+#~ msgstr ""
+
+#~ msgid "list of exponentiation parameters"
+#~ msgstr ""
+
+#~ msgid "list of metadata options"
+#~ msgstr ""
+
+#~ msgid "ignore GCP in the raster"
+#~ msgstr ""
+
+#~ msgid "list of GCPs"
+#~ msgstr ""
+
+#~ msgid "nodata value (or \"none\" to unset it)"
+#~ msgstr ""
+
+#~ msgid "Color palette expansion mode: \"gray\", \"rgb\", \"rgba\""
+#~ msgstr ""
+
+#~ msgid "whether to calculate statistics"
+#~ msgstr ""
+
+#~ msgid "whether to write source RAT"
+#~ msgstr ""
+
+#~ msgid "whether to copy XMP metadata"
+#~ msgstr ""
+
+#~ msgid "resampling mode"
+#~ msgstr ""
+
+#~ msgid "To specify which overview level of source files must be used"
+#~ msgstr ""
+
+#~ msgid "Warp one or several datasets."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "an array of Dataset objects or "
+#~ "filenames, or a Dataset object or "
+#~ "a filename"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.WarpOptions(), string"
+#~ " or array of strings, other keywords"
+#~ " arguments of gdal.WarpOptions(). If "
+#~ "options is provided as a "
+#~ "gdal.WarpOptions() object, other keywords are"
+#~ " ignored."
+#~ msgstr ""
+
+#~ msgid "Create a WarpOptions() object that can be passed to gdal.Warp()"
+#~ msgstr ""
+
+#~ msgid "output bounds as (minX, minY, maxX, maxY) in target SRS"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SRS in which output bounds are "
+#~ "expressed, in the case they are "
+#~ "not expressed in dstSRS"
+#~ msgstr ""
+
+#~ msgid "source SRS"
+#~ msgstr ""
+
+#~ msgid "output SRS"
+#~ msgstr ""
+
+#~ msgid "coordinate operation as a PROJ string or WKT string"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to force the last band of"
+#~ " the input dataset to be considered"
+#~ " as an alpha band"
+#~ msgstr ""
+
+#~ msgid "whether to force the creation of an output alpha band"
+#~ msgstr ""
+
+#~ msgid "working type (gdalconst.GDT_Byte, etc...)"
+#~ msgstr ""
+
+#~ msgid "list of warping options"
+#~ msgstr ""
+
+#~ msgid "error threshold for approximation transformer (in pixels)"
+#~ msgstr ""
+
+#~ msgid "size of working buffer in MB"
+#~ msgstr ""
+
+#~ msgid "source nodata value(s)"
+#~ msgstr ""
+
+#~ msgid "output nodata value(s)"
+#~ msgstr ""
+
+#~ msgid "whether to multithread computation and I/O operations"
+#~ msgstr ""
+
+#~ msgid "whether to use Thin Plate Spline GCP transformer"
+#~ msgstr ""
+
+#~ msgid "whether to use RPC transformer"
+#~ msgstr ""
+
+#~ msgid "whether to use GeoLocation array transformer"
+#~ msgstr ""
+
+#~ msgid "order of polynomial GCP interpolation"
+#~ msgstr ""
+
+#~ msgid "cutline dataset name"
+#~ msgstr ""
+
+#~ msgid "cutline layer name"
+#~ msgstr ""
+
+#~ msgid "cutline WHERE clause"
+#~ msgstr ""
+
+#~ msgid "cutline SQL statement"
+#~ msgstr ""
+
+#~ msgid "cutline blend distance in pixels"
+#~ msgstr ""
+
+#~ msgid "whether to use cutline extent for output bounds"
+#~ msgstr ""
+
+#~ msgid "whether to copy source metadata"
+#~ msgstr ""
+
+#~ msgid "metadata data conflict value"
+#~ msgstr ""
+
+#~ msgid "whether to force color interpretation of input bands to output bands"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.MultiDimInfoOptions(), "
+#~ "string or array of strings other "
+#~ "keywords arguments of gdal.MultiDimInfoOptions()."
+#~ " If options is provided as a "
+#~ "gdal.MultiDimInfoOptions() object, other keywords"
+#~ " are ignored."
+#~ msgstr ""
+
+#~ msgid "MultiDimTranslate one or several datasets."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.MultiDimTranslateOptions(),"
+#~ " string or array of strings other "
+#~ "keywords arguments of "
+#~ "gdal.MultiDimTranslateOptions(). If options is "
+#~ "provided as a gdal.MultiDimTranslateOptions() "
+#~ "object, other keywords are ignored."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a MultiDimTranslateOptions() object "
+#~ "that can be passed to "
+#~ "gdal.MultiDimTranslate()"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of array specifications, each of"
+#~ " them being an array name or "
+#~ "\"name={src_array_name},dstname={dst_name},transpose=[1,0],view=[:,::-1]\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of group specifications, each of"
+#~ " them being a group name or "
+#~ "\"name={src_array_name},dstname={dst_name},recursive=no\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of subset specifications, each of"
+#~ " them being like "
+#~ "\"{dim_name}({min_val},{max_val})\" or "
+#~ "\"{dim_name}({slice_va})\""
+#~ msgstr ""
+
+#~ msgid ""
+#~ "list of dimension scaling specifications, "
+#~ "each of them being like "
+#~ "\"{dim_name}({scale_factor})\""
+#~ msgstr ""
+
+#~ msgid "Convert one vector dataset"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "options: return of gdal.VectorTranslateOptions(),"
+#~ " string or array of strings, other"
+#~ " keywords arguments of "
+#~ "gdal.VectorTranslateOptions(). If options is "
+#~ "provided as a gdal.VectorTranslateOptions() "
+#~ "object, other keywords are ignored."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a VectorTranslateOptions() object that"
+#~ " can be passed to gdal.VectorTranslate()"
+#~ msgstr ""
+
+#~ msgid "format (\"ESRI Shapefile\", etc...)"
+#~ msgstr ""
+
+#~ msgid "None for creation, 'update', 'append', 'upsert', 'overwrite'"
+#~ msgstr ""
+
+#~ msgid "output SRS (with reprojection if reproject = True)"
+#~ msgstr ""
+
+#~ msgid "whether to do reprojection"
+#~ msgstr ""
+
+#~ msgid "list of fields to select"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to add new fields found in"
+#~ " source layers (to be used with "
+#~ "accessMode == 'append' or 'upsert')"
+#~ msgstr ""
+
+#~ msgid "whether to drop NOT NULL constraints on newly created fields"
+#~ msgstr ""
+
+#~ msgid "whether to treat empty string values as NULL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SRS in which the spatFilter is "
+#~ "expressed. If not specified, it is "
+#~ "assumed to be the one of the "
+#~ "layer(s)"
+#~ msgstr ""
+
+#~ msgid "list of dataset creation options"
+#~ msgstr ""
+
+#~ msgid "list of layer creation options"
+#~ msgstr ""
+
+#~ msgid "output layer name"
+#~ msgstr ""
+
+#~ msgid "output layer geometry type ('POINT', ....)"
+#~ msgstr ""
+
+#~ msgid "output dimension ('XY', 'XYZ', 'XYM', 'XYZM', 'layer_dim')"
+#~ msgstr ""
+
+#~ msgid "maximum distance between consecutive nodes of a line geometry"
+#~ msgstr ""
+
+#~ msgid "run MakeValid() on geometries"
+#~ msgstr ""
+
+#~ msgid "name of field to use to set the Z component of geometries"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "whether to create an additional field"
+#~ " for each field associated with a "
+#~ "coded field domain."
+#~ msgstr ""
+
+#~ msgid "whether to skip failures"
+#~ msgstr ""
+
+#~ msgid "maximum number of features to read per layer"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/nitf.rst:5
 msgid "NITF -- National Imagery Transmission Format"
@@ -157,11 +157,23 @@ msgid ""
 "specificities."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:303
+#: ../../source/drivers/raster/nitf.rst:341
+msgid ""
+"The following creation options to se fields in the NITF file header are "
+"available:"
+msgstr ""
+
+#: ../../source/drivers/raster/nitf.rst:458
+msgid ""
+"The following creation options to se fields in the NITF image header are "
+"available:"
+msgstr ""
+
+#: ../../source/drivers/raster/nitf.rst:608
 msgid "JPEG2000 compression (write support)"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:305
+#: ../../source/drivers/raster/nitf.rst:610
 msgid ""
 "JPEG2000 compression is available when using the IC=C8 creation option, "
 "if the JP2ECW (SDK 3.3, or for later versions assuming the user has the "
@@ -169,14 +181,14 @@ msgid ""
 "available."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:309
+#: ../../source/drivers/raster/nitf.rst:614
 msgid ""
 "They are tried in that order when several ones are available, unless the "
 "JPEG2000_DRIVER creation option (added in GDAL 3.4) is set to explicitly "
 "specify the JPEG2000 capable driver to use."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:313
+#: ../../source/drivers/raster/nitf.rst:618
 msgid ""
 ":ref:`JP2ECW <raster.jp2ecw>`: The :co:`drivers/raster/jp2ecw TARGET` "
 "(target size reduction as a percentage of the original) and "
@@ -187,7 +199,7 @@ msgid ""
 "BLOCKXSIZE=BLOCKYSIZE=1024)."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:319
+#: ../../source/drivers/raster/nitf.rst:624
 msgid ""
 ":ref:`JP2KAK <raster.jp2kak>`: The :co:`drivers/raster/jp2kak QUALITY`, "
 ":co:`drivers/raster/jp2kak BLOCKXSIZE`, :co:`drivers/raster/jp2kak "
@@ -196,16 +208,18 @@ msgid ""
 "used. Only CreateCopy() method is available."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:327
+#: ../../source/drivers/raster/nitf.rst:632
 msgid ""
 ":ref:`JP2OpenJPEG <raster.jp2openjpeg>`: (only in the CreateCopy() case)."
 " The :co:`drivers/raster/jp2openjpeg QUALITY`, "
 ":co:`drivers/raster/jp2openjpeg BLOCKXSIZE` and "
-":co:`drivers/raster/jp2openjpeg BLOCKYSIZE` JP2OpenJPEG-specific creation"
-" options can be used. By default BLOCKXSIZE=BLOCKYSIZE=1024 will be used."
+":co:`drivers/raster/jp2openjpeg BLOCKYSIZE`, :co:`drivers/raster/jp2ecw "
+"TARGET` (target size reduction as a percentage of the original) "
+"JP2OpenJPEG-specific creation options can be used. By default "
+"BLOCKXSIZE=BLOCKYSIZE=1024 will be used."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:335
+#: ../../source/drivers/raster/nitf.rst:642
 msgid ""
 "Starting with GDAL 3.4.0 and OpenJPEG 2.5, the "
 "PROFILE=NPJE_VISUALLY_LOSSLESS/NPJE_NUMERICALLY_LOSSLESS creation option "
@@ -219,58 +233,69 @@ msgid ""
 "specified."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:345
+#: ../../source/drivers/raster/nitf.rst:652
 msgid "Links"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:347
+#: ../../source/drivers/raster/nitf.rst:654
 msgid ":ref:`Advanced GDAL NITF Driver Information <raster.nitf_advanced>`"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:348
+#: ../../source/drivers/raster/nitf.rst:655
 msgid "`NITFS Technical Board Public Page <http://www.gwg.nga.mil/ntb/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:349
+#: ../../source/drivers/raster/nitf.rst:656
 msgid ""
 "`DIGEST Part 2 Annex D (describe encoding of NITF Spatial Data "
 "Extensions) "
 "<http://www.gwg.nga.mil/ntb/baseline/docs/digest/part2_annex_d.pdf>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:351
+#: ../../source/drivers/raster/nitf.rst:658
 msgid ""
 ":ref:`raster.rpftoc`: to read the Table Of  Contents of CIB and CADRG "
 "products."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:352
+#: ../../source/drivers/raster/nitf.rst:659
 msgid ""
 "`MIL-PRF-89038 <http://www.everyspec.com/MIL-PRF/MIL-"
 "PRF+%28080000+-+99999%29/MIL-PRF-89038_25371/>`__ : specification of RPF,"
 " CADRG, CIB products"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:354
+#: ../../source/drivers/raster/nitf.rst:661
 msgid ":ref:`raster.ecrgtoc`: to read the Table Of Contents of ECRG products."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:355
+#: ../../source/drivers/raster/nitf.rst:662
 msgid ""
 "`MIL-PRF-32283 <http://www.everyspec.com/MIL-PRF/MIL-"
 "PRF+%28030000+-+79999%29/MIL-PRF-32283_26022/>`__ : specification of ECRG"
 " products"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:359
+#: ../../source/drivers/raster/nitf.rst:666
 msgid "Credit"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf.rst:361
+#: ../../source/drivers/raster/nitf.rst:668
 msgid ""
 "The author wishes to thank `AUG Signals <http://www.augsignals.com/>`__ "
 "and the `GeoConnections <http://geoconnections.org/>`__ program for "
 "supporting development of this driver, and to thank Steve Rawlinson "
 "(JPEG), Reiner Beck (BLOCKA) for assistance adding features."
 msgstr ""
+
+#~ msgid ""
+#~ ":ref:`JP2OpenJPEG <raster.jp2openjpeg>`: (only in"
+#~ " the CreateCopy() case). The "
+#~ ":co:`drivers/raster/jp2openjpeg QUALITY`, "
+#~ ":co:`drivers/raster/jp2openjpeg BLOCKXSIZE` and "
+#~ ":co:`drivers/raster/jp2openjpeg BLOCKYSIZE` "
+#~ "JP2OpenJPEG-specific creation options can "
+#~ "be used. By default BLOCKXSIZE=BLOCKYSIZE=1024"
+#~ " will be used."
+#~ msgstr ""
 

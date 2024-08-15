@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/user/multidim_raster_data_model.rst:5
 msgid "Multidimensional Raster Data Model"
@@ -211,44 +211,100 @@ msgid ""
 msgstr ""
 
 #: ../../source/user/multidim_raster_data_model.rst:112
-msgid "Differences with the GDAL 2D raster data model"
+msgid "Objects lifetime"
 msgstr ""
 
 #: ../../source/user/multidim_raster_data_model.rst:114
+msgid ""
+"Driver implementations of the multidimensional API are such that "
+"instances of GDALGroup, GDALMDArray, GDALAttribute and GDALDimension can "
+"be used independently of the objects from which they have been obtained "
+"from. So:"
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:118
+msgid ""
+"the GDALGroup instance returned by "
+":cpp:func:`GDALDataset::GetRootGroup()` can be used after the dataset has"
+" been closed."
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:121
+msgid ""
+"Sub-groups obtained from :cpp:func:`GDALGroup::OpenGroup()` or arrays "
+"obtained from :cpp:func:`GDALGroup::OpenMDArray()` can be used after the "
+"owning group has been released."
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:125
+msgid "Similarly for attributes or dimensions obtained from a group or an array."
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:128
+msgid "So the following is perfectly legal:"
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:170
+msgid ""
+"A potential point of attention is that, when creating / editing a "
+"dataset, all those objects keep alive the underlying file descriptors, so"
+" changes are only guaranteed to be serialized when all objects related to"
+" a dataset have been released."
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:174
+msgid "Example in C++:"
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:206
+msgid "Example in Python:"
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:224
+msgid "Differences with the GDAL 2D raster data model"
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:226
 msgid ""
 "The concept of GDALRasterBand is no longer used for multidimensional. "
 "This can be modelled as either different GDALMDArray, or using a compound"
 " data type."
 msgstr ""
 
-#: ../../source/user/multidim_raster_data_model.rst:119
+#: ../../source/user/multidim_raster_data_model.rst:229
+msgid ""
+"There is not yet a standardized concept multi-resolution arrays/overviews"
+" in the multidimensional API"
+msgstr ""
+
+#: ../../source/user/multidim_raster_data_model.rst:233
 msgid ""
 "Bridges between GDAL 2D classic raster data model and multidimensional "
 "data model"
 msgstr ""
 
-#: ../../source/user/multidim_raster_data_model.rst:121
+#: ../../source/user/multidim_raster_data_model.rst:235
 msgid ""
 "The :cpp:func:`GDALRasterBand::AsMDArray` and "
 ":cpp:func:`GDALMDArray::AsClassicDataset` can be used to respectively "
 "convert a raster band to a MD array or a 2D dataset to a MD array."
 msgstr ""
 
-#: ../../source/user/multidim_raster_data_model.rst:126
+#: ../../source/user/multidim_raster_data_model.rst:240
 msgid "Applications"
 msgstr ""
 
-#: ../../source/user/multidim_raster_data_model.rst:128
+#: ../../source/user/multidim_raster_data_model.rst:242
 msgid ""
 "The following applications can be used to inspect and manipulate "
 "multidimensional datasets:"
 msgstr ""
 
-#: ../../source/user/multidim_raster_data_model.rst:131
+#: ../../source/user/multidim_raster_data_model.rst:245
 msgid ":ref:`gdalmdiminfo`"
 msgstr ""
 
-#: ../../source/user/multidim_raster_data_model.rst:132
+#: ../../source/user/multidim_raster_data_model.rst:246
 msgid ":ref:`gdalmdimtranslate`"
 msgstr ""
 

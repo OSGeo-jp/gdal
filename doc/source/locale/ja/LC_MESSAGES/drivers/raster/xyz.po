@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-23 17:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/xyz.rst:5
 msgid "XYZ -- ASCII Gridded XYZ"
@@ -104,25 +104,32 @@ msgstr ""
 msgid "|about-open-options| This driver supports the following open options:"
 msgstr ""
 
-#: ../../source/drivers/raster/xyz.rst:-1
-msgid ""
-"COLUMN_ORDER=[AUTO/XYZ/YXZ]:  (GDAL >= 3.10)  Defaults to AUTO. Specifies"
-" the order of the columns. It overrides the header."
-msgstr ""
-
 #: ../../source/drivers/raster/xyz.rst:64
 msgid "Creation options"
 msgstr ""
 
-#: ../../source/drivers/raster/xyz.rst:94
+#: ../../source/drivers/raster/xyz.rst:66
+msgid ""
+"|about-creation-options| This driver supports the following creation "
+"options:"
+msgstr ""
+
+#: ../../source/drivers/raster/xyz.rst:97
 msgid "Driver capabilities"
 msgstr ""
 
-#: ../../source/drivers/raster/xyz.rst:103
+#: ../../source/drivers/raster/xyz.rst:106
 msgid "See also"
 msgstr ""
 
-#: ../../source/drivers/raster/xyz.rst:105
+#: ../../source/drivers/raster/xyz.rst:108
 msgid "Documentation of :ref:`gdal_grid`"
 msgstr ""
+
+#~ msgid ""
+#~ "COLUMN_ORDER=[AUTO/XYZ/YXZ]:  (GDAL >= 3.10)  "
+#~ "Defaults to AUTO. Specifies the order"
+#~ " of the columns. It overrides the "
+#~ "header."
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-23 17:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/jp2openjpeg.rst:5
 msgid "JP2OpenJPEG -- JPEG2000 driver based on OpenJPEG library"
@@ -307,56 +307,88 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/raster/jp2openjpeg.rst:667
-msgid "See Also"
-msgstr ""
-
-#: ../../source/drivers/raster/jp2openjpeg.rst:669
-msgid "Implemented as :source_file:`frmts/openjpeg/openjpegdataset.cpp`."
+msgid "Standalone plugin compilation"
 msgstr ""
 
 #: ../../source/drivers/raster/jp2openjpeg.rst:671
+msgid ""
+"While this driver may be built as part of a whole GDAL build, either in "
+"libgdal itself, or as a plugin, it is also possible to only build this "
+"driver as a plugin, against an already built libgdal."
+msgstr ""
+
+#: ../../source/drivers/raster/jp2openjpeg.rst:675
+msgid ""
+"The version of the GDAL sources used to build the driver must match the "
+"version of the libgdal it is built against."
+msgstr ""
+
+#: ../../source/drivers/raster/jp2openjpeg.rst:678
+msgid ""
+"For example, from a \"build_openjpeg\" directory under the root of the "
+"GDAL source tree:"
+msgstr ""
+
+#: ../../source/drivers/raster/jp2openjpeg.rst:686
+msgid ""
+"Note that such a plugin, when used against a libgdal not aware of it, "
+"will be systematically loaded at GDAL driver initialization time, and "
+"will not benefit from `deferred plugin loading capabilities <rfc-96>`. "
+"For that, libgdal itself must be built with the CMake variable "
+"GDAL_REGISTER_DRIVER_JP2OPENJPEG_FOR_LATER_PLUGIN=ON set."
+msgstr ""
+
+#: ../../source/drivers/raster/jp2openjpeg.rst:692
+msgid "See Also"
+msgstr ""
+
+#: ../../source/drivers/raster/jp2openjpeg.rst:694
+msgid "Implemented as :source_file:`frmts/openjpeg/openjpegdataset.cpp`."
+msgstr ""
+
+#: ../../source/drivers/raster/jp2openjpeg.rst:696
 msgid "`Official JPEG-2000 page <http://www.jpeg.org/jpeg2000/index.html>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:673
+#: ../../source/drivers/raster/jp2openjpeg.rst:698
 msgid "`The OpenJPEG library home page <https://github.com/uclouvain/openjpeg>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:676
+#: ../../source/drivers/raster/jp2openjpeg.rst:701
 msgid ""
 "`OGC GML in JPEG2000, version 2.0 "
 "<http://docs.opengeospatial.org/is/08-085r4/08-085r4.html>`__ (GDAL 2.0 "
 "and 2.1)"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:680
+#: ../../source/drivers/raster/jp2openjpeg.rst:705
 msgid ""
 "`OGC GML in JPEG2000, version 2.0.1 "
 "<http://docs.opengeospatial.org/is/08-085r5/08-085r5.html>`__ (GDAL 2.2 "
 "and above)"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:684
+#: ../../source/drivers/raster/jp2openjpeg.rst:709
 msgid ""
 "`Inspire Data Specification on Orthoimagery - Technical Guidelines "
 "<http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_OI_v3.0.pdf>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:687
+#: ../../source/drivers/raster/jp2openjpeg.rst:712
 msgid "Other JPEG2000 GDAL drivers :"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:689
+#: ../../source/drivers/raster/jp2openjpeg.rst:714
 msgid ":ref:`JP2ECW: based on Erdas ECW library (proprietary) <raster.jp2ecw>`"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:692
+#: ../../source/drivers/raster/jp2openjpeg.rst:717
 msgid ""
 ":ref:`JP2MRSID: based on LizardTech MrSID library (proprietary) "
 "<raster.jp2mrsid>`"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2openjpeg.rst:695
+#: ../../source/drivers/raster/jp2openjpeg.rst:720
 msgid ":ref:`JP2KAK: based on Kakadu library (proprietary) <raster.jp2kak>`"
 msgstr ""
 

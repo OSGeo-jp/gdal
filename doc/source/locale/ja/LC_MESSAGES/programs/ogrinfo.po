@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/ogrinfo.rst:5
 msgid "ogrinfo"
@@ -97,14 +97,16 @@ msgstr ""
 #: ../../source/programs/ogrinfo.rst:77
 msgid ""
 "Summary Only: suppress listing of individual features and show only "
-"summary information like projection, schema, feature count and extents."
-msgstr ""
-
-#: ../../source/programs/ogrinfo.rst:82
-msgid "Enable listing of features. This has the opposite effect of :option:`-so`."
+"summary information like projection, schema, feature count and extents. "
+"In JSON output, -so is implicit and listing of features can be enabled "
+"with :option:`-features`."
 msgstr ""
 
 #: ../../source/programs/ogrinfo.rst:84
+msgid "Enable listing of features. This has the opposite effect of :option:`-so`."
+msgstr ""
+
+#: ../../source/programs/ogrinfo.rst:86
 msgid ""
 "This option should be used with caution if using the library function "
 ":cpp:func:`GDALVectorInfo` and/or :option:`-json`, as the whole output of"
@@ -112,17 +114,17 @@ msgid ""
 "collection of features, RAM may be exhausted."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:95
+#: ../../source/programs/ogrinfo.rst:97
 msgid "Limit the number of features per layer."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:99
+#: ../../source/programs/ogrinfo.rst:101
 msgid ""
 "Quiet verbose reporting of various information, including coordinate "
 "system, layer schema, extents, and feature count."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:104
+#: ../../source/programs/ogrinfo.rst:106
 msgid ""
 "An attribute query in a restricted form of the queries used in the SQL "
 "`WHERE` statement. Only features matching the attribute query will be "
@@ -130,11 +132,11 @@ msgid ""
 "to indicate that the content is in the pointed filename."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:109
+#: ../../source/programs/ogrinfo.rst:111
 msgid "Example of ``-where`` and quoting:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:118
+#: ../../source/programs/ogrinfo.rst:120
 msgid ""
 "Execute the indicated SQL statement and return the result. Starting with "
 "GDAL 2.1, the ``@<filename>`` syntax can be used to indicate that the "
@@ -145,7 +147,7 @@ msgid ""
 ":option:`-dialect`."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:128
+#: ../../source/programs/ogrinfo.rst:130
 msgid ""
 "SQL dialect. In some cases can be used to use (unoptimized) "
 ":ref:`ogr_sql_dialect` instead of the native SQL of an RDBMS by passing "
@@ -154,15 +156,15 @@ msgid ""
 "this can be used with any datasource."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:135
+#: ../../source/programs/ogrinfo.rst:137
 msgid "The area of interest. Only features within the rectangle will be reported."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:139
+#: ../../source/programs/ogrinfo.rst:141
 msgid "Name of the geometry field on which the spatial filter operates."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:143
+#: ../../source/programs/ogrinfo.rst:145
 msgid ""
 "If provided, only the feature with this feature id will be reported. "
 "Operates exclusive of the spatial or attribute queries. Note: if you want"
@@ -171,17 +173,17 @@ msgid ""
 "\"fid in (1,3,5)\"` would select features 1, 3 and 5."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:151
+#: ../../source/programs/ogrinfo.rst:153
 msgid ""
 "If set to ``NO``, the feature dump will not display field values. Default"
 " value is ``YES``."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:158
+#: ../../source/programs/ogrinfo.rst:160
 msgid "Display details about a field domain."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:162
+#: ../../source/programs/ogrinfo.rst:164
 msgid ""
 "If set to ``NO``, the feature dump will not display the geometry. If set "
 "to ``SUMMARY``, only a summary of the geometry will be displayed. If set "
@@ -191,42 +193,42 @@ msgid ""
 "starting with GDAL 2.1, which also changes the default to ISO_WKT)"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:171
+#: ../../source/programs/ogrinfo.rst:173
 msgid "Dataset open option (format-specific)"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:175
+#: ../../source/programs/ogrinfo.rst:177
 msgid ""
 "Suppress metadata printing. Some datasets may contain a lot of metadata "
 "strings."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:180
+#: ../../source/programs/ogrinfo.rst:182
 msgid "List all metadata domains available for the dataset."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:184
+#: ../../source/programs/ogrinfo.rst:186
 msgid ""
 "Report metadata for the specified domain. ``all`` can be used to report "
 "metadata in all domains."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:189
+#: ../../source/programs/ogrinfo.rst:191
 msgid "Suppress feature count printing."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:193
+#: ../../source/programs/ogrinfo.rst:195
 msgid "Suppress spatial extent printing."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:199
+#: ../../source/programs/ogrinfo.rst:201
 msgid ""
 "Request a 3D extent to be reported (the default is 2D only). Note that "
 "this operation might be slower than requesting the 2D extent, depending "
 "on format and driver capabilities."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:205
+#: ../../source/programs/ogrinfo.rst:207
 msgid "Suppress layer geometry type printing."
 msgstr ""
 
@@ -274,35 +276,35 @@ msgid ""
 "or several drivers."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:213
+#: ../../source/programs/ogrinfo.rst:215
 msgid ""
 "The WKT format used to display the SRS. Currently supported values for "
 "the ``format`` are:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:216
+#: ../../source/programs/ogrinfo.rst:218
 msgid "``WKT1``"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:218
+#: ../../source/programs/ogrinfo.rst:220
 msgid "``WKT2`` (latest WKT version, currently *WKT2_2018*)"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:220
+#: ../../source/programs/ogrinfo.rst:222
 msgid "``WKT2_2015``"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:222
+#: ../../source/programs/ogrinfo.rst:224
 msgid "``WKT2_2018``"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:228
+#: ../../source/programs/ogrinfo.rst:230
 msgid ""
 "The data source to open. May be a filename, directory or other virtual "
 "name. See the OGR Vector Formats list for supported datasources."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:233
+#: ../../source/programs/ogrinfo.rst:235
 msgid ""
 "One or more layer names may be reported.  If no layer names are passed "
 "then ogrinfo will report a list of available layers (and their layer wide"
@@ -312,58 +314,65 @@ msgid ""
 "parameters are provided, all features are reported."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:240
+#: ../../source/programs/ogrinfo.rst:242
 msgid "Geometries are reported in OGC WKT format."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:243
+#: ../../source/programs/ogrinfo.rst:245
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:245
+#: ../../source/programs/ogrinfo.rst:247
 msgid "This utility is also callable from C with :cpp:func:`GDALVectorInfo`."
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:250
+#: ../../source/programs/ogrinfo.rst:252
 msgid "Examples"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:252
+#: ../../source/programs/ogrinfo.rst:254
 msgid "Example of reporting the names of the layers in a NTF file:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:265
+#: ../../source/programs/ogrinfo.rst:267
 msgid ""
 "Example of retrieving a summary (``-so``) of a layer without showing "
 "details about every single feature:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:298
+#: ../../source/programs/ogrinfo.rst:300
 msgid ""
 "Example of retrieving information on a file in JSON format without "
 "showing details about every single feature:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:502
+#: ../../source/programs/ogrinfo.rst:504
 msgid ""
 "Example of using -q and an attribute query, to restrict the output to "
 "certain features in a layer:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:520
+#: ../../source/programs/ogrinfo.rst:522
 msgid ""
 "Example of updating a value of an attribute in a shapefile with SQL by "
 "using the SQLite dialect:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:526
+#: ../../source/programs/ogrinfo.rst:528
 msgid "Adding a column to an input file:"
 msgstr ""
 
-#: ../../source/programs/ogrinfo.rst:532
+#: ../../source/programs/ogrinfo.rst:534
 msgid ""
 "Sometimes there is no input file involved in a calculation. In such cases"
 " one may use the ``:memory:`` input file which is a in-memory empty "
 "SQLite file (and the SQLite SQL dialect will be implicitly used)."
 msgstr ""
+
+#~ msgid ""
+#~ "Summary Only: suppress listing of "
+#~ "individual features and show only "
+#~ "summary information like projection, schema,"
+#~ " feature count and extents."
+#~ msgstr ""
 

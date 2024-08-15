@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/wms.rst:5
 msgid "WMS -- Web Map Services"
@@ -921,104 +921,104 @@ msgstr ""
 msgid "Caching"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:316
+#: ../../source/drivers/raster/wms_wmts_cache.rst:1
 msgid ""
 "Caching of remote pixel data is possible by setting a <Cache> element in "
-"the WMS configuration file."
+"the WMS (or WMTS) configuration file."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:319
+#: ../../source/drivers/raster/wms_wmts_cache.rst:4
 msgid ""
 "Before GDAL 3.9, if the <Path> sub-element of <Cache> was not specified, "
 "the directory of the cache was ``./gdalwmscache`` (that is to say a "
-"``gdalwmscache`` subdiretory of the current directory), unless the "
+"``gdalwmscache`` subdirectory of the current directory), unless the "
 ":config:`GDAL_DEFAULT_WMS_CACHE_PATH` configuration option is specified."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:324
+#: ../../source/drivers/raster/wms_wmts_cache.rst:9
 msgid ""
 "Starting with GDAL 3.9, the directory of the cache is set according to "
 "the following logic (first listed criterion is prioritary over following "
 "ones):"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:327
+#: ../../source/drivers/raster/wms_wmts_cache.rst:12
 msgid "Value of the <Path> sub-element of <Cache>, if specified."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:329
+#: ../../source/drivers/raster/wms_wmts_cache.rst:14
 msgid ""
 "``${GDAL_DEFAULT_WMS_CACHE_PATH}`` if "
 ":config:`GDAL_DEFAULT_WMS_CACHE_PATH` is set."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:331
+#: ../../source/drivers/raster/wms_wmts_cache.rst:16
 msgid ""
 "``${XDG_CACHE_HOME}/gdalwmscache`` if the ``XDG_CACHE_HOME`` "
 "configuration option is set."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:333
+#: ../../source/drivers/raster/wms_wmts_cache.rst:18
 msgid ""
 "On Unix, ``${HOME}/.cache/gdalwmscache`` if the ``HOME`` configuration "
 "option is set."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:335
+#: ../../source/drivers/raster/wms_wmts_cache.rst:20
 msgid ""
 "On Windows, ``${USERPROFILE}/.cache/gdalwmscache`` if the ``USERPROFILE``"
 " configuration option is set."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:337
+#: ../../source/drivers/raster/wms_wmts_cache.rst:22
 msgid ""
 "``${CPL_TMPDIR}/gdalwmscache_${USER}`` if :config:`CPL_TMPDIR` and "
 "``USER`` configuration options are set."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:339
+#: ../../source/drivers/raster/wms_wmts_cache.rst:24
 msgid "If ``CPL_TMPDIR`` is not set, then ``TMPDIR`` is used, or ``TEMP``"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:341
+#: ../../source/drivers/raster/wms_wmts_cache.rst:26
 msgid ""
 "If ``USER`` is not set, ``USERNAME`` is used if set. If neither "
 "``USERNAME`` or ``USER`` are set, the md5sum of the filename of the "
 "configuration file is used)"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:344
+#: ../../source/drivers/raster/wms_wmts_cache.rst:29
 msgid ""
 "``./gdalwmscache_{md5sum(filename)}`` if none of the above mentioned "
 "configuration options are set."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:346
+#: ../../source/drivers/raster/wms_wmts_cache.rst:31
 msgid ""
 "Note that if the <Unique> element is set to true (which is its default "
 "value), a subdirectory whose name is the md5sum of the filename of the "
 "configuration file is appended to the caching directory."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:350
+#: ../../source/drivers/raster/wms_wmts_cache.rst:35
 msgid ""
 "The actual caching directory can be got by querying the ``CACHE_PATH`` "
 "metadata item on the dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:354
+#: ../../source/drivers/raster/wms.rst:319
 msgid "Configuration options"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:356
-msgid "The following :ref:`configuration options <configoptions>` are available:"
+#: ../../source/drivers/raster/wms.rst:321
+msgid "|about-config-options| The following configuration options are available:"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:382
+#: ../../source/drivers/raster/wms.rst:347
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:386
+#: ../../source/drivers/raster/wms.rst:351
 msgid ""
 "The below examples rely on external servers that might go down over time."
 " They are just here to demonstrate how to use the various services."
@@ -1032,11 +1032,11 @@ msgid ""
 "server"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:402
+#: ../../source/drivers/raster/wms.rst:367
 msgid "*Note : this particular server does no longer accept regular WMS queries.*"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:405
+#: ../../source/drivers/raster/wms.rst:370
 msgid ""
 "`metacarta_wmsc.xml "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_wms_metacarta_wmsc.xml>`__"
@@ -1090,28 +1090,28 @@ msgid ""
 "metacarta.png``"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:430
+#: ../../source/drivers/raster/wms.rst:395
 msgid ""
 "`BlueMarble Amazon S3 Example "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_wms_bluemarble_s3_tms.xml>`__"
 " accessed with the TMS minidriver."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:433
+#: ../../source/drivers/raster/wms.rst:398
 msgid ""
 "`Google Maps "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_wms_googlemaps_tms.xml>`__"
 " accessed with the TMS minidriver."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:436
+#: ../../source/drivers/raster/wms.rst:401
 msgid ""
 "`ArcGIS MapServer Tiles "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_wms_arcgis_mapserver_tms.xml>`__"
 " accessed with the TMS minidriver."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:439
+#: ../../source/drivers/raster/wms.rst:404
 msgid ""
 "OnEarth Tiled WMS `Clementine "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_twms_Clementine.xml>`__,"
@@ -1122,54 +1122,54 @@ msgid ""
 " examples."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:443
+#: ../../source/drivers/raster/wms.rst:408
 msgid ""
 "`VirtualEarth Aerial Layer "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_wms_virtualearth.xml>`__"
 " accessed with the VirtualEarth minidriver."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:446
+#: ../../source/drivers/raster/wms.rst:411
 msgid ""
 "`ArcGIS online sample server layer "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_ags_arcgisonline.xml>`__"
 " accessed with the ArcGIS Server REST API minidriver."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:449
+#: ../../source/drivers/raster/wms.rst:414
 msgid ""
 "`IIP online sample server layer "
 "<https://github.com/OSGeo/gdal/blob/master/frmts/wms/frmt_wms_iip.xml>`__"
 " accessed with the IIP minidriver."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:453
+#: ../../source/drivers/raster/wms.rst:418
 msgid "Open syntax"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:455
+#: ../../source/drivers/raster/wms.rst:420
 msgid "The WMS driver can open :"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:457
+#: ../../source/drivers/raster/wms.rst:422
 msgid "a local service description XML file :"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:463
+#: ../../source/drivers/raster/wms.rst:428
 msgid "the content of a description XML file provided as filename :"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:469
+#: ../../source/drivers/raster/wms.rst:434
 msgid "the base URL of a WMS service, prefixed with *WMS:* :"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:475
+#: ../../source/drivers/raster/wms.rst:440
 msgid ""
 "A list of subdatasets will be returned, resulting from the parsing of the"
 " GetCapabilities request on that server."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:478
+#: ../../source/drivers/raster/wms.rst:443
 msgid ""
 "Starting with GDAL 3.10, specifying the ``-if WMS`` option to command "
 "line utilities accepting it, or ``WMS`` as the only value of the "
@@ -1177,37 +1177,37 @@ msgid ""
 " to recognize the passed URL,  without the ``WMS:`` prefix."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:483
+#: ../../source/drivers/raster/wms.rst:448
 msgid ""
 "a pseudo GetMap request, such as the subdataset name returned by the "
 "previous syntax :"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:490
+#: ../../source/drivers/raster/wms.rst:455
 msgid ""
 "the base URL of a Tiled WMS service, prefixed with *WMS:* and with "
 "request=GetTileService as GET argument:"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:497
+#: ../../source/drivers/raster/wms.rst:462
 msgid ""
 "A list of subdatasets will be returned, resulting from the parsing of the"
 " GetTileService request on that server."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:500
+#: ../../source/drivers/raster/wms.rst:465
 msgid "the URL of a REST definition for a ArcGIS MapServer:"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:506
+#: ../../source/drivers/raster/wms.rst:471
 msgid "(GDAL >= 2.1.0) the URL of a IIP image:"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:513
+#: ../../source/drivers/raster/wms.rst:478
 msgid "Generation of WMS service description XML file"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:515
+#: ../../source/drivers/raster/wms.rst:480
 msgid ""
 "The WMS service description XML file can be generated manually, or "
 "created as the output of the CreateCopy() operation of the WMS driver, "
@@ -1216,51 +1216,73 @@ msgid ""
 "mentioned in \"Open syntax\" and as output an XML file. For example:"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:525
+#: ../../source/drivers/raster/wms.rst:490
 msgid ""
 "The generated file will come with default values that you may need to "
 "edit."
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:529
+#: ../../source/drivers/raster/wms.rst:494
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:531
+#: ../../source/drivers/raster/wms.rst:496
 msgid "`OGC WMS Standards <http://www.opengeospatial.org/standards/wms>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:532
+#: ../../source/drivers/raster/wms.rst:497
 msgid ""
 "`WMS Tiling Client Recommendation (WMS-C) "
 "<http://wiki.osgeo.org/index.php/WMS_Tiling_Client_Recommendation>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:534
+#: ../../source/drivers/raster/wms.rst:499
 msgid ""
 "`WorldWind TileService "
 "<http://www.worldwindcentral.com/wiki/TileService>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:536
+#: ../../source/drivers/raster/wms.rst:501
 msgid ""
 "`TMS Specification "
 "<http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:538
+#: ../../source/drivers/raster/wms.rst:503
 msgid ""
 "`OnEarth Tiled WMS specification "
 "<http://web.archive.org/web/20130511182803/http://onearth.jpl.nasa.gov/tiled.html>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:540
+#: ../../source/drivers/raster/wms.rst:505
 msgid ""
 "`ArcGIS Server REST API "
 "<http://resources.arcgis.com/en/help/rest/apiref/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/wms.rst:542
+#: ../../source/drivers/raster/wms.rst:507
 msgid ":ref:`raster.wmts` driver page."
 msgstr ""
+
+#~ msgid ""
+#~ "Caching of remote pixel data is "
+#~ "possible by setting a <Cache> element"
+#~ " in the WMS configuration file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Before GDAL 3.9, if the <Path> "
+#~ "sub-element of <Cache> was not "
+#~ "specified, the directory of the cache"
+#~ " was ``./gdalwmscache`` (that is to "
+#~ "say a ``gdalwmscache`` subdiretory of "
+#~ "the current directory), unless the "
+#~ ":config:`GDAL_DEFAULT_WMS_CACHE_PATH` configuration option"
+#~ " is specified."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following :ref:`configuration options "
+#~ "<configoptions>` are available:"
+#~ msgstr ""
 

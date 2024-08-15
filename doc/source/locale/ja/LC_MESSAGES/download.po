@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-23 17:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/download.rst:5
 msgid "Download"
@@ -147,37 +147,147 @@ msgstr ""
 msgid "Conda badge"
 msgstr ""
 
+#: ../../source/download.rst:116
+msgid "GDAL is available as several subpackages:"
+msgstr ""
+
+#: ../../source/download.rst:118
+msgid "``gdal``: Python bindings and Python utilities (depends on libgdal-core)"
+msgstr ""
+
+#: ../../source/download.rst:119
+msgid ""
+"``libgdal``: meta-package gathering all below libgdal-* packages (except "
+"libgdal-arrow-parquet)"
+msgstr ""
+
+#: ../../source/download.rst:120
+msgid ""
+"``libgdal-arrow-parquet``: :ref:`vector.arrow` and :ref:`vector.parquet` "
+"drivers as a plugin (depends on libgdal-core)"
+msgstr ""
+
+#: ../../source/download.rst:121
+msgid ""
+"``libgdal-core``: core library and C++ utilities, with a number of "
+"builtin drivers (available since GDAL 3.9.1)"
+msgstr ""
+
 #: ../../source/download.rst:122
-msgid "To install the Arrow and Parquet drivers as plugins:"
+msgid ""
+"``libgdal-fits``: :ref:`raster.fits` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:123
+msgid ""
+"``libgdal-grib``: :ref:`raster.grib` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:124
+msgid ""
+"``libgdal-hdf4``: :ref:`raster.hdf4` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:125
+msgid ""
+"``libgdal-hdf5``: :ref:`raster.hdf5` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:126
+msgid ""
+"``libgdal-jp2openjpeg``: :ref:`raster.jp2openjpeg` driver as a plugin "
+"(depends on libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:127
+msgid ""
+"``libgdal-kea``: :ref:`raster.kea` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:128
+msgid ""
+"``libgdal-netcdf``: :ref:`raster.netcdf` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:129
+msgid ""
+"``libgdal-pdf``: :ref:`raster.pdf` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
 
 #: ../../source/download.rst:130
-msgid "GDAL master Conda builds"
+msgid ""
+"``libgdal-postgisraster``: :ref:`raster.postgisraster` driver as a plugin"
+" (depends on libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:131
+msgid ""
+"``libgdal-pg``: :ref:`vector.pg` driver as a plugin (depends on libgdal-"
+"core, available since GDAL 3.9.1)"
 msgstr ""
 
 #: ../../source/download.rst:132
+msgid ""
+"``libgdal-tiledb``: :ref:`raster.tiledb` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:133
+msgid ""
+"``libgdal-xls``: :ref:`vector.xls` driver as a plugin (depends on "
+"libgdal-core, available since GDAL 3.9.1)"
+msgstr ""
+
+#: ../../source/download.rst:136
+msgid ""
+"To install the ``gdal`` package (Python bindings and utilities), and "
+"``libgdal-core``:"
+msgstr ""
+
+#: ../../source/download.rst:143
+msgid ""
+"To install the ``libgdal`` meta-package with all available drivers, but "
+"libgdal-arrow-parquet:"
+msgstr ""
+
+#: ../../source/download.rst:150
+msgid "To install the Arrow and Parquet drivers as plugins:"
+msgstr ""
+
+#: ../../source/download.rst:158
+msgid "GDAL master Conda builds"
+msgstr ""
+
+#: ../../source/download.rst:160
 msgid ""
 "GDAL master builds are available in the `gdal-master "
 "<https://anaconda.org/gdal-master/gdal>`__ channel. They are based on "
 "dependencies from the ``conda-forge`` channel."
 msgstr ""
 
-#: ../../source/download.rst:135
+#: ../../source/download.rst:163
 msgid ""
 "First, install mamba into the ``base`` environment, create a dedicated "
 "``gdal_master_env`` environment, and then activate the dedicated "
 "``gdal_master_env`` environment."
 msgstr ""
 
-#: ../../source/download.rst:145
+#: ../../source/download.rst:173
 msgid "Then install GDAL from the ``gdal-master`` channel:"
 msgstr ""
 
-#: ../../source/download.rst:156
+#: ../../source/download.rst:184
 msgid "vcpkg"
 msgstr ""
 
-#: ../../source/download.rst:158
+#: ../../source/download.rst:186
 msgid ""
 "The GDAL port in the `vcpkg <https://github.com/Microsoft/vcpkg>`__ "
 "dependency manager is kept up to date by Microsoft team members and "
@@ -185,17 +295,17 @@ msgid ""
 " as follows:"
 msgstr ""
 
-#: ../../source/download.rst:169
+#: ../../source/download.rst:197
 msgid ""
 "If the version is out of date, please `create an issue or pull request "
 "<https://github.com/Microsoft/vcpkg>`__ on the vcpkg repository."
 msgstr ""
 
-#: ../../source/download.rst:172
+#: ../../source/download.rst:200
 msgid "Spack"
 msgstr ""
 
-#: ../../source/download.rst:174
+#: ../../source/download.rst:202
 msgid ""
 "Spack is a package management tool designed to support multiple versions "
 "and configurations of software on a wide variety of platforms and "
@@ -203,43 +313,43 @@ msgid ""
 "builds packages from sources, and allows tweaking their configurations."
 msgstr ""
 
-#: ../../source/download.rst:179
+#: ../../source/download.rst:207
 msgid ""
 "You can find information about GDAL in Spack at "
 "https://packages.spack.io/package.html?name=gdal"
 msgstr ""
 
-#: ../../source/download.rst:182
+#: ../../source/download.rst:210
 msgid "For the default GDAL build with a reduced number of drivers:"
 msgstr ""
 
-#: ../../source/download.rst:190
+#: ../../source/download.rst:218
 msgid "For a build with netcdf driver enabled:"
 msgstr ""
 
-#: ../../source/download.rst:200
+#: ../../source/download.rst:228
 msgid "Containers"
 msgstr ""
 
-#: ../../source/download.rst:202
+#: ../../source/download.rst:230
 msgid ""
 "Docker images with nightly builds of GDAL master and tagged releases are "
 "available at `GitHub Container registry "
 "<https://github.com/OSGeo/gdal/pkgs/container/gdal>`_."
 msgstr ""
 
-#: ../../source/download.rst:205
+#: ../../source/download.rst:233
 msgid ""
 "Information on the content of the different configurations can be found "
 "at `https://github.com/OSGeo/gdal/tree/master/docker "
 "<https://github.com/OSGeo/gdal/tree/master/docker>`_."
 msgstr ""
 
-#: ../../source/download.rst:210
+#: ../../source/download.rst:238
 msgid "Documentation"
 msgstr ""
 
-#: ../../source/download.rst:212
+#: ../../source/download.rst:240
 msgid ""
 "Besides being included when downloading the software, the documentation "
 "is also available independently as a `PDF file "

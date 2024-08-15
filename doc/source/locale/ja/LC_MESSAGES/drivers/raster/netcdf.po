@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/netcdf.rst:5
 msgid "NetCDF: Network Common Data Form"
@@ -577,40 +577,76 @@ msgstr ""
 
 #: ../../source/drivers/raster/netcdf.rst:703
 msgid ""
+"RAW_DATA_CHUNK_CACHE_SIZE=<integer>. (GDAL >= 3.10, advanced libnetcdf "
+"parameter) The total size of the libnetcdf raw data chunk cache, in "
+"bytes. Default value (at least for some versions of libnetcdf) is 1 MB. "
+"Only for netCDF4/HDF5 files."
+msgstr ""
+
+#: ../../source/drivers/raster/netcdf.rst:707
+msgid ""
+"CHUNK_SLOTS=<integer>. (GDAL >= 3.10, advanced libnetcdf parameter) The "
+"total size of the libnetcdf raw data chunk cache, in bytes. Default value"
+" (at least for some versions of libnetcdf) is 521. Only for netCDF4/HDF5 "
+"files."
+msgstr ""
+
+#: ../../source/drivers/raster/netcdf.rst:712
+msgid ""
+"PREEMPTION=<float> between 0 and 1. (GDAL >= 3.10, advanced libnetcdf "
+"parameter) Indicates how much chunks from libnetcdf chunk cache that have"
+" been fully read are favored for preemption. A value of zero means fully "
+"read chunks are treated no differently than other chunks (the preemption "
+"is strictly least-recently used) while a value of one means fully read "
+"chunks are always preempted before other chunks. Default value (at least "
+"for some versions of libnetcdf) is 0.75. Only for netCDF4/HDF5 files."
+msgstr ""
+
+#: ../../source/drivers/raster/netcdf.rst:721
+msgid ""
+"For RAW_DATA_CHUNK_CACHE_SIZE, CHUNK_SLOTS and PREEMPTION, consult "
+"`nc_set_var_chunk_cache "
+"<https://docs.unidata.ucar.edu/netcdf-c/current/group__variables.html#ga2788cbfc6880ec70c304292af2bc7546>`__"
+" and `documentation about netCDF chunk cacke "
+"<https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html>`__"
+msgstr ""
+
+#: ../../source/drivers/raster/netcdf.rst:725
+msgid ""
 "The :cpp:func:`GDALGroup::CreateMDArray` method supports the following "
 "options:"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:705
+#: ../../source/drivers/raster/netcdf.rst:727
 msgid ""
 "NC_TYPE=NC_CHAR/NC_BYTE/NC_INT64/NC_UINT64: to overload the netCDF data "
 "type normally deduced from the GDAL data type passed to CreateMDArray(). "
 "NC_CHAR can only be used for strings of a fixed size."
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:708
+#: ../../source/drivers/raster/netcdf.rst:730
 msgid ""
 "BLOCKSIZE=size_dim0,size_dim1,...,size_dimN: to set the netCDF chunk "
 "size, as set by nc_def_var_chunking(). There must be exactly as many "
 "values as the number of dimensions passed to CreateMDArray()"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:711
+#: ../../source/drivers/raster/netcdf.rst:733
 msgid "COMPRESS=DEFLATE: to ask for deflate compression"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:712
+#: ../../source/drivers/raster/netcdf.rst:734
 msgid "ZLEVEL=number: DEFLATE compression level (1-9)"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:713
+#: ../../source/drivers/raster/netcdf.rst:735
 msgid ""
 "CHECKSUM=YES/NO: Whether to turn on Fletcher32 checksums. Checksum "
 "generation requires chunking, and if no explicit chunking has been asked "
 "with the BLOCKSIZE option, a default one will be used. Defaults to NO."
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:716
+#: ../../source/drivers/raster/netcdf.rst:738
 msgid ""
 "FILTER=filterid,param1,...,paramN: Define a filter (typically a "
 "compression method) used for writing. This should be a list of numeric "
@@ -622,47 +658,47 @@ msgid ""
 "/md__Users_wfisher_Desktop_docs_netcdf-c_docs_filters.html"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:724
+#: ../../source/drivers/raster/netcdf.rst:746
 msgid "Driver building"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:726
+#: ../../source/drivers/raster/netcdf.rst:748
 msgid "This driver is compiled with the UNIDATA NetCDF library."
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:728
+#: ../../source/drivers/raster/netcdf.rst:750
 msgid ""
 "You need to download or compile the NetCDF library before configuring "
 "GDAL with NetCDF support."
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:731
+#: ../../source/drivers/raster/netcdf.rst:753
 msgid ""
 "See `NetCDF GDAL wiki <http://trac.osgeo.org/gdal/wiki/NetCDF>`__ for "
 "build instructions and information regarding HDF4, NetCDF-4 and HDF5."
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:735
+#: ../../source/drivers/raster/netcdf.rst:757
 msgid "See Also:"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:737
+#: ../../source/drivers/raster/netcdf.rst:759
 msgid ":ref:`Vector side of the netCDF driver. <vector.netcdf>`"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:738
+#: ../../source/drivers/raster/netcdf.rst:760
 msgid ""
 "`NetCDF CF-1.5 convention <http://cf-pcmdi.llnl.gov/documents/cf-"
 "conventions/1.5/cf-conventions.html>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:740
+#: ../../source/drivers/raster/netcdf.rst:762
 msgid ""
 "`NetCDF compiled libraries "
 "<http://www.unidata.ucar.edu/downloads/netcdf/index.jsp>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:742
+#: ../../source/drivers/raster/netcdf.rst:764
 msgid ""
 "`NetCDF Documentation "
 "<http://www.unidata.ucar.edu/software/netcdf/docs/>`__"

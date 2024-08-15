@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/user/sql_sqlite_dialect.rst:5
 msgid "SQL SQLite dialect"
@@ -208,9 +208,9 @@ msgstr ""
 
 #: ../../source/user/sql_sqlite_dialect.rst:138
 #: ../../source/user/sql_sqlite_dialect.rst:150
-#: ../../source/user/sql_sqlite_dialect.rst:216
-#: ../../source/user/sql_sqlite_dialect.rst:343
+#: ../../source/user/sql_sqlite_dialect.rst:225
 #: ../../source/user/sql_sqlite_dialect.rst:354
+#: ../../source/user/sql_sqlite_dialect.rst:365
 msgid "returns:"
 msgstr ""
 
@@ -256,10 +256,30 @@ msgid ""
 msgstr ""
 
 #: ../../source/user/sql_sqlite_dialect.rst:205
-msgid "Spatialite SQL functions"
+msgid "Statistics functions"
 msgstr ""
 
 #: ../../source/user/sql_sqlite_dialect.rst:207
+msgid ""
+"In addition to standard COUNT(), SUM(), AVG(), MIN(), MAX(), the "
+"following aggregate functions are available:"
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:210
+msgid "STDDEV_POP: (GDAL >= 3.10) numerical population standard deviation."
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:211
+msgid ""
+"STDDEV_SAMP: (GDAL >= 3.10) numerical `sample standard deviation "
+"<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__"
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:214
+msgid "Spatialite SQL functions"
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:216
 msgid ""
 "When GDAL/OGR is build with support for the `Spatialite <https://www"
 ".gaia-gis.it/fossil/libspatialite/index>`_ library, a lot of `extra SQL "
@@ -268,7 +288,7 @@ msgid ""
 "column fields, WHERE clauses, etc...."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:232
+#: ../../source/user/sql_sqlite_dialect.rst:241
 msgid ""
 "Note that due to the loose typing mechanism of SQLite, if a geometry "
 "expression returns a NULL value for the first row, this will generally "
@@ -277,40 +297,40 @@ msgid ""
 "are returned first:"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:242
+#: ../../source/user/sql_sqlite_dialect.rst:251
 msgid "OGR datasource SQL functions"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:244
+#: ../../source/user/sql_sqlite_dialect.rst:253
 msgid ""
 "The ``ogr_datasource_load_layers(datasource_name[, update_mode[, "
 "prefix]])`` function can be used to automatically load all the layers of "
 "a datasource as :ref:`VirtualOGR tables <vector.sqlite>`."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:260
+#: ../../source/user/sql_sqlite_dialect.rst:269
 msgid "OGR layer SQL functions"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:262
+#: ../../source/user/sql_sqlite_dialect.rst:271
 msgid ""
 "The following SQL functions are available and operate on a layer name : "
 "``ogr_layer_Extent()``, ``ogr_layer_SRID()``, "
 "``ogr_layer_GeometryType()`` and ``ogr_layer_FeatureCount()``"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:280
+#: ../../source/user/sql_sqlite_dialect.rst:289
 msgid "OGR compression functions"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:282
+#: ../../source/user/sql_sqlite_dialect.rst:291
 msgid ""
 "``ogr_deflate(text_or_blob[, compression_level])`` returns a binary blob "
 "compressed with the ZLib deflate algorithm. See "
 ":cpp:func:`CPLZLibDeflate`"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:285
+#: ../../source/user/sql_sqlite_dialect.rst:294
 msgid ""
 "``ogr_inflate(compressed_blob)`` returns the decompressed binary blob, "
 "from a blob compressed with the ZLib deflate algorithm. If the "
@@ -318,22 +338,22 @@ msgid ""
 " VARCHAR). See CPLZLibInflate()."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:291
+#: ../../source/user/sql_sqlite_dialect.rst:300
 msgid "Other functions"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:293
+#: ../../source/user/sql_sqlite_dialect.rst:302
 msgid ""
 "The ``hstore_get_value()`` function can be used to extract a value "
 "associate to a key from a HSTORE string, formatted like "
 "\"key=>value,other_key=>other_value,...\""
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:303
+#: ../../source/user/sql_sqlite_dialect.rst:312
 msgid "Raster related functions"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:305
+#: ../../source/user/sql_sqlite_dialect.rst:314
 msgid ""
 "The ``gdal_get_pixel_value()`` function (added in GDAL 3.7) can be used "
 "to extract the value of a pixel in a GDAL dataset. It requires the "
@@ -341,44 +361,50 @@ msgid ""
 "(for security reasons)."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:309
-msgid "It takes 5 arguments:"
+#: ../../source/user/sql_sqlite_dialect.rst:318
+msgid "It takes 5 or 6 arguments:"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:311
+#: ../../source/user/sql_sqlite_dialect.rst:320
 msgid "a string with the dataset name"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:312
+#: ../../source/user/sql_sqlite_dialect.rst:321
 msgid "a band number (numbering starting at 1)"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:313
+#: ../../source/user/sql_sqlite_dialect.rst:322
 msgid ""
 "a string being \"georef\" to indicate that subsequent values will be "
 "georeferenced coordinates, or \"pixel\" to indicate that subsequent "
 "values will be in column, line pixel space"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:316
+#: ../../source/user/sql_sqlite_dialect.rst:325
 msgid "georeferenced X value or column number"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:317
+#: ../../source/user/sql_sqlite_dialect.rst:326
 msgid "georeferenced Y value or line number"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:326
+#: ../../source/user/sql_sqlite_dialect.rst:327
+msgid ""
+"resampling method among ``nearest`` (default), ``bilinear``, ``cubic``, "
+"``cubicspline``. Optional, added in GDAL 3.10"
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:337
 msgid "OGR geocoding functions"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:328
+#: ../../source/user/sql_sqlite_dialect.rst:339
 msgid ""
 "The following SQL functions are available : ``ogr_geocode(...)`` and "
 "``ogr_geocode_reverse(...)``."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:330
+#: ../../source/user/sql_sqlite_dialect.rst:341
 msgid ""
 "``ogr_geocode(name_to_geocode [, field_to_return [, option1 [, option2, "
 "...]]])`` where name_to_geocode is a literal or a column name that must "
@@ -390,13 +416,13 @@ msgid ""
 "understood by :cpp:func:`OGRGeocodeCreateSession` or OGRGeocode()."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:337
+#: ../../source/user/sql_sqlite_dialect.rst:348
 msgid ""
 "This function internally uses the OGRGeocode() API. Refer to it for more "
 "details."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:389
+#: ../../source/user/sql_sqlite_dialect.rst:400
 msgid ""
 "``ogr_geocode_reverse(longitude, latitude, field_to_return [, option1 [, "
 "option2, ...]])`` where longitude, latitude is the coordinate to query. "
@@ -408,24 +434,24 @@ msgid ""
 "OGRGeocodeReverse()."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:396
+#: ../../source/user/sql_sqlite_dialect.rst:407
 msgid ""
 "``ogr_geocode_reverse(geometry, field_to_return [, option1 [, option2, "
 "...]])`` is also accepted as an alternate syntax where geometry is a "
 "(Spatialite) point geometry."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:399
+#: ../../source/user/sql_sqlite_dialect.rst:410
 msgid ""
 "This function internally uses the :cpp:func:`OGRGeocodeReverse` API. "
 "Refer to it for more details."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:402
+#: ../../source/user/sql_sqlite_dialect.rst:413
 msgid "Spatialite spatial index"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:404
+#: ../../source/user/sql_sqlite_dialect.rst:415
 msgid ""
 "Spatialite spatial index mechanism can be triggered by making sure a "
 "spatial index virtual table is mentioned in the SQL (of the form "
@@ -434,14 +460,17 @@ msgid ""
 "will be built to be used to speed up the spatial queries."
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:409
+#: ../../source/user/sql_sqlite_dialect.rst:420
 msgid ""
 "For example, a spatial intersection between 2 layers, by using a spatial "
 "index on one of the layers to limit the number of actual geometry "
 "intersection computations :"
 msgstr ""
 
-#: ../../source/user/sql_sqlite_dialect.rst:421
+#: ../../source/user/sql_sqlite_dialect.rst:432
 msgid "or more elegantly :"
 msgstr ""
+
+#~ msgid "It takes 5 arguments:"
+#~ msgstr ""
 

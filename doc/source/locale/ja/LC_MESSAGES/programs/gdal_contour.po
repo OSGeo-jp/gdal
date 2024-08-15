@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdal_contour.rst:5
 msgid "gdal_contour"
@@ -117,15 +117,11 @@ msgid "Layer creation option (format specific)"
 msgstr ""
 
 #: ../../source/programs/gdal_contour.rst:96
-msgid ""
-"Elevation interval between contours. Ignored if -fl is used. Must specify"
-" either -i or -fl or -e."
+msgid "Elevation interval between contours. Must specify either -i or -fl or -e."
 msgstr ""
 
 #: ../../source/programs/gdal_contour.rst:101
-msgid ""
-"Offset from zero relative to which to interpret intervals. Ignored if -fl"
-" is used."
+msgid "Offset from zero relative to which to interpret intervals."
 msgstr ""
 
 #: ../../source/programs/gdal_contour.rst:103
@@ -135,47 +131,63 @@ msgid ""
 msgstr ""
 
 #: ../../source/programs/gdal_contour.rst:108
-msgid ""
-"Name one or more \"fixed levels\" to extract. Must specify either -i or "
-"-fl or -e."
+msgid "Name one or more \"fixed levels\" to extract."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:113
+#: ../../source/programs/gdal_contour.rst:112
 msgid ""
 "Generate levels on an exponential scale: `base ^ k`, for `k` an integer. "
 "Must specify either -i or -fl or -e."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:120
+#: ../../source/programs/gdal_contour.rst:119
 msgid "Provide a name for the output vector layer. Defaults to \"contour\"."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:124
+#: ../../source/programs/gdal_contour.rst:123
 msgid "Generate contour polygons rather than contour lines."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:130
+#: ../../source/programs/gdal_contour.rst:129
 msgid "Be quiet: do not print progress indicators."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:133
+#: ../../source/programs/gdal_contour.rst:132
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:135
+#: ../../source/programs/gdal_contour.rst:134
 msgid ""
 "Functionality of this utility can be done from C with "
 ":cpp:func:`GDALContourGenerate`."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:138
+#: ../../source/programs/gdal_contour.rst:137
 msgid "Example"
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:140
+#: ../../source/programs/gdal_contour.rst:139
 msgid ""
 "This would create 10-meter contours from the DEM data in :file:`dem.tif` "
 "and produce a shapefile in :file:`contour.shp|shx|dbf` with the contour "
 "elevations in the ``elev`` attribute."
 msgstr ""
+
+#~ msgid ""
+#~ "Elevation interval between contours. Ignored"
+#~ " if -fl is used. Must specify "
+#~ "either -i or -fl or -e."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Offset from zero relative to which "
+#~ "to interpret intervals. Ignored if -fl"
+#~ " is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Name one or more \"fixed levels\" "
+#~ "to extract. Must specify either -i "
+#~ "or -fl or -e."
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdallocationinfo.rst:5
 msgid "gdallocationinfo"
@@ -31,11 +31,11 @@ msgstr ""
 msgid "Synopsis"
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:27
+#: ../../source/programs/gdallocationinfo.rst:28
 msgid "Description"
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:29
+#: ../../source/programs/gdallocationinfo.rst:30
 msgid ""
 "The :program:`gdallocationinfo` utility provide a mechanism to query "
 "information about a pixel given its location in one of a variety of "
@@ -52,30 +52,54 @@ msgid ""
 "exit."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:39
+#: ../../source/programs/gdallocationinfo.rst:40
 msgid "The output report will be XML formatted for convenient post processing."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:43
+#: ../../source/programs/gdallocationinfo.rst:44
 msgid ""
 "The only output is filenames production from the LocationInfo request "
 "against the database (i.e. for identifying impacted file from VRT)."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:48
+#: ../../source/programs/gdallocationinfo.rst:49
 msgid ""
 "The only output is the pixel values of the selected pixel on each of the "
 "selected bands. By default, the value of each band is output on a "
 "separate line, unless :option:`-field_sep` is specified."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:54
+#: ../../source/programs/gdallocationinfo.rst:55
 msgid ""
 "Selects a band to query.  Multiple bands can be listed.  By default all "
 "bands are queried."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:59
+#: ../../source/programs/gdallocationinfo.rst:62
+msgid "Select a sampling algorithm. The default is ``nearest``."
+msgstr ""
+
+#: ../../source/programs/gdallocationinfo.rst:64
+msgid "The available methods are:"
+msgstr ""
+
+#: ../../source/programs/gdallocationinfo.rst:66
+msgid "``nearest`` applies a nearest neighbour."
+msgstr ""
+
+#: ../../source/programs/gdallocationinfo.rst:68
+msgid "``bilinear`` applies a bilinear convolution kernel."
+msgstr ""
+
+#: ../../source/programs/gdallocationinfo.rst:70
+msgid "``cubic`` applies a cubic convolution kernel."
+msgstr ""
+
+#: ../../source/programs/gdallocationinfo.rst:72
+msgid "``cubicspline`` applies a B-Spline convolution kernel."
+msgstr ""
+
+#: ../../source/programs/gdallocationinfo.rst:76
 msgid ""
 "Query the (overview_level)th overview (overview_level=1 is the 1st "
 "overview), instead of the base band. Note that the x,y location (if the "
@@ -83,23 +107,23 @@ msgid ""
 "base band."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:65
+#: ../../source/programs/gdallocationinfo.rst:82
 msgid "The coordinate system of the input x, y location."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:69
+#: ../../source/programs/gdallocationinfo.rst:86
 msgid "Indicates input x,y points are in the georeferencing system of the image."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:73
+#: ../../source/programs/gdallocationinfo.rst:90
 msgid "Indicates input x,y points are WGS84 long, lat."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:77
+#: ../../source/programs/gdallocationinfo.rst:94
 msgid "Dataset open option (format specific)"
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:83
+#: ../../source/programs/gdallocationinfo.rst:100
 msgid ""
 "Set this flag to avoid extra non-numeric content at end of input lines to"
 " be appended to the output lines in -valonly mode (requires "
@@ -107,13 +131,13 @@ msgid ""
 "default or :option:`-xml` modes."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:91
+#: ../../source/programs/gdallocationinfo.rst:108
 msgid ""
 "Enable Echo mode, where input coordinates are prepended to the output "
 "lines in :option:`-valonly` mode."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:98
+#: ../../source/programs/gdallocationinfo.rst:115
 msgid ""
 "Defines the field separator, used in :option:`-valonly` mode, to separate"
 " different values. It defaults to the new-line character, which means "
@@ -123,48 +147,48 @@ msgid ""
 "Defining the field separator is also needed"
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:107
+#: ../../source/programs/gdallocationinfo.rst:124
 msgid "The source GDAL raster datasource name."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:111
+#: ../../source/programs/gdallocationinfo.rst:128
 msgid ""
 "X location of target pixel.  By default the coordinate system is "
 "pixel/line unless -l_srs, -wgs84 or -geoloc supplied."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:116
+#: ../../source/programs/gdallocationinfo.rst:133
 msgid ""
 "Y location of target pixel.  By default the coordinate system is "
 "pixel/line unless -l_srs, -wgs84 or -geoloc supplied."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:120
+#: ../../source/programs/gdallocationinfo.rst:137
 msgid ""
 "This utility is intended to provide a variety of information about a "
 "pixel.  Currently it reports:"
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:123
+#: ../../source/programs/gdallocationinfo.rst:140
 msgid "The location of the pixel in pixel/line space."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:124
+#: ../../source/programs/gdallocationinfo.rst:141
 msgid ""
 "The result of a LocationInfo metadata query against the datasource. This "
 "is implemented for VRT files which will report the file(s) used to "
 "satisfy requests for that pixel, and by the :ref:`raster.mbtiles` driver."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:128
+#: ../../source/programs/gdallocationinfo.rst:145
 msgid "The raster pixel value of that pixel for all or a subset of the bands."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:129
+#: ../../source/programs/gdallocationinfo.rst:146
 msgid "The unscaled pixel value if a Scale and/or Offset apply to the band."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:131
+#: ../../source/programs/gdallocationinfo.rst:148
 msgid ""
 "The pixel selected is requested by x/y coordinate on the command line, or"
 " read from stdin. More than one coordinate pair can be supplied when "
@@ -174,40 +198,40 @@ msgid ""
 "the location in other coordinate systems."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:137
+#: ../../source/programs/gdallocationinfo.rst:154
 msgid ""
 "The default report is in a human readable text format.  It is possible to"
 " instead request xml output with the -xml switch."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:140
+#: ../../source/programs/gdallocationinfo.rst:157
 msgid ""
 "For scripting purposes, the -valonly and -lifonly switches are provided "
 "to restrict output to the actual pixel values, or the LocationInfo files "
 "identified for the pixel."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:144
+#: ../../source/programs/gdallocationinfo.rst:161
 msgid ""
 "It is anticipated that additional reporting capabilities will be added to"
 " gdallocationinfo in the future."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:148
+#: ../../source/programs/gdallocationinfo.rst:165
 msgid "Examples"
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:150
+#: ../../source/programs/gdallocationinfo.rst:167
 msgid "Simple example reporting on pixel (256,256) on the file utm.tif."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:160
+#: ../../source/programs/gdallocationinfo.rst:177
 msgid ""
 "Query a VRT file providing the location in WGS84, and getting the result "
 "in xml."
 msgstr ""
 
-#: ../../source/programs/gdallocationinfo.rst:174
+#: ../../source/programs/gdallocationinfo.rst:191
 msgid "Reading location from stdin."
 msgstr ""
 
