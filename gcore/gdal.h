@@ -502,7 +502,7 @@ typedef struct GDALDimensionHS *GDALDimensionH;
  */
 #define GDAL_DCAP_CREATE "DCAP_CREATE"
 
-/** Capability set by a driver that implements the CreateMultidimensional() API.
+/** Capability set by a driver that implements the CreateMultiDimensional() API.
  *
  * @since GDAL 3.1
  */
@@ -1637,6 +1637,12 @@ CPLErr CPL_DLL CPL_STDCALL GDALAddDerivedBandPixelFunc(
 CPLErr CPL_DLL CPL_STDCALL GDALAddDerivedBandPixelFuncWithArgs(
     const char *pszName, GDALDerivedPixelFuncWithArgs pfnPixelFunc,
     const char *pszMetadata);
+
+CPLErr CPL_DLL GDALRasterInterpolateAtPoint(GDALRasterBandH hBand,
+                                            double dfPixel, double dfLine,
+                                            GDALRIOResampleAlg eInterpolation,
+                                            double *pdfRealValue,
+                                            double *pdfImagValue);
 
 /** Generic pointer for the working structure of VRTProcessedDataset
  * function. */
