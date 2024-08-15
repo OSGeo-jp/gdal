@@ -21,9 +21,10 @@ msgstr ""
 
 #: ../../source/user/index.rst:7
 msgid "GDAL Virtual File Systems"
-msgstr ""
+msgstr "GDAL仮想ファイルシステム"
 
 #: ../../source/user/index.rst:5
 msgid "User oriented documentation"
-msgstr ""
+msgstr "ユーザー向けドキュメント"
+
 

@@ -21,17 +21,19 @@ msgstr ""
 
 #: ../../source/user/raster_data_model.rst:5
 msgid "Raster Data Model"
-msgstr ""
+msgstr "ラスターデータモデル"
 
 #: ../../source/user/raster_data_model.rst:7
 msgid ""
 "This document attempts to describe the GDAL data model. That is the types"
 " of information that a GDAL data store can contain, and their semantics."
 msgstr ""
+"このドキュメントはGDALデータモデルを記述しようとします.それはGDALデータストアが含む"
+"ことができる情報のタイプとそれらの意味です."
 
 #: ../../source/user/raster_data_model.rst:10
 msgid "Dataset"
-msgstr ""
+msgstr "データセット"
 
 #: ../../source/user/raster_data_model.rst:12
 msgid ""
@@ -43,64 +45,75 @@ msgid ""
 " bands. The dataset itself can also have associated metadata, a list of "
 "name/value pairs in string form."
 msgstr ""
+"データセット(クラス :cpp:class:`GDALDataset` で表される)は、関連するラスターバンド"
+"の集合と、それら全てに共通する情報です.特にデータセットは,全てのバンドに適用される"
+"ラスターサイズ(ピクセルとライン)の概念を持ちます.データセットはまた、全てのバンドの"
+"地理参照変換と座標系定義を担当します.データセット自体には、文字列形式の名前/値ペアの"
+"リストとして関連するメタデータがあります."
 
 #: ../../source/user/raster_data_model.rst:14
 msgid ""
 "Note that the GDAL dataset, and raster band data model is loosely based "
 "on the OpenGIS Grid Coverages specification."
 msgstr ""
+"GDALデータセットとラスターバンドデータモデルは、OpenGIS Grid Coverages仕様に"
+"基づいています."
 
 #: ../../source/user/raster_data_model.rst:17
 msgid "Coordinate System"
-msgstr ""
+msgstr "座標系"
 
 #: ../../source/user/raster_data_model.rst:18
 msgid ""
 "Dataset coordinate systems are represented as OpenGIS Well Known Text "
 "strings. This can contain:"
 msgstr ""
+"データセットの座標系はOpenGIS Well Known Text文字列として表されます.これは"
+"以下を含むことができます:"
 
 #: ../../source/user/raster_data_model.rst:20
 msgid "An overall coordinate system name."
-msgstr ""
+msgstr "全体の座標系名"
 
 #: ../../source/user/raster_data_model.rst:21
 msgid "A geographic coordinate system name."
-msgstr ""
+msgstr "地理座標系名"
 
 #: ../../source/user/raster_data_model.rst:22
 msgid "A datum identifier."
-msgstr ""
+msgstr "測地系識別子"
 
 #: ../../source/user/raster_data_model.rst:23
 msgid "An ellipsoid name, semi-major axis, and inverse flattening."
-msgstr ""
+msgstr "楕円体名,軌道長半径,逆扁平率"
 
 #: ../../source/user/raster_data_model.rst:24
 msgid "A prime meridian name and offset from Greenwich."
-msgstr ""
+msgstr "本初子午線名とグリニッジからのオフセット"
 
 #: ../../source/user/raster_data_model.rst:25
 msgid "A projection method type (e.g., Transverse Mercator)."
-msgstr ""
+msgstr "投影法のタイプ(例:Transverse Mercato)."
 
 #: ../../source/user/raster_data_model.rst:26
 msgid "A list of projection parameters (e.g., central_meridian)."
-msgstr ""
+msgstr "投影パラメータのリスト(例: central_meridian)."
 
 #: ../../source/user/raster_data_model.rst:27
 msgid "A units name, and conversion factor to meters or radians."
-msgstr ""
+msgstr "単位名とメートルまたはラジアンへの変換係数"
 
 #: ../../source/user/raster_data_model.rst:28
 msgid "Names and ordering for the axes."
-msgstr ""
+msgstr "軸の名前と順序"
 
 #: ../../source/user/raster_data_model.rst:29
 msgid ""
 "Codes for most of the above in terms of predefined coordinate systems "
 "from authorities such as EPSG."
 msgstr ""
+"上記のほとんどコードは,EPSGなどの標準座標系で定義されている"
+"コードです."
 
 #: ../../source/user/raster_data_model.rst:31
 msgid ""
@@ -108,6 +121,8 @@ msgid ""
 "mechanisms to manipulate them, refer to the osr_tutorial document and/or "
 "the OGRSpatialReference class documentation."
 msgstr ""
+"OpenGIS WKT 座標系システム定義の詳細とそれらを操作するメカニズムについては,"
+"osr_tutorial ドキュメントと OGRSpatialReference クラスドキュメントを参照してください."
 
 #: ../../source/user/raster_data_model.rst:33
 msgid ""
@@ -118,12 +133,20 @@ msgid ""
 "by :cpp:func:`GDALDataset::GetGCPProjection` describes the georeferenced "
 "coordinates of the GCPs returned by :cpp:func:`GDALDataset::GetGCPs`."
 msgstr ""
+":cpp:func:`GDALDataset::GetProjectionRef` で返される座標系は, "
+":cpp:func:`GDALDataset::GetGeoTransform` によって返されるアフィン地理変換を"
+"前提とした地理参照座標を記述します. "
+" :cpp:func:`GDALDataset::GetGCPProjection` から返される座標系では "
+" :cpp:func:`GDALDataset::GetGCPs` から返されるGCPでジオリファレンス"
+"された座標を記述します."
 
 #: ../../source/user/raster_data_model.rst:35
 msgid ""
 "Note that a returned coordinate system strings of \"\" indicates nothing "
 "is known about the georeferencing coordinate system."
 msgstr ""
+"返される座標系文字列が \"\" の場合, ジオリファレンス座標系について"
+"何も指定されていないことを表します."
 
 #: ../../source/user/raster_data_model.rst:40
 msgid "Affine GeoTransform"
