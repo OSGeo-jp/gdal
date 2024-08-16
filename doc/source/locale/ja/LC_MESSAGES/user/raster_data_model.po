@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-23 17:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -93,7 +93,7 @@ msgstr "本初子午線名とグリニッジからのオフセット"
 
 #: ../../source/user/raster_data_model.rst:25
 msgid "A projection method type (e.g., Transverse Mercator)."
-msgstr "投影法のタイプ(例:Transverse Mercato)."
+msgstr "投影法のタイプ(例:Transverse Mercator)."
 
 #: ../../source/user/raster_data_model.rst:26
 msgid "A list of projection parameters (e.g., central_meridian)."
@@ -336,6 +336,13 @@ msgid ""
 "is not widely honoured by GDAL drivers, algorithms or utilities at this "
 "time."
 msgstr ""
+"NODATA_VALUES: この値はデータセット内のバンド数に一致するスペースで区切ら"
+"れたピクセル値のリストです.これらの値は,データセット内でデータなし(nodata)"
+"のピクセルを識別するために集合的に使用されます.このスタイルのnodataでは,"
+"すべてのバンドが NODATA_VALUES タプル内の対応する値と一致する場合にのみ,"
+"そのピクセルはすべてのバンドでデータなしと見なされます.現時点では,このメタ"
+"データは GDAL ドライバ,アルゴリズム,ユーティリティによって広くサポートされて"
+"いるわけではありません."
 
 #: ../../source/user/raster_data_model.rst:100
 msgid ""
@@ -343,6 +350,8 @@ msgid ""
 "contains the matrix representation that this data is provided in. The "
 "following are acceptable values:"
 msgstr ""
+"MATRIX_REPRESENTATION: この値は,偏波SARデータセットに使用され,このデータが"
+"提供される行列表現を含みます.以下が受け入れ可能な値です："
 
 #: ../../source/user/raster_data_model.rst:102
 msgid "SCATTERING"
@@ -388,12 +397,21 @@ msgid ""
 "matrix itself is a hermitian matrix, that is all the data that is "
 "required to describe the matrix)."
 msgstr ""
+"POLARIMETRIC_INTERP: このメタデータ項目は,偏波SARデータのラスターバンドに対して"
+"定義されています.これは,指定された行列表現のどのエントリをこのバンドが表しているか"
+"を示します.例えば,散乱行列として提供されるデータセットの場合,このメタデータ項目の"
+"受け入れ可能な値はHH,HV,VH,VVです.データセットが共分散行列の場合,例えば,このメタ"
+"データ項目はCovariance_11,Covariance_22,Covariance_33,Covariance_12,Covariance_13,"
+"Covariance_23のいずれかになります(行列自体がエルミート行列であるため,これらが行列を記述"
+"するために必要なすべてのデータです)."
 
 #: ../../source/user/raster_data_model.rst:111
 msgid ""
 "METADATATYPE: If IMAGERY Domain present, the item consist the reader "
 "which processed the metadata. Now present such readers:"
 msgstr ""
+"METADATATYPE: IMAGERYドメインが存在する場合,この項目はメタデータを処理した"
+"リーダーを示します.現在,以下のようなリーダーが存在します："
 
 #: ../../source/user/raster_data_model.rst:113
 msgid "DG: DigitalGlobe imagery metadata"
