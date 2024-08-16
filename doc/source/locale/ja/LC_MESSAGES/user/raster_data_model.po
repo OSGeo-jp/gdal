@@ -207,6 +207,11 @@ msgid ""
 ":cpp:func:`GDALDataset::GetGCPProjection`). Each GCP (represented as the "
 "GDAL_GCP class) contains the following:"
 msgstr ""
+"データセットは, ピクセル/行座標に関連する制御点のセットを持つことができます. "
+"すべてのGCPsは, "
+"ジオリファレンスする座標系 ( "
+":cpp:func:`GDALDataset::GetGCPProjection` から返される)を共有します. "
+"各GCP (GDAL_GCPクラスとして表されます) は次のようになります:"
 
 #: ../../source/user/raster_data_model.rst:73
 msgid ""
@@ -216,6 +221,9 @@ msgid ""
 " text associated with the GCP. Potentially this can also contain machine "
 "parsable information on GCP status though that isn't done at this time."
 msgstr ""
+"pszId文字列は, このデータセット上のGCPsのセット内のGCPの一意の (しばしば, しかし常に) "
+"数値の識別子です. pszInfoは通常空文字列ですが, GCPに関連するユーザ定義のテキストを含めることができます. "
+"現在は通常利用されていませんが, GCPの状態に関する機械可読情報を含めることもできます."
 
 #: ../../source/user/raster_data_model.rst:75
 msgid ""
@@ -223,6 +231,8 @@ msgid ""
 "position is the associated georeferenced location with the Z often being "
 "zero."
 msgstr ""
+"(ピクセル,行) 位置はラスタ上のGCP位置です. (X,Y,Z) 位置は, Z がよくゼロである"
+"ジオリファレンスされた位置です."
 
 #: ../../source/user/raster_data_model.rst:77
 msgid ""
@@ -230,6 +240,9 @@ msgid ""
 "be generated from the GCPs ... this is left to the application. However "
 "1st to 5th order polynomials are common."
 msgstr ""
+"GDAL データモデルは, GCPs から生成される変換メカニズムを実装しません ... "
+"これはアプリケーションに任されています. ただし,1 次から 5 次の多項式は"
+"一般的に利用されます."
 
 #: ../../source/user/raster_data_model.rst:79
 msgid ""
@@ -237,10 +250,12 @@ msgid ""
 "neither. It is uncommon to have both, and it is undefined which is "
 "authoritative."
 msgstr ""
+"通常, データセットはアフィン地理変換, GCPs のいずれかを含みます. 両方を含むことは"
+"一般的ではありません. どちらが優先されるかは未定義です."
 
 #: ../../source/user/raster_data_model.rst:82
 msgid "Metadata"
-msgstr ""
+msgstr "メタデータ"
 
 #: ../../source/user/raster_data_model.rst:84
 msgid ""
@@ -249,6 +264,10 @@ msgid ""
 "behaved tokens (no spaces, or odd characters). The values can be of any "
 "length, and contain anything except an embedded null (ASCII zero)."
 msgstr ""
+"GDALメタデータは,名前/値のペアのリストとして保持される補助的なフォーマット"
+"およびアプリケーション固有のテキストデータです.名前は適切な形式のトークン"
+"(スペースや特殊文字を含まない)である必要があります.値は任意の長さで,埋め込み"
+"ヌル(ASCII ゼロ)以外の任意の内容を含むことができます."
 
 #: ../../source/user/raster_data_model.rst:86
 msgid ""
@@ -256,6 +275,9 @@ msgid ""
 "bodies of metadata. Handling of more than 100K of metadata for a dataset "
 "is likely to lead to performance degradation."
 msgstr ""
+"メタデータ取り扱いシステムはとても巨大な本体を持つメタデータを扱うために適切には"
+"調整されていません. データセットに対して100Kを超えるメタデータを扱うと,パフォーマ"
+"ンスの低下を引き起こす可能性があります."
 
 #: ../../source/user/raster_data_model.rst:88
 msgid ""
@@ -264,6 +286,10 @@ msgid ""
 "instance the TIFF driver returns a few information tags as metadata "
 "including the date/time field which is returned as:"
 msgstr ""
+"一部のフォーマットは汎用的な(ユーザー定義の)メタデータをサポートしますが,他の"
+"フォーマットドライバは特定のフォーマットフィールドをメタデータ名にマッピングし"
+"ます.例えば、TIFFドライバは日付/時刻フィールドを含むいくつかの情報タグをメタ"
+"データとして返します。日付/時刻フィールドは次のように返されます:"
 
 #: ../../source/user/raster_data_model.rst:94
 msgid ""
@@ -273,12 +299,19 @@ msgid ""
 "the domains available for a given object, but applications can \"test\" "
 "for any domains they know how to interpret."
 msgstr ""
+"メタデータはドメインと呼ばれる名前付きグループに分割されます,デフォルトドメイン"
+"には名前がありません(NULLまたは\"\"). 特別な目的のために存在する特定のドメイン"
+"もあります.現在,特定のオブジェクトに対して利用可能なすべてのドメインを列挙する"
+"方法はありませんが,アプリケーションは解釈方法を知っているドメインに対して \"テスト\" "
+"を行うことができます."
 
 #: ../../source/user/raster_data_model.rst:96
 msgid ""
 "The following metadata items have well defined semantics in the default "
 "domain:"
 msgstr ""
+"以下のメタデータ項目は、デフォルトドメインにおいて明確に定義された意味を"
+"持ちます："
 
 #: ../../source/user/raster_data_model.rst:98
 msgid ""
@@ -288,6 +321,10 @@ msgid ""
 "pixel. This is not intended to influence interpretation of georeferencing"
 " which remains area oriented."
 msgstr ""
+"AREA_OR_POINT: \"Area\"(デフォルト)または\"Point\"のいずれかでしょう."
+"ピクセル値がピクセル領域全体のサンプリングを表すのか,ピクセルの中心点での"
+"サンプリングを表すのかを示します.これは地理参照の解釈に影響を与えることを"
+"意図したものではなく,地理参照は領域指向のままです."
 
 #: ../../source/user/raster_data_model.rst:99
 msgid ""
