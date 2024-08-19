@@ -28,8 +28,8 @@ msgid ""
 "This document attempts to describe the GDAL data model. That is the types"
 " of information that a GDAL data store can contain, and their semantics."
 msgstr ""
-"このドキュメントはGDALデータモデルを記述しようとします.それはGDALデータストアが含む"
-"ことができる情報のタイプとそれらの意味です."
+"このドキュメントはGDALデータモデルを記述しようとします.その内容はGDALデータストアが含む"
+"ことができる情報のタイプとそれらの意味についてです."
 
 #: ../../source/user/raster_data_model.rst:10
 msgid "Dataset"
@@ -45,10 +45,10 @@ msgid ""
 " bands. The dataset itself can also have associated metadata, a list of "
 "name/value pairs in string form."
 msgstr ""
-"データセット(クラス :cpp:class:`GDALDataset` で表される)は、関連するラスターバンド"
-"の集合と、それら全てに共通する情報です.特にデータセットは,全てのバンドに適用される"
-"ラスターサイズ(ピクセルとライン)の概念を持ちます.データセットはまた、全てのバンドの"
-"地理参照変換と座標系定義を担当します.データセット自体には、文字列形式の名前/値ペアの"
+"データセット(クラス :cpp:class:`GDALDataset` で表される)は,関連するラスターバンド"
+"の集合と,それら全てに共通する情報です.特にデータセットは,全てのバンドに適用される"
+"ラスターサイズ(ピクセルとライン)の概念を持ちます.データセットはまた,全てのバンドの"
+"地理参照変換と座標系定義を担当します.データセット自体には,文字列形式の名前/値ペアの"
 "リストとして関連するメタデータがあります."
 
 #: ../../source/user/raster_data_model.rst:14
@@ -56,7 +56,7 @@ msgid ""
 "Note that the GDAL dataset, and raster band data model is loosely based "
 "on the OpenGIS Grid Coverages specification."
 msgstr ""
-"GDALデータセットとラスターバンドデータモデルは、OpenGIS Grid Coverages仕様に"
+"GDALデータセットとラスターバンドデータモデルは,OpenGIS Grid Coverages仕様に"
 "基づいています."
 
 #: ../../source/user/raster_data_model.rst:17
@@ -415,27 +415,27 @@ msgstr ""
 
 #: ../../source/user/raster_data_model.rst:113
 msgid "DG: DigitalGlobe imagery metadata"
-msgstr ""
+msgstr "DG: DigitalGlobe 画像のメタデータ"
 
 #: ../../source/user/raster_data_model.rst:114
 msgid "GE: GeoEye (or formally SpaceImaging) imagery metadata"
-msgstr ""
+msgstr "GE: GeoEye (または正式には SpaceImaging) 画像のメタデータ"
 
 #: ../../source/user/raster_data_model.rst:115
 msgid "OV: OrbView imagery metadata"
-msgstr ""
+msgstr "OV: OrbView 画像のメタデータ"
 
 #: ../../source/user/raster_data_model.rst:116
 msgid "DIMAP: Pleiades imagery metadata"
-msgstr ""
+msgstr "DIMAP: Pleiades 画像のメタデータ"
 
 #: ../../source/user/raster_data_model.rst:117
 msgid "MSP: Resurs DK-1 imagery metadata"
-msgstr ""
+msgstr "MSP: Resurs DK-1 画像のメタデータ"
 
 #: ../../source/user/raster_data_model.rst:118
 msgid "ODL: Landsat imagery metadata"
-msgstr ""
+msgstr "ODL: Landsat 画像のメタデータ"
 
 #: ../../source/user/raster_data_model.rst:119
 msgid ""
@@ -443,10 +443,13 @@ msgid ""
 "WMS driver. This is useful when dataset deletes with cached data or when "
 "external program need to put tiles in cache for some area of interest."
 msgstr ""
+"CACHE_PATH: キャッシュディレクトリーのパス. 現在このメタデータはWMSドライバーでのみ"
+"設定されます. これはデータセットとキャッシュを同時に削除する場合や外部プログラムで"
+"インターネットのどこかの場所にタイルを格納するような場合に便利です."
 
 #: ../../source/user/raster_data_model.rst:122
 msgid "SUBDATASETS Domain"
-msgstr ""
+msgstr "SUBDATASETS ドメイン"
 
 #: ../../source/user/raster_data_model.rst:124
 msgid ""
@@ -454,12 +457,16 @@ msgid ""
 "used to provide pointers to a list of images stored within a single multi"
 " image file."
 msgstr ""
+"SUBDATASETS ドメインは子データセットのリストを保有します. 通常これは"
+"単一のマルチイメージファイル内に格納されているイメージのリストへのポインターを提供するために使用されます."
 
 #: ../../source/user/raster_data_model.rst:126
 msgid ""
 "For example, an NITF with two images might have the following subdataset "
 "list."
 msgstr ""
+"たとえば2個の画像を持つNITFは以下のようなサブデータセットを"
+"持つでしょう."
 
 #: ../../source/user/raster_data_model.rst:135
 msgid ""
@@ -468,6 +475,9 @@ msgid ""
 "be a more user friendly string that can be displayed to the user in a "
 "selector."
 msgstr ""
+" _NAME の値は :cpp:func:`GDALOpen` で開くことができるファイルの文字列です."
+"  _DESC の値はセレクタに表示される ユーザーに"
+"とってわかりやすい文字列です."
 
 #: ../../source/user/raster_data_model.rst:137
 msgid ""
@@ -475,6 +485,9 @@ msgid ""
 "capability. This information is reported when the --format and --formats "
 "options are passed to the command line utilities."
 msgstr ""
+"サブデータセットをサポートするドライバは, ``DMD_SUBDATASETS`` 機能を公開します."
+"この情報は,コマンドラインユーティリティに --formatおよび --formatsオプションが"
+"渡された際に報告されます."
 
 #: ../../source/user/raster_data_model.rst:139
 msgid ""
@@ -482,10 +495,13 @@ msgid ""
 "GEORASTER, GTiff, HDF4, HDF5, netCDF, NITF, NTv2, OGDI, PDF, "
 "PostGISRaster, Rasterlite, RPFTOC, RS2, TileDB, WCS, WMS, and Zarr."
 msgstr ""
+"現在以下のドライバーがサブデータセットをサポートしています: ADRG, ECRGTOC, "
+"GEORASTER, GTiff, HDF4, HDF5, netCDF, NITF, NTv2, OGDI, PDF, "
+"PostGISRaster, Rasterlite, RPFTOC, RS2, TileDB, WCS, WMS, と Zarr."
 
 #: ../../source/user/raster_data_model.rst:142
 msgid "IMAGE_STRUCTURE Domain"
-msgstr ""
+msgstr "IMAGE_STRUCTURE ドメイン"
 
 #: ../../source/user/raster_data_model.rst:144
 msgid ""
@@ -497,12 +513,21 @@ msgid ""
 "copied along with datasets it is placed in a special domain called "
 "IMAGE_STRUCTURE that should not normally be copied to new formats."
 msgstr ""
+"デフォルトドメインのメタデータは,画像に関連するものであり,画像がディスク上に"
+"どのように保存されているかという方法には特に関連しません.つまり,データセットが"
+"新しいフォーマットにコピーされる際に,一緒にコピーするのに適しています.一方,特定"
+"のファイルフォーマットや保存メカニズムに密接に関連する重要な情報もあります."
+"これらの情報がデータセットと一緒にコピーされるのを防ぐため,IMAGE_STRUCTUREと"
+"呼ばれる特別なドメインに配置されます.このドメインは通常,新しいフォーマットに"
+"コピーされるべきではありません."
 
 #: ../../source/user/raster_data_model.rst:146
 msgid ""
 "Currently the following items are defined by :ref:`rfc-14` as having "
 "specific semantics in the IMAGE_STRUCTURE domain."
 msgstr ""
+"現在以下のアイテムは "
+"IMAGE_STRUCTURE ドメインで固有のセマンティックを持つものとして:ref:`rfc-14` で定義されています."
 
 #: ../../source/user/raster_data_model.rst:148
 msgid ""
@@ -511,6 +536,11 @@ msgid ""
 "includes a COMPRESSION creation option, the same list of values should be"
 " used here as there."
 msgstr ""
+"COMPRESSION: データセットまたはバンドの圧縮タイプ. 圧縮タイプ名の"
+" 確定したカタログはありません. ただし,"
+"特定のフォーマットがCOMPRESSION作成オプションを含む場合,そこで使用される"
+"値のリストと同じものがここでも使用されるべきです."
+
 
 #: ../../source/user/raster_data_model.rst:149
 msgid ""
@@ -519,12 +549,17 @@ msgid ""
 "for the datatype, such as when a 1 bit TIFF is represented through GDAL "
 "as GDT_Byte."
 msgstr ""
+"NBITS: このバンド,またはこのデータセットのバンドに使用される実際のビット数です."
+"通常,ビット数がデータ型の標準と異なる場合にのみ存在します.例えば,1ビットのTIFF"
+"ファイルがGDALを通じてGDT_Byteとして表されている場合などです."
 
 #: ../../source/user/raster_data_model.rst:150
 msgid ""
 "INTERLEAVE: This only applies on datasets, and the value should be one of"
 " PIXEL, LINE or BAND. It can be used as a data access hint."
 msgstr ""
+"INTERLEAVE: これはデータセットにのみ適用され,その値はPIXEL,LINE,またはBANDの"
+"いずれかである必要があります.これはデータアクセスのヒントとして使用されることがあります."
 
 #: ../../source/user/raster_data_model.rst:151
 msgid ""
@@ -535,10 +570,15 @@ msgid ""
 " with GDAL 3.7, this metadata item is no longer used, as the Int8 data "
 "type is used for signed bytes."
 msgstr ""
+"PIXELTYPE: これはGDT_Byteバンド(または対応するデータセット)に現れることがあり,"
+"値がSIGNEDBYTEである場合,128から255までの符号なしバイト値を,SIGNEDBYTEタイプ"
+"を認識するアプリケーションにおいては-128から-1として解釈すべきことを示します."
+"GDAL 3.7以降,このメタデータ項目は使用されなくなり,符号付きバイトにはInt8データ"
+"タイプが使用されるようになりました。
 
 #: ../../source/user/raster_data_model.rst:158
 msgid "RPC Domain"
-msgstr ""
+msgstr "RPC ドメイン"
 
 #: ../../source/user/raster_data_model.rst:160
 msgid ""
