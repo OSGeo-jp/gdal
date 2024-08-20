@@ -587,64 +587,73 @@ msgid ""
 " can be used to transform between pixel/line and georeferenced locations."
 " The items defining the model are:"
 msgstr ""
+"RPCメタデータドメインには,画像の有理多項式係数ジオメトリ モデル (存在する場合) "
+"を説明するメタデータが保持されます.このジオメトリモデルは,ピクセル/ラインと地理"
+"参照された場所の間の変換に使用できます.モデルを定義する項目は次のとおりです:
 
 #: ../../source/user/raster_data_model.rst:162
 msgid ""
 "ERR_BIAS: Error - Bias. The RMS bias error in meters per horizontal axis "
 "of all points in the image (-1.0 if unknown)"
 msgstr ""
+"ERR_BIAS:  エラー - バイアス,画像内のすべての点に対する水平方向の軸ごとのRMS"
+"(二乗平均平方根)バイアス誤差をメートル単位で示します(不明な場合は-1.0と表示されます)"
 
 #: ../../source/user/raster_data_model.rst:163
 msgid ""
 "ERR_RAND: Error - Random. RMS random error in meters per horizontal axis "
 "of each point in the image (-1.0 if unknown)"
 msgstr ""
+"ERR_RAND:エラー - ランダム.画像内の各点に対する水平方向の軸ごとのRMS(二乗平均平方根)"
+"ランダム誤差をメートル単位で示します（不明な場合は-1.0と表示されます）."
 
 #: ../../source/user/raster_data_model.rst:164
 msgid "LINE_OFF: Line Offset"
-msgstr ""
+msgstr "LINE_OFF: ラインオフセット"
 
 #: ../../source/user/raster_data_model.rst:165
 msgid "SAMP_OFF: Sample Offset"
-msgstr ""
+msgstr "SAMP_OFF: サンプルオフセット"
 
 #: ../../source/user/raster_data_model.rst:166
 msgid "LAT_OFF: Geodetic Latitude Offset"
-msgstr ""
+msgstr "LAT_OFF: 測地学的緯度オフセット"
 
 #: ../../source/user/raster_data_model.rst:167
 msgid "LONG_OFF: Geodetic Longitude Offset"
-msgstr ""
+msgstr "LONG_OFF: 測地学的経度オフセット"
 
 #: ../../source/user/raster_data_model.rst:168
 msgid "HEIGHT_OFF: Geodetic Height Offset"
-msgstr ""
+msgstr "HEIGHT_OFF: 測地学的高さオフセット"
 
 #: ../../source/user/raster_data_model.rst:169
 msgid "LINE_SCALE: Line Scale"
-msgstr ""
+msgstr "LINE_SCALE: ラインスケール"
 
 #: ../../source/user/raster_data_model.rst:170
 msgid "SAMP_SCALE: Sample Scale"
-msgstr ""
+msgstr "SAMP_SCALE: サンプルスケール"
 
 #: ../../source/user/raster_data_model.rst:171
 msgid "LAT_SCALE: Geodetic Latitude Scale"
-msgstr ""
+msgstr "LAT_SCALE: 測地学的緯度スケール"
 
 #: ../../source/user/raster_data_model.rst:172
 msgid "LONG_SCALE: Geodetic Longitude Scale"
-msgstr ""
+msgstr "LONG_SCALE: 測地学的経度スケール"
 
 #: ../../source/user/raster_data_model.rst:173
 msgid "HEIGHT_SCALE: Geodetic Height Scale"
-msgstr ""
+msgstr "HEIGHT_SCALE: 測地学的高さスケール"
 
 #: ../../source/user/raster_data_model.rst:174
 msgid ""
 "LINE_NUM_COEFF (1-20): Line Numerator Coefficients. Twenty coefficients "
 "for the polynomial in the Numerator of the rn equation. (space separated)"
 msgstr ""
+"LINE_NUM_COEFF (1-20): ライン分子係数. rn 方程式の分子の多項式のための20個の係数"
+"（スペースで区切られています）."
 
 #: ../../source/user/raster_data_model.rst:175
 msgid ""
@@ -652,6 +661,8 @@ msgid ""
 " for the polynomial in the Denominator of the rn equation. (space "
 "separated)"
 msgstr ""
+"LINE_DEN_COEFF (1-20): ライン分母係数. rn 方程式の分母の多項式のための20個の係数."
+" (スペースで区切られています) "
 
 #: ../../source/user/raster_data_model.rst:176
 msgid ""
@@ -659,6 +670,8 @@ msgid ""
 " for the polynomial in the Numerator of the cn equation. (space "
 "separated)"
 msgstr ""
+"SAMP_NUM_COEFF (1-20): サンプル分子係数. cn 方程式の分子の多項式のための20個の係数."
+" (スペースで区切られています)"
 
 #: ../../source/user/raster_data_model.rst:177
 msgid ""
@@ -666,6 +679,8 @@ msgid ""
 "coefficients for the polynomial in the Denominator of the cn equation. "
 "(space separated)"
 msgstr ""
+"SAMP_DEN_COEFF (1-20): サンプル分母係数. cn 方程式の分母の多項式のための20個の係数."
+" (スペースで区切られています)"
 
 #: ../../source/user/raster_data_model.rst:179
 msgid ""
@@ -673,16 +688,21 @@ msgid ""
 "RPC document (http://geotiff.maptools.org/rpc_prop.html) which in turn is"
 " closely modeled on the NITF RPC00B definition."
 msgstr ""
+"これらのフィールドは,GeoTIFF RPC ドキュメント(http://geotiff.maptools.org/rpc_prop.html) "
+"から直接派生しており,そのドキュメントはNITF RPC00B 定義を厳密にモデル化したものです."
+
 
 #: ../../source/user/raster_data_model.rst:181
 msgid ""
 "The line and pixel offset expressed with LINE_OFF and SAMP_OFF are with "
 "respect to the center of the pixel."
 msgstr ""
+"LINE_OFF と SAMP_OFF で表されるラインとピクセルオフセットは,ピクセルの中心を基準としています."
+
 
 #: ../../source/user/raster_data_model.rst:184
 msgid "IMAGERY Domain (remote sensing)"
-msgstr ""
+msgstr "IMAGERY ドメイン (リモートセンシング)"
 
 #: ../../source/user/raster_data_model.rst:186
 msgid ""
