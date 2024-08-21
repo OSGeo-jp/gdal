@@ -712,34 +712,43 @@ msgid ""
 "metadata readers, if files can be processed by the metadata reader, it "
 "fill the IMAGERY Domain with the following items:"
 msgstr ""
+"衛星画像や航空画像の場合,IMAGERYドメインが存在することがあります.これは,画像"
+"ファイルの近くに特別なメタデータファイルが存在するかどうかに依存します.メタ"
+"データリーダーのセットが同じディレクトリ内の画像ファイルと一緒に存在するファイル"
+"をテストし,ファイルがメタデータリーダーによって処理できる場合,IMAGERYドメイン"
+"に次の項目が入力されます:"
 
 #: ../../source/user/raster_data_model.rst:188
 msgid "SATELLITEID: A satellite or scanner name"
-msgstr ""
+msgstr "SATELLITEID: 衛星またはスキャナの名前"
 
 #: ../../source/user/raster_data_model.rst:189
 msgid ""
 "CLOUDCOVER: Cloud coverage. The value between 0 - 100 or 999 if not "
 "available"
 msgstr ""
+"CLOUDCOVER: 雲の覆い具合. 値は 0 - 100 の範囲でデータが利用できない場合は "
+"999"
 
 #: ../../source/user/raster_data_model.rst:190
 msgid "ACQUISITIONDATETIME: The image acquisition date time in UTC"
-msgstr ""
+msgstr "ACQUISITIONDATETIME: 画像の取得日時 (UTC)"
 
 #: ../../source/user/raster_data_model.rst:193
 msgid "xml: Domains"
-msgstr ""
+msgstr "xml: ドメイン"
 
 #: ../../source/user/raster_data_model.rst:195
 msgid ""
 "Any domain name prefixed with \"xml:\" is not normal name/value metadata."
 " It is a single XML document stored in one big string."
 msgstr ""
+"\"xml:\"で始まるドメイン名は通常の名前/値形式のメタデータではありません."
+"それは,1つの大きな文字列に格納されたXMLドキュメント全体を指します."
 
 #: ../../source/user/raster_data_model.rst:198
 msgid "Raster Band"
-msgstr ""
+msgstr "ラスターバンド"
 
 #: ../../source/user/raster_data_model.rst:200
 msgid ""
@@ -749,16 +758,22 @@ msgid ""
 "would normally be represented as a dataset with three bands, one for red,"
 " one for green and one for blue."
 msgstr ""
+"ラスターバンドはGDALでは :cpp:class:`GDALRasterBand` クラスで表現されます."
+"これは,単一のラスターバンド/チャンネル/レイヤーを表します.これは必ずしも"
+"全画像を表すわけではありません.たとえば,24ビットのRGB画像は通常,赤,緑,青"
+"の3つのバンドを持つデータセットとして表されます."
 
 #: ../../source/user/raster_data_model.rst:202
 msgid "A raster band has the following properties:"
-msgstr ""
+msgstr "ラスターバンドには以下のプロパティがあります:"
 
 #: ../../source/user/raster_data_model.rst:204
 msgid ""
 "A width and height in pixels and lines. This is the same as that defined "
 "for the dataset, if this is a full resolution band."
 msgstr ""
+"ピクセルとラインの幅と高さ. これは,これがフル解像度バンドの場合にデータセット"
+"で定義されたものと同じです."
 
 #: ../../source/user/raster_data_model.rst:205
 msgid ""
@@ -766,6 +781,9 @@ msgid ""
 "Int32, UInt64, Int64, Float32, Float64, and the complex types CInt16, "
 "CInt32, CFloat32, and CFloat64."
 msgstr ""
+"データ型 (GDALDataType). Byte, Int8, UInt16, Int16, UInt32, Int32, UInt64, "
+"Int64, Float32, Float64, および複素数型 CInt16, CInt32, CFloat32, CFloat64 の"
+"いずれかです."
 
 #: ../../source/user/raster_data_model.rst:207
 msgid ""
@@ -777,10 +795,17 @@ msgid ""
 "where exact values are preserved can be [0, 2^53] (or less if 32-bit "
 "floating-point is used)."
 msgstr ""
+"UInt64 および Int64 データ型は GDAL 3.5 で追加されました. ピクセル値の読み取り"
+"と書き込みを超えて,そのサポートは限られています. 一部のアルゴリズムは内部で"
+"64ビット浮動小数点数を使用する場合があります(ワーピング),また,一部のメソッドは"
+"倍精度値のみを返す場合があります(GetMinimum(), GetMaximum() など),または32ビット"
+"浮動小数点数(概要, RasterIO リサンプリング)を使用する場合があります.したがって,"
+"正確な値が保持される範囲は [0, 2^53] (32ビット浮動小数点数を使用する場合はそれ以下)"
+"になります."
 
 #: ../../source/user/raster_data_model.rst:209
 msgid "Int8 data type has been added in GDAL 3.7."
-msgstr ""
+msgstr "Int8 データ型は GDAL 3.7 で追加されました."
 
 #: ../../source/user/raster_data_model.rst:211
 msgid ""
@@ -788,16 +813,21 @@ msgid ""
 "tiled images this will be one tile. For scanline oriented images this "
 "will normally be one scanline."
 msgstr ""
+"ブロックサイズ. これは,好ましい(効率的な)アクセスチャンクサイズです. タイル画像の"
+"場合,これは1つのタイルになります. スキャンライン指向の画像の場合,通常は1つの"
+"スキャンラインになります."
 
 #: ../../source/user/raster_data_model.rst:212
 msgid ""
 "A list of name/value pair metadata in the same format as the dataset, but"
 " of information that is potentially specific to this band."
 msgstr ""
+"データセットと同じ形式の名前/値ペアメタデータのリストですが,このバンドに特有"
+"の情報です."
 
 #: ../../source/user/raster_data_model.rst:213
 msgid "An optional description string."
-msgstr ""
+msgstr "オプションの説明文字列."
 
 #: ../../source/user/raster_data_model.rst:214
 msgid ""
