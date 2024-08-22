@@ -950,7 +950,7 @@ msgid "GCI_SaturationBand: this raster is the saturation of an HLS image"
 msgstr "GCI_SaturationBand: このラスターはHLS画像の彩度です"
 
 #: ../../source/user/raster_data_model.rst:240
-msgid "GCI_LightnessBand: this raster is the hue of an HLS image"
+msgid "GCI_LightnessBand: this raster is the lightness of an HLS image"
 msgstr "GCI_LightnessBand: このラスターはHLS画像の輝度です"
 
 #: ../../source/user/raster_data_model.rst:241
@@ -1050,7 +1050,7 @@ msgid ""
 "downsampling."
 msgstr ""
 "オーバービューは,全解像度データをすべて読み取ってダウンサンプリングするよりも"
-"高速に縮小解像度のオーバービューを表示するために使用されます."
+"高速に縮小解像度のオーバービューを表示するために使用されます. "
 
 #: ../../source/user/raster_data_model.rst:287
 msgid ""
@@ -1074,6 +1074,7 @@ msgstr ""
 "オーバービューが選択される方法は,ソフトウェアのロジックに依存します."
 " :cpp:func:`GDALRasterBand::RasterIO` または :cpp:func:`GDALDataset::RasterIO`"
 " メソッドはそのロジックを文書化しています."
+
 
 #~ msgid ""
 #~ "Currently, drivers which support subdatasets"
