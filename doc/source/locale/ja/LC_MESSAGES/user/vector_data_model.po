@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/vector_data_model.rst:5
 msgid "Vector Data Model"
-msgstr ""
+msgstr "ベクターデーターモデル"
 
 #: ../../source/user/vector_data_model.rst:7
 msgid ""
@@ -32,14 +32,20 @@ msgid ""
 " the \"OGR\" prefix to denote types and functions that apply only to "
 "vector data."
 msgstr ""
+"このページでは,ベクターデータの処理に使用されるクラスについて説明します."
+"多くのデータ タイプとメソッド名は OGC シンプル フィーチャ データ モデル"
+"に基づいているため, `specifications published by OGC "
+"<https://www.ogc.org/standard/sfa/>`__ を確認すると役立つ場合があります."
+"歴史的な理由から,GDAL ではベクターデータにのみ適用されるタイプと関数を示す"
+"ために \"OGR\" プレフィックスを使用しています."
 
 #: ../../source/user/vector_data_model.rst:11
 msgid "Class Overview"
-msgstr ""
+msgstr "クラス概要"
 
 #: ../../source/user/vector_data_model.rst:13
 msgid "The following classes form the core of the vector data model:"
-msgstr ""
+msgstr "以下のクラスがベクターデータモデルの中核を形成します:"
 
 #: ../../source/user/vector_data_model.rst:15
 msgid ""
@@ -49,6 +55,10 @@ msgid ""
 "binary and text format. A geometry includes a spatial reference system "
 "(projection)."
 msgstr ""
+"ジオメトリ (:ref:`ogr_geometry.h <ogrgeometry_cpp>`): ジオメトリクラス"
+" (:cpp:class:`OGRGeometry`, など) は OGC ベクターデータ型をカプセル化し"
+"ます. いくつかのジオメトリ操作と, 既知のバイナリおよびテキスト形式への変換"
+"を提供します. ジオメトリには空間参照系(投影)が含まれます."
 
 #: ../../source/user/vector_data_model.rst:16
 msgid ""
