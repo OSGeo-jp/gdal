@@ -66,6 +66,8 @@ msgid ""
 ":cpp:class:`OGRSpatialReference` encapsulates the definition of a "
 "projection and datum."
 msgstr ""
+"空間参照 (:ref:`ogr_spatialref.h <ogrspatialref>`): "
+":cpp:class:`OGRSpatialReference` は投影と測地系の定義をカプセル化します."
 
 #: ../../source/user/vector_data_model.rst:17
 msgid ""
@@ -73,6 +75,9 @@ msgid ""
 ":cpp:class:`OGRFeature` encapsulates the definition of a whole feature, "
 "that is a set of geometries and attributes relating to a single entity."
 msgstr ""
+"地物 (:ref:`ogr_feature.h <ogrfeature_cpp>`): "
+":cpp:class:`OGRFeature` は, 1 つのエンティティに関連するジオメトリと属性の"
+"セットをカプセル化します."
 
 #: ../../source/user/vector_data_model.rst:18
 msgid ""
@@ -80,6 +85,9 @@ msgid ""
 ":cpp:class:`OGRFeatureDefn` class captures the schema (set of field "
 "definitions) for a group of related features (normally a whole layer)."
 msgstr ""
+"地物クラス定義 (:ref:`ogr_feature.h <ogrfeature_cpp>`): "
+":cpp:class:`OGRFeatureDefn` クラスは, 関連する地物のスキーマ(フィールド定義の"
+"セット)をキャプチャします(通常は全レイヤー)."
 
 #: ../../source/user/vector_data_model.rst:19
 msgid ""
@@ -87,6 +95,9 @@ msgid ""
 "abstract class representing a layer of features in a "
 ":cpp:class:`GDALDataset`."
 msgstr ""
+"レイヤー (:ref:`ogrsf_frmts.h <ogrlayer_cpp>`): "
+":cpp:class:`OGRLayer` は, :cpp:class:`GDALDataset` の地物レイヤーを表す抽象"
+"クラスです."
 
 #: ../../source/user/vector_data_model.rst:20
 msgid ""
@@ -94,6 +105,9 @@ msgid ""
 ":cpp:class:`GDALDataset` is an abstract base class representing a file or"
 " database containing one or more :cpp:class:`OGRLayer` objects."
 msgstr ""
+"データセット (:ref:`gdal_priv.h <gdaldataset_cpp>`): "
+":cpp:class:`GDALDataset` は, 1 つ以上の :cpp:class:`OGRLayer` オブジェクトを"
+"含むファイルまたはデータベースを表す抽象基底クラスです."
 
 #: ../../source/user/vector_data_model.rst:21
 msgid ""
@@ -102,10 +116,15 @@ msgid ""
 "possibly writing :cpp:class:`GDALDataset` objects. All available drivers "
 "are managed by the :cpp:class:`GDALDriverManager`."
 msgstr ""
+"ドライバー (:ref:`gdal_priv.h <gdaldriver_cpp>`): "
+":cpp:class:`GDALDriver` は, 特定の形式のための変換プログラムを表し, "
+":cpp:class:`GDALDataset` オブジェクトを開いたり, 書き込んだりすることができ"
+"ます. 利用可能なすべてのドライバーは :cpp:class:`GDALDriverManager` によって"
+"管理されます."
 
 #: ../../source/user/vector_data_model.rst:24
 msgid "Geometry"
-msgstr ""
+msgstr "ジオメトリ"
 
 #: ../../source/user/vector_data_model.rst:26
 msgid ""
@@ -124,12 +143,26 @@ msgid ""
 ":cpp:class:`OGRCompoundCurve`, :cpp:class:`OGRCurvePolygon`, "
 ":cpp:class:`OGRMultiCurve` and :cpp:class:`OGRMultiSurface`."
 msgstr ""
+"個々のジオメトリクラスは, 異なる種類のベクタージオメトリを表すために使用され"
+"ます. すべてのジオメトリクラスは, すべてのジオメトリの共通機能を定義する "
+":cpp:class:`OGRGeometry` から派生しています. ジオメトリタイプには, "
+":cpp:class:`OGRPoint`, :cpp:class:`OGRLineString`, :cpp:class:`OGRPolygon`, "
+":cpp:class:`OGRGeometryCollection`, :cpp:class:`OGRMultiPoint`, "
+":cpp:class:`OGRMultiLineString`, :cpp:class:`OGRMultiPolygon`, "
+":cpp:class:`OGRPolyhedralSurface` が含まれます. 三角形ポリゴンの特殊な場合"
+"は :cpp:class:`OGRTriangle` として表すことができ, その非重複コレクションは "
+":cpp:class:`OGRTriangulatedSurface` で表すことができます. 非線形ジオメトリを"
+"格納するために追加のタイプが使用されます: :cpp:class:`OGRCircularString`, "
+":cpp:class:`OGRCompoundCurve`, :cpp:class:`OGRCurvePolygon`, "
+":cpp:class:`OGRMultiCurve`, :cpp:class:`OGRMultiSurface` です."
 
 #: ../../source/user/vector_data_model.rst:30
 msgid ""
 "Any of the above geometry classes can store coordinates in two (XY), "
 "three (XYZ or XYM), or four (XYZM) dimensions."
 msgstr ""
+"上記のいずれかのジオメトリクラスは, 2 (XY), 3 (XYZ または XYM), または 4 "
+"(XYZM) 次元で座標を格納することができます."
 
 #: ../../source/user/vector_data_model.rst:32
 msgid ""
@@ -140,10 +173,16 @@ msgid ""
 " simple features abstract model and SFCOM are not modeled in OGR at this "
 "time. In most cases the methods are aggregated into other classes."
 msgstr ""
+"複数のジオメトリタイプで使用される機能を含む追加の中間クラスがあります. これ"
+"らには, :cpp:class:`OGRCurve` (:cpp:class:`OGRLineString` の基本クラス) と "
+":cpp:class:`OGRSurface` (:cpp:class:`OGRPolygon` の基本クラス) が含まれます. "
+"シンプルフィーチャ抽象モデルと SFCOM でモデル化されたいくつかの中間インタフェー"
+"スは, この時点では OGR でモデル化されていません. ほとんどの場合, メソッドは他の"
+"クラスに集約されます."
 
 #: ../../source/user/vector_data_model.rst:-1
 msgid "Diagram of OGRGeometry and subclasses"
-msgstr ""
+msgstr "OGRGeometry およびサブクラスの図"
 
 #: ../../source/user/vector_data_model.rst:37
 msgid ""
@@ -152,6 +191,10 @@ msgid ""
 ":cpp:class:`OGRGeometry` subclass. These are predefined ASCII and binary "
 "formats for representing all the types of simple features geometries."
 msgstr ""
+":cpp:class:`OGRGeometryFactory` は, well known text (WKT) および well known binary"
+"(WKB) 形式のデータを適切な :cpp:class:`OGRGeometry` サブクラスに変換するため"
+"に使用されます. これらは, すべてのシンプルフィーチャジオメトリの種類を表すため"
+"の事前定義の ASCII およびバイナリ形式です."
 
 #: ../../source/user/vector_data_model.rst:39
 msgid ""
@@ -161,6 +204,10 @@ msgid ""
 " reference object with reference counting for each of the "
 ":cpp:class:`OGRGeometry` objects using it."
 msgstr ""
+":cpp:class:`OGRGeometry` には, そのジオメトリの空間参照系を定義する "
+":cpp:class:`OGRSpatialReference` オブジェクトへの参照が含まれています. これは, "
+"通常, それを使用する各 :cpp:class:`OGRGeometry` オブジェクトに対して参照カウン"
+"トを持つ共有空間参照オブジェクトへの参照です."
 
 #: ../../source/user/vector_data_model.rst:41
 msgid ""
@@ -170,10 +217,14 @@ msgid ""
 "be possible to create specialized classes using the "
 ":cpp:class:`OGRGeometryFactory` without modifying it."
 msgstr ""
+"理論的には, 既存の :cpp:class:`OGRGeometry` クラスから他のまたはより具体的な"
+"ジオメトリクラスを派生させることが可能ですが, これは十分に考慮されていない側面"
+"です. 特に, :cpp:class:`OGRGeometryFactory` を変更せずに, 専用のクラスを作成する"
+"ことが可能です."
 
 #: ../../source/user/vector_data_model.rst:44
 msgid "Compatibility issues with non-linear geometries"
-msgstr ""
+msgstr "非線形ジオメトリとの互換性の問題"
 
 #: ../../source/user/vector_data_model.rst:46
 msgid ""
@@ -183,6 +234,10 @@ msgid ""
 "geometry. This linearization can be controlled using "
 ":ref:`configoptions_vector`."
 msgstr ""
+"非線形ジオメトリを持つレイヤーのドライバーで非線形ジオメトリを持つ地物を作成"
+"または変更すると, そのジオメトリが最も近い一致する線形ジオメトリに変換される"
+"ように, 一般的なメカニズムが導入されました. この線形化は, "
+":ref:`configoptions_vector` を使用して制御できます."
 
 #: ../../source/user/vector_data_model.rst:48
 msgid ""
@@ -191,6 +246,10 @@ msgid ""
 " that geometries and layer geometry type returned are also converted to "
 "their linear approximation if necessary."
 msgstr ""
+"一方, OGR C API からデータを取得する場合, "
+":cpp:func:`OGRSetNonLinearGeometriesEnabledFlag` 関数を使用して, 必要に応じて"
+"ジオメトリとレイヤーのジオメトリタイプが線形近似に変換されるようにすることが"
+"できます."
 
 #: ../../source/user/vector_data_model.rst:51
 msgid "Spatial Reference"
