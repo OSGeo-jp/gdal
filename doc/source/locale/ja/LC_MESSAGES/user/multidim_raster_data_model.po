@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/multidim_raster_data_model.rst:5
 msgid "Multidimensional Raster Data Model"
-msgstr ""
+msgstr "多次元ラスターデータモデル"
 
 #: ../../source/user/multidim_raster_data_model.rst:7
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "that has been added in GDAL 3.1. That is the types of information that a "
 "GDAL multidimensional dataset can contain, and their semantics."
 msgstr ""
+"このドキュメントは,GDAL 3.1 で追加された GDAL の多次元データモデルについて"
+"説明します. GDAL の多次元データセットが含むことができる情報の種類とその意味"
+"についてです."
 
 #: ../../source/user/multidim_raster_data_model.rst:11
 msgid ""
@@ -37,6 +40,9 @@ msgid ""
 " Currently, it is limited to basic read/write API, and is not that much "
 "plugged into other higher level utilities."
 msgstr ""
+"多次元ラスター API は,3D、4D またはそれ以上の次元のデータセットを扱うための"
+"従来のラスターデータモデルの一般化です. 現在, 基本的な読み書き API に限定され"
+"ており,他の高レベルのユーティリティにはあまり接続されていません."
 
 #: ../../source/user/multidim_raster_data_model.rst:17
 msgid ""
@@ -44,16 +50,21 @@ msgid ""
 " `HDF5 format and data model "
 "<https://portal.opengeospatial.org/files/81716>`_."
 msgstr ""
+"これは、netCDF および HDF5 API およびデータモデルから強くインスパイアされてい"
+"ます. `HDF5 フォーマットとデータモデル "
+"<https://portal.opengeospatial.org/files/81716>`_ を参照してください."
 
 #: ../../source/user/multidim_raster_data_model.rst:20
 msgid ""
 "A :cpp:class:`GDALDataset` with multidimensional content contains a root "
 ":cpp:class:`GDALGroup`."
 msgstr ""
+"多次元コンテンツを持つ :cpp:class:`GDALDataset` には,ルート :cpp:class:`GDAL"
+"Group` が含まれています."
 
 #: ../../source/user/multidim_raster_data_model.rst:24
 msgid "Group"
-msgstr ""
+msgstr "グループ"
 
 #: ../../source/user/multidim_raster_data_model.rst:26
 msgid ""
@@ -62,10 +73,14 @@ msgid ""
 " container of GDALAttribute, GDALMDArray or other GDALGroup. Hence "
 "GDALGroup can describe a hierarchy of objects."
 msgstr ""
+":cpp:class:`GDALGroup` ( `HDF5 Group "
+"<https://portal.opengeospatial.org/files/81716#_hdf5_group>`_ をモデル化) は,"
+"GDALAttribute, GDALMDArray または他の GDALGroup の名前付きコンテナです. そのた"
+"め、GDALGroup はオブジェクトの階層を記述できます."
 
 #: ../../source/user/multidim_raster_data_model.rst:31
 msgid "Attribute"
-msgstr ""
+msgstr "属性"
 
 #: ../../source/user/multidim_raster_data_model.rst:33
 msgid ""
@@ -76,10 +91,15 @@ msgid ""
 " array of \"any\" type (in most cases, this will be a single value of "
 "string or numeric type)"
 msgstr ""
+":cpp:class:`GDALAttribute` ( `HDF5 Attribute "
+"<https://portal.opengeospatial.org/files/81716#_hdf5_attribute>`_ をモデル化) は,"
+"名前と値を持ち、通常はメタデータ項目を記述するために使用されます. 値は (HDF5 "
+"フォーマットの場合) 一般的な場合には \"any\" 型の多次元配列であることがあります"
+"(ほとんどの場合,これは文字列または数値型の単一の値になります)"
 
 #: ../../source/user/multidim_raster_data_model.rst:39
 msgid "Multidimensional array"
-msgstr ""
+msgstr "多次元配列"
 
 #: ../../source/user/multidim_raster_data_model.rst:41
 msgid ""
@@ -88,6 +108,9 @@ msgid ""
 "name, a multidimensional array, references a number of GDALDimension, and"
 " has a list of GDALAttribute."
 msgstr ""
+":cpp:class:`GDALMDArray` ( `HDF5 Dataset "
+"<https://portal.opengeospatial.org/files/81716#_hdf5_dataset>`_ をモデル化) は,"
+"名前,多次元配列,GDALDimension の参照,GDALAttribute のリストを持ちます."
 
 #: ../../source/user/multidim_raster_data_model.rst:45
 msgid ""
@@ -104,30 +127,40 @@ msgid ""
 "<https://docs.scipy.org/doc/numpy/reference/internals.html"
 "#multidimensional-array-indexing-order-issues>`_"
 msgstr ""
+"ほとんどのドライバは、次元に対して行優先の規則を使用します: つまり,配列要素が"
+"連続してメモリに格納されていると考えると,最初の次元は最も変化が遅いものであ"
+"り(2D 画像の場合,行), 最後の次元は最も変化が速いものである(2D 画像の場合,列)"
+"です. その規則は、NumPy 配列、MEM ドライバ,HDF5 および netCDF API でデフォル"
+"トの規則として使用されます. GDAL API は,その規則についてはほとんど無関心ですが,"
+":cpp:func:`GDALAbstractMDArray::Read` および :cpp:func:`GDALAbstractMDArray::Write`"
+" メソッドの *stride* パラメータに NULL 配列を渡す場合を除いてです. `NumPy の多"
+"次元配列のインデックス順序の問題に関するドキュメント "
+"<https://docs.scipy.org/doc/numpy/reference/internals.html"
+"#multidimensional-array-indexing-order-issues>`_ を参照してください."
 
 #: ../../source/user/multidim_raster_data_model.rst:55
 msgid "a GDALMDArray has also optional properties:"
-msgstr ""
+msgstr "GDALMDArray にはオプションのプロパティもあります:"
 
 #: ../../source/user/multidim_raster_data_model.rst:57
 msgid "Coordinate reference system: :cpp:class:`OGRSpatialReference`"
-msgstr ""
+msgstr "空間参照系: :cpp:class:`OGRSpatialReference`"
 
 #: ../../source/user/multidim_raster_data_model.rst:58
 msgid "No data value:"
-msgstr ""
+msgstr "データ無しの値:"
 
 #: ../../source/user/multidim_raster_data_model.rst:59
 msgid "Unit"
-msgstr ""
+msgstr "単位"
 
 #: ../../source/user/multidim_raster_data_model.rst:60
 msgid "Offset, such that unscaled_value = offset + scale * raw_value"
-msgstr ""
+msgstr "オフセット, unscaled_value = offset + scale * raw_value"
 
 #: ../../source/user/multidim_raster_data_model.rst:61
 msgid "Scale, such that unscaled_value = offset + scale * raw_value"
-msgstr ""
+msgstr "縮尺, unscaled_value = offset + scale * raw_value"
 
 #: ../../source/user/multidim_raster_data_model.rst:63
 msgid ""
@@ -135,32 +168,40 @@ msgid ""
 "it: :cpp:func:`GDALMDArray::Transpose()`, "
 ":cpp:func:`GDALMDArray::GetView()`, etc."
 msgstr ""
+"配列に対して多くの操作を適用して,それを変更されたビューにすることができます:"
+" :cpp:func:`GDALMDArray::Transpose()`, :cpp:func:`GDALMDArray::GetView()`, など"
 
 #: ../../source/user/multidim_raster_data_model.rst:66
 msgid ""
 "The :cpp:func:`GDALMDArray::Cache()` method can be used to cache the "
 "value of a view array into a sidecar file."
 msgstr ""
+":cpp:func:`GDALMDArray::Cache()` メソッドを使用して,ビュー配列の値をサイドカー"
+"ファイルにキャッシュすることができます."
 
 #: ../../source/user/multidim_raster_data_model.rst:70
 msgid "Dimension"
-msgstr ""
+msgstr "次元"
 
 #: ../../source/user/multidim_raster_data_model.rst:72
 msgid ""
 "A :cpp:class:`GDALDimension` describes a dimension / axis used to index "
 "multidimensional arrays. It has the following properties:"
 msgstr ""
+":cpp:class:`GDALDimension` は,多次元配列をインデックスするために使用される次元/"
+"軸を記述します. 以下のプロパティを持ちます:"
 
 #: ../../source/user/multidim_raster_data_model.rst:75
 msgid "a name"
-msgstr ""
+msgstr "名前"
 
 #: ../../source/user/multidim_raster_data_model.rst:76
 msgid ""
 "a size, that is the number of values that can be indexed along the "
 "dimension"
 msgstr ""
+"サイズ, つまり次元に沿ってインデックスできる値の"
+"数"
 
 #: ../../source/user/multidim_raster_data_model.rst:78
 msgid ""
@@ -168,12 +209,16 @@ msgid ""
 "values are: HORIZONTAL_X, HORIZONTAL_Y, VERTICAL, TEMPORAL, PARAMETRIC "
 "Other values might be used. Empty value means unknown."
 msgstr ""
+"タイプ, 次元の性質を示す文字列です. 事前定義された値は: HORIZONTAL_X, HORIZONTAL_Y,"
+" VERTICAL, TEMPORAL, PARAMETRIC 他の値も使用できます. 空の値は不明を意味します."
 
 #: ../../source/user/multidim_raster_data_model.rst:81
 msgid ""
 "a direction. Predefined values are: EAST, WEST, SOUTH, NORTH, UP, DOWN, "
 "FUTURE, PAST Other values might be used. Empty value means unknown."
 msgstr ""
+"方向. 事前定義された値は: EAST, WEST, SOUTH, NORTH, UP, DOWN, FUTURE, PAST 他の"
+"値も使用できます. 空の値は不明を意味します."
 
 #: ../../source/user/multidim_raster_data_model.rst:84
 msgid ""
@@ -182,10 +227,13 @@ msgid ""
 "GDALMDArray and its X dimension, this will be typically the values of the"
 " easting/longitude for each grid point."
 msgstr ""
+"GDALMDArray 変数への参照, 通常は次元が取る値を記述する 1 次元のものです. "
+"ジオリファレンス付きの GDALMDArray とその X 次元の場合,これは通常,各グリッド"
+"ポイントの東経/経度の値になります."
 
 #: ../../source/user/multidim_raster_data_model.rst:90
 msgid "Data Type"
-msgstr ""
+msgstr "データタイプ"
 
 #: ../../source/user/multidim_raster_data_model.rst:92
 msgid ""
@@ -198,10 +246,17 @@ msgid ""
 "described by a name, a offset in byte in the compound structure and a "
 "GDALExtendedDataType."
 msgstr ""
+":cpp:class:`GDALExtendedDataType` ( `HDF5 datatype "
+"<https://portal.opengeospatial.org/files/81716#_hdf5_datatype>`_ をモデル化) は,"
+"GDALAttribute または GDALMDArray の個々の値が取るタイプを記述します. そのクラス"
+"は NUMERIC, STRING, COMPOUND です. NUMERIC の場合,既存の :cpp:enum:`GDALDataType`"
+" 列挙値がサポートされます. COMPOUND の場合,データタイプはメンバーのリストであり,"
+"各メンバーは名前,複合構造内のバイトオフセット,および GDALExtendedDataType で記述"
+"されます."
 
 #: ../../source/user/multidim_raster_data_model.rst:103
 msgid "The HDF5 modelisation allows for more complex datatypes."
-msgstr ""
+msgstr "HDF5 モデリングでは,より複雑なデータタイプが可能です."
 
 #: ../../source/user/multidim_raster_data_model.rst:107
 msgid ""
@@ -209,10 +264,13 @@ msgid ""
 "GDALDataType does. So a driver may decide to expose a GDT\\_Cxxxx "
 "datatype from a HDF5 Compound data type representing a complex value."
 msgstr ""
+"HDF5 には複素値のためのネイティブデータ型がない一方, GDALDataType にはあります."
+"そのため,ドライバは,複素値を表す HDF5 複合データ型から GDT\\_Cxxxx データ型を"
+"公開することを決定するかもしれません."
 
 #: ../../source/user/multidim_raster_data_model.rst:112
 msgid "Objects lifetime"
-msgstr ""
+msgstr "オブジェクトライフタイム"
 
 #: ../../source/user/multidim_raster_data_model.rst:114
 msgid ""
@@ -221,6 +279,9 @@ msgid ""
 "be used independently of the objects from which they have been obtained "
 "from. So:"
 msgstr ""
+"多次元 API のドライバ実装は, GDALGroup, GDALMDArray, GDALAttribute, GDALDimension"
+" のインスタンスが,それらが取得されたオブジェクトとは独立して使用できるようになって"
+"います. つまり:"
 
 #: ../../source/user/multidim_raster_data_model.rst:118
 msgid ""
@@ -228,6 +289,8 @@ msgid ""
 ":cpp:func:`GDALDataset::GetRootGroup()` can be used after the dataset has"
 " been closed."
 msgstr ""
+":cpp:func:`GDALDataset::GetRootGroup()` で返された GDALGroup インスタンスは,"
+"データセットが閉じられた後でも使用できます."
 
 #: ../../source/user/multidim_raster_data_model.rst:121
 msgid ""
@@ -235,14 +298,17 @@ msgid ""
 "obtained from :cpp:func:`GDALGroup::OpenMDArray()` can be used after the "
 "owning group has been released."
 msgstr ""
+":cpp:func:`GDALGroup::OpenGroup()` から取得したサブグループや, "
+":cpp:func:`GDALGroup::OpenMDArray()` から取得した配列は,所有しているグループが解"
+"放された後でも使用できます."
 
 #: ../../source/user/multidim_raster_data_model.rst:125
 msgid "Similarly for attributes or dimensions obtained from a group or an array."
-msgstr ""
+msgstr "同様に,グループや配列から取得した属性や次元についても同様です."
 
 #: ../../source/user/multidim_raster_data_model.rst:128
 msgid "So the following is perfectly legal:"
-msgstr ""
+msgstr "したがって,次のようなことは完全に合法です:"
 
 #: ../../source/user/multidim_raster_data_model.rst:170
 msgid ""
@@ -251,18 +317,22 @@ msgid ""
 " changes are only guaranteed to be serialized when all objects related to"
 " a dataset have been released."
 msgstr ""
+"注意すべきポイントは,データセットを作成/編集する際に,これらのオブジェクトがすべて"
+"基になるファイルディスクリプタを保持しているため,データセットに関連するすべてのオ"
+"ブジェクトが解放されたときにのみ,変更がシリアライズされることが保証されるということ"
+"です."
 
 #: ../../source/user/multidim_raster_data_model.rst:174
 msgid "Example in C++:"
-msgstr ""
+msgstr "C++言語での例"
 
 #: ../../source/user/multidim_raster_data_model.rst:206
 msgid "Example in Python:"
-msgstr ""
+msgstr "Python言語での例"
 
 #: ../../source/user/multidim_raster_data_model.rst:224
 msgid "Differences with the GDAL 2D raster data model"
-msgstr ""
+msgstr "GDAL 2D ラスターデータモデルとの違い"
 
 #: ../../source/user/multidim_raster_data_model.rst:226
 msgid ""
@@ -270,18 +340,25 @@ msgid ""
 "This can be modelled as either different GDALMDArray, or using a compound"
 " data type."
 msgstr ""
+"GDALRasterBand の概念は,もはや多次元には使用されません. これは異なる GDALMDArray"
+" としてモデル化するか,複合データ型を使用することができます."
 
 #: ../../source/user/multidim_raster_data_model.rst:229
 msgid ""
 "There is not yet a standardized concept multi-resolution arrays/overviews"
 " in the multidimensional API"
 msgstr ""
+"多次元 API には,まだ標準化された概念の多解像度配列/概要がありま"
+"せん"
+
 
 #: ../../source/user/multidim_raster_data_model.rst:233
 msgid ""
 "Bridges between GDAL 2D classic raster data model and multidimensional "
 "data model"
 msgstr ""
+"GDAL 2D クラシックラスターデータモデルと多次元データモデルの間の"
+"ブリッジ"
 
 #: ../../source/user/multidim_raster_data_model.rst:235
 msgid ""
@@ -289,22 +366,27 @@ msgid ""
 ":cpp:func:`GDALMDArray::AsClassicDataset` can be used to respectively "
 "convert a raster band to a MD array or a 2D dataset to a MD array."
 msgstr ""
+":cpp:func:`GDALRasterBand::AsMDArray` と :cpp:func:`GDALMDArray::AsClassicDataset`"
+" は,それぞれラスターバンドを MD 配列に変換したり,2D データセットを MD 配列に変"
+"換したりするために使用できます."
 
 #: ../../source/user/multidim_raster_data_model.rst:240
 msgid "Applications"
-msgstr ""
+msgstr "アプリケーション"
 
 #: ../../source/user/multidim_raster_data_model.rst:242
 msgid ""
 "The following applications can be used to inspect and manipulate "
 "multidimensional datasets:"
 msgstr ""
+"次のアプリケーションを使用して,多次元データセットを調査および操作"
+"できます:"
 
 #: ../../source/user/multidim_raster_data_model.rst:245
 msgid ":ref:`gdalmdiminfo`"
-msgstr ""
+msgstr ":ref:`gdalmdiminfo`"
 
 #: ../../source/user/multidim_raster_data_model.rst:246
 msgid ":ref:`gdalmdimtranslate`"
-msgstr ""
+msgstr ":ref:`gdalmdimtranslate`"
 
