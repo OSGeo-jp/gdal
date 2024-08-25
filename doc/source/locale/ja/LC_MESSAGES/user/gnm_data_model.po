@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/gnm_data_model.rst:5
 msgid "Geographic Networks Data Model"
-msgstr ""
+msgstr "地理ネットワークデータモデル"
 
 #: ../../source/user/gnm_data_model.rst:7
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "Geographic Network Model classes. GNM is the part of GDAL and provides "
 "the methods of creating, managing and analysing geographical networks."
 msgstr ""
+"このドキュメントは、地理ネットワークモデルクラスの目的と構造を説明することを"
+"意図しています.GNMはGDALの一部であり,地理ネットワークの作成,管理,解析"
+"の方法を提供します."
 
 #: ../../source/user/gnm_data_model.rst:9
 msgid ""
@@ -37,10 +40,13 @@ msgid ""
 "spatial vector formats; - To provide a network functionality to those "
 "spatial formats which does not have it at all."
 msgstr ""
+"GNMクラスの主な目的: - GDAL(以前のOGR)が空間ベクトルフォーマットに対して"
+"提供しているように,異なる既存のネットワークフォーマットの抽象化を提供すること;"
+"- ネットワーク機能を全く持っていない空間フォーマットにネットワーク機能を提供すること."
 
 #: ../../source/user/gnm_data_model.rst:14
 msgid "General concept"
-msgstr ""
+msgstr "一般概念"
 
 #: ../../source/user/gnm_data_model.rst:16
 msgid ""
@@ -53,10 +59,16 @@ msgid ""
 "with the datasets of different formats the following classes were "
 "designed in GNM."
 msgstr ""
+"任意の実世界ネットワークは,それ自体がGDALDatasetとして表現されることができる"
+"ベクトルデータのセットとして表現することができます.GNMでは,このデータは2つの"
+"部分で構成されています.ネットワークのトポロジ(グラフ),ネットワークのメタデータ"
+"(名前/説明),特別なフィーチャ識別子のセットなどは\"ネットワーク部分\"に属し,"
+"GDALの一般的なレイヤ,フィーチャ,ジオメトリは\"空間/属性部分\"に属します.異なる"
+"フォーマットのデータセットで作業するために,GNMで以下のクラスが設計されました."
 
 #: ../../source/user/gnm_data_model.rst:19
 msgid "Network"
-msgstr ""
+msgstr "ネットワーク"
 
 #: ../../source/user/gnm_data_model.rst:21
 msgid ""
@@ -67,6 +79,11 @@ msgid ""
 "refers to \"network part\" and is able to operate it. GNMNetwork allows "
 "user the following:"
 msgstr ""
+":cpp:class:`GNMNetwork`は抽象ネットワークを表します.実際には,ネットワークデータ"
+"と空間/属性データは,データセットの形式によっては分離できない場合があります(追加"
+"のレイヤ/フィールド/タグのみ),一方,GNMNetworkの具体的な実装は,全データセットから"
+"どのデータが\"ネットワーク部分\"を参照しているかを\"知っており\",それを操作するこ"
+"とができます.GNMNetworkはユーザに以下の機能を提供します:"
 
 #: ../../source/user/gnm_data_model.rst:23
 msgid ""
@@ -84,10 +101,20 @@ msgid ""
 "string and each concrete GNMNetwork will transform it to the internal "
 "look."
 msgstr ""
+"-接続の設定/解除.これらのネットワークトポロジを構築するための一般的なメソッド"
+"(自動的および手動)は,一般的な方法で接続されるフィーチャの識別子を受け取り,"
+"具体的な実装は,トポロジをどこに,どのように保存および構築するかを知っています;"
+"-接続の読み取り.一般的な方法で接続を返します;-レイヤ/フィーチャの追加/削除."
+"地物またはレイヤがネットワークに追加されると,いくつかのアクションが開始され"
+"る場合があります(グラフ内の重みの変更,接続されたフィーチャでのカスケード変更).具体"
+"的なGNMNetworkは,それがどのように行われるかを説明します.-ネットワークのビジネスロジック"
+"または動作の定義.ネットワークルールまたは制約/制限で表現することができます.各ルールが"
+"文字列から設定できることが期待されており,各具体的なGNMNetworkは,それを内部形式に変換"
+"します."
 
 #: ../../source/user/gnm_data_model.rst:29
 msgid "Format"
-msgstr ""
+msgstr "形式"
 
 #: ../../source/user/gnm_data_model.rst:31
 msgid ""
@@ -100,10 +127,16 @@ msgid ""
 "GraphHopper, etc.) should provide the basic functionality via the "
 "GNMNetwork class."
 msgstr ""
+"GNMNetworkはGDALDatasetを継承し,OGRDatasourceに追加機能を持つように見えます."
+"ネットワーク用のGDALドライバのセットがあります.GDALの一般的なネットワーク実装"
+"は,ルール,仮想エッジおよび頂点などの追加機能を提供します.また,地物を編集"
+"する際には,ネットワークはネットワークルールおよびその他の特定の機能を制御し,"
+"編集の保存を拒否することができます.他のネットワークドライバ(pgRouting,OSRM,"
+"GraphHopperなど)は,GNMNetworkクラスを介して基本機能を提供する必要があります."
 
 #: ../../source/user/gnm_data_model.rst:34
 msgid "Network formats"
-msgstr ""
+msgstr "ネットワーク形式"
 
 #: ../../source/user/gnm_data_model.rst:36
 msgid ""
@@ -116,10 +149,15 @@ msgid ""
 " format that initially does not have its \"network part\" (like ESRI "
 "Shapefile) directly."
 msgstr ""
+"既存のネットワーク形式(PostGIS pgRouting,Oracle Spatial Networks,GML内のトポロジなど)"
+"の``ネイティブ``サポートをGNMに追加するには,対応するGNMDriver-GNMNetworkインターフェース"
+"を実装する必要があります.ただし,最初から\"ネットワーク部分\"を持たない形式(ESRI Shapefile"
+"など)でネットワークを作成および使用する必要がある場合には,GNMで既に実装されている ``汎用`` "
+"ネットワーク形式を使用することもできます."
 
 #: ../../source/user/gnm_data_model.rst:39
 msgid "GNMGenericNetwork"
-msgstr ""
+msgstr "GNMGenericNetwork"
 
 #: ../../source/user/gnm_data_model.rst:41
 msgid ""
@@ -135,6 +173,14 @@ msgid ""
 "\"network part\" is created and maintained by GNMGenericNetwork "
 "automatically and provides methods to work with it."
 msgstr ""
+":cpp:class:`GNMGenericNetwork` は,GNMNetworkの具体的な実装です.GNMGenericNetworkは,"
+"最もGDALDatasetドライバをサポートすることを意図しています(対応するドライバの機能に"
+"依存します).技術的には,ネットワーク形式の抽象化は,GDALの抽象化を利用して達成されます:"
+"データセットおよびレイヤのアプローチ.GNMGdalNetworkは,GDALDatasetインスタンスを集約し,"
+"\"ネットワーク部分\"が\"システムレイヤ\"のセット(wkbNoneジオメトリ,特定の属性フィールド)"
+"として表現され,空間/属性データは\"クラスレイヤ\"または\"クラス\"のセット(通常のジオメトリ"
+"および属性を持つレイヤ)と見なされます.\"ネットワーク部分\"は,GNMGenericNetworkによって"
+"自動的に作成および維持され,それを操作するためのメソッドを提供します."
 
 #: ../../source/user/gnm_data_model.rst:43
 msgid ""
@@ -155,12 +201,26 @@ msgid ""
 "business logic. See :cpp:func:`GNMGenericNetwork::CreateRule` for more "
 "details."
 msgstr ""
+"GNMGenericNetworkによる実世界ネットワークの記述方法は,一般的であることを意図しています:"
+"-最も一般的なグラフのタイプが使用され,すべての有用な情報が保持されます:エッジの方向"
+"(有向/無向),エッジのコスト(重み付け/重みなし).このグラフは,インシデンスリストとして"
+"保存されます:ソース頂点フィーチャID,ターゲット頂点フィーチャID,エッジフィーチャID,直接コスト,"
+"逆コスト,エッジの方向;-任意のジオメトリを持つ任意のフィーチャがグラフ内の頂点またはエッジに"
+"なることができます.また,接続エッジの下にまったくフィーチャがない場合もあります(実際には,"
+"この場合に仮想エッジが作成されます).これらすべては,ユーザがフィーチャ識別子を操作する一方,"
+"GNMGenericNetworkがフィーチャ間の接続の整合性を保証します;-ネットワーク内の任意のフィーチャは,"
+"ユニークな識別子であるグローバルフィーチャ識別子(GFID)を取得します.これにより,1つのネットワーク"
+"の下に任意の数の\"クラスレイヤ\"を統一することができます;-GNMGenericNetworkは,ネットワークの"
+"ビジネスロジックを決定するために独自の方法を使用します.詳細については, :cpp:func:`GNMGenericNetwork::CreateRule` を参照してください."
+
 
 #: ../../source/user/gnm_data_model.rst:49
 msgid ""
 "See the :cpp:class:`GNMGenericNetwork` class documentation for more "
 "details."
 msgstr ""
+"詳細については, :cpp:class:`GNMGenericNetwork` クラスのドキュメントを参照"
+"してください."
 
 #: ../../source/user/gnm_data_model.rst:51
 msgid ""
@@ -173,16 +233,24 @@ msgid ""
 "deletion is made layer by layer and deletes only system and class layers "
 "which registered in the network."
 msgstr ""
+"一般的な形式のネットワークには,以下の重要な特徴があります:-ネットワークで単一の空間参照"
+"システムが使用されており,これは,ネットワークに表示される各地物がこのSRSに変換される"
+"ことを意味します;-ネットワークは常に空で作成され,地物をインポートまたは作成する必要が"
+"あります;-データセットから\"ネットワーク部分\"を削除することはできません-すべてのデータを"
+"含むネットワーク全体を削除するだけです.削除はレイヤごとに行われ,ネットワークに登録された"
+"システムレイヤおよびクラスレイヤのみが削除されます."
 
 #: ../../source/user/gnm_data_model.rst:57
 msgid "Network analysis"
-msgstr ""
+msgstr "ネットワーク解析"
 
 #: ../../source/user/gnm_data_model.rst:59
 msgid ""
 "The network analysis in GNM is implemented in :cpp:class:`GNMNetwork` "
 "object."
 msgstr ""
+"GNMのネットワーク解析は, :cpp:class:`GNMNetwork` オブジェクト"
+"で実装されています."
 
 #: ../../source/user/gnm_data_model.rst:61
 msgid ""
@@ -194,4 +262,11 @@ msgid ""
 "indicator field, GFID, layer name, etc.). The caller have to free the "
 "result OGRLayer via :cpp:func:`GDALDataset::ReleaseResultSet`"
 msgstr ""
+":cpp:class:`GNMGenericNetwork` は,グラフをSTLコンテナ内のメモリに保持し,"
+"結果を配列形式で返す基本アルゴリズムを提供します(たとえば,std::vectorは,"
+"パスのエッジと頂点のGFIDでいっぱいです).ただし,呼び出し元は,フィーチャが"
+"ネットワークを構成するレイヤから取得されるOGRLayerとして結果を取得します."
+"また,いくつかの追加フィールドが作成されます(VERTEX/EDGEインジケータフィールド,"
+"GFID,レイヤ名など).呼び出し元は, :cpp:func:`GDALDataset::ReleaseResultSet` "
+"を介して結果のOGRLayerを解放する必要があります."
 
