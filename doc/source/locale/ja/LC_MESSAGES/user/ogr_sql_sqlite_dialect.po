@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:5
 msgid "OGR SQL dialect and SQLITE SQL dialect"
-msgstr ""
+msgstr "OGR SQL方言とSQLITE SQL方言"
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:7
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 ":cpp:func:`GDALDataset::ExecuteSQL` method. How such commands are "
 "evaluated is dependent on the datasets."
 msgstr ""
+"GDALDatasetは, :cpp:func:`GDALDataset::ExecuteSQL` メソッドを介してデータソースに対して"
+"コマンドを実行することをサポートしています. このようなコマンドがどのように評価されるかは"
+"データセットに依存します."
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:11
 msgid ""
@@ -38,6 +41,10 @@ msgid ""
 "to be used, which will use the SQLite engine to evaluate commands on GDAL"
 " datasets."
 msgstr ""
+"ほとんどのファイル形式(例: Shapefiles, GeoJSON, MapInfoファイル)では, デフォルトで"
+"組み込みの :ref:`ogr_sql_dialect` 方言が使用されます. また, GDALデータセット上で"
+"コマンドを評価するためにSQLiteエンジンを使用する :ref:`sql_sqlite_dialect` 代替方言を"
+"使用することも可能です."
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:16
 msgid ""
@@ -55,20 +62,33 @@ msgid ""
 "dialects, although performance will generally be much less as the native "
 "SQL engine of those database systems."
 msgstr ""
+"データベースシステム用のすべてのOGRドライバ: :ref:`vector.mysql`, "
+":ref:`vector.pg`, :ref:`vector.oci`, :ref:`vector.sqlite`, "
+":ref:`vector.gpkg`, :ref:`vector.odbc`, :ref:`vector.pgeo`, "
+":ref:`vector.hana` および :ref:`vector.mssqlspatial` は, "
+":cpp:func:`GDALDataset::ExecuteSQL` 関数を専用の実装でオーバーライドし, "
+"デフォルトでSQLステートメントを基になるRDBMSに直接渡します. これらの場合, "
+"SQL構文はOGR SQLといくつかの点で異なります. また, これらの特定のデータベースに"
+"対してSQLで可能なことはすべて実行できます. 一般的には, SELECTステートメントの結果のみ"
+"レイヤーとして返されます. これらのドライバに対しては, 明示的に ``OGRSQL`` および ``SQLITE`` "
+"方言を要求することも可能ですが, これらのデータベースシステムのネイティブSQLエンジンよりも"
+"一般的にパフォーマンスが低くなります."
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:29
 msgid "Dialects"
-msgstr ""
+msgstr "方言"
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:39
 msgid "ExecuteSQL()"
-msgstr ""
+msgstr "ExecuteSQL()"
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:41
 msgid ""
 "SQL is executed against an GDALDataset, not against a specific layer.  "
 "The call looks like this:"
 msgstr ""
+"SQLはGDALDatasetに対して実行されます. 特定のレイヤーに対して実行されるわけではありません. "
+"呼び出しは次のようになります:"
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:50
 msgid ""
@@ -77,6 +97,9 @@ msgid ""
 " should always pass an empty (not NULL) string to get the default "
 "dialect."
 msgstr ""
+"``pszDialect`` 引数は, 理論的にはプロバイダに対して異なるコマンド言語をサポートするために"
+"意図されていますが, 現時点では, デフォルトの方言を取得するためにアプリケーションは常に空の"
+"(NULLではない)文字列を渡すべきです."
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:54
 msgid ""
@@ -85,6 +108,9 @@ msgid ""
 ":cpp:func:`OGRLayer::SetSpatialFilter` method.  It may be NULL for no "
 "special spatial restriction."
 msgstr ""
+"``poSpatialFilter`` 引数は, :cpp:func:`OGRLayer::SetSpatialFilter` メソッドと同様の方法で"
+"返される地物の境界矩形を選択するために使用されるジオメトリです. 特別な空間制限がない場合は"
+"NULLにすることができます."
 
 #: ../../source/user/ogr_sql_sqlite_dialect.rst:59
 msgid ""
@@ -95,4 +121,8 @@ msgid ""
 "longer needed.  Failure to release it before the datasource is destroyed "
 "may result in a crash."
 msgstr ""
+"ExecuteSQL()呼び出しの結果は通常, ステートメントからの結果セットを表す一時的なOGRLayerです. "
+"たとえば, SELECTステートメントの場合です. 返された一時的なレイヤーは, もはや必要ない場合には, "
+":cpp:func:`GDALDataset::ReleaseResultsSet` メソッドで解放する必要があります. データソースが"
+"破棄される前に解放しないと, クラッシュする可能性があります."
 

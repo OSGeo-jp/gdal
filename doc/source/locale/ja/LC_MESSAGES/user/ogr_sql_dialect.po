@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/ogr_sql_dialect.rst:5
 msgid "OGR SQL dialect"
-msgstr ""
+msgstr "OGR SQL 方言"
 
 #: ../../source/user/ogr_sql_dialect.rst:9
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "discusses the generic SQL implementation implemented within OGR, and "
 "issues with driver specific SQL support."
 msgstr ""
+"GDALDataset は :cpp:func:`GDALDataset::ExecuteSQL` メソッドを使ってデータソースに対してコマンドを実行することができます."
+" 理論的にはどんな種類のコマンドでもこの方法で処理できますが, 実際にはこのメカニズムはアプリケーションに対して SQL SELECT "
+"の機能の一部を提供するために使用されます."
+" このページでは OGR に実装された一般的な SQL 実装と, ドライバー固有の SQL サポートに関する問題について説明します."
 
 #: ../../source/user/ogr_sql_dialect.rst:16
 msgid ""
@@ -40,6 +44,9 @@ msgid ""
 " the `-dialect` option switch of the :ref:`ogrinfo` or :ref:`ogr2ogr` "
 "utilities."
 msgstr ""
+"``OGRSQL`` 方言は, :cpp:func:`GDALDataset::ExecuteSQL` の方言パラメータとして渡される ``OGRSQL`` 文字列, "
+"または :ref:`ogrinfo` "
+"または :ref:`ogr2ogr` ユーティリティの `-dialect` オプションスイッチでリクエストすることができます."
 
 #: ../../source/user/ogr_sql_dialect.rst:20
 msgid ""
@@ -47,6 +54,8 @@ msgid ""
 "``OGRSQL`` dialect. Refer to the :ref:`sql_sqlite_dialect` page for more "
 "details."
 msgstr ""
+"代わりの方言である ``SQLite`` 方言は, ``OGRSQL`` 方言の代わりに使用することができます."
+" 詳細については :ref:`sql_sqlite_dialect` ページを参照してください."
 
 #: ../../source/user/ogr_sql_dialect.rst:23
 msgid ""
@@ -57,6 +66,12 @@ msgid ""
 "to the WHERE clause applies in the context of the "
 "``SetAttributeFilter()`` method."
 msgstr ""
+"OGRLayer クラスは :cpp:func:`OGRLayer::SetAttributeFilter()` メソッドを使用"
+"して返される地物に属性クエリフィルタを適用することもサポートしています."
+" 属性フィルタの構文は OGR SQL SELECT 文の WHERE 句と同じです."
+" したがって, WHERE 句に関するすべてのことは ``SetAttributeFilter()`` "
+"メソッドのコンテキストで適用されます."
+
 
 #: ../../source/user/ogr_sql_dialect.rst:30
 msgid "SELECT"
