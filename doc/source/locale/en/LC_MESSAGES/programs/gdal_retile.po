@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-23 17:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdal_retile.rst:5
 msgid "gdal_retile"
@@ -39,26 +39,27 @@ msgstr ""
 msgid ""
 "This utility will retile a set of input tile(s). All the input tile(s) "
 "must be georeferenced in the same coordinate system and have a matching "
-"number of bands."
+"number of bands. The geotransform matrix of input tiles must not contain "
+"rotation terms."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:37
+#: ../../source/programs/gdal_retile.rst:38
 msgid ""
 "Optionally pyramid levels are generated. All pyramid levels are generated"
 " from the input tiles (not from previous levels)."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:40
+#: ../../source/programs/gdal_retile.rst:41
 msgid "It is possible to generate shape file(s) for the tiled output."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:42
+#: ../../source/programs/gdal_retile.rst:43
 msgid ""
 "If your number of input tiles exhausts the command line buffer, use the "
 "general :ref:`--optfile <raster_common_options_optfile>` option"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:47
+#: ../../source/programs/gdal_retile.rst:48
 msgid ""
 "gdal_retile is a Python utility, and is only available if GDAL Python "
 "bindings are available."
@@ -74,7 +75,7 @@ msgid ""
 "exit."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:55
+#: ../../source/programs/gdal_retile.rst:56
 msgid ""
 "The directory where the tile result is created. Pyramids are stored in  "
 "sub-directories  numbered  from  1. Created tile names have a numbering "
@@ -116,35 +117,35 @@ msgid ""
 "``CFloat64``."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:67
+#: ../../source/programs/gdal_retile.rst:68
 msgid ""
 "Pixel size to be used for the output file.  If not specified, 256 x 256 "
 "is the default"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:72
+#: ../../source/programs/gdal_retile.rst:73
 msgid ""
 "Overlap in pixels between consecutive tiles. If not specified, 0 is the "
 "default"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:78
+#: ../../source/programs/gdal_retile.rst:79
 msgid "Number of pyramids levels to build."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:82
+#: ../../source/programs/gdal_retile.rst:83
 msgid "Generate verbose output of tile operations as they are done."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:86
+#: ../../source/programs/gdal_retile.rst:87
 msgid "No retiling, build only the pyramids"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:90
+#: ../../source/programs/gdal_retile.rst:91
 msgid "Resampling algorithm, default is near"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:94
+#: ../../source/programs/gdal_retile.rst:95
 msgid ""
 "Source spatial reference to use. The coordinate systems  that  can  be "
 "passed  are  anything  supported by the "
@@ -156,27 +157,27 @@ msgid ""
 "shape file(s)"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:104
+#: ../../source/programs/gdal_retile.rst:105
 msgid "The name of shape file containing the result tile(s) index"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:108
+#: ../../source/programs/gdal_retile.rst:109
 msgid "The name of the attribute containing the tile name"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:112
+#: ../../source/programs/gdal_retile.rst:113
 msgid ""
 "The name of the csv file containing the tile(s) georeferencing "
 "information. The file contains 5 columns: tilename,minx,maxx,miny,maxy"
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:117
+#: ../../source/programs/gdal_retile.rst:118
 msgid ""
 "The column delimiter used in the CSV file, default value is a semicolon "
 "\";\""
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:121
+#: ../../source/programs/gdal_retile.rst:122
 msgid ""
 "Normally the tiles of the base image are stored as described in "
 ":option:`-targetDir`. For large images, some file systems have "
@@ -191,7 +192,15 @@ msgid ""
 "images a performance improvement of a factor N could be achieved."
 msgstr ""
 
-#: ../../source/programs/gdal_retile.rst:133
+#: ../../source/programs/gdal_retile.rst:134
 msgid "Resume mode. Generate only missing files."
 msgstr ""
+
+#~ msgid ""
+#~ "This utility will retile a set of"
+#~ " input tile(s). All the input tile(s)"
+#~ " must be georeferenced in the same"
+#~ " coordinate system and have a "
+#~ "matching number of bands."
+#~ msgstr ""
 

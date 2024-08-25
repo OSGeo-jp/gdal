@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-20 02:24+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/openfilegdb.rst:4
 msgid "ESRI File Geodatabase vector (OpenFileGDB)"
@@ -123,17 +123,17 @@ msgid ""
 "The \"CREATE INDEX idx_name ON layer_name(field_name)\" SQL request can "
 "be used to create an attribute index. idx_name must have 16 characters or"
 " less, start with a letter and contain only alphanumeric characters or "
-"underscore."
+"underscore. Multiple column indices are not supported."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:72
+#: ../../source/drivers/vector/openfilegdb.rst:73
 msgid ""
 "The \"RECOMPUTE EXTENT ON layer_name\" SQL request can be used to trigger"
 " an update of the layer extent in layer metadata. This is useful when "
 "updating or deleting features that modify the general layer extent."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:76
+#: ../../source/drivers/vector/openfilegdb.rst:77
 msgid ""
 "The \"REPACK\" or \"REPACK layer_name\" SQL requests can be used "
 "respectively to compact the whole database or a given layer. This is "
@@ -143,47 +143,47 @@ msgid ""
 "recomputation."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:83
+#: ../../source/drivers/vector/openfilegdb.rst:84
 msgid "Configuration options"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:85
+#: ../../source/drivers/vector/openfilegdb.rst:86
 msgid "|about-config-options| The following configuration options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:103
+#: ../../source/drivers/vector/openfilegdb.rst:104
 msgid "Dataset open options"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:105
+#: ../../source/drivers/vector/openfilegdb.rst:106
 msgid "|about-open-options| The following open options are supported:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:116
+#: ../../source/drivers/vector/openfilegdb.rst:117
 msgid "Dataset Creation Options"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:118
+#: ../../source/drivers/vector/openfilegdb.rst:119
 msgid "None."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:121
+#: ../../source/drivers/vector/openfilegdb.rst:122
 msgid "Layer Creation Options"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:123
+#: ../../source/drivers/vector/openfilegdb.rst:124
 msgid ""
 "|about-layer-creation-options| The following layer creation options are "
 "supported:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:149
+#: ../../source/drivers/vector/openfilegdb.rst:150
 msgid ""
 "On reading, this information is exposed in the ALIAS_NAME layer metadata "
 "item (GDAL >= 3.8)."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:170
+#: ../../source/drivers/vector/openfilegdb.rst:171
 msgid ""
 "**XYTOLERANCE, ZTOLERANCE, MTOLERANCE**\\=value: These parameters control"
 " the snapping tolerance used for advanced ArcGIS features like network "
@@ -192,7 +192,7 @@ msgid ""
 "coordinate reference system."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:176
+#: ../../source/drivers/vector/openfilegdb.rst:177
 msgid ""
 "ArcMap 10.0 and OGR defaults for XYTOLERANCE are 0.001m (or equivalent) "
 "for projected coordinate systems, and 0.000000008983153° for geographic "
@@ -200,7 +200,7 @@ msgid ""
 "MTOLERANCE are 0.0001."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:181
+#: ../../source/drivers/vector/openfilegdb.rst:182
 msgid ""
 "**XORIGIN, YORIGIN, ZORIGIN, MORIGIN, XYSCALE, ZSCALE, ZORIGIN**\\=value:"
 " These parameters control the `coordinate precision grid "
@@ -213,7 +213,7 @@ msgid ""
 "to 1000."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:191
+#: ../../source/drivers/vector/openfilegdb.rst:192
 msgid ""
 "*Important*: The domain specified by ``(xmin=XORIGIN, ymin=YORIGIN, "
 "xmax=(XORIGIN + 9E+15 / XYSCALE), ymax=(YORIGIN + 9E+15 / XYSCALE))`` "
@@ -223,17 +223,17 @@ msgid ""
 " exporting data."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:198
+#: ../../source/drivers/vector/openfilegdb.rst:199
 msgid "ArcMap 10.0 and OGR defaults:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:200
+#: ../../source/drivers/vector/openfilegdb.rst:201
 msgid ""
 "For geographic coordinate systems: XORIGIN=-400, YORIGIN=-400, "
 "XYSCALE=1000000000"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:202
+#: ../../source/drivers/vector/openfilegdb.rst:203
 msgid ""
 "For projected coordinate systems: XYSCALE=10000 for the default "
 "XYTOLERANCE of 0.001m. XORIGIN and YORIGIN change based on the coordinate"
@@ -241,19 +241,19 @@ msgid ""
 "XYSCALE for all coordinate systems."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:206
+#: ../../source/drivers/vector/openfilegdb.rst:207
 msgid "ZORIGIN and MORIGIN: -100000"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:207
+#: ../../source/drivers/vector/openfilegdb.rst:208
 msgid "ZSCALE and MSCALE: 10000"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:239
+#: ../../source/drivers/vector/openfilegdb.rst:240
 msgid "64-bit integer field support"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:243
+#: ../../source/drivers/vector/openfilegdb.rst:244
 msgid ""
 "On creation, 64-bit integer field support requires setting the "
 ":lco:`TARGET_ARCGIS_VERSION` layer creation option to "
@@ -267,27 +267,27 @@ msgid ""
 "fine."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:251
+#: ../../source/drivers/vector/openfilegdb.rst:252
 msgid "Field domains"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:255
+#: ../../source/drivers/vector/openfilegdb.rst:256
 msgid "Coded and range field domains are supported."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:258
+#: ../../source/drivers/vector/openfilegdb.rst:259
 msgid "Relationships"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:262
+#: ../../source/drivers/vector/openfilegdb.rst:263
 msgid "Relationship retrieval, creation, deletion and updating is supported."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:265
+#: ../../source/drivers/vector/openfilegdb.rst:266
 msgid "Hiearchical organization"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:269
+#: ../../source/drivers/vector/openfilegdb.rst:270
 msgid ""
 "The hierarchical organization of tables and feature classes as top-level "
 "element or within a feature dataset can be explored using the methods "
@@ -297,11 +297,11 @@ msgid ""
 ":cpp:func:`GDALGroup::OpenVectorLayer`"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:276
+#: ../../source/drivers/vector/openfilegdb.rst:277
 msgid "Transaction support"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:278
+#: ../../source/drivers/vector/openfilegdb.rst:279
 msgid ""
 "The driver implements transactions at the database level, through an "
 "emulation (as per :ref:`rfc-54`). This works by backing up the current "
@@ -311,22 +311,22 @@ msgid ""
 "backup copy is restored."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:285
+#: ../../source/drivers/vector/openfilegdb.rst:286
 msgid ""
 "Note that this emulation has an unspecified behavior in case of "
 "concurrent updates (with different connections in the same or another "
 "process)."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:290
+#: ../../source/drivers/vector/openfilegdb.rst:291
 msgid "Geometry coordinate precision"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:292
+#: ../../source/drivers/vector/openfilegdb.rst:293
 msgid "3.9"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:294
+#: ../../source/drivers/vector/openfilegdb.rst:295
 msgid ""
 "The driver supports reading and writing the geometry coordinate "
 "precision, using the XYResolution, ZResolution and MResolution members of"
@@ -336,7 +336,7 @@ msgid ""
 "tolerance setting is computed as being one tenth of the resolution"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:301
+#: ../../source/drivers/vector/openfilegdb.rst:302
 msgid ""
 "On reading, the coordinate precision grid parameters are returned as "
 "format specific options of :cpp:class:`OGRGeomCoordinatePrecision` with "
@@ -347,7 +347,7 @@ msgid ""
 "ZResolution and MResolution)."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:309
+#: ../../source/drivers/vector/openfilegdb.rst:310
 msgid ""
 "On layer creation, the XORIGIN, YORIGIN, ZORIGIN, MORIGIN, XYSCALE, "
 "ZSCALE, ZORIGIN, XYTOLERANCE, ZTOLERANCE, MTOLERANCE layer creation "
@@ -355,52 +355,52 @@ msgid ""
 ":cpp:class:`OGRGeomCoordinatePrecision`."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:314
+#: ../../source/drivers/vector/openfilegdb.rst:315
 msgid "Advantages of the OpenFileGDB driver, compared to the FileGDB driver"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:316
+#: ../../source/drivers/vector/openfilegdb.rst:317
 msgid "Can read ArcGIS 9.X Geodatabases, and not only 10 or above."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:318
+#: ../../source/drivers/vector/openfilegdb.rst:319
 msgid "Can open layers with any spatial reference system."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:320
+#: ../../source/drivers/vector/openfilegdb.rst:321
 msgid "Thread-safe (i.e. datasources can be processed in parallel)."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:322
+#: ../../source/drivers/vector/openfilegdb.rst:323
 msgid ""
 "Uses the VSI Virtual File API, enabling the user to read a Geodatabase in"
 " a ZIP file or stored on a HTTP server."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:325
+#: ../../source/drivers/vector/openfilegdb.rst:326
 msgid "Faster on databases with a big number of fields."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:327
+#: ../../source/drivers/vector/openfilegdb.rst:328
 msgid "Does not depend on a third-party library."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:329
+#: ../../source/drivers/vector/openfilegdb.rst:330
 msgid "Robust against corrupted Geodatabase files."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:332
+#: ../../source/drivers/vector/openfilegdb.rst:333
 msgid "Limitations"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:334
+#: ../../source/drivers/vector/openfilegdb.rst:335
 msgid ""
 "Reading data compressed in SDC format (Smart Data Compression) or in CDF "
 "format (Compressed Data Format) is not supported. For CDF, the "
 ":ref:`FileGDB driver <vector.filegdb>` can be used."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:338
+#: ../../source/drivers/vector/openfilegdb.rst:339
 msgid ""
 "Support for tables with 64-bit OBJECTIDs (which require GDAL >= 3.10), "
 "where OBJECTIDs are sparse, is read-only and incomplete. The driver will "
@@ -408,48 +408,58 @@ msgid ""
 "OBJECTIDs."
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:344
+#: ../../source/drivers/vector/openfilegdb.rst:345
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:346
+#: ../../source/drivers/vector/openfilegdb.rst:347
 msgid "Read layer from FileGDB and load into PostGIS:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:352
+#: ../../source/drivers/vector/openfilegdb.rst:353
 msgid "Get detailed info for FileGDB:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:358
+#: ../../source/drivers/vector/openfilegdb.rst:359
 msgid "Get detailed info for a zipped FileGDB:"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:365
+#: ../../source/drivers/vector/openfilegdb.rst:366
 msgid "Links"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:367
+#: ../../source/drivers/vector/openfilegdb.rst:368
 msgid ":ref:`OpenFileGDB raster <raster.openfilegdb>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:368
+#: ../../source/drivers/vector/openfilegdb.rst:369
 msgid ":ref:`FileGDB driver <vector.filegdb>`, relying on the FileGDB API SDK"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:369
+#: ../../source/drivers/vector/openfilegdb.rst:370
 msgid ""
 "Reverse-engineered specification of the `FileGDB format "
 "<https://github.com/rouault/dump_gdbtable/wiki/FGDB-Spec>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:374
+#: ../../source/drivers/vector/openfilegdb.rst:375
 msgid "Credits"
 msgstr ""
 
-#: ../../source/drivers/vector/openfilegdb.rst:376
+#: ../../source/drivers/vector/openfilegdb.rst:377
 msgid ""
 "Edition/write capabilities of the driver have been funded by the "
 "following organizations: Provincie Zuid-Holland, Provincie Gelderland and"
 " Gemeente Amsterdam."
 msgstr ""
+
+#~ msgid ""
+#~ "The \"CREATE INDEX idx_name ON "
+#~ "layer_name(field_name)\" SQL request can be"
+#~ " used to create an attribute index."
+#~ " idx_name must have 16 characters or"
+#~ " less, start with a letter and "
+#~ "contain only alphanumeric characters or "
+#~ "underscore."
+#~ msgstr ""
 

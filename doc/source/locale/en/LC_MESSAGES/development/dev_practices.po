@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-20 02:24+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/development/dev_practices.rst:5
 msgid "Development practices"
@@ -45,11 +45,11 @@ msgid ""
 ":ref:`rfc-85`."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:18
+#: ../../source/development/dev_practices.rst:20
 msgid "Portability"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:20
+#: ../../source/development/dev_practices.rst:22
 msgid ""
 "GDAL strives to be widely portable to 32 bit and 64 bit computing "
 "environments, as well as little-endian and big-endian ordered CPUs. CPL "
@@ -57,7 +57,7 @@ msgid ""
 "specific operations."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:25
+#: ../../source/development/dev_practices.rst:27
 msgid ""
 "Generally speaking, where available CPL functions should be used in "
 "preference to operating system functions for operations like memory "
@@ -65,21 +65,21 @@ msgid ""
 "VSIVirtualFile*), ODBC access, etc."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:31
+#: ../../source/development/dev_practices.rst:33
 msgid "C/C++ standards"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:33
+#: ../../source/development/dev_practices.rst:35
 msgid ""
 "The current C and C++ standards adopted by GDAL/OGR are C99 and C++17 "
 "(last updated per :ref:`rfc-98`)."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:37
+#: ../../source/development/dev_practices.rst:39
 msgid "Variable naming"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:39
+#: ../../source/development/dev_practices.rst:41
 msgid ""
 "Much of the existing GDAL/OGR code uses an adapted Hungarian naming "
 "convention. Use of this convention is not mandatory, but when maintaining"
@@ -88,153 +88,153 @@ msgid ""
 "that can be very confusing."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:45
+#: ../../source/development/dev_practices.rst:47
 msgid ""
 "In Hungarian prefixing the prefix tells something about about the type, "
 "and potentially semantics of a variable. The following are some prefixes "
 "used in GDAL/OGR."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:49
+#: ../../source/development/dev_practices.rst:51
 msgid "*a*: array"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:50
+#: ../../source/development/dev_practices.rst:52
 msgid ""
 "*b*: C/C++ bool. In C code that pre-dates C99 adoption, it is also used "
 "for ints with only TRUE/FALSE values."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:51
+#: ../../source/development/dev_practices.rst:53
 msgid "*by*: byte (GByte / unsigned char)."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:52
+#: ../../source/development/dev_practices.rst:54
 msgid "*df*: floating point value (double precision)"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:53
+#: ../../source/development/dev_practices.rst:55
 msgid "*e*: enumeration"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:54
+#: ../../source/development/dev_practices.rst:56
 msgid "*i*: integer number used as a zero based array or loop index."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:55
+#: ../../source/development/dev_practices.rst:57
 msgid "*f*: floating point value (single precision)"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:56
+#: ../../source/development/dev_practices.rst:58
 msgid "*h*: an opaque handle (such as GDALDatasetH)."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:57
+#: ../../source/development/dev_practices.rst:59
 msgid "*n*: integer number (size unspecified)"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:58
+#: ../../source/development/dev_practices.rst:60
 msgid "*o*: C++ object"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:59
+#: ../../source/development/dev_practices.rst:61
 msgid "*os*: CPLString or std::string"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:60
+#: ../../source/development/dev_practices.rst:62
 msgid "*p*: pointer"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:61
+#: ../../source/development/dev_practices.rst:63
 msgid "*psz*: pointer to a null-terminated string. (eg. \"char \\*pszName;\")"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:62
+#: ../../source/development/dev_practices.rst:64
 msgid "*sz*: null-terminated string (eg.\" char szName[100];\")"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:63
+#: ../../source/development/dev_practices.rst:65
 msgid "*k*: compile-time constant"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:65
+#: ../../source/development/dev_practices.rst:67
 msgid ""
 "Prefixes can be stacked. The following are some examples of meaningful "
 "variables."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:68
+#: ../../source/development/dev_practices.rst:70
 msgid "\\*char !\\*\\ *papszTokens*: Pointer to an array of strings."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:69
+#: ../../source/development/dev_practices.rst:71
 msgid "\\*int *panBands*: Pointer to the first element of an array of numbers."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:71
+#: ../../source/development/dev_practices.rst:73
 msgid ""
 "\\*double *padfScanline*: Pointer to the first element of an array of "
 "doubles."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:73
+#: ../../source/development/dev_practices.rst:75
 msgid "\\*double *pdfMeanRet*: Pointer to a single double."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:74
+#: ../../source/development/dev_practices.rst:76
 msgid "\\*GDALRasterBand *poBand*: Pointer to a single object."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:75
+#: ../../source/development/dev_practices.rst:77
 msgid "\\*GByte *pabyHeader*: Pointer to an array of bytes."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:77
+#: ../../source/development/dev_practices.rst:79
 msgid ""
 "It may also be noted that the standard convention for variable names is "
 "to capitalize each word in a variable name."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:81
+#: ../../source/development/dev_practices.rst:83
 msgid "Function and class naming"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:83
+#: ../../source/development/dev_practices.rst:85
 msgid ""
 "Functions and classes should have a selective enough namespace (\"GDAL\" "
 "or \"OGR\" prefix, or use of C++ namespace) to avoid symbol collision."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:86
+#: ../../source/development/dev_practices.rst:88
 msgid "File naming and code formatting"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:88
+#: ../../source/development/dev_practices.rst:90
 msgid ""
 "All source files (.h, .c, .cpp, .py, etc.) should have a header with "
 "copyright attribution and the text of the GDAL X/MIT license."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:89
+#: ../../source/development/dev_practices.rst:91
 msgid "Use lower case filenames."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:90
+#: ../../source/development/dev_practices.rst:92
 msgid "Use .cpp extension for C++ files (not .cc)."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:91
+#: ../../source/development/dev_practices.rst:93
 msgid ""
 "C/C++ code formatting rules are defined in :source_file:`.clang-format`. "
 "Python code formatting is enforced by Black. The pre-commit utility "
 "should be used to enforce them automatically. See :ref:`commit_hooks`."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:95
+#: ../../source/development/dev_practices.rst:97
 msgid "Memory allocation"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:97
+#: ../../source/development/dev_practices.rst:99
 msgid ""
 "Large memory allocations should be performed using the "
 ":cpp:func:`VSIMalloc` family of functions, which will return ``nullptr`` "
@@ -247,18 +247,18 @@ msgid ""
 "be used as a replacement for ``CPLMalloc(x * y * z)``."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:105
+#: ../../source/development/dev_practices.rst:107
 msgid ""
 "When working with standard library data structures such as "
 "``std::vector`` that may throw ``std::bad_alloc``, a try/catch block "
 "should be used around blocks that may allocate a large amount of memory."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:108
+#: ../../source/development/dev_practices.rst:110
 msgid "Adding a new driver"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:110
+#: ../../source/development/dev_practices.rst:112
 msgid ""
 "If the driver depends on a third-party library, compilation of the driver"
 " must be made conditional on the presence of the library. Drivers should "
@@ -266,7 +266,7 @@ msgid ""
 "Expat for SAX XML parsing."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:111
+#: ../../source/development/dev_practices.rst:113
 msgid ""
 "For a vector driver, check that the Open() method of the driver (often "
 "delegated to a Open() method of the datasource) is selective enough (i.e."
@@ -276,7 +276,7 @@ msgid ""
 " GDAL driver, similar checks, as well for the optional Identify() method."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:112
+#: ../../source/development/dev_practices.rst:114
 msgid ""
 "A set of tests covering the driver should be added to the Python test "
 "suite. If appropriate, small sample data files may be added to "
@@ -285,7 +285,7 @@ msgid ""
 "functionality."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:113
+#: ../../source/development/dev_practices.rst:115
 msgid ""
 "A documentation page should be created for the driver. Documentation "
 "should, at a minimum, briefly describe the format handled by the driver "
@@ -295,41 +295,41 @@ msgid ""
 "needed third-party libraries."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:116
+#: ../../source/development/dev_practices.rst:118
 msgid "Writing tests"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:118
+#: ../../source/development/dev_practices.rst:120
 msgid "See :ref:`writing_tests`."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:121
+#: ../../source/development/dev_practices.rst:123
 msgid "Git usage"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:123
+#: ../../source/development/dev_practices.rst:125
 msgid ""
 "This section collects a few best practices for git usage for GDAL "
 "development."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:126
+#: ../../source/development/dev_practices.rst:128
 msgid "Initiating your work repository"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:128
+#: ../../source/development/dev_practices.rst:130
 msgid "Fork |OSGeo/gdal| from the GitHub UI, and then run:"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:137
+#: ../../source/development/dev_practices.rst:139
 msgid "Working with a feature branch"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:173
+#: ../../source/development/dev_practices.rst:175
 msgid "From the GitHub UI, issue a pull request."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:175
+#: ../../source/development/dev_practices.rst:177
 msgid ""
 "If the pull request discussion or automated checks require changes, "
 "commit locally and push. To get a reasonable history, you may need to "
@@ -338,43 +338,43 @@ msgid ""
 "my_new_feature_branch``."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:182
+#: ../../source/development/dev_practices.rst:184
 msgid "Updating your local master against upstream master"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:193
+#: ../../source/development/dev_practices.rst:195
 msgid "Commit messages"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:195
+#: ../../source/development/dev_practices.rst:197
 msgid ""
 "Commit messages should indicate a component name (eg a driver name), a "
 "short description, and when relevant, a reference to a issue (with 'fixes"
 " #' if it actually fixes it)"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:208
+#: ../../source/development/dev_practices.rst:210
 msgid "Commit hooks"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:210
+#: ../../source/development/dev_practices.rst:212
 msgid ""
 "GDAL provides pre-commit hooks to run code formatters and linters before "
 "a commit is made. The hooks are cloned with the repository and can be "
 "installed using `pre-commit <https://pre-commit.com>`_:"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:220
+#: ../../source/development/dev_practices.rst:222
 msgid ""
 "Once installed, the hooks can be run manually via ``pre-commit run --all-"
 "files``."
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:223
+#: ../../source/development/dev_practices.rst:225
 msgid "Blame ignore file"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:225
+#: ../../source/development/dev_practices.rst:227
 msgid ""
 "Due to whole-tree code reformatting done during GDAL 3.7 development, "
 "``git blame`` information might be misleading. To avoid that, you need to"
@@ -382,28 +382,229 @@ msgid ""
 " whole-tree reformatting:"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:236
+#: ../../source/development/dev_practices.rst:238
 msgid "Backporting bugfixes from master to a stable branch"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:248
+#: ../../source/development/dev_practices.rst:250
 msgid "If changes are needed, do them and ``git commit -a --amend``"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:252
+#: ../../source/development/dev_practices.rst:254
 msgid "Things you should NOT do"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:254
+#: ../../source/development/dev_practices.rst:256
 msgid ""
 "(For anyone with push rights to |OSGeo/gdal|) Never modify a commit or "
 "the history of anything that has been committed to "
 "https://github.com/OSGeo/gdal"
 msgstr ""
 
-#: ../../source/development/dev_practices.rst:258
+#: ../../source/development/dev_practices.rst:260
 msgid ""
 "Committing symbolic links is allowed only under the .github directory in "
 "order to avoid potential problems on Windows."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:264
+msgid "Source tree layout"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:266
+msgid ""
+":file:`alg`: Algorithms: rasterization, polygonization, warper engine, "
+"etc."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:267
+msgid ":file:`apps`: C++ command line utilities"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:268
+msgid ":file:`autotest`: Regression test suite (C++ and Python)"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:269
+msgid ":file:`cmake`: CMake modules and helpers functions"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:270
+msgid ":file:`doc`: Source code of GDAL documentation and scripts"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:271
+msgid ""
+":file:`docker`: Dockerfile's for `GDAL Docker images "
+"<https://github.com/OSGeo/gdal/blob/master/docker/README.md>`__"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:272
+msgid ""
+":file:`gcore`: Raster core functionality. Base classes: "
+":cpp:class:`GDALDataset`, :cpp:class:`GDALRasterBand`, "
+":cpp:class:`GDALDriver`, overview building, etc."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:273
+msgid ""
+":file:`frmts`: GDAL/raster drivers (mostly, with the exception of the "
+"GDAL GeoPackage raster support in ogr/ogrsf_frmts/gpkg)"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:274
+msgid ""
+":file:`fuzzer`: Source code and scripts for GDAL `OSS-Fuzz integration "
+"<https://github.com/google/oss-fuzz>`__"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:275
+msgid ":file:`gnm`: Source code for :ref:`gnm_data_model`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:276
+msgid ""
+":file:`ogr`: OGR vector core classes: :cpp:class:`OGRFieldDefn`, "
+":cpp:class:`OGRGeomFieldDefn`, :cpp:class:`OGRFeatureDefn`, "
+":cpp:class:`OGRGeometry` and derived classes, OGR SQL, etc."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:277
+msgid ":file:`ogr/ogrsf_frmts`: OGR/vector drivers"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:278
+msgid ""
+":file:`ogr/ogrsf_frmts/generic`: OGR vector core class: `OGRLayer`, OGR "
+"SQL generic layer"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:279
+msgid ":file:`port`: :ref:`CPL (Common Portability Library) <cpl>`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:280
+msgid ""
+":file:`perftests`: C++ and Python scripts to check the speed/performance "
+"of various aspects of GDAL."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:281
+msgid ""
+":file:`scripts`: various utility scripts used for Continuous Integration,"
+" release generation, and other auxiliary tasks. None of them are for end "
+"users."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:282
+msgid ":file:`swig/include`: definition of SWIG Python, Java, C# bindings"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:283
+msgid ""
+":file:`swig/python/gdal-utils/scripts`: Launcher scripts for "
+"installed/public GDAL Python utilities. No real functionality there"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:284
+msgid ""
+":file:`swig/python/gdal-utils/osgeo_utils`: Core code for GDAL Python "
+"utilities. Available in the PyPI gdal and gdal-utils packages."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:285
+msgid ""
+":file:`swig/python/gdal-utils/samples`: Scripts that are not installed "
+"and generally not or very little documented. May serve as a staging area "
+"for future scripts that are going to be promoted as official."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:286
+msgid ""
+":file:`swig/python/gdal-utils/auxiliary`: Helper methods and classes used"
+" by GDAL Python utilities. Available in the PyPI gdal and gdal-utils "
+"packages."
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:287
+msgid ""
+":file:`third_party`: Third-party libraries used by libgdal. Other may be "
+"found in:"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:289
+msgid ":file:`alg/internal_libqhull`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:290
+msgid ":file:`apps/argparse`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:291
+msgid ":file:`frmts/gtiff/libtiff`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:292
+msgid ":file:`frmts/gtiff/libgeotiff`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:293
+msgid ":file:`frmts/hdf4/hdf-eos`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:294
+msgid ":file:`frmts/jpeg/libjpeg`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:295
+msgid ":file:`frmts/jpeg/libjpeg12`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:296
+msgid ":file:`frmts/grib/degrib/degrib`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:297
+msgid ":file:`frmts/grib/degrib/g2clib`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:298
+msgid ":file:`frmts/pcidsk/sdk`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:299
+msgid ":file:`frmts/pcraster/libcsf`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:300
+msgid ":file:`frmts/png/libpng`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:301
+msgid ":file:`frmts/gif/giflib`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:302
+msgid ":file:`frmts/zlib/`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:303
+msgid ":file:`ogr/ogrsf_frmts/cad/libopencad`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:304
+msgid ":file:`ogr/ogrsf_frmts/geojson/libjson`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:305
+msgid ":file:`ogr/ogrsf_frmts/flatgeobuf/flatbuffers`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:306
+msgid ":file:`ogr/ogrsf_frmts/pmtiles/pmtiles`"
+msgstr ""
+
+#: ../../source/development/dev_practices.rst:307
+msgid ":file:`ogr/ogrsf_frmts/sqlite/sqlite_rtree_bulk_load`"
 msgstr ""
 

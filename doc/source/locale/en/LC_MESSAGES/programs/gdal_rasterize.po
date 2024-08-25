@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdal_rasterize.rst:5
 msgid "gdal_rasterize"
@@ -229,10 +229,12 @@ msgstr ""
 #: ../../source/programs/gdal_rasterize.rst:176
 msgid ""
 "Force the output bands to be of the indicated data type. Defaults to "
-"``Float64``"
+"``Float64``, unless the attribute field to burn is of type ``Int64``, in "
+"which case ``Int64`` is used for the output raster data type if the "
+"output driver supports it."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:180
+#: ../../source/programs/gdal_rasterize.rst:182
 msgid ""
 "Force the algorithm used (results are identical). The raster mode is used"
 " in most cases and optimise read/write operations. The vector mode is "
@@ -242,26 +244,26 @@ msgid ""
 "properties."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:192
+#: ../../source/programs/gdal_rasterize.rst:194
 msgid "Source dataset open option (format specific)"
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:196
+#: ../../source/programs/gdal_rasterize.rst:198
 msgid "Suppress progress monitor and other non-error output."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:200
+#: ../../source/programs/gdal_rasterize.rst:202
 msgid "Any OGR supported readable datasource."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:204
+#: ../../source/programs/gdal_rasterize.rst:206
 msgid ""
 "The GDAL supported output file.  Must support update mode access. This "
 "file will be created if it does not already exist If the output raster "
 "already exists, the affected pixels are updated in-place."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:208
+#: ../../source/programs/gdal_rasterize.rst:210
 msgid ""
 "The program creates a new target raster image when any of the "
 ":option:`-of`, :option:`-a_nodata`, :option:`-init`, :option:`-a_srs`, "
@@ -272,35 +274,41 @@ msgid ""
 " and any of these creation-related options are used."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:216
+#: ../../source/programs/gdal_rasterize.rst:218
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:218
+#: ../../source/programs/gdal_rasterize.rst:220
 msgid "This utility is also callable from C with :cpp:func:`GDALRasterize`."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:223
+#: ../../source/programs/gdal_rasterize.rst:225
 msgid "Examples"
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:225
+#: ../../source/programs/gdal_rasterize.rst:227
 msgid ""
 "The following would burn all polygons from mask.shp into the RGB TIFF "
 "file work.tif with the color red (RGB = 255,0,0)."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:233
+#: ../../source/programs/gdal_rasterize.rst:235
 msgid ""
 "The following would burn all \"class A\" buildings into the output "
 "elevation file, pulling the top elevation from the ROOF_H attribute."
 msgstr ""
 
-#: ../../source/programs/gdal_rasterize.rst:240
+#: ../../source/programs/gdal_rasterize.rst:242
 msgid ""
 "The following would burn all polygons from footprint.shp into a new "
 "1000x1000 rgb TIFF as the color red.  Note that :option:`-b` is not used;"
 " the order of the :option:`-burn` options determines the bands of the "
 "output raster."
 msgstr ""
+
+#~ msgid ""
+#~ "Force the output bands to be of"
+#~ " the indicated data type. Defaults to"
+#~ " ``Float64``"
+#~ msgstr ""
 

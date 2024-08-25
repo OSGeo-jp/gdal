@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-23 06:36+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/user/raster_data_model.rst:5
 msgid "Raster Data Model"
@@ -391,7 +391,7 @@ msgstr ""
 msgid ""
 "Currently, drivers which support subdatasets are: ADRG, ECRGTOC, "
 "GEORASTER, GTiff, HDF4, HDF5, netCDF, NITF, NTv2, OGDI, PDF, "
-"PostGISRaster, Rasterlite, RPFTOC, RS2, TileDB, WCS, and WMS."
+"PostGISRaster, Rasterlite, RPFTOC, RS2, TileDB, WCS, WMS, and Zarr."
 msgstr ""
 
 #: ../../source/user/raster_data_model.rst:142
@@ -756,7 +756,7 @@ msgid "GCI_SaturationBand: this raster is the saturation of an HLS image"
 msgstr ""
 
 #: ../../source/user/raster_data_model.rst:240
-msgid "GCI_LightnessBand: this raster is the hue of an HLS image"
+msgid "GCI_LightnessBand: this raster is the lightness of an HLS image"
 msgstr ""
 
 #: ../../source/user/raster_data_model.rst:241
@@ -859,4 +859,15 @@ msgid ""
 ":cpp:func:`GDALRasterBand::RasterIO` or :cpp:func:`GDALDataset::RasterIO`"
 " methods document their logic."
 msgstr ""
+
+#~ msgid ""
+#~ "Currently, drivers which support subdatasets"
+#~ " are: ADRG, ECRGTOC, GEORASTER, GTiff, "
+#~ "HDF4, HDF5, netCDF, NITF, NTv2, OGDI,"
+#~ " PDF, PostGISRaster, Rasterlite, RPFTOC, "
+#~ "RS2, TileDB, WCS, and WMS."
+#~ msgstr ""
+
+#~ msgid "GCI_LightnessBand: this raster is the hue of an HLS image"
+#~ msgstr ""
 

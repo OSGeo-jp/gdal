@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-26 03:03+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/vrt.rst:5
 msgid "VRT -- GDAL Virtual Format"
@@ -1662,7 +1662,7 @@ msgid ""
 "respect to the original RasterIO() request to satisfy, that are fetched "
 "at the left, right, bottom and top of the input and output buffers passed"
 " to the pixel function. Note that the values of the output buffer in this"
-" buffer zone willbe ignored."
+" buffer zone will be ignored."
 msgstr ""
 
 #: ../../source/drivers/raster/vrt.rst:1367
@@ -2374,11 +2374,38 @@ msgid ""
 "``ALL_CPUS``."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2101
+#: ../../source/drivers/raster/vrt.rst:2100
+msgid ""
+"Starting with GDAL 3.10, the :oo:`NUM_THREADS` open option can be set to "
+"control specifically the multi-threading of VRT datasets. It defaults to "
+"``ALL_CPUS``, and when set, overrides :config:`GDAL_NUM_THREADS` or "
+":config:`VRT_NUM_THREADS`. It applies to ComputeStatistics() and band-"
+"level and dataset-level RasterIO(). For band-level RasterIO(), multi-"
+"threading is only available if more than 1 million pixels are requested "
+"and if the VRT is made of only non-overlapping SimpleSource or "
+"ComplexSource belonging to different datasets. For dataset-level "
+"RasterIO(), multi-threading is only available if more than 1 million "
+"pixels are requested and if the VRT is made of only non-overlapping "
+"SimpleSource belonging to different datasets."
+msgstr ""
+
+#: ../../source/drivers/raster/vrt.rst:2119
+msgid ""
+"This can also be specified globally with the :config:`VRT_NUM_THREADS` "
+"configuration option."
+msgstr ""
+
+#: ../../source/drivers/raster/vrt.rst:2129
+msgid ""
+"Note that the number of threads actually used is also limited by the "
+":config:`GDAL_MAX_DATASET_POOL_SIZE` configuration option."
+msgstr ""
+
+#: ../../source/drivers/raster/vrt.rst:2133
 msgid "Multi-threading issues"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2105
+#: ../../source/drivers/raster/vrt.rst:2137
 msgid ""
 "The below section applies to GDAL <= 2.2. Starting with GDAL 2.3, the use"
 " of VRT datasets is subject to the standard GDAL dataset multi-threaded "
@@ -2387,7 +2414,7 @@ msgid ""
 " use them in different threads)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2111
+#: ../../source/drivers/raster/vrt.rst:2143
 msgid ""
 "When using VRT datasets in a multi-threading environment, you should be "
 "careful to open the VRT dataset by the thread that will use it "
@@ -2397,7 +2424,7 @@ msgid ""
 " will share the same handles to the underlying datasets."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2118
+#: ../../source/drivers/raster/vrt.rst:2150
 msgid ""
 "The shared attribute, on the SourceFilename indicates whether the dataset"
 " should be shared (value is 1) or not (value is 0). The default is 1. If "
@@ -2407,11 +2434,11 @@ msgid ""
 "force non-shared mode:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2134
+#: ../../source/drivers/raster/vrt.rst:2166
 msgid "Performance considerations"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2136
+#: ../../source/drivers/raster/vrt.rst:2168
 msgid ""
 "A VRT can reference many (hundreds, thousands, or more) datasets. Due to "
 "operating system limitations, and for performance at opening time, it is "
@@ -2428,14 +2455,26 @@ msgid ""
 "increase the pool size to 450."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2149
+#: ../../source/drivers/raster/vrt.rst:2181
 msgid ""
 "Starting with GDAL 3.7, the :config:`GDAL_MAX_DATASET_POOL_RAM_USAGE` "
 "configuration option to a number of bytes, to limit the RAM usage of "
 "opened datasets in the pool."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2154
+#: ../../source/drivers/raster/vrt.rst:2186
 msgid "Driver capabilities"
 msgstr ""
+
+#~ msgid ""
+#~ "**BufferRadius** (optional, defaults to 0):"
+#~ " Amount of extra pixels, with respect"
+#~ " to the original RasterIO() request "
+#~ "to satisfy, that are fetched at "
+#~ "the left, right, bottom and top of"
+#~ " the input and output buffers passed"
+#~ " to the pixel function. Note that "
+#~ "the values of the output buffer in"
+#~ " this buffer zone willbe ignored."
+#~ msgstr ""
 

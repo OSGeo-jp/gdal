@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-24 16:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,28 +17,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/python/osgeo.ogr.rst:7
 msgid "osgeo.ogr module"
-msgstr ""
-
-#: of osgeo.ogr.ArrowArray:1 osgeo.ogr.ArrowArrayStream:1
-#: osgeo.ogr.ArrowSchema:1 osgeo.ogr.GeomTransformer:1 osgeo.ogr.MajorObject:1
-#: osgeo.ogr.PreparedGeometry:1
-msgid "Bases: :py:class:`object`"
-msgstr ""
-
-#: of osgeo.ogr.ArrowArray:1
-msgid "Proxy of C++ ArrowArray class."
-msgstr ""
-
-#: of osgeo.ogr.ArrowArrayStream:1
-msgid "Proxy of C++ ArrowArrayStream class."
-msgstr ""
-
-#: of osgeo.ogr.ArrowSchema:1
-msgid "Proxy of C++ ArrowSchema class."
 msgstr ""
 
 #: of osgeo.ogr.DataSource:1 osgeo.ogr.Driver:1
@@ -52,7 +34,7 @@ msgstr ""
 #: of osgeo.ogr.DataSource.CopyLayer:1
 msgid ""
 "OGRLayerH OGR_DS_CopyLayer(OGRDataSourceH hDS, OGRLayerH hSrcLayer, const"
-" char \\*pszNewName, char \\*\\*papszOptions)"
+" char *pszNewName, char **papszOptions)"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.CopyLayer:5
@@ -72,55 +54,41 @@ msgstr ""
 msgid "Deprecated Use GDALDatasetCopyLayer() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CopyLayer osgeo.ogr.DataSource.CreateLayer
-#: osgeo.ogr.DataSource.DeleteLayer osgeo.ogr.DataSource.ExecuteSQL
-#: osgeo.ogr.DataSource.GetDriver osgeo.ogr.DataSource.GetLayerByName
-#: osgeo.ogr.DataSource.GetLayerCount osgeo.ogr.DataSource.GetName
-#: osgeo.ogr.DataSource.ReleaseResultSet osgeo.ogr.DataSource.TestCapability
-msgid "Parameters"
-msgstr ""
-
-#: of osgeo.ogr.DataSource.CopyLayer:16
-msgid "handle to the data source where to create the new layer"
-msgstr ""
-
-#: of osgeo.ogr.DataSource.CopyLayer:17
-msgid "handle to the source layer."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.CopyLayer:18
-msgid "the name of the layer to create."
+#: of osgeo.ogr.DataSource.CopyLayer:17 osgeo.ogr.DataSource.CreateLayer:16
+#: osgeo.ogr.DataSource.ExecuteSQL:23 osgeo.ogr.DataSource.GetDriver:13
+#: osgeo.ogr.DataSource.GetLayerByName:12 osgeo.ogr.DataSource.GetLayerCount:9
+#: osgeo.ogr.DataSource.GetName:14 osgeo.ogr.DataSource.ReleaseResultSet:14
+#: osgeo.ogr.DataSource.TestCapability:27
+msgid "Parameters:"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.CopyLayer:19
-msgid "a StringList of name=value options. Options are driver specific."
+msgid "hDS:  handle to the data source where to create the new layer"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CopyLayer osgeo.ogr.DataSource.CreateLayer
-#: osgeo.ogr.DataSource.DeleteLayer osgeo.ogr.DataSource.ExecuteSQL
-#: osgeo.ogr.DataSource.GetDriver osgeo.ogr.DataSource.GetLayerByName
-#: osgeo.ogr.DataSource.GetLayerCount osgeo.ogr.DataSource.GetName
-#: osgeo.ogr.DataSource.TestCapability
-msgid "Returns"
+#: of osgeo.ogr.DataSource.CopyLayer:21
+msgid "hSrcLayer:  handle to the source layer."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CopyLayer:22
+#: of osgeo.ogr.DataSource.CopyLayer:23
+msgid "pszNewName:  the name of the layer to create."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.CopyLayer:25
+msgid ""
+"papszOptions:  a StringList of name=value options. Options are driver "
+"specific."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.CopyLayer:28
 msgid "a handle to the layer, or NULL if an error occurs."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.CopyLayer osgeo.ogr.DataSource.CreateLayer
-#: osgeo.ogr.DataSource.DeleteLayer osgeo.ogr.DataSource.ExecuteSQL
-#: osgeo.ogr.DataSource.GetDriver osgeo.ogr.DataSource.GetLayerByName
-#: osgeo.ogr.DataSource.GetLayerCount osgeo.ogr.DataSource.GetName
-#: osgeo.ogr.DataSource.TestCapability
-msgid "Return type"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.CreateLayer:1
 msgid ""
-"OGRLayerH OGR_DS_CreateLayer(OGRDataSourceH hDS, const char \\*pszName, "
+"OGRLayerH OGR_DS_CreateLayer(OGRDataSourceH hDS, const char *pszName, "
 "OGRSpatialReferenceH hSpatialRef, OGRwkbGeometryType eType, char "
-"\\*\\*papszOptions)"
+"**papszOptions)"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.CreateLayer:6
@@ -140,55 +108,44 @@ msgstr ""
 msgid "Deprecated Use GDALDatasetCreateLayer() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CreateLayer:15
-msgid ""
-"The dataset handle.pszName:  the name for the new layer. This should "
-"ideally not match any existing layer on the datasource."
+#: of osgeo.ogr.DataSource.CreateLayer:18
+msgid "hDS:  The dataset handle."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CreateLayer:17
+#: of osgeo.ogr.DataSource.CreateLayer:20
 msgid ""
-"handle to the coordinate system to use for the new layer, or NULL if no "
-"coordinate system is available. The driver might only increase the "
-"reference counter of the object to take ownership, and not make a full "
-"copy, so do not use OSRDestroySpatialReference(), but OSRRelease() "
-"instead when you are done with the object."
+"pszName:  the name for the new layer. This should ideally not match any "
+"existing layer on the datasource."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CreateLayer:22
+#: of osgeo.ogr.DataSource.CreateLayer:23
 msgid ""
-"the geometry type for the layer. Use wkbUnknown if there are no "
+"hSpatialRef:  handle to the coordinate system to use for the new layer, "
+"or NULL if no coordinate system is available. The driver might only "
+"increase the reference counter of the object to take ownership, and not "
+"make a full copy, so do not use OSRDestroySpatialReference(), but "
+"OSRRelease() instead when you are done with the object."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.CreateLayer:29
+msgid ""
+"eType:  the geometry type for the layer. Use wkbUnknown if there are no "
 "constraints on the types geometry to be written."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CreateLayer:24
+#: of osgeo.ogr.DataSource.CreateLayer:32
 msgid ""
-"a StringList of name=value options. Options are driver specific, and "
-"driver information can be found at the following "
+"papszOptions:  a StringList of name=value options. Options are driver "
+"specific, and driver information can be found at the following "
 "url:http://www.gdal.org/ogr_formats.html"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.CreateLayer:28
-msgid "NULL is returned on failure, or a new OGRLayer handle on success."
+#: of osgeo.ogr.DataSource.CreateLayer:36
+msgid "NULL is returned on failure, or a new OGRLayer handle on success. Example:"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.DeleteLayer:1
-msgid "Delete the indicated layer from the datasource."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.DeleteLayer:3
-msgid "For more details: :c:func:`OGR_DS_DeleteLayer`"
-msgstr ""
-
-#: of osgeo.ogr.DataSource.DeleteLayer:5
-msgid "index or name of the layer to delete."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.DeleteLayer:8
-msgid ""
-":py:const:`osgeo.ogr.OGRERR_NONE` on success, or "
-":py:const:`osgeo.ogr.OGRERR_UNSUPPORTED_OPERATION` if deleting layers is "
-"not supported for this datasource."
+msgid "Deletes the layer given an index or layer name"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.Dereference:1 osgeo.ogr.DataSource.Reference:1
@@ -203,8 +160,8 @@ msgstr ""
 
 #: of osgeo.ogr.DataSource.ExecuteSQL:1
 msgid ""
-"OGRLayerH OGR_DS_ExecuteSQL(OGRDataSourceH hDS, const char "
-"\\*pszStatement, OGRGeometryH hSpatialFilter, const char \\*pszDialect)"
+"OGRLayerH OGR_DS_ExecuteSQL(OGRDataSourceH hDS, const char *pszStatement,"
+" OGRGeometryH hSpatialFilter, const char *pszDialect)"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.ExecuteSQL:5
@@ -228,34 +185,36 @@ msgid ""
 msgstr ""
 
 #: of osgeo.ogr.DataSource.ExecuteSQL:18
-msgid "TheSQLITE dialect can also be used."
+msgid "Starting with OGR 1.10, theSQLITE dialect can also be used."
 msgstr ""
 
 #: of osgeo.ogr.DataSource.ExecuteSQL:20
 msgid "Deprecated Use GDALDatasetExecuteSQL() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.ExecuteSQL:22
-msgid "handle to the data source on which the SQL query is executed."
+#: of osgeo.ogr.DataSource.ExecuteSQL:25
+msgid "hDS:  handle to the data source on which the SQL query is executed."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.ExecuteSQL:23
-msgid "the SQL statement to execute."
+#: of osgeo.ogr.DataSource.ExecuteSQL:27
+msgid "pszSQLCommand:  the SQL statement to execute."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.ExecuteSQL:24
-msgid "handle to a geometry which represents a spatial filter. Can be NULL."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.ExecuteSQL:26
+#: of osgeo.ogr.DataSource.ExecuteSQL:29
 msgid ""
-"allows control of the statement dialect. If set to NULL, the OGR SQL "
-"engine will be used, except for RDBMS drivers that will use their "
-"dedicated SQL engine, unless OGRSQL is explicitly passed as the dialect. "
-"The SQLITE dialect can also be used."
+"hSpatialFilter:  handle to a geometry which represents a spatial filter. "
+"Can be NULL."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.ExecuteSQL:31
+#: of osgeo.ogr.DataSource.ExecuteSQL:32
+msgid ""
+"pszDialect:  allows control of the statement dialect. If set to NULL, the"
+" OGR SQL engine will be used, except for RDBMS drivers that will use "
+"their dedicated SQL engine, unless OGRSQL is explicitly passed as the "
+"dialect. Starting with OGR 1.10, the SQLITE dialect can also be used."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.ExecuteSQL:38
 msgid ""
 "a handle to a OGRLayer containing the results of the query. Deallocate "
 "with OGR_DS_ReleaseResultSet()."
@@ -272,19 +231,19 @@ msgstr ""
 #: of osgeo.ogr.DataSource.GetDriver:6
 msgid ""
 "NOTE: Starting with GDAL 2.0, it is NOT safe to cast the returned handle "
-"to OGRSFDriver\\*. If a C++ object is needed, the handle should be cast "
-"to GDALDriver\\*."
+"to OGRSFDriver*. If a C++ object is needed, the handle should be cast to "
+"GDALDriver*."
 msgstr ""
 
 #: of osgeo.ogr.DataSource.GetDriver:10
 msgid "Deprecated Use GDALGetDatasetDriver() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetDriver:12
-msgid "handle to the datasource"
+#: of osgeo.ogr.DataSource.GetDriver:15
+msgid "hDS:  handle to the datasource"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetDriver:14
+#: of osgeo.ogr.DataSource.GetDriver:17
 msgid ""
 "NULL if driver info is not available, or pointer to a driver owned by the"
 " OGRSFDriverManager."
@@ -295,9 +254,7 @@ msgid "Return the layer given an index or a name"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.GetLayerByName:1
-msgid ""
-"OGRLayerH OGR_DS_GetLayerByName(OGRDataSourceH hDS, const char "
-"\\*pszLayerName)"
+msgid "OGRLayerH OGR_DS_GetLayerByName(OGRDataSourceH hDS, const char *pszName)"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.GetLayerByName:4
@@ -314,15 +271,15 @@ msgstr ""
 msgid "Deprecated Use GDALDatasetGetLayerByName() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetLayerByName:11
-msgid "handle to the data source from which to get the layer."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.GetLayerByName:12
-msgid "Layer the layer name of the layer to fetch."
-msgstr ""
-
 #: of osgeo.ogr.DataSource.GetLayerByName:14
+msgid "hDS:  handle to the data source from which to get the layer."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.GetLayerByName:16
+msgid "pszLayerName:  Layer the layer name of the layer to fetch."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.GetLayerByName:18
 msgid ""
 "a handle to the layer, or NULL if the layer is not found or an error "
 "occurs."
@@ -340,16 +297,16 @@ msgstr ""
 msgid "Deprecated Use GDALDatasetGetLayerCount() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetLayerCount:8
-msgid "handle to the data source from which to get the number of layers."
+#: of osgeo.ogr.DataSource.GetLayerCount:11
+msgid "hDS:  handle to the data source from which to get the number of layers."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetLayerCount:11
+#: of osgeo.ogr.DataSource.GetLayerCount:14
 msgid "layer count."
 msgstr ""
 
 #: of osgeo.ogr.DataSource.GetName:1
-msgid "const char\\* OGR_DS_GetName(OGRDataSourceH hDS)"
+msgid "const char* OGR_DS_GetName(OGRDataSourceH hDS)"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.GetName:4
@@ -368,11 +325,11 @@ msgstr ""
 msgid "Deprecated Use GDALGetDescription() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetName:13
-msgid "handle to the data source to get the name from."
+#: of osgeo.ogr.DataSource.GetName:16
+msgid "hDS:  handle to the data source to get the name from."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.GetName:15
+#: of osgeo.ogr.DataSource.GetName:18
 msgid ""
 "pointer to an internal name string which should not be modified or freed "
 "by the caller."
@@ -414,12 +371,12 @@ msgstr ""
 msgid "Deprecated Use GDALDatasetReleaseResultSet() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.ReleaseResultSet:13
-msgid "a handle to the data source on which was executed an SQL query."
+#: of osgeo.ogr.DataSource.ReleaseResultSet:16
+msgid "hDS:  a handle to the data source on which was executed an SQL query."
 msgstr ""
 
-#: of osgeo.ogr.DataSource.ReleaseResultSet:14
-msgid "handle to the result of a previous OGR_DS_ExecuteSQL() call."
+#: of osgeo.ogr.DataSource.ReleaseResultSet:18
+msgid "hLayer:  handle to the result of a previous OGR_DS_ExecuteSQL() call."
 msgstr ""
 
 #: of osgeo.ogr.DataSource.SetStyleTable:1
@@ -443,7 +400,7 @@ msgid "See GDALDataset::FlushCache()"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.TestCapability:1
-msgid "int OGR_DS_TestCapability(OGRDataSourceH hDS, const char \\*pszCapability)"
+msgid "int OGR_DS_TestCapability(OGRDataSourceH hDS, const char *pszCap)"
 msgstr ""
 
 #: of osgeo.ogr.DataSource.TestCapability:4
@@ -488,15 +445,15 @@ msgstr ""
 msgid "Deprecated Use GDALDatasetTestCapability() in GDAL 2.0"
 msgstr ""
 
-#: of osgeo.ogr.DataSource.TestCapability:26
-msgid "handle to the data source against which to test the capability."
-msgstr ""
-
-#: of osgeo.ogr.DataSource.TestCapability:27
-msgid "the capability to test."
-msgstr ""
-
 #: of osgeo.ogr.DataSource.TestCapability:29
+msgid "hDS:  handle to the data source against which to test the capability."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.TestCapability:31
+msgid "pszCapability:  the capability to test."
+msgstr ""
+
+#: of osgeo.ogr.DataSource.TestCapability:33
 msgid "TRUE if capability available otherwise FALSE."
 msgstr ""
 
@@ -516,6 +473,11 @@ msgstr ""
 msgid "Proxy of C++ OGRDriverShadow class."
 msgstr ""
 
+#: of osgeo.ogr.GeomTransformer:1 osgeo.ogr.MajorObject:1
+#: osgeo.ogr.PreparedGeometry:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
 #: of osgeo.ogr.GeomTransformer:1
 msgid "Proxy of C++ OGRGeomTransformerShadow class."
 msgstr ""
@@ -527,4 +489,177 @@ msgstr ""
 #: of osgeo.ogr.PreparedGeometry:1
 msgid "Proxy of C++ OGRPreparedGeometryShadow class."
 msgstr ""
+
+#~ msgid "Proxy of C++ ArrowArray class."
+#~ msgstr ""
+
+#~ msgid "Proxy of C++ ArrowArrayStream class."
+#~ msgstr ""
+
+#~ msgid "Proxy of C++ ArrowSchema class."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OGRLayerH OGR_DS_CopyLayer(OGRDataSourceH hDS, "
+#~ "OGRLayerH hSrcLayer, const char \\*pszNewName,"
+#~ " char \\*\\*papszOptions)"
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "handle to the data source where to create the new layer"
+#~ msgstr ""
+
+#~ msgid "handle to the source layer."
+#~ msgstr ""
+
+#~ msgid "the name of the layer to create."
+#~ msgstr ""
+
+#~ msgid "a StringList of name=value options. Options are driver specific."
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Return type"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OGRLayerH OGR_DS_CreateLayer(OGRDataSourceH hDS, "
+#~ "const char \\*pszName, OGRSpatialReferenceH "
+#~ "hSpatialRef, OGRwkbGeometryType eType, char "
+#~ "\\*\\*papszOptions)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The dataset handle.pszName:  the name "
+#~ "for the new layer. This should "
+#~ "ideally not match any existing layer "
+#~ "on the datasource."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "handle to the coordinate system to "
+#~ "use for the new layer, or NULL "
+#~ "if no coordinate system is available."
+#~ " The driver might only increase the"
+#~ " reference counter of the object to"
+#~ " take ownership, and not make a "
+#~ "full copy, so do not use "
+#~ "OSRDestroySpatialReference(), but OSRRelease() "
+#~ "instead when you are done with the"
+#~ " object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "the geometry type for the layer. "
+#~ "Use wkbUnknown if there are no "
+#~ "constraints on the types geometry to "
+#~ "be written."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "a StringList of name=value options. "
+#~ "Options are driver specific, and driver"
+#~ " information can be found at the "
+#~ "following url:http://www.gdal.org/ogr_formats.html"
+#~ msgstr ""
+
+#~ msgid "NULL is returned on failure, or a new OGRLayer handle on success."
+#~ msgstr ""
+
+#~ msgid "Delete the indicated layer from the datasource."
+#~ msgstr ""
+
+#~ msgid "For more details: :c:func:`OGR_DS_DeleteLayer`"
+#~ msgstr ""
+
+#~ msgid "index or name of the layer to delete."
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":py:const:`osgeo.ogr.OGRERR_NONE` on success, or "
+#~ ":py:const:`osgeo.ogr.OGRERR_UNSUPPORTED_OPERATION` if "
+#~ "deleting layers is not supported for "
+#~ "this datasource."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OGRLayerH OGR_DS_ExecuteSQL(OGRDataSourceH hDS, "
+#~ "const char \\*pszStatement, OGRGeometryH "
+#~ "hSpatialFilter, const char \\*pszDialect)"
+#~ msgstr ""
+
+#~ msgid "TheSQLITE dialect can also be used."
+#~ msgstr ""
+
+#~ msgid "handle to the data source on which the SQL query is executed."
+#~ msgstr ""
+
+#~ msgid "the SQL statement to execute."
+#~ msgstr ""
+
+#~ msgid "handle to a geometry which represents a spatial filter. Can be NULL."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "allows control of the statement dialect."
+#~ " If set to NULL, the OGR SQL"
+#~ " engine will be used, except for "
+#~ "RDBMS drivers that will use their "
+#~ "dedicated SQL engine, unless OGRSQL is"
+#~ " explicitly passed as the dialect. "
+#~ "The SQLITE dialect can also be "
+#~ "used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NOTE: Starting with GDAL 2.0, it "
+#~ "is NOT safe to cast the returned"
+#~ " handle to OGRSFDriver\\*. If a C++"
+#~ " object is needed, the handle should"
+#~ " be cast to GDALDriver\\*."
+#~ msgstr ""
+
+#~ msgid "handle to the datasource"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OGRLayerH OGR_DS_GetLayerByName(OGRDataSourceH hDS, "
+#~ "const char \\*pszLayerName)"
+#~ msgstr ""
+
+#~ msgid "handle to the data source from which to get the layer."
+#~ msgstr ""
+
+#~ msgid "Layer the layer name of the layer to fetch."
+#~ msgstr ""
+
+#~ msgid "handle to the data source from which to get the number of layers."
+#~ msgstr ""
+
+#~ msgid "const char\\* OGR_DS_GetName(OGRDataSourceH hDS)"
+#~ msgstr ""
+
+#~ msgid "handle to the data source to get the name from."
+#~ msgstr ""
+
+#~ msgid "a handle to the data source on which was executed an SQL query."
+#~ msgstr ""
+
+#~ msgid "handle to the result of a previous OGR_DS_ExecuteSQL() call."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "int OGR_DS_TestCapability(OGRDataSourceH hDS, const"
+#~ " char \\*pszCapability)"
+#~ msgstr ""
+
+#~ msgid "handle to the data source against which to test the capability."
+#~ msgstr ""
+
+#~ msgid "the capability to test."
+#~ msgstr ""
 

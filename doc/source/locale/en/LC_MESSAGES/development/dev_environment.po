@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/development/dev_environment.rst:5
 msgid "Setting up a development environment"
@@ -130,71 +130,92 @@ msgid ""
 msgstr ""
 
 #: ../../source/development/dev_environment.rst:84
-msgid "Install GDAL dependencies"
+msgid "Install Visual Studio"
 msgstr ""
 
 #: ../../source/development/dev_environment.rst:86
+msgid ""
+"Install `Visual Studio "
+"<https://visualstudio.microsoft.com/vs/community/>`_ In Visual Studio "
+"Installer Workloads tab check Desktop development with C++. Only the "
+"latest Community Edition (2022) is available."
+msgstr ""
+
+#: ../../source/development/dev_environment.rst:91
+msgid "Install GDAL dependencies"
+msgstr ""
+
+#: ../../source/development/dev_environment.rst:93
 msgid "Start a Conda enabled console and assuming there is a c:\\\\dev directory"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:103
+#: ../../source/development/dev_environment.rst:110
 msgid ""
-"The ``compilers`` package will install ``vs2017_win-64`` (at time of "
-"writing) to set the appropriate environment for cmake to pick up. It is "
-"also possible to use the ``vs2019_win-64`` package if Visual Studio 2019 "
-"is to be used."
+"The ``compilers`` package will install ``vs2019_win-64`` (at time of "
+"writing) to set the appropriate environment for cmake to pick up. It also"
+" finds and works with Visual Studio 2022 if that is installed."
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:108
+#: ../../source/development/dev_environment.rst:115
 msgid "Checkout GDAL sources"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:116
+#: ../../source/development/dev_environment.rst:123
 msgid "Build GDAL"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:118
+#: ../../source/development/dev_environment.rst:125
 msgid "From a Conda enabled console"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:132
+#: ../../source/development/dev_environment.rst:139
 msgid "Run GDAL tests"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:144
+#: ../../source/development/dev_environment.rst:151
 msgid "Setting development environment variables"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:146
+#: ../../source/development/dev_environment.rst:153
 msgid ""
 "Once GDAL has been built, a number of environment variables must be set "
 "to be able to execute C++ or Python utilities of the build directory, or "
 "run tests."
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:149
+#: ../../source/development/dev_environment.rst:156
 msgid "This can be done by sourcing the following from the build directory:"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:155
+#: ../../source/development/dev_environment.rst:162
 msgid ""
 "(with adjustments to the above path if the build directory is not a "
 "subdirectory of the GDAL source root)."
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:157
+#: ../../source/development/dev_environment.rst:164
 msgid ""
 "For Windows, a similar ``scripts/setdevenv.bat`` script exists (it "
 "currently assumes a Release build)."
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:159
+#: ../../source/development/dev_environment.rst:171
 msgid ""
 "To verify that environment variables have been set correctly, you can "
 "check the version of a GDAL binary:"
 msgstr ""
 
-#: ../../source/development/dev_environment.rst:166
+#: ../../source/development/dev_environment.rst:178
 msgid "and the Python bindings:"
 msgstr ""
+
+#~ msgid ""
+#~ "The ``compilers`` package will install "
+#~ "``vs2017_win-64`` (at time of writing) "
+#~ "to set the appropriate environment for"
+#~ " cmake to pick up. It is also"
+#~ " possible to use the ``vs2019_win-64`` "
+#~ "package if Visual Studio 2019 is "
+#~ "to be used."
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-23 17:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/ogr2ogr.rst:5
 msgid "ogr2ogr"
@@ -31,11 +31,11 @@ msgstr ""
 msgid "Synopsis"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:68
+#: ../../source/programs/ogr2ogr.rst:69
 msgid "Description"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:70
+#: ../../source/programs/ogr2ogr.rst:71
 msgid ""
 ":program:`ogr2ogr` can be used to convert simple features data between "
 "file formats. It can also perform various operations during the process, "
@@ -65,33 +65,33 @@ msgid ""
 "extensions."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:83
+#: ../../source/programs/ogr2ogr.rst:84
 msgid ""
 "Output file format name, e.g. ``ESRI Shapefile``, ``MapInfo File``, "
 "``PostgreSQL``.  Starting with GDAL 2.3, if not specified, the format is "
 "guessed from the extension (previously was ESRI Shapefile)."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:89
+#: ../../source/programs/ogr2ogr.rst:90
 msgid ""
 "Append to existing layer instead of creating new. This option also "
 "enables :option:`-update`."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:96
+#: ../../source/programs/ogr2ogr.rst:97
 msgid ""
 "Variant of :option:`-append` where the "
 ":cpp:func:`OGRLayer::UpsertFeature` operation is used to insert or update"
 " features instead of appending with :cpp:func:`OGRLayer::CreateFeature`."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:100
+#: ../../source/programs/ogr2ogr.rst:101
 msgid ""
 "This is currently implemented only in a few drivers: :ref:`vector.gpkg` "
 "and :ref:`vector.mongodbv3`."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:103
+#: ../../source/programs/ogr2ogr.rst:104
 msgid ""
 "The upsert operation uses the FID of the input feature, when it is set "
 "and is a \"significant\" (that is the FID column name is not the empty "
@@ -99,7 +99,7 @@ msgid ""
 "sure that the FID in the source and target layers are consistent."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:108
+#: ../../source/programs/ogr2ogr.rst:109
 msgid ""
 "For the GPKG driver, it is also possible to upsert features whose FID is "
 "unset or non-significant (:option:`-unsetFid` can be used to ignore the "
@@ -107,21 +107,21 @@ msgid ""
 "the integer primary key."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:115
+#: ../../source/programs/ogr2ogr.rst:116
 msgid "Delete the output layer and recreate it empty"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:119
+#: ../../source/programs/ogr2ogr.rst:120
 msgid ""
 "Open existing output datasource in update mode rather than trying to "
 "create a new one"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:124
+#: ../../source/programs/ogr2ogr.rst:125
 msgid "Comma-delimited list of fields from input layer to copy to the new layer."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:126
+#: ../../source/programs/ogr2ogr.rst:127
 msgid ""
 "Starting with GDAL 3.9, field names with spaces, commas or double-quote "
 "should be surrounded with a starting and ending double-quote character, "
@@ -129,51 +129,52 @@ msgid ""
 "backslash."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:130
+#: ../../source/programs/ogr2ogr.rst:131
 msgid ""
 "Depending on the shell used, this might require further quoting. For "
 "example, to select ``regular_field``, ``a_field_with space, and comma`` "
 "and ``a field with \" double quote`` with a Unix shell:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:138
+#: ../../source/programs/ogr2ogr.rst:139
 msgid ""
 "A field is only selected once, even if mentioned several times in the "
 "list and if the input layer has duplicate field names."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:141
+#: ../../source/programs/ogr2ogr.rst:142
 msgid "Geometry fields can also be specified in the list."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:143
+#: ../../source/programs/ogr2ogr.rst:144
 msgid ""
 "All fields are selected when -select is not specified. Specifying the "
 "empty string can be used to disable selecting any attribute field, and "
 "only keep geometries."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:147
+#: ../../source/programs/ogr2ogr.rst:148
 msgid ""
 "Note this setting cannot be used together with ``-append``. To control "
 "the selection of fields when appending to a layer, use ``-fieldmap`` or "
 "``-sql``."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:152
+#: ../../source/programs/ogr2ogr.rst:153
 msgid ""
 "Display progress on terminal. Only works if input layers have the \"fast "
 "feature count\" capability."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:157
+#: ../../source/programs/ogr2ogr.rst:158
 msgid ""
 "SQL statement to execute. The resulting table/layer will be saved to the "
 "output. Starting with GDAL 2.1, the ``@filename`` syntax can be used to "
-"indicate that the content is in the pointed filename."
+"indicate that the content is in the pointed filename. (Cannot be used "
+"with :option:`-spat_srs`.)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:163
+#: ../../source/programs/ogr2ogr.rst:164
 msgid ""
 "SQL dialect. In some cases can be used to use the (unoptimized) "
 ":ref:`ogr_sql_dialect` instead of the native SQL of an RDBMS by passing "
@@ -182,18 +183,18 @@ msgid ""
 " this can be used with any datasource."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:170
+#: ../../source/programs/ogr2ogr.rst:171
 msgid ""
 "Attribute query (like SQL WHERE). Starting with GDAL 2.1, the "
 "``@filename`` syntax can be used to indicate that the content is in the "
 "pointed filename."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:175
+#: ../../source/programs/ogr2ogr.rst:176
 msgid "Continue after a failure, skipping the failed feature."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:179
+#: ../../source/programs/ogr2ogr.rst:180
 msgid ""
 "spatial query extents, in the SRS of the source layer(s) (or the one "
 "specified with ``-spat_srs``). Only features whose geometry intersects "
@@ -201,27 +202,27 @@ msgid ""
 "``-clipsrc`` is specified."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:186
-msgid "Override spatial filter SRS."
+#: ../../source/programs/ogr2ogr.rst:187
+msgid "Override spatial filter SRS. (Cannot be used with :option:`-sql`.)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:190
+#: ../../source/programs/ogr2ogr.rst:191
 msgid "Name of the geometry field on which the spatial filter operates on."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:194
+#: ../../source/programs/ogr2ogr.rst:195
 msgid "Dataset creation option (format specific)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:198
+#: ../../source/programs/ogr2ogr.rst:199
 msgid "Layer creation option (format specific)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:202
+#: ../../source/programs/ogr2ogr.rst:203
 msgid "Assign an alternate name to the new layer"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:206
+#: ../../source/programs/ogr2ogr.rst:207
 msgid ""
 "Define the geometry type for the created layer. One of ``NONE``, "
 "``GEOMETRY``, ``POINT``, ``LINESTRING``, ``POLYGON``, "
@@ -247,13 +248,13 @@ msgid ""
 " Simple Features rules."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:228
+#: ../../source/programs/ogr2ogr.rst:229
 msgid ""
 "Starting with GDAL 3.0.5, ``-nlt CONVERT_TO_LINEAR`` and ``-nlt "
 "PROMOTE_TO_MULTI`` can be used simultaneously."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:233
+#: ../../source/programs/ogr2ogr.rst:234
 msgid ""
 "Force the coordinate dimension to val (valid values are ``XY``, ``XYZ``, "
 "``XYM``, and ``XYZM`` - for backwards compatibility ``2`` is an alias for"
@@ -264,7 +265,7 @@ msgid ""
 "GDAL 2.1."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:242
+#: ../../source/programs/ogr2ogr.rst:243
 msgid ""
 "Assign an output SRS, but without reprojecting (use :option:`-t_srs` to "
 "reproject)"
@@ -279,46 +280,46 @@ msgid ""
 "or the name of a .prj file containing a WKT CRS definition."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:251
+#: ../../source/programs/ogr2ogr.rst:252
 msgid ""
 "Assign a coordinate epoch, linked with the output SRS. Useful when the "
 "output SRS is a dynamic CRS. Only taken into account if :option:`-a_srs` "
 "is used."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:257
+#: ../../source/programs/ogr2ogr.rst:258
 msgid "Reproject/transform to this SRS on output, and assign it as output SRS."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:259
+#: ../../source/programs/ogr2ogr.rst:260
 msgid ""
 "A source SRS must be available for reprojection to occur. The source SRS "
 "will be by default the one found in the source layer when it is "
 "available, or as overridden by the user with :option:`-s_srs`"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:269
+#: ../../source/programs/ogr2ogr.rst:270
 msgid ""
 "Assign a coordinate epoch, linked with the output SRS. Useful when the "
 "output SRS is a dynamic CRS. Only taken into account if :option:`-t_srs` "
 "is used. It is also mutually exclusive with  :option:`-a_coord_epoch`."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:273 ../../source/programs/ogr2ogr.rst:335
+#: ../../source/programs/ogr2ogr.rst:274 ../../source/programs/ogr2ogr.rst:336
 msgid ""
 "Before PROJ 9.4, :option:`-s_coord_epoch` and :option:`-t_coord_epoch` "
 "were mutually exclusive, due to lack of support for transformations "
 "between two dynamic CRS."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:278
+#: ../../source/programs/ogr2ogr.rst:279
 msgid ""
 "Override source SRS. If not specified the SRS found in the input layer "
 "will be used. This option has only an effect if used together with "
 ":option:`-t_srs` to reproject."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:288
+#: ../../source/programs/ogr2ogr.rst:289
 msgid ""
 "Set/override the geometry X/Y coordinate resolution. If only a numeric "
 "value is specified, it is assumed to be expressed in the units of the "
@@ -326,7 +327,7 @@ msgid ""
 "the value must be interpreted as being in meter, millimeter or degree."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:293
+#: ../../source/programs/ogr2ogr.rst:294
 msgid ""
 "When specifying this option, the :cpp:func:`OGRGeometry::SetPrecision` "
 "method is run on geometries (that are not curves) before passing them to "
@@ -336,13 +337,13 @@ msgid ""
 "``NO``)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:299
+#: ../../source/programs/ogr2ogr.rst:300
 msgid ""
 "If neither this option nor :option:`-unsetCoordPrecision` are specified, "
 "the coordinate resolution of the source layer, if available, is used."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:306
+#: ../../source/programs/ogr2ogr.rst:307
 msgid ""
 "Set/override the geometry Z coordinate resolution. If only a numeric "
 "value is specified, it is assumed to be expressed in the units of the "
@@ -352,27 +353,27 @@ msgid ""
 "coordinate resolution of the source layer, if available, is used."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:317
+#: ../../source/programs/ogr2ogr.rst:318
 msgid ""
 "Set/override the geometry M coordinate resolution. If neither this option"
 " nor :option:`-unsetCoordPrecision` are specified, the coordinate "
 "resolution of the source layer, if available, is used."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:325
+#: ../../source/programs/ogr2ogr.rst:326
 msgid ""
 "Prevent the geometry coordinate resolution from being set on target "
 "layer(s)."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:331
+#: ../../source/programs/ogr2ogr.rst:332
 msgid ""
 "Assign a coordinate epoch, linked with the source SRS. Useful when the "
 "source SRS is a dynamic CRS. Only taken into account if :option:`-s_srs` "
 "is used."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:340
+#: ../../source/programs/ogr2ogr.rst:341
 msgid ""
 "A PROJ string (single step operation or multiple step string starting "
 "with +proj=pipeline), a WKT2 string describing a CoordinateOperation, or "
@@ -380,7 +381,7 @@ msgid ""
 "transformation from the source to the target CRS."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:345
+#: ../../source/programs/ogr2ogr.rst:346
 msgid ""
 "It must take into account the axis order of the source and target CRS, "
 "that is typically include a ``step proj=axisswap order=2,1`` at the "
@@ -389,7 +390,7 @@ msgid ""
 "northing/easting axis order."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:354
+#: ../../source/programs/ogr2ogr.rst:355
 msgid ""
 "Use the FID of the source features instead of letting the output driver "
 "automatically assign a new one (for formats that require a FID). If not "
@@ -400,7 +401,7 @@ msgid ""
 "option is not compatible with ``-explodecollections``."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:364
+#: ../../source/programs/ogr2ogr.rst:365
 msgid ""
 "If provided, only the feature with the specified feature id will be "
 "processed.  Operates exclusive of the spatial or attribute queries. Note:"
@@ -409,21 +410,21 @@ msgid ""
 " So, `-where \"fid in (1,3,5)\"` would select features 1, 3 and 5."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:372
+#: ../../source/programs/ogr2ogr.rst:373
 msgid "Limit the number of features per layer."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:376
+#: ../../source/programs/ogr2ogr.rst:377
 msgid "Input dataset open option (format specific)."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:380
+#: ../../source/programs/ogr2ogr.rst:381
 msgid ""
 "Destination dataset open option (format specific), only valid in -update "
 "mode."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:384
+#: ../../source/programs/ogr2ogr.rst:385
 msgid ""
 "Group n features per transaction (default 100 000). Increase the value "
 "for better performance when writing into DBMS drivers that have "
@@ -431,107 +432,107 @@ msgid ""
 "a single transaction."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:391
+#: ../../source/programs/ogr2ogr.rst:392
 msgid ""
 "Force the use of a dataset level transaction (for drivers that support "
 "such mechanism), especially for drivers such as FileGDB that only support"
 " dataset level transaction in emulation mode."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:397
+#: ../../source/programs/ogr2ogr.rst:398
 msgid "Clip geometries (before potential reprojection) to one of the following:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:399
+#: ../../source/programs/ogr2ogr.rst:400
 msgid "the specified bounding box (expressed in source SRS)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:400
+#: ../../source/programs/ogr2ogr.rst:401
 msgid "a WKT geometry (POLYGON or MULTIPOLYGON expressed in source SRS)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:401 ../../source/programs/ogr2ogr.rst:425
+#: ../../source/programs/ogr2ogr.rst:402 ../../source/programs/ogr2ogr.rst:426
 msgid "one or more geometries selected from a datasource"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:402
+#: ../../source/programs/ogr2ogr.rst:403
 msgid "the spatial extent of the -spat option if you use the spat_extent keyword."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:404
+#: ../../source/programs/ogr2ogr.rst:405
 msgid ""
 "When specifying a datasource, you will generally want to use -clipsrc in "
 "combination of the -clipsrclayer, -clipsrcwhere or -clipsrcsql options."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:409
+#: ../../source/programs/ogr2ogr.rst:410
 msgid ""
 "Select desired geometries from the source clip datasource using an SQL "
 "query."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:413
+#: ../../source/programs/ogr2ogr.rst:414
 msgid "Select the named layer from the source clip datasource."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:417
+#: ../../source/programs/ogr2ogr.rst:418
 msgid ""
 "Restrict desired geometries from the source clip layer based on an "
 "attribute query."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:421
+#: ../../source/programs/ogr2ogr.rst:422
 msgid "Clip geometries (after potential reprojection) to one of the following:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:423
+#: ../../source/programs/ogr2ogr.rst:424
 msgid "the specified bounding box (expressed in destination SRS)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:424
+#: ../../source/programs/ogr2ogr.rst:425
 msgid "a WKT geometry (POLYGON or MULTIPOLYGON expressed in destination SRS)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:427
+#: ../../source/programs/ogr2ogr.rst:428
 msgid ""
 "When specifying a datasource, you will generally want to use -clipdst in "
 "combination with the -clipdstlayer, -clipdstwhere or -clipdstsql options."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:432
+#: ../../source/programs/ogr2ogr.rst:433
 msgid ""
 "Select desired geometries from the destination clip datasource using an "
 "SQL query."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:436
+#: ../../source/programs/ogr2ogr.rst:437
 msgid "Select the named layer from the destination clip datasource."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:440
+#: ../../source/programs/ogr2ogr.rst:441
 msgid ""
 "Restrict desired geometries from the destination clip layer based on an "
 "attribute query."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:444
+#: ../../source/programs/ogr2ogr.rst:445
 msgid "Split geometries crossing the dateline meridian (long. = +/- 180deg)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:448
+#: ../../source/programs/ogr2ogr.rst:449
 msgid ""
 "Offset from dateline in degrees (default long. = +/- 10deg, geometries "
 "within 170deg to -170deg will be split)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:453
+#: ../../source/programs/ogr2ogr.rst:454
 msgid ""
 "Distance tolerance for simplification. Note: the algorithm used preserves"
 " topology per feature, in particular for polygon geometries, but not for "
 "a whole layer."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:457
+#: ../../source/programs/ogr2ogr.rst:458
 msgid ""
 "The specified value of this option is the tolerance used to merge "
 "consecutive points of the output geometry using the "
@@ -540,7 +541,7 @@ msgid ""
 "before the reprojection implied by :option:`-t_srs`"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:466
+#: ../../source/programs/ogr2ogr.rst:467
 msgid ""
 "The specified value of this option is the maximum distance between two "
 "consecutive points of the output geometry before intermediate points are "
@@ -549,7 +550,7 @@ msgid ""
 ":option:`-t_srs`"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:473
+#: ../../source/programs/ogr2ogr.rst:474
 msgid ""
 "Run the :cpp:func:`OGRGeometry::MakeValid` operation, followed by "
 ":cpp:func:`OGRGeometryFactory::removeLowerDimensionSubGeoms`, on "
@@ -557,7 +558,15 @@ msgid ""
 "Features specification."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:481
+#: ../../source/programs/ogr2ogr.rst:482
+msgid ""
+"Run the :cpp:func:`OGRGeometry::IsValid` operation on geometries to check"
+" if they are valid regarding the rules of the Simple Features "
+"specification. If they are not, the feature is skipped. This check is "
+"done after all other geometry operations."
+msgstr ""
+
+#: ../../source/programs/ogr2ogr.rst:491
 msgid ""
 "Converts any field of the specified type to a field of type string in the"
 " destination layer. Valid types are : ``Integer``, ``Integer64``, "
@@ -571,7 +580,7 @@ msgid ""
 "and type is hard-coded in the output driver (e.g KML, GPX)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:493
+#: ../../source/programs/ogr2ogr.rst:503
 msgid ""
 "Converts any field of the specified type to another type. Valid types are"
 " : ``Integer``, ``Integer64``, ``Real``, ``String``, ``Date``, ``Time``, "
@@ -587,34 +596,34 @@ msgid ""
 " output driver (e.g KML, GPX)"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:510
+#: ../../source/programs/ogr2ogr.rst:520
 msgid ""
 "Converts date time values from the timezone specified in the source value"
 " to the target timezone expressed with :option:`-dateTimeTo`. Datetime "
 "whose timezone is unknown or localtime are not modified."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:514
+#: ../../source/programs/ogr2ogr.rst:524
 msgid "HH must be in the [0,14] range and MM=00, 15, 30 or 45."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:518
+#: ../../source/programs/ogr2ogr.rst:528
 msgid "Set field width and precision to 0."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:522
+#: ../../source/programs/ogr2ogr.rst:532
 msgid ""
 "Split fields of type StringList, RealList or IntegerList into as many "
 "fields of type String, Real or Integer as necessary."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:527
+#: ../../source/programs/ogr2ogr.rst:537
 msgid ""
 "To be combined with ``-splitlistfields`` to limit the number of subfields"
 " created for each split field."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:532
+#: ../../source/programs/ogr2ogr.rst:542
 msgid ""
 "Produce one feature for each geometry in any kind of geometry collection "
 "in the source file, applied after any ``-sql`` option. This options is "
@@ -623,11 +632,11 @@ msgid ""
 "needed."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:539
+#: ../../source/programs/ogr2ogr.rst:549
 msgid "Uses the specified field to fill the Z coordinate of geometries."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:543
+#: ../../source/programs/ogr2ogr.rst:553
 msgid ""
 "Use the indicated ground control point to compute a coordinate "
 "transformation. The transformation method can be selected by specifying "
@@ -637,17 +646,17 @@ msgid ""
 "set of GCPs (at least 2 GCPs are needed)."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:553
+#: ../../source/programs/ogr2ogr.rst:563
 msgid ""
 "Order of polynomial used for warping (1 to 3). The default is to select a"
 " polynomial order based on the number of GCPs."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:558
+#: ../../source/programs/ogr2ogr.rst:568
 msgid "Force use of thin plate spline transformer based on available GCPs."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:562
+#: ../../source/programs/ogr2ogr.rst:572
 msgid ""
 "Specifies the list of field indexes to be copied from the source to the "
 "destination. The (n)th value specified in the list is the index of the "
@@ -660,7 +669,7 @@ msgid ""
 "setting."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:573
+#: ../../source/programs/ogr2ogr.rst:583
 msgid ""
 "This is a specialized version of ``-append``. Contrary to ``-append``, "
 "``-addfields`` has the effect of adding, to existing target layers, the "
@@ -671,36 +680,36 @@ msgid ""
 " it with -forceNullable, including for the initial import."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:583
+#: ../../source/programs/ogr2ogr.rst:593
 msgid ""
 "Do field name matching between source and existing target layer in a more"
 " relaxed way if the target driver has an implementation for it."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:588
+#: ../../source/programs/ogr2ogr.rst:598
 msgid ""
 "Do not propagate not-nullable constraints to target layer if they exist "
 "in source layer."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:593
+#: ../../source/programs/ogr2ogr.rst:603
 msgid ""
 "Do not propagate default field values to target layer if they exist in "
 "source layer."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:598
+#: ../../source/programs/ogr2ogr.rst:608
 msgid ""
 "Can be specified to prevent the name of the source FID column and source "
 "feature IDs from being re-used for the target layer. This option can for "
 "example be useful if selecting source features with a ORDER BY clause."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:606
+#: ../../source/programs/ogr2ogr.rst:616
 msgid "Treat empty string values as null."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:612
+#: ../../source/programs/ogr2ogr.rst:622
 msgid ""
 "When this is specified, any selected field that is linked to a coded "
 "field domain will be accompanied by an additional field "
@@ -708,44 +717,44 @@ msgid ""
 " value."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:618
+#: ../../source/programs/ogr2ogr.rst:628
 msgid ""
 "To disable copying of metadata from source dataset and layers into target"
 " dataset and layers, when supported by output driver."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:623
+#: ../../source/programs/ogr2ogr.rst:633
 msgid ""
 "Passes a metadata key and value to set on the output dataset, when "
 "supported by output driver."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:628
+#: ../../source/programs/ogr2ogr.rst:638
 msgid ""
 "To disable copying of native data, i.e. details of source format not "
 "captured by OGR abstraction, that are otherwise preserved by some drivers"
 " (like GeoJSON) when converting to same format."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:636
+#: ../../source/programs/ogr2ogr.rst:646
 msgid "Output dataset name."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:640
+#: ../../source/programs/ogr2ogr.rst:650
 msgid "Source dataset name."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:644
+#: ../../source/programs/ogr2ogr.rst:654
 msgid ""
 "One or more source layer names to copy to the output dataset. If no layer"
 " names are passed, then all source layers are copied."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:649
+#: ../../source/programs/ogr2ogr.rst:659
 msgid "Performance Hints"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:651
+#: ../../source/programs/ogr2ogr.rst:661
 msgid ""
 "When writing into transactional DBMS (SQLite/PostgreSQL,MySQL, etc...), "
 "it might be beneficial to increase the number of INSERT statements "
@@ -757,24 +766,24 @@ msgid ""
 " of transactions to 1."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:659
+#: ../../source/programs/ogr2ogr.rst:669
 msgid ""
 "For PostgreSQL, the :config:`PG_USE_COPY` config option can be set to YES"
 " for a significant insertion performance boost. See the PG driver "
 "documentation page."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:662
+#: ../../source/programs/ogr2ogr.rst:672
 msgid ""
 "More generally, consult the documentation page of the input and output "
 "drivers for performance hints."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:666
+#: ../../source/programs/ogr2ogr.rst:676
 msgid "Known issues"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:668
+#: ../../source/programs/ogr2ogr.rst:678
 msgid ""
 "Starting with GDAL 3.8, ogr2ogr uses internally an Arrow array based API "
 "(cf :ref:`rfc-86`) for some source formats (in particular GeoPackage or "
@@ -789,55 +798,55 @@ msgid ""
 "on the `GDAL issue tracker <https://github.com/OSGeo/gdal/issues>`__."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:681
+#: ../../source/programs/ogr2ogr.rst:691
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:683
+#: ../../source/programs/ogr2ogr.rst:693
 msgid "This utility is also callable from C with :cpp:func:`GDALVectorTranslate`."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:688
+#: ../../source/programs/ogr2ogr.rst:698
 msgid "Examples"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:690
+#: ../../source/programs/ogr2ogr.rst:700
 msgid "Basic conversion from Shapefile to GeoPackage:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:696
+#: ../../source/programs/ogr2ogr.rst:706
 msgid ""
 "Change the coordinate reference system from ``EPSG:4326`` to "
 "``EPSG:3857``:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:702
+#: ../../source/programs/ogr2ogr.rst:712
 msgid "Example appending to an existing layer:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:708
+#: ../../source/programs/ogr2ogr.rst:718
 msgid "Clip input layer with a bounding box (<xmin> <ymin> <xmax> <ymax>):"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:714
+#: ../../source/programs/ogr2ogr.rst:724
 msgid "Filter Features by a ``-where`` clause:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:722
+#: ../../source/programs/ogr2ogr.rst:732
 msgid "More examples are given in the individual format pages."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:725
+#: ../../source/programs/ogr2ogr.rst:735
 msgid "Advanced examples"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:727
+#: ../../source/programs/ogr2ogr.rst:737
 msgid ""
 "Reprojecting from ETRS_1989_LAEA_52N_10E to EPSG:4326 and clipping to a "
 "bounding box:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:733
+#: ../../source/programs/ogr2ogr.rst:743
 msgid ""
 "Using the ``-fieldmap`` setting. The first field of the source layer is "
 "used to fill the third field (index 2 = third field) of the target layer,"
@@ -845,34 +854,34 @@ msgid ""
 "source layer used to fill the fifth field of the target layer."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:742
+#: ../../source/programs/ogr2ogr.rst:752
 msgid "Outputting geometries with the CSV driver."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:744
+#: ../../source/programs/ogr2ogr.rst:754
 msgid ""
 "By default, this driver does not preserve geometries on layer creation by"
 " default. An explicit layer creation option is needed:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:751
+#: ../../source/programs/ogr2ogr.rst:761
 msgid "Extracting only geometries."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:753
+#: ../../source/programs/ogr2ogr.rst:763
 msgid ""
 "There are different situations, depending if the input layer has a named "
 "geometry column, or not. First check, with ogrinfo if there is a reported"
 " geometry column."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:761
+#: ../../source/programs/ogr2ogr.rst:771
 msgid ""
 "In that situation where the input format is a FileGeodatabase, it is "
 "called SHAPE and can thus be referenced directly in a SELECT statement."
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:769
+#: ../../source/programs/ogr2ogr.rst:779
 msgid ""
 "For a shapefile with a unnamed geometry column, ``_ogr_geometry_`` can be"
 " used as a special name to designate the implicit geometry column, when "
@@ -883,10 +892,22 @@ msgid ""
 "could look like:"
 msgstr ""
 
-#: ../../source/programs/ogr2ogr.rst:781
+#: ../../source/programs/ogr2ogr.rst:791
 msgid ""
 "If using the :ref:`SQL SQLite <sql_sqlite_dialect>` dialect, the special "
 "geometry name is ``geometry`` when the source geometry column has no "
 "name."
 msgstr ""
+
+#~ msgid ""
+#~ "SQL statement to execute. The resulting"
+#~ " table/layer will be saved to the "
+#~ "output. Starting with GDAL 2.1, the "
+#~ "``@filename`` syntax can be used to "
+#~ "indicate that the content is in "
+#~ "the pointed filename."
+#~ msgstr ""
+
+#~ msgid "Override spatial filter SRS."
+#~ msgstr ""
 

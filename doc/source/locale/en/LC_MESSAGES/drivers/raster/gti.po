@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/gti.rst:5
 msgid "GTI -- GDAL Raster Tile Index"
@@ -370,10 +370,10 @@ msgstr ""
 #: ../../source/drivers/raster/gti.rst:196
 msgid ""
 "``OVERVIEW_<idx>_DATASET=<string>`` where idx is an integer index "
-"starting at 0."
+"(starting at 0 since GDAL 3.9.2, starting at 1 in GDAL 3.9.0 and 3.9.1)"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:198
+#: ../../source/drivers/raster/gti.rst:199
 msgid ""
 "Name of the dataset to use as the first overview level. This may be a "
 "raster dataset (for example a GeoTIFF file, or another GTI dataset). This"
@@ -381,23 +381,38 @@ msgid ""
 "specified with ``OVERVIEW_<idx>_LAYER``."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:203
+#: ../../source/drivers/raster/gti.rst:204
 msgid ""
-"``OVERVIEW_<idx>_OPEN_OPTIONS=<key1=value1>[,key2=value2]...`` where idx "
-"is an integer index starting at 0."
+"Starting with GDAL 3.9.2, overviews of "
+"``OVERVIEW_<idx>_DATASET=<string>`` are also automatically added, unless "
+"``OVERVIEW_<idx>_OPEN_OPTIONS=OVERVIEW_LEVEL=NONE`` is specified."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:205
+#: ../../source/drivers/raster/gti.rst:208
+msgid ""
+"``OVERVIEW_<idx>_OPEN_OPTIONS=<key1=value1>[,key2=value2]...`` where idx "
+"is an integer index (starting at 0 since GDAL 3.9.2, starting at 1 in "
+"GDAL 3.9.0 and 3.9.1)"
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:211
 msgid "Open options(s) to use to open ``OVERVIEW_<idx>_DATASET``."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:207
+#: ../../source/drivers/raster/gti.rst:213
 msgid ""
-"``OVERVIEW_<idx>_LAYER=<string>`` where idx is an integer index starting "
-"at 0."
+"``OVERVIEW_<idx>_LAYER=<string>`` where idx is an integer index (starting"
+" at 0 since GDAL 3.9.2, starting at 1 in GDAL 3.9.0 and 3.9.1)"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:209
+#: ../../source/drivers/raster/gti.rst:216
+#: ../../source/drivers/raster/gti.rst:229
+msgid ""
+"Only taken into account if ``OVERVIEW_<idx>_DATASET=<string>`` is not "
+"specified, or points to a GTI dataset."
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:219
 msgid ""
 "Name of the vector layer to use as the first overview level, assuming "
 "``OVERVIEW_<idx>_DATASET`` points to a vector dataset. "
@@ -405,16 +420,19 @@ msgid ""
 "vector dataset of the full resolution virtual mosaic is used."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:214
+#: ../../source/drivers/raster/gti.rst:224
 msgid ""
-"``OVERVIEW_<idx>_FACTOR=<int>`` where idx is an integer index starting at"
-" 0."
+"``OVERVIEW_<idx>_FACTOR=<int>`` where idx is an integer index (starting "
+"at 0 since GDAL 3.9.2, starting at 1 in GDAL 3.9.0 and 3.9.1)"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:216
+#: ../../source/drivers/raster/gti.rst:227
+msgid "Sub-sampling factor, strictly greater than 1."
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:232
 msgid ""
-"Sub-sampling factor, strictly greater than 1. If "
-"``OVERVIEW_<idx>_DATASET`` and ``OVERVIEW_<idx>_LAYER`` are not "
+"If ``OVERVIEW_<idx>_DATASET`` and ``OVERVIEW_<idx>_LAYER`` are not "
 "specified, then all tiles of the full resolution virtual mosaic are used,"
 " with the specified sub-sampling factor (it is recommended, but not "
 "required, that those tiles do have a corresponding overview). "
@@ -422,21 +440,27 @@ msgid ""
 "specified to point to another tile index."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:223
+#: ../../source/drivers/raster/gti.rst:238
 msgid ""
 "All overviews *must* have exactly the same extent as the full resolution "
 "virtual mosaic. The GTI driver does not check that, and if that condition"
 " is not met, subsampled pixel request will lead to incorrect result."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:227
+#: ../../source/drivers/raster/gti.rst:242
+msgid ""
+"They also must be listed by decreasing size with increasing overview "
+"index."
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:244
 msgid ""
 "In addition to those layer metadata items, the dataset-level metadata "
 "item ``TILE_INDEX_LAYER`` may be set to indicate, for dataset with "
 "multiple layers, which one should be used as the tile index layer."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:231
+#: ../../source/drivers/raster/gti.rst:248
 msgid ""
 "Alternatively to setting those metadata items individually, the "
 "corresponding information can be grouped together in a GTI XML document, "
@@ -444,47 +468,47 @@ msgid ""
 "that support alternate metadata domains such as GeoPackage)"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:237
+#: ../../source/drivers/raster/gti.rst:254
 msgid "GTI XML format"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:239
+#: ../../source/drivers/raster/gti.rst:256
 msgid ""
 "A `XML schema of the GDAL GTI format "
 "<https://raw.githubusercontent.com/OSGeo/gdal/master/data/gdaltileindex.xsd>`_"
 " is available."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:242
+#: ../../source/drivers/raster/gti.rst:259
 msgid ""
 "The following artificial example contains all potential elements and "
 "attributes. A number of them have similar name and same semantics as "
 "layer metadata items mentioned in the previous section."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:334
+#: ../../source/drivers/raster/gti.rst:352
 msgid "At the GDALTileIndexDataset level, the elements specific to GTI XML are:"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:336
+#: ../../source/drivers/raster/gti.rst:354
 msgid ""
 "``Filter``: value of a SQL WHERE clause, used to select a subset of the "
 "features of the index."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:339
+#: ../../source/drivers/raster/gti.rst:357
 msgid ""
 "``BlockXSize`` / ``BlockYSize``: dimension of the block size of bands. "
 "Defaults to 256x256"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:342
+#: ../../source/drivers/raster/gti.rst:360
 msgid ""
 "``Metadata``: defines dataset-level metadata. You can refer to the "
 "documentation of the :ref:`VRT <raster.vrt>` driver for its syntax."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:345
+#: ../../source/drivers/raster/gti.rst:363
 msgid ""
 "At the Band level, the elements specific to GTI XML are: Description, "
 "Offset, Scale, UnitType, ColorTable, CategoryNames, "
@@ -492,29 +516,91 @@ msgid ""
 " the :ref:`VRT <raster.vrt>` driver for their syntax and semantics."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:353
+#: ../../source/drivers/raster/gti.rst:371
 msgid "How to build a GTI comptatible index ?"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:355
+#: ../../source/drivers/raster/gti.rst:373
 msgid ""
 "The :ref:`gdaltindex` program may be used to generate both a vector tile "
 "index, and optionally a wrapping .gti XML file."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:358
+#: ../../source/drivers/raster/gti.rst:376
 msgid ""
 "A GTI comptatible index may also be created by any programmatic means, "
 "provided the above format specifications are met."
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:363
+#: ../../source/drivers/raster/gti.rst:381
 msgid "Open options"
 msgstr ""
 
-#: ../../source/drivers/raster/gti.rst:365
+#: ../../source/drivers/raster/gti.rst:383
 msgid ""
 "|about-open-options| The following open options are available. Most of "
 "them can be also defined as layer metadata items or in the .gti XML file"
 msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:454
+msgid "Multi-threading optimizations"
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:456
+msgid ""
+"Starting with GDAL 3.10, the :oo:`NUM_THREADS` open option can be set to "
+"control specifically the multi-threading of GTI datasets. It defaults to "
+"``ALL_CPUS``, and when set, overrides :config:`GDAL_NUM_THREADS` or "
+":config:`GTI_NUM_THREADS`. It applies to band-level and dataset-level "
+"RasterIO(), if more than 1 million pixels are requested and if the mosaic"
+" is made of only non-overlapping tiles."
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:470
+msgid ""
+"This can also be specified globally with the :config:`GTI_NUM_THREADS` "
+"configuration option."
+msgstr ""
+
+#: ../../source/drivers/raster/gti.rst:480
+msgid ""
+"Note that the number of threads actually used is also limited by the "
+":config:`GDAL_MAX_DATASET_POOL_SIZE` configuration option."
+msgstr ""
+
+#~ msgid ""
+#~ "``OVERVIEW_<idx>_DATASET=<string>`` where idx is "
+#~ "an integer index starting at 0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``OVERVIEW_<idx>_OPEN_OPTIONS=<key1=value1>[,key2=value2]...`` "
+#~ "where idx is an integer index "
+#~ "starting at 0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``OVERVIEW_<idx>_LAYER=<string>`` where idx is "
+#~ "an integer index starting at 0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``OVERVIEW_<idx>_FACTOR=<int>`` where idx is "
+#~ "an integer index starting at 0."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sub-sampling factor, strictly greater "
+#~ "than 1. If ``OVERVIEW_<idx>_DATASET`` and "
+#~ "``OVERVIEW_<idx>_LAYER`` are not specified, "
+#~ "then all tiles of the full "
+#~ "resolution virtual mosaic are used, with"
+#~ " the specified sub-sampling factor "
+#~ "(it is recommended, but not required,"
+#~ " that those tiles do have a "
+#~ "corresponding overview). ``OVERVIEW_<idx>_DATASET`` "
+#~ "and/or ``OVERVIEW_<idx>_LAYER`` may also be"
+#~ " specified to point to another tile"
+#~ " index."
+#~ msgstr ""
 

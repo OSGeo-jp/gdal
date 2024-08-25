@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-26 03:03+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/development/rfc/rfc73_proj6_wkt2_srsbarn.rst:5
 msgid ""
@@ -435,7 +435,7 @@ msgstr ""
 
 #: ../../source/development/rfc/rfc73_proj6_wkt2_srsbarn.rst:256
 msgid ""
-"The gdalinfo, ogrinfo and gdalsrsinfo utililies will default to "
+"The gdalinfo, ogrinfo and gdalsrsinfo utilities will default to "
 "outputting WKT2:2018"
 msgstr ""
 
@@ -870,4 +870,10 @@ msgstr ""
 #: ../../source/development/rfc/rfc73_proj6_wkt2_srsbarn.rst:549
 msgid "2019-May-02: change mentions of GDAL 2.5 to GDAL 3.0"
 msgstr ""
+
+#~ msgid ""
+#~ "The gdalinfo, ogrinfo and gdalsrsinfo "
+#~ "utililies will default to outputting "
+#~ "WKT2:2018"
+#~ msgstr ""
 

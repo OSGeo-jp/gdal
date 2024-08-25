@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/dxf.rst:4
 msgid "AutoCAD DXF"
@@ -76,42 +76,36 @@ msgstr ""
 
 #: ../../source/drivers/vector/dxf.rst:37
 msgid ""
-"ExtendedEntity (GDAL <= 2.2.x): The values of extended entity attributes "
-"all appended to form a single text field, where available."
+"RawCodeValues: A string list containing all group codes and values that "
+"are not handled by the DXF reader. Only available when the configuration "
+"option :config:`DXF_INCLUDE_RAW_CODE_VALUES=TRUE`."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:39
-msgid ""
-"RawCodeValues (GDAL >= 2.3.0): A string list containing all group codes "
-"and values that are not handled by the DXF reader. Only available when "
-"the configuration option :config:`DXF_INCLUDE_RAW_CODE_VALUES=TRUE`."
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:48
+#: ../../source/drivers/vector/dxf.rst:46
 msgid "Linetype: Where available, the line type used for this entity."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:49
+#: ../../source/drivers/vector/dxf.rst:47
 msgid "EntityHandle: The hexadecimal entity handle. A sort of feature id."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:50
+#: ../../source/drivers/vector/dxf.rst:48
 msgid "Text: The text of labels."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:53
+#: ../../source/drivers/vector/dxf.rst:51
 msgid "Supported Entities"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:55
+#: ../../source/drivers/vector/dxf.rst:53
 msgid "The following entity types are supported:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:57
+#: ../../source/drivers/vector/dxf.rst:55
 msgid "POINT: Produces a simple POINT geometry feature."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:58
+#: ../../source/drivers/vector/dxf.rst:56
 #, python-format
 msgid ""
 "MTEXT, TEXT: Produces a POINT feature with LABEL style information. The "
@@ -125,7 +119,7 @@ msgid ""
 ":config:`DXF_TRANSLATE_ESCAPE_SEQUENCES=FALSE`."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:72
+#: ../../source/drivers/vector/dxf.rst:70
 msgid ""
 "LINE, POLYLINE, LWPOLYLINE: Translated as a LINESTRING. Rounded polylines"
 " (those with their vertices' bulge attributes set) will be tessellated. "
@@ -133,31 +127,33 @@ msgid ""
 "translated as POLYHEDRALSURFACE geometries."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:76
-msgid "MLINE:"
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:78
+#: ../../source/drivers/vector/dxf.rst:75
 msgid ""
-"(GDAL >= 2.3.0) Translated as a MULTILINESTRING. Only the geometry is "
-"reconstructed; styling applied to individual line elements within the "
-"MLINE is ignored. Fill colors and start/end caps are also omitted."
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:82
-#: ../../source/drivers/vector/dxf.rst:166
-msgid "(GDAL <= 2.2.x) No support."
+"Starting with GDAL 3.10, the :config:`DXF_CLOSED_LINE_AS_POLYGON` "
+"configuration option can be set to TRUE to ask for closed POLYLINE and "
+"LWPOLYLINE to be exposed as OGR polygons."
 msgstr ""
 
 #: ../../source/drivers/vector/dxf.rst:84
 msgid ""
-"CIRCLE, ELLIPSE, ARC, SPLINE, (GDAL >= 2.3.0) HELIX: Translated as a "
-"LINESTRING, tessellating the curve into line segments. (GDAL >= 2.3.0) "
+"MLINE: Translated as a MULTILINESTRING. Only the geometry is "
+"reconstructed; styling applied to individual line elements within the "
+"MLINE is ignored. Fill colors and start/end caps are also omitted."
+msgstr ""
+
+#: ../../source/drivers/vector/dxf.rst:89
+msgid ""
+"CIRCLE, ELLIPSE, ARC, SPLINE,HELIX: Translated as a LINESTRING, "
+"tessellating the curve into line segments."
+msgstr ""
+
+#: ../../source/drivers/vector/dxf.rst:92
+msgid ""
 "CIRCLEs with nonzero \"thickness\" (cylinders) are approximated as a "
 "POLYHEDRALSURFACE."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:88
+#: ../../source/drivers/vector/dxf.rst:95
 msgid ""
 "INSERT: By default, the block definition referenced by the INSERT will be"
 " inserted as a compound geometry (for example, a MULTILINESTRING for a "
@@ -167,90 +163,60 @@ msgid ""
 "as separate features."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:95
+#: ../../source/drivers/vector/dxf.rst:102
 msgid ""
 "Three configuration options are available to control the behavior of "
 "INSERT entities:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:118
-msgid "ATTDEF, ATTRIB:"
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:120
+#: ../../source/drivers/vector/dxf.rst:126
 msgid ""
-"(GDAL >= 2.3.0) Attributes (ATTRIB) are treated as TEXT entities, and "
+"ATTDEF, ATTRIB: Attributes (ATTRIB) are treated as TEXT entities, and "
 "attribute definitions (ATTDEF) inside blocks are ignored. The behavior is"
 " different when :config:`DXF_INLINE_BLOCKS` is false (see below)."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:123
-msgid ""
-"(GDAL <= 2.2.x) ATTDEF entities are treated as TEXT. ATTRIB entities are "
-"not supported."
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:126
+#: ../../source/drivers/vector/dxf.rst:130
 msgid ""
 "HATCH: Line and arc boundaries are collected as a polygon geometry, but "
 "no effort is currently made to represent the fill style of HATCH "
 "entities. Behavior is affected by the following configuration option:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:137
-msgid ""
-"(GDAL <= 2.2.x) Only line and polyline boundary paths are translated "
-"correctly."
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:140
+#: ../../source/drivers/vector/dxf.rst:141
 msgid ""
 "3DFACE, SOLID, (GDAL >= 2.3.0) TRACE: Translated as POLYGON, except for "
 "SOLID and TRACE entities with only one distinct vertex (translated as "
 "POINT) or two distinct vertices (translated as LINESTRING)."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:144
-msgid "DIMENSION:"
-msgstr ""
-
 #: ../../source/drivers/vector/dxf.rst:146
 msgid ""
-"(GDAL >= 2.3.0) The DXF format allows each DIMENSION entity to reference "
-"an \"anonymous\" block (a block whose name starts with \\*D) that "
-"contains the geometry of the DIMENSION. If present, this anonymous block "
-"will be inlined at the required position. Otherwise, fallback will occur "
-"to a simple DIMENSION renderer that explodes a linear dimension as a "
+"DIMENSION: The DXF format allows each DIMENSION entity to reference an "
+"\"anonymous\" block (a block whose name starts with \\*D) that contains "
+"the geometry of the DIMENSION. If present, this anonymous block will be "
+"inlined at the required position. Otherwise, fallback will occur to a "
+"simple DIMENSION renderer that explodes a linear dimension as a "
 "MULTILINESTRING feature. Arrowheads, if present, are translated as one or"
 " more additional features. The fallback renderer will render nonlinear "
 "dimensions as if they were linear."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:155
+#: ../../source/drivers/vector/dxf.rst:156
 msgid ""
-"(GDAL <= 2.2.x) Dimensions are translated as a MULTILINESTRING and a "
-"POINT for the text."
+"LEADER, MULTILEADER: The leader line is translated as a LINESTRING "
+"(LEADER) or MULTILINESTRING (MULTILEADER). Arrowheads, if present, are "
+"translated as one or more additional features. Text for MULTILEADER "
+"entities is translated into a POINT feature with a label. Block content "
+"for MULTILEADERS is treated as for INSERT. Spline leaders are tessellated"
+" into line segments."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:158
-msgid "LEADER, MULTILEADER:"
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:160
-msgid ""
-"(GDAL >= 2.3.0) The leader line is translated as a LINESTRING (LEADER) or"
-" MULTILINESTRING (MULTILEADER). Arrowheads, if present, are translated as"
-" one or more additional features. Text for MULTILEADER entities is "
-"translated into a POINT feature with a label. Block content for "
-"MULTILEADERS is treated as for INSERT. Spline leaders are tessellated "
-"into line segments."
-msgstr ""
-
-#: ../../source/drivers/vector/dxf.rst:168
+#: ../../source/drivers/vector/dxf.rst:163
 msgid "3DSOLID, REGION, BODY, SURFACE: See below."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:170
+#: ../../source/drivers/vector/dxf.rst:165
 msgid ""
 "A reasonable attempt is made to preserve color, line width (lineweight), "
 "line type, text size and orientation via OGR feature styling information "
@@ -259,20 +225,20 @@ msgid ""
 "styles."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:176
+#: ../../source/drivers/vector/dxf.rst:171
 msgid ""
 "The :config:`OGR_ARC_STEPSIZE` and :config:`OGR_ARC_MAX_GAP` "
 "configurations options control the approximation of arcs, ellipses, "
 "circles and rounded polylines as linestrings."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:180
+#: ../../source/drivers/vector/dxf.rst:175
 msgid ""
 "For splines, the interpolated polyline contains eight vertices for each "
 "control point."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:183
+#: ../../source/drivers/vector/dxf.rst:178
 msgid ""
 "Object coordinate systems (OCS), also known as \"extrusions\", are "
 "supported for all entities to which they apply as per the DXF "
@@ -281,11 +247,11 @@ msgid ""
 "will always be 2D."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:190
+#: ../../source/drivers/vector/dxf.rst:188
 msgid "DXF_INLINE_BLOCKS"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:192
+#: ../../source/drivers/vector/dxf.rst:190
 msgid ""
 "The default behavior is for INSERT entities to be exploded with the "
 "geometry of the BLOCK they reference. However, if the "
@@ -293,7 +259,7 @@ msgid ""
 "FALSE, then the behavior is different as described here."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:197
+#: ../../source/drivers/vector/dxf.rst:195
 msgid ""
 "A new layer will be available called \"blocks\". It will contain one or "
 "more features for each BLOCK defined in the file. In addition to the "
@@ -302,41 +268,41 @@ msgid ""
 "BlockName.)"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:202
+#: ../../source/drivers/vector/dxf.rst:200
 msgid ""
 "(GDAL >= 2.3.0) ATTDEF entities in the blocks layer will have an "
 "AttributeTag field, giving the tag of the ATTDEF entity."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:204
+#: ../../source/drivers/vector/dxf.rst:202
 msgid "The entities layer will have several new fields:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:206
+#: ../../source/drivers/vector/dxf.rst:204
 msgid "BlockName: The name of the referenced block."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:207
+#: ../../source/drivers/vector/dxf.rst:205
 msgid "BlockScale: The X, Y, and Z scale factors."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:208
+#: ../../source/drivers/vector/dxf.rst:206
 msgid "BlockAngle: The angle of the block in degrees."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:209
+#: ../../source/drivers/vector/dxf.rst:207
 msgid ""
 "BlockOCSNormal (GDAL >= 2.3.0): The unit normal vector of the object "
 "coordinate system (OCS) of the INSERT entity."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:211
+#: ../../source/drivers/vector/dxf.rst:209
 msgid ""
 "BlockOCSCoords (GDAL >= 2.3.0): The OCS coordinates of the insertion "
 "point."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:213
+#: ../../source/drivers/vector/dxf.rst:211
 msgid ""
 "BlockAttributes (GDAL >= 2.3.0): The text content of attributes "
 "associated with this block. Each entry in this string list contains an "
@@ -344,19 +310,19 @@ msgid ""
 "attribute (which may be empty)."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:218
+#: ../../source/drivers/vector/dxf.rst:216
 msgid ""
 "INSERT entities will populate these new fields with the corresponding "
 "information (they are null for all other entities)."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:220
+#: ../../source/drivers/vector/dxf.rst:218
 msgid ""
 "INSERT entities will not have block geometry inlined - instead they will "
 "have a POINT geometry for the insertion point."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:223
+#: ../../source/drivers/vector/dxf.rst:221
 msgid ""
 "The intention is that with :config:`DXF_INLINE_BLOCKS` disabled, the "
 "block references will remain as references and the original block "
@@ -364,11 +330,11 @@ msgid ""
 "configuration will result in the creation of similar blocks."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:229
+#: ../../source/drivers/vector/dxf.rst:227
 msgid "3D Extensibility"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:231
+#: ../../source/drivers/vector/dxf.rst:229
 msgid ""
 "DXF files may contain 3DSOLID, REGION, BODY and SURFACE entities, which "
 "contain 3D modelling data in the proprietary Autodesk ShapeManager (ASM) "
@@ -377,31 +343,31 @@ msgid ""
 "default."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:236
+#: ../../source/drivers/vector/dxf.rst:234
 msgid "This behavior can be controlled with the following configuration option:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:246
+#: ../../source/drivers/vector/dxf.rst:244
 msgid "ASMData: A binary field that contains the ASM data."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:247
+#: ../../source/drivers/vector/dxf.rst:245
 msgid ""
 "ASMTransform: A column-major list of 12 real values indicating the affine"
 " transformation to be applied to the entity."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:250
+#: ../../source/drivers/vector/dxf.rst:248
 msgid ""
 "This feature only works for DXF files in AutoCAD 2013 (AC1027) format and"
 " later."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:254
+#: ../../source/drivers/vector/dxf.rst:252
 msgid "Character Encodings"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:256
+#: ../../source/drivers/vector/dxf.rst:254
 msgid ""
 "Normally DXF files are in the ANSI_1252 / Win1252 encoding. GDAL/OGR "
 "attempts to translate this to UTF-8 when reading and back into ANSI_1252 "
@@ -412,18 +378,26 @@ msgid ""
 "for character recoding."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:264
+#: ../../source/drivers/vector/dxf.rst:262
 msgid ""
 "In some cases the $DWGCODEPAGE setting in a DXF file will be wrong, or "
 "unrecognised by OGR. In this case, :config:`DXF_ENCODING` may be used to "
 "override what id will be used by OGR in transcoding:"
 msgstr ""
 
+#: ../../source/drivers/vector/dxf.rst:274
+msgid "Open options"
+msgstr ""
+
 #: ../../source/drivers/vector/dxf.rst:278
+msgid "|about-open-options| The following open options are supported:"
+msgstr ""
+
+#: ../../source/drivers/vector/dxf.rst:337
 msgid "DXF Writer"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:280
+#: ../../source/drivers/vector/dxf.rst:339
 msgid ""
 "DXF files are written in AutoCAD 2004 format. A standard header "
 "(everything up to the ENTITIES keyword) is written from the "
@@ -432,17 +406,17 @@ msgid ""
 "file (but many DXF layers can be created - see below)."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:286
+#: ../../source/drivers/vector/dxf.rst:345
 msgid ""
 "Point features with LABEL styling are written as MTEXT entities based on "
 "the styling information."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:288
+#: ../../source/drivers/vector/dxf.rst:347
 msgid "Point features without LABEL styling are written as POINT entities."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:289
+#: ../../source/drivers/vector/dxf.rst:348
 msgid ""
 "LineString and MultiLineString features are written as one or more "
 "LWPOLYLINE entities, closed in the case of polygon rings. If the geometry"
@@ -450,75 +424,75 @@ msgid ""
 "effort is made to preserve line width and color."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:293
+#: ../../source/drivers/vector/dxf.rst:352
 msgid ""
 "Polygon, Triangle and MultiPolygon features are written as HATCH entities"
 " by default. To write these features as LWPOLYLINE/POLYLINE entities "
 "instead, set the configuration option :config:`DXF_WRITE_HATCH=FALSE`:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:304
+#: ../../source/drivers/vector/dxf.rst:363
 msgid ""
 "You may need to do this if your geometries do not have a constant "
 "elevation, as the DXF HATCH entity cannot represent such geometries."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:308
+#: ../../source/drivers/vector/dxf.rst:367
 msgid ""
 "Only the first tool (PEN, BRUSH, etc) in the style string is read. The "
 "following style string parameters are understood:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:314
+#: ../../source/drivers/vector/dxf.rst:373
 msgid "Tool"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:315
+#: ../../source/drivers/vector/dxf.rst:374
 msgid "Available on geometry types"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:316
+#: ../../source/drivers/vector/dxf.rst:375
 msgid "Supported parameters"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:317
+#: ../../source/drivers/vector/dxf.rst:376
 msgid "PEN"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:318
+#: ../../source/drivers/vector/dxf.rst:377
 msgid "Point, (Multi)LineString"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:319
+#: ../../source/drivers/vector/dxf.rst:378
 msgid "color (c); width (w); dash pattern (p)"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:320
+#: ../../source/drivers/vector/dxf.rst:379
 msgid "BRUSH"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:321
+#: ../../source/drivers/vector/dxf.rst:380
 msgid "(Multi)Polygon, Triangle"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:322
+#: ../../source/drivers/vector/dxf.rst:381
 msgid "foreground color (fc)"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:323
+#: ../../source/drivers/vector/dxf.rst:382
 msgid "SYMBOL"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:324
-#: ../../source/drivers/vector/dxf.rst:327
+#: ../../source/drivers/vector/dxf.rst:383
+#: ../../source/drivers/vector/dxf.rst:386
 msgid "Point"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:325
+#: ../../source/drivers/vector/dxf.rst:384
 msgid "color (c)"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:326
+#: ../../source/drivers/vector/dxf.rst:385
 msgid "LABEL"
 msgstr ""
 
@@ -542,24 +516,24 @@ msgstr ""
 msgid "color (c); angle (a); anchor point (p)"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:334
+#: ../../source/drivers/vector/dxf.rst:393
 msgid ""
 "|about-dataset-creation-options| The driver supports the following "
 "dataset creation options:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:349
+#: ../../source/drivers/vector/dxf.rst:408
 msgid ""
 "The header and trailer templates can be complete DXF files. The driver "
 "will scan them and only extract the needed portions (portion before or "
 "after the ENTITIES section)."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:354
+#: ../../source/drivers/vector/dxf.rst:413
 msgid "Block References"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:356
+#: ../../source/drivers/vector/dxf.rst:415
 msgid ""
 "It is possible to export a \"blocks\" layer to DXF in addition to the "
 "\"entities\" layer in order to produce actual DXF BLOCKs definitions in "
@@ -568,19 +542,19 @@ msgid ""
 "conditions apply:"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:362
+#: ../../source/drivers/vector/dxf.rst:421
 msgid ""
 "A \"blocks\" layer may be created, and it must be created before the "
 "entities layer."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:364
+#: ../../source/drivers/vector/dxf.rst:423
 msgid ""
 "The entities in the blocks layer should have the Block field populated. "
 "(Note, in GDAL 2.2.x and earlier this attribute was called BlockName.)"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:367
+#: ../../source/drivers/vector/dxf.rst:426
 msgid ""
 "Objects to be written as INSERTs in the entities layer should have a "
 "POINT geometry, and the BlockName field set. You may also set BlockAngle,"
@@ -590,14 +564,14 @@ msgid ""
 "situation the position of the POINT geometry is ignored."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:373
+#: ../../source/drivers/vector/dxf.rst:432
 msgid ""
 "If a block (name) is already defined in the template header, that will be"
 " used regardless of whether a new definition was provided in the blocks "
 "layer."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:377
+#: ../../source/drivers/vector/dxf.rst:436
 msgid ""
 "The intention is that a simple translation from DXF to DXF with "
 ":config:`DXF_INLINE_BLOCKS` set to FALSE will approximately reproduce the"
@@ -605,11 +579,11 @@ msgid ""
 "exploding them."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:383
+#: ../../source/drivers/vector/dxf.rst:442
 msgid "Layer Definitions"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:385
+#: ../../source/drivers/vector/dxf.rst:444
 msgid ""
 "When writing entities, if populated the Layer field is used to set the "
 "written entities layer. If the layer is not already defined in the "
@@ -617,17 +591,17 @@ msgid ""
 "from the definition of the default layer (\"0\")."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:391
+#: ../../source/drivers/vector/dxf.rst:450
 msgid "Linetype Definitions"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:393
+#: ../../source/drivers/vector/dxf.rst:452
 msgid ""
 "When writing linestring geometries, the following rules apply with regard"
 " to linetype (dash pattern) definitions."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:396
+#: ../../source/drivers/vector/dxf.rst:455
 msgid ""
 "If the Linetype field is set on a written feature, and that linetype is "
 "already defined in the template header, then it will be referenced from "
@@ -636,14 +610,14 @@ msgid ""
 "value is written."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:401
+#: ../../source/drivers/vector/dxf.rst:460
 msgid ""
 "If the Linetype field is set, but the linetype is not defined in the "
 "header template, then a definition will be added if the feature has an "
 "OGR style string with a PEN tool and a \"p\" pattern setting."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:404
+#: ../../source/drivers/vector/dxf.rst:463
 msgid ""
 "If the feature has no Linetype field set, but it does have an OGR style "
 "string with a PEN tool with a \"p\" pattern set, then an automatically "
@@ -652,25 +626,25 @@ msgid ""
 " linetype scale if required."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:410
+#: ../../source/drivers/vector/dxf.rst:469
 msgid ""
 "The intention is that \"dot dash\" style patterns will be preserved when "
 "written to DXF and that specific linetypes can be predefined in the "
 "header template, and referenced using the Linetype field if desired."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:414
+#: ../../source/drivers/vector/dxf.rst:473
 msgid ""
 "It is assumed that patterns are using \"g\" (georeferenced) units for "
 "defining the line pattern. If not, the scaling of the DXF patterns is "
 "likely to be wrong - potentially very wrong."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:419
+#: ../../source/drivers/vector/dxf.rst:478
 msgid "Units"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:421
+#: ../../source/drivers/vector/dxf.rst:480
 msgid ""
 "GDAL writes DXF files with measurement units set to \"Imperial - "
 "Inches\". If you need to change the units, edit the `$MEASUREMENT "
@@ -683,25 +657,132 @@ msgid ""
 " template."
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:432
+#: ../../source/drivers/vector/dxf.rst:491
 msgid "See also"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:434
+#: ../../source/drivers/vector/dxf.rst:493
 msgid ""
 "`List of known issues "
 "<https://github.com/OSGeo/gdal/blob/master/ogr/ogrsf_frmts/dxf/KNOWN_ISSUES.md>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:437
+#: ../../source/drivers/vector/dxf.rst:496
 msgid ""
 "`AutoCAD 2000 DXF Reference "
 "<http://www.autodesk.com/techpubs/autocad/acad2000/dxf/>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/dxf.rst:440
+#: ../../source/drivers/vector/dxf.rst:499
 msgid ""
 "`AutoCAD 2014 DXF Reference "
 "<http://images.autodesk.com/adsk/files/autocad_2014_pdf_dxf_reference_enu.pdf>`__"
 msgstr ""
+
+#~ msgid ""
+#~ "ExtendedEntity (GDAL <= 2.2.x): The "
+#~ "values of extended entity attributes all"
+#~ " appended to form a single text "
+#~ "field, where available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "RawCodeValues (GDAL >= 2.3.0): A string"
+#~ " list containing all group codes and"
+#~ " values that are not handled by "
+#~ "the DXF reader. Only available when "
+#~ "the configuration option "
+#~ ":config:`DXF_INCLUDE_RAW_CODE_VALUES=TRUE`."
+#~ msgstr ""
+
+#~ msgid "MLINE:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL >= 2.3.0) Translated as a "
+#~ "MULTILINESTRING. Only the geometry is "
+#~ "reconstructed; styling applied to individual"
+#~ " line elements within the MLINE is"
+#~ " ignored. Fill colors and start/end "
+#~ "caps are also omitted."
+#~ msgstr ""
+
+#~ msgid "(GDAL <= 2.2.x) No support."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "CIRCLE, ELLIPSE, ARC, SPLINE, (GDAL >="
+#~ " 2.3.0) HELIX: Translated as a "
+#~ "LINESTRING, tessellating the curve into "
+#~ "line segments. (GDAL >= 2.3.0) CIRCLEs"
+#~ " with nonzero \"thickness\" (cylinders) are"
+#~ " approximated as a POLYHEDRALSURFACE."
+#~ msgstr ""
+
+#~ msgid "ATTDEF, ATTRIB:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL >= 2.3.0) Attributes (ATTRIB) are"
+#~ " treated as TEXT entities, and "
+#~ "attribute definitions (ATTDEF) inside blocks"
+#~ " are ignored. The behavior is "
+#~ "different when :config:`DXF_INLINE_BLOCKS` is "
+#~ "false (see below)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL <= 2.2.x) ATTDEF entities are "
+#~ "treated as TEXT. ATTRIB entities are "
+#~ "not supported."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL <= 2.2.x) Only line and "
+#~ "polyline boundary paths are translated "
+#~ "correctly."
+#~ msgstr ""
+
+#~ msgid "DIMENSION:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL >= 2.3.0) The DXF format "
+#~ "allows each DIMENSION entity to "
+#~ "reference an \"anonymous\" block (a "
+#~ "block whose name starts with \\*D) "
+#~ "that contains the geometry of the "
+#~ "DIMENSION. If present, this anonymous "
+#~ "block will be inlined at the "
+#~ "required position. Otherwise, fallback will"
+#~ " occur to a simple DIMENSION renderer"
+#~ " that explodes a linear dimension as"
+#~ " a MULTILINESTRING feature. Arrowheads, if"
+#~ " present, are translated as one or"
+#~ " more additional features. The fallback "
+#~ "renderer will render nonlinear dimensions "
+#~ "as if they were linear."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL <= 2.2.x) Dimensions are "
+#~ "translated as a MULTILINESTRING and a"
+#~ " POINT for the text."
+#~ msgstr ""
+
+#~ msgid "LEADER, MULTILEADER:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(GDAL >= 2.3.0) The leader line is"
+#~ " translated as a LINESTRING (LEADER) "
+#~ "or MULTILINESTRING (MULTILEADER). Arrowheads, "
+#~ "if present, are translated as one "
+#~ "or more additional features. Text for"
+#~ " MULTILEADER entities is translated into"
+#~ " a POINT feature with a label. "
+#~ "Block content for MULTILEADERS is "
+#~ "treated as for INSERT. Spline leaders"
+#~ " are tessellated into line segments."
+#~ msgstr ""
 

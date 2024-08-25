@@ -29,7 +29,7 @@ msgstr "目次"
 
 #: ../../source/faq.rst:16
 msgid "What does GDAL stand for?"
-msgstr "GDALとは何の略ですか？"
+msgstr "GDALとは何の略ですか?"
 
 #: ../../source/faq.rst:18
 msgid "GDAL - Geospatial Data Abstraction Library"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../source/faq.rst:25
 msgid "What is this OGR stuff?"
-msgstr "OGRとは何ですか？"
+msgstr "OGRとは何ですか?"
 
 #: ../../source/faq.rst:27
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../source/faq.rst:30
 msgid "What does OGR stand for?"
-msgstr "OGRとは何の略ですか？"
+msgstr "OGRとは何の略ですか?"
 
 #: ../../source/faq.rst:32
 msgid ""
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../source/faq.rst:35
 msgid "What does CPL stand for?"
-msgstr "CPLとは何の略ですか？" 
+msgstr "CPLとは何の略ですか?" 
 
 #: ../../source/faq.rst:37
 msgid ""
@@ -99,6 +99,9 @@ msgid ""
 " compilers was a challenge (or PITA), CPL proved necessary for smooth "
 "portability of GDAL/OGR."
 msgstr ""
+"Common Portability Library. これはGDALの内部のクロスプラットフォーム標準ライブラリと考えてください."
+"GDAL開発の初期には,クロスプラットフォーム開発やコンパイラの互換性と標準準拠が課題であったため,"
+"CPLはGDAL/OGRのスムーズな移植性のために必要であることが証明されました."
 
 #: ../../source/faq.rst:39
 msgid ""
@@ -108,7 +111,7 @@ msgstr ""
 
 #: ../../source/faq.rst:42
 msgid "When was the GDAL project started?"
-msgstr "GDALプロジェクトはいつ始まりましたか？"
+msgstr "GDALプロジェクトはいつ始まりましたか?"
 
 #: ../../source/faq.rst:44
 msgid ""
@@ -120,15 +123,15 @@ msgstr ""
 
 #: ../../source/faq.rst:47
 msgid "Is GDAL/OGR proprietary software?"
-msgstr "GDAL/OGRはプロプライエタリライセンスのソフトウェアですか？"
+msgstr "GDAL/OGRはプロプライエタリライセンスのソフトウェアですか?"
 
 #: ../../source/faq.rst:49
 msgid "No, GDAL/OGR is a Free and Open Source Software."
-msgstr ""
+msgstr "いいえ, GDAL/OGRはフリーかつオープンソースソフトウェアです."
 
 #: ../../source/faq.rst:52
 msgid "What license does GDAL/OGR use?"
-msgstr "GDAL/OGRはどのライセンスを使用していますか？"
+msgstr "GDAL/OGRはどのライセンスを使用していますか?"
 
 #: ../../source/faq.rst:54
 msgid "See :ref:`license`"
@@ -136,7 +139,7 @@ msgstr "参照 :ref:`license`"
 
 #: ../../source/faq.rst:57
 msgid "What operating systems does GDAL-OGR run on?"
-msgstr "GDAL-OGRはどのオペレーティングシステムで動作しますか？"
+msgstr "GDAL-OGRはどのオペレーティングシステムで動作しますか?"
 
 #: ../../source/faq.rst:59
 msgid ""
@@ -144,6 +147,9 @@ msgid ""
 "OS X; all supported versions of Microsoft Windows; mobile environments "
 "(Android and iOS). Both 32-bit and 64-bit architectures are supported."
 msgstr ""
+"GDAL/OGRはすべての現代的なUnixのバリエーション: Linux, FreeBSD, Mac "
+"OS X; すべてのサポートされているMicrosoft Windowsのバージョン; モバイル環境(AndroidとiOS)で使用できます."
+"32ビットと64ビットのアーキテクチャの両方がサポートされています."
 
 #: ../../source/faq.rst:62
 msgid "Is there a graphical user interface to GDAL/OGR?"
@@ -162,10 +168,12 @@ msgid ""
 "GDAL/OGR must be compiled with a C++17 capable compiler since GDAL 3.9 "
 "(C++11 in previous versions)"
 msgstr ""
+"GDAL/OGRはGDAL 3.9 以降はC++17対応のコンパイラでコンパイルする必要があります"
+"(以前のバージョンではC++11)"
 
 #: ../../source/faq.rst:76
 msgid "Build requirements are described in :ref:`build_requirements`."
-msgstr ""
+msgstr "ビルド要件は :ref:`build_requirements` に記載されています."
 
 #: ../../source/faq.rst:79
 msgid ""
@@ -187,6 +195,10 @@ msgid ""
 "<http://www.catb.org/~esr/faqs/smart-questions.html>`_ by Eric S. "
 "Raymond."
 msgstr ""
+"質問の質には回答の質が多少関係していることを心に留めておいてください. "
+"これについてより詳しい説明が必要な場合は,Eric S. Raymondによるエッセイ"
+"`How To Ask Questions The Smart Way "
+"<http://www.catb.org/~esr/faqs/smart-questions.html>`_ を参照してください."
 
 #: ../../source/faq.rst:86
 msgid "How do I add support for a new format?"
@@ -202,7 +214,7 @@ msgstr ""
 
 #: ../../source/faq.rst:91
 msgid "Is GDAL thread-safe ?"
-msgstr "GDALはスレッドセーフですか？"
+msgstr "GDALはスレッドセーフですか?"
 
 #: ../../source/faq.rst:93
 msgid "See :ref:`multithreading`"

@@ -259,8 +259,8 @@ msgid ""
 ":ref:`ogrlineref`: Create linear reference and provide some calculations "
 "using it."
 msgstr ""
-":ref:`ogrlineref`: 線形リファレンスを作成し,それを使用していくつかの計算を”
-”実行します."
+":ref:`ogrlineref`: 線形リファレンスを作成し,それを使用していくつかの計算を"
+"実行します."
 
 #: ../../source/programs/index.rst:141
 msgid ":ref:`ogrmerge`: Merge several vector datasets into a single one."

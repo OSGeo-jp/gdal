@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-26 03:03+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:5
 msgid "RFC 6: Geometry and Feature Style as OGR Special Fields"
@@ -201,13 +201,13 @@ msgstr ""
 
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:198
 msgid ""
-"In ogrfeaturequery.cpp OGRFeatureQueryEvaluator() should be modifyed "
+"In ogrfeaturequery.cpp OGRFeatureQueryEvaluator() should be modified "
 "according to the field specific actions like"
 msgstr ""
 
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:226
 msgid ""
-"In ogrfeaturequery.cpp OGRFeatureQuery::FieldCollector should be modifyed"
+"In ogrfeaturequery.cpp OGRFeatureQuery::FieldCollector should be modified"
 " to add the field names like:"
 msgstr ""
 
@@ -238,7 +238,7 @@ msgstr ""
 
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:294
 msgid ""
-"OGRGenSQLResultsLayer::TranslateFeature should also be modifyed when "
+"OGRGenSQLResultsLayer::TranslateFeature should also be modified when "
 "copying the fields from primary record to the destination feature"
 msgstr ""
 
@@ -257,7 +257,7 @@ msgstr ""
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:352
 msgid ""
 "When ordering by the field values the OGRGenSQLResultsLayer::Compare "
-"should also be modifyed:"
+"should also be modified:"
 msgstr ""
 
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:386
@@ -286,7 +286,7 @@ msgstr ""
 msgid ""
 "The field value accessors (OGRFeature::GetFieldAsString, "
 "OGRFeature::GetFieldAsInteger, OGRFeature::GetFieldAsDouble) should be "
-"modifyed to provide the value of the new special field. All of these "
+"modified to provide the value of the new special field. All of these "
 "functions provide const return values so GetFieldAsString should retain "
 "the value in the m_pszTmpFieldValue member."
 msgstr ""
@@ -417,4 +417,40 @@ msgstr ""
 #: ../../source/development/rfc/rfc6_sqlgeom.rst:471
 msgid "Andrey Kiselev +1"
 msgstr ""
+
+#~ msgid ""
+#~ "In ogrfeaturequery.cpp OGRFeatureQueryEvaluator() "
+#~ "should be modifyed according to the "
+#~ "field specific actions like"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In ogrfeaturequery.cpp OGRFeatureQuery::FieldCollector "
+#~ "should be modifyed to add the "
+#~ "field names like:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OGRGenSQLResultsLayer::TranslateFeature should also "
+#~ "be modifyed when copying the fields "
+#~ "from primary record to the destination"
+#~ " feature"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When ordering by the field values "
+#~ "the OGRGenSQLResultsLayer::Compare should also "
+#~ "be modifyed:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The field value accessors "
+#~ "(OGRFeature::GetFieldAsString, OGRFeature::GetFieldAsInteger,"
+#~ " OGRFeature::GetFieldAsDouble) should be modifyed"
+#~ " to provide the value of the "
+#~ "new special field. All of these "
+#~ "functions provide const return values so"
+#~ " GetFieldAsString should retain the value"
+#~ " in the m_pszTmpFieldValue member."
+#~ msgstr ""
 

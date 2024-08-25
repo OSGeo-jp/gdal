@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdalinfo.rst:5
 msgid "gdalinfo"
@@ -109,66 +109,82 @@ msgstr ""
 msgid "Suppress printing of color table."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:88
-msgid "Force computation of the checksum for each band in the dataset."
+#: ../../source/programs/gdalinfo.rst:90
+msgid "Suppress nodata printing. Implies :option:`-nomask`."
 msgstr ""
 
 #: ../../source/programs/gdalinfo.rst:92
+msgid ""
+"Can be useful for example when querying a remove GRIB2 dataset that has "
+"an index .idx side-car file, together with :option:`-nomd`"
+msgstr ""
+
+#: ../../source/programs/gdalinfo.rst:99
+msgid ""
+"Suppress band mask printing. Is implied if :option:`-nonodata` is "
+"specified."
+msgstr ""
+
+#: ../../source/programs/gdalinfo.rst:103
+msgid "Force computation of the checksum for each band in the dataset."
+msgstr ""
+
+#: ../../source/programs/gdalinfo.rst:107
 msgid "List all metadata domains available for the dataset."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:96
+#: ../../source/programs/gdalinfo.rst:111
 msgid "adds metadata using:"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:98
+#: ../../source/programs/gdalinfo.rst:113
 msgid "``domain`` Report metadata for the specified domain."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:100
+#: ../../source/programs/gdalinfo.rst:115
 msgid "``all`` Report metadata for all domains."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:104
+#: ../../source/programs/gdalinfo.rst:119
 msgid "Only display the first file of the file list."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:108
+#: ../../source/programs/gdalinfo.rst:123
 msgid "WKT format used to display the SRS. Currently the supported values are:"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:111
+#: ../../source/programs/gdalinfo.rst:126
 msgid "``WKT1``"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:113
+#: ../../source/programs/gdalinfo.rst:128
 msgid "``WKT2`` (latest WKT version, currently *WKT2_2019*)"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:115
+#: ../../source/programs/gdalinfo.rst:130
 msgid "``WKT2_2015``"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:117
+#: ../../source/programs/gdalinfo.rst:132
 msgid "``WKT2_2018`` (deprecated)"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:119
+#: ../../source/programs/gdalinfo.rst:134
 msgid "``WKT2_2019``"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:125
+#: ../../source/programs/gdalinfo.rst:140
 msgid ""
 "If the input dataset contains several subdatasets read and display a "
 "subdataset with specified ``n`` number (starting from 1). This is an "
 "alternative of giving the full subdataset name."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:131
+#: ../../source/programs/gdalinfo.rst:146
 msgid "Report a PROJ.4 string corresponding to the file's coordinate system."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:135
+#: ../../source/programs/gdalinfo.rst:150
 msgid "Dataset open option (format specific)."
 msgstr ""
 
@@ -183,102 +199,102 @@ msgid ""
 "extensions."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:140
+#: ../../source/programs/gdalinfo.rst:155
 msgid "The gdalinfo will report all of the following (if known):"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:142
+#: ../../source/programs/gdalinfo.rst:157
 msgid "The format driver used to access the file."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:143
+#: ../../source/programs/gdalinfo.rst:158
 msgid "Raster size (in pixels and lines)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:144
+#: ../../source/programs/gdalinfo.rst:159
 msgid "The coordinate system for the file (in OGC WKT)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:145
+#: ../../source/programs/gdalinfo.rst:160
 msgid ""
 "The geotransform associated with the file (rotational coefficients are "
 "currently not reported)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:147
+#: ../../source/programs/gdalinfo.rst:162
 msgid ""
 "Corner coordinates in georeferenced, and if possible lat/long based on "
 "the full geotransform (but not GCPs)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:149
+#: ../../source/programs/gdalinfo.rst:164
 msgid "Ground control points."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:150
+#: ../../source/programs/gdalinfo.rst:165
 msgid "File wide (including subdatasets) metadata."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:151
+#: ../../source/programs/gdalinfo.rst:166
 msgid "Band data types."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:152
+#: ../../source/programs/gdalinfo.rst:167
 msgid "Band color interpretations."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:153
+#: ../../source/programs/gdalinfo.rst:168
 msgid "Band block size."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:154
+#: ../../source/programs/gdalinfo.rst:169
 msgid "Band descriptions."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:155
+#: ../../source/programs/gdalinfo.rst:170
 msgid "Band min/max values (internally known and possibly computed)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:156
+#: ../../source/programs/gdalinfo.rst:171
 msgid "Band checksum (if computation asked)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:157
+#: ../../source/programs/gdalinfo.rst:172
 msgid "Band NODATA value."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:158
+#: ../../source/programs/gdalinfo.rst:173
 msgid "Band overview resolutions available."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:159
+#: ../../source/programs/gdalinfo.rst:174
 msgid "Band unit type (i.e.. \"meters\" or \"feet\" for elevation bands)."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:160
+#: ../../source/programs/gdalinfo.rst:175
 msgid "Band pseudo-color tables."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:163
+#: ../../source/programs/gdalinfo.rst:178
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:165
+#: ../../source/programs/gdalinfo.rst:180
 msgid "This utility is also callable from C with :cpp:func:`GDALInfo`."
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:170
+#: ../../source/programs/gdalinfo.rst:185
 msgid "Example"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:201
+#: ../../source/programs/gdalinfo.rst:216
 msgid ""
 "For corner coordinates formatted as decimal degree instead of the above "
 "degree, minute, second, inspect the ``wgs84Extent`` member of gdalinfo "
 "-json:"
 msgstr ""
 
-#: ../../source/programs/gdalinfo.rst:203
+#: ../../source/programs/gdalinfo.rst:218
 msgid "Example of JSON output with ``gdalinfo -json byte.tif``"
 msgstr ""
 

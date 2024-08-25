@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-26 03:03+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/fits.rst:5
 msgid "FITS -- Flexible Image Transport System"
@@ -460,7 +460,7 @@ msgstr ""
 #: ../../source/drivers/raster/fits.rst:247
 msgid ""
 "TNULL headers are used for integer numeric data types and for a single-"
-"occurence field to set a OGR field to NULL."
+"occurrence field to set a OGR field to NULL."
 msgstr ""
 
 #: ../../source/drivers/raster/fits.rst:251
@@ -522,13 +522,13 @@ msgstr ""
 
 #: ../../source/drivers/raster/fits.rst:354
 msgid ""
-"Install CFITSIO headers from your distro (eg, cfitsio-devel on Fedora; "
-"libcfitsio-dev on Debian-Ubuntu), then compile GDAL as usual. CFITSIO "
-"will be automatically detected and linked."
+"Install CFITSIO headers from your distribution (eg, cfitsio-devel on "
+"Fedora; libcfitsio-dev on Debian-Ubuntu), then compile GDAL as usual. "
+"CFITSIO will be automatically detected and linked."
 msgstr ""
 
 #: ../../source/drivers/raster/fits.rst:357
-msgid "From distros"
+msgid "From distributions"
 msgstr ""
 
 #: ../../source/drivers/raster/fits.rst:358
@@ -551,4 +551,22 @@ msgstr ""
 #: ../../source/drivers/raster/fits.rst:366
 msgid "Driver capabilities"
 msgstr ""
+
+#~ msgid ""
+#~ "TNULL headers are used for integer "
+#~ "numeric data types and for a "
+#~ "single-occurence field to set a OGR"
+#~ " field to NULL."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Install CFITSIO headers from your distro"
+#~ " (eg, cfitsio-devel on Fedora; "
+#~ "libcfitsio-dev on Debian-Ubuntu), then "
+#~ "compile GDAL as usual. CFITSIO will "
+#~ "be automatically detected and linked."
+#~ msgstr ""
+
+#~ msgid "From distros"
+#~ msgstr ""
 

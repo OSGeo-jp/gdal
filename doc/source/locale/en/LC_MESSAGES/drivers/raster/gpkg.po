@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/gpkg.rst:5
 msgid "GPKG -- GeoPackage raster"
@@ -845,7 +845,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:799
-msgid "It takes 5 arguments:"
+msgid "It takes 5 or 6 arguments:"
 msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:801
@@ -871,69 +871,78 @@ msgstr ""
 msgid "georeferenced Y value or line number"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:815
-msgid "See Also"
+#: ../../source/drivers/raster/gpkg.rst:808
+msgid ""
+"resampling method among ``nearest`` (default), ``bilinear``, ``cubic``, "
+"``cubicspline``. Optional, added in GDAL 3.10"
 msgstr ""
 
 #: ../../source/drivers/raster/gpkg.rst:817
+msgid "See Also"
+msgstr ""
+
+#: ../../source/drivers/raster/gpkg.rst:819
 msgid ":ref:`GeoPackage vector <vector.gpkg>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:818
+#: ../../source/drivers/raster/gpkg.rst:820
 msgid ""
 "`Getting Started With GeoPackage <http://www.geopackage.org/guidance"
 "/getting-started.html>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:820
+#: ../../source/drivers/raster/gpkg.rst:822
 msgid ""
 "`OGC GeoPackage format standard <http://www.geopackage.org/spec/>`__ "
 "specification, HTML format (current/development version of the standard)"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:823
+#: ../../source/drivers/raster/gpkg.rst:825
 msgid ""
 "`OGC GeoPackage Encoding Standard "
 "<http://www.opengeospatial.org/standards/geopackage>`__ page"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:825
+#: ../../source/drivers/raster/gpkg.rst:827
 msgid "`SQLite <http://sqlite.org/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:826
+#: ../../source/drivers/raster/gpkg.rst:828
 msgid ":ref:`PNG driver <raster.png>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:827
+#: ../../source/drivers/raster/gpkg.rst:829
 msgid ":ref:`JPEG driver <raster.jpeg>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:828
+#: ../../source/drivers/raster/gpkg.rst:830
 msgid ":ref:`WEBP driver <raster.webp>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:829
+#: ../../source/drivers/raster/gpkg.rst:831
 msgid ""
 "`OGC 07-057r7 WMTS 1.0 "
 "<http://portal.opengeospatial.org/files/?artifact_id=35326>`__ "
 "specification"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:832
+#: ../../source/drivers/raster/gpkg.rst:834
 msgid ""
 "`OSGeo TMS (Tile Map Service) "
 "<http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`__ "
 "specification"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:837
+#: ../../source/drivers/raster/gpkg.rst:839
 msgid "Other notes"
 msgstr ""
 
-#: ../../source/drivers/raster/gpkg.rst:839
+#: ../../source/drivers/raster/gpkg.rst:841
 msgid ""
 "Development of raster support in the GeoPackage driver was financially "
 "supported by `Safe Software <http://www.safe.com>`__."
 msgstr ""
+
+#~ msgid "It takes 5 arguments:"
+#~ msgstr ""
 

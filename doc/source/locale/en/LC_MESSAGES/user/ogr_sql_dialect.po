@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/user/ogr_sql_dialect.rst:5
 msgid "OGR SQL dialect"
@@ -143,32 +143,68 @@ msgid ""
 "There are also several summarization operators that may be applied to "
 "columns. When a summarization operator is applied to any field, then all "
 "fields must have summarization operators applied.   The summarization "
-"operators are COUNT (a count of instances), AVG (numerical average), SUM "
-"(numerical sum), MIN (lexical or numerical minimum), and MAX (lexical or "
-"numerical maximum). This example produces a variety of summarization "
-"information on parcel property values:"
+"operators are:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:121
+#: ../../source/user/ogr_sql_dialect.rst:112
+msgid "COUNT: count of instances"
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:113
+msgid "AVG: numerical average:"
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:114
+msgid "SUM: numerical sum"
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:115
+msgid "MIN: lexical or numerical minimum"
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:116
+msgid "MAX: lexical or numerical maximum"
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:117
+msgid ""
+"STDDEV_POP: (GDAL >= 3.10) numerical population standard deviation. "
+"Applied on Date/DateTime/Time fields, this returns a value in seconds."
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:118
+msgid ""
+"STDDEV_SAMP: (GDAL >= 3.10) numerical `sample standard deviation "
+"<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__."
+"  Applied on Date/DateTime/Time fields, this returns a value in seconds."
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:120
+msgid ""
+"This example produces a variety of summarization information on parcel "
+"property values:"
+msgstr ""
+
+#: ../../source/user/ogr_sql_dialect.rst:128
 msgid ""
 "It is also possible to apply the COUNT() operator to a DISTINCT SELECT to"
 " get a count of distinct values, for instance:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:128
+#: ../../source/user/ogr_sql_dialect.rst:135
 msgid ""
 "As a special case, the COUNT() operator can be given a \"*\" argument "
 "instead of a field name which is a short form for count all the records."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:136
+#: ../../source/user/ogr_sql_dialect.rst:143
 msgid ""
 "Field names can also be prefixed by a table name though this is only "
 "really meaningful when performing joins.  It is further demonstrated in "
 "the JOIN section."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:140
+#: ../../source/user/ogr_sql_dialect.rst:147
 msgid ""
 "Field definitions can also be complex expressions using arithmetic, and "
 "functional operators. However, the DISTINCT keyword, and summarization "
@@ -177,15 +213,15 @@ msgid ""
 "can also be used."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:149
+#: ../../source/user/ogr_sql_dialect.rst:156
 msgid "or"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:157
+#: ../../source/user/ogr_sql_dialect.rst:164
 msgid "Functions"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:159
+#: ../../source/user/ogr_sql_dialect.rst:166
 msgid ""
 "The SUBSTR function can be used to extract a substring from a string. Its"
 " syntax is the following one : SUBSTR(string_expr, start_offset [, "
@@ -198,95 +234,95 @@ msgid ""
 "Otherwise the remainder of the string is extracted."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:167
+#: ../../source/user/ogr_sql_dialect.rst:174
 msgid ""
 "Note: for the time being, the character as considered to be equivalent to"
 " bytes, which may not be appropriate for multi-byte encodings like UTF-8."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:176
+#: ../../source/user/ogr_sql_dialect.rst:183
 msgid ""
 "The ``hstore_get_value()`` function can be used to extract a value "
 "associate to a key from a HSTORE string, formatted like "
 "'key=>value,other_key=>other_value,...'"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:184
+#: ../../source/user/ogr_sql_dialect.rst:191
 msgid "Using the field name alias"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:186
+#: ../../source/user/ogr_sql_dialect.rst:193
 msgid ""
 "OGR SQL supports renaming the fields following the SQL92 specification by"
 " using the AS keyword according to the following example:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:193
+#: ../../source/user/ogr_sql_dialect.rst:200
 msgid ""
 "The field name alias can be used as the last operation in the column "
 "specification. Therefore we cannot rename the fields inside an operator, "
 "but we can rename whole column expression, like these two:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:203
+#: ../../source/user/ogr_sql_dialect.rst:210
 msgid "Changing the type of the fields"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:205
+#: ../../source/user/ogr_sql_dialect.rst:212
 msgid ""
 "OGR SQL supports changing the type of the columns by using the SQL92 "
 "compliant CAST operator according to the following example:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:212
+#: ../../source/user/ogr_sql_dialect.rst:219
 msgid "Currently casting to the following target types are supported:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:214
+#: ../../source/user/ogr_sql_dialect.rst:221
 msgid "boolean"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:215
+#: ../../source/user/ogr_sql_dialect.rst:222
 msgid "character(field_length). By default, field_length=1."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:216
+#: ../../source/user/ogr_sql_dialect.rst:223
 msgid "float(field_length)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:217
+#: ../../source/user/ogr_sql_dialect.rst:224
 msgid "numeric(field_length, field_precision)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:218
+#: ../../source/user/ogr_sql_dialect.rst:225
 msgid "smallint(field_length) : 16 bit signed integer"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:219
+#: ../../source/user/ogr_sql_dialect.rst:226
 msgid "integer(field_length)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:220
+#: ../../source/user/ogr_sql_dialect.rst:227
 msgid "bigint(field_length), 64 bit integer, extension to SQL92"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:221
+#: ../../source/user/ogr_sql_dialect.rst:228
 msgid "date(field_length)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:222
+#: ../../source/user/ogr_sql_dialect.rst:229
 msgid "time(field_length)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:223
+#: ../../source/user/ogr_sql_dialect.rst:230
 msgid "timestamp(field_length)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:224
+#: ../../source/user/ogr_sql_dialect.rst:231
 msgid "geometry, geometry(geometry_type), geometry(geometry_type,epsg_code)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:226
+#: ../../source/user/ogr_sql_dialect.rst:233
 msgid ""
 "Specifying the field_length and/or the field_precision is optional.  An "
 "explicit value of zero can be used as the width for character() to "
@@ -295,7 +331,7 @@ msgid ""
 "conform to the SQL92 specification."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:232
+#: ../../source/user/ogr_sql_dialect.rst:239
 msgid ""
 "While the CAST operator can be applied anywhere in an expression, "
 "including in a WHERE clause, the detailed control of output field format "
@@ -304,30 +340,30 @@ msgid ""
 "useful to convert between numeric, string and date data types."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:238
+#: ../../source/user/ogr_sql_dialect.rst:245
 msgid ""
 "Casting a WKT string to a geometry is allowed. geometry_type can be "
 "POINT[Z], LINESTRING[Z], POLYGON[Z], MULTIPOINT[Z], MULTILINESTRING[Z], "
 "MULTIPOLYGON[Z], GEOMETRYCOLLECTION[Z] or GEOMETRY[Z]."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:243
+#: ../../source/user/ogr_sql_dialect.rst:250
 msgid "String literals and identifiers quoting"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:245
+#: ../../source/user/ogr_sql_dialect.rst:252
 msgid ""
 "Strict SQL92 rules are applied regarding string literals and identifiers "
 "quoting."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:247
+#: ../../source/user/ogr_sql_dialect.rst:254
 msgid ""
 "String literals (constants) must be surrounded with single-quote "
 "characters. e.g. WHERE a_field = 'a_value'"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:250
+#: ../../source/user/ogr_sql_dialect.rst:257
 msgid ""
 "Identifiers (column names and tables names) can be used unquoted if they "
 "don't contain special characters or are not a SQL reserved keyword. "
@@ -335,11 +371,11 @@ msgid ""
 "WHERE \"from\" = 5."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:255
+#: ../../source/user/ogr_sql_dialect.rst:262
 msgid "WHERE"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:257
+#: ../../source/user/ogr_sql_dialect.rst:264
 msgid ""
 "The argument to the WHERE clause is a logical expression used select "
 "records from the source layer.  In addition to its use within the WHERE "
@@ -347,7 +383,7 @@ msgid ""
 "queries on regular layers via :cpp:func:`OGRLayer::SetAttributeFilter`."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:262
+#: ../../source/user/ogr_sql_dialect.rst:269
 msgid ""
 "In addition to the arithmetic and other functional operators available in"
 " expressions in the field selection clause of the SELECT statement, in "
@@ -355,7 +391,7 @@ msgid ""
 "value of the expression should be logical (true or false)."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:267
+#: ../../source/user/ogr_sql_dialect.rst:274
 msgid ""
 "The available logical operators are ``=``, ``!=``, ``<>``, ``<``, ``>``, "
 "``<=``, ``>=``, ``LIKE`` and ``ILIKE``, ``BETWEEN`` and ``IN``. Most of "
@@ -364,7 +400,7 @@ msgid ""
 "``<``, ``>``, ``<=`` and ``>=`` operators *are* case sensitive."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:283
+#: ../../source/user/ogr_sql_dialect.rst:290
 msgid ""
 "Starting with GDAL 3.1, LIKE is case sensitive, and ILIKE is case "
 "insensitive. In previous versions, LIKE was also case insensitive. If the"
@@ -372,7 +408,7 @@ msgid ""
 "can be set to ``YES``."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:287
+#: ../../source/user/ogr_sql_dialect.rst:294
 msgid ""
 "Starting with GDAL 3.9, for layers declaring the OLCStringsAsUTF8 "
 "capability (that is the content of their fields of String type is UTF-8 "
@@ -388,7 +424,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ Unicode categories."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:298
+#: ../../source/user/ogr_sql_dialect.rst:305
 msgid ""
 "The value argument to the ``LIKE`` and ``ILIKE`` operators is a pattern "
 "against which the value string is matched.  In this pattern percent (%) "
@@ -398,27 +434,27 @@ msgid ""
 "by being preceded with the escape_char."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:318
+#: ../../source/user/ogr_sql_dialect.rst:325
 msgid ""
 "The ``IN`` takes a list of values as its argument and tests the attribute"
 " value for membership in the provided set."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:330
+#: ../../source/user/ogr_sql_dialect.rst:337
 msgid ""
 "The syntax of the ``BETWEEN`` operator is \"field_name BETWEEN value1 AND"
 " value2\" and it is equivalent to \"field_name >= value1 AND field_name "
 "<= value2\"."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:333
+#: ../../source/user/ogr_sql_dialect.rst:340
 msgid ""
 "In addition to the above binary operators, there are additional operators"
 " for testing if a field is null or not. These are the ``IS NULL`` and "
 "``IS NOT NULL`` operators."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:337
+#: ../../source/user/ogr_sql_dialect.rst:344
 msgid ""
 "Basic field tests can be combined in more complicated predicates using "
 "logical operators include ``AND``, ``OR``, and the unary logical ``NOT``."
@@ -426,27 +462,27 @@ msgid ""
 "complicated predicates are:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:349
+#: ../../source/user/ogr_sql_dialect.rst:356
 msgid "WHERE Limitations"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:351
+#: ../../source/user/ogr_sql_dialect.rst:358
 msgid ""
 "Fields must all come from the primary table (the one listed in the FROM "
 "clause)."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:353
+#: ../../source/user/ogr_sql_dialect.rst:360
 msgid ""
 "All string comparisons are case insensitive except for ``<``, ``>``, "
 "``<=`` and ``>=``"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:356
+#: ../../source/user/ogr_sql_dialect.rst:363
 msgid "ORDER BY"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:358
+#: ../../source/user/ogr_sql_dialect.rst:365
 msgid ""
 "The ``ORDER BY`` clause is used force the returned features to be "
 "reordered into sorted order (ascending or descending) on one or multiple "
@@ -454,7 +490,7 @@ msgid ""
 " DESC keyword is provided.  For example:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:371
+#: ../../source/user/ogr_sql_dialect.rst:378
 msgid ""
 "Note that ORDER BY clauses cause two passes through the feature set.  One"
 " to build an in-memory table of field values corresponded with feature "
@@ -463,38 +499,38 @@ msgid ""
 "feature id this can be a very expensive operation."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:377
+#: ../../source/user/ogr_sql_dialect.rst:384
 msgid ""
 "Sorting of string field values is case sensitive, not case insensitive "
 "like in most other parts of OGR SQL."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:381
+#: ../../source/user/ogr_sql_dialect.rst:388
 msgid "LIMIT and OFFSET"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:383
+#: ../../source/user/ogr_sql_dialect.rst:390
 msgid ""
 "Starting with GDAL 2.2, the ``LIMIT`` clause can be used to limit the "
 "number of features returned. For example"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:390
+#: ../../source/user/ogr_sql_dialect.rst:397
 msgid ""
 "The ``OFFSET`` clause can be used to skip the first features of the "
 "result set. The value after OFFSET is the number of features skipped. For"
 " example, to skip the first 3 features from the result set:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:398
+#: ../../source/user/ogr_sql_dialect.rst:405
 msgid "Both clauses can be combined:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:405
+#: ../../source/user/ogr_sql_dialect.rst:412
 msgid "JOINs"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:407
+#: ../../source/user/ogr_sql_dialect.rst:414
 msgid ""
 "OGR SQL supports a limited form of one to one JOIN.  This allows records "
 "from a secondary table to be looked up based on a shared key between it "
@@ -504,7 +540,7 @@ msgid ""
 "joined query might look like:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:419
+#: ../../source/user/ogr_sql_dialect.rst:426
 msgid ""
 "This query would result in a table with all the fields from the city "
 "table, and an additional \"nation.name\" field with the nation name "
@@ -513,7 +549,7 @@ msgid ""
 " field."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:424
+#: ../../source/user/ogr_sql_dialect.rst:431
 msgid ""
 "Joins introduce a number of additional issues.  One is the concept of "
 "table qualifiers on field names.  For instance, referring to "
@@ -522,7 +558,7 @@ msgid ""
 "field list, and within the ``ON`` clause of the join."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:430
+#: ../../source/user/ogr_sql_dialect.rst:437
 msgid ""
 "Wildcards are also somewhat more involved.  All fields from the primary "
 "table (**city** in this case) and the secondary table (**nation** in this"
@@ -531,7 +567,7 @@ msgid ""
 "the asterix with the table name."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:436
+#: ../../source/user/ogr_sql_dialect.rst:443
 msgid ""
 "The field names in the resulting query layer will be qualified by the "
 "table name, if the table name is given as a qualifier in the field list."
@@ -542,7 +578,7 @@ msgid ""
 "tables both have the **nation_id** and **name** fieldnames."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:448
+#: ../../source/user/ogr_sql_dialect.rst:455
 msgid ""
 "On the other hand if the nation table had a **continent_id** field, but "
 "the city table did not, then that field would not need to be qualified in"
@@ -551,7 +587,7 @@ msgid ""
 "name."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:458
+#: ../../source/user/ogr_sql_dialect.rst:465
 msgid ""
 "In the above examples, the **nation** table was found in the same "
 "datasource as the **city** table.   However, the OGR join support "
@@ -562,7 +598,7 @@ msgid ""
 "the secondary table until the query result is no longer needed."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:471
+#: ../../source/user/ogr_sql_dialect.rst:478
 msgid ""
 "While not necessarily very useful, it is also possible to introduce table"
 " aliases to simplify some SELECT statements.  This can also be useful to "
@@ -571,11 +607,11 @@ msgid ""
 "messy we might want to do something like:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:483
+#: ../../source/user/ogr_sql_dialect.rst:490
 msgid "It is possible to do multiple joins in a single query."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:491
+#: ../../source/user/ogr_sql_dialect.rst:498
 msgid ""
 "The expression after ON is typically of the form "
 "\"{primary_table}.{field_name} = {secondary_table}.{field_name}\", and in"
@@ -587,24 +623,24 @@ msgid ""
 "and the table of the active JOIN."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:501
+#: ../../source/user/ogr_sql_dialect.rst:508
 msgid "JOIN Limitations"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:503
+#: ../../source/user/ogr_sql_dialect.rst:510
 msgid ""
 "Joins can be very expensive operations if the secondary table is not "
 "indexed on the key field being used."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:504
+#: ../../source/user/ogr_sql_dialect.rst:511
 msgid ""
 "Joined fields may not be used in WHERE clauses, or ORDER BY clauses at "
 "this time.  The join is essentially evaluated after all primary table "
 "subsetting is complete, and after the ORDER BY pass."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:505
+#: ../../source/user/ogr_sql_dialect.rst:512
 msgid ""
 "Joined fields may not be used as keys in later joins.  So you could not "
 "use the province id in a city to lookup the province record, and then use"
@@ -613,13 +649,13 @@ msgid ""
 "supported."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:506
+#: ../../source/user/ogr_sql_dialect.rst:513
 msgid ""
 "Datasource names for joined tables are evaluated relative to the current "
 "processes working directory, not the path to the primary datasource."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:507
+#: ../../source/user/ogr_sql_dialect.rst:514
 msgid ""
 "These are not true LEFT or RIGHT joins in the RDBMS sense.  Whether or "
 "not a secondary record exists for the join key or not, one and only one "
@@ -629,22 +665,22 @@ msgid ""
 "used."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:510
+#: ../../source/user/ogr_sql_dialect.rst:517
 msgid "UNION ALL"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:512
+#: ../../source/user/ogr_sql_dialect.rst:519
 msgid ""
 "The SQL engine can deal with several SELECT combined with UNION ALL. The "
 "effect of UNION ALL is to concatenate the rows returned by the right "
 "SELECT statement to the rows returned by the left SELECT statement."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:523
+#: ../../source/user/ogr_sql_dialect.rst:530
 msgid "UNION ALL restrictions"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:525
+#: ../../source/user/ogr_sql_dialect.rst:532
 msgid ""
 "The processing of UNION ALL in OGR differs from the SQL standard, in "
 "which it accepts that the columns from the various SELECT are not "
@@ -652,17 +688,17 @@ msgid ""
 "from each SELECT statement."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:529
+#: ../../source/user/ogr_sql_dialect.rst:536
 msgid ""
 "There is also a restriction : ORDER BY can only be specified for each "
 "SELECT, and not at the level of the result of the union."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:533
+#: ../../source/user/ogr_sql_dialect.rst:540
 msgid "SPECIAL FIELDS"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:535
+#: ../../source/user/ogr_sql_dialect.rst:542
 msgid ""
 "The OGR SQL query processor treats some attributes of the features as "
 "built-in special fields which can be used in SQL statements alongside the"
@@ -674,11 +710,11 @@ msgid ""
 " same names."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:545
+#: ../../source/user/ogr_sql_dialect.rst:552
 msgid "Feature id (FID)"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:547
+#: ../../source/user/ogr_sql_dialect.rst:554
 msgid ""
 "Normally the feature id is a special property of a feature and not "
 "treated as an attribute of the feature.  In some cases it is convenient "
@@ -688,17 +724,17 @@ msgid ""
 "also be used."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:554
+#: ../../source/user/ogr_sql_dialect.rst:561
 msgid ""
 "The field wildcard expansions will not include the feature id, but it may"
 " be explicitly included using a syntax like:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:562
+#: ../../source/user/ogr_sql_dialect.rst:569
 msgid "Geometry field"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:564
+#: ../../source/user/ogr_sql_dialect.rst:571
 msgid ""
 "The OGR SQL dialect adds the geometry field of the datasource to the "
 "result set by default. Users do not need to select the geometry "
@@ -713,11 +749,11 @@ msgid ""
 "double quotes are escaped and the final SELECT statement could look like:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:580
+#: ../../source/user/ogr_sql_dialect.rst:587
 msgid "OGR_GEOMETRY"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:582
+#: ../../source/user/ogr_sql_dialect.rst:589
 msgid ""
 "Some of the data sources (like MapInfo tab) can handle geometries of "
 "different types within the same layer. The ``OGR_GEOMETRY`` special field"
@@ -727,28 +763,28 @@ msgid ""
 " the geometries like:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:593
+#: ../../source/user/ogr_sql_dialect.rst:600
 msgid "OGR_GEOM_WKT"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:595
+#: ../../source/user/ogr_sql_dialect.rst:602
 msgid ""
 "The Well Known Text representation of the geometry can also be used as a "
 "special field. To select the WKT of the geometry ``OGR_GEOM_WKT`` might "
 "be included in the select list, like:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:603
+#: ../../source/user/ogr_sql_dialect.rst:610
 msgid ""
 "Using the ``OGR_GEOM_WKT`` and the ``LIKE`` operator in the WHERE clause "
 "we can get similar effect as using OGR_GEOMETRY:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:612
+#: ../../source/user/ogr_sql_dialect.rst:619
 msgid "OGR_GEOM_AREA"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:614
+#: ../../source/user/ogr_sql_dialect.rst:621
 msgid ""
 "The ``OGR_GEOM_AREA`` special field returns the area of the feature's "
 "geometry computed by the OGRSurface::get_Area() method. For "
@@ -757,15 +793,15 @@ msgid ""
 "0.0."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:619
+#: ../../source/user/ogr_sql_dialect.rst:626
 msgid "For example, to select only polygon features larger than a given area:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:626
+#: ../../source/user/ogr_sql_dialect.rst:633
 msgid "OGR_STYLE"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:628
+#: ../../source/user/ogr_sql_dialect.rst:635
 msgid ""
 "The ``OGR_STYLE`` special field represents the style string of the "
 "feature returned by OGRFeature::GetStyleString(). By using this field and"
@@ -773,7 +809,7 @@ msgid ""
 "style. For example we can select the annotation features as:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:638
+#: ../../source/user/ogr_sql_dialect.rst:645
 msgid ""
 "It is possible to use the ``OGR_STYLE`` field name as a special field "
 "name in the field selection as an alternate way of setting the "
@@ -781,18 +817,18 @@ msgid ""
 "another field or a string literal."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:647
+#: ../../source/user/ogr_sql_dialect.rst:654
 msgid ""
 "By default, the OGR_STYLE field will still be visible as a regular field."
 " If this is undesirable, starting with GDAL 3.10, it can be hidden by "
 "adding the HIDDEN keyword at the end of the field specification."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:657
+#: ../../source/user/ogr_sql_dialect.rst:664
 msgid "CREATE INDEX"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:659
+#: ../../source/user/ogr_sql_dialect.rst:666
 msgid ""
 "Some OGR SQL drivers support creating of attribute indexes.  Currently "
 "this includes the Shapefile driver.  An index accelerates very simple "
@@ -801,53 +837,53 @@ msgid ""
 "nation_id field of the nation table a command like this would be used:"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:670
+#: ../../source/user/ogr_sql_dialect.rst:677
 msgid "Index Limitations"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:672
+#: ../../source/user/ogr_sql_dialect.rst:679
 msgid ""
 "Indexes are not maintained dynamically when new features are added to or "
 "removed from a layer."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:673
+#: ../../source/user/ogr_sql_dialect.rst:680
 msgid ""
 "Very long strings (longer than 256 characters?) cannot currently be "
 "indexed."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:674
+#: ../../source/user/ogr_sql_dialect.rst:681
 msgid ""
 "To recreate an index it is necessary to drop all indexes on a layer and "
 "then recreate all the indexes."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:675
+#: ../../source/user/ogr_sql_dialect.rst:682
 msgid ""
 "Indexes are not used in any complex queries.   Currently the only query "
 "the will accelerate is a simple \"field = value\" query."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:678
+#: ../../source/user/ogr_sql_dialect.rst:685
 msgid "DROP INDEX"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:680
+#: ../../source/user/ogr_sql_dialect.rst:687
 msgid ""
 "The OGR SQL DROP INDEX command can be used to drop all indexes on a "
 "particular table, or just the index for a particular column."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:689
+#: ../../source/user/ogr_sql_dialect.rst:696
 msgid "ALTER TABLE"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:691
+#: ../../source/user/ogr_sql_dialect.rst:698
 msgid "The following OGR SQL ALTER TABLE commands can be used."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:693
+#: ../../source/user/ogr_sql_dialect.rst:700
 msgid ""
 "-\"ALTER TABLE tablename ADD [COLUMN] columnname columntype\" to add a "
 "new field. Supported if the layer declares the OLCCreateField capability."
@@ -860,20 +896,36 @@ msgid ""
 " field. Supported if the layer declares the OLCDeleteField capability."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:698
+#: ../../source/user/ogr_sql_dialect.rst:705
 msgid ""
 "The columntype value follows the syntax of the types supported by the "
 "CAST operator described above."
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:708
+#: ../../source/user/ogr_sql_dialect.rst:715
 msgid "DROP TABLE"
 msgstr ""
 
-#: ../../source/user/ogr_sql_dialect.rst:710
+#: ../../source/user/ogr_sql_dialect.rst:717
 msgid ""
 "The OGR SQL DROP TABLE command can be used to delete a table. This is "
 "only supported on datasources that declare the ODsCDeleteLayer "
 "capability."
 msgstr ""
+
+#~ msgid ""
+#~ "There are also several summarization "
+#~ "operators that may be applied to "
+#~ "columns. When a summarization operator "
+#~ "is applied to any field, then all"
+#~ " fields must have summarization operators"
+#~ " applied.   The summarization operators are"
+#~ " COUNT (a count of instances), AVG"
+#~ " (numerical average), SUM (numerical sum),"
+#~ " MIN (lexical or numerical minimum), "
+#~ "and MAX (lexical or numerical maximum)."
+#~ " This example produces a variety of"
+#~ " summarization information on parcel "
+#~ "property values:"
+#~ msgstr ""
 
