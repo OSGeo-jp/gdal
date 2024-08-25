@@ -253,7 +253,7 @@ msgstr ""
 
 #: ../../source/user/vector_data_model.rst:51
 msgid "Spatial Reference"
-msgstr ""
+msgstr "空間参照"
 
 #: ../../source/user/vector_data_model.rst:53
 msgid ""
@@ -264,6 +264,10 @@ msgid ""
 "vertical) coordinate systems are as well supported in recent GDAL "
 "versions."
 msgstr ""
+":cpp:class:`OGRSpatialReference` クラスは, OpenGIS 空間参照系定義を格納すること"
+"を意図しています. 現在, ローカル, 地理的, 投影座標系がサポートされています. 垂"
+"直座標系, 地心座標系, および複合(水平 + 垂直)座標系も, 最近の GDAL バージョン"
+"でサポートされています."
 
 #: ../../source/user/vector_data_model.rst:55
 msgid ""
@@ -275,6 +279,11 @@ msgid ""
 "Coordinate Transformation specification but is intended to be compatible "
 "with the earlier simple features form."
 msgstr ""
+"空間座標系データモデルは, OpenGIS Well Known Text 形式から継承されています. これ"
+"の単純な形式は, シンプルフィーチャ仕様で定義されています. より洗練された形式は, "
+"座標変換仕様で見つかります. :cpp:class:`OGRSpatial"
+"Reference` は, 座標変換仕様の機能に基づいて構築されていますが, 以前のシンプル"
+"フィーチャ形式と互換性があるように意図されています."
 
 #: ../../source/user/vector_data_model.rst:57
 msgid ""
@@ -282,10 +291,12 @@ msgid ""
 "class that encapsulates use of |PROJ| for converting between different "
 "coordinate systems."
 msgstr ""
+"異なる座標系間での変換に |PROJ| を使用するための :cpp:class:`OGRCoordinate"
+"Transformation` クラスも関連付けられています."
 
 #: ../../source/user/vector_data_model.rst:60
 msgid "Feature / Feature Definition"
-msgstr ""
+msgstr "地物 / 地物定義"
 
 #: ../../source/user/vector_data_model.rst:62
 msgid ""
@@ -295,6 +306,10 @@ msgid ""
 "contain styling information. Several geometries can be associated with an"
 " :cpp:class:`OGRFeature`."
 msgstr ""
+":cpp:class:`OGRGeometry` はベクター地物のジオメトリをキャプチャします. "
+":cpp:class:`OGRFeature` はジオメトリを含み, 地物属性, 地物 ID, および地物クラス"
+"識別子を追加します. スタイル情報も含むことができます. 複数のジオメトリを "
+":cpp:class:`OGRFeature` に関連付けることができます."
 
 #: ../../source/user/vector_data_model.rst:64
 msgid ""
@@ -304,6 +319,10 @@ msgid ""
 "same definition is shared in a reference counted manner by the feature of"
 " that type (or feature class)."
 msgstr ""
+"属性のセット (:cpp:class:`OGRFieldDefn`), そのタイプ, 名前などは, "
+":cpp:class:`OGRFeatureDefn` クラスを介して表現されます. 通常, 1 つの "
+":cpp:class:`OGRFeatureDefn` は地物のレイヤーに存在します. 同じ定義は, そのタイプ"
+"(または地物クラス)の地物に対して参照カウントされた方法で共有されます."
 
 #: ../../source/user/vector_data_model.rst:66
 msgid ""
@@ -315,6 +334,11 @@ msgid ""
 "natural feature ids in some formats. For instance, the GML feature id is "
 "a string."
 msgstr ""
+"地物の地物 ID (FID) は, その地物が所属するレイヤー内での地物の一意の識別子である"
+"ことを意図しています. 独立した地物, またはまだレイヤーに書き込まれていない地物は, "
+"null (OGRNullFID) 地物 ID を持つことができます. 地物 ID は OGR で 64 ビット整"
+"数としてモデル化されていますが, これは一部の形式の自然な地物 ID をモデル化する"
+"には十分な表現力を持っていません. たとえば, GML 地物 ID は文字列です."
 
 #: ../../source/user/vector_data_model.rst:68
 msgid ""
@@ -327,6 +351,12 @@ msgid ""
 "potentially be of different geometry types though they will always share "
 "a common attribute schema."
 msgstr ""
+":cpp:class:`OGRFeatureDefn` には, その地物クラスに許可されているジオメトリのタイプ"
+"の指示子も含まれています (:cpp:func:`OGRFeatureDefn::GetGeomType` から "
+":cpp:enum:`OGRwkbGeometryType` として返されます). これが "
+":cpp:enumerator:`OGRwkbGeometryType::wkbUnknown` の場合, 任意のタイプのジオメトリ"
+"が許可されます. これは, 与えられたレイヤーの地物が異なるジオメトリタイプである可"
+"能性があることを意味しますが, それらは常に共通の属性スキーマを共有します."
 
 #: ../../source/user/vector_data_model.rst:70
 msgid ""
@@ -336,16 +366,23 @@ msgid ""
 ":cpp:func:`OGRGeomFieldDefn::GetType`, and its spatial reference system, "
 "returned by :cpp:func:`OGRGeomFieldDefn::GetSpatialRef`."
 msgstr ""
+"複数のジオメトリフィールド (:cpp:class:`OGRGeomFieldDefn`) を "
+":cpp:class:`OGRFeatureDefn` に関連付けることができます. 各ジオメトリフィールドに"
+"は, その許可されているジオメトリタイプの指示子があり, "
+":cpp:func:`OGRGeomFieldDefn::GetType` によって返され, その空間参照系があり, "
+":cpp:func:`OGRGeomFieldDefn::GetSpatialRef` によって返されます."
 
 #: ../../source/user/vector_data_model.rst:72
 msgid ""
 "The :cpp:class:`OGRFeatureDefn` also contains a feature class name "
 "(normally used as a layer name)."
 msgstr ""
+":cpp:class:`OGRFeatureDefn` には, 地物クラス名 (通常はレイヤー名として使用される)"
+"も含まれています."
 
 #: ../../source/user/vector_data_model.rst:75
 msgid "Field Definitions"
-msgstr ""
+msgstr "フィールド定義"
 
 #: ../../source/user/vector_data_model.rst:77
 msgid ""
@@ -357,6 +394,12 @@ msgid ""
 ":cpp:enumerator:`OGRFieldType::OFTInteger` with a subtype of "
 ":cpp:enumerator:`OGRFieldSubType::OFSTBoolean`."
 msgstr ""
+"地物クラスの各フィールドの動作は, 共有された :cpp:class:`OGRFieldDefn` によって"
+"定義されます. :cpp:class:`OGRFieldDefn` は, :cpp:enum:`OGRFieldType` の値からフィ"
+"ールドタイプを指定します. このフィールドに格納される値は, "
+":cpp:enum:`OGRFieldSubType` に従ってさらに制限される場合があります. たとえば, "
+"フィールドは, :cpp:enumerator:`OGRFieldType::OFTInteger` タイプで, "
+":cpp:enumerator:`OGRFieldSubType::OFSTBoolean` サブタイプを持つことがあります."
 
 #: ../../source/user/vector_data_model.rst:82
 msgid ""
@@ -367,10 +410,15 @@ msgid ""
 "justification. It may also define a default value in case one is not "
 "manually specified."
 msgstr ""
+":cpp:class:`OGRFieldDefn` は, フィールドが null に許可されているかどうか "
+"(:cpp:func:`OGRFieldDefn::IsNullable`), その値が一意である必要があるかどうか "
+"(:cpp:func:`OGRFieldDefn::IsUnique`), および小数桁数, 幅, および整列などのフォー"
+"マット情報を追跡することもできます. 手動で指定されていない場合, デフォルト値を"
+"定義することもできます."
 
 #: ../../source/user/vector_data_model.rst:85
 msgid "Field Domains"
-msgstr ""
+msgstr "フィールドドメイン"
 
 #: ../../source/user/vector_data_model.rst:87
 msgid ""
@@ -383,28 +431,40 @@ msgid ""
 "does not perform validation itself and will allow the storage of values "
 "that violate a field's associated :cpp:class:`OGRFieldDomain`."
 msgstr ""
+"一部の形式は, 特定の属性フィールドに格納できる値を記述するフィールドドメインの使"
+"用をサポートしています. :cpp:class:`OGRFieldDefn` は, :cpp:class:`GDALDataset` に"
+"関連付けられた単一の :cpp:class:`OGRFieldDomain` を参照することができます. GDAL"
+"を使用するプログラムは, :cpp:class:`OGRFieldDomain` を使用してユーザー入力を適切"
+"に制約することができます. GDAL は自体で検証を実行せず, フィールドに関連付けられ"
+"た :cpp:class:`OGRFieldDomain` を違反する値の格納を許可します."
 
 #: ../../source/user/vector_data_model.rst:90
 msgid "Available types of :cpp:class:`OGRFieldDomain` include:"
-msgstr ""
+msgstr ":cpp:class:`OGRFieldDomain` の利用可能なタイプには次のものがあります:"
 
 #: ../../source/user/vector_data_model.rst:92
 msgid ""
 ":cpp:class:`OGRCodedFieldDomain`, which constrains values those present "
 "in a specified enumeration"
 msgstr ""
+":cpp:class:`OGRCodedFieldDomain`, 指定された列挙に存在する値を制約"
+"します"
 
 #: ../../source/user/vector_data_model.rst:93
 msgid ""
 ":cpp:class:`OGRRangeFieldDomain`, which constrains values to a specified "
 "range"
 msgstr ""
+":cpp:class:`OGRRangeFieldDomain`, 指定された範囲の値を制約"
+"します"
 
 #: ../../source/user/vector_data_model.rst:94
 msgid ""
 ":cpp:class:`OGRGlobFieldDomain`, which constrains values to those "
 "matching a specified pattern"
 msgstr ""
+":cpp:class:`OGRGlobFieldDomain`, 指定されたパターンに一致する"
+"値を制約します"
 
 #: ../../source/user/vector_data_model.rst:96
 msgid ""
@@ -412,10 +472,12 @@ msgid ""
 "describing the values that should be assigned to domain-controlled fields"
 " when features are split or merged."
 msgstr ""
+"さらに, :cpp:class:`OGRFieldDomain` は, 地物が分割または結合されたときに, ドメイン"
+"制御フィールドに割り当てるべき値を記述するポリシーを定義することができます."
 
 #: ../../source/user/vector_data_model.rst:99
 msgid "Layer"
-msgstr ""
+msgstr "レイヤー"
 
 #: ../../source/user/vector_data_model.rst:101
 msgid ""
@@ -427,6 +489,12 @@ msgid ""
 "writing features from an underlying data source such as a file on disk, "
 "or the result of a database query."
 msgstr ""
+":cpp:class:`OGRLayer` は, データソース内の地物レイヤーを表します. "
+":cpp:class:`OGRLayer` 内のすべての地物は共通のスキーマを共有し, 同じ "
+":cpp:class:`OGRFeatureDefn` です. :cpp:class:`OGRLayer` クラスには, データソース"
+"から地物を読み取るためのメソッドも含まれています. :cpp:class:`OGRLayer` は, ディ"
+"スク上のファイルやデータベースクエリの結果など, 下位のデータソースから地物を読"
+"み書きするためのゲートウェイと考えることができます."
 
 #: ../../source/user/vector_data_model.rst:103
 msgid ""
@@ -442,6 +510,15 @@ msgid ""
 "can be controlled by flagging fields as ignored "
 "(:cpp:func:`OGRLayer::SetIgnoredFields`)."
 msgstr ""
+":cpp:class:`OGRLayer` には, 順次およびランダムな読み取りおよび書き込みのためのメ"
+"ソッドが含まれています. 読み取りアクセス (:cpp:func:`OGRLayer::GetNextFeature` "
+"メソッドを介して) は通常, 1 回に 1 つずつすべての地物を順次読み取ります; ただし, "
+":cpp:class:`OGRLayer` に空間フィルタを設定することで, 特定の地理的領域に交差す"
+"る地物を返すように制限することができます (:cpp:func:`OGRLayer::SetSpatialFilter`"
+" メソッドを介して). 属性に対するフィルタは, :cpp:func:`OGRLayer::SetAttributeFilter`"
+" メソッドでのみ設定できます. デフォルトでは, すべての利用可能な属性とジオメトリが"
+"読み取られますが, これはフィールドを無視するようにフラグを立てることで制御できま"
+"す (:cpp:func:`OGRLayer::SetIgnoredFields`)."
 
 #: ../../source/user/vector_data_model.rst:105
 msgid ""
@@ -451,6 +528,10 @@ msgid ""
 ":cpp:func:`OGRLayer::GetArrowStream` method (cf "
 ":ref:`vector_api_tut_arrow_stream`)."
 msgstr ""
+"GDAL 3.6 以降, ``GetNextFeature`` を介して地物を取得する代わりに, "
+":cpp:func:`OGRLayer::GetArrowStream` メソッドを使用して, バッチで地物を取得し, "
+"列指向のメモリレイアウトで取得することができます (cf "
+":ref:`vector_api_tut_arrow_stream`)."
 
 #: ../../source/user/vector_data_model.rst:107
 msgid ""
@@ -459,6 +540,9 @@ msgid ""
 "More information on GDAL's handling of feature styles can be found in the"
 " :ref:`ogr_feature_style`."
 msgstr ""
+":cpp:class:`OGRLayer` には, レイヤー内の地物で使用できるスタイルセットを提供する "
+":cpp:class:`OGRStyleTable` を格納することもできます. 地物スタイルの GDAL の処理"
+"に関する詳細は, :ref:`ogr_feature_style` にあります."
 
 #: ../../source/user/vector_data_model.rst:109
 msgid ""
@@ -468,6 +552,10 @@ msgid ""
 " This means it isn't possible to have multiple read operations active at "
 "one time with different spatial filters on each."
 msgstr ""
+"現在の OGR アーキテクチャの欠点の 1 つは, 空間フィルタと属性フィルタが, データソー"
+"ス内の特定のレイヤーの唯一の代表であることを意図している :cpp:class:`OGRLayer` に"
+"直接設定されていることです. これは, 各々に異なる空間フィルタが設定された複数の読"
+"み取り操作を同時にアクティブにすることができないことを意味します."
 
 #: ../../source/user/vector_data_model.rst:114
 msgid ""
@@ -477,6 +565,10 @@ msgid ""
 ":cpp:class:`OGRFeatureDefn`, so why not amalgamate the classes? There are"
 " two reasons:"
 msgstr ""
+"もう 1 つの疑問は, なぜ :cpp:class:`OGRLayer` と :cpp:class:`OGRFeature"
+"Defn` クラスが異なるのかということです. :cpp:class:`OGRLayer` は常に "
+":cpp:class:`OGRFeatureDefn` との一対一の関係を持つため, なぜクラスを統合しないの"
+"でしょうか? その理由は 2 つあります:"
 
 #: ../../source/user/vector_data_model.rst:116
 msgid ""
@@ -484,6 +576,9 @@ msgid ""
 "don't depend on :cpp:class:`OGRLayer`, so they can exist independently in"
 " memory without regard to a particular layer in a data store."
 msgstr ""
+"現在の定義では, :cpp:class:`OGRFeature` と :cpp:class:`OGRFeature"
+"Defn` は :cpp:class:`OGRLayer` に依存していないため, データストア内の特定のレイヤ"
+"ーに関係なく, メモリ内で独立して存在することができます."
 
 #: ../../source/user/vector_data_model.rst:117
 msgid ""
@@ -493,6 +588,10 @@ msgid ""
 "related to their current feature grouping may be important to "
 "implementing SFCORBA support using OGR."
 msgstr ""
+"SF CORBA モデルには, SFCOM および SFSQL モデルのように, 単一の固定スキーマを持つ"
+"レイヤーの概念がありません. 地物が現在の地物グループに直接関連していない可能性の"
+"ある地物コレクションに属しているという事実は, OGR を使用して SFCORBA サポートを実"
+"装する際に重要かもしれません."
 
 #: ../../source/user/vector_data_model.rst:119
 msgid ""
@@ -501,10 +600,14 @@ msgid ""
 "implemented. OGRLayers are normally owned directly by their "
 ":cpp:class:`GDALDataset`, and aren't instantiated or destroyed directly."
 msgstr ""
+":cpp:class:`OGRLayer` クラスは抽象基底クラスです. 実装は, 実装された各ファイル形"
+"式ドライバーに対してサブクラス化されることが期待されています. OGRLayer は通常, "
+"直接 :cpp:class:`GDALDataset` によって所有され, 直接インスタンス化または破棄され"
+"ません."
 
 #: ../../source/user/vector_data_model.rst:123
 msgid "Dataset"
-msgstr ""
+msgstr "データセット"
 
 #: ../../source/user/vector_data_model.rst:125
 msgid ""
@@ -513,6 +616,10 @@ msgid ""
 " gateway. A :cpp:class:`GDALDataset` has a list of :cpp:class:`OGRLayer` "
 "which it owns but can return references to."
 msgstr ""
+":cpp:class:`GDALDataset` は, :cpp:class:`OGRLayer` オブジェクトのセットを表します."
+" これは通常, 単一のファイル, ファイルセット, データベース, またはゲートウェイを表し"
+"ます. :cpp:class:`GDALDataset` には, 所有している :cpp:class:`OGRLayer` のリストが"
+"ありますが, 参照を返すこともできます."
 
 #: ../../source/user/vector_data_model.rst:127
 msgid ""
@@ -523,6 +630,12 @@ msgid ""
 " :cpp:class:`GDALDataset` closes access to the underlying persistent data"
 " source, but does not normally result in deletion of that file."
 msgstr ""
+":cpp:class:`GDALDataset` は抽象基底クラスです. 実装は, 実装された各ファイル形式"
+"ドライバーに対してサブクラス化されることが期待されています. "
+":cpp:class:`GDALDataset` オブジェクトは通常, 直接インスタンス化されるのではなく, "
+":cpp:class:`GDALDriver` の支援を受けてインスタンス化されます. "
+":cpp:class:`GDALDataset` を削除すると, 下位の永続データソースへのアクセスが閉じら"
+"れますが, 通常, そのファイルが削除されることはありません."
 
 #: ../../source/user/vector_data_model.rst:129
 msgid ""
@@ -530,6 +643,9 @@ msgid ""
 "connection string) that can be used to reopen the data source with a "
 ":cpp:class:`GDALDriver`."
 msgstr ""
+":cpp:class:`GDALDataset` には, データソースを :cpp:class:`GDALDriver` で再オープン"
+"するために使用できる名前 (通常はファイル名またはデータベース接続文字列) がありま"
+"す."
 
 #: ../../source/user/vector_data_model.rst:131
 msgid ""
@@ -540,6 +656,11 @@ msgid ""
 "OGR also includes support for evaluating a subset of the SQL SELECT "
 "statement against any datasource (see :ref:`ogr_sql_sqlite_dialect`.)"
 msgstr ""
+":cpp:class:`GDALDataset` には, 通常 SQL の形式のデータソース固有のコマンドを実行"
+"するサポートもあります. これは, :cpp:func:`GDALDataset::ExecuteSQL` メソッドを介し"
+"て実行されます. 一部のデータソース (PostGIS や Oracle など) は SQL を下位のデータ"
+"ベースに渡しますが, OGR は任意のデータソースに対して SQL SELECT 文のサブセットを"
+"評価するサポートも提供しています (:ref:`ogr_sql_sqlite_dialect` を参照)."
 
 #: ../../source/user/vector_data_model.rst:133
 msgid ""
@@ -547,6 +668,9 @@ msgid ""
 "mechanism for to start, commit, and rollback transactions when "
 "interacting with the underlying data store."
 msgstr ""
+"一部のドライバを使用する場合, :cpp:class:`GDALDataset` は, 下位のデータストアとや"
+"り取りするときにトランザクションを開始, コミット, ロールバックするメカニズムも提"
+"供しています."
 
 #: ../../source/user/vector_data_model.rst:136
 msgid ""
@@ -555,6 +679,9 @@ msgid ""
 "Information about these relationships is stored in a "
 ":cpp:class:`GDALRelationshp`."
 msgstr ""
+":cpp:class:`GDALDataset` は, レイヤー間の関係 (たとえば, データベーステーブル間の"
+"外部キー関係) についても認識することができます. これらの関係に関する情報は, "
+":cpp:class:`GDALRelationshp` に格納されます."
 
 #: ../../source/user/vector_data_model.rst:140
 msgid ""
@@ -563,10 +690,13 @@ msgid ""
 "backwards compatibility but is functionally equivalent to a "
 ":cpp:class:`GDALDataset` for vector data."
 msgstr ""
+"以前のバージョンの GDAL では, ベクターデータセットを :cpp:class:`OGRDataSource` "
+"クラスを使用して表現していました. このクラスは後方互換性のために維持されています"
+"が, ベクターデータに対しては :cpp:class:`GDALDataset` と機能的に同等です."
 
 #: ../../source/user/vector_data_model.rst:143
 msgid "Drivers"
-msgstr ""
+msgstr "ドライバー"
 
 #: ../../source/user/vector_data_model.rst:145
 msgid ""
@@ -575,6 +705,10 @@ msgid ""
 ":cpp:class:`GDALDriverManager`, a singleton class that is normally used "
 "to open new datasets."
 msgstr ""
+"サポートされている各ファイル形式に対して :cpp:class:`GDALDriver` オブジェクトがイン"
+"スタンス化されます. 通常, 新しいデータセットを開くために使用されるシングルトンクラ"
+"スである :cpp:class:`GDALDriverManager` に :cpp:class:`GDALDriver` オブジェクトが登"
+"録されます."
 
 #: ../../source/user/vector_data_model.rst:147
 msgid ""
@@ -583,6 +717,10 @@ msgid ""
 "each file format to be supported (along with a file format specific "
 ":cpp:class:`GDALDataset`, and :cpp:class:`OGRLayer` classes)."
 msgstr ""
+"新しい :cpp:class:`GDALDriver` オブジェクトが, サポートされる各ファイル形式に対し"
+"て Identify(), Open() などの操作のための関数ポインタを定義し, インスタンス化される"
+"ことが意図されています (:cpp:class:`GDALDataset` および :cpp:class:`OGRLayer` クラス"
+"を含むファイル形式固有のクラスとともに)."
 
 #: ../../source/user/vector_data_model.rst:149
 msgid ""
@@ -593,4 +731,9 @@ msgid ""
 "driver manager will normally try each :cpp:class:`GDALDataset` in turn, "
 "until one succeeds, returning a :cpp:class:`GDALDataset` object."
 msgstr ""
+"アプリケーションの起動時には, 各所望のファイル形式に対して登録関数が通常呼び出さ"
+"れます. これらの関数は適切な :cpp:class:`GDALDriver` オブジェクトをインスタンス"
+"化し, それらを :cpp:class:`GDALDriverManager` に登録します. データセットを開くとき"
+"には, ドライバーマネージャは通常, 1 つずつ各 :cpp:class:`GDALDataset` を試し, 成功"
+"するまで続け, :cpp:class:`GDALDataset` オブジェクトを返します."
 
