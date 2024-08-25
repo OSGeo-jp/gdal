@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/user/multithreading.rst:5
 msgid "Multi-threading"
-msgstr ""
+msgstr "マルチスレッディング"
 
 #: ../../source/user/multithreading.rst:8
 msgid "GDAL API: re-entrant, but not thread-safe"
-msgstr ""
+msgstr "GDAL-API: 再入可能だが,スレッドセーフではない"
 
 #: ../../source/user/multithreading.rst:10
 msgid ""
@@ -36,20 +36,25 @@ msgid ""
 "simultaneously from multiple threads, *but* only if each invocation uses "
 "its own data."
 msgstr ""
+"用語  ``スレッドセーフ`` または ``再入可能`` の正確な意味は完全に標準化されていません."
+"ここでは, `QTの定義 <https://doc.qt.io/qt-5/threads-reentrancy.html>`__ を使用します. "
+"特に, C関数またはC++メソッドは, 複数のスレッドから同時に呼び出すことができると言われます."
+" *しかし* 各呼び出しが独自のデータを使用する場合のみ, 再入可能であるとされます."
 
 #: ../../source/user/multithreading.rst:16
 msgid "All GDAL public C functions and C++ methods are re-entrant, except:"
-msgstr ""
+msgstr "すべてのGDAL公開C関数とC++メソッドは再入可能ですが, 以下の例外があります:"
 
 #: ../../source/user/multithreading.rst:18
 msgid "the general initialization functions, like :cpp:func:`GDALAllRegister`."
-msgstr ""
+msgstr ":cpp:func:`GDALAllRegister` のような一般的な初期化関数."
 
 #: ../../source/user/multithreading.rst:19
 msgid ""
 "the general cleanup functions like :cpp:func:`GDALDestroy` or "
 ":cpp:func:`OSRCleanup`."
-msgstr ""
+msgstr ":cpp:func:`GDALDestroy` や :cpp:func:`OSRCleanup` のような一般的な"
+"クリーンアップ関数."
 
 #: ../../source/user/multithreading.rst:21
 msgid ""
@@ -57,6 +62,10 @@ msgid ""
 "and it is general best practice to call them from the main thread of the "
 "program at program initialization and termination."
 msgstr ""
+"これらの関数は複数のスレッドから同時に呼び出すべきではありません."
+"また, プログラムの初期化と終了時には, 一般的にこれらの関数をプロ"
+"グラムのメインスレッドから呼び出すのがベストプラクティスです."
+
 
 #: ../../source/user/multithreading.rst:25
 msgid ""
@@ -71,6 +80,14 @@ msgid ""
 "a distinct GDALDataset). Similarly for a GDALDataset owning several "
 ":cpp:class:`OGRLayer`."
 msgstr ""
+"特に指定されていない限り, GDAL公開C関数とC++メソッドはスレッドセーフであると"
+"仮定してはいけません. つまり, 同じデータインスタンスに対して複数のスレッドから"
+"同時にGDAL関数を呼び出すべきではありません. また, 所有関係を通じて密接に関連して"
+"いるインスタンスに対しても同様です. たとえば, マルチバンドラスターデータセットの場合,"
+"同じ :cpp:class:`GDALDataset` インスタンスによって所有されている異なる "
+":cpp:class:`GDALRasterBand` インスタンスに対して同時にGDAL関数を呼び出すことは安全では"
+"ありません (各スレッドは代わりに異なるGDALDatasetを操作するべきです). 同様に, "
+"複数の :cpp:class:`OGRLayer` を所有するGDALDatasetの場合も同様です."
 
 #: ../../source/user/multithreading.rst:34
 msgid ""
@@ -83,16 +100,25 @@ msgid ""
 "access them is invoked. Drivers may also rely on third-party libraries "
 "that expose objects that are not thread-safe."
 msgstr ""
+"その理由は, GDALDatasetやGDALRasterBandのほとんどの実装が状態を持っているためです."
+"GDALDatasetは通常, ファイルハンドルを所有し, それに対してシーク/読み取り操作を行うため,"
+"同時アクセスを許可しません. 特定のGDALDatasetに関連するブロックキャッシュ関連の構造は"
+"スレッドセーフではありません. ドライバは, さまざまなメタデータにアクセスするための遅延"
+"初期化戦略を実装することがよくあり, これらのメタデータにアクセスするためのメソッドが初めて"
+"呼び出されたときにのみ解決されます. ドライバはまた, スレッドセーフでないオブジェクトを公開する"
+"サードパーティライブラリに依存することがあります."
 
 #: ../../source/user/multithreading.rst:43
 msgid ""
 "Those restrictions apply to the C and C++ ABI, and all languages bindings"
 " (unless they would take special precautions to serialize calls)"
 msgstr ""
+"これらの制限は, CおよびC++のABI, およびすべての言語バインディングに適用されます"
+"(特別な注意を払って呼び出しを直列化する場合を除く)"
 
 #: ../../source/user/multithreading.rst:47
 msgid "GDAL block cache and multi-threading"
-msgstr ""
+msgstr "GDALブロックキャッシュとマルチスレッディング"
 
 #: ../../source/user/multithreading.rst:49
 msgid ""
@@ -101,10 +127,14 @@ msgid ""
 "several datasets from several threads, due to lock contention in the "
 "global structures of the block cache mechanism."
 msgstr ""
+"現在のGDALラスターブロックキャッシュの設計では, 複数のデータセットの同時読み取りが"
+"許可されています. ただし, 複数のスレッドから複数のデータセットに書き込む場合, ブロック"
+"キャッシュメカニズムのグローバル構造体でのロック競合によるパフォーマンス問題が発生する"
+"可能性があります."
 
 #: ../../source/user/multithreading.rst:54
 msgid "RAM fragmentation and multi-threading"
-msgstr ""
+msgstr "RAMの断片化とマルチスレッディング"
 
 #: ../../source/user/multithreading.rst:56
 msgid ""
@@ -115,6 +145,10 @@ msgid ""
 "memory allocator helps reducing the amount of virtual and resident memory"
 " used."
 msgstr ""
+"ラスターデータセットの読み取りまたは書き込みを行うマルチスレッディングを含むシナリオは,"
+"Linuxのデフォルトの動的メモリアロケータを使用している場合, 高いRAM使用量を引き起こす"
+"傾向があることが観察されています. 代替の `tcmalloc  <https://github.com/google/tcmalloc>`__ "
+"メモリアロケータを使用すると, 使用される仮想メモリと常駐メモリの量を減らすのに役立ちます."
 
 #: ../../source/user/multithreading.rst:62
 msgid ""
@@ -122,10 +156,12 @@ msgid ""
 "installing the ``libtcmalloc-minimal4`` package and running the binary "
 "that executes GDAL with:"
 msgstr ""
+"たとえば, Debian/Ubuntuディストリビューションでは, ``libtcmalloc-minimal4`` パッケージを"
+"インストールし, GDALを実行するバイナリを次のように実行することで, これを行うことができます:"
 
 #: ../../source/user/multithreading.rst:71
 msgid "GDAL and multi-processing"
-msgstr ""
+msgstr "GDALとマルチプロセッシング"
 
 #: ../../source/user/multithreading.rst:73
 msgid ""
@@ -137,4 +173,9 @@ msgid ""
 "generally lead to wrong results due to the underlying file descriptors "
 "being shared."
 msgstr ""
+"GDAL操作の途中でPOSIX fork() APIを呼び出すべきではありません. そうしないと, "
+"フォークされたプロセスでミューテックスなどの構造体が永遠にロックされたように見える"
+"可能性があります. マルチプロセッシングを行う場合, GDAL操作を行う前にプロセスをフォークする"
+"ことをお勧めします. 複数のサブプロセスで同じGDALDatasetインスタンスに操作を行うと, "
+"基になるファイルディスクリプタが共有されているため, 一般的に誤った結果になります."
 
