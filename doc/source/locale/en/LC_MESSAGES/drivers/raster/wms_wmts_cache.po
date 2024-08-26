@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:1
+msgid ""
+"Caching of remote pixel data is possible by setting a <Cache> element in "
+"the WMS (or WMTS) configuration file."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:4
+msgid ""
+"Before GDAL 3.9, if the <Path> sub-element of <Cache> was not specified, "
+"the directory of the cache was ``./gdalwmscache`` (that is to say a "
+"``gdalwmscache`` subdirectory of the current directory), unless the "
+":config:`GDAL_DEFAULT_WMS_CACHE_PATH` configuration option is specified."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:9
+msgid ""
+"Starting with GDAL 3.9, the directory of the cache is set according to "
+"the following logic (first listed criterion is prioritary over following "
+"ones):"
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:12
+msgid "Value of the <Path> sub-element of <Cache>, if specified."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:14
+msgid ""
+"``${GDAL_DEFAULT_WMS_CACHE_PATH}`` if "
+":config:`GDAL_DEFAULT_WMS_CACHE_PATH` is set."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:16
+msgid ""
+"``${XDG_CACHE_HOME}/gdalwmscache`` if the ``XDG_CACHE_HOME`` "
+"configuration option is set."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:18
+msgid ""
+"On Unix, ``${HOME}/.cache/gdalwmscache`` if the ``HOME`` configuration "
+"option is set."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:20
+msgid ""
+"On Windows, ``${USERPROFILE}/.cache/gdalwmscache`` if the ``USERPROFILE``"
+" configuration option is set."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:22
+msgid ""
+"``${CPL_TMPDIR}/gdalwmscache_${USER}`` if :config:`CPL_TMPDIR` and "
+"``USER`` configuration options are set."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:24
+msgid "If ``CPL_TMPDIR`` is not set, then ``TMPDIR`` is used, or ``TEMP``"
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:26
+msgid ""
+"If ``USER`` is not set, ``USERNAME`` is used if set. If neither "
+"``USERNAME`` or ``USER`` are set, the md5sum of the filename of the "
+"configuration file is used)"
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:29
+msgid ""
+"``./gdalwmscache_{md5sum(filename)}`` if none of the above mentioned "
+"configuration options are set."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:31
+msgid ""
+"Note that if the <Unique> element is set to true (which is its default "
+"value), a subdirectory whose name is the md5sum of the filename of the "
+"configuration file is appended to the caching directory."
+msgstr ""
+
+#: ../../source/drivers/raster/wms_wmts_cache.rst:35
+msgid ""
+"The actual caching directory can be got by querying the ``CACHE_PATH`` "
+"metadata item on the dataset."
+msgstr ""
+

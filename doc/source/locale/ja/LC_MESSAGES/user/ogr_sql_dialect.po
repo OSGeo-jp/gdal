@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../source/user/ogr_sql_dialect.rst:30
 msgid "SELECT"
-msgstr ""
+msgstr "SELECT"
 
 #: ../../source/user/ogr_sql_dialect.rst:32
 msgid ""
@@ -85,6 +85,9 @@ msgid ""
 "in an RDBMS and feature attributes are analogous to column values. The "
 "simplest form of OGR SQL SELECT statement looks like this:"
 msgstr ""
+"SELECT ステートメントは, レイヤーの地物 (RDBMS のテーブル行に類似) を取得するために使用されます."
+" クエリの結果は地物の一時的なレイヤーとして表されます. データソースのレイヤーは RDBMS のテーブルに類似し,"
+" 地物の属性は列値に類似しています. OGR SQL SELECT ステートメントの最も単純な形式は次のようになります:"
 
 #: ../../source/user/ogr_sql_dialect.rst:42
 msgid ""
@@ -94,6 +97,9 @@ msgid ""
 "the list of fields to fetch from the layer, with \"*\" meaning that all "
 "fields should be fetched."
 msgstr ""
+"この場合, \"polylayer\" という名前のレイヤーからすべての地物が取得され, それらの地物のすべての属性が返されます."
+" これは基本的にレイヤーに直接アクセスするのと同等です. この例では, \"*\" はレイヤーから取得するフィールドのリストで,"
+" \"*\" はすべてのフィールドを取得することを意味します."
 
 #: ../../source/user/ogr_sql_dialect.rst:48
 msgid ""
@@ -103,12 +109,17 @@ msgid ""
 "always included in the result so it does not need to appear in the SQL "
 "statement."
 msgstr ""
+"この少し洗練された形式は, レイヤーからすべての地物を取得しますが, スキーマにはジオメトリ列と EAS_ID および "
+"PROP_VALUE 属性のみが含まれます."
+" OGR SQL 方言では, ジオメトリ列は常に結果に含まれるため, SQL ステートメントに表示する必要はありません."
 
 #: ../../source/user/ogr_sql_dialect.rst:57
 msgid ""
 "A much more ambitious SELECT, restricting the features fetched with a "
 "WHERE clause, and sorting the results might look like:"
 msgstr ""
+"WHERE 句で取得する地物を制限し, 結果をソートするより野心的な SELECT "
+"は次のようになります:"
 
 #: ../../source/user/ogr_sql_dialect.rst:64
 msgid ""
@@ -116,18 +127,21 @@ msgid ""
 "geometry and one attribute (named something like \"count_eas_id\") "
 "containing the number of distinct values of the eas_id attribute."
 msgstr ""
+"この SELECT ステートメントは, ジオメトリと eas_id 属性の異なる値の数を含む 1 つ"
+"の属性 (\"count_eas_id\" のような名前) を持つ"
+" 1 つの地物のみを生成します."
 
 #: ../../source/user/ogr_sql_dialect.rst:73
 msgid "General syntax"
-msgstr ""
+msgstr "一般的な構文"
 
 #: ../../source/user/ogr_sql_dialect.rst:75
 msgid "The general syntax of a SELECT statement is:"
-msgstr ""
+msgstr "SELECT ステートメントの一般的な構文は次のようになります:"
 
 #: ../../source/user/ogr_sql_dialect.rst:84
 msgid "List Operators"
-msgstr ""
+msgstr "リスト演算子"
 
 #: ../../source/user/ogr_sql_dialect.rst:86
 msgid ""
@@ -138,6 +152,12 @@ msgid ""
 " to mean \"all fields\". The syntax ``* EXCLUDE ([fields])`` can be used "
 "to select all fields except those listed in parentheses."
 msgstr ""
+"フィールドリストは, 出力地物にソースレイヤーから持ち込まれるフィールドのカンマ区切りリストです."
+" フィールドリストに表示される順序で出力地物に表示されるため, フィールドリストを使用してフィールド"
+"の順序を変更することができます."
+" 特殊文字 ``*`` は \"すべてのフィールド\" を意味します. ``* EXCLUDE ([fields])`` 構文を使用して, "
+"括弧内にリストされていないすべてのフィールドを選択することができます."
+
 
 #: ../../source/user/ogr_sql_dialect.rst:93
 msgid ""
@@ -152,6 +172,12 @@ msgid ""
 " values are assembled in memory, so a lot of memory may be used for "
 "datasets with a large number of distinct values."
 msgstr ""
+"フィールドリストの特殊な形式は, DISTINCT キーワードを使用します. これは, 指定された属性のすべての異なる値のリストを返します."
+" DISTINCT キーワードが使用されると, フィールドリストには 1 つの属性のみが表示されます. DISTINCT キーワードは, "
+"どの種類のフィールドに対しても使用できます. 現在, OGR SQL では文字列値に対する DISTINCT テストは大文字小文字を区別しません."
+" DISTINCT キーワードを使用した SELECT の結果は, 1 つの列 (操作されたフィールドと同じ名前) を持つレイヤーであり, "
+"異なる値ごとに 1 つの地物があります. ジオメトリは破棄されます. 異なる値はメモリ内で組み立てられるため, "
+"大量のメモリが使用される可能性があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:108
 msgid ""
@@ -160,32 +186,37 @@ msgid ""
 "fields must have summarization operators applied.   The summarization "
 "operators are:"
 msgstr ""
+"列に適用できるいくつかの集計演算子もあります. 1 つのフィールドに集計演算子が適用されると, "
+"すべてのフィールドに集計演算子が適用される必要があります. 集計演算子は次のとおりです:"
 
 #: ../../source/user/ogr_sql_dialect.rst:112
 msgid "COUNT: count of instances"
-msgstr ""
+msgstr "COUNT: インスタンスの数"
 
 #: ../../source/user/ogr_sql_dialect.rst:113
 msgid "AVG: numerical average:"
-msgstr ""
+msgstr "AVG: 数値の平均:"
 
 #: ../../source/user/ogr_sql_dialect.rst:114
 msgid "SUM: numerical sum"
-msgstr ""
+msgstr "SUM: 数値の合計"
 
 #: ../../source/user/ogr_sql_dialect.rst:115
 msgid "MIN: lexical or numerical minimum"
-msgstr ""
+msgstr "MIN: レキシカルまたは数値の最小値"
 
 #: ../../source/user/ogr_sql_dialect.rst:116
 msgid "MAX: lexical or numerical maximum"
-msgstr ""
+msgstr "MAX: レキシカルまたは数値の最大値"
 
 #: ../../source/user/ogr_sql_dialect.rst:117
 msgid ""
 "STDDEV_POP: (GDAL >= 3.10) numerical population standard deviation. "
 "Applied on Date/DateTime/Time fields, this returns a value in seconds."
 msgstr ""
+"STDDEV_POP: (GDAL >= 3.10) 数値 `母集団標準偏差 "
+"<https://en.wikipedia.org/wiki/Standard_deviation#Population_standard_deviation>`__."
+"  Date/DateTime/Time フィールドに適用されると, 秒単位の値が返されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:118
 msgid ""
@@ -193,24 +224,33 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__."
 "  Applied on Date/DateTime/Time fields, this returns a value in seconds."
 msgstr ""
+"STDDEV_SAMP: (GDAL >= 3.10) 数値 `標本標準偏差 "
+"<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__."
+"  Date/DateTime/Time フィールドに適用されると, 秒単位の値が返されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:120
 msgid ""
 "This example produces a variety of summarization information on parcel "
 "property values:"
 msgstr ""
+"この例では, 地積の物件価値に関するさまざまな集計情報が生成"
+"されます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:128
 msgid ""
 "It is also possible to apply the COUNT() operator to a DISTINCT SELECT to"
 " get a count of distinct values, for instance:"
 msgstr ""
+"COUNT() 演算子を DISTINCT SELECT に適用して, 異なる値の数を取得することも可能です. "
+"たとえば:"
 
 #: ../../source/user/ogr_sql_dialect.rst:135
 msgid ""
 "As a special case, the COUNT() operator can be given a \"*\" argument "
 "instead of a field name which is a short form for count all the records."
 msgstr ""
+"特別な場合として, COUNT() 演算子にフィールド名の代わりに \"*\" 引数を指定することができます."
+" これはすべてのレコードをカウントするための短い形式です."
 
 #: ../../source/user/ogr_sql_dialect.rst:143
 msgid ""
@@ -218,6 +258,8 @@ msgid ""
 "really meaningful when performing joins.  It is further demonstrated in "
 "the JOIN section."
 msgstr ""
+"フィールド名はテーブル名で接頭辞を付けることもできますが, これは結合を行う場合にのみ本当に意味があります."
+" JOIN セクションでさらに説明されています."
 
 #: ../../source/user/ogr_sql_dialect.rst:147
 msgid ""
@@ -227,14 +269,17 @@ msgid ""
 "fields. Boolean resulting expressions (comparisons, logical operators) "
 "can also be used."
 msgstr ""
+"フィールド定義は算術演算および関数演算子を使用した複雑な式にすることもできます."
+" ただし, DISTINCT キーワードや MIN, MAX, AVG, SUM などの集計演算子は式フィールドに適用できません."
+" ブール値の結果となる式 (比較, 論理演算子) も使用できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:156
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: ../../source/user/ogr_sql_dialect.rst:164
 msgid "Functions"
-msgstr ""
+msgstr "関数"
 
 #: ../../source/user/ogr_sql_dialect.rst:166
 msgid ""
@@ -248,12 +293,19 @@ msgid ""
 "specified, up to length characters are extracted from the string. "
 "Otherwise the remainder of the string is extracted."
 msgstr ""
+"SUBSTR 関数は文字列から部分文字列を抽出するために使用できます. 構文は次のようになります: "
+"SUBSTR(string_expr, start_offset [, length]). string_expr の start_offset から始まる部分文字列を抽出します "
+"(1 が string_expr の最初の文字, 2 が 2 番目の文字, など...). start_offset が負の値の場合, 部分文字列は文字列の末尾から抽出されます "
+"(-1 が文字列の最後の文字, -2 が最後の文字の前の文字, ...). length が指定されている場合, 文字列から最大 length 文字が抽出されます. "
+"それ以外の場合, 文字列の残りが抽出されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:174
 msgid ""
 "Note: for the time being, the character as considered to be equivalent to"
 " bytes, which may not be appropriate for multi-byte encodings like UTF-8."
 msgstr ""
+"注意: 現時点では, 文字はバイトと同等と見なされており, UTF-8 のようなマルチバイト"
+"エンコーディングには適していないかもしれません."
 
 #: ../../source/user/ogr_sql_dialect.rst:183
 msgid ""
@@ -261,16 +313,20 @@ msgid ""
 "associate to a key from a HSTORE string, formatted like "
 "'key=>value,other_key=>other_value,...'"
 msgstr ""
+"``hstore_get_value()`` 関数は, 'key=>value,other_key=>other_value,...' のように"
+"フォーマットされた HSTORE 文字列からキーに関連付けられた値を抽出するために使用できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:191
 msgid "Using the field name alias"
-msgstr ""
+msgstr "フィールド名別名の使用"
 
 #: ../../source/user/ogr_sql_dialect.rst:193
 msgid ""
 "OGR SQL supports renaming the fields following the SQL92 specification by"
 " using the AS keyword according to the following example:"
 msgstr ""
+"OGR SQL は, 以下の例に示すように, AS キーワードを使用して SQL92 仕様に従って"
+"フィールドの名前を変更することをサポートしています:"
 
 #: ../../source/user/ogr_sql_dialect.rst:200
 msgid ""
@@ -278,64 +334,69 @@ msgid ""
 "specification. Therefore we cannot rename the fields inside an operator, "
 "but we can rename whole column expression, like these two:"
 msgstr ""
+"フィールド名別名は, 列仕様の最後の操作として使用できます. したがって, "
+"演算子内でフィールドの名前を変更することはできませんが, 次の 2 つのように"
+"列式全体の名前を変更することができます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:210
 msgid "Changing the type of the fields"
-msgstr ""
+msgstr "フィールドの型を変更する"
 
 #: ../../source/user/ogr_sql_dialect.rst:212
 msgid ""
 "OGR SQL supports changing the type of the columns by using the SQL92 "
 "compliant CAST operator according to the following example:"
 msgstr ""
+"OGR SQL は, 以下の例に示すように, SQL92 に準拠した CAST 演算子を使用して"
+"列の型を変更することをサポートしています:"
 
 #: ../../source/user/ogr_sql_dialect.rst:219
 msgid "Currently casting to the following target types are supported:"
-msgstr ""
+msgstr "現在, 次のターゲット型へのキャストがサポートされています:"
 
 #: ../../source/user/ogr_sql_dialect.rst:221
 msgid "boolean"
-msgstr ""
+msgstr "boolean"
 
 #: ../../source/user/ogr_sql_dialect.rst:222
 msgid "character(field_length). By default, field_length=1."
-msgstr ""
+msgstr "character(フィールド長). デフォルトでは, フィールド長=1."
 
 #: ../../source/user/ogr_sql_dialect.rst:223
 msgid "float(field_length)"
-msgstr ""
+msgstr "float(フィールド長)"
 
 #: ../../source/user/ogr_sql_dialect.rst:224
 msgid "numeric(field_length, field_precision)"
-msgstr ""
+msgstr "numeric(フィールド長, フィールド精度)"
 
 #: ../../source/user/ogr_sql_dialect.rst:225
 msgid "smallint(field_length) : 16 bit signed integer"
-msgstr ""
+msgstr "smallint(フィールド長) : 16 ビット符号付き整数"
 
 #: ../../source/user/ogr_sql_dialect.rst:226
 msgid "integer(field_length)"
-msgstr ""
+msgstr "integer(フィールド長)"
 
 #: ../../source/user/ogr_sql_dialect.rst:227
 msgid "bigint(field_length), 64 bit integer, extension to SQL92"
-msgstr ""
+msgstr "bigint(フィールド長), 64 ビット整数, SQL92 の拡張"
 
 #: ../../source/user/ogr_sql_dialect.rst:228
 msgid "date(field_length)"
-msgstr ""
+msgstr "date(フィールド長)"
 
 #: ../../source/user/ogr_sql_dialect.rst:229
 msgid "time(field_length)"
-msgstr ""
+msgstr "time(フィールド長)"
 
 #: ../../source/user/ogr_sql_dialect.rst:230
 msgid "timestamp(field_length)"
-msgstr ""
+msgstr "timestamp(フィールド長)"
 
 #: ../../source/user/ogr_sql_dialect.rst:231
 msgid "geometry, geometry(geometry_type), geometry(geometry_type,epsg_code)"
-msgstr ""
+msgstr "geometry, geometry(ジオメトリタイプ), geometry(ジオメトリタイプ,epsg_code)"
 
 #: ../../source/user/ogr_sql_dialect.rst:233
 msgid ""
@@ -345,6 +406,10 @@ msgid ""
 " and 'string list' OGR data types are not supported, which doesn't "
 "conform to the SQL92 specification."
 msgstr ""
+"フィールド長と/またはフィールド精度を指定することは任意です. character() の幅として可変幅を示すために, "
+"幅としてゼロの明示的な値を使用できます. 'integer list', 'double list' および 'string list' OGR データ型"
+"への変換はサポートされていません."
+" これは SQL92 仕様に準拠していません."
 
 #: ../../source/user/ogr_sql_dialect.rst:239
 msgid ""
@@ -354,6 +419,9 @@ msgid ""
 " a field in the field definition list.  In other contexts it is still "
 "useful to convert between numeric, string and date data types."
 msgstr ""
+"CAST 演算子は WHERE 句を含む式のどこにでも適用できますが, 出力フィールドのフォーマットの詳細な制御は, "
+"CAST 演算子がフィールド定義リストのフィールドで最も外側の演算子である場合にのみサポートされます."
+" 他のコンテキストでは, 数値, 文字列および日付データ型間の変換には依然として有用です."
 
 #: ../../source/user/ogr_sql_dialect.rst:245
 msgid ""
@@ -361,22 +429,29 @@ msgid ""
 "POINT[Z], LINESTRING[Z], POLYGON[Z], MULTIPOINT[Z], MULTILINESTRING[Z], "
 "MULTIPOLYGON[Z], GEOMETRYCOLLECTION[Z] or GEOMETRY[Z]."
 msgstr ""
+"WKT 文字列をジオメトリにキャストすることが許可されています. geometry_type は "
+"POINT[Z], LINESTRING[Z], POLYGON[Z], MULTIPOINT[Z], MULTILINESTRING[Z], "
+"MULTIPOLYGON[Z], GEOMETRYCOLLECTION[Z] または GEOMETRY[Z] にすることができます."
 
 #: ../../source/user/ogr_sql_dialect.rst:250
 msgid "String literals and identifiers quoting"
-msgstr ""
+msgstr "文字列リテラルと識別子の引用"
 
 #: ../../source/user/ogr_sql_dialect.rst:252
 msgid ""
 "Strict SQL92 rules are applied regarding string literals and identifiers "
 "quoting."
 msgstr ""
+"文字列リテラルと識別子の引用に関しては, 厳密な SQL92 ルールが適用"
+"されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:254
 msgid ""
 "String literals (constants) must be surrounded with single-quote "
 "characters. e.g. WHERE a_field = 'a_value'"
 msgstr ""
+"文字列リテラル (定数) はシングルクォート文字で囲む必要があります. "
+"例: WHERE a_field = 'a_value'"
 
 #: ../../source/user/ogr_sql_dialect.rst:257
 msgid ""
@@ -385,10 +460,12 @@ msgid ""
 "Otherwise they must be surrounded with double-quote characters. e.g. "
 "WHERE \"from\" = 5."
 msgstr ""
+"識別子 (列名およびテーブル名) は特殊文字を含まないか SQL 予約キーワードでない場合は引用符なしで使用できます."
+" それ以外の場合は, ダブルクォート文字で囲む必要があります. 例: WHERE \"from\" = 5."
 
 #: ../../source/user/ogr_sql_dialect.rst:262
 msgid "WHERE"
-msgstr ""
+msgstr "WHERE"
 
 #: ../../source/user/ogr_sql_dialect.rst:264
 msgid ""
@@ -397,6 +474,10 @@ msgid ""
 "statement, the WHERE clause handling is also used for OGR attribute "
 "queries on regular layers via :cpp:func:`OGRLayer::SetAttributeFilter`."
 msgstr ""
+"WHERE 句の引数は, ソースレイヤーからレコードを選択するために使用される論理式です."
+" WHERE 文内での使用に加えて, WHERE 句の処理は, :cpp:func:`OGRLayer::SetAttributeFilter` "
+"を介した通常のレイヤーの OGR 属性クエリにも使用されます."
+
 
 #: ../../source/user/ogr_sql_dialect.rst:269
 msgid ""
@@ -405,6 +486,8 @@ msgid ""
 "the WHERE context logical operators are also available and the evaluated "
 "value of the expression should be logical (true or false)."
 msgstr ""
+"SELECT ステートメントのフィールド選択句の式で使用できる算術演算子およびその他の関数演算子に加えて, "
+"WHERE コンテキストでは論理演算子も使用でき, 式の評価値は論理値 (true または false) である必要があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:274
 msgid ""
@@ -414,6 +497,9 @@ msgid ""
 " the same as ``<>``, the string equality is case insensitive, but the "
 "``<``, ``>``, ``<=`` and ``>=`` operators *are* case sensitive."
 msgstr ""
+"使用可能な論理演算子は ``=``, ``!=``, ``<>``, ``<``, ``>``, ``<=``, ``>=``, ``LIKE`` および ``ILIKE``, "
+"``BETWEEN`` および ``IN`` です. ほとんどの演算子は自明ですが, ``!=`` は ``<>`` と同じであり, "
+"文字列の等価性は大文字小文字を区別しませんが, ``<``, ``>``, ``<=`` および ``>=`` 演算子は大文字小文字を区別します."
 
 #: ../../source/user/ogr_sql_dialect.rst:290
 msgid ""
@@ -422,6 +508,10 @@ msgid ""
 " old behavior is wished in GDAL 3.1, the :config:`OGR_SQL_LIKE_AS_ILIKE` "
 "can be set to ``YES``."
 msgstr ""
+"GDAL 3.1 以降, LIKE は大文字小文字を区別し, ILIKE は大文字小文字を区別しません. 以前のバージョンでは, "
+"LIKE も大文字小文字を区別しませんでした. GDAL 3.1 で以前の動作が必要な場合は, :config:`OGR_SQL_LIKE_AS_ILIKE` "
+"を ``YES`` に設定できます."
+
 
 #: ../../source/user/ogr_sql_dialect.rst:294
 msgid ""
@@ -438,6 +528,12 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ and `Cyrillic "
 "<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ Unicode categories."
 msgstr ""
+"GDAL 3.9 以降, OLCStringsAsUTF8 機能を宣言しているレイヤー (つまり, String 型のフィールドの内容が UTF-8 でエンコードされている) "
+"では, UTF-8 文字が ``LIKE`` および ``ILIKE`` 演算子によって考慮されます. ILIKE の大文字小文字を区別しない比較の場合, "
+"これは `ASCII <https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)>`__, `Latin-1 Supplement <https://en.wikipedia.org/wiki/Latin-"
+"1_Supplement_(Unicode_block)>`__, `Latin Extended-A <https://en.wikipedia.org/wiki/Latin_Extended-A>`__, `Latin Extended-B "
+"<https://en.wikipedia.org/wiki/Latin_Extended-B>`__, `Greek and Coptic <https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ および "
+"`Cyrillic <https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ Unicode カテゴリに制限されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:305
 msgid ""
@@ -448,12 +544,18 @@ msgid ""
 " percent or underscore characters can be searched as regular characters, "
 "by being preceded with the escape_char."
 msgstr ""
+"``LIKE`` および ``ILIKE`` 演算子の値引数は, 値文字列が一致するパターンです. このパターンでは, パーセント (%) は任意の文字数に一致し, "
+"アンダースコア ( _ ) は任意の 1 文字に一致します. ESCAPE escape_char 可能なエスケープ文字句を追加することで, "
+"パーセントまたはアンダースコア文字をエスケープ文字で先行させることで通常の文字として検索できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:325
 msgid ""
 "The ``IN`` takes a list of values as its argument and tests the attribute"
 " value for membership in the provided set."
 msgstr ""
+"``IN`` は, 値のリストを引数として受け取り, 属性値が提供されたセットに属しているかどうかを"
+"テストします."
+
 
 #: ../../source/user/ogr_sql_dialect.rst:337
 msgid ""
@@ -461,6 +563,8 @@ msgid ""
 " value2\" and it is equivalent to \"field_name >= value1 AND field_name "
 "<= value2\"."
 msgstr ""
+"``BETWEEN`` 演算子の構文は \"field_name BETWEEN value1 AND value2\" であり, "
+"\"field_name >= value1 AND field_name <= value2\" と等価です."
 
 #: ../../source/user/ogr_sql_dialect.rst:340
 msgid ""
@@ -468,6 +572,8 @@ msgid ""
 " for testing if a field is null or not. These are the ``IS NULL`` and "
 "``IS NOT NULL`` operators."
 msgstr ""
+"上記のバイナリ演算子に加えて, フィールドが null かどうかをテストするための追加の演算子があります. "
+"これらは ``IS NULL`` および ``IS NOT NULL`` 演算子です."
 
 #: ../../source/user/ogr_sql_dialect.rst:344
 msgid ""
@@ -476,26 +582,32 @@ msgid ""
 " Subexpressions should be bracketed to make precedence clear.  Some more "
 "complicated predicates are:"
 msgstr ""
+"基本的なフィールドテストは, ``AND``, ``OR`` および単項論理 ``NOT`` を含む論理演算子を使用して, より複雑な述語に組み合わせることができます."
+" 優先順位を明確にするために, サブ式を括弧で囲む必要があります. いくつかのより複雑な述語は次のとおりです:"
 
 #: ../../source/user/ogr_sql_dialect.rst:356
 msgid "WHERE Limitations"
-msgstr ""
+msgstr "WHERE 制限"
 
 #: ../../source/user/ogr_sql_dialect.rst:358
 msgid ""
 "Fields must all come from the primary table (the one listed in the FROM "
 "clause)."
 msgstr ""
+"フィールドはすべて主テーブル (FROM 句にリストされているテーブル) から取得する必要が"
+"あります."
 
 #: ../../source/user/ogr_sql_dialect.rst:360
 msgid ""
 "All string comparisons are case insensitive except for ``<``, ``>``, "
 "``<=`` and ``>=``"
 msgstr ""
+"``<``, ``>``, ``<=`` および ``>=`` を除くすべての文字列比較は大文字小文字を"
+"区別しません."
 
 #: ../../source/user/ogr_sql_dialect.rst:363
 msgid "ORDER BY"
-msgstr ""
+msgstr "ORDER BY"
 
 #: ../../source/user/ogr_sql_dialect.rst:365
 msgid ""
@@ -504,6 +616,8 @@ msgid ""
 "fields. Ascending (increasing) order is the default if neither the ASC or"
 " DESC keyword is provided.  For example:"
 msgstr ""
+"``ORDER BY`` 句は, 返される地物を 1 つまたは複数のフィールドで昇順または降順に並べ替えるために使用されます."
+" ASC または DESC キーワードが提供されていない場合, 昇順 (増加) 順序がデフォルトです. 例:"
 
 #: ../../source/user/ogr_sql_dialect.rst:378
 msgid ""
@@ -513,22 +627,29 @@ msgid ""
 "order. For formats which cannot efficiently randomly read features by "
 "feature id this can be a very expensive operation."
 msgstr ""
+"ORDER BY 句は, 地物セットを 2 回通過させます. 1 つ目は, 地物 ID に対応するフィールド値のインメモリテーブルを構築するためのものであり, "
+"2 つ目は, ソートされた順序で地物 ID で地物を取得するためのものです. 地物 ID で効率的にランダムに地物を読み取れない形式では, "
+"これは非常に高価な操作になる可能性があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:384
 msgid ""
 "Sorting of string field values is case sensitive, not case insensitive "
 "like in most other parts of OGR SQL."
 msgstr ""
+"文字列フィールド値のソートは, 他の多くの OGR SQL の部分とは異なり, 大文字小文字"
+"を区別します."
 
 #: ../../source/user/ogr_sql_dialect.rst:388
 msgid "LIMIT and OFFSET"
-msgstr ""
+msgstr "LIMIT および OFFSET"
 
 #: ../../source/user/ogr_sql_dialect.rst:390
 msgid ""
 "Starting with GDAL 2.2, the ``LIMIT`` clause can be used to limit the "
 "number of features returned. For example"
 msgstr ""
+"GDAL 2.2 以降, ``LIMIT`` 句を使用して返される地物の数を制限することができます. "
+"例:"
 
 #: ../../source/user/ogr_sql_dialect.rst:397
 msgid ""
@@ -536,14 +657,17 @@ msgid ""
 "result set. The value after OFFSET is the number of features skipped. For"
 " example, to skip the first 3 features from the result set:"
 msgstr ""
+"``OFFSET`` 句を使用して, 結果セットの最初の地物をスキップすることができます. OFFSET "
+"の後の値はスキップされる地物の数です. "
+"たとえば, 結果セットから最初の 3 つの地物をスキップするには:"
 
 #: ../../source/user/ogr_sql_dialect.rst:405
 msgid "Both clauses can be combined:"
-msgstr ""
+msgstr "両方の句を組み合わせることができます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:412
 msgid "JOINs"
-msgstr ""
+msgstr "JOINs"
 
 #: ../../source/user/ogr_sql_dialect.rst:414
 msgid ""
@@ -554,6 +678,10 @@ msgid ""
 "reference into a secondary **nation** table to fetch a nation name.  A "
 "joined query might look like:"
 msgstr ""
+"OGR SQL は, 1 対 1 の JOIN の制限された形式をサポートしています. これにより, "
+"問い合わせられている主テーブルとそれと共有キーを持つ副テーブルの間でレコードを参照することができます. "
+"たとえば, 都市の位置のテーブルには, 国名を取得するための参照として使用できる **nation_id** 列が含まれているかもしれません. "
+"結合されたクエリは次のようになります:"
 
 #: ../../source/user/ogr_sql_dialect.rst:426
 msgid ""
@@ -563,6 +691,11 @@ msgid ""
 "table that has the \"id\" field with the same value as the city.nation_id"
 " field."
 msgstr ""
+"このクエリは, 都市テーブルのすべてのフィールドと, nation テーブルから取得された国名を持つ追加の"
+" \"nation.name\" フィールドを持つテーブルになります. "
+"これは, nation テーブル内のレコードを参照して, \"id\" フィールドの値が"
+" city.nation_id フィールドと同じ値であるレコードを探します."
+
 
 #: ../../source/user/ogr_sql_dialect.rst:431
 msgid ""
@@ -572,6 +705,9 @@ msgid ""
 "from the city layer.  The table name qualifiers may only be used in the "
 "field list, and within the ``ON`` clause of the join."
 msgstr ""
+"JOIN にはいくつかの追加の問題があります. 1 つは, フィールド名にテーブル修飾子の概念があることです. "
+"たとえば, city レイヤーの nation_id フィールドを示すために, nation_id ではなく city.nation_id を参照します. "
+"テーブル名修飾子は, フィールドリストおよび JOIN 句内の ``ON`` 句でのみ使用できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:437
 msgid ""
@@ -581,6 +717,9 @@ msgid ""
 " just one of the primary or secondary table may be selected by prefixing "
 "the asterix with the table name."
 msgstr ""
+"ワイルドカードもやや複雑です. 通常の ``*`` ワイルドカードを使用して, 主テーブル (**city** この場合) "
+"および副テーブル (**nation** この場合) のすべてのフィールドを選択できます. "
+"ただし, 主テーブルまたは副テーブルのフィールドのみを選択するには, アスタリスクの前にテーブル名を付けます."
 
 #: ../../source/user/ogr_sql_dialect.rst:443
 msgid ""
@@ -592,6 +731,11 @@ msgid ""
 "nation.nation_id** and ** nation.name** field if the city and nation "
 "tables both have the **nation_id** and **name** fieldnames."
 msgstr ""
+"クエリレイヤーのフィールド名は, フィールドリストでテーブル名が修飾子として指定されている場合, テーブル名で修飾されます. "
+"さらに, 以前のフィールドと競合する場合, フィールド名はテーブル名で修飾されます. たとえば, 次の選択は, "
+"city および nation テーブルの両方に nation_id および name フィールド名がある場合, "
+"**name, nation_id, nation.nation_id** および "
+"**nation.name** フィールドを持つ結果セットになる可能性があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:455
 msgid ""
@@ -601,6 +745,9 @@ msgid ""
 "following statement, all result fields would be qualified by the table "
 "name."
 msgstr ""
+"一方, nation テーブルに continent_id フィールドがある場合でも, city テーブルにはない場合, "
+"そのフィールドは結果セットで修飾する必要はありません. ただし, 選択されたものが次のステートメントのように見える場合, "
+"すべての結果フィールドはテーブル名で修飾されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:465
 msgid ""
@@ -612,6 +759,10 @@ msgid ""
 "datasource is opened using normal OGR semantics and utilized to access "
 "the secondary table until the query result is no longer needed."
 msgstr ""
+"上記の例では, nation テーブルは city テーブルと同じデータソースにありました. ただし, OGR の JOIN サポートには, "
+"異なるデータソース (異なる形式の可能性がある) のテーブルに対して JOIN する機能が含まれています. "
+"これは, 2 番目のテーブル名にデータソース名を修飾することで示されます. この場合, 2 番目のデータソースは通常の OGR セマンティクスを使用して開かれ, "
+"クエリ結果が不要になるまで 2 番目のテーブルにアクセスするために使用されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:478
 msgid ""
@@ -621,10 +772,13 @@ msgid ""
 " different data sources.  For instance, if the actual tables names were "
 "messy we might want to do something like:"
 msgstr ""
+"非常に有用ではないかもしれませんが, 一部の SELECT ステートメントを簡素化するためにテーブルエイリアスを導入することも可能です. "
+"これは, 同じ名前のテーブルが異なるデータソースから使用されている状況を明確にするのにも役立ちます. "
+"たとえば, 実際のテーブル名が複雑な場合, 次のようなことをしたいかもしれません:"
 
 #: ../../source/user/ogr_sql_dialect.rst:490
 msgid "It is possible to do multiple joins in a single query."
-msgstr ""
+msgstr "1 つのクエリで複数の JOIN を行うことができます."
 
 #: ../../source/user/ogr_sql_dialect.rst:498
 msgid ""
@@ -637,16 +791,22 @@ msgid ""
 "compared in a JOIN must belong to the primary table (the one after FROM) "
 "and the table of the active JOIN."
 msgstr ""
+"ON の後の式は通常, \"{primary_table}.{field_name} = {secondary_table}.{field_name}\" の形式であり, その順序です. "
+"複数の比較演算子を含むより複雑なブール式を使用することも可能ですが, 以下の \"JOIN 制限\" セクションで"
+"言及されている制限があります. 特に, 複数の JOIN (3 つ以上のテーブル) の場合, JOIN で比較されるフィールドは, "
+"主テーブル (FROM 後のテーブル) およびアクティブ JOIN のテーブルに属している必要があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:508
 msgid "JOIN Limitations"
-msgstr ""
+msgstr "JOIN 制限"
 
 #: ../../source/user/ogr_sql_dialect.rst:510
 msgid ""
 "Joins can be very expensive operations if the secondary table is not "
 "indexed on the key field being used."
 msgstr ""
+"JOIN は, 2 番目のテーブルが使用されているキー フィールドにインデックスが付いていない場合, "
+"非常に高価な操作になる可能性があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:511
 msgid ""
@@ -654,6 +814,9 @@ msgid ""
 "this time.  The join is essentially evaluated after all primary table "
 "subsetting is complete, and after the ORDER BY pass."
 msgstr ""
+"JOIN フィールドは, 現時点では WHERE 句や ORDER BY 句で使用できません. "
+"JOIN は, 基本的にすべての主テーブルのサブセットが完了した後, "
+"および ORDER BY パスの後に評価されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:512
 msgid ""
@@ -663,12 +826,17 @@ msgid ""
 " sensible thing to want and could be implemented, but is not currently "
 "supported."
 msgstr ""
+"JOIN フィールドは, 後の JOIN でキーとして使用できません. したがって, city の省 ID を使用して省レコードを検索し, "
+"次に省 ID から国 ID を使用して国レコードを検索することはできません. これは望ましいことであり, 実装できる可能性がありますが, "
+"現在はサポートされていません."
 
 #: ../../source/user/ogr_sql_dialect.rst:513
 msgid ""
 "Datasource names for joined tables are evaluated relative to the current "
 "processes working directory, not the path to the primary datasource."
 msgstr ""
+"JOIN されたテーブルのデータソース名は, 現在のプロセスの作業ディレクトリに対して評価されます. "
+"主データソースへのパスではありません."
 
 #: ../../source/user/ogr_sql_dialect.rst:514
 msgid ""
@@ -679,10 +847,13 @@ msgid ""
 "more than one matching secondary field is found only the first will be "
 "used."
 msgstr ""
+"これは, RDBMS の意味での真の LEFT または RIGHT JOIN ではありません. JOIN キーに対する 2 番目のレコードが存在するかどうかにかかわらず, "
+"主レコードの 1 つだけが結果セットに返されます. 2 番目のレコードが見つからない場合, 2 番目の派生フィールドは NULL になります. "
+"複数の一致する 2 番目のフィールドが見つかった場合, 最初のフィールドのみが使用されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:517
 msgid "UNION ALL"
-msgstr ""
+msgstr "UNION ALL"
 
 #: ../../source/user/ogr_sql_dialect.rst:519
 msgid ""
@@ -690,10 +861,12 @@ msgid ""
 "effect of UNION ALL is to concatenate the rows returned by the right "
 "SELECT statement to the rows returned by the left SELECT statement."
 msgstr ""
+"SQL エンジンは, UNION ALL で結合された複数の SELECT を処理できます. UNION ALL の効果は, "
+"右の SELECT ステートメントによって返された行を左の SELECT ステートメントによって返された行に連結することです."
 
 #: ../../source/user/ogr_sql_dialect.rst:530
 msgid "UNION ALL restrictions"
-msgstr ""
+msgstr "UNION ALL 制限"
 
 #: ../../source/user/ogr_sql_dialect.rst:532
 msgid ""
@@ -702,16 +875,21 @@ msgid ""
 "identical. In that case, it will return a super-set of all the fields "
 "from each SELECT statement."
 msgstr ""
+"OGR における UNION ALL の処理は, SQL 標準と異なります. SQL 標準では, 各 SELECT "
+"の列が同一でない場合にも受け入れられます. "
+"その場合, 各 SELECT ステートメントのすべてのフィールドのスーパーセットを返します."
 
 #: ../../source/user/ogr_sql_dialect.rst:536
 msgid ""
 "There is also a restriction : ORDER BY can only be specified for each "
 "SELECT, and not at the level of the result of the union."
 msgstr ""
+"さらに, 制限があります: ORDER BY は各 SELECT に対してのみ指定でき, UNION "
+"の結果のレベルでは指定できません."
 
 #: ../../source/user/ogr_sql_dialect.rst:540
 msgid "SPECIAL FIELDS"
-msgstr ""
+msgstr "特殊フィールド"
 
 #: ../../source/user/ogr_sql_dialect.rst:542
 msgid ""
@@ -724,10 +902,15 @@ msgid ""
 "fields will take precedence over other fields in the data source with the"
 " same names."
 msgstr ""
+"OGR SQL クエリプロセッサは, 地物の一部の属性を組み込みの特殊フィールドとして扱い, 他のフィールドと一緒に "
+"SQL ステートメントで使用できます. "
+"これらのフィールドは, それぞれ SELECT リスト, WHERE 句および ORDER BY 句に配置できます. "
+"特殊フィールドはデフォルトでは結果に含まれませんが, SELECT リストに追加することで明示的に含めることができます. "
+"フィールド値にアクセスするとき, 特殊フィールドは, 同じ名前のデータソース内の他のフィールドよりも優先されます."
 
 #: ../../source/user/ogr_sql_dialect.rst:552
 msgid "Feature id (FID)"
-msgstr ""
+msgstr "地物 ID (FID)"
 
 #: ../../source/user/ogr_sql_dialect.rst:554
 msgid ""
@@ -738,16 +921,23 @@ msgid ""
 "FID column (:cpp:func:`OGRLayer::GetFIDColumn` != \"\"), this name may "
 "also be used."
 msgstr ""
+"通常, 地物 ID は地物の特別なプロパティであり, 地物の属性として扱われません. "
+"場合によっては, クエリや結果セットで地物 ID を通常のフィールドとして利用できると便利です. "
+"これを行うには, ``FID`` という名前を使用します. レイヤーに名前付きの FID 列がある場合 "
+"(:cpp:func:`OGRLayer::GetFIDColumn` != \"\"), "
+"この名前も使用できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:561
 msgid ""
 "The field wildcard expansions will not include the feature id, but it may"
 " be explicitly included using a syntax like:"
 msgstr ""
+"フィールドワイルドカードの展開には地物 ID は含まれませんが, 次のような構文を使用して明示的に"
+"含めることができます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:569
 msgid "Geometry field"
-msgstr ""
+msgstr "ジオメトリ フィールド"
 
 #: ../../source/user/ogr_sql_dialect.rst:571
 msgid ""
@@ -763,10 +953,19 @@ msgid ""
 "double quotes. In addition the command line interpreter may require that "
 "double quotes are escaped and the final SELECT statement could look like:"
 msgstr ""
+"OGR SQL 方言は, データソースのジオメトリ フィールドをデフォルトで結果セットに追加します. "
+"ユーザーはジオメトリを明示的に選択する必要はありませんが, それを行うことも可能です. "
+"ジオメトリが必要な唯一のフィールドの場合が一般的な使用ケースです. "
+"この場合, SQL ステートメントで使用するジオメトリ フィールドの名前は, :cpp:func:`OGRLayer::GetGeometryColumn` によって返される名前であり, "
+":program:`ogrinfo` 出力の \"Geometry Column = ...\" でもあります. "
+"メソッドが空の文字列を返す場合, 特別な名前 \"_ogr_geometry_\" を使用する必要があります. "
+"名前はアンダースコアで始まり, SQL 構文では, ダブルクォートの間に現れる必要があります. "
+"さらに, コマンドラインインタプリタは, ダブルクォートをエスケープする必要がある場合があり, "
+"最終的な SELECT ステートメントは次のようになります:"
 
 #: ../../source/user/ogr_sql_dialect.rst:587
 msgid "OGR_GEOMETRY"
-msgstr ""
+msgstr "OGR_GEOMETRY"
 
 #: ../../source/user/ogr_sql_dialect.rst:589
 msgid ""
@@ -777,10 +976,14 @@ msgid ""
 "the various types. By using this field one can select particular types of"
 " the geometries like:"
 msgstr ""
+"一部のデータソース (MapInfo tab など) は, 同じレイヤー内で異なるタイプのジオメトリを処理できます. "
+"``OGR_GEOMETRY`` 特殊フィールドは, :cpp:func:`OGRGeometry::getGeometryName` によって返されるジオメトリ タイプを表し, "
+"さまざまなタイプを区別するために使用できます. このフィールドを使用することで, ジオメトリの特定のタイプを次のように"
+"選択できます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:600
 msgid "OGR_GEOM_WKT"
-msgstr ""
+msgstr "OGR_GEOM_WKT"
 
 #: ../../source/user/ogr_sql_dialect.rst:602
 msgid ""
@@ -788,16 +991,20 @@ msgid ""
 "special field. To select the WKT of the geometry ``OGR_GEOM_WKT`` might "
 "be included in the select list, like:"
 msgstr ""
+"ジオメトリの Well Known Text 表現も特殊フィールドとして使用できます. ジオメトリの WKT を選択するには, "
+"``OGR_GEOM_WKT`` を選択リストに含めることができます. たとえば:"
 
 #: ../../source/user/ogr_sql_dialect.rst:610
 msgid ""
 "Using the ``OGR_GEOM_WKT`` and the ``LIKE`` operator in the WHERE clause "
 "we can get similar effect as using OGR_GEOMETRY:"
 msgstr ""
+"``OGR_GEOM_WKT`` と ``LIKE`` 演算子を WHERE 句で使用することで, OGR_GEOMETRY を使用するのと同様の"
+"効果を得ることができます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:619
 msgid "OGR_GEOM_AREA"
-msgstr ""
+msgstr "OGR_GEOM_AREA"
 
 #: ../../source/user/ogr_sql_dialect.rst:621
 msgid ""
@@ -807,14 +1014,17 @@ msgid ""
 "areas of its members. For non-surface geometries the returned area is "
 "0.0."
 msgstr ""
+"``OGR_GEOM_AREA`` 特殊フィールドは, OGRSurface::get_Area() メソッドによって計算された地物のジオメトリの面積を返します. "
+"OGRGeometryCollection および OGRMultiPolygon の場合, 値はそのメンバーの面積の合計です. "
+"非サーフェス ジオメトリの場合, 返される面積は 0.0 です."
 
 #: ../../source/user/ogr_sql_dialect.rst:626
 msgid "For example, to select only polygon features larger than a given area:"
-msgstr ""
+msgstr "たとえば, 指定された面積より大きいポリゴン地物のみを選択するには:"
 
 #: ../../source/user/ogr_sql_dialect.rst:633
 msgid "OGR_STYLE"
-msgstr ""
+msgstr "OGR_STYLE"
 
 #: ../../source/user/ogr_sql_dialect.rst:635
 msgid ""
@@ -823,6 +1033,9 @@ msgid ""
 " the ``LIKE`` operator the result of the query can be filtered by the "
 "style. For example we can select the annotation features as:"
 msgstr ""
+"``OGR_STYLE`` 特殊フィールドは, OGRFeature::GetStyleString() によって返される地物のスタイル文字列を表します. "
+"このフィールドと ``LIKE`` 演算子を使用して, クエリの結果をスタイルでフィルタリングすることができます. "
+"たとえば, 注釈地物を次のように選択できます:"
 
 #: ../../source/user/ogr_sql_dialect.rst:645
 msgid ""
@@ -831,6 +1044,8 @@ msgid ""
 ":cpp:func:`OGRFeature::SetStyleString` value, typically by aliasing "
 "another field or a string literal."
 msgstr ""
+"``OGR_STYLE`` フィールド名を特殊フィールド名として使用して, 通常は他のフィールドまたは文字列リテラルをエイリアスすることで, "
+":cpp:func:`OGRFeature::SetStyleString` 値を設定する別の方法として使用することができます."
 
 #: ../../source/user/ogr_sql_dialect.rst:654
 msgid ""
@@ -838,10 +1053,12 @@ msgid ""
 " If this is undesirable, starting with GDAL 3.10, it can be hidden by "
 "adding the HIDDEN keyword at the end of the field specification."
 msgstr ""
+"デフォルトでは, OGR_STYLE フィールドは通常のフィールドとして表示されます. "
+"これを避けたい場合, GDAL 3.10 以降では, フィールド仕様の最後に HIDDEN キーワードを追加することで非表示にすることができます."
 
 #: ../../source/user/ogr_sql_dialect.rst:664
 msgid "CREATE INDEX"
-msgstr ""
+msgstr "CREATE INDEX"
 
 #: ../../source/user/ogr_sql_dialect.rst:666
 msgid ""
@@ -851,52 +1068,65 @@ msgid ""
 "used by the ``JOIN`` capability.  To create an attribute index on the "
 "nation_id field of the nation table a command like this would be used:"
 msgstr ""
+"一部の OGR SQL ドライバーは, 属性インデックスの作成をサポートしています. 現在, これには Shapefile ドライバーが含まれています. "
+"インデックスは, **fieldname = value** の形式の非常に単純な属性クエリを加速します. これは ``JOIN`` 機能で使用されるものです. "
+"nation テーブルの nation_id フィールドに属性インデックスを作成するには, 次のようなコマンドを使用します:"
 
 #: ../../source/user/ogr_sql_dialect.rst:677
 msgid "Index Limitations"
-msgstr ""
+msgstr "Index 制限"
 
 #: ../../source/user/ogr_sql_dialect.rst:679
 msgid ""
 "Indexes are not maintained dynamically when new features are added to or "
 "removed from a layer."
 msgstr ""
+"新しい地物がレイヤーに追加されたり削除されたりするときに, インデックスは"
+"動的に維持されません."
 
 #: ../../source/user/ogr_sql_dialect.rst:680
 msgid ""
 "Very long strings (longer than 256 characters?) cannot currently be "
 "indexed."
 msgstr ""
+"非常に長い文字列 (256 文字より長い?) は現在インデックス化"
+"できません."
 
 #: ../../source/user/ogr_sql_dialect.rst:681
 msgid ""
 "To recreate an index it is necessary to drop all indexes on a layer and "
 "then recreate all the indexes."
 msgstr ""
+"インデックスを再作成するには, レイヤーのすべてのインデックスを削除してから, "
+"すべてのインデックスを再作成する必要があります."
 
 #: ../../source/user/ogr_sql_dialect.rst:682
 msgid ""
 "Indexes are not used in any complex queries.   Currently the only query "
 "the will accelerate is a simple \"field = value\" query."
 msgstr ""
+"インデックスは, 複雑なクエリでは使用されません. 現在, 加速されるのは"
+"単純な \"field = value\" クエリのみです."
 
 #: ../../source/user/ogr_sql_dialect.rst:685
 msgid "DROP INDEX"
-msgstr ""
+msgstr "DROP INDEX"
 
 #: ../../source/user/ogr_sql_dialect.rst:687
 msgid ""
 "The OGR SQL DROP INDEX command can be used to drop all indexes on a "
 "particular table, or just the index for a particular column."
 msgstr ""
+"OGR SQL DROP INDEX コマンドは, 特定のテーブルのすべてのインデックスを削除するか,"
+" 特定の列のインデックスのみを削除するために使用できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:696
 msgid "ALTER TABLE"
-msgstr ""
+msgstr "ALTER TABLE"
 
 #: ../../source/user/ogr_sql_dialect.rst:698
 msgid "The following OGR SQL ALTER TABLE commands can be used."
-msgstr ""
+msgstr "次の OGR SQL ALTER TABLE コマンドを使用できます."
 
 #: ../../source/user/ogr_sql_dialect.rst:700
 msgid ""
@@ -910,16 +1140,26 @@ msgid ""
 "-\"ALTER TABLE tablename DROP [COLUMN] columnname\" to delete an existing"
 " field. Supported if the layer declares the OLCDeleteField capability."
 msgstr ""
+"-\"ALTER TABLE tablename ADD [COLUMN] columnname columntype\" は, 新しいフィールドを追加します. "
+"レイヤーが OLCCreateField 機能を宣言している場合にサポートされます. "
+"-\"ALTER TABLE tablename RENAME [COLUMN] oldcolumnname TO newcolumnname\" は, 既存のフィールドの名前を変更します. "
+"レイヤーが OLCAlterFieldDefn 機能を宣言している場合にサポートされます. "
+"-\"ALTER TABLE tablename ALTER [COLUMN] columnname TYPE columntype\" は, 既存のフィールドのタイプを変更します. "
+"レイヤーが OLCAlterFieldDefn 機能を宣言している場合にサポートされます. "
+"-\"ALTER TABLE tablename DROP [COLUMN] columnname\" は, 既存のフィールドを削除します. "
+"レイヤーが OLCDeleteField 機能を宣言している場合にサポートされます."
 
 #: ../../source/user/ogr_sql_dialect.rst:705
 msgid ""
 "The columntype value follows the syntax of the types supported by the "
 "CAST operator described above."
 msgstr ""
+"columntype 値は, 上記で説明した CAST 演算子でサポートされているタイプの"
+"構文に従います."
 
 #: ../../source/user/ogr_sql_dialect.rst:715
 msgid "DROP TABLE"
-msgstr ""
+msgstr "DROP TABLE"
 
 #: ../../source/user/ogr_sql_dialect.rst:717
 msgid ""
@@ -927,6 +1167,9 @@ msgid ""
 "only supported on datasources that declare the ODsCDeleteLayer "
 "capability."
 msgstr ""
+"OGR SQL DROP TABLE コマンドは, テーブルを削除するために使用できます. "
+"これは, ODsCDeleteLayer 機能を宣言しているデータソースでのみサポートされます."
+
 
 #~ msgid ""
 #~ "There are also several summarization "
