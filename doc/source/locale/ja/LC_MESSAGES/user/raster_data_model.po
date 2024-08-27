@@ -527,7 +527,7 @@ msgid ""
 "specific semantics in the IMAGE_STRUCTURE domain."
 msgstr ""
 "現在以下のアイテムは "
-"IMAGE_STRUCTURE ドメインで固有のセマンティックを持つものとして:ref:`rfc-14` で定義されています."
+"IMAGE_STRUCTURE ドメインで固有のセマンティックを持つものとして :ref:`rfc-14` で定義されています."
 
 #: ../../source/user/raster_data_model.rst:148
 msgid ""

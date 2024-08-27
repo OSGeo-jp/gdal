@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 02:24+0900\n"
+"POT-Creation-Date: 2024-08-28 04:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: ../../source/index.rst:12
+#: ../../source/index.rst:7
 msgid "User"
 msgstr "ユーザー"
 
@@ -47,15 +47,19 @@ msgstr ""
 "ライブラリとしてのGDALはすべてのサポートする形式をアプリケーションから単一のラスタ抽象データモデルか単一のベクター抽象モデルとして利用する機能を提供しています。またGDALではデータ変換やデータ加工をするための多彩で便利なコマンドラインユーティリティを提供しています。"
 "  `NEWS`_ ページには 2024年 8月の GDAL/OGR 3.9.2 リリースについての情報があります。"
 
+#: ../../source/about_no_title.rst:5
+msgid "|offline-download|"
+msgstr ""
+
 #: ../../source/about_no_title.rst:-1
 msgid "OSGeo project"
 msgstr "OSGeoプロジェクト"
 
-#: ../../source/about_no_title.rst:10
+#: ../../source/about_no_title.rst:14
 msgid "See :ref:`software_using_gdal`"
 msgstr "参照 :ref:`software_using_gdal`"
 
-#: ../../source/about_no_title.rst:16
+#: ../../source/about_no_title.rst:20
 msgid ""
 "You may quote GDAL in publications by using the following Digital Object "
 "Identifier: |DOI|"
@@ -65,24 +69,29 @@ msgstr "以下のデジタルオブジェクト識別子を利用して出版物
 msgid "DOI 10.5281/zenodo.5884351"
 msgstr ""
 
-#: ../../source/index.rst:7
-msgid ""
-"This documentation is also available as a `PDF file <gdal.pdf>`_, and `a "
-".ZIP of individual HTML pages <https://github.com/OSGeo/gdal-"
-"docs/archive/refs/heads/master.zip>`_ for offline browsing. (The .ZIP "
-"also includes that .PDF.) The documentation reflects the latest state of "
-"the development branch of the software."
-msgstr ""
-"この文書は `PDF file <gdal.pdf>`_, と 個別HTMLページをオフライン閲覧用に圧縮した `a .ZIP  "
-"<https://github.com/OSGeo/gdal-docs/archive/refs/heads/master.zip>`_  "
-"ファイルとしても提供しています. ( .ZIP には .PDF. も含まれます) "
-"この文書はソフトウエアの最新の開発ブランチの状態を反映しています。"
-
-#: ../../source/index.rst:30
+#: ../../source/index.rst:25
 msgid "Index"
 msgstr "目次"
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:27
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
+
+#~ msgid ""
+#~ "This documentation is also available as"
+#~ " a `PDF file <gdal.pdf>`_, and `a "
+#~ ".ZIP of individual HTML pages "
+#~ "<https://github.com/OSGeo/gdal-"
+#~ "docs/archive/refs/heads/master.zip>`_ for offline "
+#~ "browsing. (The .ZIP also includes that"
+#~ " .PDF.) The documentation reflects the "
+#~ "latest state of the development branch"
+#~ " of the software."
+#~ msgstr ""
+#~ "この文書は `PDF file <gdal.pdf>`_, と "
+#~ "個別HTMLページをオフライン閲覧用に圧縮した `a .ZIP  "
+#~ "<https://github.com/OSGeo/gdal-"
+#~ "docs/archive/refs/heads/master.zip>`_  ファイルとしても提供しています. ("
+#~ " .ZIP には .PDF. も含まれます) "
+#~ "この文書はソフトウエアの最新の開発ブランチの状態を反映しています。"
 

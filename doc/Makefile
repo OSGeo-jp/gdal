@@ -78,7 +78,7 @@ update: gettext
 
 .PHONY: html latexpdf
 html: generated_rst_files
-<<<<<<< HEAD
+	@echo "Building HTML with the following options: $(SPHINXOPTS) $(SPHINXINTLOPTS) $(LA)"
 	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS) $(LA)"
 	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)/$(LA)" $(SPHINXOPTS) $(O)
 	# Hack to hide the TOC
@@ -94,10 +94,10 @@ html: generated_rst_files
 	cp -r $(BUILDDIR)/doxygen_html $(BUILDDIR)/$(LA)/html/doxygen
 	ln -sf ../latex/gdal.pdf $(BUILDDIR)/$(LA)/html
 	cp -f "source/sponsors/Sustainable GDAL Sponsorship Prospectus.pdf" $(BUILDDIR)/$(LA)/html/sponsors
-=======
-	BUILDDIR="${BUILDDIR}" $(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	ln -sf ../latex/gdal.pdf $(BUILDDIR)/html
->>>>>>> master
+#=======
+#	BUILDDIR="${BUILDDIR}" $(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+#	ln -sf ../latex/gdal.pdf $(BUILDDIR)/html
+#>>>>>>> master
 
 man: generated_rst_files
 	$(SPHINXBUILD) -M man "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)

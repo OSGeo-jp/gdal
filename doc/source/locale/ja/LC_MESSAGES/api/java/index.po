@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-08-28 04:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/java/index.rst:5
 msgid "Java bindings"
@@ -30,8 +30,8 @@ msgstr ""
 #: ../../source/api/java/index.rst:9
 msgid ""
 "Generally speaking the classes and methods mostly match those of the GDAL"
-" and OGR C++ classes. You can find the `​Javadoc "
-"<http://gdal.org/java>`__ of the API of the Java bindings."
+" and OGR C++ classes. You can find the `Javadoc <../../java>`__ of the "
+"API of the Java bindings."
 msgstr ""
 
 #: ../../source/api/java/index.rst:11
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../source/api/java/index.rst:55
 msgid ""
-"The Java bindings are available from the ​`Maven Central "
+"The Java bindings are available from the `Maven Central "
 "<http://search.maven.org/>`__ repository. All that is needed is to "
 "declare a dependency."
 msgstr ""
@@ -103,7 +103,7 @@ msgid "Useful Links"
 msgstr ""
 
 #: ../../source/api/java/index.rst:71
-msgid "​`Javadoc <http://gdal.org/java>`__ of the API of the Java bindings."
+msgid "`Javadoc <../../java>`__ of the API of the Java bindings."
 msgstr ""
 
 #: ../../source/api/java/index.rst:72
@@ -136,4 +136,22 @@ msgid ""
 "data formats. (**Note**: this framework doesn't necessarily ship the "
 "latest released GDAL version)"
 msgstr ""
+
+#~ msgid ""
+#~ "Generally speaking the classes and "
+#~ "methods mostly match those of the "
+#~ "GDAL and OGR C++ classes. You can"
+#~ " find the `​Javadoc <http://gdal.org/java>`__ "
+#~ "of the API of the Java bindings."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Java bindings are available from "
+#~ "the ​`Maven Central <http://search.maven.org/>`__"
+#~ " repository. All that is needed is"
+#~ " to declare a dependency."
+#~ msgstr ""
+
+#~ msgid "​`Javadoc <http://gdal.org/java>`__ of the API of the Java bindings."
+#~ msgstr ""
 

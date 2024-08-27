@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 02:24+0900\n"
+"POT-Creation-Date: 2024-08-28 04:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: ../../source/index.rst:12
+#: ../../source/index.rst:7
 msgid "User"
 msgstr ""
 
@@ -43,15 +43,19 @@ msgid ""
 "release."
 msgstr ""
 
+#: ../../source/about_no_title.rst:5
+msgid "|offline-download|"
+msgstr ""
+
 #: ../../source/about_no_title.rst:-1
 msgid "OSGeo project"
 msgstr ""
 
-#: ../../source/about_no_title.rst:10
+#: ../../source/about_no_title.rst:14
 msgid "See :ref:`software_using_gdal`"
 msgstr ""
 
-#: ../../source/about_no_title.rst:16
+#: ../../source/about_no_title.rst:20
 msgid ""
 "You may quote GDAL in publications by using the following Digital Object "
 "Identifier: |DOI|"
@@ -61,20 +65,11 @@ msgstr ""
 msgid "DOI 10.5281/zenodo.5884351"
 msgstr ""
 
-#: ../../source/index.rst:7
-msgid ""
-"This documentation is also available as a `PDF file <gdal.pdf>`_, and `a "
-".ZIP of individual HTML pages <https://github.com/OSGeo/gdal-"
-"docs/archive/refs/heads/master.zip>`_ for offline browsing. (The .ZIP "
-"also includes that .PDF.) The documentation reflects the latest state of "
-"the development branch of the software."
-msgstr ""
-
-#: ../../source/index.rst:30
+#: ../../source/index.rst:25
 msgid "Index"
 msgstr ""
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:27
 msgid ":ref:`genindex`"
 msgstr ""
 
@@ -93,5 +88,17 @@ msgstr ""
 #~ "utilities for data translation and "
 #~ "processing. The `NEWS`_ page describes "
 #~ "the June 2024 GDAL/OGR 3.9.1 release."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This documentation is also available as"
+#~ " a `PDF file <gdal.pdf>`_, and `a "
+#~ ".ZIP of individual HTML pages "
+#~ "<https://github.com/OSGeo/gdal-"
+#~ "docs/archive/refs/heads/master.zip>`_ for offline "
+#~ "browsing. (The .ZIP also includes that"
+#~ " .PDF.) The documentation reflects the "
+#~ "latest state of the development branch"
+#~ " of the software."
 #~ msgstr ""
 

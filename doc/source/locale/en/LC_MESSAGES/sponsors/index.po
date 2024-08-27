@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-08-28 04:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -80,14 +80,18 @@ msgid "`Space Intelligence <https://www.space-intelligence.com>`__"
 msgstr ""
 
 #: ../../source/sponsors/index.rst:152
-msgid "`Umbra <https://umbra.space/>`__"
+msgid "`T-Kartor USA <https://www.t-kartorusa.com/>`__"
 msgstr ""
 
 #: ../../source/sponsors/index.rst:156
+msgid "`Umbra <https://umbra.space/>`__"
+msgstr ""
+
+#: ../../source/sponsors/index.rst:160
 msgid "`Vortex f.d.c. <https://vortexfdc.com/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:198
+#: ../../source/sponsors/index.rst:202
 msgid ""
 "The GDAL Project is hosted by `OSGeo <https://www.osgeo.org>`__, and a "
 "fiscally sponsored project of `NumFOCUS <https://numfocus.org>`__, a "
@@ -97,7 +101,7 @@ msgid ""
 "support our efforts."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:204
+#: ../../source/sponsors/index.rst:208
 msgid ""
 "NumFOCUS is 501(c)(3) non-profit charity in the United States; as such, "
 "donations to NumFOCUS are tax-deductible as allowed by law. As with any "
@@ -105,11 +109,11 @@ msgid ""
 "about your particular tax situation."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:225
+#: ../../source/sponsors/index.rst:229
 msgid "Sponsoring"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:227
+#: ../../source/sponsors/index.rst:231
 msgid ""
 "If your organization benefits from GDAL we recommend joining the group of"
 " sponsors above to \"pay it forward\" and ensure the project has the "
@@ -120,15 +124,15 @@ msgid ""
 "contact gdal-sponsors@osgeo.org."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:235
+#: ../../source/sponsors/index.rst:239
 msgid "Related resources"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:237
+#: ../../source/sponsors/index.rst:241
 msgid "`Sustainable GDAL Sponsorship Prospectus`_."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:238
+#: ../../source/sponsors/index.rst:242
 msgid ":ref:`Sponsoring frequently asked questions (FAQ) <sponsoring-faq>`."
 msgstr ""
 

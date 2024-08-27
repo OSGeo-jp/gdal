@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 02:24+0900\n"
+"POT-Creation-Date: 2024-08-28 04:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\\nLanguage: ja\n"
 "Language-Team: ja <LL@li.org>\n"
@@ -34,20 +34,22 @@ msgid ""
 msgstr ""
 "GDAL はラスターとベクターの空間データ形式をを変換するライブラリです。これは MIT スタイル :ref:`license` の "
 "オープンソースとして `Open Source Geospatial Foundation`_ から公開されています. "
-"ライブラリとしてのGDALはすべてのサポートする形式をアプリケーションから単一のラスタ抽象データモデルか単一の"
-"ベクター抽象モデルとして利用する機能を提供しています。またGDALではデータ変換やデータ加工をするための多彩で便利な"
-"コマンドラインユーティリティを提供しています."
+"ライブラリとしてのGDALはすべてのサポートする形式をアプリケーションから単一のラスタ抽象データモデルか単一のベクター抽象モデルとして利用する機能を提供しています。またGDALではデータ変換やデータ加工をするための多彩で便利なコマンドラインユーティリティを提供しています."
 "  `NEWS`_ ページには 2024年 8月の GDAL/OGR 3.9.2 リリースについての情報があります."
+
+#: ../../source/about_no_title.rst:5
+msgid "|offline-download|"
+msgstr ""
 
 #: ../../source/about_no_title.rst:-1
 msgid "OSGeo project"
 msgstr "OSGeoプロジェクト"
 
-#: ../../source/about_no_title.rst:10
+#: ../../source/about_no_title.rst:14
 msgid "See :ref:`software_using_gdal`"
 msgstr "参照 :ref:`software_using_gdal`"
 
-#: ../../source/about_no_title.rst:16
+#: ../../source/about_no_title.rst:20
 msgid ""
 "You may quote GDAL in publications by using the following Digital Object "
 "Identifier: |DOI|"
