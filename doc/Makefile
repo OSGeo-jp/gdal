@@ -62,9 +62,9 @@ $(BUILDDIR)/.doxygen_up_to_date:
 	rm -rf $(BUILDDIR)/xml; \
 	mkdir -p $(BUILDDIR)/xml; \
 	(cd .. && ((cat Doxyfile | sed "s/PREDEFINED             = /PREDEFINED             = DOXYGEN_XML /"; printf "GENERATE_HTML=NO\nGENERATE_XML=YES\nXML_OUTPUT=$$BUILDDIR_ABS/xml\nXML_PROGRAMLISTING=NO") | doxygen -)); \
-	rm -rf $(BUILDDIR)/doxygen_html; \
-	mkdir -p $(BUILDDIR)/doxygen_html; \
-	(cd .. && ((cat Doxyfile; printf "HTML_OUTPUT=$$BUILDDIR_ABS/doxygen_html\nINLINE_INHERITED_MEMB=YES") | doxygen -)); \
+	rm -rf $(BUILDDIR)/html_extra/doxygen; \
+	mkdir -p $(BUILDDIR)/html_extra/doxygen; \
+	(cd .. && ((cat Doxyfile; printf "HTML_OUTPUT=$$BUILDDIR_ABS/html_extra/doxygen\nINLINE_INHERITED_MEMB=YES") | doxygen -)); \
 	echo "Doxygen replaces -- with <ndash/>. This is not desirable, so revert that;"; \
 	for i in $(BUILDDIR)/xml/*.xml; do sed "s/<ndash\/>/--/g" < $$i > $$i.tmp; mv $$i.tmp $$i; done; \
 	touch $(BUILDDIR)/.doxygen_up_to_date
@@ -78,6 +78,7 @@ update: gettext
 
 .PHONY: html latexpdf
 html: generated_rst_files
+<<<<<<< HEAD
 	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS) $(LA)"
 	$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)/$(LA)" $(SPHINXOPTS) $(O)
 	# Hack to hide the TOC
@@ -93,6 +94,10 @@ html: generated_rst_files
 	cp -r $(BUILDDIR)/doxygen_html $(BUILDDIR)/$(LA)/html/doxygen
 	ln -sf ../latex/gdal.pdf $(BUILDDIR)/$(LA)/html
 	cp -f "source/sponsors/Sustainable GDAL Sponsorship Prospectus.pdf" $(BUILDDIR)/$(LA)/html/sponsors
+=======
+	BUILDDIR="${BUILDDIR}" $(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	ln -sf ../latex/gdal.pdf $(BUILDDIR)/html
+>>>>>>> master
 
 man: generated_rst_files
 	$(SPHINXBUILD) -M man "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -105,6 +110,6 @@ spelling: generated_rst_files
 
 clean:
 	rm -rf "$(BUILDDIR)/xml"
-	rm -rf "$(BUILDDIR)/doxygen_html"
+	rm -rf "$(BUILDDIR)/html_extra/doxygen"
 	rm -f "$(BUILDDIR)/.doxygen_up_to_date"
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
