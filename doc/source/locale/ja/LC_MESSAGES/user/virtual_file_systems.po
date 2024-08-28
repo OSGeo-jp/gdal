@@ -251,18 +251,24 @@ msgid ""
 "GDAL (>= 3.7) has full read and write support for .zip files following "
 "the `SOZip (Seek-Optimized ZIP) <https://sozip.org>`__ profile."
 msgstr ""
+"GDAL (>= 3.7) は `SOZip (Seek-Optimized ZIP) <https://sozip.org>`__ プロファイルに従う .zip ファイルの"
+"完全な読み取りおよび書き込みサポートを持っています."
 
 #: ../../source/user/virtual_file_systems.rst:128
 msgid ""
 "The ``/vsizip/`` virtual file system uses the SOZip index to perform fast"
 " random access within a compressed SOZip-enabled file."
 msgstr ""
+"``/vsizip/`` 仮想ファイルシステムは,圧縮されたSOZip対応ファイル内での高速なランダムアクセスを実行するために"
+"SOZipインデックスを使用します."
 
 #: ../../source/user/virtual_file_systems.rst:131
 msgid ""
 "The :ref:`vector.shapefile` and :ref:`vector.gpkg` drivers can directly "
 "generate SOZip-enabled .shz/.shp.zip or .gpkg.zip files."
 msgstr ""
+":ref:`vector.shapefile` および :ref:`vector.gpkg` ドライバは直接SOZip対応の .shz/.shp.zip または .gpkg.zip"
+" ファイルを生成できます."
 
 #: ../../source/user/virtual_file_systems.rst:134
 msgid ""
@@ -273,6 +279,10 @@ msgid ""
 ":config:`CPL_SOZIP_ENABLED` configuration option to YES. Or totally "
 "disabled by setting it to NO."
 msgstr ""
+"新しいまたは既存のZIPファイルにファイルを圧縮して追加できる :cpp:func:`CPLAddFileInZip` C 関数は,"
+"SOZip最適化を有効にします(つまり,圧縮するファイルが1MBより大きい場合).SOZip最適化は,"
+" :config:`CPL_SOZIP_ENABLED` 設定オプションをYESに設定することで強制できます.または,NOに設定することで"
+"完全に無効にできます."
 
 #: ../../source/user/virtual_file_systems.rst:140
 msgid ""
@@ -281,6 +291,9 @@ msgid ""
 "and with domain = \"ZIP\" to get information if a SOZip index is "
 "available for that file."
 msgstr ""
+":cpp:func:`VSIGetFileMetadata` メソッドは, :file:`/vsizip/path/to/the/file.zip/path/inside/the/zip/file` の形式の"
+"ファイル名とドメイン = \"ZIP\" を指定して呼び出すことで,そのファイルにSOZipインデックスが利用可能かどうかの情報を"
+"取得できます."
 
 #: ../../source/user/virtual_file_systems.rst:144
 msgid ""
@@ -289,16 +302,22 @@ msgid ""
 "contents of a ZIP file and display the SOZip optimization status or "
 "validate a SOZip file."
 msgstr ""
+":ref:`sozip` 新しいコマンドラインユーティリティは,SOZip最適化されたZIPファイルを作成したり,既存のZIPファイルに"
+"ファイルを追加したり, ZIPファイルの内容をリストしたり,SOZip最適化の状態を表示したり,SOZipファイルを検証したりする"
+"ために使用できます."
 
 #: ../../source/user/virtual_file_systems.rst:152
 msgid "/vsigzip/ (gzipped file)"
-msgstr ""
+msgstr "/vsigzip/ (gzipped ファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:154
 msgid ""
 "/vsigzip/ is a file handler that allows on-the-fly reading of GZip (.gz) "
 "files without decompressing them in advance."
 msgstr ""
+"/vsigzip/ は,事前に解凍せずにGZip (.gz) ファイルを読み取ることができる"
+"ファイルハンドラです."
+
 
 #: ../../source/user/virtual_file_systems.rst:156
 msgid ""
@@ -306,10 +325,12 @@ msgid ""
 ":file:`/vsigzip/path/to/the/file.gz` syntax, where "
 ":file:`path/to/the/file.gz` is relative or absolute."
 msgstr ""
+"GDALによって解凍された形式でgzippedファイルを表示するには, :file:`/vsigzip/path/to/the/file.gz` 構文を"
+"使用する必要があります.ここで :file:`path/to/the/file.gz` は相対または絶対です."
 
 #: ../../source/user/virtual_file_systems.rst:158
 msgid "The following configuration options are specific to the /vsigzip/ handler:"
-msgstr ""
+msgstr "/vsigzip/ ハンドラに固有の次の設定オプションがあります:"
 
 #: ../../source/user/virtual_file_systems.rst:177
 msgid ""
@@ -321,12 +342,18 @@ msgid ""
 "able to seek to part of the files already decompressed in a faster way. "
 "This mechanism of snapshots also apply to /vsizip/ files."
 msgstr ""
+":cpp:func:`VSIStatL` は解凍されたファイルサイズを返しますが,これは大きなファイルでは遅い操作である可能性があり,"
+"ファイル全体を解凍する必要があるためです.ファイルの末尾やランダムな場所にシークすることも同様に遅いです."
+"このプロセスを高速化するために,メモリ内で\"スナップショット\"が内部的に作成され,すでに解凍されたファイルの一部に"
+"より速い方法でシークできるようになります.このスナップショットのメカニズムは/vsizip/ファイルにも適用されます."
 
 #: ../../source/user/virtual_file_systems.rst:179
 msgid ""
 "Write capabilities are also available, but read and write operations "
 "cannot be interleaved."
 msgstr ""
+"書き込み機能も利用できますが,読み取りおよび書き込み操作を交互に行うことは"
+"できません."
 
 #: ../../source/user/virtual_file_systems.rst:181
 msgid ""
@@ -342,10 +369,17 @@ msgid ""
 "potential independent decoding of each chunk). This slightly reduces the "
 "compression rate, so very small chunk sizes should be avoided."
 msgstr ""
+"GDAL 2.4以降, :config:`GDAL_NUM_THREADS` 設定オプションを整数または ``ALL_CPUS`` に設定することで,"
+"単一ファイルのマルチスレッド圧縮を有効にすることができます.これはpigzユーティリティの独立モードに"
+"類似しています.デフォルトでは,入力ストリームは1MBのチャンクに分割されます(チャンクサイズは "
+":config:`CPL_VSIL_DEFLATE_CHUNK_SIZE` 設定オプションで調整でき, \"x K\" または \"x M\" のような値が"
+"使用できます),そして各チャンクは独立して圧縮されます(そして9バイトのマーカー 0x00 0x00 0xFF 0xFF "
+"0x00 0x00 0x00 0xFF 0xFF で終了し,ストリームと辞書の完全なフラッシュを示し,各チャンクの独立したデコードを"
+"可能にします).これは圧縮率をわずかに低下させるため,非常に小さなチャンクサイズは避けるべきです."
 
 #: ../../source/user/virtual_file_systems.rst:186
 msgid "/vsitar/ (.tar, .tgz archives)"
-msgstr ""
+msgstr "/vsitar/ (.tar, .tgz アーカイブ)"
 
 #: ../../source/user/virtual_file_systems.rst:188
 msgid ""
@@ -353,6 +387,8 @@ msgid ""
 "uncompressed .tar or compressed .tgz or .tar.gz archives, without "
 "decompressing them in advance."
 msgstr ""
+"/vsitar/ は,事前に解凍せずに通常の非圧縮 .tar または圧縮 .tgz または .tar.gz アーカイブを読み取ることができる"
+"ファイルハンドラです."
 
 #: ../../source/user/virtual_file_systems.rst:190
 msgid ""
@@ -363,6 +399,9 @@ msgid ""
 ":file:`path/inside/the/tar/file` is the relative path to the file inside "
 "the archive."
 msgstr ""
+".tar, .tgz, .tar.gz ファイル内のファイルを指すには,ファイル名は :file:`/vsitar/path/to/the/file.tar/"
+"path/inside/the/tar/file` の形式である必要があります.ここで :file:`path/to/the/file.tar` は相対または絶対であり,"
+" :file:`path/inside/the/tar/file` はアーカイブ内のファイルへの相対パスです."
 
 #: ../../source/user/virtual_file_systems.rst:192
 msgid ""
@@ -375,6 +414,11 @@ msgid ""
 "with the VSI_ISDIR(stat.st_mode) macro as for regular file systems. "
 "Getting directory listing and file statistics are fast operations."
 msgstr ""
+".tarをディレクトリとして使用するには, :file:`/vsizip/path/to/the/file.tar` または "
+":file:`/vsitar/path/to/the/file.tar/subdir` を使用できます.ディレクトリリストは "
+":cpp:func:`VSIReadDir` で利用できます. :cpp:func:`VSIStatL` (\"/vsitar/...\") "
+"呼び出しはファイルの解凍されたサイズを返します. TARファイル内のディレクトリは通常のファイルと同様に,"
+"VSI_ISDIR(stat.st_mode) マクロで区別できます.ディレクトリリストとファイル統計の取得は高速な操作です."
 
 #: ../../source/user/virtual_file_systems.rst:194
 msgid ""
@@ -382,6 +426,8 @@ msgid ""
 "located at its root, just mentioning :file:`/vsitar/path/to/the/file.tar`"
 " will work."
 msgstr ""
+"注: .tarファイルがそのルートにある単一のファイルを含む特定の場合には, :file:`/vsitar/path/to/"
+"the/file.tar` とだけ記述するだけで動作します."
 
 #: ../../source/user/virtual_file_systems.rst:204
 msgid ""
@@ -390,10 +436,13 @@ msgid ""
 "``/vsitar/{/path/to/the/archive}/path/inside/the/tar/file``. Note that "
 ":file:`/path/to/the/archive` may also itself use this alternate syntax."
 msgstr ""
+"GDAL 2.2以降,連鎖を可能にし,.tar拡張子に依存しないようにするための代替構文が利用可能です.例えば,"
+" ``/vsitar/{/path/to/the/archive}/path/inside/the/tar/file``. :file:`/path/to/the/archive`  はこの代替構文を"
+"使用することもできます."
 
 #: ../../source/user/virtual_file_systems.rst:209
 msgid "/vsi7z/ (.7z archives)"
-msgstr ""
+msgstr "/vsi7z/ (.7z アーカイブ)"
 
 #: ../../source/user/virtual_file_systems.rst:213
 msgid ""
@@ -403,6 +452,8 @@ msgid ""
 "listing and :cpp:func:`VSIStatL` are available, similarly to above "
 "mentioned file systems."
 msgstr ""
+"/vsi7z/ は,事前に解凍せずに7zアーカイブを読み取ることができるファイルハンドラです.このファイルシステムは"
+"読み取り専用です.ディレクトリリストと :cpp:func:`VSIStatL` は,上記のファイルシステムと同様に利用できます."
 
 #: ../../source/user/virtual_file_systems.rst:218
 #: ../../source/user/virtual_file_systems.rst:250
@@ -411,6 +462,8 @@ msgid ""
 "<https://libarchive.org/>`__ (and libarchive having LZMA support to be of"
 " practical use)."
 msgstr ""
+"これには,`libarchive <https://libarchive.org/>`__ に対してGDALがビルドされていることが必要です"
+"(および実用的な使用のためにlibarchiveがLZMAサポートを持っていることが必要です)."
 
 #: ../../source/user/virtual_file_systems.rst:221
 msgid ""
@@ -420,6 +473,9 @@ msgid ""
 ":file:`path/inside/the/7z/file` is the relative path to the file inside "
 "the archive.`"
 msgstr ""
+"7zファイル内のファイルを指すには,ファイル名は :file:`/vsi7z/path/to/the/file.7z/"
+"path/inside/the/7z/file` の形式である必要があります.ここで :file:`path/to/the/file.7z`  は相対または絶対であり,"
+" :file:`path/inside/the/7z/file` はアーカイブ内のファイルへの相対パスです."
 
 #: ../../source/user/virtual_file_systems.rst:226
 msgid ""
@@ -427,6 +483,9 @@ msgid ""
 "``lpk`` (Esri ArcGIS Layer Package), ``lpkx``, ``mpk`` (Esri ArcGIS Map "
 "Package), ``mpkx`` and ``ppkx`` (Esri ArcGIS Pro Project Package)."
 msgstr ""
+"この仮想ファイルシステムによって認識されるデフォルトの拡張子は次のとおりです: ``7z``, ``lpk`` (Esri ArcGIS "
+"Layer Package), ``lpkx``, ``mpk`` (Esri ArcGIS Map Package), ``mpkx`` および ``ppkx`` (Esri ArcGIS Pro Project "
+"Package)."
 
 #: ../../source/user/virtual_file_systems.rst:230
 msgid ""
@@ -435,6 +494,9 @@ msgid ""
 "``/vsi7z/{/path/to/the/archive}/path/inside/the/archive``. Note that "
 ":file:`/path/to/the/archive` may also itself use this alternate syntax."
 msgstr ""
+"これらの拡張子に依存せずに連鎖を可能にし,代替構文が利用可能です.例えば, "
+"``/vsi7z/{/path/to/the/archive}/path/inside/the/archive``. :file:`/path/to/the/archive`  はこの代替構文を"
+"使用することもできます."
 
 #: ../../source/user/virtual_file_systems.rst:234
 #: ../../source/user/virtual_file_systems.rst:264
@@ -444,10 +506,12 @@ msgid ""
 "restarted from the start of the file). Performance will be the best in "
 "sequential reading."
 msgstr ""
+"大きな圧縮ファイル内でのランダムシークは,後方シークが必要な場合に効率的ではありません(解凍はファイルの先頭から再開されます)."
+"パフォーマンスは,連続した読み取りで最も良くなります."
 
 #: ../../source/user/virtual_file_systems.rst:241
 msgid "/vsirar/ (.rar archives)"
-msgstr ""
+msgstr "/vsirar/ (.rar アーカイブ)"
 
 #: ../../source/user/virtual_file_systems.rst:245
 msgid ""
@@ -457,6 +521,9 @@ msgid ""
 "Directory listing and :cpp:func:`VSIStatL` are available, similarly to "
 "above mentioned file systems."
 msgstr ""
+"/vsirar/ は,事前に解凍せずに `RAR <https://en.wikipedia.org/wiki/RAR_(file_format)>`__ アーカイブを"
+"読み取ることができるファイルハンドラです.このファイルシステムは読み取り専用です.ディレクトリリストと "
+":cpp:func:`VSIStatL` は,上記のファイルシステムと同様に利用できます."
 
 #: ../../source/user/virtual_file_systems.rst:253
 msgid ""
@@ -466,10 +533,13 @@ msgid ""
 ":file:`path/inside/the/rar/file` is the relative path to the file inside "
 "the archive.`"
 msgstr ""
+"RARファイル内のファイルを指すには,ファイル名は :file:`/vsirar/path/to/the/file.rar/"
+"path/inside/the/rar/file` の形式である必要があります.ここで :file:`path/to/the/file.rar`  は相対または絶対であり,"
+" :file:`path/inside/the/rar/file` はアーカイブ内のファイルへの相対パスです."
 
 #: ../../source/user/virtual_file_systems.rst:258
 msgid "The default extension recognized by this virtual file system is: ``rar``"
-msgstr ""
+msgstr "この仮想ファイルシステムによって認識されるデフォルトの拡張子は次のとおりです: ``rar``"
 
 #: ../../source/user/virtual_file_systems.rst:260
 msgid ""
@@ -478,10 +548,13 @@ msgid ""
 "``/vsirar/{/path/to/the/archive}/path/inside/the/archive``. Note that "
 ":file:`/path/to/the/archive` may also itself use this alternate syntax."
 msgstr ""
+"これらの拡張子に依存せずに連鎖を可能にし,代替構文が利用可能です.例えば, "
+"``/vsirar/{/path/to/the/archive}/path/inside/the/archive``. :file:`/path/to/the/archive`  はこの代替構文を"
+"使用することもできます."
 
 #: ../../source/user/virtual_file_systems.rst:271
 msgid "Network based file systems"
-msgstr ""
+msgstr "ネットワークベースのファイルシステム"
 
 #: ../../source/user/virtual_file_systems.rst:273
 msgid ""
@@ -492,6 +565,10 @@ msgid ""
 "<vsigs>`, :ref:`/vsiaz/ <vsiaz>`, :ref:`/vsioss/ <vsioss>` or  "
 ":ref:`/vsiswift/ <vsiswift>`."
 msgstr ""
+"特定の署名認証スキームを必要としないオンラインリソース用の一般的な :ref:`/vsicurl/ <vsicurl>` ファイルシステム"
+"ハンドラが存在します.これは, :ref:`/vsis3/ <vsis3>`,  :ref:`/vsigs/ <vsigs>`, :ref:`/vsiaz/ <vsiaz>`, "
+":ref:`/vsioss/ <vsioss>` または :ref:`/vsiswift/ <vsiswift>` のような商用クラウドストレージサービス用のサブファイル"
+"システムに特化しています."
 
 #: ../../source/user/virtual_file_systems.rst:275
 msgid ""
@@ -499,10 +576,12 @@ msgid ""
 " the :ref:`/vsicurl_streaming/ <vsicurl_streaming>`, and its variants for"
 " the above cloud storage services, for more efficiency."
 msgstr ""
+"ファイル全体をストリーミング方式で読み取ることが可能な場合,効率を上げるために, :ref:`/vsicurl_streaming/ <vsicurl_streaming>`"
+" および上記のクラウドストレージサービス用のその他のバリアントを使用することをお勧めします."
 
 #: ../../source/user/virtual_file_systems.rst:278
 msgid "How to set credentials ?"
-msgstr ""
+msgstr "資格情報の設定方法は？"
 
 #: ../../source/user/virtual_file_systems.rst:280
 msgid ""
@@ -510,6 +589,8 @@ msgid ""
 "they can be provided through configuration files (~/.aws/config, ~/.boto,"
 " ..) or through environment variables / configuration options."
 msgstr ""
+"クラウドストレージサービスでは,資格情報の設定が必要です.それらのうちのいくつかについては,設定ファイル(~/.aws/config, "
+"~/.boto, ..) または環境変数/設定オプションを通じて提供できます."
 
 #: ../../source/user/virtual_file_systems.rst:284
 msgid ""
@@ -519,6 +600,9 @@ msgid ""
 "with different credentials (e.g. different credentials for bucket "
 "\"/vsis3/foo\" and \"/vsis3/bar\")"
 msgstr ""
+"GDAL 3.6以降, :cpp:func:`VSISetPathSpecificOption` を使用して,ファイルパスのレベルで設定オプションを設定できます."
+"これにより,同じ仮想ファイルシステムを使用しても異なる資格情報(例: バケット \"/vsis3/foo\" と \"/vsis3/bar\" の"
+"異なる資格情報)を使用する場合に簡単になります."
 
 #: ../../source/user/virtual_file_systems.rst:289
 msgid ""
@@ -529,6 +613,9 @@ msgid ""
 "automatically loaded by "
 ":cpp:func:`CPLLoadConfigOptionsFromPredefinedFiles`."
 msgstr ""
+"GDAL 3.5以降,資格情報(またはパス固有のオプション)は, :cpp:func:`CPLLoadConfigOptionsFromFile` で明示的にロードされる"
+"特定の設定ファイル,または :cpp:func:`CPLLoadConfigOptionsFromPredefinedFiles` によって自動的にロードされるデフォルトの"
+"設定ファイルのいずれかに, :ref:`GDAL設定ファイル <gdal_configuration_file>` で指定できます."
 
 #: ../../source/user/virtual_file_systems.rst:294
 msgid ""
@@ -537,10 +624,13 @@ msgid ""
 "``[.some_arbitrary_name]``), and whose first key is ``path``. ` .. code-"
 "block::"
 msgstr ""
+"それらは ``[credentials]`` セクションの下に配置する必要があり,各パスプレフィックスについては,その名前が ``[.`` で始まる"
+"相対的なサブセクションの下に配置する必要があります(例: ``[.some_arbitrary_name]``),そして最初のキーは ``path`` です."
+"` .. code-block::"
 
 #: ../../source/user/virtual_file_systems.rst:312
 msgid "Network/cloud-friendliness and file formats"
-msgstr ""
+msgstr "ネットワーク/クラウド対応性とファイルフォーマット"
 
 #: ../../source/user/virtual_file_systems.rst:314
 msgid ""
@@ -550,28 +640,33 @@ msgid ""
 "format on the special data arrangement. Performance also depends on the "
 "particular access pattern made to the file."
 msgstr ""
+"ほとんどのGDALラスターおよびベクトルファイルシステムは, /vsicurl/ およびその他の派生仮想ファイルシステムを使用して"
+"リモートでアクセスできますが,パフォーマンスはフォーマットに大きく依存し,特定のフォーマットでも特定のデータ配置に依存します."
+"パフォーマンスはまた,ファイルへの特定のアクセスパターンにも依存します."
 
 #: ../../source/user/virtual_file_systems.rst:320
 msgid ""
 "For interactive visualisation of raster files, the file should ideally "
 "have the following characteristics:"
 msgstr ""
+"ラスターファイルのインタラクティブな可視化のためには,ファイルは理想的には"
+"次の特性を持つべきです:"
 
 #: ../../source/user/virtual_file_systems.rst:323
 msgid "it should be tiled in generally square-shaped tiles."
-msgstr ""
+msgstr "正方形のタイルでタイリングされているべきです"
 
 #: ../../source/user/virtual_file_systems.rst:324
 msgid "it should have an index of the tile location within the file"
-msgstr ""
+msgstr "ファイル内にタイルの位置のインデックスがあるべきです"
 
 #: ../../source/user/virtual_file_systems.rst:325
 msgid "it should have overviews/pyramids"
-msgstr ""
+msgstr "オーバービュー/ピラミッドがあるべきです"
 
 #: ../../source/user/virtual_file_systems.rst:328
 msgid "TIFF/GeoTIFF"
-msgstr ""
+msgstr "TIFF/GeoTIFF"
 
 #: ../../source/user/virtual_file_systems.rst:330
 msgid ""
@@ -579,10 +674,12 @@ msgid ""
 "driver are suitable for network access. More generally tiled GeoTIFF "
 "files with overviews are."
 msgstr ""
+":ref:`raster.cog` ドライバによって生成されたクラウド最適化GeoTIFFファイルは,ネットワークアクセスに適しています."
+"より一般的には,オーバービューを持つタイルGeoTIFFファイルが適しています."
 
 #: ../../source/user/virtual_file_systems.rst:335
 msgid "JPEG2000"
-msgstr ""
+msgstr "JPEG2000"
 
 #: ../../source/user/virtual_file_systems.rst:337
 msgid ""
@@ -590,6 +687,8 @@ msgid ""
 "layout carefully designed for that purpose, and when using a JPEG200 "
 "library that is heavily optimized."
 msgstr ""
+"JPEG2000は,その目的に適したレイアウトを使用し,最適化されたJPEG200ライブラリを使用している場合を除いて,一般的に"
+"ネットワークアクセスには適していません."
 
 #: ../../source/user/virtual_file_systems.rst:341
 msgid ""
@@ -597,6 +696,8 @@ msgid ""
 "different progression order (this is of particular importance for single-"
 "tiled access), and with optional markers"
 msgstr ""
+"JPEG2000ファイルには,さまざまな種類があります: シングルタイル vs タイル,異なる進行順序(これはシングルタイルアクセスに"
+"特に重要です),およびオプションのマーカーがあります"
 
 #: ../../source/user/virtual_file_systems.rst:345
 msgid ""
@@ -611,6 +712,12 @@ msgid ""
 "to limit the number of bytes to ingest (but for single-tiled raster, "
 "performance might still suffer.)"
 msgstr ""
+"OpenJPEGライブラリ(:ref:`raster.jp2openjpeg` ドライバを介して使用可能)は,書かれた時点で,ピクセルクエリの関心領域に"
+"参加する各タイルパートを全体で取り込む必要があります(したがって,シングルタイルファイルの場合,ファイル全体を取り込む"
+"必要があります).また,タイルインデックスの相当物であるTLM (Tile-Part length) マーカーを使用しません,またはタイル内の"
+"パケットのインデックスであるPLT (Packed Length, tile-part header) を使用しません. Kakaduライブラリ(:ref:`raster.jp2kak`"
+" ドライバを介して使用可能)は,これらのマーカーを使用して取り込むバイト数を制限できます(ただし,シングルタイルラスタの場合,"
+"パフォーマンスがまだ低下する可能性があります)."
 
 #: ../../source/user/virtual_file_systems.rst:355
 msgid ""
@@ -620,24 +727,28 @@ msgid ""
 "check the characteristics of a given JPEG200 file. Fields of interest to "
 "examine in the output are:"
 msgstr ""
+"`dump_jp2.py <https://raw.githubusercontent.com/OSGeo/gdal/master/swig/python/gdal-utils/osgeo_utils/samples/dump_jp2.py>`__"
+" Pythonスクリプトを使用して,指定されたJPEG200ファイルの特性を確認できます.出力で調査するのに興味のあるフィールドは次のとおりです:"
 
 #: ../../source/user/virtual_file_systems.rst:359
 msgid ""
 "the tile size (given by the ``XTsiz`` and ``YTsiz`` fields in the ``SIZ``"
 " marker)"
 msgstr ""
+"タイルサイズ(``SIZ`` マーカーの ``XTsiz`` および ``YTsiz`` フィールドで"
+"指定される)"
 
 #: ../../source/user/virtual_file_systems.rst:360
 msgid "the presence of ``TLM`` markers"
-msgstr ""
+msgstr "``TLM`` マーカーの存在"
 
 #: ../../source/user/virtual_file_systems.rst:361
 msgid "the presence of ``PLT`` markers"
-msgstr ""
+msgstr " ``PLT`` マーカーの存在"
 
 #: ../../source/user/virtual_file_systems.rst:366
 msgid "/vsicurl/ (http/https/ftp files: random access)"
-msgstr ""
+msgstr "/vsicurl/ (http/https/ftp ファイル: ランダムアクセス)"
 
 #: ../../source/user/virtual_file_systems.rst:368
 msgid ""
@@ -645,6 +756,8 @@ msgid ""
 "of files available through HTTP/FTP web protocols, without prior download"
 " of the entire file. It requires GDAL to be built against libcurl."
 msgstr ""
+"/vsicurl/ は,事前にファイル全体をダウンロードすることなく,HTTP/FTPウェブプロトコルを介して利用可能なファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:370
 msgid ""
@@ -653,10 +766,14 @@ msgid ""
 ":file:`/vsicurl/ftp://path/to/remote/resource`, where "
 ":file:`path/to/remote/resource` is the URL of a remote resource."
 msgstr ""
+"認識されるファイル名は, :file:`/vsicurl/http[s]://path/to/remote/resource` または "
+":file:`/vsicurl/ftp://path/to/remote/resource` の形式であり, :file:`path/to/remote/resource` "
+"はリモートリソースのURLです."
+
 
 #: ../../source/user/virtual_file_systems.rst:372
 msgid "Example using :program:`ogrinfo` to read a shapefile on the internet:"
-msgstr ""
+msgstr ":program:`ogrinfo` を使用してインターネット上のシェープファイルを読み取る例:"
 
 #: ../../source/user/virtual_file_systems.rst:378
 msgid ""
@@ -665,6 +782,8 @@ msgid ""
 "each option name and value (including the value of \"url\") is URL-"
 "encoded. Currently supported options are:"
 msgstr ""
+"GDAL 2.3以降,オプションは,次の構文でファイル名に渡すことができます: ``/vsicurl?[option_i=val_i&]*url=http://...`` "
+"ここで,各オプション名と値(\"url\"の値を含む)はURLエンコードされています.現在サポートされているオプションは次のとおりです:"
 
 #: ../../source/user/virtual_file_systems.rst:380
 msgid ""
@@ -672,12 +791,17 @@ msgid ""
 " YES. Setting this option overrides the behavior of the "
 ":config:`CPL_VSIL_CURL_USE_HEAD` configuration option."
 msgstr ""
+"use_head=yes/no: HTTP HEADリクエストを送信できるかどうか.デフォルトはYES.このオプションを設定すると,"
+" :config:`CPL_VSIL_CURL_USE_HEAD` 設定オプションの動作が上書きされます."
 
 #: ../../source/user/virtual_file_systems.rst:381
 msgid ""
 "max_retry=number: default to 0. Setting this option overrides the "
 "behavior of the :config:`GDAL_HTTP_MAX_RETRY` configuration option."
 msgstr ""
+"max_retry=number: デフォルトは0.このオプションを設定すると, :config:`GDAL_HTTP_MAX_RETRY` "
+"設定オプションの動作が上書きされます."
+
 
 #: ../../source/user/virtual_file_systems.rst:382
 msgid ""
@@ -685,6 +809,8 @@ msgid ""
 "overrides the behavior of the :config:`GDAL_HTTP_RETRY_DELAY` "
 "configuration option."
 msgstr ""
+"retry_delay=number_in_seconds: デフォルトは30.このオプションを設定すると, :config:`GDAL_HTTP_RETRY_DELAY` "
+"設定オプションの動作が上書きされます."
 
 #: ../../source/user/virtual_file_systems.rst:383
 msgid ""
@@ -692,16 +818,20 @@ msgid ""
 "this option overrides the behavior of the :config:`GDAL_HTTP_RETRY_CODES`"
 " configuration option. (GDAL >= 3.10)"
 msgstr ""
+"retry_codes=``ALL`` またはカンマ区切りのHTTPエラーコードのリスト.このオプションを設定すると, "
+":config:`GDAL_HTTP_RETRY_CODES` 設定オプションの動作が上書きされます. (GDAL >= 3.10)"
 
 #: ../../source/user/virtual_file_systems.rst:384
 msgid ""
 "list_dir=yes/no: whether an attempt to read the file list of the "
 "directory where the file is located should be done. Default to YES."
 msgstr ""
+"list_dir=yes/no: ファイルが存在するディレクトリのファイルリストを読み取る試みを"
+"行うかどうか.デフォルトはYESです."
 
 #: ../../source/user/virtual_file_systems.rst:385
 msgid "useragent=value: HTTP UserAgent header"
-msgstr ""
+msgstr "useragent=value: HTTP UserAgent header"
 
 #: ../../source/user/virtual_file_systems.rst:386
 msgid "referer=value: HTTP Referer header"
@@ -716,6 +846,8 @@ msgid ""
 "header_file=value: Filename that contains one or several \"Header: "
 "Value\" lines"
 msgstr ""
+"header_file=value: 1つまたは複数の \"Header: Value\" 行を含む"
+"ファイル名"
 
 #: ../../source/user/virtual_file_systems.rst:389
 msgid "unsafessl=yes/no"
@@ -750,12 +882,18 @@ msgid ""
 "path-specific option ( cf :cpp:func:`VSISetPathSpecificOption`) "
 "``VSICURL_PC_URL_SIGNING`` set to ``YES``."
 msgstr ""
+"pc_url_signing=yes/no: Microsoft Planetary Computer の URL署名メカニズム"
+"(https://planetarycomputer.microsoft.com/docs/concepts/sas/) を使用するかどうか. (GDAL >= 3.5.2). "
+"GDAL 3.9以降,これは ``VSICURL_PC_URL_SIGNING`` というパス固有のオプション( cf :cpp:func:`VSISetPathSpecificOption`) "
+"を ``YES`` に設定することでも設定できます."
 
 #: ../../source/user/virtual_file_systems.rst:396
 msgid ""
 "pc_collection=name: name of the collection of the dataset for Planetary "
 "Computer URL signing. Only used when pc_url_signing=yes. (GDAL >= 3.5.2)"
 msgstr ""
+"pc_collection=name: Planetary Computer URL署名のデータセットのコレクション名. pc_url_signing=yes の場合のみ使用されます. "
+"(GDAL >= 3.5.2)"
 
 #: ../../source/user/virtual_file_systems.rst:398
 msgid ""
@@ -767,6 +905,11 @@ msgid ""
 "128 times :config:`CPL_VSIL_CURL_CHUNK_SIZE` (so 2 MB by default) to "
 "improve download performance."
 msgstr ""
+"部分ダウンロード(サーバーがランダム読み取りをサポートしている必要があります)は,デフォルトで16 KBの粒度で行われます."
+"GDAL 2.3以降,チャンクサイズは,バイト単位の値で :config:`CPL_VSIL_CURL_CHUNK_SIZE` 設定オプションで設定できます."
+"ドライバが連続読み取りを検出すると,ダウンロードパフォーマンスを向上させるために,"
+"チャンクサイズを :config:`CPL_VSIL_CURL_CHUNK_SIZE`"
+" の128倍(デフォルトで2 MB)まで徐々に増やします."
 
 #: ../../source/user/virtual_file_systems.rst:400
 msgid ""
@@ -777,6 +920,10 @@ msgid ""
 " the size of this global LRU cache can be modified by setting the "
 "configuration option :config:`CPL_VSIL_CURL_CACHE_SIZE` (in bytes)."
 msgstr ""
+"さらに,すべてのダウンロードコンテンツ間で共有される16 MBのグローバル最近使用されたキャッシュが使用され,"
+"ファイルハンドルが閉じられ再オープンされると,プロセスの寿命中または :cpp:func:`VSICurlClearCache` が呼び出されるまで,"
+"キャッシュ内のコンテンツが再利用される可能性があります. GDAL 2.3以降,このグローバルLRUキャッシュのサイズは,"
+"設定オプション :config:`CPL_VSIL_CURL_CACHE_SIZE` (バイト単位) を設定することで変更できます."
 
 #: ../../source/user/virtual_file_systems.rst:402
 msgid ""
@@ -785,6 +932,8 @@ msgid ""
 ":config:`CPL_VSIL_CURL_CACHE_SIZE` as well to 128 times the value of "
 ":config:`CPL_VSIL_CURL_CHUNK_SIZE`."
 msgstr ""
+"連続読み取りを最適化するために :config:`CPL_VSIL_CURL_CHUNK_SIZE` の値を増やす場合, "
+":config:`CPL_VSIL_CURL_CACHE_SIZE` の値も :config:`CPL_VSIL_CURL_CHUNK_SIZE` の値の128倍に増やすことをお勧めします."
 
 #: ../../source/user/virtual_file_systems.rst:404
 msgid ""
@@ -793,6 +942,9 @@ msgid ""
 " GET call at file opening (can help performance to read Cloud optimized "
 "geotiff with a large header)."
 msgstr ""
+"GDAL 2.3以降, :config:`GDAL_INGESTED_BYTES_AT_OPEN` 設定オプションを設定して,ファイルを開いたときに"
+"GET呼び出しで読み取るバイト数を強制することができます(Cloud optimized geotiff の大きなヘッダーを読む際にパフォーマンスを"
+"向上させるのに役立ちます)."
 
 #: ../../source/user/virtual_file_systems.rst:406
 #: ../../source/user/virtual_file_systems.rst:456
@@ -804,6 +956,9 @@ msgid ""
 " use is the one of Curl ``CURLOPT_PROXY``, ``CURLOPT_PROXYUSERPWD`` and "
 "``CURLOPT_PROXYAUTH`` options."
 msgstr ""
+":config:`GDAL_HTTP_PROXY` (HTTPおよびHTTPSプロトコルの両方), :config:`GDAL_HTTPS_PROXY` (HTTPSプロトコルのみ), "
+":config:`GDAL_HTTP_PROXYUSERPWD` および :config:`GDAL_PROXY_AUTH` 設定オプションを使用して,プロキシサーバを定義できます."
+"使用する構文は, Curl ``CURLOPT_PROXY``, ``CURLOPT_PROXYUSERPWD`` および ``CURLOPT_PROXYAUTH`` オプションの構文です."
 
 #: ../../source/user/virtual_file_systems.rst:408
 #: ../../source/user/virtual_file_systems.rst:458
@@ -813,6 +968,9 @@ msgid ""
 " to the Certification Authority (CA) bundle file (if not specified, curl "
 "will use a file in a system location)."
 msgstr ""
+"GDAL 2.1.3以降, :config:`CURL_CA_BUNDLE` または :config:`SSL_CERT_FILE` 設定オプションを使用して,"
+"認証局(CA)バンドルファイルの"
+"パスを設定できます(指定されていない場合, curl はシステムの場所にファイルを使用します)."
 
 #: ../../source/user/virtual_file_systems.rst:410
 msgid ""
@@ -820,6 +978,8 @@ msgid ""
 "the :config:`GDAL_HTTP_HEADER_FILE` configuration option to point to a "
 "filename of a text file with \"key: value\" HTTP headers."
 msgstr ""
+"GDAL 2.3以降,追加のHTTPヘッダーを送信するために, :config:`GDAL_HTTP_HEADER_FILE` 設定オプションを設定して,"
+"\"key: value\" HTTPヘッダーを含むテキストファイルのファイル名を指定できます."
 
 #: ../../source/user/virtual_file_systems.rst:412
 msgid ""
@@ -828,6 +988,8 @@ msgid ""
 "specify headers. :config:`CPL_CURL_VERBOSE=YES` allows one to see them "
 "and more, when combined with ``--debug``."
 msgstr ""
+"代替として,GDAL 3.6以降, :config:`GDAL_HTTP_HEADERS` 設定オプションを使用してヘッダーを指定することもできます."
+" :config:`CPL_CURL_VERBOSE=YES` は, ``--debug`` と組み合わせて,それらを表示することができます."
 
 #: ../../source/user/virtual_file_systems.rst:416
 msgid ""
@@ -836,6 +998,8 @@ msgid ""
 "option can be set, so that request retries are done in case of HTTP "
 "errors 429, 502, 503 or 504."
 msgstr ""
+"GDAL 2.3以降, :config:`GDAL_HTTP_MAX_RETRY` (試行回数) および :config:`GDAL_HTTP_RETRY_DELAY` (秒単位) "
+"設定オプションを設定することで,HTTPエラー429, 502, 503または504の場合にリクエストの再試行が行われます."
 
 #: ../../source/user/virtual_file_systems.rst:418
 msgid ""
@@ -843,12 +1007,16 @@ msgid ""
 "TCP keep-alive functionality (cf https://daniel.haxx.se/blog/2020/02/10"
 "/curl-ootw-keepalive-time/ for a detailed explanation):"
 msgstr ""
+"GDAL 3.6以降,以下の設定オプションでTCP keep-alive機能を制御できます(詳細な説明については,"
+"https://daniel.haxx.se/blog/2020/02/10/curl-ootw-keepalive-time/ を参照してください):"
 
 #: ../../source/user/virtual_file_systems.rst:420
 msgid ""
 ":config:`GDAL_HTTP_TCP_KEEPALIVE` = YES/NO. whether to enable TCP keep-"
 "alive. Defaults to NO"
 msgstr ""
+":config:`GDAL_HTTP_TCP_KEEPALIVE` = YES/NO. TCP keep-alive を有効にするかどうか."
+"デフォルトはNOです"
 
 #: ../../source/user/virtual_file_systems.rst:421
 msgid ""
@@ -856,6 +1024,8 @@ msgid ""
 "time. Defaults to 60. Only taken into account if "
 "GDAL_HTTP_TCP_KEEPALIVE=YES."
 msgstr ""
+":config:`GDAL_HTTP_TCP_KEEPIDLE` = integer, 秒単位. Keep-alive アイドル時間. デフォルトは60です."
+"GDAL_HTTP_TCP_KEEPALIVE=YES の場合のみ考慮されます."
 
 #: ../../source/user/virtual_file_systems.rst:422
 msgid ""
@@ -863,36 +1033,49 @@ msgid ""
 "between keep-alive probes. Defaults to 60. Only taken into account if "
 "GDAL_HTTP_TCP_KEEPALIVE=YES."
 msgstr ""
+":config:`GDAL_HTTP_TCP_KEEPINTVL` = integer, 秒単位. Keep-alive プローブ間の間隔時間. デフォルトは60です."
+"GDAL_HTTP_TCP_KEEPALIVE=YES の場合のみ考慮されます."
 
 #: ../../source/user/virtual_file_systems.rst:424
 msgid ""
 "Starting with GDAL 3.7, the following configuration options control "
 "support for SSL client certificates:"
 msgstr ""
+"GDAL 3.7以降,以下の設定オプションでSSLクライアント証明書のサポートを"
+"制御できます:"
 
 #: ../../source/user/virtual_file_systems.rst:426
 msgid ""
 ":config:`GDAL_HTTP_SSLCERT` = filename. Filename of the the SSL client "
 "certificate. Cf https://curl.se/libcurl/c/CURLOPT_SSLCERT.html"
 msgstr ""
+":config:`GDAL_HTTP_SSLCERT` = filename. SSLクライアント証明書のファイル名."
+" Cf https://curl.se/libcurl/c/CURLOPT_SSLCERT.html"
+
 
 #: ../../source/user/virtual_file_systems.rst:427
 msgid ""
 ":config:`GDAL_HTTP_SSLCERTTYPE` = string. Format of the SSL certificate: "
 "\"PEM\" or \"DER\". Cf https://curl.se/libcurl/c/CURLOPT_SSLCERTTYPE.html"
 msgstr ""
+":config:`GDAL_HTTP_SSLCERTTYPE` = string. SSL証明書の形式: \"PEM\" または \"DER\"."
+" Cf https://curl.se/libcurl/c/CURLOPT_SSLCERTTYPE.html"
 
 #: ../../source/user/virtual_file_systems.rst:428
 msgid ""
 ":config:`GDAL_HTTP_SSLKEY` = filename. Private key file for TLS and SSL "
 "client certificate. Cf https://curl.se/libcurl/c/CURLOPT_SSLKEY.html"
 msgstr ""
+":config:`GDAL_HTTP_SSLKEY` = filename. TLSおよびSSLクライアント証明書の"
+"プライベートキーファイル. Cf https://curl.se/libcurl/c/CURLOPT_SSLKEY.html"
 
 #: ../../source/user/virtual_file_systems.rst:429
 msgid ""
 ":config:`GDAL_HTTP_KEYPASSWD` = string. Passphrase to private key. Cf "
 "https://curl.se/libcurl/c/CURLOPT_KEYPASSWD.html"
 msgstr ""
+":config:`GDAL_HTTP_KEYPASSWD` = string. プライベートキーのパスフレーズ."
+" Cf https://curl.se/libcurl/c/CURLOPT_KEYPASSWD.html"
 
 #: ../../source/user/virtual_file_systems.rst:431
 msgid ""
@@ -901,6 +1084,8 @@ msgid ""
 "configuration options can also be specified as path-specific options with"
 " :cpp:func:`VSISetPathSpecificOption`."
 msgstr ""
+"一般的には,設定オプションを介して利用可能な :cpp:func:`CPLHTTPFetch` のオプションが利用可能です."
+"GDAL 3.7以降,上記の設定オプションは, :cpp:func:`VSISetPathSpecificOption` でパス固有のオプションとしても指定できます."
 
 #: ../../source/user/virtual_file_systems.rst:435
 msgid ""
@@ -910,6 +1095,9 @@ msgid ""
 ":config:`VSI_CACHE_SIZE` (in bytes). Content in that cache is discarded "
 "when the file handle is closed."
 msgstr ""
+"ファイルは,設定オプション :config:`VSI_CACHE` を ``TRUE`` に設定することでRAMにキャッシュできます."
+"キャッシュサイズはデフォルトで25 MBですが,設定オプション :config:`VSI_CACHE_SIZE` (バイト単位) を設定することで変更できます."
+"ファイルハンドルが閉じられると,そのキャッシュ内のコンテンツは破棄されます."
 
 #: ../../source/user/virtual_file_systems.rst:437
 msgid ""
@@ -921,6 +1109,11 @@ msgid ""
 "resources that can be modified during execution of GDAL related code. "
 "Alternatively, :cpp:func:`VSICurlClearCache` can be used."
 msgstr ""
+"GDAL 2.3以降, :config:`CPL_VSIL_CURL_NON_CACHED` 設定オプションを "
+":file:`/vsicurl/http://example.com/foo.tif:/vsicurl/http://example.com/some_directory` "
+"のような値に設定できます.これにより,ファイルハンドルを閉じると,指定されたファイルに関連するすべてのキャッシュされたコンテンツが"
+"キャッシュされなくなります.これは,GDAL関連コードの実行中に変更される可能性のあるリソースを扱う際に役立ちます. "
+"代替として, :cpp:func:`VSICurlClearCache` を使用できます."
 
 #: ../../source/user/virtual_file_systems.rst:439
 msgid ""
@@ -929,6 +1122,9 @@ msgid ""
 " as to minimize round-trips. This behavior can be disabled by setting the"
 " configuration option :config:`CPL_VSIL_CURL_USE_S3_REDIRECT` to ``NO``."
 msgstr ""
+"GDAL 2.1以降, ``/vsicurl/`` は,有効期間中のAmazon S3署名URLに直接リダイレクトされたURLを問い合わせるように試みます."
+"これにより,ラウンドトリップを最小限に抑えることができます.この動作は,設定オプション :config:`CPL_VSIL_CURL_USE_S3_REDIRECT` を"
+" ``NO`` に設定することで無効にできます."
 
 #: ../../source/user/virtual_file_systems.rst:441
 #: ../../source/user/virtual_file_systems.rst:462
@@ -937,6 +1133,8 @@ msgid ""
 "nature- file or directory - in st_mode member (the later only reliable "
 "with FTP resources for now)."
 msgstr ""
+":cpp:func:`VSIStatL` は,サイズを st_size メンバーに,ファイルの性質-ファイルまたはディレクトリ-を st_mode メンバーに返します"
+"(後者は現時点ではFTPリソースでのみ信頼できます)."
 
 #: ../../source/user/virtual_file_systems.rst:443
 msgid ""
@@ -944,10 +1142,12 @@ msgid ""
 " returned by the most popular web servers, such as Apache and Microsoft "
 "IIS."
 msgstr ""
+":cpp:func:`VSIReadDir` は,ApacheやMicrosoft IISなどの最も一般的なWebサーバーが"
+"返すHTMLディレクトリリストを解析できるはずです."
 
 #: ../../source/user/virtual_file_systems.rst:448
 msgid "/vsicurl_streaming/ (http/https/ftp files: streaming)"
-msgstr ""
+msgstr "/vsicurl_streaming/ (http/https/ftp ファイル: ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:450
 msgid ""
@@ -956,6 +1156,9 @@ msgid ""
 "without prior download of the entire file. It requires GDAL to be built "
 "against libcurl."
 msgstr ""
+"/vsicurl_streaming/ は,HTTP/FTPウェブプロトコルを介してストリーミングされたファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALが"
+"ビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:452
 msgid ""
@@ -964,6 +1167,10 @@ msgid ""
 "the server supports range downloading, you should use the :ref:`/vsicurl/"
 " <vsicurl>` file system handler instead."
 msgstr ""
+"このファイルハンドラはファイル内のランダムオフセットにシークできますが,これは効率的ではありません."
+"効率的なランダムアクセスが必要で,かつサーバーが範囲ダウンロードをサポートしている場合は,代わりに "
+" :ref:`/vsicurl/<vsicurl>` "
+"ファイルシステムハンドラを使用する必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:454
 msgid ""
@@ -972,6 +1179,9 @@ msgid ""
 ":file:`/vsicurl_streaming/ftp://path/to/remote/resource`, where "
 ":file:`path/to/remote/resource` is the URL of a remote resource."
 msgstr ""
+"認識されるファイル名は, :file:`/vsicurl_streaming/http[s]://path/to/remote/resource` または "
+":file:`/vsicurl_streaming/ftp://path/to/remote/resource` の形式です.ここで, :file:`path/to/remote/resource` は,"
+"リモートリソースのURLです."
 
 #: ../../source/user/virtual_file_systems.rst:460
 msgid ""
@@ -980,10 +1190,13 @@ msgid ""
 "can be modified by setting the configuration option "
 ":config:`VSI_CACHE_SIZE` (in bytes)."
 msgstr ""
+"ファイルは,設定オプション :config:`VSI_CACHE` を ``TRUE`` に設定することでRAMにキャッシュできます."
+"キャッシュサイズはデフォルトで25 MBですが,設定オプション :config:`VSI_CACHE_SIZE` "
+"(バイト単位) を設定することで変更できます."
 
 #: ../../source/user/virtual_file_systems.rst:467
 msgid "/vsis3/ (AWS S3 files)"
-msgstr ""
+msgstr "/vsis3/ (AWS S3 ファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:469
 msgid ""
@@ -992,6 +1205,8 @@ msgid ""
 "download of the entire file. It requires GDAL to be built against "
 "libcurl."
 msgstr ""
+"/vsis3/ は,AWS S3バケットで利用可能な(主に非公開の)ファイルのランダム読み取りを可能にするファイルシステムハンドラです."
+"これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:471
 msgid ""
@@ -1006,6 +1221,14 @@ msgid ""
 "2.3, creation of directories with :cpp:func:`VSIMkdir` and deletion of "
 "(empty) directories with :cpp:func:`VSIRmdir` are also possible."
 msgstr ""
+"また,ファイルの順次書き込みも可能です.その場合,シークや読み取り操作は許可されません.したがって,"
+"GTiffドライバを使用してGeoTIFFファイルに直接書き込むことはサポートされません.ただし,GDAL 3.2以降,"
+" :config:`CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE` 設定オプションを ``YES`` に設定すると,"
+"ランダム書き込みアクセスが可能になります( :config:`CPL_TMPDIR` 設定オプションで制御される一時"
+"ローカルファイルの作成が含まれます)."
+" :cpp:func:`VSIUnlink` によるファイルの削除もサポートされています. GDAL 2.3以降,"
+" :cpp:func:`VSIMkdir` でディレクトリの作成,"
+" :cpp:func:`VSIRmdir` で(空の)ディレクトリの削除も可能です."
 
 #: ../../source/user/virtual_file_systems.rst:475
 msgid ""
@@ -1013,6 +1236,8 @@ msgid ""
 "``bucket`` is the name of the S3 bucket and ``key`` is the S3 object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsis3/bucket/key` の形式です.ここで, ``bucket`` はS3バケットの名前であり,"
+"``key`` はS3オブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:477
 #: ../../source/user/virtual_file_systems.rst:691
@@ -1021,11 +1246,11 @@ msgstr ""
 #: ../../source/user/virtual_file_systems.rst:992
 #: ../../source/user/virtual_file_systems.rst:1120
 msgid "The generalities of :ref:`/vsicurl/ <vsicurl>` apply."
-msgstr ""
+msgstr ":ref:`/vsicurl/ <vsicurl>` の一般的な情報が適用されます."
 
 #: ../../source/user/virtual_file_systems.rst:479
 msgid "The following configuration options are specific to the /vsis3/ handler:"
-msgstr ""
+msgstr "/vsis3/ ハンドラに固有の以下の設定オプションがあります:"
 
 #: ../../source/user/virtual_file_systems.rst:534
 msgid ""
@@ -1033,6 +1258,9 @@ msgid ""
 "`AssumeRoleWithWebIdentity API "
 "<https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html>`_."
 msgstr ""
+"認証に使用するアイデンティティトークンファイルへのパス. `AssumeRoleWithWebIdentity API "
+"<https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html>`_ を"
+"介した認証に使用されます."
 
 #: ../../source/user/virtual_file_systems.rst:610
 #: ../../source/user/virtual_file_systems.rst:759
@@ -1041,6 +1269,8 @@ msgid ""
 "Several authentication methods are possible, and are attempted in the "
 "following order:"
 msgstr ""
+"複数の認証方法が可能であり,以下の順序で"
+"試行されます:"
 
 #: ../../source/user/virtual_file_systems.rst:612
 msgid ""
@@ -1048,6 +1278,8 @@ msgid ""
 " signing is disabled. This option might be used for buckets with public "
 "access rights. Available since GDAL 2.3"
 msgstr ""
+":config:`AWS_NO_SIGN_REQUEST=YES` 設定オプションが設定されている場合,リクエスト署名が無効になります."
+"このオプションは,パブリックアクセス権を持つバケットに使用できます. GDAL 2.3以降で利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:613
 msgid ""
@@ -1055,6 +1287,8 @@ msgid ""
 "configuration options can be set. The :config:`AWS_SESSION_TOKEN` "
 "configuration option must be set when temporary credentials are used."
 msgstr ""
+":config:`AWS_SECRET_ACCESS_KEY` および :config:`AWS_ACCESS_KEY_ID` 設定オプションを設定できます."
+"一時的な資格情報が使用される場合は, :config:`AWS_SESSION_TOKEN` 設定オプションを設定する必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:614
 msgid ""
@@ -1068,6 +1302,12 @@ msgid ""
 ":config:`AWS_PROFILE` environment variable (the default profile is "
 "\"default\")."
 msgstr ""
+"GDAL 2.3以降, \"aws\"コマンドラインユーティリティやBoto3がサポートするのと同様の資格情報を提供する代替方法を使用できます."
+"上記の環境変数が提供されていない場合, ``~/.aws/credentials`` または ``%UserProfile%/.aws/credentials`` ファイルが"
+"読み込まれます(:config:`CPL_AWS_CREDENTIALS_FILE` で指定されたファイル).プロファイルは, :config:`AWS_DEFAULT_PROFILE` "
+"環境変数で指定するか, GDAL 3.2以降では :config:`AWS_PROFILE` 環境変数で指定することができます"
+"(デフォルトプロファイルは \"default\" です)."
+
 
 #: ../../source/user/virtual_file_systems.rst:615
 msgid ""
@@ -1075,6 +1315,8 @@ msgid ""
 "used (or the file pointer by :config:`AWS_CONFIG_FILE`) to retrieve "
 "credentials and the AWS region."
 msgstr ""
+"資格情報とAWSリージョンを取得するために.``~/.aws/config`` または ``%UserProfile%/.aws/config`` ファイルも使用できます"
+"(:config:`AWS_CONFIG_FILE` で指定されたファイル) "
 
 #: ../../source/user/virtual_file_systems.rst:616
 msgid ""
@@ -1085,12 +1327,17 @@ msgid ""
 "https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-"
 "accounts.html)"
 msgstr ""
+"GDAL 3.6以降, :config:`AWS_ROLE_ARN` および :config:`AWS_WEB_IDENTITY_TOKEN_FILE` が定義されている場合,"
+"webアイデンティティトークンベースのAWS STSアクションAssumeRoleWithWebIdentityに対する資格情報メカニズムに依存します"
+"(参照.: https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)"
 
 #: ../../source/user/virtual_file_systems.rst:617
 msgid ""
 "If none of the above method succeeds, instance profile credentials will "
 "be retrieved when GDAL is used on EC2 instances (cf :ref:`vsis3_imds`)"
 msgstr ""
+"上記のいずれの方法も成功しない場合,EC2インスタンスでGDALが使用されるときに"
+"インスタンスプロファイル資格情報が取得されます(cf :ref:`vsis3_imds`)"
 
 #: ../../source/user/virtual_file_systems.rst:619
 msgid ""
@@ -1105,6 +1352,12 @@ msgid ""
 "For files smaller than the chunk size, a simple PUT request is used "
 "instead of the multipart upload API."
 msgstr ""
+"書き込み時には,S3マルチパートアップロードAPIを使用してファイルがアップロードされます.チャンクのサイズはデフォルトで50 MBに設定されており,"
+"50 MBずつの10000パーツで500 GBまでのファイルを作成できます.より大きなファイルが必要な場合は,"
+" :config:`VSIS3_CHUNK_SIZE` 設定オプションの値を大きな値に増やします(MBで表されます).プロセスが終了し,"
+"ファイルが正しく閉じられない場合,マルチパートアップロードは開いたままになり,Amazonはパーツストレージの料金を請求します."
+"他の手段で自分で中止する必要があります.たとえば,s3cmdユーティリティを使用して\"ghost\"アップロードを中止します."
+"チャンクサイズより小さいファイルの場合,マルチパートアップロードAPIの代わりに単純なPUTリクエストが使用されます."
 
 #: ../../source/user/virtual_file_systems.rst:621
 #: ../../source/user/virtual_file_systems.rst:878
@@ -1112,6 +1365,8 @@ msgid ""
 "Since GDAL 3.1, the :cpp:func:`VSIRename` operation is supported (first "
 "doing a copy of the original file and then deleting it)"
 msgstr ""
+"GDAL 3.1以降, :cpp:func:`VSIRename` 操作がサポートされています"
+"(最初に元のファイルをコピーしてから削除します)"
 
 #: ../../source/user/virtual_file_systems.rst:623
 msgid ""
@@ -1122,6 +1377,10 @@ msgid ""
 "(GDAL >= 3.2). Starting with GDAL 3.6, this can be set as a path-specific"
 " option in the :ref:`GDAL configuration file <gdal_configuration_file>`"
 msgstr ""
+"GDAL 3.1以降, :cpp:func:`VSIRmdirRecursive` 操作がサポートされています"
+"(バッチ削除メソッドを使用). :config:`CPL_VSIS3_USE_BASE_RMDIR_RECURSIVE` 設定オプションを"
+"YES に設定すると,バッチ削除をサポートしていないS3ライクなAPIを使用する場合に使用できます(GDAL >= 3.2)."
+"GDAL 3.6以降,これは :ref:`GDAL configuration file <gdal_configuration_file>` でパス固有のオプションとして設定できます"
 
 #: ../../source/user/virtual_file_systems.rst:625
 msgid ""
@@ -1132,6 +1391,9 @@ msgid ""
 " can be modeled, but this may cause compatibility problems with "
 "applications that do not expect such empty objects."
 msgstr ""
+":config:`CPL_VSIS3_CREATE_DIR_OBJECT` 設定オプションを NO に設定すると, :cpp:func:`VSIMkdir` 操作が"
+"スラッシュで終わるディレクトリ名の空のオブジェクトを作成するのを防ぎます.デフォルトでは,GDALはそのようなオブジェクトを作成します."
+"空のディレクトリをモデル化できるためですが,このような空のオブジェクトを想定していないアプリケーションとの互換性問題が発生する可能性があります."
 
 #: ../../source/user/virtual_file_systems.rst:628
 msgid ""
@@ -1142,10 +1404,14 @@ msgid ""
 "and ``role_session_name`` can be specified. ``credential_source`` is not "
 "supported currently."
 msgstr ""
+"GDAL 3.5以降,IAMロールの仮定を使用するプロファイルが処理されます(参照: "
+"https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-role.html)."
+"このようなプロファイルでは,``role_arn`` および ``source_profile`` キーワードが必要です.オプションの ``external_id``,"
+"``mfa_serial`` および ``role_session_name`` を指定できます. ``credential_source`` は現在サポートされていません."
 
 #: ../../source/user/virtual_file_systems.rst:633
 msgid "/vsis3/ and AWS Instance Metadata Service (IMDS)"
-msgstr ""
+msgstr "/vsis3/ とAWSインスタンスメタデータサービス(IMDS)"
 
 #: ../../source/user/virtual_file_systems.rst:635
 msgid ""
@@ -1158,6 +1424,11 @@ msgid ""
 "even if IMDSv1 is available, mis-configured IMDSv2 will cause delays in "
 "the authentication step)."
 msgstr ""
+"EC2インスタンスでは,GDALはAWS S3の認証トークンを取得するために `IMDSv2 "
+"<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-"
+"instance-metadata-service.html>`__ プロトコルを優先して使用し,失敗した場合はIMDSv1にフォールバックします."
+"ただし,最近のAmazon Linuxインスタンスでは,IMDSv1にアクセスできなくなっているため,IMDSv2を正しく構成する必要があります"
+"(IMDSv1が利用可能であっても,誤って構成されたIMDSv2は認証ステップで遅延を引き起こします)."
 
 #: ../../source/user/virtual_file_systems.rst:637
 msgid ""
@@ -1167,10 +1438,14 @@ msgid ""
 "<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-"
 "retrieval.html#imds-considerations>`__"
 msgstr ""
+"EC2インスタンス内のDockerインスタンスで実行する場合,インスタンスの追加構成が必要な既知の問題があります."
+"たとえば, `ホップリミットを2に増やす必要があります "
+"<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-"
+"retrieval.html#imds-considerations>`__"
 
 #: ../../source/user/virtual_file_systems.rst:639
 msgid "There are several ways to do this. One way is to run this command: ::"
-msgstr ""
+msgstr "これを行う方法はいくつかあります.1つの方法は,次のコマンドを実行することです: ::"
 
 #: ../../source/user/virtual_file_systems.rst:647
 msgid ""
@@ -1180,6 +1455,8 @@ msgid ""
 " - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-"
 "properties-ec2-launchtemplate-metadataoptions.html"
 msgstr ""
+"別の方法は,AutoScalingGroup LaunchTemplate に HttpPutResponseHopLimit メタデータを設定することです: - "
+"https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceMetadataOptionsRequest.html"
 
 #: ../../source/user/virtual_file_systems.rst:651
 msgid ""
@@ -1188,16 +1465,21 @@ msgid ""
 "exposing all ports of the host to the container and has thus `security "
 "implications <https://stackoverflow.com/a/57051970/40785>`__."
 msgstr ""
+"別の可能性は,ホストネットワーキングでDockerコンテナを起動することです(``--network=host``),"
+"ただし,これによりコンテナの隔離が破られ,ホストのすべてのポートがコンテナに公開されるため,"
+"`セキュリティ上の問題 <https://stackoverflow.com/a/57051970/40785>`__ が発生します."
 
 #: ../../source/user/virtual_file_systems.rst:654
 msgid "Configuring /vsis3/ with Minio"
-msgstr ""
+msgstr "/vsis3/ のMinioでの設定"
 
 #: ../../source/user/virtual_file_systems.rst:656
 msgid ""
 "The following configuration options can be set to access a `Minio Docker "
 "image <https://min.io/docs/minio/container/index.html>`__"
 msgstr ""
+"次の設定オプションを設定して, `Minio Dockerイメージ <https://min.io/docs/minio/container/index.html>`__ "
+"にアクセスできます"
 
 #: ../../source/user/virtual_file_systems.rst:659
 msgid "AWS_VIRTUAL_HOSTING=FALSE"
@@ -1234,6 +1516,9 @@ msgid ""
 "buckets, without prior download of the entire file. It requires GDAL to "
 "be built against libcurl."
 msgstr ""
+"/vsis3_streaming/ は,AWS S3バケットで利用可能な(主に非公開の)ファイルのランダム"
+"読み取りを可能にするファイルシステムハンドラです."
+"これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:673
 msgid ""
@@ -1241,16 +1526,20 @@ msgid ""
 "where ``bucket`` is the name of the S3 bucket and ``key`` is the S3 "
 "object \"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsis3_streaming/bucket/key` の形式です.ここで, ``bucket`` はS3バケットの名前であり,"
+"``key`` はS3オブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:675
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsis3/ <vsis3>`"
 msgstr ""
+"認証オプションおよび読み取り専用機能は, :ref:`/vsis3/ <vsis3>` "
+"と同じです"
 
 #: ../../source/user/virtual_file_systems.rst:682
 msgid "/vsigs/ (Google Cloud Storage files)"
-msgstr ""
+msgstr "/vsigs/ (Google Cloud Storage ファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:684
 msgid ""
@@ -1259,6 +1548,8 @@ msgid ""
 "without prior download of the entire file. It requires GDAL to be built "
 "against libcurl."
 msgstr ""
+"/vsigs/ は,Google Cloud Storageバケットで利用可能な(主に非公開の)ファイルのランダム読み取りを可能にするファイルシステムハンドラです."
+"これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:686
 msgid ""
@@ -1274,6 +1565,12 @@ msgid ""
 "and deletion of (empty) directories with :cpp:func:`VSIRmdir` are also "
 "possible."
 msgstr ""
+"GDAL 2.3以降,ファイルの順次書き込みも可能です.その場合,シークや読み取り操作は許可されません.したがって,"
+"GTiffドライバを使用してGeoTIFFファイルに直接書き込むことはサポートされません.ただし,GDAL 3.2以降,"
+" :config:`CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE` 設定オプションを ``YES`` に設定すると,"
+"ランダム書き込みアクセスが可能になります( :config:`CPL_TMPDIR` 設定オプションで制御される一時ローカルファイルの作成が含まれます)."
+" :cpp:func:`VSIUnlink` によるファイルの削除, :cpp:func:`VSIMkdir` によるディレクトリの作成,"
+" :cpp:func:`VSIRmdir` による(空の)ディレクトリの削除も可能です."
 
 #: ../../source/user/virtual_file_systems.rst:689
 msgid ""
@@ -1281,10 +1578,12 @@ msgid ""
 "``bucket`` is the name of the bucket and ``key`` is the object \"key\", "
 "i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsigs/bucket/key` の形式です.ここで, ``bucket`` はバケットの名前であり,"
+"``key`` はオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:693
 msgid "The following configuration options are specific to the /vsigs/ handler:"
-msgstr ""
+msgstr "/vsigs/ ハンドラに固有の以下の設定オプションがあります:"
 
 #: ../../source/user/virtual_file_systems.rst:761
 msgid ""
@@ -1292,12 +1591,16 @@ msgid ""
 "signing is disabled. This option might be used for buckets with public "
 "access rights. Available since GDAL 3.4"
 msgstr ""
+":config:`GS_NO_SIGN_REQUEST=YES` 設定オプションが設定されている場合,リクエスト署名が無効になります."
+"このオプションは,パブリックアクセス権を持つバケットに使用できます. GDAL 3.4以降で利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:762
 msgid ""
 "The :config:`GS_SECRET_ACCESS_KEY` and :config:`GS_ACCESS_KEY_ID` "
 "configuration options can be set for AWS-style authentication"
 msgstr ""
+":config:`GS_SECRET_ACCESS_KEY` および :config:`GS_ACCESS_KEY_ID` 設定オプションを設定できます."
+"AWSスタイルの認証に使用できます"
 
 #: ../../source/user/virtual_file_systems.rst:763
 msgid ""
@@ -1305,6 +1608,8 @@ msgid ""
 "filename of a text file with \"key: value\" headers. Typically, it must "
 "contain a \"Authorization: Bearer XXXXXXXXX\" line."
 msgstr ""
+" :config:`GDAL_HTTP_HEADER_FILE` 設定オプションを使用して,\"key: value\" ヘッダーを含むテキストファイルのファイル名を指定します."
+"通常, \"Authorization: Bearer XXXxxxxxx\" 行を含む必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:764
 msgid ""
@@ -1312,6 +1617,8 @@ msgid ""
 "also be set. It must contain at least a line starting with "
 "\"Authorization:\" to be used as an authentication method."
 msgstr ""
+"(GDAL >= 3.7) :config:`GDAL_HTTP_HEADERS` 設定オプションも設定できます."
+"少なくとも\"Authorization:\" で始まる行を含む必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:765
 msgid ""
@@ -1324,6 +1631,12 @@ msgid ""
 ":config:`GS_OAUTH2_CLIENT_SECRET` configuration options (need to be "
 "defined both for gdal_auth.py and later execution of /vsigs)"
 msgstr ""
+"(GDAL >= 2.3) :config:`GS_OAUTH2_REFRESH_TOKEN` 設定オプションを設定して,OAuth2クライアント認証を使用できます."
+"http://code.google.com/apis/accounts/docs/OAuth2.html このリフレッシュトークンは, "
+"``gdal_auth.py -s storage`` または ``gdal_auth.py -s"
+" storage-rw`` スクリプトで取得できます.注意:デフォルトのGDALアプリケーション資格情報の代わりに,"
+" :config:`GS_OAUTH2_CLIENT_ID` および :config:`GS_OAUTH2_CLIENT_SECRET` 設定オプションを定義できます"
+"(gdal_auth.pyと後続の /vsigs の実行の両方で定義する必要があります)"
 
 #: ../../source/user/virtual_file_systems.rst:766
 msgid ""
@@ -1339,6 +1652,12 @@ msgid ""
 "from \"https://www.googleapis.com/auth/devstorage.read_write\" to "
 "\"https://www.googleapis.com/auth/devstorage.read_only\" if needed."
 msgstr ""
+"(GDAL >= 2.3) :config:`GOOGLE_APPLICATION_CREDENTIALS` 設定オプションを設定して,OAuth2サービスアカウント資格情報を含むJSONファイルを指定できます"
+"(``type: service_account``),特にプライベートキーとクライアントメールを指定します."
+"https://developers.google.com/identity/protocols/OAuth2ServiceAccount でこの認証方法の詳細を確認してください."
+"バケットは,サービスアカウントに\"Storage Legacy Bucket Owner\" または \"Storage Legacy Bucket Reader\" 権限を付与する必要があります."
+"必要に応じて, :config:`GS_OAUTH2_SCOPE` 設定オプションを使用して,デフォルトの権限スコープを\"https://www.googleapis.com/auth/devstorage.read_write\" から"
+"\"https://www.googleapis.com/auth/devstorage.read_only\" に変更できます."
 
 #: ../../source/user/virtual_file_systems.rst:767
 msgid ""
@@ -1346,6 +1665,8 @@ msgid ""
 "configuration option can be set to point to a JSON file containing OAuth2"
 " user credentials (``type: authorized_user``)."
 msgstr ""
+"(GDAL >= 3.4.2) :config:`GOOGLE_APPLICATION_CREDENTIALS` 設定オプションを設定して,OAuth2ユーザー資格情報を含むJSONファイルを指定できます"
+"(``type: authorized_user``)."
 
 #: ../../source/user/virtual_file_systems.rst:768
 msgid ""
@@ -1366,6 +1687,17 @@ msgid ""
 "\"https://www.googleapis.com/auth/devstorage.read_write\" to "
 "\"https://www.googleapis.com/auth/devstorage.read_only\" if needed."
 msgstr ""
+"(GDAL >= 2.3) 前の方法の変種. :config:`GS_OAUTH2_PRIVATE_KEY` "
+"(または :config:`GS_OAUTH2_PRIVATE_KEY_FILE` および :config:`GS_OAUTH2_CLIENT_EMAIL` ) を設定して,"
+"OAuth2サービスアカウント認証を使用できます.この認証方法の詳細については,"
+"https://developers.google.com/identity/protocols/OAuth2ServiceAccount を参照してください."
+" :config:`GS_OAUTH2_PRIVATE_KEY` 設定オプションには, ``-----BEGIN PRIVATE KEY-----`` "
+"で始まるプライベートキーをインライン文字列として含める必要があります."
+"代替として, :config:`GS_OAUTH2_PRIVATE_KEY_FILE` 設定オプションを設定して,そのようなプライベートキーを含むファイル名を示すことができます."
+"バケットは,サービスアカウントに\"Storage Legacy Bucket Owner\" または \"Storage Legacy Bucket Reader\" 権限を付与する必要があります."
+"必要に応じて, :config:`GS_OAUTH2_SCOPE` 設定オプションを使用して,デフォルトの権限スコープを"
+"\"https://www.googleapis.com/auth/devstorage.read_write\" "
+"から\"https://www.googleapis.com/auth/devstorage.read_only\" に変更できます."
 
 #: ../../source/user/virtual_file_systems.rst:769
 msgid ""
@@ -1379,6 +1711,11 @@ msgid ""
 "gs_oauth2_refresh_token (and optionally client_id and client_secret) "
 "entry for OAuth2 client authentication."
 msgstr ""
+"(GDAL >= 2.3) \"gsutil\" コマンドラインユーティリティやBoto3サポートで使用されるのと同様の資格情報を提供する別の方法が使用できます."
+"上記の環境変数が提供されていない場合,gs_secret_access_key および gs_access_key_id エントリをAWSスタイルの認証に使用するために,"
+":file:`~/.boto` または :file:`UserProfile%/.boto` ファイルが読み込まれます(:config:`CPL_GS_CREDENTIALS_FILE` で指定されたファイル)."
+"見つからない場合,OAuth2クライアント認証のための gs_oauth2_refresh_token "
+"(およびオプションで client_id および client_secret) エントリを探します."
 
 #: ../../source/user/virtual_file_systems.rst:770
 msgid ""
@@ -1389,16 +1726,24 @@ msgid ""
 "GCE instance (for example for code running in a container with no access "
 "to the boot logs), you can set :config:`CPL_MACHINE_IS_GCE` to ``YES``."
 msgstr ""
+"(GDAL >= 2.3) 最後に,上記のいずれの方法も成功しない場合,コードは現在のマシンがGoogle Compute Engine"
+"インスタンスであるかどうかを確認し,"
+"そうであればそれに関連付けられた権限を使用します(VMに関連付けられたデフォルトのサービスアカウントを使用します)."
+"マシンをGCEインスタンスとして検出するように強制するには(たとえば,ブートログにアクセスできないコンテナで実行される"
+"コードの場合),"
+" :config:`CPL_MACHINE_IS_GCE` を ``YES`` に設定できます."
 
 #: ../../source/user/virtual_file_systems.rst:772
 msgid ""
 "Since GDAL 3.1, the Rename() operation is supported (first doing a copy "
 "of the original file and then deleting it)."
 msgstr ""
+"GDAL 3.1以降, Rename() 操作がサポートされています(最初に元のファイルをコピー"
+"してから削除します)."
 
 #: ../../source/user/virtual_file_systems.rst:779
 msgid "/vsigs_streaming/ (Google Cloud Storage files: streaming)"
-msgstr ""
+msgstr "/vsigs_streaming/ (Google Cloud Storage ファイル: ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:781
 msgid ""
@@ -1407,6 +1752,9 @@ msgid ""
 "Google Cloud Storage buckets, without prior download of the entire file. "
 "It requires GDAL to be built against libcurl."
 msgstr ""
+"/vsigs_streaming/ は,Google Cloud Storageバケットで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです."
+"これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:783
 msgid ""
@@ -1414,16 +1762,20 @@ msgid ""
 "where ``bucket`` is the name of the bucket and ``key`` is the object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsigs_streaming/bucket/key` の形式です.ここで, ``bucket`` はバケットの名前であり,"
+"``key`` はオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:785
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsigs/ <vsigs>`"
 msgstr ""
+"認証オプションおよび読み取り専用機能は, :ref:`/vsigs/ <vsigs>` "
+"と同じです"
 
 #: ../../source/user/virtual_file_systems.rst:792
 msgid "/vsiaz/ (Microsoft Azure Blob files)"
-msgstr ""
+msgstr "/vsiaz/ (Microsoft Azure Blob ファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:794
 msgid ""
@@ -1432,12 +1784,17 @@ msgid ""
 "containers, without prior download of the entire file. It requires GDAL "
 "to be built against libcurl."
 msgstr ""
+"/vsiaz/ は,Microsoft Azure Blobコンテナで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです."
+"これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:796
 msgid ""
 "See :ref:`/vsiadls/ <vsiadls>` for a related filesystem for Azure Data "
 "Lake Storage Gen2."
 msgstr ""
+"Azure Data Lake Storage Gen2 用の関連ファイルシステムについては, :ref:`/vsiadls/ <vsiadls>` を"
+"参照してください."
 
 #: ../../source/user/virtual_file_systems.rst:798
 msgid ""
@@ -1451,6 +1808,11 @@ msgid ""
 "blob will be created if the file size is below 4 MB. Beyond, an append "
 "blob will be created (with a maximum file size of 195 GB)."
 msgstr ""
+"ファイルの順次書き込みも可能です.その場合,シークや読み取り操作は許可されません.したがって,"
+"GTiffドライバを使用してGeoTIFFファイルに直接書き込むことはサポートされません.ただし,GDAL 3.2以降,"
+" :config:`CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE` 設定オプションを ``YES`` に設定すると,"
+"ランダム書き込みアクセスが可能になります( :config:`CPL_TMPDIR` 設定オプションで制御される一時ローカルファイルの作成が含まれます)."
+"ファイルサイズが4 MB未満の場合,ブロック ブロブが作成されます.それを超えると,追加ブロブが作成されます(最大ファイルサイズは195 GBです)."
 
 #: ../../source/user/virtual_file_systems.rst:801
 msgid ""
@@ -1468,6 +1830,14 @@ msgid ""
 "``VSIRmdir(\"/vsiaz/container/subdir\")`` will fail on the "
 ":cpp:func:`VSIRmdir` invocation."
 msgstr ""
+" :cpp:func:`VSIUnlink` によるファイルの削除, :cpp:func:`VSIMkdir` によるディレクトリの作成,"
+" :cpp:func:`VSIRmdir` による(空の)ディレクトリの削除も可能です.注意: :cpp:func:`VSIMkdir` を使用すると,"
+"Azure Blobは空のディレクトリをネイティブでサポートしていないため,特別な非表示の :file:`.gdal_marker_for_dir` 空ファイルが作成されます."
+"そのファイルがディレクトリ内で最後に残っている場合, :cpp:func:`VSIRmdir` は自動的にそれを削除します."
+"このファイルは :cpp:func:`VSIReadDir` で見ることはできません. :cpp:func:`VSIMkdir` で作成されていないディレクトリからファイルを削除する場合,"
+"最後のファイルが削除されると,そのディレクトリはAzureによって自動的に削除されるため,"
+" ``VSIUnlink(\"/vsiaz/container/subdir/lastfile\")`` に続いて ``VSIRmdir(\"/vsiaz/container/subdir\")`` のシーケンスは,"
+":cpp:func:`VSIRmdir` の呼び出しで失敗します."
 
 #: ../../source/user/virtual_file_systems.rst:803
 msgid ""
@@ -1475,20 +1845,24 @@ msgid ""
 "``container`` is the name of the container and ``key`` is the object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsiaz/container/key` の形式です.ここで, ``container`` はコンテナの名前であり,"
+"``key`` はオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:807
 msgid "The following configuration options are specific to the /vsiaz/ handler:"
-msgstr ""
+msgstr "/vsiaz/ ハンドラに固有の以下の設定オプションがあります:"
 
 #: ../../source/user/virtual_file_systems.rst:864
 msgid "The :config:`AZURE_STORAGE_CONNECTION_STRING` configuration option"
-msgstr ""
+msgstr " :config:`AZURE_STORAGE_CONNECTION_STRING` 設定オプション"
 
 #: ../../source/user/virtual_file_systems.rst:866
 msgid ""
 "The :config:`AZURE_STORAGE_ACCOUNT` configuration option is set to "
 "specify the account name AND"
 msgstr ""
+" :config:`AZURE_STORAGE_ACCOUNT` 設定オプションを設定して,"
+"アカウント名を指定します および"
 
 #: ../../source/user/virtual_file_systems.rst:868
 msgid ""
@@ -1498,12 +1872,17 @@ msgid ""
 "access token is typically obtained using Microsoft Authentication Library"
 " (MSAL)."
 msgstr ""
+"(GDAL >= 3.5) :config:`AZURE_STORAGE_ACCESS_TOKEN` 設定オプションを設定して,アクセストークンを指定します."
+"このアクセストークンは,通常,Microsoft Authentication Library (MSAL) を使用して取得されます."
+"このアクセストークンは,\"Authorization: Bearer ${AZURE_STORAGE_ACCESS_TOKEN}\" ヘッダーに含まれます."
 
 #: ../../source/user/virtual_file_systems.rst:869
 msgid ""
 "The :config:`AZURE_STORAGE_ACCESS_KEY` configuration option is set to "
 "specify the secret key."
 msgstr ""
+" :config:`AZURE_STORAGE_ACCESS_KEY` 設定オプションを設定して,シークレットキーを"
+"指定します."
 
 #: ../../source/user/virtual_file_systems.rst:870
 msgid ""
@@ -1511,6 +1890,8 @@ msgid ""
 "as to disable any request signing. This option might be used for accounts"
 " with public access rights. Available since GDAL 3.2"
 msgstr ""
+":config:`AZURE_NO_SIGN_REQUEST=YES` 設定オプションを設定して,リクエスト署名を無効にします."
+"このオプションは,パブリックアクセス権を持つアカウントに使用できます. GDAL 3.2以降で利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:871
 msgid ""
@@ -1522,6 +1903,11 @@ msgid ""
 "\"st=2019-07-18T03%3A53%3A22Z&se=2035-07-19T03%3A53%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=2RIXmLbLbiagYnUd49rgx2kOXKyILrJOgafmkODhRAQ%3D\")."
 " Available since GDAL 3.2"
 msgstr ""
+":config:`AZURE_STORAGE_SAS_TOKEN` 設定オプション(``AZURE_SAS`` は GDAL < 3.5 の場合) を設定して,"
+"共有アクセス署名を指定します.このSASは /vsiaz/ ファイルシステムハンドラによって構築されたURLに追加されます."
+"その値はすでにURLエンコードされている必要があり,先頭に '?' または '&' 文字を含めてはいけません(たとえば,"
+"有効なものは \"st=2019-07-18T03%3A53%3A22Z&se=2035-07-19T03%3A53%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=2RIXmLbLbiagYnUd49rgx2kOXKyILrJOgafmkODhRAQ%3D\" のようになります)."
+"GDAL 3.2以降で利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:872
 msgid ""
@@ -1530,6 +1916,9 @@ msgid ""
 "us/azure/active-directory/managed-identities-azure-resources/qs-"
 "configure-portal-windows-vm). Available since GDAL 3.3."
 msgstr ""
+"現在のマシンは,それに割り当てられたAzure Active Directory権限を持つAzure仮想マシンです(https://docs.microsoft.com/en-"
+"us/azure/active-directory/managed-identities-azure-resources/qs-"
+"configure-portal-windows-vm を参照してください). GDAL 3.3以降で利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:874
 msgid ""
@@ -1538,6 +1927,8 @@ msgid ""
 "AZURE_AUTHORITY_HOST environment variables), typically for Azure "
 "Kubernetes, is available since GDAL 3.7.2"
 msgstr ""
+"Azure Active Directory Workload Identity を使用した認証(AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_FEDERATED_TOKEN_FILE および "
+"AZURE_AUTHORITY_HOST 環境変数を使用)は,通常,Azure Kubernetes 用に利用できます. GDAL 3.7.2以降で利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:876
 msgid ""
@@ -1548,16 +1939,22 @@ msgid ""
 " be used in the following priority: ``connection_string``, ``account`` + "
 "``key`` or ``account`` + ``sas_token``"
 msgstr ""
+"GDAL 3.5以降, \"az\" コマンドラインユーティリティの `設定ファイル "
+"<https://github.com/MicrosoftDocs/azure-docs-cli/blob/main/docs-ref-"
+"conceptual/azure-cli-configuration.md>` を使用できます. ``[storage]`` セクションの次のキーが次の優先順位で使用されます:"
+"``connection_string``, ``account`` + ``key`` または ``account`` + ``sas_token``"
 
 #: ../../source/user/virtual_file_systems.rst:880
 msgid ""
 "Since GDAL 3.3, the :cpp:func:`VSIGetFileMetadata` and "
 ":cpp:func:`VSISetFileMetadata` operations are supported."
 msgstr ""
+"GDAL 3.3以降, :cpp:func:`VSIGetFileMetadata` および :cpp:func:`VSISetFileMetadata` "
+"操作がサポートされています."
 
 #: ../../source/user/virtual_file_systems.rst:887
 msgid "/vsiaz_streaming/ (Microsoft Azure Blob files: streaming)"
-msgstr ""
+msgstr "/vsiaz_streaming/ (Microsoft Azure Blob ファイル: ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:889
 msgid ""
@@ -1566,6 +1963,8 @@ msgid ""
 "Microsoft Azure Blob containers, buckets, without prior download of the "
 "entire file. It requires GDAL to be built against libcurl."
 msgstr ""
+"/vsiaz_streaming/ は,Microsoft Azure Blobコンテナ,バケットで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:891
 msgid ""
@@ -1574,16 +1973,20 @@ msgid ""
 " the container and ``key`` is the object \"key\", i.e. a filename "
 "potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsiaz_streaming/container/key` の形式です.ここで, ``container`` はコンテナの名前であり,"
+"``key`` はオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:893
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsiaz/ <vsiaz>`"
 msgstr ""
+"認証オプションおよび読み取り専用機能は, :ref:`/vsiaz/ <vsiaz>` "
+"と同じです"
 
 #: ../../source/user/virtual_file_systems.rst:900
 msgid "/vsiadls/ (Microsoft Azure Data Lake Storage Gen2)"
-msgstr ""
+msgstr "/vsiadls/ (Microsoft Azure Data Lake Storage Gen2)"
 
 #: ../../source/user/virtual_file_systems.rst:902
 msgid ""
@@ -1592,6 +1995,8 @@ msgid ""
 "Storage file systems, without prior download of the entire file. It "
 "requires GDAL to be built against libcurl."
 msgstr ""
+"/vsiadls/ は,Microsoft Azure Data Lake Storageファイルシステムで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:907
 msgid ""
@@ -1602,10 +2007,14 @@ msgid ""
 "support turned on. Consult its `documentation <https://docs.microsoft.com"
 "/en-us/azure/storage/blobs/data-lake-storage-introduction>`__"
 msgstr ""
+":ref:`/vsiaz/ <vsiaz>` と同様の機能を持ち,特に認証のために同じ設定オプションを使用します."
+"/vsiaz/ に対する利点は,ディレクトリの実際の管理とUnixスタイルのACLサポートです."
+"一部の機能には,Azureストレージで階層サポートをオンにする必要があります.その `ドキュメント <https://docs.microsoft.com"
+"/en-us/azure/storage/blobs/data-lake-storage-introduction>`__ を参照してください."
 
 #: ../../source/user/virtual_file_systems.rst:913
 msgid "The main enhancements over /vsiaz/ are:"
-msgstr ""
+msgstr "/vsiaz/ に対する主な強化点は次のとおりです:"
 
 #: ../../source/user/virtual_file_systems.rst:915
 msgid ""
@@ -1613,10 +2022,12 @@ msgid ""
 ":file:`.gdal_marker_for_dir` empty file that is used for /vsiaz/ to have "
 "empty directories)"
 msgstr ""
+"本当のディレクトリサポート(空のディレクトリを持つために /vsiaz/ で使用される人工的な"
+" :file:`.gdal_marker_for_dir` 空ファイルは不要です)"
 
 #: ../../source/user/virtual_file_systems.rst:917
 msgid "One-call recursive directory deletion with :cpp:func:`VSIRmdirRecursive`"
-msgstr ""
+msgstr " :cpp:func:`VSIRmdirRecursive` での一括再帰ディレクトリ削除"
 
 #: ../../source/user/virtual_file_systems.rst:918
 msgid "Atomic renaming with :cpp:func:`VSIRename`"
@@ -1627,16 +2038,20 @@ msgid ""
 ":cpp:func:`VSIGetFileMetadata` support for the \"STATUS\" and \"ACL\" "
 "metadata domains"
 msgstr ""
+":cpp:func:`VSIGetFileMetadata` で \"STATUS\" および \"ACL\" メタデータ"
+"ドメインをサポート"
 
 #: ../../source/user/virtual_file_systems.rst:920
 msgid ""
 ":cpp:func:`VSISetFileMetadata` support for the \"PROPERTIES\" and \"ACL\""
 " metadata domains"
 msgstr ""
+":cpp:func:`VSISetFileMetadata` で \"PROPERTIES\" および \"ACL\" メタデータ"
+"ドメインをサポート"
 
 #: ../../source/user/virtual_file_systems.rst:927
 msgid "/vsioss/ (Alibaba Cloud OSS files)"
-msgstr ""
+msgstr "/vsioss/ (Alibaba Cloud OSS ファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:929
 msgid ""
