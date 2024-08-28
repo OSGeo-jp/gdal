@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -24,10 +24,12 @@ msgid ""
 "GDAL Virtual File Systems (compressed, network hosted, etc...): /vsimem, "
 "/vsizip, /vsitar, /vsicurl, ..."
 msgstr ""
+"GDAL仮想ファイルシステム(圧縮、ネットワークホスト、など...): /vsimem, "
+"/vsizip, /vsitar, /vsicurl, ..."
 
 #: ../../source/user/virtual_file_systems.rst:8
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../source/user/virtual_file_systems.rst:10
 msgid ""
@@ -40,34 +42,46 @@ msgid ""
 " (STDIN, STDOUT), files stored on network (either publicly accessible, or"
 " in private buckets of commercial cloud storage services), etc."
 msgstr ""
+"GDALは\"標準\"ファイルシステム上にあるファイルにアクセスできます.つまり,Unix"
+"系システムの / 階層やWindowsの C:\\, D:\\ などのドライブです.しかし,ほとんどの"
+"GDALラスターおよびベクタードライバはGDAL固有の抽象化を使用してファイルにアクセスし"
+"ます.これにより,メモリ内ファイル,圧縮ファイル(.zip, .gz, .tar, .tar.gzアーカイブ),"
+"暗号化ファイル,標準入力および出力(STDIN, STDOUT),ネットワーク上のファイル(公開アクセ"
+"ス可能なもの,または商用クラウドストレージサービスのプライベートバケット内のもの)など,"
+"標準でない種類のファイルにアクセスできます."
+
 
 #: ../../source/user/virtual_file_systems.rst:12
 msgid ""
 "Each special file system has a prefix, and the general syntax to name a "
 "file is /vsiPREFIX/..."
 msgstr ""
+"各特殊ファイルシステムにはプレフィックスがあり,ファイルを名前付ける一般的な構文は"
+"/vsiPREFIX/...です."
 
 #: ../../source/user/virtual_file_systems.rst:14
 msgid "Example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/user/virtual_file_systems.rst:21
 msgid "Chaining"
-msgstr ""
+msgstr "連鎖"
 
 #: ../../source/user/virtual_file_systems.rst:23
 msgid "It is possible to chain multiple file system handlers."
-msgstr ""
+msgstr "複数のファイルシステムハンドラを連鎖させることができます."
 
 #: ../../source/user/virtual_file_systems.rst:35
 msgid ""
 "(Note is also OK to say /vsizip/vsicurl/... with a single slash. (But "
 "when writing documentation please still use two.))"
 msgstr ""
+"(/vsizip/vsicurl/... と一つのスラッシュで書いてもよいです. (ただし,ドキュメントを書く際は"
+"引き続き二つ使用してください.))"
 
 #: ../../source/user/virtual_file_systems.rst:38
 msgid "Drivers supporting virtual file systems"
-msgstr ""
+msgstr "仮想ファイルシステムをサポートするドライバ"
 
 #: ../../source/user/virtual_file_systems.rst:40
 msgid ""
@@ -77,24 +91,30 @@ msgid ""
 " driver marked with 'v' when running either ``gdalinfo --formats`` or "
 "``ogrinfo --formats``."
 msgstr ""
+"仮想ファイルシステムは,現在のほとんどのファイルベースのドライバである\"大規模ファイルAPI\"を"
+"サポートするGDALまたはOGRドライバでのみ使用できます.これらのフォーマットの完全なリストは,"
+" ``gdalinfo --formats`` または ``ogrinfo --formats`` を実行するときに'v'でマークされたドライバを"
+"見ることで取得できます."
 
 #: ../../source/user/virtual_file_systems.rst:42
 msgid "A notable exception is the HDF4 driver."
-msgstr ""
+msgstr "注目すべき例外はHDF4ドライバです."
 
 #: ../../source/user/virtual_file_systems.rst:47
 msgid "/vsizip/ (.zip archives)"
-msgstr ""
+msgstr "/vsizip/ (.zip アーカイブ)"
 
 #: ../../source/user/virtual_file_systems.rst:50
 msgid "Read capabilities"
-msgstr ""
+msgstr "読み取り機能"
 
 #: ../../source/user/virtual_file_systems.rst:52
 msgid ""
 "/vsizip/ is a file handler that allows reading ZIP archives on-the-fly "
 "without decompressing them beforehand."
 msgstr ""
+"/vsizip/ は,事前に解凍せずにZIPアーカイブを読み取ることができるファイルハンドラ"
+"です."
 
 #: ../../source/user/virtual_file_systems.rst:54
 msgid ""
@@ -104,6 +124,10 @@ msgid ""
 ":file:`path/inside/the/zip/file` is the relative path to the file inside "
 "the archive."
 msgstr ""
+"ZIPファイル内のファイルを指すには,ファイル名は :file:`/vsizip/path/to/the/file.zip/"
+"path/inside/the/zip/file` の形式である必要があります.ここで :file:`path/to/the/"
+"file.zip` は相対または絶対であり, :file:`path/inside/the/zip/file` はアーカイブ内の"
+"ファイルへの相対パスです."
 
 #: ../../source/user/virtual_file_systems.rst:56
 msgid ""
@@ -116,6 +140,12 @@ msgid ""
 "with the VSI_ISDIR(stat.st_mode) macro as for regular file systems. "
 "Getting directory listing and file statistics are fast operations."
 msgstr ""
+".zipをディレクトリとして使用するには, :file:`/vsizip/path/to/the/file.zip` または "
+":file:`/vsizip/path/to/the/file.zip/subdir` を使用できます.ディレクトリリストは "
+":cpp:func:`VSIReadDir` で利用できます. :cpp:func:`VSIStatL` (\"/vsizip/...\") "
+"呼び出しはファイルの解凍されたサイズを返します. ZIPファイル内のディレクトリは通常のファイル"
+"システムと同様に,通常のファイルと区別することができます.ディレクトリリストとファイル統計の取得"
+"は高速な操作です."
 
 #: ../../source/user/virtual_file_systems.rst:58
 msgid ""
@@ -123,10 +153,12 @@ msgid ""
 "located at its root, just mentioning :file:`/vsizip/path/to/the/file.zip`"
 " will work."
 msgstr ""
+"注: .zipファイルがそのルートにある単一のファイルを含む特定の場合には, :file:`/vsizip/path/to/"
+"the/file.zip` とだけ記述するだけで動作します."
 
 #: ../../source/user/virtual_file_systems.rst:60
 msgid "The following configuration options are specific to the /zip/ handler:"
-msgstr ""
+msgstr "/zip/ ハンドラに固有の次の設定オプションがあります:"
 
 #: ../../source/user/virtual_file_systems.rst:79
 #: ../../source/user/virtual_file_systems.rst:169
@@ -136,13 +168,15 @@ msgstr ""
 #: ../../source/user/virtual_file_systems.rst:1222
 #: ../../source/user/virtual_file_systems.rst:1304
 msgid "Examples:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/user/virtual_file_systems.rst:88
 msgid ""
 ".kmz, .ods and .xlsx extensions are also detected as valid extensions for"
 " zip-compatible archives."
 msgstr ""
+".kmz, .ods, .xlsx 拡張子もzip互換アーカイブの有効な拡張子として検出さ"
+"れます."
 
 #: ../../source/user/virtual_file_systems.rst:90
 msgid ""
@@ -151,24 +185,29 @@ msgid ""
 "``/vsizip/{/path/to/the/archive}/path/inside/the/zip/file``. Note that "
 ":file:`/path/to/the/archive` may also itself use this alternate syntax."
 msgstr ""
+"GDAL 2.2以降,連鎖を可能にし,.zip拡張子に依存しないようにするための代替構文が利用可能です.例えば,"
+" ``/vsizip/{/path/to/the/archive}/path/inside/the/zip/file``. :file:`/path/to/the/archive`  はこの代替構文を"
+"使用することもできます."
 
 #: ../../source/user/virtual_file_systems.rst:93
 msgid "Write capabilities"
-msgstr ""
+msgstr "書き込み機能"
 
 #: ../../source/user/virtual_file_systems.rst:95
 msgid ""
 "Write capabilities are also available. They allow creating a new zip file"
 " and adding new files to an already existing (or just created) zip file."
 msgstr ""
+"書き込み機能も利用できます.新しいzipファイルを作成し,既存の(または作成したばかりの)"
+"zipファイルに新しいファイルを追加することができます."
 
 #: ../../source/user/virtual_file_systems.rst:97
 msgid "Creation of a new zip file:"
-msgstr ""
+msgstr "新しいzipファイルの作成:"
 
 #: ../../source/user/virtual_file_systems.rst:107
 msgid "Addition of a new file to an existing zip:"
-msgstr ""
+msgstr "既存のzipに新しいファイルを追加:"
 
 #: ../../source/user/virtual_file_systems.rst:115
 msgid ""
@@ -186,16 +225,26 @@ msgid ""
 "with GDAL 3.7, this technique is reused to generate .zip files following "
 ":ref:`sozip_intro`."
 msgstr ""
+"GDAL 2.4以降, :config:`GDAL_NUM_THREADS` 設定オプションを整数または ``ALL_CPUS`` に設定することで,"
+"単一ファイルのマルチスレッド圧縮を有効にすることができます.これはpigzユーティリティの独立モードに"
+"類似しています.デフォルトでは,入力ストリームは1MBのチャンクに分割されます(チャンクサイズは "
+":config:`CPL_VSIL_DEFLATE_CHUNK_SIZE` 設定オプションで調整でき, \"x K\" または \"x M\" のような値が"
+"使用できます),そして各チャンクは独立して圧縮されます(そして9バイトのマーカー 0x00 0x00 0xFF 0xFF "
+"0x00 0x00 0x00 0xFF 0xFF で終了し,ストリームと辞書の完全なフラッシュを示し,各チャンクの独立したデコードを"
+"可能にします).これは圧縮率をわずかに低下させるため,非常に小さなチャンクサイズは避けるべきです. GDAL 3.7以降,"
+"この技術は :ref:`sozip_intro` に従って .zip ファイルを生成するために再利用されます."
 
 #: ../../source/user/virtual_file_systems.rst:118
 msgid ""
 "Read and write operations cannot be interleaved. The new zip must be "
 "closed before being re-opened in read mode."
 msgstr ""
+"読み取りおよび書き込み操作を交互に行うことはできません.新しいzipは,読み取りモードで再オープンする前に"
+"閉じる必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:123
 msgid "SOZip (Seek-Optimized ZIP)"
-msgstr ""
+msgstr "SOZip (Seek-Optimized ZIP)"
 
 #: ../../source/user/virtual_file_systems.rst:125
 msgid ""
