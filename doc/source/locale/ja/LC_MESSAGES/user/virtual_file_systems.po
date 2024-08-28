@@ -2060,6 +2060,8 @@ msgid ""
 " Service (OSS) buckets, without prior download of the entire file. It "
 "requires GDAL to be built against libcurl."
 msgstr ""
+"/vsioss/ は,Alibaba Cloud Object Storage Service (OSS) バケットで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:931
 #: ../../source/user/virtual_file_systems.rst:987
@@ -2076,6 +2078,12 @@ msgid ""
 "directories with :cpp:func:`VSIMkdir` and deletion of (empty) directories"
 " with :cpp:func:`VSIRmdir` are also possible."
 msgstr ""
+"ファイルの順次書き込みも可能です.その場合,シークや読み取り操作は許可されません.したがって,"
+"GTiffドライバを使用してGeoTIFFファイルに直接書き込むことはサポートされません.ただし,GDAL 3.2以降,"
+" :config:`CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE` 設定オプションを ``YES`` に設定すると,"
+"ランダム書き込みアクセスが可能になります( :config:`CPL_TMPDIR` 設定オプションで制御される一時ローカルファイルの作成が含まれます)."
+"ファイルの削除は :cpp:func:`VSIUnlink` でもサポートされます.ディレクトリの作成は :cpp:func:`VSIMkdir` で,"
+"(空の)ディレクトリの削除は :cpp:func:`VSIRmdir` でも可能です."
 
 #: ../../source/user/virtual_file_systems.rst:934
 msgid ""
@@ -2083,11 +2091,13 @@ msgid ""
 "``bucket`` is the name of the OSS bucket and ``key`` is the OSS object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsioss/bucket/key` の形式です.ここで, ``bucket`` はOSSバケットの名前であり,"
+"``key`` はOSSオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:938
 #: ../../source/user/virtual_file_systems.rst:994
 msgid "The following configuration options are specific to the /vsioss/ handler:"
-msgstr ""
+msgstr "/vsioss/ ハンドラに固有の以下の設定オプションがあります:"
 
 #: ../../source/user/virtual_file_systems.rst:961
 msgid ""
@@ -2098,6 +2108,9 @@ msgid ""
 " in another region than oss-us-east-1, the code logic will redirect to "
 "the appropriate endpoint."
 msgstr ""
+" :config:`OSS_SECRET_ACCESS_KEY` および :config:`OSS_ACCESS_KEY_ID` 設定オプションを設定する必要があります."
+" :config:`OSS_ENDPOINT` 設定オプションは通常,バケットにアタッチされたリージョンを反映する適切な値に設定する必要があります."
+"バケットが oss-us-east-1 以外のリージョンに保存されている場合,コードロジックは適切なエンドポイントにリダイレクトします."
 
 #: ../../source/user/virtual_file_systems.rst:963
 msgid ""
@@ -2111,10 +2124,15 @@ msgid ""
 "yourself with other means. For files smaller than the chunk size, a "
 "simple PUT request is used instead of the multipart upload API."
 msgstr ""
+"書き込み時には,OSSマルチパートアップロードAPIを使用してファイルがアップロードされます."
+"チャンクのサイズはデフォルトで50 MBに設定されており,50 MBずつの10000パーツで500 GBまでのファイルを作成できます."
+"より大きなファイルが必要な場合は, :config:`VSIOSS_CHUNK_SIZE` 設定オプションの値を大きな値に増やします(MBで表されます)."
+"プロセスが終了し,ファイルが正しく閉じられない場合,マルチパートアップロードは開いたままになり,Alibabaがパーツストレージの料金を請求します."
+"他の手段で自分で中止する必要があります.チャンクサイズより小さいファイルの場合,マルチパートアップロードAPIの代わりに単純なPUTリクエストが使用されます."
 
 #: ../../source/user/virtual_file_systems.rst:970
 msgid "/vsioss_streaming/ (Alibaba Cloud OSS files: streaming)"
-msgstr ""
+msgstr "/vsioss_streaming/ (Alibaba Cloud OSS ファイル: ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:972
 msgid ""
@@ -2124,6 +2142,8 @@ msgid ""
 "download of the entire file. It requires GDAL to be built against "
 "libcurl."
 msgstr ""
+"/vsioss_streaming/ は,Alibaba Cloud Object Storage Service (OSS) バケットで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:974
 msgid ""
@@ -2131,16 +2151,20 @@ msgid ""
 " where ``bucket`` is the name of the bucket and ``key`` is the object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsioss_streaming/bucket/key` の形式です.ここで, ``bucket`` はバケットの名前であり,"
+"``key`` はオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:976
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsioss/ <vsioss>`"
 msgstr ""
+"認証オプションおよび読み取り専用機能は, :ref:`/vsioss/ <vsioss>` "
+"と同じです"
 
 #: ../../source/user/virtual_file_systems.rst:983
 msgid "/vsiswift/ (OpenStack Swift Object Storage)"
-msgstr ""
+msgstr "/vsiswift/ (OpenStack Swift Object Storage)"
 
 #: ../../source/user/virtual_file_systems.rst:985
 msgid ""
@@ -2149,6 +2173,8 @@ msgid ""
 "Storage (swift) buckets, without prior download of the entire file. It "
 "requires GDAL to be built against libcurl."
 msgstr ""
+"/vsiswift/ は,OpenStack Swift Object Storage (swift) バケットで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:990
 msgid ""
@@ -2156,12 +2182,16 @@ msgid ""
 "``bucket`` is the name of the swift bucket and ``key`` is the swift "
 "object \"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsiswift/bucket/key` の形式です.ここで, ``bucket`` はswiftバケットの名前であり,"
+"``key`` はswiftオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:1016
 msgid ""
 "Three authentication methods are possible, and are attempted in the "
 "following order:"
 msgstr ""
+"3つの認証方法が可能であり,以下の順序で試行"
+"されます:"
 
 #: ../../source/user/virtual_file_systems.rst:1018
 msgid ""
@@ -2170,6 +2200,9 @@ msgid ""
 "http://127.0.0.1:12345/v1/AUTH_something) and the value of the x-auth-"
 "token authorization token."
 msgstr ""
+" :config:`SWIFT_STORAGE_URL` および :config:`SWIFT_AUTH_TOKEN` 設定オプションは,"
+"それぞれ,ストレージURL(e.g http://127.0.0.1:12345/v1/AUTH_something) および x-auth-"
+"token認証トークンの値に設定されます."
 
 #: ../../source/user/virtual_file_systems.rst:1019
 msgid ""
@@ -2180,6 +2213,9 @@ msgid ""
 "This authentication endpoint will be used to retrieve the storage URL and"
 " authorization token mentioned in the first authentication method."
 msgstr ""
+":config:`SWIFT_AUTH_V1_URL`, :config:`SWIFT_USER` および :config:`SWIFT_KEY` 設定オプションは,"
+"それぞれ,Auth V1認証のエンドポイント(e.g http://127.0.0.1:12345/auth/v1.0),ユーザー名およびキー/パスワードに設定されます."
+"この認証エンドポイントは,最初の認証方法で言及されたストレージURLと認証トークンを取得するために使用されます."
 
 #: ../../source/user/virtual_file_systems.rst:1020
 msgid ""
@@ -2188,6 +2224,9 @@ msgid ""
 "swiftclient/latest/cli/index.html#authentication for more details. GDAL "
 "(>= 3.1) supports the following options:"
 msgstr ""
+"Keystone v3 での認証は,python-swiftclientと同じオプションを使用します.詳細については,"
+"https://docs.openstack.org/python-swiftclient/latest/cli/index.html#authentication を参照してください."
+"GDAL (>= 3.1) は,以下のオプションをサポートしています:"
 
 #: ../../source/user/virtual_file_systems.rst:1022
 #: ../../source/user/virtual_file_systems.rst:1033
@@ -2230,6 +2269,8 @@ msgid ""
 "supports application-credential authentication with the following "
 "options:"
 msgstr ""
+"Keystone v3 を介したアプリケーション資格情報認証, GDAL (>= 3.3.1) は,"
+"以下のオプションを使用してアプリケーション資格情報認証をサポートしています:"
 
 #: ../../source/user/virtual_file_systems.rst:1034
 msgid "`OS_AUTH_TYPE=v3applicationcredential`"
@@ -2248,6 +2289,8 @@ msgid ""
 "This file system handler also allows sequential writing of files (no "
 "seeks or read operations are then allowed)."
 msgstr ""
+"このファイルシステムハンドラは,ファイルの順次書き込みも可能です"
+"(その場合,シークや読み取り操作は許可されません)."
 
 #: ../../source/user/virtual_file_systems.rst:1042
 msgid ""
@@ -2260,10 +2303,15 @@ msgid ""
 " information about large objects see "
 "https://docs.openstack.org/swift/latest/api/large_objects.html."
 msgstr ""
+"一部のOpenStack Swiftのバージョンでは,大きな(セグメント化された)ファイルへのアクセスが,明示的に静的大きなオブジェクトとしてマークされていない場合に失敗します."
+"これは,デフォルトである動的大きなオブジェクトではなく,静的大きなオブジェクトとしてマークされている場合に発生します."
+"python-swiftclientを使用してファイルをアップロードする際に, ``--use-slo`` フラグを渡すことでこれを達成できます(すべてのオプションについては,"
+"https://docs.openstack.org/python-swiftclient/latest/cli/index.html#swift-upload を参照してください).大きなオブジェクトについての詳細は,"
+"https://docs.openstack.org/swift/latest/api/large_objects.html を参照してください."
 
 #: ../../source/user/virtual_file_systems.rst:1049
 msgid "/vsiswift_streaming/ (OpenStack Swift Object Storage: streaming)"
-msgstr ""
+msgstr "/vsiswift_streaming/ (OpenStack Swift Object Storage: ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:1051
 msgid ""
@@ -2272,6 +2320,8 @@ msgid ""
 "OpenStack Swift Object Storage (swift) buckets, without prior download of"
 " the entire file. It requires GDAL to be built against libcurl."
 msgstr ""
+"/vsiswift_streaming/ は,OpenStack Swift Object Storage (swift) バケットで利用可能な(主に非公開の)ファイルの"
+"ランダム読み取りを可能にするファイルシステムハンドラです.これには,libcurlを利用してGDALがビルドされている必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:1053
 msgid ""
@@ -2280,16 +2330,20 @@ msgid ""
 "the bucket and ``key`` is the object \"key\", i.e. a filename potentially"
 " containing subdirectories."
 msgstr ""
+"認識されるファイル名は, :file:`/vsiswift_streaming/bucket/key` の形式です.ここで, ``bucket`` はバケットの名前であり,"
+"``key`` はオブジェクトの\"key\"であり,サブディレクトリを含む可能性のあるファイル名です."
 
 #: ../../source/user/virtual_file_systems.rst:1055
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsiswift/ <vsiswift>`"
 msgstr ""
+"認証オプションおよび読み取り専用機能は, :ref:`/vsiswift/ <vsiswift>` "
+"と同じです"
 
 #: ../../source/user/virtual_file_systems.rst:1062
 msgid "/vsihdfs/ (Hadoop File System)"
-msgstr ""
+msgstr "/vsihdfs/ (Hadoop ファイルシステム)"
 
 #: ../../source/user/virtual_file_systems.rst:1064
 msgid ""
@@ -2299,40 +2353,54 @@ msgid ""
 "and :ref:`HDFS <building_from_source_hdfs>` support. Support for this "
 "handler is currently only available on Unix-like systems."
 msgstr ""
+"/vsihdfs/ は,HDFSへの読み取りアクセスを提供するファイルシステムハンドラです."
+"このハンドラは,Javaサポートを持つGDALでビルドされていることを必要とします(CMake "
+"`FindJNI <https://cmake.org/cmake/help/latest/module/FindJNI.html>`__) "
+"および :ref:`HDFS <building_from_source_hdfs>` サポート.このハンドラのサポートは現在,Unix系システムのみで利用可能です."
 
 #: ../../source/user/virtual_file_systems.rst:1070
 msgid ""
 "Note: support for the HTTP REST API (webHdfs) is also available with "
 ":ref:`vsiwebhdfs`"
 msgstr ""
+"注: HTTP REST API (webHdfs) のサポートも :ref:`vsiwebhdfs` "
+"で利用可能です"
 
 #: ../../source/user/virtual_file_systems.rst:1072
 msgid ""
 "The LD_LIBRARY_PATH and CLASSPATH environment variables must be typically"
 " set up as following."
 msgstr ""
+"通常,LD_LIBRARY_PATH および CLASSPATH 環境変数は以下のように設定する"
+"必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:1082
 msgid ""
 "Failure to properly define the CLASSPATH will result in hard crashes in "
 "the native libhdfs."
 msgstr ""
+"CLASSPATH を適切に定義しないと,ネイティブ libhdfs でハードクラッシュが"
+"発生します."
 
 #: ../../source/user/virtual_file_systems.rst:1085
 msgid "Relevant Hadoop documentation links:"
-msgstr ""
+msgstr "関連するHadoopドキュメントリンク:"
 
 #: ../../source/user/virtual_file_systems.rst:1087
 msgid ""
 "`C API libhdfs <https://hadoop.apache.org/docs/stable/hadoop-project-dist"
 "/hadoop-hdfs/LibHdfs.html>`__"
 msgstr ""
+"`C API libhdfs <https://hadoop.apache.org/docs/stable/hadoop-project-dist"
+"/hadoop-hdfs/LibHdfs.html>`__"
 
 #: ../../source/user/virtual_file_systems.rst:1088
 msgid ""
 "`HDFS Users Guide <https://hadoop.apache.org/docs/stable/hadoop-project-"
 "dist/hadoop-hdfs/HdfsUserGuide.html>`__"
 msgstr ""
+"`HDFS Users Guide <https://hadoop.apache.org/docs/stable/hadoop-project-"
+"dist/hadoop-hdfs/HdfsUserGuide.html>`__"
 
 #: ../../source/user/virtual_file_systems.rst:1089
 msgid ""
@@ -2340,54 +2408,69 @@ msgid ""
 "<https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-"
 "common/SingleCluster.html>`__"
 msgstr ""
+"`Hadoop: Setting up a Single Node Cluster "
+"<https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-"
+"common/SingleCluster.html>`__"
 
 #: ../../source/user/virtual_file_systems.rst:1091
 msgid ""
 "Recognized filenames are of the form :file:`/vsihdfs/hdfsUri` where "
 "``hdfsUri`` is a valid HDFS URI."
 msgstr ""
+"認識されるファイル名は, :file:`/vsihdfs/hdfsUri` の形式です.ここで, ``hdfsUri`` は有効な "
+"HDFS URI です."
 
 #: ../../source/user/virtual_file_systems.rst:1105
 msgid "/vsiwebhdfs/ (Web Hadoop File System REST API)"
-msgstr ""
+msgstr "/vsiwebhdfs/ (Web Hadoop ファイルシステム REST API)"
 
 #: ../../source/user/virtual_file_systems.rst:1107
 msgid ""
 "/vsiwebhdfs/ is a file system handler that provides read and write access"
 " to HDFS through its HTTP REST API."
 msgstr ""
+"/vsiwebhdfs/ は,HDFSへの読み取りおよび書き込みアクセスを提供するファイルシステムハンドラです."
+"これは,HDFSのHTTP REST APIを介して行われます."
 
 #: ../../source/user/virtual_file_systems.rst:1109
 msgid ""
 "Recognized filenames are of the form "
 ":file:`/vsiwebhdfs/http://hostname:port/webhdfs/v1/path/to/filename`."
 msgstr ""
+"認識されるファイル名は, :file:`/vsiwebhdfs/http://hostname:port/webhdfs/v1/path/to/filename` "
+"の形式です."
 
 #: ../../source/user/virtual_file_systems.rst:1122
 msgid "The following configuration options are available:"
-msgstr ""
+msgstr "以下の設定オプションが利用可能です:"
 
 #: ../../source/user/virtual_file_systems.rst:1146
 msgid ""
 "This file system handler also allows sequential writing of files (no "
 "seeks or read operations are then allowed)"
 msgstr ""
+"このファイルシステムハンドラは,ファイルの順次書き込みも可能です"
+"(その場合,シークや読み取り操作は許可されません)"
 
 #: ../../source/user/virtual_file_systems.rst:1153
 msgid "/vsistdin/ (standard input streaming)"
-msgstr ""
+msgstr "/vsistdin/ (標準入力ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:1155
 msgid ""
 "/vsistdin/ is a file handler that allows reading from the standard input "
 "stream."
 msgstr ""
+"/vsistdin/ は,標準入力ストリームから読み取りを可能にするファイル"
+"ハンドラです."
 
 #: ../../source/user/virtual_file_systems.rst:1157
 msgid ""
 "The filename syntax must be only :file:`/vsistdin/`, (not e.g., "
 "/vsistdin/path/to/f.csv , but \"/vsistdin?buffer_limit=value\" is OK.)"
 msgstr ""
+"ファイル名構文は :file:`/vsistdin/` のみである必要があります"
+"(例えば, /vsistdin/path/to/f.csv ではなく, \"/vsistdin?buffer_limit=value\" はOKです.)"
 
 #: ../../source/user/virtual_file_systems.rst:1160
 msgid ""
@@ -2396,16 +2479,21 @@ msgid ""
 "cached so that closing, re-opening :file:`/vsistdin/` and reading within "
 "this first megabyte is possible multiple times in the same process."
 msgstr ""
+"利用可能なファイル操作は,もちろん Read() および forward Seek() に制限されます."
+"ファイルの最初の1MBでの完全なシークが可能であり,これはキャッシュされているため,"
+" :file:`/vsistdin/` を閉じて再度開き,同じプロセス内でこの最初の1MB内での読み取りが複数回可能です."
 
 #: ../../source/user/virtual_file_systems.rst:1165
 msgid ""
 "The size of the in-memory cache can be controlled with the "
 ":config:`CPL_VSISTDIN_BUFFER_LIMIT` configuration option:"
 msgstr ""
+"インメモリキャッシュのサイズは, :config:`CPL_VSISTDIN_BUFFER_LIMIT` "
+"設定オプションで制御できます:"
 
 #: ../../source/user/virtual_file_systems.rst:1175
 msgid "The \"/vsistdin?buffer_limit=value\" syntax can also be used."
-msgstr ""
+msgstr " \"/vsistdin?buffer_limit=value\" 構文も使用できます."
 
 #: ../../source/user/virtual_file_systems.rst:1177
 msgid ""
@@ -2413,24 +2501,28 @@ msgid ""
 "to read a file within a potentially big ZIP file streamed to "
 "gdal_translate:"
 msgstr ""
+"/vsistdin ファイル名は他のファイルシステムと組み合わせることができます."
+"例えば,潜在的に大きなZIPファイルをgdal_translateにストリーミングするためにファイルを読み取るには:"
 
 #: ../../source/user/virtual_file_systems.rst:1188
 msgid "/vsistdout/ (standard output streaming)"
-msgstr ""
+msgstr "/vsistdout/ (標準出力ストリーミング)"
 
 #: ../../source/user/virtual_file_systems.rst:1190
 msgid ""
 "/vsistdout/ is a file handler that allows writing into the standard "
 "output stream."
 msgstr ""
+"/vsistdout/ は,標準出力ストリームへの書き込みを可能にするファイル"
+"ハンドラです."
 
 #: ../../source/user/virtual_file_systems.rst:1192
 msgid "The filename syntax must be only :file:`/vsistdout/`."
-msgstr ""
+msgstr "ファイル名構文は :file:`/vsistdout/` のみである必要があります."
 
 #: ../../source/user/virtual_file_systems.rst:1194
 msgid "The file operations available are of course limited to Write()."
-msgstr ""
+msgstr "利用可能なファイル操作は,もちろん Write() に制限されます."
 
 #: ../../source/user/virtual_file_systems.rst:1196
 msgid ""
@@ -2438,10 +2530,12 @@ msgid ""
 ":file:`/vsistdout_redirect/` file system handler, where the output "
 "function can be defined with :cpp:func:`VSIStdoutSetRedirection`."
 msgstr ""
+"このファイルシステムの変種として,出力関数を :cpp:func:`VSIStdoutSetRedirection` で定義できる "
+":file:`/vsistdout_redirect/` ファイルシステムハンドラが存在します."
 
 #: ../../source/user/virtual_file_systems.rst:1201
 msgid "/vsimem/ (in-memory files)"
-msgstr ""
+msgstr "/vsimem/ (インメモリファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:1203
 msgid ""
@@ -2449,6 +2543,8 @@ msgid ""
 "files. All portions of the file system underneath the base path "
 ":file:`/vsimem/` will be handled by this driver."
 msgstr ""
+"/vsimem/ は,メモリブロックをファイルとして扱うことを可能にするファイルハンドラです."
+":file:`/vsimem/` ベースパスの下のファイルシステムのすべての部分は,このドライバによって処理されます."
 
 #: ../../source/user/virtual_file_systems.rst:1205
 msgid ""
@@ -2459,10 +2555,14 @@ msgid ""
 "block of memory associated with a memory file. See "
 ":cpp:func:`VSIFileFromMemBuffer` and :cpp:func:`VSIGetMemFileBuffer`."
 msgstr ""
+"通常の VSI*L 関数を自由に使用して,メモリ配列を作成および破棄し,それらを実際のファイルシステムオブジェクトであるかのように扱うことができます."
+"元のデータのコピーを複製せずに効率的にメモリファイルシステムオブジェクトを作成するためのいくつかの追加メソッドが存在し,"
+"またはメモリファイルに関連付けられたメモリブロックを\"盗む\"ためのメソッドが存在します. :cpp:func:`VSIFileFromMemBuffer` および "
+":cpp:func:`VSIGetMemFileBuffer` を参照してください."
 
 #: ../../source/user/virtual_file_systems.rst:1207
 msgid "Directory related functions are supported."
-msgstr ""
+msgstr "ディレクトリ関連の関数がサポートされています."
 
 #: ../../source/user/virtual_file_systems.rst:1209
 msgid ""
@@ -2472,10 +2572,12 @@ msgid ""
 "underlying file are not supported (locking is left to the responsibility "
 "of calling code)."
 msgstr ""
+"/vsimem/ ファイルは同じプロセス内で見えます.複数のスレッドが同じ基礎ファイルにアクセスできますが,異なるハンドルを使用している場合に限り,"
+"読み取りモードで同じ基礎ファイルに対して同時書き込みおよび読み取り操作はサポートされません(ロックは呼び出しコードの責任に任されます)."
 
 #: ../../source/user/virtual_file_systems.rst:1214
 msgid "/vsisubfile/ (portions of files)"
-msgstr ""
+msgstr "/vsisubfile/ (ファイルの一部)"
 
 #: ../../source/user/virtual_file_systems.rst:1216
 msgid ""
@@ -2483,12 +2585,17 @@ msgid ""
 "of files, treating them as a file on their own to the virtual file system"
 " functions (VSIFOpenL(), etc)."
 msgstr ""
+"/vsisubfile/ バーチャルファイルシステムハンドラは,ファイルのサブリージョンにアクセスし,"
+"それらを仮想ファイルシステム関数(VSIFOpenL() など)に"
+"独自のファイルとして扱うことを可能にします."
 
 #: ../../source/user/virtual_file_systems.rst:1218
 msgid ""
 "A special form of the filename is used to indicate a subportion of "
 "another file: :file:`/vsisubfile/<offset>[_<size>],<filename>`."
 msgstr ""
+"他のファイルのサブポーションを示すために特別なファイル名の形式が使用され"
+"ます: :file:`/vsisubfile/<offset>[_<size>],<filename>`."
 
 #: ../../source/user/virtual_file_systems.rst:1220
 msgid ""
@@ -2498,6 +2605,11 @@ msgid ""
 "<filename> portion may be a relative or absolute path using normal rules."
 " The <offset> and <size> values are in bytes."
 msgstr ""
+"サイズパラメータはオプションです.サイズパラメータがない場合,開始オフセットからの"
+"ファイルの残りはサブファイルの一部として扱われます."
+"それ以外の場合, <offset> から <size> バイトのみがサブファイルの一部"
+"として扱われます. <filename> 部分は通常のルールを使用して相対パスまたは絶対パスにすることができます."
+"<offset> および <size> の値はバイト単位です."
 
 #: ../../source/user/virtual_file_systems.rst:1229
 msgid ""
@@ -2507,10 +2619,14 @@ msgid ""
 "Only the :cpp:func:`VSIStatL`, :cpp:func:`VSIFOpenL` and operations based"
 " on the file handle returned by :cpp:func:`VSIFOpenL` operate properly."
 msgstr ""
+"/vsimem/ や従来のファイルシステムハンドラとは異なり,新しいファイルの作成,ディレクトリのトラバース,および"
+"/vsisubfile/ エリア内のファイルの削除に対するファイルシステム操作の意味のあるサポートはありません."
+" :cpp:func:`VSIStatL`, :cpp:func:`VSIFOpenL` および :cpp:func:`VSIFOpenL` によって返される"
+"ファイルハンドルに基づく操作のみが正常に動作します."
 
 #: ../../source/user/virtual_file_systems.rst:1234
 msgid "/vsisparse/ (sparse files)"
-msgstr ""
+msgstr "/vsisparse/ (スパースファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:1236
 msgid ""
@@ -2523,20 +2639,28 @@ msgid ""
 "data can be ignored. It could, in theory, also be used to treat several "
 "files on different file systems as one large virtual file."
 msgstr ""
+"/vsisparse/ バーチャルファイルハンドラは,他のファイルのデータチャンクから仮想ファイルを構成することを可能にします."
+"仮想ファイルには,大きなスペースが一定の値に設定されている可能性があります."
+"これにより,画像データが一定の値に設定された大きなファイルのように見えるファイル上でいくつかの操作をテスト"
+"することが可能になります."
+"また,テストスイートに追加するテストファイルが大きすぎる場合や,データの大部分を無視できる場合にも便利です."
+"理論的には,異なるファイルシステム上の複数のファイルを1つの大きな仮想ファイルとして扱うためにも使用できます."
 
 #: ../../source/user/virtual_file_systems.rst:1238
 msgid ""
 "The file referenced by /vsisparse/ should be an XML control file "
 "formatted something like:"
 msgstr ""
+"/vsisparse/ で参照されるファイルは,次のような形式のXMLコントロールファイルで"
+"ある必要があります:"
 
 #: ../../source/user/virtual_file_systems.rst:1272
 msgid "Hopefully the values and semantics are fairly obvious."
-msgstr ""
+msgstr "値と意味がかなり明らかであることを願っています."
 
 #: ../../source/user/virtual_file_systems.rst:1278
 msgid "/vsicached/ (File caching)"
-msgstr ""
+msgstr "/vsicached/ (ファイルキャッシュ)"
 
 #: ../../source/user/virtual_file_systems.rst:1280
 msgid ""
@@ -2546,12 +2670,17 @@ msgid ""
 "when the file handle is closed. The cache is a least-recently used lists "
 "of blocks of 32KB each (default size)."
 msgstr ""
+":cpp:func:`VSICreateCachedFile` 関数は,仮想ファイルハンドルを取得し,入力ファイルハンドル上の読み取り操作をキャッシュする新しいハンドルを返します."
+"キャッシュはRAMベースであり,ファイルハンドルが閉じられるとキャッシュの内容が破棄されます."
+"キャッシュは,32KBごとのブロックの最近使用されたリストです(デフォルトサイズ)."
 
 #: ../../source/user/virtual_file_systems.rst:1282
 msgid ""
 "This is mostly useful for files accessible through slow local/operating-"
 "system-mounted filesystems."
 msgstr ""
+"これは,遅いローカル/オペレーティングシステムマウントされたファイルシステムを"
+"介してアクセス可能なファイルに対して主に有用です."
 
 #: ../../source/user/virtual_file_systems.rst:1284
 msgid ""
@@ -2560,6 +2689,9 @@ msgid ""
 "/vsicurl/ and other related network file systems) if the ``VSI_CACHE`` "
 "configuration option is set to ``YES``."
 msgstr ""
+"これは,上記で言及されたファイルシステムのいくつか(標準ファイルシステム操作のデフォルトのものと, "
+"/vsicurl/ および他の関連するネットワークファイルシステム)で, ``VSI_CACHE`` "
+"設定オプションが ``YES`` に設定されている場合に暗黙的に使用されます."
 
 #: ../../source/user/virtual_file_systems.rst:1286
 msgid ""
@@ -2567,18 +2699,24 @@ msgid ""
 "that is cached), and can be controlled with the ``VSI_CACHE_SIZE`` "
 "configuration option (value in bytes)."
 msgstr ""
+"各ファイルのキャッシュのデフォルトサイズは25 MBです(キャッシュされる各ファイルに対して25 MB), "
+"および ``VSI_CACHE_SIZE`` 設定オプション(バイト単位の値)で制御できます."
 
 #: ../../source/user/virtual_file_systems.rst:1288
 msgid ""
 "The :cpp:class:`VSICachedFile` class only handles read operations at that"
 " time, and will error out on write operations."
 msgstr ""
+" :cpp:class:`VSICachedFile` クラスはその時点で読み取り操作のみを処理し,書き込み操作でエラーが"
+"発生します."
 
 #: ../../source/user/virtual_file_systems.rst:1290
 msgid ""
 "Starting with GDAL 3.8, a ``/vsicached?`` virtual file system also exists"
 " to cache a particular file."
 msgstr ""
+"GDAL 3.8 から,特定のファイルをキャッシュするための ``/vsicached?`` バーチャルファイルシステム"
+"も存在します."
 
 #: ../../source/user/virtual_file_systems.rst:1292
 msgid ""
@@ -2590,10 +2728,15 @@ msgid ""
 "option appears at the end, so that code that tries to look for side-car "
 "files, list directory content, can work properly."
 msgstr ""
+"構文は次のようになります: "
+" ``/vsicached?[option_i=val_i&]*file=<filename>`` ここで,各オプション名と値( ``file`` の値を含む)がURLエンコードされています"
+"(実際には,アンパサンド文字に対してのみ必要です.スラッシュ文字をエンコード解除することが望ましいかもしれません)."
+" ``file`` オプションが最後に表示されるようにすることが重要です.これにより,サイドカーファイルを探そうとするコードや,"
+"ディレクトリコンテンツをリストアップしようとするコードが正常に動作します."
 
 #: ../../source/user/virtual_file_systems.rst:1299
 msgid "Currently supported options are:"
-msgstr ""
+msgstr "現在サポートされているオプションは次のとおりです:"
 
 #: ../../source/user/virtual_file_systems.rst:1301
 msgid ""
@@ -2601,16 +2744,21 @@ msgid ""
 "bytes. ``KB`` or ``MB`` suffixes can be also appended (without space "
 "after the numeric value). The maximum supported value is 1 GB."
 msgstr ""
+" ``chunk_size=<value>`` ここで, ``value`` はチャンクサイズのサイズです. ``KB`` "
+"または ``MB`` 接尾辞を追加することもできます"
+"(数値の後にスペースを入れないでください).サポートされている最大値は1 GB です."
 
 #: ../../source/user/virtual_file_systems.rst:1302
 msgid ""
 "``cache_size=<value>`` where value is the size of the cache size in "
 "bytes, for each file. ``KB`` or ``MB`` suffixes can be also appended."
 msgstr ""
+" ``cache_size=<value>`` ここで, ``value`` はキャッシュサイズのサイズです. ``KB`` "
+"または ``MB`` 接尾辞を追加することもできます."
 
 #: ../../source/user/virtual_file_systems.rst:1306
 msgid "``/vsicached?chunk_size=1MB&file=/home/even/byte.tif``"
-msgstr ""
+msgstr " ``/vsicached?chunk_size=1MB&file=/home/even/byte.tif``"
 
 #: ../../source/user/virtual_file_systems.rst:1307
 msgid "``/vsicached?file=./byte.tif``"
@@ -2618,7 +2766,7 @@ msgstr ""
 
 #: ../../source/user/virtual_file_systems.rst:1313
 msgid "/vsicrypt/ (encrypted files)"
-msgstr ""
+msgstr "/vsicrypt/ (暗号化ファイル)"
 
 #: ../../source/user/virtual_file_systems.rst:1315
 msgid ""
@@ -2626,10 +2774,12 @@ msgid ""
 "reading/creating/update encrypted files on the fly, with random access "
 "capabilities."
 msgstr ""
+"/vsicrypt/ は,ランダムアクセス機能を備えた暗号化ファイルの読み取り/作成/更新を"
+"可能にする特別なファイルハンドラがインストールされています."
 
 #: ../../source/user/virtual_file_systems.rst:1317
 msgid "Refer to :cpp:func:`VSIInstallCryptFileHandler` for more details."
-msgstr ""
+msgstr " :cpp:func:`VSIInstallCryptFileHandler` を参照してください."
 
 #~ msgid ""
 #~ "Starting with GDAL 2.2, an alternate "
