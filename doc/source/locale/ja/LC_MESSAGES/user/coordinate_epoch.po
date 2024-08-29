@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,17 +21,18 @@ msgstr ""
 
 #: ../../source/user/coordinate_epoch.rst:5
 msgid "Coordinate epoch support"
-msgstr ""
+msgstr "座標エポックのサポート"
 
 #: ../../source/user/coordinate_epoch.rst:10
 msgid "Dynamic CRS and coordinate epoch"
-msgstr ""
+msgstr "ダイナミックCRSと座標エポック"
 
 #: ../../source/user/coordinate_epoch.rst:12
 msgid ""
 "This document is intended to document the support for coordinate epoch, "
 "linked to dynamic CRS."
 msgstr ""
+"この文書は、ダイナミックCRSに関連する座標エポックのサポートについて説明するものです."
 
 #: ../../source/user/coordinate_epoch.rst:15
 msgid ""
@@ -40,12 +41,17 @@ msgid ""
 "qualified with the epoch at which they are valid. The coordinate epoch is"
 " not necessarily the epoch at which the observation was collected."
 msgstr ""
+"ダイナミックCRSでは,地球表面上の点の座標は時間とともに変化する可能性があります."
+"座標が明確であるためには,常に有効なエポックで座標を修飾する必要があります.座標"
+"エポックは,観測が収集されたエポックである必要はありません."
+
 
 #: ../../source/user/coordinate_epoch.rst:20
 msgid ""
 "Examples of dynamic CRS are ``WGS 84 (G1762)``, ``ITRF2014``, "
 "``ATRF2014``."
 msgstr ""
+"ダイナミックCRSの例には, ``WGS 84 (G1762)``, ``ITRF2014``, ``ATRF2014`` があります."
 
 #: ../../source/user/coordinate_epoch.rst:22
 msgid ""
@@ -54,12 +60,16 @@ msgid ""
 " positional accuracy is 2 meters, but prefer one of its realizations, "
 "such as WGS 84 (G1762)"
 msgstr ""
+"汎用EPSG:4326 WGS 84 CRSもダイナミックと見なされますが,その位置精度が2メートルである"
+"データムアンサンブルに基づいているため,使用をお勧めしません.代わりに, WGS 84 (G1762)"
+"などの実現の1つを使用してください."
 
 #: ../../source/user/coordinate_epoch.rst:26
 msgid ""
 "The :cpp:func:`OGRSpatialReference::IsDynamic` method can be used to test"
 " if a CRS is a dynamic one."
 msgstr ""
+":cpp:func:`OGRSpatialReference::IsDynamic` メソッドを使用して,CRSがダイナミックかどうかをテストできます."
 
 #: ../../source/user/coordinate_epoch.rst:29
 msgid ""
@@ -68,6 +78,9 @@ msgid ""
 "to set/retrieve a coordinate epoch associated with a CRS. The coordinate "
 "epoch is expressed as a decimal year (e.g. 2021.3 for April 21, 2021)."
 msgstr ""
+" :cpp:func:`OGRSpatialReference::SetCoordinateEpoch` および "
+" :cpp:func:`OGRSpatialReference::GetCoordinateEpoch` メソッドを使用して,CRSに関連付けられた"
+"座標エポックを設定/取得できます.座標エポックは,10進年で表されます(例:2021.3は2021年4月21日)."
 
 #: ../../source/user/coordinate_epoch.rst:34
 msgid ""
@@ -80,6 +93,11 @@ msgid ""
 "means that a dataset containing observations or points with different "
 "epochs cannot be handled."
 msgstr ""
+"形式的には,観測の座標エポックは観測に属します.しかし,ほとんどの形式では観測ごとのエポックを"
+"保存することはできず,典型的な使用法は同じエポックの観測のセットです.したがって,私たちは"
+"エポックをCRSのプロパティとして保存し,それがすべての観測に有効であると仮定します.この選択"
+"は,ほとんどの使用法に対して処理,保存,形式の複雑さを緩和します.現時点では,異なるエポックの"
+"観測や点を含むデータセットを処理することはできません."
 
 #: ../../source/user/coordinate_epoch.rst:42
 msgid ""
@@ -88,10 +106,13 @@ msgid ""
 "support of coordinate epoch at the layer level. The underlying coordinate"
 " transformation mechanics can support per-vertex coordinate epoch."
 msgstr ""
+"ベクトル形式の場合,ジオメトリごとの座標エポックも意味をなすことができますが,ほとんどの形式が"
+"レイヤーごとのCRSのみをサポートしているため,現時点ではレイヤーレベルでの座標エポックのサポート"
+"を制限しています.基本となる座標変換メカニズムは,頂点ごとの座標エポックをサポートできます."
 
 #: ../../source/user/coordinate_epoch.rst:48
 msgid "Support in raster and vector formats"
-msgstr ""
+msgstr "ラスターおよびベクター形式でのサポート"
 
 #: ../../source/user/coordinate_epoch.rst:50
 msgid ""
@@ -103,6 +124,10 @@ msgid ""
 "account. The coordinate epoch is only written when attached to the SRS of"
 " the layer/dataset that is created."
 msgstr ""
+"執筆時点では,GDAL/OGRで処理される形式には,座標エポックをエンコードする標準化された方法はありません."
+"そのため,既存のリーダーとできるだけ後方互換性があるようにエンコード方法を選択しました.対応する公式"
+"仕様がこの概念を考慮に入れるように進化する場合,これらのエンコーディングは変更される可能性があります."
+"座標エポックは,作成されたレイヤー/データセットのSRSにアタッチされた場合にのみ書き込まれます."
 
 #: ../../source/user/coordinate_epoch.rst:59
 msgid "FlatGeoBuf"
@@ -115,6 +140,9 @@ msgid ""
 "<http://docs.opengeospatial.org/is/18-010r7/18-010r7.html#130>`__ "
 "construct, set in the ``Crs.wkt`` header field of the FlatGeoBuf file."
 msgstr ""
+"座標エポックは,FlatGeoBufファイルの ``Crs.wkt`` ヘッダーフィールドに設定された,`COORDINATEMETADATA "
+"<http://docs.opengeospatial.org/is/18-010r7/18-010r7.html#130>`__ 構造の ``EPOCH`` サブノードを使用して,"
+"WKT:2019文字列としてエンコードされます."
 
 #: ../../source/user/coordinate_epoch.rst:82
 msgid ""
@@ -122,6 +150,8 @@ msgid ""
 "an associated EPSG code, this will not cause issues in those older GDAL "
 "versions."
 msgstr ""
+"このような構造は,GDAL < 3.4 では理解されませんが,CRSに関連付けられたEPSGコードがある場合,これは"
+"古いGDALバージョンで問題を引き起こしません."
 
 #: ../../source/user/coordinate_epoch.rst:87
 msgid "GeoPackage vector/raster"
@@ -134,6 +164,9 @@ msgid ""
 "an extended version of the CRS WKT extension "
 "(https://github.com/opengeospatial/geopackage/pull/600)."
 msgstr ""
+"座標エポックが関連付けられている各ベクター/ラスターテーブルは,CRS WKT拡張の拡張バージョンを使用して,"
+"``gpkg_spatial_ref_sys`` テーブルの ``epoch`` 列にエンコードされます"
+"(https://github.com/opengeospatial/geopackage/pull/600)."
 
 #: ../../source/user/coordinate_epoch.rst:94
 msgid "GeoTIFF"
@@ -144,6 +177,7 @@ msgid ""
 "The coordinate epoch is encoded as a new GeoTIFF GeoKey, "
 "``CoordinateEpochGeoKey`` of code 5120 and type DOUBLE."
 msgstr ""
+"座標エポックは,新しいGeoTIFF GeoKey, ``CoordinateEpochGeoKey`` (コード5120,タイプDOUBLE)としてエンコードされます."
 
 #: ../../source/user/coordinate_epoch.rst:125
 msgid "JPEG2000"
@@ -151,11 +185,11 @@ msgstr ""
 
 #: ../../source/user/coordinate_epoch.rst:127
 msgid "GeoJP2 boxes use the above mentioned GeoTIFF encoding."
-msgstr ""
+msgstr "GeoJP2ボックスは上記のGeoTIFFエンコーディングを使用します."
 
 #: ../../source/user/coordinate_epoch.rst:131
 msgid "Persistent Auxiliary Metadata (.aux.xml)"
-msgstr ""
+msgstr "Persistent Auxiliary Metadata (.aux.xml)"
 
 #: ../../source/user/coordinate_epoch.rst:133
 #: ../../source/user/coordinate_epoch.rst:146
@@ -163,6 +197,7 @@ msgid ""
 "The coordinate epoch is encoded as ``coordinateEpoch`` attribute of the "
 "``SRS`` element."
 msgstr ""
+"座標エポックは, ``SRS`` 要素の ``coordinateEpoch`` 属性としてエンコードされます."
 
 #: ../../source/user/coordinate_epoch.rst:144
 msgid "GDAL VRT"
@@ -170,19 +205,21 @@ msgstr ""
 
 #: ../../source/user/coordinate_epoch.rst:159
 msgid "Support in utilities"
-msgstr ""
+msgstr "ユーティリティでのサポート"
 
 #: ../../source/user/coordinate_epoch.rst:161
 msgid ""
 ":program:`gdalinfo` and :program:`ogrinfo` report the coordinate epoch, "
 "when attached to a dataset/layer SRS."
 msgstr ""
+" :program:`gdalinfo` および :program:`ogrinfo` は,データセット/レイヤーSRSにアタッチされた場合に,座標エポックを報告します."
 
 #: ../../source/user/coordinate_epoch.rst:164
 msgid ""
 ":program:`gdal_edit.py` has a ``-a_coord_epoch`` option to define the "
 "epoch of a dataset in place."
 msgstr ""
+" :program:`gdal_edit.py` には,データセットのエポックを定義する ``-a_coord_epoch`` オプションがあります."
 
 #: ../../source/user/coordinate_epoch.rst:166
 msgid ""
@@ -191,6 +228,8 @@ msgid ""
 "otherwise preserve the coordinate epoch in the output SRS from the source"
 " SRS when no SRS related options are specified."
 msgstr ""
+" :program:`gdal_translate` および :program:`ogr2ogr` には, ``-a_srs`` と一緒に使用する ``-a_coord_epoch`` オプションがあり,"
+"それ以外の場合でSRS関連のオプションが指定されていない場合は,ソースSRSから出力SRSに座標エポックを保持します. "
 
 #: ../../source/user/coordinate_epoch.rst:170
 msgid ""
@@ -199,6 +238,8 @@ msgid ""
 "option to be used together with ``-t_srs``) to override/set the "
 "coordinate epoch of the source (resp. target) CRS."
 msgstr ""
+" :program:`gdalwarp` および :program:`ogr2ogr` には, ``-s_srs`` (resp. ``-t_srs`` と一緒に使用する ``-s_coord_epoch`` オプションがあり,"
+"ソース(resp. ターゲット)CRSの座標エポックをオーバーライド/設定するために使用されます."
 
 #: ../../source/user/coordinate_epoch.rst:174
 msgid ""
@@ -206,16 +247,19 @@ msgid ""
 "exclusive, due to lack of support for transformations between two dynamic"
 " CRS."
 msgstr ""
+"PROJ 9.4以前では,2つのダイナミックCRS間の変換をサポートしていなかったため, ``-s_coord_epoch`` と ``-t_coord_epoch`` は"
+"相互に排他的でした."
 
 #: ../../source/user/coordinate_epoch.rst:177
 msgid ""
 ":program:`gdalwarp` preserves the coordinate epoch in the output SRS when"
 " appropriate."
 msgstr ""
+":program:`gdalwarp` は適切な場合に出力SRSに座標エポックを保持します."
 
 #: ../../source/user/coordinate_epoch.rst:181
 msgid "Support in coordinate transformation"
-msgstr ""
+msgstr "座標変換でのサポート"
 
 #: ../../source/user/coordinate_epoch.rst:183
 msgid ""
@@ -223,6 +267,8 @@ msgid ""
 "dependent transformations between a static and dynamic CRS based on the "
 "coordinate epoch passed per vertex."
 msgstr ""
+" :cpp:class:`OGRCoordinateTransformation` クラスは,頂点ごとに渡された座標エポックに基づいて,静的CRSとダイナミックCRS間の"
+"時間依存変換を実行できます."
 
 #: ../../source/user/coordinate_epoch.rst:187
 msgid ""
@@ -232,10 +278,13 @@ msgid ""
 "configuration option can be set to ``NO`` to disable using the coordinate"
 " epoch associated with the source or target CRS."
 msgstr ""
+"静的CRSとダイナミックCRS間の時間依存変換を行う際に,ダイナミックCRSに関連付けられた座標エポックを考慮することもできます."
+" :config:`OGR_CT_USE_SRS_COORDINATE_EPOCH` 構成オプションを ``NO`` に設定して,ソースまたはターゲットCRSに関連付けられた座標エポックを使用しないようにすることができます."
 
 #: ../../source/user/coordinate_epoch.rst:193
 msgid ""
 "If a per-vertex time is specified, it overrides the one associated with "
 "the CRS."
 msgstr ""
+"頂点ごとの時間が指定されている場合,それはCRSに関連付けられた時間を上書きします."
 

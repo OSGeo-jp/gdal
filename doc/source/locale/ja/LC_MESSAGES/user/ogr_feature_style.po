@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/ogr_feature_style.rst:5
 msgid "Feature Style Specification"
-msgstr ""
+msgstr "地物スタイル仕様"
 
 #: ../../source/user/ogr_feature_style.rst:7
 msgid "Version 0.016 - 2018-12-03"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../source/user/ogr_feature_style.rst:10
 msgid "1. Overview"
-msgstr ""
+msgstr "1. 概要"
 
 #: ../../source/user/ogr_feature_style.rst:12
 msgid ""
@@ -37,6 +37,9 @@ msgid ""
 "line width, symbols, etc.) should be handled at the various levels in "
 "GDAL's vector drivers (OGR)."
 msgstr ""
+"この文書は、GDALのベクタードライバ(OGR)のさまざまなレベルで、地物スタイル情報（色、線幅、シンボルなど）を"
+"どのように扱うかを定義します。"
+
 
 #: ../../source/user/ogr_feature_style.rst:16
 msgid ""
@@ -47,10 +50,14 @@ msgid ""
 "v7 <vector.dgn>` and :ref:`DGN v8 <vector.dgnv8>`, :ref:`OpenJUMP JML "
 "<vector.jml>` and :ref:`PDF <raster.pdf>`."
 msgstr ""
+"以下のGDALベクタードライバは、地物スタイルのサポートレベルが異なります。:ref:`DWG (libopencad) <vector.cad>`、"
+":ref:`DWG (Teigha) <vector.dwg>`、:ref:`DXF <vector.dxf>`、:ref:`KML (libkml) <vector.libkml>`、"
+":ref:`MapInfo <vector.mitab>`、:ref:`MicroStation DGN v7 <vector.dgn>`、:ref:`DGN v8 <vector.dgnv8>`、"
+":ref:`OpenJUMP JML <vector.jml>`、:ref:`PDF <raster.pdf>`。"
 
 #: ../../source/user/ogr_feature_style.rst:24
 msgid "1.1 Style is a property of Feature object"
-msgstr ""
+msgstr "1.1 スタイルは地物オブジェクトのプロパティです"
 
 #: ../../source/user/ogr_feature_style.rst:26
 msgid ""
@@ -59,6 +66,10 @@ msgid ""
 "attribute, in GDAL it is more consistent to see the style as a property, "
 "just the same way the geometry of a feature is also a property."
 msgstr ""
+"概念的に、地物スタイルは地物のプロパティとして見るべきです."
+"一部のシステムはスタイル情報を特別な属性に"
+"格納していますが,GDALでは,地物のジオメトリと同じように,スタイルをプロパティ"
+"として見ることがより一貫しています."
 
 #: ../../source/user/ogr_feature_style.rst:31
 msgid ""
@@ -68,16 +79,21 @@ msgid ""
 "the name of the attribute that contains style information should either "
 "be specified in some metadata, or be specified by the user."
 msgstr ""
+"これは,スタイルを持たない形式(例:E00)に書き込むときにスタイル情報を属性に格納することを妨げません."
+"ただし,GDALを介してそのようなデータセットが開かれるときには,スタイル情報を含む属性の名前がメタデータに指定されているか,"
+"ユーザーによって指定されている必要があります."
 
 #: ../../source/user/ogr_feature_style.rst:37
 msgid ""
 "Also, in the SFCOM interface, the style information will be stored in an "
 "attribute just like the geometry is."
 msgstr ""
+"また,SFCOMインターフェースでは,スタイル情報はジオメトリと同様に属性に"
+"格納されます."
 
 #: ../../source/user/ogr_feature_style.rst:41
 msgid "1.2 Feature Styles can be stored at 2 levels"
-msgstr ""
+msgstr "1.2 地物スタイルは2つのレベルで保存できます"
 
 #: ../../source/user/ogr_feature_style.rst:43
 msgid ""
@@ -86,10 +102,12 @@ msgid ""
 "cases, instead of duplicating the style information on each feature, we "
 "will provide a more efficient way to share style information."
 msgstr ""
+"スタイルは地物の描画方法を定義しますが,同じスタイルを共有する複数の地物があることは非常に一般的です."
+"そのような場合,各地物にスタイル情報を重複させる代わりに,スタイル情報を共有する効率的な方法を提供します."
 
 #: ../../source/user/ogr_feature_style.rst:48
 msgid "There are two levels at which style information can be found:"
-msgstr ""
+msgstr "スタイル情報が見つかる2つのレベルがあります:"
 
 #: ../../source/user/ogr_feature_style.rst:50
 msgid ""
@@ -97,6 +115,8 @@ msgid ""
 "referred to by the layers or by the individual features. The mechanism "
 "for that is defined further down in this document."
 msgstr ""
+" **データセット** は,事前に定義されたスタイルのテーブルを持つことができ,その後,レイヤーまたは個々の地物で参照できます."
+"そのメカニズムは,この文書の後ろで定義されています."
 
 #: ../../source/user/ogr_feature_style.rst:53
 msgid ""
@@ -105,6 +125,9 @@ msgid ""
 "dataset's table of styles. This can save storage space when the same "
 "styles are reused often."
 msgstr ""
+" **地物 (OGRFeatureオブジェクト)** は,独自の完全なスタイル定義を持つことができます."
+"また,データセットのスタイルテーブルに地物をリンクすることもできます."
+"これにより,同じスタイルが頻繁に再利用される場合にストレージスペースを節約できます."
 
 #: ../../source/user/ogr_feature_style.rst:58
 msgid ""
@@ -113,32 +136,36 @@ msgid ""
 "the style is actually stored will depend on the most efficient approach "
 "for the format we are dealing with."
 msgstr ""
+"特定のデータセットで作業するときに,さまざまなレベルの1つ以上でスタイル情報を保存できるようにする必要があります."
+"スタイルが実際に保存されるレベルは,取り扱うフォーマットに最も効率的なアプローチに依存します."
 
 #: ../../source/user/ogr_feature_style.rst:64
 msgid "1.3 Drawing Tools"
-msgstr ""
+msgstr "1.3 描画ツール"
 
 #: ../../source/user/ogr_feature_style.rst:66
 msgid ""
 "We define a small set of drawing tools that are used to build style "
 "definitions:"
 msgstr ""
+"スタイル定義を構築するために使用される描画ツールの小さなセットを"
+"定義します:"
 
 #: ../../source/user/ogr_feature_style.rst:69
 msgid "**PEN**: For linear styles"
-msgstr ""
+msgstr " **PEN**: 線スタイル用"
 
 #: ../../source/user/ogr_feature_style.rst:70
 msgid "**BRUSH**: For filling areas"
-msgstr ""
+msgstr " **BRUSH**: エリアの塗りつぶし用"
 
 #: ../../source/user/ogr_feature_style.rst:71
 msgid "**SYMBOL**: Point symbols"
-msgstr ""
+msgstr " **SYMBOL**: ポイントシンボル"
 
 #: ../../source/user/ogr_feature_style.rst:72
 msgid "**LABEL**: For annotations"
-msgstr ""
+msgstr " **LABEL**: 注記用"
 
 #: ../../source/user/ogr_feature_style.rst:74
 msgid ""
@@ -148,6 +175,9 @@ msgid ""
 " support. This will also make it easy to extend the specification in the "
 "future without breaking existing code or applications."
 msgstr ""
+"各描画ツールは,いくつかのパラメータを取ることができますが,すべてオプションです."
+"スタイル構文は,すべての可能なパラメータをサポートできないシステムが,サポートしていないパラメータを安全にスキップして無視できるように構築されています."
+"これにより,将来の仕様の拡張が容易になり,既存のコードやアプリケーションを壊すことなく行うことができます."
 
 #: ../../source/user/ogr_feature_style.rst:80
 msgid ""
@@ -160,6 +190,12 @@ msgid ""
 "leader to the text label, and draw the text string on the last vertex of "
 "the line."
 msgstr ""
+"スタイルは単一のツールを使用することも,1つ以上のツールを組み合わせて使用することもできます."
+"複数のツールをスタイルで組み合わせることで,ほぼすべての種類のグラフィカル表現を構築することができます."
+"たとえば,SYMBOLツールは,線に沿って間隔を空けてシンボルを配置するために使用できます."
+"また,LABELツールは,ポイントにテキストを配置したり,線に沿って伸ばしたりするために使用できます."
+"さらに,PENツールとLABELツールを組み合わせて,線をテキストラベルのリーダーとして使用し,テキスト"
+"文字列を線の最後の頂点に描画することもできます."
 
 #: ../../source/user/ogr_feature_style.rst:89
 msgid ""
@@ -168,10 +204,13 @@ msgid ""
 " all types of formats to exchange style information with the least "
 "possible loss."
 msgstr ""
+"もちろん,ほとんどのシステムはすべてをサポートすることはできません."
+"しかし,ここでの意図は,スタイル仕様を強力で柔軟性があり,できるだけ"
+"少ない損失ですべての種類の形式がスタイル情報を交換できるようにすることです."
 
 #: ../../source/user/ogr_feature_style.rst:95
 msgid "1.4 Feature attributes can be used by style definitions"
-msgstr ""
+msgstr "1.4 地物属性はスタイル定義で使用できます"
 
 #: ../../source/user/ogr_feature_style.rst:97
 msgid ""
@@ -179,6 +218,8 @@ msgid ""
 "attribute field on the feature for a given tool parameter's value instead"
 " of having a hardcoded value inside the style itself."
 msgstr ""
+"場合によっては,スタイル定義が,スタイル自体のハードコードされた値の代わりに,地物の"
+"属性フィールドを参照することが有用な場合があります."
 
 #: ../../source/user/ogr_feature_style.rst:101
 msgid ""
@@ -187,16 +228,20 @@ msgid ""
 " at the layer level if we lookup the angle and text string in an "
 "attribute on each feature."
 msgstr ""
+"これには,テキスト角度,テキスト文字列などが含まれます.これらの値は各テキストラベルで変更されますが,"
+"各地物の属性で角度とテキスト文字列を検索すると,ラベルスタイルの残りをレイヤーレベルで共有できます."
 
 #: ../../source/user/ogr_feature_style.rst:106
 msgid ""
 "The syntax of the style string provides a way that any parameter value "
 "can be either a constant value, or a lookup to an attribute field."
 msgstr ""
+"スタイル文字列の構文は,任意のパラメータ値が定数値であるか,属性フィールドへの"
+"ルックアップであるかを指定する方法を提供します."
 
 #: ../../source/user/ogr_feature_style.rst:110
 msgid "1.5 Tool parameter units"
-msgstr ""
+msgstr "1.5 ツールパラメータの単位"
 
 #: ../../source/user/ogr_feature_style.rst:112
 msgid ""
@@ -206,30 +251,33 @@ msgid ""
 "and others use ground units. In order to accommodate all that, all "
 "parameters can be specified in one of the following units systems:"
 msgstr ""
+"いくつかのパラメータ値は,取り扱うファイル形式によって異なる計測単位で表現できます."
+"たとえば,一部のシステムは線幅やテキストの高さをポイントで表現し,他のシステムはピクセルで表現し,他のシステムは地物単位を使用します."
+"これらすべてを収容するために,すべてのパラメータは次の単位系のいずれかで指定できます:"
 
 #: ../../source/user/ogr_feature_style.rst:118
 msgid "**g**: Map Ground Units (whatever the map coordinate units are)"
-msgstr ""
+msgstr " **g**: マップグラウンドユニット（マップ座標単位が何であるかに関係なく）"
 
 #: ../../source/user/ogr_feature_style.rst:119
 msgid "**px**: Pixels"
-msgstr ""
+msgstr " **px**: ピクセル"
 
 #: ../../source/user/ogr_feature_style.rst:120
 msgid "**pt**: Points (1/72 inch)"
-msgstr ""
+msgstr " **pt**: ポイント(1/72インチ)"
 
 #: ../../source/user/ogr_feature_style.rst:121
 msgid "**mm**: Millimeters"
-msgstr ""
+msgstr " **mm**: ミリメートル"
 
 #: ../../source/user/ogr_feature_style.rst:122
 msgid "**cm**: Centimeters"
-msgstr ""
+msgstr " **cm**: センチメートル"
 
 #: ../../source/user/ogr_feature_style.rst:123
 msgid "**in**: Inches"
-msgstr ""
+msgstr " **in**: インチ"
 
 #: ../../source/user/ogr_feature_style.rst:125
 msgid ""
@@ -238,10 +286,12 @@ msgid ""
 "imply that the GDAL client has to specify a map scale so that conversions"
 " from ground units to paper/pixel units can be performed."
 msgstr ""
+"いくつかのツールは,任意の値を1つの単位系から別の単位系に変換するためのGDALクライアントレベルで提供される必要があります."
+"これは,地物単位から紙/ピクセル単位への変換が行われるために,GDALクライアントがマップスケールを指定する必要があることを意味します."
 
 #: ../../source/user/ogr_feature_style.rst:133
 msgid "2. Feature Style String"
-msgstr ""
+msgstr "2. 地物スタイル文字列"
 
 #: ../../source/user/ogr_feature_style.rst:135
 msgid ""
@@ -249,28 +299,32 @@ msgid ""
 "strings, either in a per-layer (or per-dataset) table, or directly in the"
 " features."
 msgstr ""
+"前述のように,スタイル定義は通常,文字列として保存されます.レイヤーごと（またはデータセットごと）のテーブルに,"
+"または地物に直接保存できます."
 
 #: ../../source/user/ogr_feature_style.rst:140
 msgid "2.1 Examples"
-msgstr ""
+msgstr "2.1 例"
 
 #: ../../source/user/ogr_feature_style.rst:142
 msgid "Here are some example style definition strings:"
-msgstr ""
+msgstr "以下にいくつかのスタイル定義文字列の例を示します:"
 
 #: ../../source/user/ogr_feature_style.rst:144
 msgid "A 5 pixels wide red line: ``PEN(c:#FF0000,w:5px)``"
-msgstr ""
+msgstr "5ピクセル幅の赤い線: ``PEN(c:#FF0000,w:5px)``"
 
 #: ../../source/user/ogr_feature_style.rst:146
 msgid ""
 "A polygon filled in blue, with a black outline: "
 "``BRUSH(fc:#0000FF);PEN(c:#000000)``"
 msgstr ""
+"青で塗りつぶされたポリゴン,黒い輪郭:"
+" ``BRUSH(fc:#0000FF);PEN(c:#000000)``"
 
 #: ../../source/user/ogr_feature_style.rst:148
 msgid "A point symbol: ``SYMBOL(c:#00FF00,id:\"points.sym-45,ogr-sym-7\")``"
-msgstr ""
+msgstr "ポイントシンボル: ``SYMBOL(c:#00FF00,id:\"points.sym-45,ogr-sym-7\")``"
 
 #: ../../source/user/ogr_feature_style.rst:150
 msgid ""
@@ -278,36 +332,44 @@ msgid ""
 "attribute field: ``LABEL(f:\"Times New "
 "Roman\",s:12pt,t:{text_attribute})\"``"
 msgstr ""
+"テキストラベル,テキスト文字列を\"text_attribute\"属性フィールドから取得:"
+" ``LABEL(f:\"Times New Roman\",s:12pt,t:{text_attribute})\"``"
 
 #: ../../source/user/ogr_feature_style.rst:154
 msgid ""
 "Here is what a style table that contains all the above styles could look "
 "like:"
 msgstr ""
+"上記のすべてのスタイルを含むスタイルテーブルは次のように"
+"なります:"
 
 #: ../../source/user/ogr_feature_style.rst:164
 msgid ""
 "Then individual features can refer to styles from the table above using "
 "the \"@\" character followed by the style name in their style property."
 msgstr ""
+"その後,個々の地物は,スタイルプロパティで\"@\"文字に続いてスタイル名を指定して,"
+"上記のテーブルからスタイルを参照できます."
 
 #: ../../source/user/ogr_feature_style.rst:167
 msgid ""
 "For instance, a feature with its style set to \"@road\" would be drawn as"
 " a red line."
 msgstr ""
+"たとえば,スタイルが\"@road\"に設定された地物は,赤い線として"
+"描画されます."
 
 #: ../../source/user/ogr_feature_style.rst:171
 msgid "2.2 Style String Syntax"
-msgstr ""
+msgstr "2.2 スタイル文字列構文"
 
 #: ../../source/user/ogr_feature_style.rst:173
 msgid "Each feature object has a style property (a string):"
-msgstr ""
+msgstr "各地物オブジェクトにはスタイルプロパティ（文字列）があります:"
 
 #: ../../source/user/ogr_feature_style.rst:179
 msgid "``<style_def>`` is defined later in this section."
-msgstr ""
+msgstr " ``<style_def>`` はこのセクションの後で定義されています."
 
 #: ../../source/user/ogr_feature_style.rst:180
 msgid ""
@@ -315,6 +377,9 @@ msgid ""
 "does not indicate that the feature is invisible – an invisible feature "
 "may be indicated using a fully transparent color, like PEN(c:#00000000)."
 msgstr ""
+"空のスタイル文字列は,地物のスタイルが未指定であることを意味します."
+"これは,地物が不可視であることを示すものではありません.不可視な地物は,"
+"PEN(c:#00000000)のような完全に透明な色を使用して示すことができます."
 
 #: ../../source/user/ogr_feature_style.rst:184
 msgid ""
@@ -322,12 +387,16 @@ msgid ""
 "the dataset's style table. The layer's table is looked up first, and if "
 "style_name is not found there then the dataset's table will be looked up."
 msgstr ""
+" ``@<style_name>`` は,レイヤーまたはデータセットのスタイルテーブルに事前に定義されたスタイルへの参照です."
+"最初にレイヤーのテーブルが検索され,そこでstyle_nameが見つからない場合はデータセットのテーブルが検索されます."
 
 #: ../../source/user/ogr_feature_style.rst:188
 msgid ""
 "Finally, ``{<field_name>}`` means that the style property should be read "
 "from the specified attribute field."
 msgstr ""
+"最後に, ``{<field_name>}`` は,スタイルプロパティが指定された属性フィールドから"
+"読み取られるべきであることを意味します."
 
 #: ../../source/user/ogr_feature_style.rst:191
 msgid ""
@@ -335,6 +404,8 @@ msgid ""
 " more style parts separated by semicolons. Each style_part uses a drawing"
 " tool to define a portion of the complete graphical representation:"
 msgstr ""
+"<style_def> は実際のスタイル定義です.それは,セミコロンで区切られた1つ以上のスタイルパートの組み合わせです."
+"各style_partは,完全なグラフィカル表現の一部を定義するために描画ツールを使用します:"
 
 #: ../../source/user/ogr_feature_style.rst:214
 msgid ""
@@ -342,6 +413,8 @@ msgid ""
 "style_def string unless each part is assigned a different level parameter"
 " value (see the level parameter definition)."
 msgstr ""
+"デフォルトでは,style_def文字列に表示される順序でスタイルパートが描画されます."
+"各パートに異なるレベルパラメータ値が割り当てられていない限り（レベルパラメータの定義を参照）."
 
 #: ../../source/user/ogr_feature_style.rst:218
 msgid ""
@@ -352,6 +425,10 @@ msgid ""
 "provides advisory default values for most parameters, but it is not "
 "mandatory for an application to use those default values."
 msgstr ""
+"すべての描画ツールパラメータはオプションです.そのため,描画ツールパラメータリストが空のスタイルパート（例:\"PEN()\"）を持つことは"
+"合法です.指定された値がない各パラメータについては,クライアントアプリケーションが独自のデフォルト値を使用するかどうかは,"
+"クライアントアプリケーションによるものです.この文書は,ほとんどのパラメータに対して助言的なデフォルト値を提供していますが,"
+"アプリケーションがこれらのデフォルト値を使用することは義務付けられていません."
 
 #: ../../source/user/ogr_feature_style.rst:225
 msgid ""
@@ -367,31 +444,38 @@ msgid ""
 " be able to override the default units from inside an attribute field's "
 "value."
 msgstr ""
+"{<field_name>} がtool_param値に使用される場合,単位に関していくつかのオプションが利用可能です."
+"単位は,フィールド名の後に指定できます（例:PEN(c:#FF0000,w:{line_width}pt)）または指定しないで残すことができます（例:PEN(c:#FF0000,w:{line_width}))."
+"最初の場合,デフォルトの単位はポイント(pt)になりますが,属性フィールドline_widthに単位略語(例:\"5px\"）が続く値が含まれている場合,"
+"属性フィールドで指定された単位が優先されます（この場合,ピクセル）."
+"属性フィールドに単位値を含める必要はなく,ほとんどの場合は含まれませんが,属性フィールドの値の内部からデフォルトの単位をオーバーライドできるようにするためのオプション機能です."
 
 #: ../../source/user/ogr_feature_style.rst:238
 msgid "2.3 Pen Tool Parameters"
-msgstr ""
+msgstr "2.3 ペンツールパラメータ"
 
 #: ../../source/user/ogr_feature_style.rst:240
 #: ../../source/user/ogr_feature_style.rst:364
 #: ../../source/user/ogr_feature_style.rst:459
 #: ../../source/user/ogr_feature_style.rst:586
 msgid "**Applicable geometry types:**"
-msgstr ""
+msgstr " **適用可能なジオメトリタイプ:** "
 
 #: ../../source/user/ogr_feature_style.rst:242
 msgid ""
 "Point: When applied to a point, a PEN tool can only define the color and "
 "the size of the point to draw."
 msgstr ""
+"ポイント: ポイントに適用される場合,ペンツールは色と描画するポイントのサイズのみを"
+"定義できます."
 
 #: ../../source/user/ogr_feature_style.rst:244
 msgid "Polyline: This is the most obvious case."
-msgstr ""
+msgstr "ポリライン: これは最も明らかなケースです."
 
 #: ../../source/user/ogr_feature_style.rst:245
 msgid "Polygon: Defines the way the outline of a polygon should be drawn."
-msgstr ""
+msgstr "ポリゴン: ポリゴンの輪郭を描画する方法を定義します."
 
 #: ../../source/user/ogr_feature_style.rst:247
 msgid ""
@@ -403,7 +487,7 @@ msgstr ""
 
 #: ../../source/user/ogr_feature_style.rst:252
 msgid "``c``: **Pen Color**, expressed hexadecimal (#RRGGBB[AA])"
-msgstr ""
+msgstr " ``c``: **ペンカラー** , 16進数で表現される(#RRGGBB[AA])"
 
 #: ../../source/user/ogr_feature_style.rst:254
 #: ../../source/user/ogr_feature_style.rst:377
@@ -413,61 +497,67 @@ msgid ""
 "[AA]: the last 2 digits define the alpha channel value, with 0 being "
 "transparent and FF being opaque. The default is FF (opaque)"
 msgstr ""
+"[AA]: 最後の2桁はアルファチャンネル値を定義し,0は透明でFFは不透明です."
+"デフォルトはFF(不透明)です."
 
 #: ../../source/user/ogr_feature_style.rst:256
 msgid "Suggested default: black (c:#000000)"
-msgstr ""
+msgstr "推奨デフォルト: 黒 (c:#000000)"
 
 #: ../../source/user/ogr_feature_style.rst:257
 msgid "Example: PEN(c:#FF0000), or PEN(C:#FF0000FF)"
-msgstr ""
+msgstr "例: PEN(c:#FF0000), または PEN(C:#FF0000FF)"
 
 #: ../../source/user/ogr_feature_style.rst:260
 msgid ""
 "``w``: **Pen Width**, expressed as a numeric value with units (g, px, pt,"
 " mm, cm, in)"
 msgstr ""
+" ``w``: **ペン幅** , 単位を持つ数値で表現されます(g, px, pt, "
+"mm, cm, in)"
 
 #: ../../source/user/ogr_feature_style.rst:263
 msgid "Suggested default: 1 pixel"
-msgstr ""
+msgstr "推奨デフォルト: 1ピクセル"
 
 #: ../../source/user/ogr_feature_style.rst:264
 msgid "Examples: PEN(c:#FF0000,w:5px), PEN(w:3pt), PEN(w:50g)"
-msgstr ""
+msgstr "例: PEN(c:#FF0000,w:5px), PEN(w:3pt), PEN(w:50g)"
 
 #: ../../source/user/ogr_feature_style.rst:266
 msgid ""
 "``p``: **Pattern**. To create dash lines. A list of pen-down/pen-up "
 "distances"
 msgstr ""
+" ``p``: **パターン**. 破線を作成するためのペンダウン/ペンアップ距離の"
+"リスト"
 
 #: ../../source/user/ogr_feature_style.rst:268
 #: ../../source/user/ogr_feature_style.rst:319
 msgid "Examples:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/user/ogr_feature_style.rst:270
 msgid "|style_pen1| = PEN(c:#FF0000,w:2px,p:\"4px 5px\"). short-dash line"
-msgstr ""
+msgstr " |style_pen1| = PEN(c:#FF0000,w:2px,p:\"4px 5px\"). 破線"
 
 #: ../../source/user/ogr_feature_style.rst:276
 msgid "style_pen1"
-msgstr ""
+msgstr "style_pen1"
 
 #: ../../source/user/ogr_feature_style.rst:272
 msgid "|style_pen2| = PEN(c:#FF0000,w:2px,p:\"10px 5px\"). long-dash line"
-msgstr ""
+msgstr " |style_pen2| = PEN(c:#FF0000,w:2px,p:\"10px 5px\"). 長破線"
 
 #: ../../source/user/ogr_feature_style.rst:279
 msgid "style_pen2"
-msgstr ""
+msgstr "style_pen2"
 
 #: ../../source/user/ogr_feature_style.rst:274
 msgid ""
 "|style_pen3| = PEN(c:#FF0000,w:2px,p:\"10px 5px 4px 5px\"). long/short "
 "dash"
-msgstr ""
+msgstr " |style_pen3| = PEN(c:#FF0000,w:2px,p:\"10px 5px 4px 5px\"). 長/短破線"
 
 #: ../../source/user/ogr_feature_style.rst:282
 msgid "style_pen3"
@@ -484,46 +574,51 @@ msgid ""
 "of ids so that an application never has to rely on understanding system-"
 "specific ids."
 msgstr ""
+" ``id``: **コンマ区切りのペン名またはID** ペンを名前またはIDで識別するシステム用."
+" IDのコンマ区切りリスト内の名前は,ターゲットシステムによって認識されるまでスキャンされます."
+" ペンIDは,システム固有のID(以下を参照)または既知の線パターンのOGRペンIDのいずれかであることができます."
+" idパラメータは,アプリケーションがシステム固有のIDを理解する必要がないように,"
+"IDのコンマ区切りリストの末尾に常にOGR IDの1つを含めるべきです."
 
 #: ../../source/user/ogr_feature_style.rst:296
 msgid "Here is the current list of OGR pen ids (this could grow time):"
-msgstr ""
+msgstr "現在のOGRペンIDのリストは次のとおりです(時間が経つと増えるかもしれません):"
 
 #: ../../source/user/ogr_feature_style.rst:298
 msgid "ogr-pen-0: solid (the default when no id is provided)"
-msgstr ""
+msgstr "ogr-pen-0: 実線(IDが指定されていない場合のデフォルト)"
 
 #: ../../source/user/ogr_feature_style.rst:299
 msgid "ogr-pen-1: null pen (invisible)"
-msgstr ""
+msgstr "ogr-pen-1: ヌルペン（不可視）"
 
 #: ../../source/user/ogr_feature_style.rst:300
 msgid "ogr-pen-2: dash"
-msgstr ""
+msgstr "ogr-pen-2: 破線"
 
 #: ../../source/user/ogr_feature_style.rst:301
 msgid "ogr-pen-3: short-dash"
-msgstr ""
+msgstr "ogr-pen-3: 短破線"
 
 #: ../../source/user/ogr_feature_style.rst:302
 msgid "ogr-pen-4: long-dash"
-msgstr ""
+msgstr "ogr-pen-4: 長破線"
 
 #: ../../source/user/ogr_feature_style.rst:303
 msgid "ogr-pen-5: dot line"
-msgstr ""
+msgstr "ogr-pen-5: 点線"
 
 #: ../../source/user/ogr_feature_style.rst:304
 msgid "ogr-pen-6: dash-dot line"
-msgstr ""
+msgstr "ogr-pen-6: 破線・点線"
 
 #: ../../source/user/ogr_feature_style.rst:305
 msgid "ogr-pen-7: dash-dot-dot line"
-msgstr ""
+msgstr "ogr-pen-7: 破線・点・点線"
 
 #: ../../source/user/ogr_feature_style.rst:306
 msgid "ogr-pen-8: alternate-line (sets every other pixel)"
-msgstr ""
+msgstr "ogr-pen-8: 交互線（ピクセルごとに設定）"
 
 #: ../../source/user/ogr_feature_style.rst:308
 msgid ""
@@ -533,6 +628,9 @@ msgid ""
 "meaningful to that system (a number, a name, a filename, etc.). e.g. "
 "\"mapinfo-5\", or \"mysoft-lines.sym-123\", or \"othersystems-funnyline\""
 msgstr ""
+"システム固有のIDは,おそらくそれを作成した特定のシステムにのみ意味がある可能性が高いです."
+"IDは,システムの名前で始まり,ダッシュ(-)が続き,そのシステムにとって意味のある情報（番号,名前,ファイル名など）が続きます."
+"例: \"mapinfo-5\", \"mysoft-lines.sym-123\", \"othersystems-funnyline\""
 
 #: ../../source/user/ogr_feature_style.rst:314
 msgid ""
@@ -541,10 +639,13 @@ msgid ""
 "files or that have their own pre-defined set of line styles (for "
 "instance, to do a MapInfo MIF to TAB translation without any loss."
 msgstr ""
+"システム固有のIDは,外部ファイルに線パターンを保存するシステムや,独自の"
+"事前定義された線スタイルセットを持つシステムのデータを取り扱う際に情報の損失を防ぐために許可されています."
+"たとえば,損失なしでMapInfo MIFからTABへの変換を行うためです."
 
 #: ../../source/user/ogr_feature_style.rst:321
 msgid "PEN(c:#00FF00,id:\"ogr-pen-0\") - simple solid line"
-msgstr ""
+msgstr "PEN(c:#00FF00,id:\"ogr-pen-0\") - 単純な実線"
 
 #: ../../source/user/ogr_feature_style.rst:322
 msgid ""
@@ -552,62 +653,80 @@ msgid ""
 "#5, and a system that can't understand MapInfo pens falls back on the "
 "default \"ogr-pen-7\" pen (dot-dot line)."
 msgstr ""
+"PEN(c:#00FF00,id:\"mapinfo-5,ogr-pen-7\") - MapInfoのペン#5に対応し,MapInfoペンを理解できないシステムは,"
+"デフォルトの\"ogr-pen-7\"ペン（破線・点・点線）にフォールバックします."
 
 #: ../../source/user/ogr_feature_style.rst:327
 msgid "``cap``: **Pen Cap** - Set the shape of  end points of lines."
-msgstr ""
+msgstr " ``cap``: **ペンキャップ** - 線の端点の形状を設定します."
 
 #: ../../source/user/ogr_feature_style.rst:329
 msgid ""
 "\"cap:b\" - Butt: The ends of the line don't extend beyond the end "
 "points. This is the default."
 msgstr ""
+"\"cap:b\" - バット: 線の端点を超えません. "
+"これがデフォルトです."
 
 #: ../../source/user/ogr_feature_style.rst:331
 msgid ""
 "\"cap:r\" - Round: Terminate lines with a circle whose diameter is equal "
 "to the line width."
 msgstr ""
+"\"cap:r\" - ラウンド: 線を線幅と同じ直径の円で終了"
+"します."
 
 #: ../../source/user/ogr_feature_style.rst:333
 msgid ""
 "\"cap:p\" - Projecting: Similar to Butt, but the ends of the line extend "
 "by half of line width beyond the end points."
 msgstr ""
+"\"cap:p\" - プロジェクション: バットに似ていますが,線の端点を超えて線幅の半分"
+"だけ延長します."
 
 #: ../../source/user/ogr_feature_style.rst:337
 msgid "``j``: **Pen Join** - Set the shape of the join point (vertex) of lines."
-msgstr ""
+msgstr " ``j``: **ペンジョイン** - 線の結合点（頂点）の形状を設定します."
 
 #: ../../source/user/ogr_feature_style.rst:339
 msgid ""
 "\"j:m\" - Miter: Extend the outer edge of the lines until they touch. "
 "This is the default."
 msgstr ""
+"\"j:m\" - マイター: 線の外縁を接触するまで延長します. "
+"これがデフォルトです."
 
 #: ../../source/user/ogr_feature_style.rst:341
 msgid ""
 "\"j:r\" - Rounded: Join lines with an arc whose center is at the join "
 "point and whose diameter is equal to the line width."
 msgstr ""
+"\"j:r\" - ラウンド: 結合点に中心があり,直径が線幅と等しい円弧で線を"
+"結合します."
 
 #: ../../source/user/ogr_feature_style.rst:343
 msgid ""
 "\"j:b\" - Bevel: Join the lines with butt end caps and fill the resulting"
 " triangular notch at the join position."
 msgstr ""
+"\"j:b\" - ベベル: バットエンドキャップで線を結合し,結合位置の三角形の"
+"切り欠きを埋めます."
 
 #: ../../source/user/ogr_feature_style.rst:347
 msgid ""
 "``dp``: **Perpendicular Offset**, expressed as a numeric value units (g, "
 "px, pt, mm, cm, in)"
 msgstr ""
+" ``dp``: **垂直オフセット** , 単位を持つ数値で表現されます(g, px, pt, "
+"mm, cm, in)"
 
 #: ../../source/user/ogr_feature_style.rst:350
 msgid ""
 "Offset from the line center. If the offset is negative then the pen will "
 "be drawn left of the main segment and right otherwise."
 msgstr ""
+"線の中心からのオフセット. オフセットが負の場合,ペンはメインセグメントの左側に描画され,"
+"それ以外の場合は右側に描画されます."
 
 #: ../../source/user/ogr_feature_style.rst:354
 #: ../../source/user/ogr_feature_style.rst:449
@@ -617,6 +736,8 @@ msgid ""
 "``l``: **Priority Level** - Numeric value defining the order in which "
 "style parts should be drawn."
 msgstr ""
+" ``l``: **優先レベル** - スタイルパートが描画される順序を定義"
+"する数値."
 
 #: ../../source/user/ogr_feature_style.rst:357
 #: ../../source/user/ogr_feature_style.rst:452
@@ -626,57 +747,65 @@ msgid ""
 "Lower priority style parts are drawn first, and higher priority ones are "
 "drawn on top. If priority level is unspecified, the default is 1."
 msgstr ""
+"優先度が低いスタイルパートが最初に描画され,優先度が高いものが上に描画されます."
+"優先度が指定されていない場合,デフォルトは1です."
 
 #: ../../source/user/ogr_feature_style.rst:362
 msgid "2.4 Brush Tool Parameters"
-msgstr ""
+msgstr "2.4 ブラシツールパラメータ"
 
 #: ../../source/user/ogr_feature_style.rst:366
 msgid "Point: Not applicable."
-msgstr ""
+msgstr "Point: 適用されません."
 
 #: ../../source/user/ogr_feature_style.rst:367
 msgid "Polyline: Not applicable."
-msgstr ""
+msgstr "Polyline: 適用されません."
 
 #: ../../source/user/ogr_feature_style.rst:368
 msgid "Polygon: Defines the way the surface of a polygon is filled."
-msgstr ""
+msgstr "Polygon: ポリゴンの表面を塗りつぶす方法を定義します."
 
 #: ../../source/user/ogr_feature_style.rst:370
 msgid ""
 "Here is the current list of BRUSH tool parameters. Note again that that "
 "this list may be extended in the future, and all parameters are optional:"
 msgstr ""
+"現在のBRUSHツールパラメータのリストは次のとおりです."
+"このリストは将来拡張される可能性があり,すべてのパラメータはオプションです:"
 
 #: ../../source/user/ogr_feature_style.rst:374
 msgid ""
 "``fc``: **Brush ForeColor**, expressed in hexadecimal (#RRGGBB[AA]). Used"
 " for painting the brush pattern itself."
 msgstr ""
+" ``fc``: **ブラシフォアカラー** , 16進数で表現される(#RRGGBB[AA])."
+"ブラシパターン自体を塗るために使用されます."
 
 #: ../../source/user/ogr_feature_style.rst:379
 #, python-format
 msgid "Suggested default: 50% grey (c:#808080)"
-msgstr ""
+msgstr "推奨デフォルト: 50%グレー (c:#808080)"
 
 #: ../../source/user/ogr_feature_style.rst:380
 msgid "Example: BRUSH(fc:#FF0000)"
-msgstr ""
+msgstr "例: BRUSH(fc:#FF0000)"
 
 #: ../../source/user/ogr_feature_style.rst:383
 msgid ""
 "``bc``: **Brush BackColor**, expressed in hexadecimal (#RRGGBB[AA]). Used"
 " for painting the area behind the brush pattern."
 msgstr ""
+" ``bc``: **ブラシバックカラー** , 16進数で表現される(#RRGGBB[AA])."
+"ブラシパターンの背後の領域を塗るために使用されます."
 
 #: ../../source/user/ogr_feature_style.rst:388
 msgid "Suggested default: transparent (c:#FFFFFF00)"
-msgstr ""
+msgstr "推奨デフォルト: 透明 (c:#FFFFFF00)"
 
 #: ../../source/user/ogr_feature_style.rst:389
 msgid "Example: BRUSH(fc:#FF0000,bc:#FFEEDD)"
-msgstr ""
+msgstr "例: BRUSH(fc:#FF0000,bc:#FFEEDD)"
 
 #: ../../source/user/ogr_feature_style.rst:392
 msgid ""
@@ -684,6 +813,8 @@ msgid ""
 "or ids. The names in the comma-delimited list of ids are scanned until "
 "one is recognized by the target system."
 msgstr ""
+" ``id``: **ブラシ名またはブラシID** - コンマ区切りのブラシ名またはID."
+"IDのコンマ区切りリスト内の名前は,ターゲットシステムによって認識されるまでスキャンされます."
 
 #: ../../source/user/ogr_feature_style.rst:396
 msgid ""
@@ -693,44 +824,50 @@ msgid ""
 "comma-delimited list of ids so that an application never has to rely on "
 "understanding system-specific ids."
 msgstr ""
+"ブラシIDは,システム固有のID(以下を参照)または既知のブラシパターンのOGRブラシIDのいずれかであることができます."
+"idパラメータは,アプリケーションがシステム固有のIDを理解する必要がないように,"
+"IDのコンマ区切りリストの末尾に常にOGR IDの1つを含めるべきです."
 
 #: ../../source/user/ogr_feature_style.rst:402
 msgid "Here is the current list of OGR brush ids (this could grow over time):"
-msgstr ""
+msgstr "現在のOGRブラシIDのリストは次のとおりです(時間が経つと増えるかもしれません):"
 
 #: ../../source/user/ogr_feature_style.rst:406
 msgid "ogr-brush-0: solid foreground color (the default when no id  is provided)"
-msgstr ""
+msgstr "ogr-brush-0: 実線前景色(IDが指定されていない場合のデフォルト)"
 
 #: ../../source/user/ogr_feature_style.rst:407
 msgid ""
 "ogr-brush-1: null brush (transparent - no fill, irrespective of fc or bc "
 "values"
 msgstr ""
+"ogr-brush-1: ヌルブラシ（透明 - 塗りつぶしなし,fcまたはbcの値に"
+"関係なく"
+
 
 #: ../../source/user/ogr_feature_style.rst:409
 msgid "ogr-brush-2: horizontal hatch"
-msgstr ""
+msgstr "ogr-brush-2: 水平ハッチ"
 
 #: ../../source/user/ogr_feature_style.rst:410
 msgid "ogr-brush-3: vertical hatch"
-msgstr ""
+msgstr "ogr-brush-3: 垂直ハッチ"
 
 #: ../../source/user/ogr_feature_style.rst:411
 msgid "ogr-brush-4: top-left to bottom-right diagonal hatch"
-msgstr ""
+msgstr "ogr-brush-4: 左上から右下への対角ハッチ"
 
 #: ../../source/user/ogr_feature_style.rst:412
 msgid "ogr-brush-5: bottom-left to top-right diagonal hatch"
-msgstr ""
+msgstr "ogr-brush-5: 左下から右上への対角ハッチ"
 
 #: ../../source/user/ogr_feature_style.rst:413
 msgid "ogr-brush-6: cross hatch"
-msgstr ""
+msgstr "ogr-brush-6: クロスハッチ"
 
 #: ../../source/user/ogr_feature_style.rst:414
 msgid "ogr-brush-7: diagonal cross hatch"
-msgstr ""
+msgstr "ogr-brush-7: 対角クロスハッチ"
 
 #: ../../source/user/ogr_feature_style.rst:416
 msgid ""
@@ -740,32 +877,40 @@ msgid ""
 "whatever information is meaningful to that system (a number, a name, a "
 "filename, etc.)."
 msgstr ""
+"ペンIDと同様に,システム固有のブラシIDは,おそらくそれを作成した特定のシステムにのみ意味がある可能性が高いです."
+"IDは,システムの名前で始まり,ダッシュ(-)が続き,そのシステムにとって意味のある情報（番号,名前,ファイル名など）が続きます."
 
 #: ../../source/user/ogr_feature_style.rst:421
 msgid ""
 "The following conventions will be used for common system-specific brush "
 "ids:"
 msgstr ""
+"一般的なシステム固有のブラシIDには,次の規則が使用"
+"されます:"
 
 #: ../../source/user/ogr_feature_style.rst:423
 msgid "\"bmp-filename.bmp\" for Windows BMP patterns"
-msgstr ""
+msgstr "\"bmp-filename.bmp\" はWindows BMPパターンです"
 
 #: ../../source/user/ogr_feature_style.rst:425
 msgid ""
 "Other conventions may be added in the future (such as vector symbols, "
 "WMF, etc)."
 msgstr ""
+"将来他の規則が追加されるかもしれません（ベクトルシンボル,"
+"WMFなど)."
 
 #: ../../source/user/ogr_feature_style.rst:429
 msgid ""
 "``a``: **Angle** - Rotation angle (in degrees, counterclockwise) to apply"
 " to the brush pattern."
 msgstr ""
+" ``a``: **角度** - ブラシパターンに適用する回転角度"
+"（度数法,反時計回り）."
 
 #: ../../source/user/ogr_feature_style.rst:433
 msgid "``s``: **Size or Scaling Factor** - Numeric value with or without units."
-msgstr ""
+msgstr " ``s``: **サイズまたはスケーリングファクタ** - 単位付きまたは単位なしの数値."
 
 #: ../../source/user/ogr_feature_style.rst:435
 msgid ""
@@ -773,12 +918,16 @@ msgid ""
 "brush or symbol. If no units are specified then it is taken as a scaling "
 "factor relative to the symbol's default size."
 msgstr ""
+"単位が指定されている場合,この値はブラシまたはシンボルを描画する絶対サイズです."
+"単位が指定されていない場合,これはシンボルのデフォルトサイズに対するスケーリングファクタとして取られます."
 
 #: ../../source/user/ogr_feature_style.rst:440
 msgid ""
 "``dx``, ``dy``: **Spacing**, expressed as a numeric value with units (g, "
 "px, pt, mm, cm, in)"
 msgstr ""
+" ``dx``, ``dy``: **間隔** , 単位を持つ数値で表現されます(g, px, pt, "
+"mm, cm, in)"
 
 #: ../../source/user/ogr_feature_style.rst:443
 msgid ""
@@ -788,42 +937,53 @@ msgid ""
 "The default is to use the symbol's bounding box width and height for dx "
 "and dy respectively."
 msgstr ""
+"ポイントシンボルを使用して領域を塗りつぶす場合,これらの値はそれらの間の間隔を定義します."
+"\"dx\"は,隣接する2つのシンボルの中心間の水平距離を,\"dy\"は垂直距離を定義します."
+"デフォルトは,それぞれdxとdyにシンボルの境界ボックスの幅と高さを使用することです."
 
 #: ../../source/user/ogr_feature_style.rst:457
 msgid "2.5 Symbol Tool Parameters"
-msgstr ""
+msgstr "2.5 シンボルツールパラメータ"
 
 #: ../../source/user/ogr_feature_style.rst:461
 msgid "Point: Place a symbol at the point's location"
-msgstr ""
+msgstr "Point: ポイントの位置にシンボルを配置します"
 
 #: ../../source/user/ogr_feature_style.rst:462
 msgid ""
 "Polyline: Place symbols along the polyline, either at each vertex, or "
 "equally spaced."
 msgstr ""
+"Polyline: ポリラインに沿ってシンボルを配置します.各頂点または"
+"等間隔で."
 
 #: ../../source/user/ogr_feature_style.rst:464
 msgid "Polygon: Place the symbols on the outline of the polygon."
-msgstr ""
+msgstr "Polygon: ポリゴンの輪郭にシンボルを配置します."
 
 #: ../../source/user/ogr_feature_style.rst:466
 msgid ""
 "Here is the current list of SYMBOL tool parameters. Note again that that "
 "this list may be extended in the future, and all parameters are optional:"
 msgstr ""
+"現在のSYMBOLツールパラメータのリストは次のとおりです."
+"このリストは将来拡張される可能性があり,すべてのパラメータはオプションです:"
 
 #: ../../source/user/ogr_feature_style.rst:470
 msgid ""
 "``id``: **Symbol Name or Id** - Comma-delimited list of symbol names or "
 "ids."
 msgstr ""
+" ``id``: **シンボル名またはID** - コンマ区切りのシンボル名"
+"またはID."
 
 #: ../../source/user/ogr_feature_style.rst:472
 msgid ""
 "The names in the comma-delimited list of ids are scanned until one is "
 "recognized by the target system."
 msgstr ""
+"IDのコンマ区切りリスト内の名前は,ターゲットシステムによって認識されるまで"
+"スキャンされます."
 
 #: ../../source/user/ogr_feature_style.rst:475
 msgid ""
@@ -833,56 +993,61 @@ msgid ""
 "comma-delimited list of ids so that an application never has to rely on "
 "understanding system-specific ids."
 msgstr ""
+"シンボルIDは,システム固有のID(以下を参照)または既知のシンボルのOGRシンボルIDのいずれかであることができます."
+"idパラメータは,アプリケーションがシステム固有のIDを理解する必要がないように,"
+"IDのコンマ区切りリストの末尾に常にOGR IDの1つを含めるべきです."
 
 #: ../../source/user/ogr_feature_style.rst:481
 msgid "Here is the current list of OGR symbol ids (this could grow over time):"
-msgstr ""
+msgstr "現在のOGRシンボルIDのリストは次のとおりです(時間が経つと増えるかもしれません):"
 
 #: ../../source/user/ogr_feature_style.rst:485
 msgid "ogr-sym-0: cross (+)"
-msgstr ""
+msgstr "ogr-sym-0: 十字(+)"
 
 #: ../../source/user/ogr_feature_style.rst:486
 msgid "ogr-sym-1: diagcross (X)"
-msgstr ""
+msgstr "ogr-sym-1: 斜め十字(X)"
 
 #: ../../source/user/ogr_feature_style.rst:487
 msgid "ogr-sym-2: circle (not filled)"
-msgstr ""
+msgstr "ogr-sym-2: 円（塗りつぶしなし）"
 
 #: ../../source/user/ogr_feature_style.rst:488
 msgid "ogr-sym-3: circle (filled)"
-msgstr ""
+msgstr "ogr-sym-3: 円（塗りつぶし）"
 
 #: ../../source/user/ogr_feature_style.rst:489
 msgid "ogr-sym-4: square (not filled)"
-msgstr ""
+msgstr "ogr-sym-4: 四角形（塗りつぶしなし）"
 
 #: ../../source/user/ogr_feature_style.rst:490
 msgid "ogr-sym-5: square (filled)"
-msgstr ""
+msgstr "ogr-sym-5: 四角形（塗りつぶし）"
 
 #: ../../source/user/ogr_feature_style.rst:491
 msgid "ogr-sym-6: triangle (not filled)"
-msgstr ""
+msgstr "ogr-sym-6: 三角形（塗りつぶしなし）"
 
 #: ../../source/user/ogr_feature_style.rst:492
 msgid "ogr-sym-7: triangle (filled)"
-msgstr ""
+msgstr "ogr-sym-7: 三角形（塗りつぶし）"
 
 #: ../../source/user/ogr_feature_style.rst:493
 msgid "ogr-sym-8: star (not filled)"
-msgstr ""
+msgstr "ogr-sym-8: 星（塗りつぶしなし）"
 
 #: ../../source/user/ogr_feature_style.rst:494
 msgid "ogr-sym-9: star (filled)"
-msgstr ""
+msgstr "ogr-sym-9: 星（塗りつぶし）"
 
 #: ../../source/user/ogr_feature_style.rst:495
 msgid ""
 "ogr-sym-10: vertical bar (can be rotated using angle attribute to produce"
 " diagonal bar)"
 msgstr ""
+"ogr-sym-10: 垂直バー（角度属性を使用して対角バーを生成することが"
+"できます）"
 
 #: ../../source/user/ogr_feature_style.rst:498
 msgid ""
@@ -892,16 +1057,20 @@ msgid ""
 "whatever information is meaningful to that system (a number, a name, a "
 "filename, etc.)."
 msgstr ""
+"ペンIDと同様に,システム固有のシンボルIDは,おそらくそれを作成した特定のシステムにのみ意味がある可能性が高いです."
+"IDは,システムの名前で始まり,ダッシュ(-)が続き,そのシステムにとって意味のある情報（番号,名前,ファイル名など）が続きます."
 
 #: ../../source/user/ogr_feature_style.rst:503
 msgid ""
 "The following conventions will be used for common system-specific symbol "
 "ids:"
 msgstr ""
+"一般的なシステム固有のシンボルIDには,次の規則が使用"
+"されます:"
 
 #: ../../source/user/ogr_feature_style.rst:505
 msgid "\"bmp-filename.bmp\" for Windows BMP symbols"
-msgstr ""
+msgstr "\"bmp-filename.bmp\" はWindows BMPシンボルです"
 
 #: ../../source/user/ogr_feature_style.rst:506
 #, python-format
@@ -909,47 +1078,55 @@ msgid ""
 "\"font-sym-%d\" for a font symbols, where %d is a glyph number inside a "
 "font, font family is defined by **f** style field."
 msgstr ""
+"\"font-sym-%d\" はフォントシンボルです.ここで, %d はフォント内のグリフ番号であり,"
+"フォントファミリは **f** スタイルフィールドで定義されます."
 
 #: ../../source/user/ogr_feature_style.rst:509
 msgid ""
 "Other conventions may be added in the future (such as vector symbols, "
 "WMF, etc.)"
 msgstr ""
+"将来他の規則が追加されるかもしれません（ベクトルシンボル,"
+"WMFなど)."
 
 #: ../../source/user/ogr_feature_style.rst:513
 msgid ""
 "``a``: **Angle** - Rotation angle (in degrees, counterclockwise) to apply"
 " to the symbol."
 msgstr ""
+" ``a``: **角度** - シンボルに適用する回転角度"
+"（度数法,反時計回り）."
 
 #: ../../source/user/ogr_feature_style.rst:517
 msgid "``c``: **Symbol Color**, expressed in hexadecimal (#RRGGBB[AA])"
-msgstr ""
+msgstr " ``c``: **シンボルカラー** , 16進数で表現される(#RRGGBB[AA])"
 
 #: ../../source/user/ogr_feature_style.rst:521
 msgid "Suggested default symbol color: black (c:#000000)"
-msgstr ""
+msgstr "推奨デフォルトシンボルカラー: 黒 (c:#000000)"
 
 #: ../../source/user/ogr_feature_style.rst:522
 #: ../../source/user/ogr_feature_style.rst:561
 #: ../../source/user/ogr_feature_style.rst:578
 #: ../../source/user/ogr_feature_style.rst:603
 msgid "Example ::"
-msgstr ""
+msgstr "例 ::"
 
 #: ../../source/user/ogr_feature_style.rst:526
 msgid "``o``: **Symbol Outline Color**, expressed in hexadecimal (#RRGGBB[AA])."
-msgstr ""
+msgstr " ``o``: **シンボルアウトラインカラー** , 16進数で表現される(#RRGGBB[AA])"
 
 #: ../../source/user/ogr_feature_style.rst:528
 msgid ""
 "If this parameter is set, an additional halo or border of this color is "
 "drawn around the symbol."
 msgstr ""
+"このパラメータが設定されている場合,この色の追加のハローや境界がシンボルの周りに"
+"描画されます."
 
 #: ../../source/user/ogr_feature_style.rst:532
 msgid "``s``:  **Size or Scaling Factor** - Numeric value with or without units."
-msgstr ""
+msgstr " ``s``:  **サイズまたはスケーリングファクタ** - 単位付きまたは単位なしの数値."
 
 #: ../../source/user/ogr_feature_style.rst:534
 msgid ""
@@ -957,24 +1134,33 @@ msgid ""
 "symbol. If no units are specified then it is taken as a scaling factor "
 "relative to the symbol's default size."
 msgstr ""
+"単位が指定されている場合,この値はシンボルを描画する絶対サイズです."
+"単位が指定されていない場合,これはシンボルのデフォルトサイズに対するスケーリングファクタ"
+"として取られます."
 
 #: ../../source/user/ogr_feature_style.rst:539
 msgid ""
 "``dx``, ``dy``: **X and Y offset**, of the symbol's insertion point, "
 "expressed as a numeric value with units (g, px, pt, mm, cm, in)"
 msgstr ""
+" ``dx``, ``dy``: **XおよびYオフセット** , シンボルの挿入点のオフセット, "
+"単位を持つ数値で表現されます(g, px, pt, mm, cm, in)"
 
 #: ../../source/user/ogr_feature_style.rst:542
 msgid ""
 "Applies to point geometries, and to symbols placed at each vertex of a "
 "polyline."
 msgstr ""
+"ポイントジオメトリに適用され,ポリラインの各頂点に配置されたシンボルにも"
+"適用されます."
 
 #: ../../source/user/ogr_feature_style.rst:546
 msgid ""
 "``ds``, ``dp``, ``di``: **Spacing parameters** for symbols spaced along a"
 " line, expressed as a numeric value with units (g, px, pt, mm, cm, in)."
 msgstr ""
+" ``ds``, ``dp``, ``di``: **ラインに沿って配置されたシンボルの間隔パラメータ** , "
+"単位を持つ数値で表現されます(g, px, pt, mm, cm, in)."
 
 #: ../../source/user/ogr_feature_style.rst:549
 msgid ""
@@ -984,6 +1170,10 @@ msgid ""
 "equal distance along the line. \"ds\" has no effect for a feature with a "
 "point geometry."
 msgstr ""
+" ``ds`` は,ラインに沿ってシンボルを配置する際に使用するステップです."
+"デフォルトでは,ラインジオメトリを持つフィーチャに適用されるシンボルは各頂点に配置されますが,"
+"\"ds\"を設定すると,ラインに沿って等しい距離にシンボルを配置します."
+"\"ds\"はポイントジオメトリを持つフィーチャには影響しません."
 
 #: ../../source/user/ogr_feature_style.rst:555
 msgid ""
@@ -997,11 +1187,13 @@ msgid ""
 "``di`` can be used to specify an initial offset from the beginning of the"
 " line."
 msgstr ""
+" ``di`` は,ラインの始まりからの初期オフセットを指定するために使用"
+"できます."
 
 #: ../../source/user/ogr_feature_style.rst:573
 #: ../../source/user/ogr_feature_style.rst:598
 msgid "``f``: **Font Name** - Comma-delimited list of fonts names."
-msgstr ""
+msgstr " ``f``: **フォント名** - コンマ区切りのフォント名."
 
 #: ../../source/user/ogr_feature_style.rst:575
 #: ../../source/user/ogr_feature_style.rst:600
@@ -1009,18 +1201,20 @@ msgid ""
 "Works like the CSS font-family property: the list of font names is "
 "scanned until a known font name is encountered."
 msgstr ""
+"CSSフォントファミリプロパティのように機能します:フォント名のリストは,"
+"既知のフォント名が見つかるまでスキャンされます."
 
 #: ../../source/user/ogr_feature_style.rst:584
 msgid "2.6 Label Tool Parameters"
-msgstr ""
+msgstr "2.6 ラベルツールパラメータ"
 
 #: ../../source/user/ogr_feature_style.rst:588
 msgid "Point: Place a text label at the point's location"
-msgstr ""
+msgstr "Point: ポイントの位置にテキストラベルを配置します"
 
 #: ../../source/user/ogr_feature_style.rst:589
 msgid "Polyline: Place text along the polyline."
-msgstr ""
+msgstr "Polyline: ポリラインに沿ってテキストを配置します."
 
 #: ../../source/user/ogr_feature_style.rst:590
 msgid ""
@@ -1028,18 +1222,24 @@ msgid ""
 "behave exactly as if the geometry was a point located at the polygon's "
 "centroid."
 msgstr ""
+"Polygon: ポリゴンの重心にラベルを配置します.すべてのパラメータは,"
+"ポリゴンの重心にあるポイントとしてジオメトリがあるかのように振る舞います."
 
 #: ../../source/user/ogr_feature_style.rst:594
 msgid ""
 "Here is the current list of LABEL tool parameters. Note again that that "
 "this list may be extended in the future, and all parameters are optional:"
 msgstr ""
+"現在のLABELツールパラメータのリストは次のとおりです."
+"このリストは将来拡張される可能性があり,すべてのパラメータはオプションです:"
 
 #: ../../source/user/ogr_feature_style.rst:608
 msgid ""
 "``s``: **Font Size**, expressed as a numeric value with units (g, px, pt,"
 " mm, cm, in)."
 msgstr ""
+" ``s``: **フォントサイズ** , 単位を持つ数値で表現されます(g, px, pt,"
+" mm, cm, in)."
 
 #: ../../source/user/ogr_feature_style.rst:611
 msgid ""
@@ -1055,32 +1255,47 @@ msgid ""
 "sizing when using the ogr2ogr tool. This parameter could be subject to "
 "clearer specification in the future."
 msgstr ""
+"CADの世界では,フォントサイズまたは\"テキストの高さ\"は,大文字の高さを決定します - "
+"タイポグラファーが\"キャップの高さ\"と呼ぶものです.しかし,タイポグラフィ,グラフィックス,"
+"地図作成の世界では,フォントサイズはフォントの\"emの高さ\"を指します.これは,キャップの高さよりも高いです."
+"これは,DXFファイルで1インチの高さに割り当てられたテキストが,PDFファイルやMapInfoマップの72ポイントの"
+"テキストよりも大きく見えることを意味します."
+"現在, GDALベクタードライバは,そのフォーマットでネイティブに使用されるフォントサイズの測定"
+"(キャップの高さまたはemの高さ)を\"s:\"スタイル文字列値として扱います."
+"これは,ogr2ogrツールを使用する際にテキストのサイズが不正確になる可能性があるため,"
+"このパラメータは将来的により明確な仕様になる可能性があります."
 
 #: ../../source/user/ogr_feature_style.rst:623
 msgid ""
 "``t``: **Text String** - Can be a constant string, or a reference to an "
 "attribute field's value."
 msgstr ""
+" ``t``: **テキスト文字列** - 定数文字列または属性フィールドの値への"
+"参照です."
 
 #: ../../source/user/ogr_feature_style.rst:626
 msgid ""
 "If a double-quote character or backslash (\\) character is present in the"
 " string, it is escaped with a backslash character before it."
 msgstr ""
+"文字列に二重引用符またはバックスラッシュ(\\)文字が含まれている場合,それは"
+"それの前にバックスラッシュ文字でエスケープされます."
 
 #: ../../source/user/ogr_feature_style.rst:629
 msgid "Examples ::"
-msgstr ""
+msgstr "例 ::"
 
 #: ../../source/user/ogr_feature_style.rst:636
 msgid "``a``: **Angle** - Rotation angle (in degrees, counterclockwise)."
-msgstr ""
+msgstr " ``a``: **角度** - 回転角度(度数法,反時計回り)."
 
 #: ../../source/user/ogr_feature_style.rst:638
 msgid ""
 "``c``: **Text Foreground Color**, expressed in hexadecimal (#RRGGBB[AA]) "
 "Suggested default: black (c:#000000)"
 msgstr ""
+" ``c``: **テキスト前景色** , 16進数で表現される(#RRGGBB[AA]) "
+"推奨デフォルト: 黒 (c:#000000)"
 
 #: ../../source/user/ogr_feature_style.rst:641
 msgid ""
@@ -1088,6 +1303,9 @@ msgid ""
 " the label, expressed in hexadecimal (#RRGGBB[AA]). No box drawn if not "
 "set."
 msgstr ""
+" ``b``: **テキスト背景色** - ラベルの背後に描画する塗りつぶしボックスの色, "
+"16進数で表現される(#RRGGBB[AA]) "
+"設定されていない場合,ボックスは描画されません."
 
 #: ../../source/user/ogr_feature_style.rst:644
 msgid ""
@@ -1095,12 +1313,17 @@ msgid ""
 "MapInfo terminology), expressed in hexadecimal (#RRGGBB[AA]). No outline "
 "if not set."
 msgstr ""
+" ``o``: **テキストアウトラインカラー** - テキストのアウトラインの色(MapInfo用語でのhalo), "
+"16進数で表現される(#RRGGBB[AA]) "
+"設定されていない場合,アウトラインは描画されません."
 
 #: ../../source/user/ogr_feature_style.rst:647
 msgid ""
 "``h``: **Shadow Color** - Color of the text shadow, expressed in "
 "hexadecimal (#RRGGBB[AA]). No shadow if not set."
 msgstr ""
+" ``h``: **シャドウカラー** - テキストシャドウの色, 16進数で表現される(#RRGGBB[AA]) "
+"設定されていない場合,シャドウは描画されません."
 
 #: ../../source/user/ogr_feature_style.rst:650
 #, python-format
@@ -1110,18 +1333,25 @@ msgid ""
 " 150 results in all characters in the font being stretched to 150% of "
 "their usual width. The default stretch factor is 100."
 msgstr ""
+" ``w``: **ストレッチ** - ストレッチファクタは,フォント内のすべての文字の幅を指定されたパーセンテージで変更します."
+"たとえば,150の設定は,フォント内のすべての文字が通常の幅の150%にストレッチされる結果となります."
+"デフォルトのストレッチファクタは100です."
 
 #: ../../source/user/ogr_feature_style.rst:655
 msgid ""
 "``m``: **Label Placement Mode** - How the text is drawn relative to the "
 "feature's geometry."
 msgstr ""
+" ``m``: **ラベル配置モード** - テキストがフィーチャのジオメトリに対して"
+"描画される方法."
 
 #: ../../source/user/ogr_feature_style.rst:658
 msgid ""
 "\"m:p\" - The default. A simple label is attached to a point or to the "
 "first vertex of a polyline."
 msgstr ""
+"\"m:p\" - デフォルト. 単純なラベルがポイントまたはポリラインの最初の頂点に"
+"アタッチされます."
 
 #: ../../source/user/ogr_feature_style.rst:660
 msgid ""
@@ -1129,28 +1359,35 @@ msgid ""
 "can be combined with this LABEL tool to draw the polyline as a leader to "
 "the label."
 msgstr ""
+"\"m:l\" - テキストはポリラインの最後の頂点にアタッチされます."
+"PENツールをこのLABELツールと組み合わせて,ポリラインをラベルにリーダーとして描画することができます."
 
 #: ../../source/user/ogr_feature_style.rst:663
 msgid ""
 "\"m:s\" - Stretch the text string along a polyline, with an equal spacing"
 " between each character."
 msgstr ""
+"\"m:s\" - テキスト文字列をポリラインに沿ってストレッチし,各文字の間に等間隔を"
+"設定します."
 
 #: ../../source/user/ogr_feature_style.rst:665
 msgid ""
 "\"m:m\" - Place text as a single label at the middle of a polyline (based"
 " on total line length)."
 msgstr ""
+"\"m:m\" - ポリラインの中央に単一のラベルとしてテキストを配置します(合計ライン長に基づく)."
 
 #: ../../source/user/ogr_feature_style.rst:667
 msgid "\"m:w\" - One word per line segment in a polyline."
-msgstr ""
+msgstr "\"m:w\" - ポリラインの各ラインセグメントに1つの単語."
 
 #: ../../source/user/ogr_feature_style.rst:668
 msgid ""
 "\"m:h\" - Every word of text attached to polyline is placed horizontally "
 "in its segment, anchor point is a center of segment."
 msgstr ""
+"\"m:h\" - ポリラインにアタッチされたテキストの各単語は,そのセグメント内で水平に配置されます."
+"アンカーポイントはセグメントの中心です."
 
 #: ../../source/user/ogr_feature_style.rst:670
 msgid ""
@@ -1158,18 +1395,23 @@ msgid ""
 " segment of polyline and placed along that segment. The anchor point is a"
 " start of a segment."
 msgstr ""
+"\"m:a\" - ポリラインにアタッチされたテキストの各単語は,ポリラインのセグメントに合わせてストレッチされ,"
+"そのセグメントに沿って配置されます.アンカーポイントはセグメントの開始です."
 
 #: ../../source/user/ogr_feature_style.rst:675
 msgid ""
 "``p``: **Anchor Position** - A value from 1 to 12 defining the label's "
 "position relative to the point to which it is attached"
 msgstr ""
+" ``p``: **アンカーポジション** - ラベルがアタッチされるポイントに対するラベルの位置を定義する1から12の値"
 
 #: ../../source/user/ogr_feature_style.rst:678
 msgid ""
 "There are four vertical alignment modes: *baseline*, *center*, *top* and "
 "*bottom*; and three horizontal modes: *left*, *center* and *right*."
 msgstr ""
+"4つの垂直配置モードがあります: *baseline*, *center*, *top* および *bottom*;"
+"および3つの水平モード: *left*, *center* および *right*."
 
 #: ../../source/user/ogr_feature_style.rst:683
 msgid ""
@@ -1178,22 +1420,28 @@ msgid ""
 "point with p:7) differs from file format to file format. This parameter "
 "could be subject to clearer specification in the future."
 msgstr ""
+"現在,これらの値の正確な解釈（たとえば,大文字の文字のアクセントがp:7の"
+"アラインメントポイントの上または下にあるかどうか）は,ファイルフォーマットによって異なります."
+"このパラメータは将来的により明確な仕様になる可能性があります."
 
 #: ../../source/user/ogr_feature_style.rst:689
 msgid ""
 "``dx``, ``dy``: **X and Y offset** of the label's insertion point, "
 "expressed as a numeric value with units (g, px, pt, mm, cm, in)."
 msgstr ""
+" ``dx``, ``dy``: **XおよびYオフセット** , ラベルの挿入点のオフセット, "
+"単位を持つ数値で表現されます(g, px, pt, mm, cm, in)."
 
 #: ../../source/user/ogr_feature_style.rst:692
 msgid "Applies to text placed on a point, or at each vertex of a polyline."
-msgstr ""
+msgstr "ポイントに配置されたテキストまたはポリラインの各頂点に適用されます."
 
 #: ../../source/user/ogr_feature_style.rst:695
 msgid ""
 "``dp``: **Perpendicular Offset** for labels placed along a line, "
 "expressed as a numeric value with units (g, px, pt, mm, cm, in)."
 msgstr ""
+" ``dp``: **ラインに沿って配置されたラベルの垂直オフセット** , 単位を持つ数値で表現されます(g, px, pt, mm, cm, in)."
 
 #: ../../source/user/ogr_feature_style.rst:698
 msgid ""
@@ -1201,38 +1449,45 @@ msgid ""
 "line along which it is placed. If the offset is negative then the label "
 "will be shifted left of the main segment, and right otherwise."
 msgstr ""
+"\"dp\"は,ラベルとその配置されたラインの間の垂直距離を指定します."
+"オフセットが負の場合,ラベルはメインセグメントの左にシフトされ,それ以外の場合は右にシフトされます."
 
 #: ../../source/user/ogr_feature_style.rst:703
 msgid "``bo``: **Bold** - Set to 1 for bold text. Set to 0 or omitted otherwise."
-msgstr ""
+msgstr " ``bo``: **太字** - 太字テキストに設定します. それ以外の場合は0または省略します."
 
 #: ../../source/user/ogr_feature_style.rst:705
 msgid ""
 "``it``: **Italic** - Set to 1 for italic text. Set to 0 or omitted "
 "otherwise."
 msgstr ""
+" ``it``: **イタリック** - イタリックテキストに設定します. それ以外の場合は0または省略します."
 
 #: ../../source/user/ogr_feature_style.rst:707
 msgid ""
 "``un``: **Underline** - Set to 1 for underlined text. Set to 0 or omitted"
 " otherwise."
 msgstr ""
+" ``un``: **下線** - 下線付きテキストに設定します. それ以外の場合は0または省略します."
 
 #: ../../source/user/ogr_feature_style.rst:710
 msgid ""
 "``st``:  **Strikethrough** - Set to 1 for struck-through text. Set to 0 "
 "or omitted otherwise."
 msgstr ""
+" ``st``:  **取り消し線** - 取り消し線付きテキストに設定します. それ以外の場合は0または省略します."
 
 #: ../../source/user/ogr_feature_style.rst:721
 msgid "2.7 Styles Table Format"
-msgstr ""
+msgstr "2.7 スタイルテーブルフォーマット"
 
 #: ../../source/user/ogr_feature_style.rst:723
 msgid ""
 "For file formats that support tables of styles, then the predefined "
 "styles would be stored in that format."
 msgstr ""
+"スタイルテーブルをサポートするファイルフォーマットの場合,事前定義されたスタイルはそのフォーマットに"
+"保存されます."
 
 #: ../../source/user/ogr_feature_style.rst:726
 msgid ""
@@ -1241,16 +1496,20 @@ msgid ""
 "extension and the same basename as the dataset. This would apply to "
 "formats like Esri Shapefile."
 msgstr ""
+"スタイルテーブルをサポートしていないファイルフォーマットの場合,スタイルテーブルは,"
+"データセットと同じベース名の .ofs (OGR Feature Styles) 拡張子のテキストファイルに保存されます."
+"これは,Esri Shapefileなどのフォーマットに適用されます."
 
 #: ../../source/user/ogr_feature_style.rst:731
 msgid "Here is an example of a .ofs file:"
-msgstr ""
+msgstr "以下は, .ofs ファイルの例です:"
 
 #: ../../source/user/ogr_feature_style.rst:744
 msgid ""
 "The first line is a signature with a version number, which must be "
 "present."
 msgstr ""
+"最初の行は,存在する必要があるバージョン番号を持つシグネチャです."
 
 #: ../../source/user/ogr_feature_style.rst:747
 msgid ""
@@ -1259,20 +1518,25 @@ msgid ""
 "corresponding layer. This is optional, if not set, then the objects in "
 "the layer will all share the same style defined in DefaultStyle."
 msgstr ""
+"2行目 (StyleField: \"style\") は,対応するレイヤの各オブジェクトに保存される"
+"Feature Style Stringが格納される属性フィールドの名前です. これはオプションです."
+"設定されていない場合,レイヤ内のオブジェクトはすべて,DefaultStyleで定義された同じスタイルを共有します."
 
 #: ../../source/user/ogr_feature_style.rst:752
 msgid ""
 "The third line (DefaultStyle:...) defines the style that applies by "
 "default to all objects that have no explicit style."
 msgstr ""
+"3行目 (DefaultStyle:...) は,明示的なスタイルを持たないすべてのオブジェクトに"
+"デフォルトで適用されるスタイルを定義します."
 
 #: ../../source/user/ogr_feature_style.rst:755
 msgid "Then the list of style definitions follow."
-msgstr ""
+msgstr "次に,スタイル定義のリストが続きます."
 
 #: ../../source/user/ogr_feature_style.rst:758
 msgid "2.8 Using OGR SQL to transfer the style between the data sources"
-msgstr ""
+msgstr "2.8 OGR SQLを使用してデータソース間でスタイルを転送する"
 
 #: ../../source/user/ogr_feature_style.rst:760
 msgid ""
@@ -1280,6 +1544,8 @@ msgid ""
 "style, and ogr2ogr can be used to transfer the style string between data "
 "sources according to the following example:"
 msgstr ""
+"**OGR_STYLE** 特別なフィールドを使用して,地物レベルのスタイルを抽出することができ,"
+"ogr2ogrを使用して,以下の例に従ってデータソース間でスタイル文字列を転送することができます:"
 
 #: ../../source/user/ogr_feature_style.rst:768
 msgid ""
@@ -1287,6 +1553,8 @@ msgid ""
 "truncate the length to a default value. Therefore it may be necessary to "
 "specify the target length manually, like:"
 msgstr ""
+"スタイルフィールドの長さを指定しない場合,出力ドライバは長さをデフォルト値に切り捨てる可能性があります."
+"そのため,次のようにターゲットの長さを手動で指定する必要があるかもしれません:"
 
 #: ../../source/user/ogr_feature_style.rst:776
 msgid ""
@@ -1294,10 +1562,13 @@ msgid ""
 "OGRFeature::GetStyleString will return the value of this field if no "
 "style string has been specified programmatically."
 msgstr ""
+"OGRは,OGR_STYLEフィールドが存在する場合にその使用を認識しており,"
+"OGRFeature::GetStyleStringは,プログラムでスタイル文字列が指定されていない場合に,"
+"このフィールドの値を返します."
 
 #: ../../source/user/ogr_feature_style.rst:785
 msgid "3. OGR Support Classes"
-msgstr ""
+msgstr "3. OGRサポートクラス"
 
 #: ../../source/user/ogr_feature_style.rst:787
 msgid ""
@@ -1311,6 +1582,12 @@ msgid ""
 ":cpp:func:`OGRFeature::SetStyleTableDirectly` for managing style tables "
 "as instances of the :cpp:class:`OGRStyleTable` class."
 msgstr ""
+" :cpp:class:`OGRFeature` クラスには,フィーチャのスタイル文字列としてCスタイルの文字列として"
+"相互作用するために使用できるメンバ関数 :cpp:func:`OGRFeature::GetStyleString`, "
+" :cpp:func:`OGRFeature::SetStyleString` および :cpp:func:`OGRFeature::SetStyleStringDirectly` があります."
+"さらに, :cpp:class:`OGRStyleTable` クラスのインスタンスとしてスタイルテーブルを管理するための "
+" :cpp:func:`OGRFeature::GetStyleTable`, :cpp:func:`OGRFeature::SetStyleTable` および "
+" :cpp:func:`OGRFeature::SetStyleTableDirectly` があります."
 
 #: ../../source/user/ogr_feature_style.rst:794
 msgid ""
@@ -1318,6 +1595,9 @@ msgid ""
 ":cpp:func:`OGRLayer::GetStyleTable`, :cpp:func:`OGRLayer::SetStyleTable` "
 "and :cpp:func:`OGRLayer::SetStyleTableDirectly` member functions."
 msgstr ""
+" :cpp:class:`OGRLayer` および :cpp:class:`GDALDataset` クラスにも "
+" :cpp:func:`OGRLayer::GetStyleTable`, :cpp:func:`OGRLayer::SetStyleTable` および "
+" :cpp:func:`OGRLayer::SetStyleTableDirectly` メンバ関数があります."
 
 #: ../../source/user/ogr_feature_style.rst:797
 msgid ""
@@ -1331,14 +1611,20 @@ msgid ""
 ":source_file:`ogr/ogr_featurestyle.h` and "
 ":source_file:`ogr/ogrfeaturestyle.cpp` code files."
 msgstr ""
+"スタイル文字列を解析するために, :cpp:class:`OGRStyleMgr` クラスが使用されます."
+"文字列内の各スタイルツールは, :cpp:class:`OGRStyleTool` クラスのインスタンスとしてアクセスされます."
+"最後に,各ツールに対して1つのヘルパークラスが存在します(:cpp:class:`OGRStylePen`, :cpp:class:`OGRStyleBrush`, "
+" :cpp:class:`OGRStyleSymbol`, :cpp:class:`OGRStyleLabel`), 各利用可能なパラメータは,ゲッターおよびセッターメンバ関数で表されます."
+"これらのクラスをよりよく理解するためには, :source_file:`ogr/ogr_featurestyle.h` および "
+" :source_file:`ogr/ogrfeaturestyle.cpp` のコードファイルを読むと役立つかもしれません."
 
 #: ../../source/user/ogr_feature_style.rst:810
 msgid "Here is some example C++ code:"
-msgstr ""
+msgstr "以下は,いくつかのC++コードの例です:"
 
 #: ../../source/user/ogr_feature_style.rst:888
 msgid "Revision history"
-msgstr ""
+msgstr "リビジョン履歴"
 
 #: ../../source/user/ogr_feature_style.rst:890
 msgid ""
