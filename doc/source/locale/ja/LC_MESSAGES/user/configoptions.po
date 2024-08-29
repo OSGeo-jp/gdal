@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/configoptions.rst:5
 msgid "Configuration options"
-msgstr ""
+msgstr "設定オプション"
 
 #: ../../source/user/configoptions.rst:7
 msgid ""
@@ -31,6 +31,10 @@ msgid ""
 "runtime. They can be set programmatically, by commandline switches or in "
 "the environment by the user."
 msgstr ""
+"このページでは,GDALの実行時設定オプションについて説明します.これらはビルド時の "
+"configure スクリプトのオプションとは異なります.実行時の設定オプションはすべての "
+"プラットフォームに適用され,実行時に評価されます.ユーザーは,プログラムで設定したり、"
+"コマンドラインスイッチで設定したり,環境変数で設定したりすることができます."
 
 #: ../../source/user/configoptions.rst:12
 msgid ""
@@ -38,10 +42,12 @@ msgid ""
 "GDAL/OGR drivers and in some cases the GDAL/OGR core. They are "
 "essentially global variables the user can set."
 msgstr ""
+"設定オプションは,通常,GDAL/OGR ドライバーのデフォルトの動作を変更するために使用されます."
+"場合によっては,GDAL/OGR コアも変更されます.これらは,ユーザーが設定できるグローバル変数です."
 
 #: ../../source/user/configoptions.rst:17
 msgid "How to set configuration options?"
-msgstr ""
+msgstr "設定オプションの設定方法"
 
 #: ../../source/user/configoptions.rst:19
 msgid ""
@@ -49,10 +55,12 @@ msgid ""
 "option. It controls the size of the GDAL block cache, in megabytes. It "
 "can be set in the environment on Unix (bash/bourne) shell like this:"
 msgstr ""
+"設定オプションの一例は, :config:`GDAL_CACHEMAX` オプションです.これは,メガバイト単位で "
+"GDAL ブロックキャッシュのサイズを制御します.これは,Unix (bash/bourne) シェルで環境変数としてこのように設定できます:"
 
 #: ../../source/user/configoptions.rst:29
 msgid "In a DOS/Windows command shell it is done like this:"
-msgstr ""
+msgstr "DOS/Windows コマンドシェルでは,次のように指定します:"
 
 #: ../../source/user/configoptions.rst:35
 msgid ""
