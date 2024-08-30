@@ -226,8 +226,8 @@ msgid ""
 "``rms`` computes the root mean squared / quadratic mean of all non-NODATA"
 " contributing pixels (GDAL >= 3.3)"
 msgstr ""
-"``rms``  は、すべての非NODATA適用ピクセルの二乗平均平方根/二乗平均を計算します”
-”(GDAL >= 3.3)"
+"``rms``  は、すべての非NODATA適用ピクセルの二乗平均平方根/二乗平均を計算します"
+"(GDAL >= 3.3)"
 
 #: ../../source/programs/gdal_translate.rst:135
 msgid "``bilinear`` applies a bilinear convolution kernel."

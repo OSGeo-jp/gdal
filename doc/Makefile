@@ -73,7 +73,7 @@ generated_rst_files: $(BUILDDIR)/.doxygen_up_to_date
 	$(PYTHON) "$(SOURCEDIR)/build_driver_summary.py" "$(SOURCEDIR)/drivers/raster" raster_driver_summary "$(SOURCEDIR)/drivers/raster/driver_summary.rst"
 	$(PYTHON) "$(SOURCEDIR)/build_driver_summary.py" "$(SOURCEDIR)/drivers/vector" vector_driver_summary "$(SOURCEDIR)/drivers/vector/driver_summary.rst"
 
-update: gettext
+update: generated_rst_files
 	$(SPHINXINTL) update -d $(SOURCEDIR)/locale -p $(BUILDDIR)/gettext -l $(LA)
 
 .PHONY: html latexpdf
