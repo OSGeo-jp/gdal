@@ -32,7 +32,7 @@ msgid ""
 "This document is intended to document the support for coordinate epoch, "
 "linked to dynamic CRS."
 msgstr ""
-"この文書は、ダイナミックCRSに関連する座標元期のサポートについて説明するものです."
+"この文書は,ダイナミックCRSに関連する座標元期のサポートについて説明するものです."
 
 #: ../../source/user/coordinate_epoch.rst:15
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 msgstr ""
 "汎用EPSG:4326 WGS 84 CRSもダイナミックと見なされますが,その位置精度が2メートルである"
 "データムアンサンブルに基づいているため,使用をお勧めしません.代わりに, WGS 84 (G1762)"
-"などの実現の1つを使用してください."
+"などの実装しているものの1つを使用してください."
 
 #: ../../source/user/coordinate_epoch.rst:26
 msgid ""
@@ -140,8 +140,8 @@ msgid ""
 "<http://docs.opengeospatial.org/is/18-010r7/18-010r7.html#130>`__ "
 "construct, set in the ``Crs.wkt`` header field of the FlatGeoBuf file."
 msgstr ""
-"座標元期は,FlatGeoBufファイルの ``Crs.wkt`` ヘッダーフィールドに設定された,`COORDINATEMETADATA "
-"<http://docs.opengeospatial.org/is/18-010r7/18-010r7.html#130>`__ 構造の ``EPOCH`` サブノードを使用して,"
+"座標元期は,FlatGeoBufファイルの ``Crs.wkt`` ヘッダーフィールドに設定された, `COORDINATEMETADATA "
+"<http://docs.opengeospatial.org/is/18-010r7/18-010r7.html#130>`__  構造の ``EPOCH`` サブノードを使用して,"
 "WKT:2019文字列としてエンコードされます."
 
 #: ../../source/user/coordinate_epoch.rst:82
@@ -165,7 +165,7 @@ msgid ""
 "(https://github.com/opengeospatial/geopackage/pull/600)."
 msgstr ""
 "座標元期が関連付けられている各ベクター/ラスターテーブルは,CRS WKT拡張の拡張バージョンを使用して,"
-"``gpkg_spatial_ref_sys`` テーブルの ``epoch`` 列にエンコードされます"
+" ``gpkg_spatial_ref_sys`` テーブルの  ``epoch`` 列にエンコードされます"
 "(https://github.com/opengeospatial/geopackage/pull/600)."
 
 #: ../../source/user/coordinate_epoch.rst:94

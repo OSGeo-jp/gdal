@@ -68,6 +68,8 @@ msgid ""
 "with the ``--config`` switch, though in a few cases these switches are "
 "not evaluated in time to affect behavior."
 msgstr ""
+"ほとんどのGDALとOGRユーティリティでは, ``--config`` スイッチを使用してコマンドラインで設定することもできますが, "
+"これらのスイッチが挙動に影響を与えるように評価されるまでの時間がかかるため,いくつかの場合は評価されません."
 
 #: ../../source/user/configoptions.rst:43
 msgid ""
@@ -76,12 +78,15 @@ msgid ""
 "string instead of having ``<NAME>`` and ``<VALUE>`` as two space-"
 "separated strings."
 msgstr ""
+"GDAL 3.9 以降, ``<NAME>`` と ``<VALUE>`` を2つのスペースで区切った文字列ではなく,"
+" ``<NAME>``=``<VALUE>`` の単一のコマンドライン文字列を使用して設定オプションを設定することも可能です."
 
 #: ../../source/user/configoptions.rst:51
 msgid ""
 "In C/C++ configuration switches can be set programmatically with "
 ":cpp:func:`CPLSetConfigOption`:"
 msgstr ""
+"C/C++ では, :cpp:func:`CPLSetConfigOption` を使用してプログラムで設定オプションを設定できます:"
 
 #: ../../source/user/configoptions.rst:60
 msgid ""
@@ -89,28 +94,34 @@ msgid ""
 "program, but they can be limited to only the current thread with "
 ":cpp:func:`CPLSetThreadLocalConfigOption`"
 msgstr ""
+"通常,設定オプションはプログラム内でアクティブなすべてのスレッドに適用されますが, "
+" :cpp:func:`CPLSetThreadLocalConfigOption` を使用して,現在のスレッドにのみ制限することもできます."
 
 #: ../../source/user/configoptions.rst:68
 msgid ""
 "For boolean options, the values YES, TRUE or ON can be used to turn the "
 "option on; NO, FALSE or OFF to turn it off."
 msgstr ""
+"ブールオプションの場合,YES, TRUE, ON はオプションをオンにするために使用できます; "
+"NO, FALSE, OFF はオフにするために使用できます."
 
 #: ../../source/user/configoptions.rst:75
 msgid "GDAL configuration file"
-msgstr ""
+msgstr "GDAL設定ファイル"
 
 #: ../../source/user/configoptions.rst:79
 msgid ""
 "On driver registration, loading of configuration is attempted from a set "
 "of predefined files."
 msgstr ""
+"ドライバー登録時に,事前定義されたファイルセットからの設定の読み込みが試みられます."
 
 #: ../../source/user/configoptions.rst:82
 msgid ""
 "The following locations are tried by "
 ":cpp:func:`CPLLoadConfigOptionsFromPredefinedFiles`:"
 msgstr ""
+" :cpp:func:`CPLLoadConfigOptionsFromPredefinedFiles` によって次の場所が試されます:"
 
 #: ../../source/user/configoptions.rst:84
 msgid ""
@@ -118,6 +129,8 @@ msgid ""
 "option) :config:`GDAL_CONFIG_FILE` is attempted first. If it is set, the "
 "next steps are not attempted"
 msgstr ""
+"環境変数 (または設定オプション) :config:`GDAL_CONFIG_FILE` で指定された場所が最初に試されます. "
+"設定されている場合,次のステップは試されません"
 
 #: ../../source/user/configoptions.rst:88
 msgid ""
@@ -127,29 +140,35 @@ msgid ""
 "$(HOME)/.gdal/gdalrc is tried, potentially overriding what was loaded "
 "with the sysconfdir"
 msgstr ""
+"Unix ビルドの場合,最初に ${sysconfdir}/gdal/gdalrc で指定された場所が試されます "
+"(${sysconfdir} は ${prefix}/etc に評価されます, ``./configure`` の ``--sysconfdir`` スイッチが呼び出されていない限り). "
+"次に $(HOME)/.gdal/gdalrc が試され,sysconfdir で読み込まれたものを上書きする可能性があります"
 
 #: ../../source/user/configoptions.rst:93
 msgid ""
 "for Windows builds, the location pointed by $(USERPROFILE)/.gdal/gdalrc "
 "is attempted."
 msgstr ""
+"Windows ビルドの場合, $(USERPROFILE)/.gdal/gdalrc で指定された場所が試されます."
 
 #: ../../source/user/configoptions.rst:96
 msgid ""
 "A configuration file is a text file in a .ini style format. Lines "
 "starting with `#` are comment lines."
 msgstr ""
+"設定ファイルは .ini スタイルのテキストファイルです. `#` で始まる行はコメント行です."
 
 #: ../../source/user/configoptions.rst:99
 msgid ""
 "The file may contain a ``[configoptions]`` section, that lists "
 "configuration options and their values."
 msgstr ""
+"ファイルには,設定オプションとその値をリストする ``[configoptions]`` セクションが含まれている場合があります."
 
 #: ../../source/user/configoptions.rst:102
 #: ../../source/user/configoptions.rst:136
 msgid "Example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/user/configoptions.rst:111
 msgid ""
@@ -158,6 +177,8 @@ msgid ""
 ":cpp:func:`CPLSetThreadLocalConfigOption`, or through the ``--config`` "
 "command line switch."
 msgstr ""
+"設定ファイルで設定された設定オプションは,後で :cpp:func:`CPLSetConfigOption` または "
+":cpp:func:`CPLSetThreadLocalConfigOption` の呼び出し,または ``--config`` コマンドラインスイッチを介して上書きできます."
 
 #: ../../source/user/configoptions.rst:115
 msgid ""
@@ -166,6 +187,8 @@ msgid ""
 "with GDAL 3.6, the configuration file starts with a ``[directives]`` "
 "section that contains a ``ignore-env-variables=yes`` entry."
 msgstr ""
+"GDALが開始される前に設定された環境変数の値が,設定ファイルで設定された値の代わりに使用されます. "
+"ただし,GDAL 3.6 以降,設定ファイルが ``[directives]`` セクションで始まり, ``ignore-env-variables=yes`` エントリが含まれている場合は,環境変数の値は無視されます."
 
 #: ../../source/user/configoptions.rst:129
 msgid ""
@@ -177,24 +200,31 @@ msgid ""
 "subsection whose name starts with \"[.\" (e.g. "
 "\"[.some_arbitrary_name]\"), and whose first key is \"path\"."
 msgstr ""
+"GDAL 3.5 以降,設定ファイルには,特定のパスプレフィックスに関連する資格情報"
+" (またはより一般的には仮想ファイルシステムに関連するオプション) を含めることもできます. "
+"これは, :cpp:func:`VSISetPathSpecificOption` で設定することもできます. "
+"資格情報は ``[credentials]`` セクションの下に配置し,各パスプレフィックスに対して,"
+"名前が \"[.\" で始まる相対サブセクションの下に配置します (例: \"[.some_arbitrary_name]\"),"
+"最初のキーは \"path\" です."
 
 #: ../../source/user/configoptions.rst:154
 msgid "Global configuration options"
-msgstr ""
+msgstr "グローバル設定オプション"
 
 #: ../../source/user/configoptions.rst:157
 msgid "Logging"
-msgstr ""
+msgstr "ログ"
 
 #: ../../source/user/configoptions.rst:175
 msgid ""
 "At the commandline this can also be set with --debug <value> as well as "
 "with --config CPL_DEBUG <value>."
 msgstr ""
+"コマンドラインでは, ``--debug <value>`` または ``--config CPL_DEBUG <value>`` で設定することもできます."
 
 #: ../../source/user/configoptions.rst:202
 msgid "Performance and caching"
-msgstr ""
+msgstr "パフォーマンスとキャッシュ"
 
 #: ../../source/user/configoptions.rst:257
 msgid ""
@@ -205,6 +235,10 @@ msgid ""
 "that can be opened by a process is generally limited to 1024. This is "
 "currently clamped between 2 and 1000."
 msgstr ""
+"GDALProxyPool メカニズム (例: VRT で使用) によって同時に開くことができるデータセットの数です. "
+"多数の基礎ラスタファイルから構成される VRT モザイクでより良いランダムI/Oパフォーマンスを得るために増やすことができます. "
+"注意: Linux システムでは,プロセスが開くことができるファイルハンドルの数は一般的に 1024 に制限されています. "
+"現在,2 から 1000 の間でクランプされています."
 
 #: ../../source/user/configoptions.rst:269
 #, python-format
@@ -213,12 +247,16 @@ msgid ""
 "express it in megabytes or gigabytes. The default value is 25% of the "
 "usable physical RAM minus the :config:`GDAL_CACHEMAX` value."
 msgstr ""
+"値の後に ``MB`` または ``GB`` を付けることで,それぞれメガバイトまたはギガバイトで表すこともできます. "
+"デフォルト値は,使用可能な物理RAMの25%から :config:`GDAL_CACHEMAX` の値を引いた値です."
 
 #: ../../source/user/configoptions.rst:278
 msgid ""
 "Size of the swath when copying raster data from one dataset to another "
 "one (in bytes). Should not be smaller than :config:`GDAL_CACHEMAX`."
 msgstr ""
+"1つのデータセットから別のデータセットにラスタデータをコピーするときのスワスのサイズ (バイト単位) です. "
+":config:`GDAL_CACHEMAX` より小さくしてはいけません."
 
 #: ../../source/user/configoptions.rst:292
 msgid ""
@@ -226,16 +264,19 @@ msgid ""
 " a GDAL driver will request sibling files, so this is a way to disable "
 "loading side-car/auxiliary files."
 msgstr ""
+"EMPTY_DIR に設定されている場合, GDAL ドライバーが兄弟ファイルを要求するときに開かれているファイルのみが表示されるため, "
+"これはサイドカー/補助ファイルの読み込みを無効にする方法です."
 
 #: ../../source/user/configoptions.rst:312
 msgid ""
 "When enabled, this cache is used for most I/O in GDAL, including local "
 "files."
 msgstr ""
+"有効にすると,このキャッシュはローカルファイルを含むGDALのほとんどのI/Oに使用されます."
 
 #: ../../source/user/configoptions.rst:323
 msgid "Driver management"
-msgstr ""
+msgstr "ドライバー管理"
 
 #: ../../source/user/configoptions.rst:330
 msgid ""
@@ -246,6 +287,11 @@ msgid ""
 "datasets). The value of this option must be a space delimited list of the"
 " short name of the GDAL drivers to unregister."
 msgstr ""
+"このオプションは,1つまたは複数のGDALドライバーを登録解除するために使用できます. "
+"これは,ドライバーが認識すべきでないデータセットを開こうとするときや, "
+"同じデータセットを開くことができる組み込みの複数のドライバーがあるときに有用です "
+"(例: JPEG2000 データセットのための JP2MrSID, JP2ECW, JPEG2000 および JP2KAK). "
+"このオプションの値は,登録解除するGDALドライバーの短い名前のスペース区切りのリストである必要があります."
 
 #: ../../source/user/configoptions.rst:337
 msgid ""
@@ -253,6 +299,8 @@ msgid ""
 " explicit call to :cpp:func:`GDALDriverManager::AutoSkipDrivers` will be "
 "required."
 msgstr ""
+"このオプションは, :cpp:func:`GDALAllRegister` を呼び出す前に設定する必要があります. "
+"そうでない場合は, :cpp:func:`GDALDriverManager::AutoSkipDrivers` を明示的に呼び出す必要があります."
 
 #: ../../source/user/configoptions.rst:354
 msgid ""
@@ -263,6 +311,11 @@ msgid ""
 "as the remainder of the shared library basename ('X' is case sensitive), "
 "or failing that to call GDALRegisterMe()."
 msgstr ""
+"この関数は,共有ライブラリからドライバーを自動的にロードします. "
+"\"ドライバーパス\" で,プレフィックスが \"gdal_X.so\" で始まる .so (または .dll) ファイルを検索します. "
+"それからそれらをロードし,その後,それらの中の GDALRegister_X() という関数を呼び出そうとします. "
+"ここでの 'X' は共有ライブラリのベース名の残りと同じです ('X' は大文字小文字を区別します), "
+"またはそれが失敗した場合は GDALRegisterMe() を呼び出します."
 
 #: ../../source/user/configoptions.rst:361
 msgid ""
@@ -273,12 +326,17 @@ msgid ""
 "lib/gdalplugins subdirectory of the gdal home directory are searched on "
 "UNIX and $(BINDIR)\\gdalplugins on Windows."
 msgstr ""
+"ドライバーパスにはいくつかのルールがあります. ``GDAL_DRIVER_PATH`` 環境変数が設定されている場合, "
+"UNIX ではコロンで区切られたディレクトリのリストとして取られ,Windows ではセミコロンで区切られたディレクトリのリストとして取られます. "
+"それ以外の場合,UNIX では /usr/local/lib/gdalplugins ディレクトリと (既知の場合) gdal ホームディレクトリの lib/gdalplugins サブディレクトリが検索され, "
+"Windows では $(BINDIR)\\gdalplugins が検索されます."
 
 #: ../../source/user/configoptions.rst:368
 msgid ""
 "Auto loading can be completely disabled by setting the "
 "``GDAL_DRIVER_PATH`` config option to \"disable\"."
 msgstr ""
+" ``GDAL_DRIVER_PATH`` 設定オプションを \"disable\" に設定することで,自動ロードを完全に無効にすることができます."
 
 #: ../../source/user/configoptions.rst:371
 msgid ""
@@ -286,10 +344,12 @@ msgid ""
 " explicit call to :cpp:func:`GDALDriverManager::AutoLoadDrivers` will be "
 "required."
 msgstr ""
+"このオプションは, :cpp:func:`GDALAllRegister` を呼び出す前に設定する必要があります. "
+"そうでない場合は, :cpp:func:`GDALDriverManager::AutoLoadDrivers` を明示的に呼び出す必要があります."
 
 #: ../../source/user/configoptions.rst:381
 msgid "General options"
-msgstr ""
+msgstr "一般オプション"
 
 #: ../../source/user/configoptions.rst:389
 msgid ""
@@ -297,6 +357,8 @@ msgid ""
 " is used to expand EPSG codes into their description in the OSR model "
 "(WKT based)."
 msgstr ""
+"このオプションは, GDAL および OGR ドライバー登録関数によって読み込まれます. "
+"これは,OSRモデル (WKTベース) でのEPSGコードをその説明に展開するために使用されます."
 
 #: ../../source/user/configoptions.rst:393
 msgid ""
@@ -304,22 +366,27 @@ msgid ""
 " point to the path after installation (/usr/share/gdal/data for example)."
 " On Windows platform, this option must be generally declared."
 msgstr ""
+"一部のビルド (Unix) では,値はコンパイル時にインストール後のパスを指すようにハードコードされている場合があります "
+"(例: /usr/share/gdal/data). Windows プラットフォームでは,通常,このオプションを宣言する必要があります."
 
 #: ../../source/user/configoptions.rst:487
 msgid ""
 "Can be set to YES to use Erdas Imagine format (.aux) as overview format. "
 "See :program:`gdaladdo` documentation."
 msgstr ""
+"概要フォーマットとしてErdas Imagine形式 (.aux) を使用するためにYESに設定できます. "
+" :program:`gdaladdo` ドキュメントを参照してください."
 
 #: ../../source/user/configoptions.rst:498
 msgid "Vector related options"
-msgstr ""
+msgstr "ベクター関連オプション"
 
 #: ../../source/user/configoptions.rst:508
 msgid ""
 "The approximation of arcs as linestrings is done by splitting the arcs "
 "into subarcs of no more than the angle specified by this option."
 msgstr ""
+"円弧の近似をラインストリングとして行うために,このオプションで指定された角度を超えないように円弧をサブアークに分割します."
 
 #: ../../source/user/configoptions.rst:533
 msgid ""
@@ -329,6 +396,9 @@ msgid ""
 "analysis determines that a valid geometry cannot be constructed, the "
 "result will be the same as with :config:`OGR_ORGANIZE_POLYGONS=SKIP`."
 msgstr ""
+"``DEFAULT``: すべてのリング間のトポロジック関係の完全な分析を行い,OGC Simple Features の規則に従って, "
+"それらをシェルまたはホールとして分類し,それらを関連付けます. トポロジック分析が有効なジオメトリを構築できないと判断した場合, "
+"結果は :config:`OGR_ORGANIZE_POLYGONS=SKIP` と同じになります."
 
 #: ../../source/user/configoptions.rst:539
 msgid ""
@@ -337,6 +407,8 @@ msgid ""
 "Perform a limited topological analysis to determine which shell contains "
 "each hole. The Shapefile driver defaults to this method."
 msgstr ""
+"``ONLY_CCW``: 時計回りの向きのリングがシェルを表し,反時計回りの向きのリングが穴を表すと仮定します. "
+"各穴を含むシェルを決定するための限定的なトポロジック分析を実行します. Shapefile ドライバーはこの方法をデフォルトとします."
 
 #: ../../source/user/configoptions.rst:544
 msgid ""
@@ -345,6 +417,8 @@ msgid ""
 "represent holes and immediately follow the outer ring with which they are"
 " associated."
 msgstr ""
+"``CCW_INNER_JUST_AFTER_CW_OUTER``: 時計回りの向きのリングがシェルを表し,反時計回りの向きのリングが穴を表し, "
+"それらが関連付けられている外側のリングに直接続くと仮定します."
 
 #: ../../source/user/configoptions.rst:549
 msgid ""
@@ -353,6 +427,9 @@ msgid ""
 "returned with all polygons as top-level polygons. If non-polygonal "
 "elements are present, a GeometryCollection will be returned."
 msgstr ""
+"``SKIP``: リングをシェルまたは穴として分類しようとするのを避けます. "
+"すべてのポリゴンをトップレベルのポリゴンとして持つ単一のジオメトリ (Polygon/MultiPolygon/CurvePolygon/MultiSurface) が返されます. "
+"非ポリゴナル要素が存在する場合,GeometryCollection が返されます."
 
 #: ../../source/user/configoptions.rst:569
 msgid ""
@@ -360,6 +437,8 @@ msgid ""
 "with non UTF8 content, they will replace each non-ASCII character by '?' "
 "when OGR_FORCE_ASCII=YES."
 msgstr ""
+"これらのXMLベースのドライバーはUTF8コンテンツを書き込む必要があります. "
+"UTF8でないコンテンツが提供された場合, OGR_FORCE_ASCII=YES の場合,各非ASCII文字が '?' に置き換えられます."
 
 #: ../../source/user/configoptions.rst:573
 msgid ""
@@ -367,14 +446,15 @@ msgid ""
 " will not be valid and will require manual edition of the encoding in the"
 " XML header."
 msgstr ""
+"コンテンツを保持するためにNOに設定しますが,生成されたXMLファイルは有効ではなく,XMLヘッダーのエンコーディングの手動編集が必要になります."
 
 #: ../../source/user/configoptions.rst:592
 msgid "Networking options"
-msgstr ""
+msgstr "ネットワーキングオプション"
 
 #: ../../source/user/configoptions.rst:601
 msgid "For example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/user/configoptions.rst:870
 msgid ""
@@ -384,6 +464,9 @@ msgid ""
 "Some HTTP servers (on Windows) support this style even for Basic "
 "authentication."
 msgstr ""
+"NTLMを使用する場合,ユーザー名の前にドメインを付けて,ドメインと名前をスラッシュ (/) またはバックスラッシュ (\\) で区切ります. "
+"次のように: \"domain/user:password\" または \"domain\\user:password\". "
+"一部のHTTPサーバー (Windows) は,このスタイルをBasic認証に対してもサポートしています."
 
 #: ../../source/user/configoptions.rst:897
 msgid ""
@@ -391,14 +474,16 @@ msgid ""
 "etc, if any of those are set. GDAL_HTTP_PROXY option does however "
 "override any possibly set environment variables."
 msgstr ""
+"GDALは,http_proxy, ftp_proxy, all_proxy などの環境変数を尊重します. "
+"ただし,GDAL_HTTP_PROXY オプションは,設定されている環境変数を上書きします."
 
 #: ../../source/user/configoptions.rst:943
 msgid "Persistent Auxiliary Metadata (PAM) options"
-msgstr ""
+msgstr "永続的補助メタデータ (PAM) オプション"
 
 #: ../../source/user/configoptions.rst:963
 msgid "PROJ options"
-msgstr ""
+msgstr "PROJ オプション"
 
 #: ../../source/user/configoptions.rst:972
 msgid ""
@@ -407,6 +492,8 @@ msgid ""
 "causes coordinate discontinuities. See "
 "http://trac.osgeo.org/gdal/ticket/2305."
 msgstr ""
+"このオプションは,gdalwarpがグローバルデータセットを変形するときや,極座標投影から/へ変換するときに,座標の不連続性を引き起こす場合の動作を制御するために使用できます. "
+"http://trac.osgeo.org/gdal/ticket/2305 を参照してください."
 
 #: ../../source/user/configoptions.rst:976
 msgid ""
@@ -415,6 +502,8 @@ msgid ""
 "initial coordinates. This can lead to errors in the computation of the "
 "target bounding box of gdalwarp, or to visual artifacts."
 msgstr ""
+"背景は,PROJが,src_srs から dst_srs への変換,その後 dst_srs から src_srs への変換が初期座標になることを保証しないことです. "
+"これは,gdalwarpのターゲットバウンディングボックスの計算のエラーや,視覚的なアーティファクトを引き起こす可能性があります."
 
 #: ../../source/user/configoptions.rst:981
 msgid ""
@@ -425,10 +514,14 @@ msgid ""
 "forces ogrct.cpp to check the consistency of each requested projection "
 "result with the invert projection."
 msgstr ""
+"CHECK_WITH_INVERT_PROJ オプションが設定されていない場合,gdalwarp は,ターゲット"
+"画像のエッジの計算された座標がターゲット投影の有効領域内にあるかどうかをチェックします. "
+"そうでない場合,それらを再計算するために :config:`CHECK_WITH_INVERT_PROJ=TRUE` "
+"を設定して,ogrct.cpp が逆投影との整合性をチェックするようにします."
 
 #: ../../source/user/configoptions.rst:987
 msgid "If set to NO, gdalwarp will not attempt to use the invert projection."
-msgstr ""
+msgstr "NOに設定すると,gdalwarp は逆投影を使用しようとしません."
 
 #: ../../source/user/configoptions.rst:994
 msgid ""
@@ -438,6 +531,9 @@ msgid ""
 " value must be expressed in the units of the source SRS (typically "
 "degrees for a geographic SRS, meters for a projected SRS)"
 msgstr ""
+":config:`CHECK_WITH_INVERT_PROJ=TRUE` と組み合わせて使用されます. "
+"src_srs から dst_srs への往復と dst_srs から srs_srs への往復が初期座標になるかどうかをチェックするために使用される許容しきい値を定義します. "
+"値は,ソースSRSの単位で表される必要があります (地理SRSの場合は通常度,投影SRSの場合はメートル)."
 
 #: ../../source/user/configoptions.rst:1007
 msgid ""
@@ -445,8 +541,10 @@ msgid ""
 "for example help reproject lines that have an extremity at a pole, when "
 "the reprojection does not support coordinates at poles."
 msgstr ""
+"再投影できない点を削除するためにYESに設定できます. これにより,極に端点がある線を再投影するのに役立ちます. "
+"再投影が極の座標をサポートしていない場合などです."
 
 #: ../../source/user/configoptions.rst:1071
 msgid "List of configuration options and where they are documented"
-msgstr ""
+msgstr "設定オプションの一覧とそのドキュメントの場所"
 
