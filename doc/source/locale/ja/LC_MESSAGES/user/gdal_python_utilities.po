@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/user/gdal_python_utilities.rst:5
 msgid "GDAL Python Utilities"
-msgstr ""
+msgstr "GDAL Python ユーティリティ"
 
 #: ../../source/user/gdal_python_utilities.rst:7
 msgid ""
@@ -30,6 +30,10 @@ msgid ""
 "version of the utilities without changing GDAL. This is where **gdal-"
 "utils** comes in."
 msgstr ""
+"GDAL Python ユーティリティは GDAL に含まれています.GDAL をインストールしている"
+"場合はすでに利用できます.ただし,GDAL を変更せずに新しいバージョンや古いバージョン"
+"のユーティリティを利用したい場合があります.そのような場合には **gdal-utils** が役立ちます."
+
 
 #: ../../source/user/gdal_python_utilities.rst:12
 msgid ""
@@ -37,6 +41,8 @@ msgid ""
 " you install. Its home page is https://pypi.org/project/gdal-utils/ . "
 "Install with ``pip install gdal-utils``."
 msgstr ""
+"**gdal-utils**: は GDAL Python ユーティリティの *配布* です.これをインストールします."
+"ホームページは https://pypi.org/project/gdal-utils/ です. ``pip install gdal-utils`` でインストールします."
 
 #: ../../source/user/gdal_python_utilities.rst:16
 msgid ""
@@ -44,10 +50,12 @@ msgid ""
 "code after installing, e.g. ``from osgeo_utils import ...``. If you're "
 "not writing code, ignore it."
 msgstr ""
+"**osgeo_utils**: は Python *パッケージ* です.これはインストール後にコードで利用します."
+"例: ``from osgeo_utils import ...``.コードを書いていない場合は無視してください."
 
 #: ../../source/user/gdal_python_utilities.rst:20
 msgid "Commonly used utilities include:"
-msgstr ""
+msgstr "一般的に利用されるユーティリティは以下の通りです:"
 
 #: ../../source/user/gdal_python_utilities.rst:22
 msgid "gdal_merge"
@@ -67,15 +75,15 @@ msgstr ""
 
 #: ../../source/user/gdal_python_utilities.rst:28
 msgid "Developers"
-msgstr ""
+msgstr "開発者"
 
 #: ../../source/user/gdal_python_utilities.rst:30
 msgid "Read the :ref:`gdal-utils project charter <rfc-78>`."
-msgstr ""
+msgstr " :ref:`gdal-utils project charter <rfc-78>` を参照して下さい."
 
 #: ../../source/user/gdal_python_utilities.rst:32
 msgid "Clone or download the gdal project: https://github.com/OSGeo/gdal/"
-msgstr ""
+msgstr "gdal プロジェクト: https://github.com/OSGeo/gdal をクローンまたはダウンロードして下さい"
 
 #: ../../source/user/gdal_python_utilities.rst:34
 msgid ""
@@ -83,12 +91,16 @@ msgid ""
 "utils <https://github.com/OSGeo/gdal/tree/master/swig/python/gdal-"
 "utils/>`__."
 msgstr ""
+"あなたのIDEでgdal-utilsをルートフォルダに設定してください, `.../swig/python/gdal-"
+"utils <https://github.com/OSGeo/gdal/tree/master/swig/python/gdal-"
+"utils/>`__."
 
 #: ../../source/user/gdal_python_utilities.rst:37
 msgid ""
 "**./osgeo_utils** - contains the Programs (those scripts that have launch"
 " wrappers created by pip and added to PYTHONHOME/Scripts)"
 msgstr ""
+" **./osgeo_utils** - プログラムを含みます (pip によって作成されたランチャーが追加されたスクリプト)"
 
 #: ../../source/user/gdal_python_utilities.rst:40
 msgid ""
@@ -96,6 +108,8 @@ msgid ""
 "available in path (run them with ``python3 "
 "path/to/samples/something.py``)"
 msgstr ""
+" **./osgeo_utils/samples** - 動作する Python スクリプトですが通常はパスにはありません"
+"(``python3 path/to/samples/something.py`` で実行します)"
 
 #: ../../source/user/gdal_python_utilities.rst:44
 msgid ""
@@ -103,6 +117,9 @@ msgid ""
 "<https://github.com/OSGeo/gdal/tree/master/doc/source>`__ which generate "
 "the web pages:"
 msgstr ""
+" `.../doc/source "
+"<https://github.com/OSGeo/gdal/tree/master/doc/source>`__ のRSTページを編集することで"
+"文書を改善してWeb ページを生成できます"
 
 #: ../../source/user/gdal_python_utilities.rst:48
 msgid "https://gdal.org/api/index.html#python-api"
@@ -122,4 +139,6 @@ msgid ""
 "<https://github.com/OSGeo/gdal/pulls>`__ from your fork to main GDAL "
 "project and use *gdal-utils* label."
 msgstr ""
+"あなたのフォークからメインの GDAL プロジェクトに *gdal-utils* ラベルを使用して `Pull Requests "
+"<https://github.com/OSGeo/gdal/pulls>`__ 変更を提供して下さい."
 
