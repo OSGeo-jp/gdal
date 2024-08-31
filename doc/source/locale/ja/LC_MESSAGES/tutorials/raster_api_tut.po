@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator:Yoichi Kayama<yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -38,6 +38,14 @@ msgid ""
 "helpful to review the code from gdalallregister.cpp. Python automatically"
 " calls GDALAllRegister() when the gdal module is imported."
 msgstr ""
+"GDALでサポートされているラスターデータストアを開く前に,ドライバを登録する"
+"必要があります.各サポートされているフォーマットに対してドライバがあります."
+"通常,これは,すべての既知のドライバを登録しようとする :cpp:func:`GDALAllRegister` "
+"関数で行われます.これには. :cpp:func:`GDALDriverManager::AutoLoadDrivers` を使って"
+".soファイルから自動的にロードされるドライバも含まれます.一部のアプリケーションで"
+"ドライバのセットを制限する必要がある場合は.gdalallregister.cppからのコードを"
+"確認すると役立つかもしれません。Pythonは.gdalモジュールがインポートされると"
+"自動的にGDALAllRegister()を呼び出します."
 
 #: ../../source/tutorials/raster_api_tut.rst:12
 msgid ""
@@ -45,6 +53,9 @@ msgid ""
 "standing :cpp:func:`GDALOpen` function to open a dataset, passing the "
 "name of the dataset and the access desired (GA_ReadOnly or GA_Update)."
 msgstr ""
+"ドライバが登録されたら,アプリケーションは,データセットを開くために独立した"
+" :cpp:func:`GDALOpen` 関数を呼び出すべきです.データセットの名前とアクセス"
+"したいもの(GA_ReadOnly または GA_Update)を渡します."
 
 #: ../../source/tutorials/raster_api_tut.rst:14
 #: ../../source/tutorials/raster_api_tut.rst:98
@@ -56,7 +67,7 @@ msgstr ""
 #: ../../source/tutorials/raster_api_tut.rst:458
 #: ../../source/tutorials/raster_api_tut.rst:485
 msgid "In C++:"
-msgstr ""
+msgstr "C++の場合:"
 
 #: ../../source/tutorials/raster_api_tut.rst:40
 #: ../../source/tutorials/raster_api_tut.rst:119
@@ -68,7 +79,7 @@ msgstr ""
 #: ../../source/tutorials/raster_api_tut.rst:467
 #: ../../source/tutorials/raster_api_tut.rst:506
 msgid "In C:"
-msgstr ""
+msgstr "Cの場合:"
 
 #: ../../source/tutorials/raster_api_tut.rst:67
 #: ../../source/tutorials/raster_api_tut.rst:143
@@ -80,7 +91,7 @@ msgstr ""
 #: ../../source/tutorials/raster_api_tut.rst:476
 #: ../../source/tutorials/raster_api_tut.rst:529
 msgid "In Python:"
-msgstr ""
+msgstr "Pythonの場合:"
 
 #: ../../source/tutorials/raster_api_tut.rst:76
 msgid ""
@@ -95,10 +106,15 @@ msgid ""
 "controlling the open or almost anything. Please try not to limit GDAL "
 "file selection dialogs to only selecting physical files."
 msgstr ""
+" :cpp:func:`GDALOpen` がNULLを返すと,オープンに失敗したことを意味し,エラーメッセージ"
+"はすでに :cpp:func:`CPLError` を介して出力されていることに注意してください.エラー"
+"の報告方法を制御したい場合は, :cpp:func:`CPLError` のドキュメントを確認してください."
+"一般的に,すべてのGDALはエラー報告に :cpp:func:`CPLError` を使用しています.また,"
+"pszFilenameは実際には物理ファイルの名前である必要はありません(通常はそうです)."
 
 #: ../../source/tutorials/raster_api_tut.rst:79
 msgid "Getting Dataset Information"
-msgstr ""
+msgstr "データセット情報の取得"
 
 #: ../../source/tutorials/raster_api_tut.rst:81
 msgid ""
@@ -107,6 +123,10 @@ msgid ""
 "having the same resolution. It also has metadata, a coordinate system, a "
 "georeferencing transform, size of raster and various other information."
 msgstr ""
+" :ref:`raster_data_model` で説明されているように, :cpp:class:`GDALDataset` は"
+"同じ領域に関連するラスターバンドのリストを含み,同じ解像度を持っています."
+"また,メタデータ,座標系,ジオリファレンス変換,ラスターサイズおよびその他の情報が"
+"含まれています."
 
 #: ../../source/tutorials/raster_api_tut.rst:83
 msgid ""
@@ -114,20 +134,23 @@ msgid ""
 "rotation or shearing, the georeferencing transform "
 ":ref:`geotransforms_tut` takes the following form :"
 msgstr ""
+"特に,一般的な\"北向き\"画像で回転やシアリングがない場合,ジオリファレンス変換"
+" :ref:`geotransforms_tut` は以下の形式を取ります:"
 
 #: ../../source/tutorials/raster_api_tut.rst:94
 msgid "In the general case, this is an affine transform."
-msgstr ""
+msgstr "一般的な場合,これはアフィン変換です."
 
 #: ../../source/tutorials/raster_api_tut.rst:96
 msgid ""
 "If we wanted to print some general information about the dataset we might"
 " do the following:"
 msgstr ""
+"データセットに関する一般的な情報を表示したい場合は,以下のようにします:"
 
 #: ../../source/tutorials/raster_api_tut.rst:159
 msgid "Fetching a Raster Band"
-msgstr ""
+msgstr "ラスターバンドの取得"
 
 #: ../../source/tutorials/raster_api_tut.rst:161
 msgid ""
@@ -138,10 +161,15 @@ msgid ""
 " through :cpp:func:`GDALRasterBand::GetRasterCount`) and displays a "
 "little information about it."
 msgstr ""
+"この時点でGDALを介したラスターデータへのアクセスは,1つのバンドずつ行われます."
+"また,メタデータ,ブロックサイズ,カラーテーブルおよびその他の情報がバンドごとに利用"
+"可能です.以下のコードは,データセットから :cpp:class:`GDALRasterBand` オブジェクトを"
+"取得し(1から :cpp:func:`GDALRasterBand::GetRasterCount` までの番号),それについて少し"
+"の情報を表示します."
 
 #: ../../source/tutorials/raster_api_tut.rst:237
 msgid "Reading Raster Data"
-msgstr ""
+msgstr "ラスターデータの読み込み"
 
 #: ../../source/tutorials/raster_api_tut.rst:239
 msgid ""
@@ -152,6 +180,10 @@ msgid ""
 " similarly sized buffer, converting it to floating point as part of the "
 "operation."
 msgstr ""
+"ラスターデータを読み込む方法はいくつかありますが,最も一般的なのは :cpp:func:`GDALRasterBand::RasterIO` "
+"メソッドを介してです.このメソッドは,データ型の変換,アップ/ダウンサンプリングおよびウィンドウ処理を"
+"自動的に処理します.以下のコードは,データの最初のスキャンラインを同じサイズのバッファに読み込み,"
+"その操作の一環として浮動小数点に変換します."
 
 #: ../../source/tutorials/raster_api_tut.rst:252
 #: ../../source/tutorials/raster_api_tut.rst:265
@@ -159,6 +191,7 @@ msgid ""
 "The pafScanline buffer should be freed with CPLFree() when it is no "
 "longer used."
 msgstr ""
+"pafScanlineバッファは,使用しなくなったときにCPLFree()で解放する必要があります."
 
 #: ../../source/tutorials/raster_api_tut.rst:276
 msgid ""
@@ -166,10 +199,12 @@ msgid ""
 "bytes of raw binary floating point data. This can be converted to Python "
 "values using the struct module from the standard library:"
 msgstr ""
+"返されたスキャンラインは文字列型であり,xsize*4バイトの生のバイナリ浮動小数点データが含まれています."
+"これは,標準ライブラリのstructモジュールを使用してPythonの値に変換できます:"
 
 #: ../../source/tutorials/raster_api_tut.rst:283
 msgid "The RasterIO call takes the following arguments."
-msgstr ""
+msgstr "RasterIO呼び出しは以下の引数を取ります."
 
 #: ../../source/tutorials/raster_api_tut.rst:294
 msgid ""
@@ -179,6 +214,10 @@ msgid ""
 "read (or write). It doesn't have to fall on tile boundaries though access"
 " may be more efficient if it does."
 msgstr ""
+"eRWFlagの設定に基づいて読み込みまたは書き込みに使用する同じRasterIO()呼び出しが"
+"使用されることに注意してください(いずれかGF_ReadまたはGF_Write).nXOff, nYOff, "
+"nXSize, nYSize引数は,ディスク上のラスターデータのウィンドウを読み取る(または書き込む)"
+"ために使用されます.タイルの境界にある必要はありませんが,アクセスが効率的であるかもしれません."
 
 #: ../../source/tutorials/raster_api_tut.rst:296
 msgid ""
@@ -192,6 +231,12 @@ msgid ""
 "that 16bit data read into a GDT_Byte buffer will map all values greater "
 "than 255 to 255, the data is not scaled!"
 msgstr ""
+"pDataは,データが読み込まれるまたは書き込まれるメモリバッファです.実際の型は,eBufTypeとして"
+"渡されるものである必要があります.例えば,GDT_Float32またはGDT_Byteなどです. RasterIO() "
+"呼び出しは,バッファのデータ型とバンドのデータ型の間の変換を処理します.浮動小数点データを整数に"
+"変換する場合,RasterIO()は切り捨てを行い,出力の許容範囲外のソース値を変換する場合,最も近い許容値が"
+"使用されます.これは,例えば,GDT_Byteバッファに読み込まれた16ビットデータは,255を超えるすべての値を"
+"255にマップし,データはスケーリングされません!"
 
 #: ../../source/tutorials/raster_api_tut.rst:298
 msgid ""
@@ -202,6 +247,10 @@ msgid ""
 "utilize overviews to do the IO more efficiently if the overviews are "
 "suitable."
 msgstr ""
+"nBufXSizeとnBufYSizeの値は,バッファのサイズを示します.データを完全な解像度で読み込む場合,"
+"これはウィンドウサイズと同じになります.ただし,低解像度の概要を読み込む場合,これはディスク上の"
+"ウィンドウよりも小さく設定することができます.この場合,RasterIO()は,適切な場合には概要を利用して,"
+"IOを効率的に行います."
 
 #: ../../source/tutorials/raster_api_tut.rst:300
 msgid ""
@@ -210,10 +259,13 @@ msgid ""
 "the memory data buffer, allowing reading into a buffer containing other "
 "pixel interleaved data for instance."
 msgstr ""
+"通常はゼロであり,デフォルト値を使用することを示すnPixelSpaceとnLineSpaceです.ただし,"
+"他のピクセル間データを含むバッファに読み込むことを許可するために,メモリデータバッファへの"
+"アクセスを制御するために使用することができます."
 
 #: ../../source/tutorials/raster_api_tut.rst:303
 msgid "Closing the Dataset"
-msgstr ""
+msgstr "データセットを閉じる"
 
 #: ../../source/tutorials/raster_api_tut.rst:305
 msgid ""
@@ -228,10 +280,17 @@ msgid ""
 " opened in update mode in a popular format like GTiff will likely result "
 "in being unable to open it afterwards."
 msgstr ""
+":cpp:class:`GDALRasterBand` オブジェクトはデータセットによって所有されており,決してC++の"
+"delete演算子で破棄してはいけません. :cpp:class:`GDALDataset` は, :cpp:func:`GDALClose` を"
+"呼び出すことで閉じることができます(Windowsユーザーは,モジュール境界を越えてメモリを割り当て"
+"および解放する際の既知の問題のため,GDALDatasetに対してdelete演算子を使用することは推奨されません."
+"FAQの関連トピックを参照してください).GDALCloseを呼び出すと,適切なクリーンアップと,保留中の書き込み"
+"のフラッシュが行われます.人気のあるフォーマットで開いたデータセットを更新モードで開いた場合にGDALClose"
+"を呼び出し忘れると,その後開くことができなくなる可能性が高いです."
 
 #: ../../source/tutorials/raster_api_tut.rst:308
 msgid "Techniques for Creating Files"
-msgstr ""
+msgstr "ファイルを作成するためのテクニック"
 
 #: ../../source/tutorials/raster_api_tut.rst:310
 msgid ""
@@ -245,6 +304,14 @@ msgid ""
 "creating new files support the CreateCopy() method, but only a few "
 "support the Create() method."
 msgstr ""
+"GDALでサポートされているフォーマットで新しいファイルを作成することができます."
+"フォーマットドライバが作成をサポートしている場合,ファイルを作成するための2つの一般的な"
+"テクニックがあります. CreateCopy() と Create() です. CreateCopyメソッドは,フォーマット"
+"ドライバ上でCreateCopy()メソッドを呼び出し,コピーする必要があるソースデータセットを"
+"渡すことを含みます. Createメソッドは,ドライバ上でCreate()メソッドを呼び出し,すべての"
+"メタデータとラスターデータを明示的に別々の呼び出しで書き込むことを含みます.新しいファイルを"
+"作成することをサポートするすべてのドライバは,CreateCopy()メソッドをサポートしていますが,"
+"Create()メソッドをサポートしているのはわずかです."
 
 #: ../../source/tutorials/raster_api_tut.rst:312
 msgid ""
@@ -255,16 +322,22 @@ msgid ""
 "this example we fetch a driver, and determine whether it supports "
 "Create() and/or CreateCopy()."
 msgstr ""
+"特定のフォーマットがCreateまたはCreateCopyをサポートしているかどうかを判断するには,"
+"フォーマットドライバオブジェクトのDCAP_CREATEおよびDCAP_CREATECOPYメタデータを確認することが"
+"可能です. :cpp:func:`GDALDriverManager::GetDriverByName` を呼び出す前に, :cpp:func:`GDALAllRegister` "
+"が呼び出されていることを確認してください.この例では,ドライバを取得し,Create()および/または"
+"CreateCopy()をサポートしているかどうかを判断します."
 
 #: ../../source/tutorials/raster_api_tut.rst:362
 msgid ""
 "Note that a number of drivers are read-only and won't support Create() or"
 " CreateCopy()."
 msgstr ""
+"多くのドライバは読み取り専用であり,Create()またはCreateCopy()をサポートしません."
 
 #: ../../source/tutorials/raster_api_tut.rst:365
 msgid "Using CreateCopy()"
-msgstr ""
+msgstr "CreateCopy()の使用"
 
 #: ../../source/tutorials/raster_api_tut.rst:367
 msgid ""
@@ -276,6 +349,12 @@ msgid ""
 "pszDstFilename using default options on a format whose driver was "
 "previously fetched might look like this:"
 msgstr ""
+" :cpp:func:`GDALDriver::CreateCopy` メソッドは,ほとんどの情報がソースデータセットから収集されるため,"
+"かなり簡単に使用できます.ただし,フォーマット固有の作成オプションを渡すためのオプションが含まれており,"
+"長いデータセットのコピーが行われる際にユーザーに進行状況を報告するためのオプションも含まれています."
+"以前に取得したドライバのフォーマットを使用して,ファイル名がpszSrcFilenameであるファイルから,"
+"pszDstFilenameという新しいファイルにデフォルトオプションを使用して単純なコピーを行う場合は,"
+"次のようになります:"
 
 #: ../../source/tutorials/raster_api_tut.rst:406
 msgid ""
@@ -290,16 +369,24 @@ msgid ""
 "datatype of the input dataset, or because the destination cannot support "
 "writing georeferencing for instance."
 msgstr ""
+"CreateCopy()メソッドは書き込み可能なデータセットを返し,データセットを書き込みおよびディスクに"
+"フラッシュするために適切に閉じる必要があります. Pythonの場合,これは\"dst_ds\"がスコープ外に"
+"なると自動的に発生します. CreateCopy()呼び出しの宛先ファイル名の直後に使用されるbStrictオプション"
+"のFALSE(または0)値は,宛先データセットが入力データセットと完全に一致するように作成できない場合でも,"
+"CreateCopy()呼び出しが致命的なエラーなしで続行することを示します.これは,出力フォーマットが入力データセット"
+"のピクセルデータ型をサポートしていない場合や,宛先がジオリファレンスの書き込みをサポートしていない場合などが"
+"考えられます."
 
 #: ../../source/tutorials/raster_api_tut.rst:408
 msgid ""
 "A more complex case might involve passing creation options, and using a "
 "predefined progress monitor like this:"
 msgstr ""
+"より複雑な場合は,作成オプションを渡し,次のように事前定義された進行モニタを使用することができます:"
 
 #: ../../source/tutorials/raster_api_tut.rst:454
 msgid "Using Create()"
-msgstr ""
+msgstr "Create()の使用"
 
 #: ../../source/tutorials/raster_api_tut.rst:456
 msgid ""
@@ -310,6 +397,11 @@ msgid ""
 "Create() method takes an options list much like CreateCopy(), but the "
 "image size, number of bands and band type must be provided explicitly."
 msgstr ""
+"既存のファイルを新しいファイルにエクスポートするだけでない状況では,通常は "
+" :cpp:func:`GDALDriver::Create` メソッドを使用する必要があります(ただし,仮想ファイルや"
+"インメモリファイルを使用することでいくつかの興味深いオプションが可能です).Create()メソッドは,"
+"CreateCopy()と同様のオプションリストを取りますが,画像サイズ,バンド数およびバンドタイプは"
+"明示的に指定する必要があります."
 
 #: ../../source/tutorials/raster_api_tut.rst:483
 msgid ""
@@ -318,4 +410,7 @@ msgid ""
 " to usage, but a simple case with a projection, geotransform and raster "
 "data is covered here."
 msgstr ""
+"データセットが正常に作成されると,すべての適切なメタデータとラスターデータをファイルに書き込む必要があります."
+"これは使用方法によって異なりますが,投影,ジオリファレンスおよびラスターデータを持つ単純なケースがここで"
+"説明されています."
 
