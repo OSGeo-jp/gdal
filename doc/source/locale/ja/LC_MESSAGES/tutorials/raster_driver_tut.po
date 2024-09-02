@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/tutorials/raster_driver_tut.rst:5
 msgid "Raster driver implementation tutorial"
-msgstr ""
+msgstr "ラスタードライバー実装チュートリアル"
 
 #: ../../source/tutorials/raster_driver_tut.rst:10
 msgid "Overall Approach"
-msgstr ""
+msgstr "全体的なアプローチ"
 
 #: ../../source/tutorials/raster_driver_tut.rst:12
 msgid ""
@@ -36,6 +36,11 @@ msgid ""
 "registered with the :cpp:class:`GDALDriverManager`, to ensure that the "
 "system knows about the format."
 msgstr ""
+"一般的に、新しいフォーマットは, :cpp:class:`GDALDataset` のサブクラスとして"
+"フォーマット固有のドライバーを実装し,バンドアクセサは :cpp:class:`GDALRasterBand` "
+"のサブクラスとして実装します.また,フォーマット用の :cpp:class:`GDALDriver` "
+"インスタンスを作成し, :cpp:class:`GDALDriverManager` に登録して,システムが"
+"フォーマットを認識できるようにします."
 
 #: ../../source/tutorials/raster_driver_tut.rst:14
 msgid ""
@@ -44,16 +49,21 @@ msgid ""
 "RawRasterBand helper class, implementing creatable and updatable formats,"
 " and some esoteric issues."
 msgstr ""
+"このチュートリアルでは,シンプルな読み取り専用ドライバー( JDEM ドライバーを"
+"ベースにしたもの)の実装から始め,RawRasterBand ヘルパークラスの利用,作成可能"
+"および更新可能なフォーマットの実装,およびいくつかの難解な問題に進みます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:16
 msgid ""
 "It is strongly advised that the :ref:`raster_data_model` be reviewed and "
 "understood before attempting to implement a GDAL driver."
 msgstr ""
+"GDAL ドライバーの実装を試みる前に, :ref:`raster_data_model` を確認し理解することを"
+"強くお勧めします."
 
 #: ../../source/tutorials/raster_driver_tut.rst:19
 msgid "Implementing the Dataset"
-msgstr ""
+msgstr "データセットの実装"
 
 #: ../../source/tutorials/raster_driver_tut.rst:21
 msgid ""
@@ -62,6 +72,9 @@ msgid ""
 "First we declare a format specific dataset class, JDEMDataset in this "
 "case."
 msgstr ""
+"日本の DEM フォーマット用の読み取り専用ドライバーの最小限の実装を示します"
+"(:source_file:`frmts/jdem/jdemdataset.cpp`). まず,この場合のフォーマット固有の"
+"データセットクラス JDEMDataset を宣言します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:44
 msgid ""
@@ -73,10 +86,15 @@ msgid ""
 "is convenient because we have privileged access to modify the contents of"
 " the database object."
 msgstr ""
+"一般的に,ドライバーの機能を提供するためには, GDALDataset 基底クラスのさまざまな"
+"仮想メソッドをオーバーライドします. ただし,Open() メソッドは特別です. これは"
+"基底クラスの仮想メソッドではなく,この操作のために独立した関数が必要なので,"
+"static として宣言します. JDEMDataset クラスのメソッドとして実装するのは便利です"
+"データベースオブジェクトの内容を変更する特権的なアクセスがあるためです."
 
 #: ../../source/tutorials/raster_driver_tut.rst:46
 msgid "The open method itself may look something like this:"
-msgstr ""
+msgstr "Open メソッド自体は次のようになります:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:102
 msgid ""
@@ -90,6 +108,12 @@ msgid ""
 "passed in contained in a GDALOpenInfo object.  The GDALOpenInfo includes "
 "the following public data members:"
 msgstr ""
+"データベースの Open 関数の最初のステップは,渡されたファイルが実際にこのドライバー"
+"のタイプであることを確認することです. 重要なのは,各ドライバーの Open 関数が順番に"
+"呼び出されることで,成功するまで呼び出されます. ドライバーは,渡されたファイルが"
+"そのフォーマットでない場合は静かに nullptr を返す必要があります. ファイルを開くため"
+"の情報は, GDALOpenInfo オブジェクトに含まれています. GDALOpenInfo には次のパブリック"
+"データメンバが含まれています:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:124
 msgid ""
@@ -99,6 +123,10 @@ msgid ""
 "the first kilobyte or so is read in, and put in pabyHeader, with the "
 "exact size in `nHeaderBytes`."
 msgstr ""
+"ドライバーは,これらを検査してファイルがサポートされているかどうかを確立できます."
+"`pszFilename` がファイルシステムのオブジェクトを参照している場合,`bStatOK` フラグが"
+"TRUE に設定されます. また,ファイルが正常に開かれた場合,最初のキロバイト程度が読み込まれ,"
+"pabyHeader に格納され,その正確なサイズが `nHeaderBytes` に格納されます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:126
 msgid ""
@@ -110,10 +138,15 @@ msgid ""
 "values. If the test fails, we quietly return NULL indicating this file "
 "isn't of our supported format."
 msgstr ""
+"この典型的なテスト例では,ファイルが正常に開かれたこと,テストを実行するのに十分な"
+"ヘッダ情報があること,およびヘッダのさまざまな部分がこのフォーマットに期待される値で"
+"あることを確認します. この場合,JDEM フォーマットにはマジックナンバーがないため,"
+"合理的な世紀値を持つことを確認するためにさまざまな日付フィールドをチェックします."
+"テストに失敗した場合,このファイルがサポートされていないことを示す NULL を静かに返します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:128
 msgid "The identification is in fact delegated to a Identify() static function :"
-msgstr ""
+msgstr "識別は実際には Identify() 静的関数に委任されます:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:173
 msgid ""
@@ -126,6 +159,12 @@ msgid ""
 "can provide the level of access desired.  Since the JDEM driver does not "
 "provide update support, error out in that case."
 msgstr ""
+"可能な限り厳格な\"これは私のフォーマットですか\"テストを行うことが重要です."
+"この特定の場合,日付が 19 世紀または 20 世紀であることをチェックしますが,これも"
+"弱すぎる可能性があるため,地理空間範囲が一貫しており,日本に適していることを確認し,"
+"ファイルが私たちのフォーマットであることを確認した後,ファイルが使用可能であることを"
+"検証するために必要な他のテストを実行し,特に望ましいアクセスレベルを提供できることを"
+"確認します. JDEM ドライバーは更新サポートを提供しないため,その場合はエラーが発生します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:192
 msgid ""
@@ -135,6 +174,10 @@ msgid ""
 "(equivalent to std::make_unique<> available in C++14 and later), to make "
 "memory management easier in error code paths."
 msgstr ""
+"次に,興味のあるさまざまな情報を設定するデータベースクラスのインスタンスを作成する"
+"必要があります. エラーコードパスでメモリ管理を容易にするために,"
+" std::unique_ptr<JDEMDataset> と cpl::make_unique<> ユーティリティ"
+"(C++14 以降で利用可能な std::make_unique<> に相当)で作成します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:209
 msgid ""
@@ -145,6 +188,11 @@ msgid ""
 " special capabilities like supporting large files, in-memory files and "
 "zipped files."
 msgstr ""
+"この時点で, GDALOpenInfo* が保持していたファイルハンドルを\"借ります\""
+"(インラインメンバ定義で poDS->m_fp が nullptr に初期化されていることを確認しました)."
+"このファイルポインタは,ディスク上のファイルにアクセスするための VSI*L GDAL API を使用します."
+"この仮想化された POSIX スタイルの API には,大きなファイル,インメモリファイル,および圧縮ファイル"
+"をサポートするなどの特別な機能があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:213
 msgid ""
@@ -152,12 +200,16 @@ msgid ""
 "and `nRasterYSize` are data fields inherited from the GDALDataset base "
 "class, and must be set by the Open() method."
 msgstr ""
+"次に,ヘッダから X サイズと Y サイズを抽出します. `nRasterXSize` と `nRasterYSize` は,"
+"GDALDataset 基底クラスから継承されたデータフィールドであり,Open() メソッドで設定する必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:230
 msgid ""
 "All the bands related to this dataset must be created and attached using "
 "the SetBand() method. We will explore the JDEMRasterBand() class shortly."
 msgstr ""
+"このデータセットに関連するすべてのバンドは,SetBand() メソッドを使用して作成および"
+"アタッチする必要があります. JDEMRasterBand() クラスについてはすぐに調査します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:237
 msgid ""
@@ -167,10 +219,14 @@ msgid ""
 "external overviews (in a .ovr side car file). For more details on these "
 "services review the GDALPamDataset and related classes."
 msgstr ""
+"最後に,データセットオブジェクトに名前を割り当て,利用可能な場合は .aux.xml ファイルから"
+"補助情報を初期化できる GDALPamDataset TryLoadXML() メソッドを呼び出します. また,"
+"外部の概要情報(.ovr サイドカーファイル)の初期化も行います. これらのサービスの詳細については,"
+"GDALPamDataset および関連クラスを参照してください."
 
 #: ../../source/tutorials/raster_driver_tut.rst:253
 msgid "Implementing the RasterBand"
-msgstr ""
+msgstr "ラスターバンドの実装"
 
 #: ../../source/tutorials/raster_driver_tut.rst:255
 msgid ""
@@ -179,6 +235,10 @@ msgid ""
 " from :cpp:class:`GDALRasterBand` for access to the band(s) of the JDEM "
 "file. For JDEMRasterBand the declaration looks like this:"
 msgstr ""
+"GDALDataset からサブクラス化されたカスタマイズされた JDEMDataset クラスと同様に,"
+"JDEM ファイルのバンドにアクセスするための :cpp:class:`GDALRasterBand` から派生した"
+"カスタマイズされた JDEMRasterBand を宣言および実装する必要があります. JDEMRasterBand の"
+"宣言は次のようになります:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:275
 msgid ""
@@ -187,16 +247,20 @@ msgid ""
 ":cpp:func:`GDALRasterBand::IReadBlock` must be exactly matched to the "
 "method signature in gdal_priv.h."
 msgstr ""
+"コンストラクタには任意のシグネチャを持たせることができ,Open() メソッドからのみ呼び出されます."
+"その他の仮想メソッド,例えば :cpp:func:`GDALRasterBand::IReadBlock` は,gdal_priv.h での"
+"メソッドシグネチャと完全に一致している必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:277
 msgid "The constructor implementation looks like this:"
-msgstr ""
+msgstr "コンストラクタの実装は次のようになります:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:294
 msgid ""
 "The following data members are inherited from GDALRasterBand, and should "
 "generally be set in the band constructor."
 msgstr ""
+"以下のデータメンバは GDALRasterBand から継承され,通常はバンドコンストラクタで設定する必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:304
 msgid ""
@@ -206,16 +270,22 @@ msgid ""
 " with. For tiled datasets this will be the size of a tile, while for most"
 " other datasets it will be one scanline, as in this case."
 msgstr ""
+"可能な GDALDataType 値の全セットは gdal.h で宣言されており,GDT_Byte,GDT_UInt16,"
+"GDT_Int16,および GDT_Float32 が含まれます. ブロックサイズは,データにアクセスするための"
+"自然または効率的なブロックサイズを確立するために使用されます. タイルデータセットの場合,"
+"これはタイルのサイズになりますが,ほとんどの他のデータセットの場合は,この場合のように"
+"1 スキャンラインになります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:306
 msgid ""
 "Next we see the implementation of the code that actually reads the image "
 "data, IReadBlock()."
 msgstr ""
+"次に,実際に画像データを読み取るコードの実装, IReadBlock() を見ます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:363
 msgid "Key items to note are:"
-msgstr ""
+msgstr "注意すべき重要な項目は次のとおりです:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:365
 msgid ""
@@ -224,12 +294,17 @@ msgid ""
 "access to the owning dataset object, ensure it is declared as a friend "
 "(omitted above for brevity)."
 msgstr ""
+"GDALRasterBand::poDS メンバを所有するデータセットの派生型にキャストするのは一般的です."
+"ラスターバンドクラスが所有するデータセットオブジェクトに特権的なアクセスが必要な場合,"
+"それが friend として宣言されていることを確認してください(簡潔さのために省略されています)."
 
 #: ../../source/tutorials/raster_driver_tut.rst:366
 msgid ""
 "If an error occurs, report it with CPLError(), and return CE_Failure. "
 "Otherwise return CE_None."
 msgstr ""
+"エラーが発生した場合は,CPLError() で報告し,CE_Failure を返します. それ以外の場合は,"
+"CE_None を返します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:367
 msgid ""
@@ -238,6 +313,9 @@ msgid ""
 " type of the data within pImage should match the type declared in "
 "eDataType in the raster band object."
 msgstr ""
+"pImage バッファには,1 ブロックのデータが格納されている必要があります. ブロックは,"
+"ラスターバンドの nBlockXSize および nBlockYSize で宣言されたサイズです. pImage 内の"
+"データのタイプは,ラスターバンドオブジェクトの eDataType で宣言されたタイプと一致している必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:368
 msgid ""
@@ -245,10 +323,12 @@ msgid ""
 "datasets values of 1 and 1 would indicate the block going from (128,128) "
 "to (255,255) should be loaded."
 msgstr ""
+"nBlockXOff および nBlockYOff はブロックオフセットであり,128x128 タイルデータセットの場合,"
+"1 と 1 の値は,ブロックが (128,128) から (255,255) になることを示しています."
 
 #: ../../source/tutorials/raster_driver_tut.rst:371
 msgid "The Driver"
-msgstr ""
+msgstr "ドライバー"
 
 #: ../../source/tutorials/raster_driver_tut.rst:373
 msgid ""
@@ -258,10 +338,14 @@ msgid ""
 "register our format we implement a registration function. The declaration"
 " goes in gcore/gdal_frmts.h: void CPL_DLL GDALRegister_JDEM(void);"
 msgstr ""
+"JDEMDataset と JDEMRasterBand は,画像データを読み取るために使用する準備ができていますが,"
+"GDAL システムが新しいドライバーについてどのように知るかはまだ明確ではありません."
+"これは :cpp:class:`GDALDriverManager` を介して実現されます. フォーマットを登録するために,"
+"登録関数を実装します. 宣言は gcore/gdal_frmts.h にあります: void CPL_DLL GDALRegister_JDEM(void);"
 
 #: ../../source/tutorials/raster_driver_tut.rst:376
 msgid "The definition in the driver file is:"
-msgstr ""
+msgstr "ドライバーファイルの定義は次のようになります:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:405
 msgid ""
@@ -277,6 +361,14 @@ msgid ""
 "release branch (that is for bug fixes releases x.y.z of a given feature "
 "release x.y.0)."
 msgstr ""
+"GDAL_CHECK_VERSION マクロの使用に注意してください. これは,プラグインとしてビルドできる"
+"ドライバーで使用する必要があるマクロです. GDAL C++ ABI は,例えば GDAL 3.x.0 から 3.y.0 に"
+"変更される可能性があり,変更される必要があります. したがって,ヘッダーファイルのバージョンにしたがって"
+"GDALドライバーを再コンパイルする必要があります."
+"GDAL_CHECK_VERSION マクロは,ドライバーが"
+"コンパイルされた GDAL バージョンと実行されているバージョンが互換性があるかどうかを確認します"
+"(メジャーバージョンとマイナーバージョンが等しいかどうかを確認します). ただし,同じリリースブランチ"
+"のリリースでは C++ ABI は安定したままです(つまり,特定の機能リリース x.y.0 のバグ修正リリース x.y.z に対して)."
 
 #: ../../source/tutorials/raster_driver_tut.rst:407
 msgid ""
@@ -285,6 +377,8 @@ msgid ""
 "following fields can be set in the driver before registering it with the "
 "GDALDriverManager."
 msgstr ""
+"登録関数は,最初に呼び出されたときに GDALDriver オブジェクトのインスタンスを作成し,"
+"GDALDriverManager に登録します. GDALDriverManager に登録する前に,次のフィールドをドライバーに設定できます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:409
 msgid ""
@@ -293,18 +387,23 @@ msgid ""
 " line programs. Normally 3-5 characters in length, and matching the "
 "prefix of the format classes. (mandatory)"
 msgstr ""
+"説明はフォーマットの短い名前です. これは,このフォーマットの一意の名前であり,スクリプトや"
+"コマンドラインプログラムでドライバーを識別するためによく使用されます. 通常,3-5 文字の長さで,"
+"フォーマットクラスのプレフィックスと一致します. (必須)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:410
 msgid ""
 "GDAL_DCAP_RASTER: set to YES to indicate that this driver handles raster "
 "data. (mandatory)"
 msgstr ""
+"GDAL_DCAP_RASTER: このドライバーがラスターデータを処理することを示すために YES に設定します. (必須)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:411
 msgid ""
 "GDAL_DMD_LONGNAME: A longer descriptive name for the file format, but "
 "still no longer than 50-60 characters. (mandatory)"
 msgstr ""
+"GDAL_DMD_LONGNAME: ファイルフォーマットのためのより詳細な説明的な名前ですが,50-60 文字を超えないようにします. (必須)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:412
 msgid ""
@@ -312,6 +411,8 @@ msgid ""
 "if any. In this case JDEM format is contained within the various format "
 "web page held in gdal/html. (optional)"
 msgstr ""
+"GDAL_DMD_HELPTOPIC: このドライバーに表示するヘルプトピックの名前です. この場合,JDEM フォーマットは,"
+"gdal/html に保持されているさまざまなフォーマットのウェブページに含まれています. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:413
 msgid ""
@@ -319,12 +420,15 @@ msgid ""
 "the leading '.'. If more than one, they should be separated with space. "
 "(optional)"
 msgstr ""
+"GDAL_DMD_EXTENSIONS: このタイプのファイルに使用される拡張子です. 先頭の '.' は含まれません."
+"複数ある場合は,スペースで区切る必要があります. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:414
 msgid ""
 "GDAL_DMD_MIMETYPE: The standard mime type for this file format, such as "
 "\"image/png\". (optional)"
 msgstr ""
+"GDAL_DMD_MIMETYPE: このファイルフォーマットの標準 MIME タイプ,例えば \"image/png\" です. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:415
 msgid ""
@@ -332,6 +436,8 @@ msgid ""
 "describe creation options. See the geotiff driver for an example of this."
 " (optional)"
 msgstr ""
+"GDAL_DMD_CREATIONOPTIONLIST: 作成オプションを記述するメカニズムに関する進化する作業があります."
+"これについての例については,geotiff ドライバーを参照してください. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:416
 msgid ""
@@ -345,6 +451,12 @@ msgid ""
 "translated to Float32. An example value might be \"Byte Int16 UInt16\". "
 "(required - if creation supported)"
 msgstr ""
+"GDAL_DMD_CREATIONDATATYPES: 新しいデータセットを作成するときにサポートされるスペースで区切られた"
+"データタイプのリストです. Create() メソッドが存在する場合,これらはサポートされます. CreateCopy() "
+"メソッドが存在する場合,これは損失なくエクスポートできるタイプのリストですが,最終的に書き込まれる"
+"タイプよりも弱いデータタイプが含まれる可能性があります. たとえば,CreateCopy() メソッドを持つフォーマットで,"
+"常に Float32 を書き込む場合,Byte,Int16,および UInt16 をリストアップすることがあります. これは,"
+"Float32 に損失なく変換できるためです. 例の値は \"Byte Int16 UInt16\" です. (必須 - 作成がサポートされている場合)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:417
 msgid ""
@@ -352,12 +464,15 @@ msgid ""
 "with files opened with the VSI*L GDAL API. Otherwise this metadata item "
 "should not be defined. (optional)"
 msgstr ""
+"GDAL_DCAP_VIRTUALIO: このドライバーが VSI*L GDAL API で開かれたファイルを処理できることを示すために,"
+"YES に設定します. それ以外の場合,このメタデータ項目は定義されていない必要があります. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:418
 msgid ""
 "pfnOpen: The function to call to try opening files of this format. "
 "(optional)"
 msgstr ""
+"pfnOpen: このフォーマットのファイルを開こうとするために呼び出す関数です. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:419
 msgid ""
@@ -367,12 +482,16 @@ msgid ""
 " if it cannot reach to a firm conclusion by just examining the header "
 "bytes. (optional)"
 msgstr ""
+"pfnIdentify: このフォーマットのファイルを識別しようとするために呼び出す関数です."
+"ドライバーは,ファイルを自分のフォーマットとして認識する場合は 1 を返し,ファイルを自分のフォーマットとして"
+"認識しない場合は 0 を返し,ヘッダバイトを調べるだけでは確定的な結論に達することができない場合は -1 を返します. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:420
 msgid ""
 "pfnCreate: The function to call to create new updatable datasets of this "
 "format. (optional)"
 msgstr ""
+"pfnCreate: このフォーマットの新しい更新可能データセットを作成するために呼び出す関数です. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:421
 msgid ""
@@ -380,12 +499,15 @@ msgid ""
 "format copied from another source, but not necessary updatable. "
 "(optional)"
 msgstr ""
+"pfnCreateCopy: 他のソースからコピーされたこのフォーマットの新しいデータセットを作成するために呼び出す関数ですが,"
+"必ずしも更新可能ではありません. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:422
 msgid ""
 "pfnDelete: The function to call to delete a dataset of this format. "
 "(optional)"
 msgstr ""
+"pfnDelete: このフォーマットのデータセットを削除するために呼び出す関数です. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:423
 msgid ""
@@ -393,6 +515,8 @@ msgid ""
 "Could be used to cleanup data at the driver level. Rarely used. "
 "(optional)"
 msgstr ""
+"pfnUnloadDriver: ドライバーが破棄されたときにのみ呼び出される関数です. ドライバーレベルでデータをクリーンアップするために使用できます."
+"ほとんど使用されません. (オプション)"
 
 #: ../../source/tutorials/raster_driver_tut.rst:425
 msgid ""
@@ -404,10 +528,14 @@ msgid ""
 " the changes needed to make the driver compatible of deferred plugin "
 "loading."
 msgstr ""
+"プラグインとしてビルドできるドライバー(つまり,ランタイムで GDAL によってロードされるスタンドアロン共有オブジェクト)の場合,"
+"GDAL 3.9 以降と :ref:`rfc-96` 以降,ドライバーを実装する方法があります. この方法では,"
+"プラグインは必要なときにのみロードされ,すぐに :cpp:func:`GDALAllRegister` 実行時にロードされません."
+"遅延プラグインロードに互換性のあるドライバーにするために必要な変更については, :ref:`rfc96_example_driver` を参照してください."
 
 #: ../../source/tutorials/raster_driver_tut.rst:428
 msgid "Adding Driver to GDAL Tree"
-msgstr ""
+msgstr "ドライバーを GDAL ツリーに追加"
 
 #: ../../source/tutorials/raster_driver_tut.rst:430
 msgid ""
@@ -415,18 +543,22 @@ msgid ""
 "level program in order to have access to the JDEM driver. Normal practice"
 " when writing new drivers is to:"
 msgstr ""
+"JDEM ドライバーにアクセスするためには,上位レベルのプログラムで GDALRegister_JDEM() メソッドを呼び出す必要があります."
+"新しいドライバーを書くときの通常の方法は次のとおりです:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:432
 msgid ""
 "Add a driver directory under frmts, with the directory name the same as "
 "the short name."
 msgstr ""
+"frmts の下にドライバーディレクトリを追加し,ディレクトリ名を短い名前と同じにします."
 
 #: ../../source/tutorials/raster_driver_tut.rst:433
 msgid ""
 "Add a CMakeLists.txt in that directory modeled on those from other "
 "similar directories (i.e. the jdem directory)."
 msgstr ""
+"そのディレクトリに他の類似のディレクトリ(つまり jdem ディレクトリ)からモデルとなる CMakeLists.txt を追加します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:434
 msgid ""
@@ -434,6 +566,8 @@ msgid ""
 "gdal_optional_format() or gdal_dependent_format() functions depending if "
 "it requires no external dependency or it has at least one."
 msgstr ""
+"新しいドライバーを frmts/CMakeLists.txt で参照し,gdal_optional_format() または gdal_dependent_format() 関数を使用します."
+"外部依存関係がない場合は gdal_optional_format() を使用し,少なくとも 1 つの依存関係がある場合は gdal_dependent_format() を使用します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:435
 msgid ""
@@ -441,18 +575,22 @@ msgid ""
 " this is called <short_name>dataset.cpp, with all the GDAL specific code "
 "in one file, though that is not required."
 msgstr ""
+"モジュールにデータセットとラスターバンドの実装を追加します. 一般的には <short_name>dataset.cpp と呼ばれ,"
+"GDAL 固有のコードが 1 つのファイルにすべて含まれていますが,これは必須ではありません."
 
 #: ../../source/tutorials/raster_driver_tut.rst:436
 msgid ""
 "Add the registration entry point declaration (i.e. GDALRegister_JDEM()) "
 "to gcore/gdal_frmts.h."
 msgstr ""
+"登録エントリーポイント宣言(GDALRegister_JDEM()) を gcore/gdal_frmts.h に追加します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:437
 msgid ""
 "Add a call to the registration function to frmts/gdalallregister.cpp, "
 "protected by an appropriate #ifdef."
 msgstr ""
+"適切な #ifdef で保護された frmts/gdalallregister.cpp に登録関数を追加します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:439
 msgid ""
@@ -462,10 +600,13 @@ msgid ""
 "working, and the :ref:`gdal_translate` utility can be used to test image "
 "reading."
 msgstr ""
+"これらのすべてが完了すると,GDAL を再構築し,新しいフォーマットをすべてのユーティリティで利用できるようにすることができます."
+" :ref:`gdalinfo` ユーティリティを使用して,フォーマットの開くことと報告が機能しているかどうかをテストし,"
+" :ref:`gdal_translate` ユーティリティを使用して画像の読み取りをテストできます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:442
 msgid "Adding Georeferencing"
-msgstr ""
+msgstr "ジオリファレンシングの追加"
 
 #: ../../source/tutorials/raster_driver_tut.rst:444
 msgid ""
@@ -474,6 +615,8 @@ msgid ""
 "JDEMDataset, taking care to exactly match the signature of the method on "
 "the GDALDataset base class."
 msgstr ""
+"次に,ジオリファレンシングサポートを追加して,例をさらに進めます. GDALDataset ベースクラスのメソッドのシグネチャと"
+"完全に一致するように,JDEMDataset に次の 2 つの仮想メソッドオーバーライドを追加します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:451
 msgid ""
@@ -486,12 +629,18 @@ msgid ""
 "at the top left corner of the top left pixel, not the center of pixel "
 "approach used in some packages."
 msgstr ""
+" :cpp:func:`GDALDataset::GetGeoTransform` の実装は,通常のジオトランスフォーム行列を提供されたバッファにコピーします."
+" :cpp:func:`GDALDataset::GetGeoTransform` は多く呼び出される可能性があるため,通常は多くの計算を行うことは賢明ではありません."
+"多くの場合,Open() はジオトランスフォームを収集し,このメソッドはそれを単にコピーします. また,ジオトランスフォームの"
+"返り値は,左上のピクセルの左上隅にアンカーポイントがあることに注意してください. 一部のパッケージで使用されているピクセルの"
+"中心アプローチではありません."
 
 #: ../../source/tutorials/raster_driver_tut.rst:475
 msgid ""
 "The :cpp:func:`GDALDataset::GetSpatialRef` method returns a pointer to an"
 " internal OGRSpatialReference object."
 msgstr ""
+" :cpp:func:`GDALDataset::GetSpatialRef` メソッドは,内部の OGRSpatialReference オブジェクトへのポインタを返します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:484
 msgid ""
@@ -501,16 +650,20 @@ msgid ""
 "case it may be helpful to use the :cpp:class:`OGRSpatialReference` class "
 "to help build the definition."
 msgstr ""
+"この場合,このフォーマットのすべてのファイルに対して座標系が固定されており, JDEMDataset コンストラクタで初期化されています."
+"しかし,より複雑な場合には,定義を動的に構成する必要がある場合があります. その場合,定義を構築するのに"
+" :cpp:class:`OGRSpatialReference` クラスを使用すると便利です."
 
 #: ../../source/tutorials/raster_driver_tut.rst:498
 msgid ""
 "This completes explanation of the features of the JDEM driver. The full "
 "source for jdemdataset.cpp can be reviewed as needed."
 msgstr ""
+"これで,JDEM ドライバーの機能の説明が完了しました. 必要に応じて,jdemdataset.cpp の完全なソースを確認できます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:501
 msgid "Overviews"
-msgstr ""
+msgstr "オーバービュー"
 
 #: ../../source/tutorials/raster_driver_tut.rst:503
 msgid ""
@@ -522,6 +675,11 @@ msgid ""
 "example of a file format implementing overview reporting and creation "
 "support."
 msgstr ""
+"GDAL は,ファイルフォーマットが事前に構築されたオーバービューをアプリケーションで利用可能にするために,"
+" :cpp:func:`GDALRasterBand::GetOverview` および関連メソッドを使用することを許可しています. ただし,"
+"これを実装することはかなり複雑であり,現時点ではこのドキュメントの範囲を超えています. GeoTIFF ドライバー"
+"(gdal/frmts/gtiff/geotiff.cpp) および関連ソースは,オーバービューの報告と作成サポートを実装するファイルフォーマットの"
+"例を確認できます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:505
 msgid ""
@@ -534,6 +692,11 @@ msgid ""
 "implementation of the RasterIO() method. An example of this can be found "
 "in the OGDI and ECW formats."
 msgstr ""
+"フォーマットは, :cpp:func:`GDALRasterBand::HasArbitraryOverviews` メソッドをオーバーライドして,"
+"GDALRasterBand で TRUE を返すことで,任意のオーバービューを持っていることを報告することもできます."
+"この場合,ラスターバンドオブジェクトは,効率的なイメージのリサンプリングアクセスを実装するために,"
+" :cpp:func:`GDALRasterBand::RasterIO` メソッド自体をオーバーライドすることが期待されます. これも複雑であり,"
+"RasterIO() メソッドの正しい実装には多くの要件があります. これに関する例は,OGDI および ECW フォーマットで見つけることができます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:507
 msgid ""
@@ -546,6 +709,10 @@ msgid ""
 "following near the end of the Open() method (after the PAM "
 ":cpp:func:`GDALDataset::TryLoadXML`)."
 msgstr ""
+"ただし,オーバービューを実装する最も一般的なアプローチは,データセットと同じ名前の TIFF ファイルに格納された外部オーバービューを"
+"使用することですが,拡張子 .ovr が追加されます. このスタイルのオーバービューの読み取りと作成を有効にするためには,"
+"GDALDataset が自身内部の `oOvManager` オブジェクトを初期化する必要があります. これは通常,Open() メソッドの最後の方"
+"(PAM :cpp:func:`GDALDataset::TryLoadXML` の後)に次のような呼び出しで実行されます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:513
 msgid ""
@@ -554,10 +721,13 @@ msgid ""
 "simple file system based formats unless there is a custom overview "
 "mechanism to be tied into."
 msgstr ""
+"これにより,フォーマットのオーバービューの読み取りと作成のデフォルト実装が有効になります."
+"カスタムオーバービューメカニズムが結び付けられる場合を除いて,すべてのシンプルなファイルシステムベースのフォーマットに対して"
+"これを有効にすることが推奨されます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:516
 msgid "File Creation"
-msgstr ""
+msgstr "ファイルの作成"
 
 #: ../../source/tutorials/raster_driver_tut.rst:518
 msgid ""
@@ -569,6 +739,10 @@ msgid ""
 "method to create the shell of the file, and then the application writes "
 "various information by calls to set methods."
 msgstr ""
+"ファイルの作成には 2 つのアプローチがあります. 最初の方法は, :cpp:func:`GDALDriver::CreateCopy` メソッドと呼ばれ,"
+"出力フォーマットでファイルを書き込む関数を実装し,ソース GDALDataset から必要なすべてのイメージおよびその他の情報を取得します."
+"2 番目の方法である動的作成方法は,ファイルのシェルを作成する Create メソッドを実装し,その後,アプリケーションが"
+"さまざまな情報を設定メソッドを呼び出して書き込むことを含みます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:520
 msgid ""
@@ -581,6 +755,10 @@ msgid ""
 "information, such as min/max, scaling, description and GCPs for which "
 "there are no equivalent set methods."
 msgstr ""
+"最初の方法の利点は,出力ファイルが作成されている時点ですべての情報が利用可能であることです."
+"ファイルが作成される時点でカラーマップやジオリファレンシング情報などの情報が必要な外部ライブラリを使用してファイルフォーマットを"
+"実装する場合に特に重要です. この方法のもう 1 つの利点は,CreateCopy() メソッドが,最小/最大値,スケーリング,説明および GCP など,"
+"設定メソッドが存在しないいくつかの情報を読み取ることができることです."
 
 #: ../../source/tutorials/raster_driver_tut.rst:522
 msgid ""
@@ -589,16 +767,20 @@ msgid ""
 "complete image of the desired data does not have to be available in "
 "advance."
 msgstr ""
+"2 番目の方法の利点は,アプリケーションが空の新しいファイルを作成し,利用可能になるとすぐに結果を書き込むことができることです."
+"望ましいデータの完全なイメージが事前に利用可能である必要はありません."
 
 #: ../../source/tutorials/raster_driver_tut.rst:524
 msgid ""
 "For very important formats both methods may be implemented, otherwise do "
 "whichever is simpler, or provides the required capabilities."
 msgstr ""
+"非常に重要なフォーマットの場合は,両方の方法を実装することができます. それ以外の場合は,より簡単な方法を選択するか,"
+"必要な機能を提供します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:527
 msgid "CreateCopy"
-msgstr ""
+msgstr "CreateCopy"
 
 #: ../../source/tutorials/raster_driver_tut.rst:529
 msgid ""
@@ -606,6 +788,8 @@ msgid ""
 "that method should be consulted for details of arguments. However, some "
 "things to keep in mind are:"
 msgstr ""
+" GDALDriver::CreateCopy() メソッド呼び出しは直接渡されるため,引数の詳細についてはそのメソッドを参照してください."
+"ただし,考慮すべきいくつかのことがあります:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:531
 msgid ""
@@ -613,6 +797,8 @@ msgid ""
 "reasonable when it cannot exactly represent the source dataset, "
 "transforming data types on the fly, dropping georeferencing and so forth."
 msgstr ""
+"`bStrict` フラグが FALSE の場合,ドライバーは,ソースデータセットを正確に表現できない場合に,データ型を変換したり,"
+"ジオリファレンシングを削除したりするなど,何らかの合理的な処理を試みる必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:532
 msgid ""
@@ -622,6 +808,8 @@ msgid ""
 "The JPEGCreateCopy() method demonstrates good handling of the progress "
 "function."
 msgstr ""
+"進行状況の報告を正しく実装することは,かなり複雑です. 進行状況関数の戻り結果は常にキャンセルされているかどうかを確認する必要があり,"
+"進行状況は適切な間隔で報告する必要があります. JPEGCreateCopy() メソッドは,進行状況関数の適切な処理を示しています."
 
 #: ../../source/tutorials/raster_driver_tut.rst:533
 msgid ""
@@ -630,12 +818,17 @@ msgid ""
 "manipulated with :cpp:func:`CPLFetchNameValue` as demonstrated in the "
 "handling of the QUALITY and PROGRESSIVE flags for JPEGCreateCopy()."
 msgstr ""
+"特別な作成オプションは,オンラインヘルプに記載する必要があります. オプションが \"NAME=VALUE\" 形式を取る場合,"
+"JPEGCreateCopy() の QUALITY および PROGRESSIVE フラグの処理で示されているように,"
+"papszOptions リストは :cpp:func:`CPLFetchNameValue` を使用して操作できます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:534
 msgid ""
 "The returned GDALDataset handle can be in ReadOnly or Update mode. Return"
 " it in Update mode if practical, otherwise in ReadOnly mode is fine."
 msgstr ""
+"返された GDALDataset ハンドルは,ReadOnly モードまたは Update モードである可能性があります. 実用的であれば,"
+"Update モードで返し,それ以外の場合は ReadOnly モードで問題ありません."
 
 #: ../../source/tutorials/raster_driver_tut.rst:536
 msgid ""
@@ -643,10 +836,13 @@ msgid ""
 "assigned to pfnCreateCopy in the GDALDriver object) is here. static "
 "GDALDataset *"
 msgstr ""
+"JPEG の CreateCopy 関数の完全な実装(これは GDALDriver オブジェクトの pfnCreateCopy "
+"に割り当てられています)はここにあります."
+" static GDALDataset *"
 
 #: ../../source/tutorials/raster_driver_tut.rst:644
 msgid "Dynamic Creation"
-msgstr ""
+msgstr "動的作成"
 
 #: ../../source/tutorials/raster_driver_tut.rst:646
 msgid ""
@@ -656,6 +852,8 @@ msgid ""
 " would be supplied later via other method calls on the resulting "
 "GDALDataset."
 msgstr ""
+"動的作成の場合,ソースデータセットはありません. 代わりに,希望するファイルのサイズ,バンド数,およびピクセルデータ型が提供されますが,"
+"他の情報(ジオリファレンシングやイメージデータなど)は,後で生成された GDALDataset に対する他のメソッド呼び出しで提供されます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:648
 msgid ""
@@ -665,6 +863,9 @@ msgid ""
 "writable file handle. This avoids having to duplicate the various setup "
 "actions in the Open() function."
 msgstr ""
+"次のサンプルは,PCI .aux ラベル付きの raw ラスター作成を実装しています. これは,非 GDAL 呼び出しを使用して空のがありますが,"
+"有効なファイルを作成し,最後に GDALOpen(,GA_Update) を呼び出して書き込み可能なファイルハンドルを返す一般的なアプローチに従っています."
+"これにより,Open() 関数でさまざまな設定アクションを複製する必要がなくなります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:753
 msgid ""
@@ -676,10 +877,14 @@ msgid ""
 "write cache blocks for the band be flushed out before the destructor is "
 "called."
 msgstr ""
+"動的作成をサポートするファイルフォーマット,または単に更新インプレースアクセスをサポートするファイルフォーマットは,"
+"ラスターバンドクラスに IWriteBlock() メソッドを実装する必要があります. これは, IReadBlock() に類似したセマンティクスを持ちます."
+"さらに,さまざまな難解な理由から,ラスターバンドデストラクタに FlushCache() メソッドを実装することが重要です."
+"これは,デストラクタが呼び出される前にバンドの書き込みキャッシュブロックがフラッシュされることを保証するためです."
 
 #: ../../source/tutorials/raster_driver_tut.rst:756
 msgid "RawDataset/RawRasterBand Helper Classes"
-msgstr ""
+msgstr "RawDataset/RawRasterBand ヘルパークラス"
 
 #: ../../source/tutorials/raster_driver_tut.rst:758
 msgid ""
@@ -690,6 +895,9 @@ msgid ""
 "in gcore/ that can be utilized to implement efficient and convenient "
 "access."
 msgstr ""
+"多くのファイルフォーマットは,実際のイメージデータが通常のバイナリ形式でスキャンライン指向の形式で格納されています."
+"各フォーマットに対してこれを再実装する代わりに,効率的かつ便利なアクセスを実装するために,"
+"gcore/ で宣言された :cpp:class:`RawDataset` および :cpp:class:`RawRasterBand` クラスが提供されています."
 
 #: ../../source/tutorials/raster_driver_tut.rst:760
 msgid ""
@@ -697,6 +905,8 @@ msgid ""
 "required it can be derived from RawRasterBand. The dataset class should "
 "be derived from RawDataset."
 msgstr ""
+"この場合,フォーマット固有のバンドクラスが必要ない場合があります. または,必要な場合は RawRasterBand から派生させることができます."
+"データセットクラスは RawDataset から派生させる必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:762
 msgid ""
@@ -704,52 +914,59 @@ msgid ""
 "all the layout information to the constructor. For instance, the PNM "
 "driver uses the following calls to create it's raster bands."
 msgstr ""
+"データセットの Open() メソッドは,そのレイアウト情報をコンストラクタに渡してラスターバンドをインスタンス化します."
+"たとえば,PNM ドライバーは,次の呼び出しを使用してラスターバンドを作成します."
 
 #: ../../source/tutorials/raster_driver_tut.rst:785
 msgid "The RawRasterBand takes the following arguments."
-msgstr ""
+msgstr "RawRasterBand は,次の引数を取ります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:787
 msgid ""
 "poDS: The GDALDataset this band will be a child of. This dataset must be "
 "of a class derived from RawRasterDataset."
 msgstr ""
+"poDS: このバンドが子になる GDALDataset. このデータセットは RawRasterDataset から派生したクラスである必要があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:788
 msgid "nBand: The band it is on that dataset, 1 based."
-msgstr ""
+msgstr "nBand: そのデータセットのバンド,1 から始まる."
 
 #: ../../source/tutorials/raster_driver_tut.rst:789
 msgid "fpRaw: The FILE * handle to the file containing the raster data."
-msgstr ""
+msgstr "fpRaw: ラスターデータを含むファイルへの FILE * ハンドル."
 
 #: ../../source/tutorials/raster_driver_tut.rst:790
 msgid ""
 "nImgOffset: The byte offset to the first pixel of raster data for the "
 "first scanline."
 msgstr ""
+"nImgOffset: 最初のスキャンラインのラスタデータの最初のピクセルまでのバイトオフセット."
 
 #: ../../source/tutorials/raster_driver_tut.rst:791
 msgid ""
 "nPixelOffset: The byte offset from the start of one pixel to the start of"
 " the next within the scanline."
 msgstr ""
+"nPixelOffset: 1 つのピクセルの開始から次のスキャンライン内の開始までのバイトオフセット."
 
 #: ../../source/tutorials/raster_driver_tut.rst:792
 msgid ""
 "nLineOffset: The byte offset from the start of one scanline to the start "
 "of the next."
 msgstr ""
+"nLineOffset: 1 つのスキャンラインの開始から次の開始までのバイトオフセット."
 
 #: ../../source/tutorials/raster_driver_tut.rst:793
 msgid "eDataType: The GDALDataType code for the type of the data on disk."
-msgstr ""
+msgstr "eDataType: ディスク上のデータのタイプのための GDALDataType コード."
 
 #: ../../source/tutorials/raster_driver_tut.rst:794
 msgid ""
 "bNativeOrder: FALSE if the data is not in the same endianness as the "
 "machine GDAL is running on. The data will be automatically byte swapped."
 msgstr ""
+"bNativeOrder: データが GDAL が実行されているマシンと同じエンディアンでない場合は FALSE. データは自動的にバイトスワップされます."
 
 #: ../../source/tutorials/raster_driver_tut.rst:796
 msgid ""
@@ -757,16 +974,20 @@ msgid ""
 "within one file in the gdal/frmts/raw directory. There are numerous "
 "examples there of format implementation."
 msgstr ""
+"Raw サービスを利用するシンプルなファイルフォーマットは,通常,gdal/frmts/raw ディレクトリ内の 1 つのファイルに配置されます."
+"そこには,フォーマットの実装の多くの例があります."
 
 #: ../../source/tutorials/raster_driver_tut.rst:799
 msgid "Metadata, and Other Exotic Extensions"
-msgstr ""
+msgstr "メタデータおよびその他のエキゾチックな拡張"
 
 #: ../../source/tutorials/raster_driver_tut.rst:801
 msgid ""
 "There are various other items in the GDAL data model, for which virtual "
 "methods exist on the GDALDataset and GDALRasterBand. They include:"
 msgstr ""
+"GDAL データモデルには, GDALDataset および GDALRasterBand に仮想メソッドが存在するさまざまな項目があります."
+"これには次のものが含まれます:"
 
 #: ../../source/tutorials/raster_driver_tut.rst:803
 msgid ""
@@ -777,6 +998,9 @@ msgid ""
 " (frmts/ceos2/sar_ceosdataset.cpp) and GeoTIFF drivers are examples of "
 "drivers implementing readable metadata."
 msgstr ""
+"メタデータ: データセットまたはバンドに関する名前/値テキスト値. GDALMajorObject (GDALRasterBand および GDALDataset の基本クラス) は,"
+"メタデータを保持するための組み込みサポートを持っているため,読み取りアクセスの場合は,Open() で SetMetadataItem() を呼び出すだけで"
+"よいです. SAR_CEOS (frmts/ceos2/sar_ceosdataset.cpp) および GeoTIFF ドライバーは,読み取り可能なメタデータを実装しているドライバーの例です."
 
 #: ../../source/tutorials/raster_driver_tut.rst:805
 msgid ""
@@ -784,6 +1008,8 @@ msgid ""
 "them. The frmts/png/pngdataset.cpp driver contains an example of a format"
 " that supports colortables."
 msgstr ""
+"カラーテーブル: GDT_Byte ラスターバンドには,それに関連付けられたカラーテーブルが存在することができます."
+"frmts/png/pngdataset.cpp ドライバーには,カラーテーブルをサポートするフォーマットの例が含まれています."
 
 #: ../../source/tutorials/raster_driver_tut.rst:807
 msgid ""
@@ -791,6 +1017,9 @@ msgid ""
 "returns an indication of whether a band should be treated as a Red, "
 "Green, Blue, Alpha or Greyscale band."
 msgstr ""
+"ColorInterpretation: PNG ドライバーには,バンドを赤,緑,青,アルファまたは"
+"グレースケールバンドとして扱うかどうかを示すドライバーの例が含まれています."
+
 
 #: ../../source/tutorials/raster_driver_tut.rst:809
 msgid ""
@@ -800,6 +1029,9 @@ msgid ""
 "MFF2 (gdal/frmts/raw/hkvdataset.cpp) format is a simple example of a "
 "format supporting GCPs."
 msgstr ""
+"GCPs: GDALDatasets には,ラスターをジオリファレンス座標に関連付けるための一連の地上制御点が関連付けられている場合があります"
+"(GetGeotransform() によって返される明示的なアフィン変換とは異なります). MFF2 (gdal/frmts/raw/hkvdataset.cpp) フォーマットは,"
+"GCPs をサポートするフォーマットの単純な例です."
 
 #: ../../source/tutorials/raster_driver_tut.rst:811
 msgid ""
@@ -807,6 +1039,8 @@ msgid ""
 "GetNoDataValue() method. See the PAux (frmts/raw/pauxdataset.cpp) for an "
 "example of this."
 msgstr ""
+"NoDataValue: 既知の \"nodata\" 値を持つバンドは,GetNoDataValue() メソッドを実装することができます."
+"これに関する例については,PAux (frmts/raw/pauxdataset.cpp) を参照してください."
 
 #: ../../source/tutorials/raster_driver_tut.rst:813
 msgid ""
@@ -814,4 +1048,12 @@ msgid ""
 "them using the GetCategoryNames() method though no formats currently "
 "implement this."
 msgstr ""
+"カテゴリ名: 各クラスに名前を付けた分類画像は,GetCategoryNames() メソッドを使用してそれらを返すことができます."
+"ただし,現在のところ,このメソッドを実装しているフォーマットはありません."
+
+
+
+
+
+
 

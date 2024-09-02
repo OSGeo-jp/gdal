@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama<yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/tutorials/warp_tut.rst:5
 msgid "GDAL Warp API tutorial (Reprojection, ...)"
-msgstr ""
+msgstr "GDAL Warp API チュートリアル (再投影、...)"
 
 #: ../../source/tutorials/warp_tut.rst:10
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/tutorials/warp_tut.rst:12
 msgid ""
@@ -35,6 +35,11 @@ msgid ""
 "variety of resampling kernels, and various masking options. Files much "
 "larger than can be held in memory can be warped."
 msgstr ""
+"GDAL Warp API ( :ref:`gdalwarper.h <gdalwarp_cpp>` で宣言されています) は,アプリケーションが提供"
+"する地理的変換関数 (GDALTransformerFunc),さまざまなリサンプリングカーネル,"
+"およびさまざまなマスキングオプションを使用して,高性能の画像ワーピングサー"
+"ビスを提供します.メモリに保持できるよりもはるかに大きなファイルをワープでき"
+"ます."
 
 #: ../../source/tutorials/warp_tut.rst:14
 msgid ""
@@ -43,6 +48,11 @@ msgid ""
 "incomplete for the Warp API. It also assumes familiarity with the "
 ":ref:`raster_data_model`, and the general GDAL API."
 msgstr ""
+"このチュートリアルでは,ワープ API を使用したアプリケーションの実装方法を示し"
+"ています. Warp API に対する C および Python のバインディングが不完全であること"
+"を前提としています. また :ref:`raster_data_model` と一般的な GDAL API に精通している"
+"ことを前提としています."
+
 
 #: ../../source/tutorials/warp_tut.rst:16
 msgid ""
@@ -53,10 +63,15 @@ msgid ""
 "perform the warp options internally using the :cpp:class:`GDALWarpKernel`"
 " class."
 msgstr ""
+"通常,アプリケーションは,使用するオプションを持つ :cpp:class:`GDALWarpOptio"
+"ns` 構造体を初期化し,これらのオプションに基づいて GDALWarpOperation をイン"
+"スタンス化し,その後,内部で :cpp:class:`GDALWarpKernel` クラスを使用してワー"
+"プオプションを実行するために :cpp:func:`GDALWarpOperation::ChunkAndWarpImage`"
+" メソッドを呼び出します."
 
 #: ../../source/tutorials/warp_tut.rst:19
 msgid "A Simple Reprojection Case"
-msgstr ""
+msgstr "単純な再投影ケース"
 
 #: ../../source/tutorials/warp_tut.rst:20
 msgid ""
@@ -64,6 +79,8 @@ msgid ""
 "image, assuming an appropriate output file already exists, and with "
 "minimal error checking."
 msgstr ""
+"最初に,適切な出力ファイルが既に存在し,エラーチェックが最小限であると仮定し"
+"て,画像を再投影するための比較的単純な例を構築します."
 
 #: ../../source/tutorials/warp_tut.rst:70
 msgid ""
@@ -77,6 +94,14 @@ msgid ""
 "monitor (GDALTermProgress) is installed for reporting completion progress"
 " to the user."
 msgstr ""
+"この例では,既存の入力ファイルと出力ファイル (in.tif および out.tif) を開きま"
+"す. :cpp:class:`GDALWarpOptions` 構造体が割り当てられます (:cpp:func:`GDALCr"
+"eateWarpOptions` は,たくさんのものに対して合理的なデフォルトを設定します,"
+"常にデフォルトのものに使用してください),そして,入力ファイルハンドルと出力ファ"
+"イルハンドル,およびバンドリストが設定されます. panSrcBands と panDstBands リ"
+"ストはここで動的に割り当てられ, :cpp:func:`GDALDestroyWarpOptions` によって自"
+"動的に解放されます. シンプルなターミナル出力進行状況モニター (GDALTermProgress)"
+" がインストールされ,ユーザーに完了進行状況を報告します."
 
 #: ../../source/tutorials/warp_tut.rst:72
 msgid ""
@@ -85,6 +110,9 @@ msgid ""
 " assume that they already have reasonable bounds and coordinate systems "
 "set. Use of GCPs is disabled."
 msgstr ""
+" :cpp:func:`GDALCreateGenImgProjTransformer` は,ソース画像と宛先画像の再投影"
+"変換を初期化するために使用されます. それらがすでに適切な境界と座標系が設定"
+"されていると仮定します. GCP の使用は無効になっています."
 
 #: ../../source/tutorials/warp_tut.rst:74
 msgid ""
@@ -93,6 +121,10 @@ msgid ""
 ":cpp:func:`GDALWarpOperation::ChunkAndWarpImage`. Then the transformer, "
 "warp options and datasets are cleaned up."
 msgstr ""
+"オプション構造が準備できたら,それらを使用して GDALWarpOperation をインスタ"
+"ンス化し,実際に :cpp:func:`GDALWarpOperation::ChunkAndWarpImage` でワープを実"
+"行します. その後,変換器,ワープオプション,およびデータセットをクリーンアップし"
+"ます."
 
 #: ../../source/tutorials/warp_tut.rst:76
 msgid ""
@@ -100,16 +132,20 @@ msgid ""
 "reprojection transformer (returns NULL on failure), and initializing the "
 "warp."
 msgstr ""
+"通常,ファイルを開いた後,再投影変換器を設定した後 (失敗した場合は NULL を返す"
+"),およびワープを初期化した後にエラーチェックが必要です."
 
 #: ../../source/tutorials/warp_tut.rst:79
 msgid "Other Warping Options"
-msgstr ""
+msgstr "その他のワーピングオプション"
 
 #: ../../source/tutorials/warp_tut.rst:81
 msgid ""
 "The GDALWarpOptions structures contains a number of items that can be set"
 " to control warping behavior. A few of particular interest are:"
 msgstr ""
+"GDALWarpOptions 構造体には,ワーピング動作を制御するために設定できる項目がい"
+"くつか含まれています. 特に興味深いものはいくつかあります:"
 
 #: ../../source/tutorials/warp_tut.rst:83
 msgid ""
@@ -125,6 +161,16 @@ msgid ""
 "bytes) is reasonable. Note that this value does not include the memory "
 "used by GDAL for low level block caching."
 msgstr ""
+" :cpp:member:`GDALWarpOptions::dfWarpMemoryLimit` - GDALWarpOperation が操作す"
+"る画像チャンクのサイズを選択するときに使用されるメモリの最大量を設定します."
+"この値はバイト単位であり,デフォルトは保守的 (小さい) である可能性がありま"
+"す. チャンクサイズを増やすことは,いくつかの状況で大幅に助けになるかもしれま"
+"せんが,このサイズと GDAL キャッシュサイズと GDAL,アプリケーション,およびオペ"
+"レーティングシステムのワーキングセットの合計が RAM のサイズよりも小さいことを"
+"確認してください. さもないと,過度のスワップがパフォーマンスに干渉する可能性"
+"があります. 256MB の RAM を持つシステムでは,少なくとも 64MB (おおよそ 6400000"
+"0 バイト) が妥当です. この値には,低レベルのブロックキャッシュに使用される GD"
+"AL のメモリは含まれていないことに注意してください."
 
 #: ../../source/tutorials/warp_tut.rst:85
 msgid ""
@@ -135,6 +181,11 @@ msgid ""
 "better results for thematic images, especially when substantially "
 "changing resolution."
 msgstr ""
+" :cpp:member:`GDALWarpOptions::eResampleAlg` - GRA_NearestNeighbour (デフォルト"
+",最速),GRA_Bilinear (2x2 バイリニアリサンプリング),または GRA_Cubic のいずれ"
+"か. GRA_NearestNeighbour タイプは,通常,テーマティックまたはカラーマップされた"
+"画像に使用されるべきです. 他のリサンプリングタイプは,解像度を大幅に変更する場"
+"合を含め,テーマティック画像に対してより良い結果をもたらすかもしれません."
 
 #: ../../source/tutorials/warp_tut.rst:87
 msgid ""
@@ -143,6 +194,10 @@ msgid ""
 "band if you wish to avoid having pixels of some background value copied "
 "to the destination image."
 msgstr ""
+" :cpp:member:`GDALWarpOptions::padfSrcNoDataReal` - この配列 (処理されるバンド"
+"ごとに 1 エントリ) は,各バンドの \"nodata\" 値を設定することができます. これ"
+"により,いくつかの背景値のピクセルが宛先画像にコピーされるのを避けることがで"
+"きます."
 
 #: ../../source/tutorials/warp_tut.rst:89
 msgid ""
@@ -151,6 +206,10 @@ msgid ""
 ":cpp:member:`GDALWarpOptions::papszWarpOptions` docs for all options. "
 "Supported values include:"
 msgstr ""
+" :cpp:member:`GDALWarpOptions::papszWarpOptions` - これは,ワーパーに渡される "
+"NAME=VALUE オプションの文字列リストです. すべてのオプションについては, "
+" :cpp:member:`GDALWarpOptions::papszWarpOptions` ドキュメントを参照してください."
+" サポートされる値には次のものが含まれます:"
 
 #: ../../source/tutorials/warp_tut.rst:91
 msgid ""
@@ -160,6 +219,10 @@ msgid ""
 " padfDstNoDataReal/padfDstNoDataImag. If this value isn't set the "
 "destination image will be read and the source warp overlaid on it."
 msgstr ""
+"INIT_DEST=[value] または INIT_DEST=NO_DATA: このオプションは,宛先画像を指定さ"
+"れた値 (すべてのバンドに対して) で初期化するか, padfDstNoDataReal/padfDstNoData"
+"Imag の NO_DATA 値で初期化することを示します. この値が設定されていない場合,"
+"宛先画像は読み込まれ,ソースワープが重ねられます."
 
 #: ../../source/tutorials/warp_tut.rst:93
 msgid ""
@@ -170,10 +233,16 @@ msgid ""
 "extra seeking around the disk, and reduced IO throughput. The default at "
 "this time is NO."
 msgstr ""
+"WRITE_FLUSH=YES/NO: このオプションは,各チャンクが処理された後にデータをディスク"
+"にフラッシュすることを強制します. いくつかの場合,これにより,出力データの直列"
+"書き込みが確実になります. そうでない場合,入力バッファのためにデータのブロック"
+"が読み込まれるたびにデータのブロックがディスクに書き込まれ,ディスクの周りを多"
+"くの余分なシークし,IO スループットが低下します. この時点でのデフォルトは NO で"
+"す."
 
 #: ../../source/tutorials/warp_tut.rst:96
 msgid "Creating the Output File"
-msgstr ""
+msgstr "出力ファイルの作成"
 
 #: ../../source/tutorials/warp_tut.rst:98
 msgid ""
@@ -183,10 +252,14 @@ msgid ""
 "relate specifically to the warp API. It is just using the transformation "
 "API."
 msgstr ""
+"前のケースでは,適切な出力ファイルが既に存在すると仮定されていました. ここでは,"
+"新しい座標系の適切な境界を持つ新しいファイルが作成されるケースを説明します. この"
+"操作は,ワープ API に特に関連していません. これは単に変換 API を使用していま"
+"す."
 
 #: ../../source/tutorials/warp_tut.rst:168
 msgid "Some notes on this logic:"
-msgstr ""
+msgstr "このロジックに関するいくつかの注意:"
 
 #: ../../source/tutorials/warp_tut.rst:170
 msgid ""
@@ -195,6 +268,9 @@ msgid ""
 "since we use the transformer to map pixels around the source image into "
 "destination georeferenced coordinates."
 msgstr ""
+"出力座標がピクセル行座標ではなく,ジオリファレンスされた出力であるように出力座"
+"標を作成する必要があります. なぜなら,ソース画像の周りのピクセルを宛先ジオリフ"
+"ァレンス座標にマッピングするために変換器を使用するからです."
 
 #: ../../source/tutorials/warp_tut.rst:172
 msgid ""
@@ -205,6 +281,10 @@ msgid ""
 "but the output pixels are always square regardless of the shape of input "
 "pixels."
 msgstr ""
+" :cpp:func:`GDALSuggestedWarpOutput` 関数は,ソース画像のすべてのピクセルを保"
+"持する出力画像サイズとジオリファレンスされた範囲を記述する adfDstGeoTransform,"
+"nPixels,および nLines を返します. 解像度はソースと比較可能であることが意図さ"
+"れていますが,出力ピクセルは入力ピクセルの形状に関係なく常に正方形です."
 
 #: ../../source/tutorials/warp_tut.rst:174
 msgid ""
@@ -216,22 +296,32 @@ msgid ""
 "a better behaved format, and then CreateCopy() it to the desired final "
 "format."
 msgstr ""
+"ワーパーは,\"ランダム\"に書き込むことができる形式の出力ファイルを必要としま"
+"す. これは,通常,Create() メソッドの実装を持つ非圧縮形式に制限されます (CreateC"
+"opy() とは対照的). 圧縮形式にワープするか,CreateCopy() スタイルの形式にワープ"
+"するには,より適切な形式で画像の完全な一時コピーを作成し,それを望ましい最終形"
+"式に CreateCopy() する必要があります."
 
 #: ../../source/tutorials/warp_tut.rst:176
 msgid ""
 "The Warp API copies only pixels. All color maps, georeferencing and other"
 " metadata must be copied to the destination by the application."
 msgstr ""
+"Warp API は,ピクセルのみをコピーします. すべてのカラーマップ,ジオリファレン"
+"シング,およびその他のメタデータは,アプリケーションによって宛先にコピーする必"
+"要があります."
 
 #: ../../source/tutorials/warp_tut.rst:179
 msgid "Performance Optimization"
-msgstr ""
+msgstr "パフォーマンスの最適化"
 
 #: ../../source/tutorials/warp_tut.rst:181
 msgid ""
 "There are a number of things that can be done to optimize the performance"
 " of the warp API:"
 msgstr ""
+"ワープ API のパフォーマンスを最適化するために行うことができるいくつかのことが"
+"あります:"
 
 #: ../../source/tutorials/warp_tut.rst:183
 msgid ""
@@ -243,6 +333,12 @@ msgid ""
 "the sum of the warp memory and the GDAL cache should be less than RAM "
 "size, likely around 2/3 of RAM size."
 msgstr ""
+"ワープ API チャンキングに使用可能なメモリ量を増やして,一度により大きなチャン"
+"クで操作できるようにします. これは :cpp:member:`GDALWarpOptions::dfWarpMemoryLi"
+"mit` パラメータです. 理論的には,操作されるチャンクサイズが大きいほど,より効率"
+"的な I/O 戦略と,より効率的な近似変換になります. ただし,ワープメモリと GDAL キ"
+"ャッシュの合計は RAM サイズよりも小さくなければならず,おそらく RAM サイズの 2/"
+"3 ほどでしょう."
 
 #: ../../source/tutorials/warp_tut.rst:185
 msgid ""
@@ -253,6 +349,11 @@ msgid ""
 ":cpp:func:`GDALSetCacheMax` to control the amount of memory available for"
 " caching within GDAL."
 msgstr ""
+"GDAL キャッシュのメモリ量を増やします. これは,非常に大きな入力および出力画像"
+"をスキャンライン指向で処理する場合に特に重要です. 入力または出力のすべてのスキ"
+"ャンラインが各チャンクで交差するたびに再読み込みされる場合,パフォーマンスが大"
+"幅に低下する可能性があります. GDAL 内で使用可能なキャッシュのメモリ量を制御す"
+"るには, :cpp:func:`GDALSetCacheMax` を使用します."
 
 #: ../../source/tutorials/warp_tut.rst:187
 msgid ""
@@ -261,6 +362,9 @@ msgid ""
 "transformation could be created based on a reprojection transformation, "
 "but with a given error threshold (dfErrorThreshold in output pixels)."
 msgstr ""
+"変換される各ピクセルの正確な再投影の代わりに近似変換を使用します. このコード"
+"は,再投影変換に基づいて近似変換が作成される方法を示していますが,指定された誤"
+"差しきい値 (出力ピクセルの dfErrorThreshold) で行います."
 
 #: ../../source/tutorials/warp_tut.rst:196
 msgid ""
@@ -269,6 +373,9 @@ msgid ""
 "chunks to be initialized to a fixed value, instead of being read from the"
 " output. This can substantially reduce unnecessary IO work."
 msgstr ""
+"空の出力ファイルに書き込む場合,出力チャンクを固定値で初期化するために, "
+":cpp:member:`GDALWarpOptions::papszWarpOptions` の INIT_DEST オプションを使用し"
+"ます. これにより,不要な IO 処理が大幅に削減される可能性があります."
 
 #: ../../source/tutorials/warp_tut.rst:198
 msgid ""
@@ -277,12 +384,18 @@ msgid ""
 "great deal of extra image data. Large scanline oriented files can result "
 "in a great deal of wasted extra IO."
 msgstr ""
+"タイル形式の入力および出力形式を使用します. タイル形式を使用すると,追加の画"
+"像データに触れることなく,指定されたソースおよび宛先画像のチャンクにアクセスで"
+"きます. 大きなスキャンライン指向のファイルは,多くの余分な IO が発生する可能性"
+"があります."
 
 #: ../../source/tutorials/warp_tut.rst:200
 msgid ""
 "Process all bands in one call. This ensures the transformation "
 "calculations don't have to be performed for each band."
 msgstr ""
+"すべてのバンドを 1 回の呼び出しで処理します. これにより,変換計算が各バンド"
+"ごとに実行される必要がなくなります."
 
 #: ../../source/tutorials/warp_tut.rst:202
 msgid ""
@@ -293,6 +406,12 @@ msgid ""
 "have been built with multi-threading support (default on Win32, default "
 "on Unix, for previous versions -with-threads was required in configure)."
 msgstr ""
+" :cpp:func:`GDALWarpOperation::ChunkAndWarpImage` の代わりに, "
+" :cpp:func:`GDALWarpOperation::ChunkAndWarpMulti` メソッドを使用します. これは,"
+"IO と実際の画像ワープ操作のために別のスレッドを使用し,より効果的に CPU と IO "
+"バンド幅を使用できるようにします. これを動作させるには, GDAL がマルチスレッド"
+"サポートでビルドされている必要があります (Win32 ではデフォルト,Unix ではデフォ"
+"ルト,以前のバージョンでは configure で -with-threads が必要でした)."
 
 #: ../../source/tutorials/warp_tut.rst:204
 msgid ""
@@ -300,6 +419,9 @@ msgid ""
 " least complex, to more complex with bilinear and then cubic. Don't use a"
 " more complex resampling kernel than needed."
 msgstr ""
+"リサンプリングカーネルは,最も単純な最近傍補間から始まり,バイリニアおよび立方"
+"体でより複雑になります. 必要以上に複雑なリサンプリングカーネルを使用しないでく"
+"ださい."
 
 #: ../../source/tutorials/warp_tut.rst:206
 msgid ""
@@ -308,10 +430,13 @@ msgid ""
 "resampling with no masking on 8bit data is highly optimized compared to "
 "the general case."
 msgstr ""
+"一般的な特殊ケースに対して特別な簡略化されたロジックケースが使用されるように,"
+"エソテリックなマスキングオプションの使用を避けます. たとえば,8bit データでマ"
+"スキングなしの最近傍補間は,一般的なケースと比較して高度に最適化されています."
 
 #: ../../source/tutorials/warp_tut.rst:209
 msgid "Other Masking Options"
-msgstr ""
+msgstr "その他のマスキングオプション"
 
 #: ../../source/tutorials/warp_tut.rst:211
 msgid ""
@@ -321,4 +446,9 @@ msgid ""
 "than per-band validity masks it is advised that these features be used "
 "with caution at this time."
 msgstr ""
+"GDALWarpOptions には,入力および出力の有効性マスクおよび密度マスクのためのエ"
+"ソテリックなマスキング機能がいくつか含まれています. これらのうちいくつかはまだ"
+"実装されておらず,他のいくつかは実装されていますが,不十分にテストされています."
+"バンドごとの有効性マスク以外の機能は,現時点ではこれらの機能を慎重に使用する"
+"ことが推奨されます."
 
