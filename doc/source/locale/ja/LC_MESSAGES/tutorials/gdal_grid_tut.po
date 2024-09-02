@@ -125,42 +125,44 @@ msgstr ""
 #: ../../source/tutorials/gdal_grid_tut.rst:158
 #: ../../source/tutorials/gdal_grid_tut.rst:175
 msgid ":math:`Z_i` is a known value at point :math:`i`,"
-msgstr ""
+msgstr " :math:`Z_i` は点 :math:`i` での既知の値です."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:63
 msgid ":math:`r_i` is a distance from the grid node to point :math:`i`,"
-msgstr ""
+msgstr " :math:`r_i` はグリッドノードから点 :math:`i` までの距離です."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:64
 msgid ":math:`p` is a weighting power,"
-msgstr ""
+msgstr " :math:`p` は重み付けのパワーです."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:65
 #: ../../source/tutorials/gdal_grid_tut.rst:143
 #: ../../source/tutorials/gdal_grid_tut.rst:159
 #: ../../source/tutorials/gdal_grid_tut.rst:176
 msgid ":math:`n` is a number of points in `Search Ellipse`_."
-msgstr ""
+msgstr " :math:`n` は `Search Ellipse`_ 内の点の数です."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:67
 msgid ""
 "The smoothing parameter :math:`s` is used as an additive term in the "
 "Euclidean distance calculation:"
 msgstr ""
+"スムージングパラメータ :math:`s` はユークリッド距離計算に加算項として使用されます:"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:69
 msgid "{r_i}=\\sqrt{{r_{ix}}^2 + {r_{iy}}^2 + s^2}"
-msgstr ""
+msgstr "{r_i}=\\sqrt{{r_{ix}}^2 + {r_{iy}}^2 + s^2}"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:73
 msgid ""
 "where :math:`r_{ix}` and :math:`r_{iy}` are the horizontal and vertical "
 "distances between the grid node to point :math:`i` respectively."
 msgstr ""
+"ここで, :math:`r_{ix}` と :math:`r_{iy}` はそれぞれグリッドノードから点 :math:`i` までの水平および垂直距離です."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:76
 msgid "In this method the weighting factor :math:`w` is"
-msgstr ""
+msgstr "このメソッドでは,重み付け係数 :math:`w` は"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:78
 msgid "w=\\frac{1}{r^p}"
@@ -172,10 +174,12 @@ msgid ""
 ":cpp:func:`GDALGridCreate` parameters and :ref:`gdal_grid_invdist` for "
 "the list of :ref:`gdal_grid` options."
 msgstr ""
+":cpp:func:`GDALGridCreate` パラメータのリストについては :cpp:class:`GDALGridInverseDistanceToAPowerOptions` を参照し,"
+" :ref:`gdal_grid_invdist` については :ref:`gdal_grid` オプションのリストを参照してください."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:87
 msgid "Moving Average"
-msgstr ""
+msgstr "移動平均"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:89
 msgid ""
@@ -187,10 +191,14 @@ msgid ""
 "window, the grid node is considered empty and will be filled with "
 "specified NODATA value."
 msgstr ""
+"移動平均は,単純なデータ平均アルゴリズムです.楕円形の移動ウィンドウを使用して値を検索し,"
+"ウィンドウ内のすべてのデータ点の平均を取ります. `Search Ellipse`_ は指定された角度で回転でき,"
+"楕円の中心はグリッドノードに配置されます.また,平均するデータ点の最小数を設定できます."
+"ウィンドウ内の点が十分でない場合,グリッドノードは空と見なされ,指定されたNODATA値で埋められます."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:97
 msgid "Mathematically it can be expressed with the formula:"
-msgstr ""
+msgstr "数学的には,次の式で表すことができます:"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:99
 msgid "Z=\\frac{\\sum_{i=1}^n{Z_i}}{n}"
@@ -201,11 +209,11 @@ msgstr ""
 #: ../../source/tutorials/gdal_grid_tut.rst:157
 #: ../../source/tutorials/gdal_grid_tut.rst:174
 msgid ":math:`Z` is a resulting value at the grid node,"
-msgstr ""
+msgstr " :math:`Z` はグリッドノードでの結果値です."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:107
 msgid ":math:`n` is a number of points in search `Search Ellipse`_."
-msgstr ""
+msgstr " :math:`n` は `Search Ellipse`_ 内の点の数です."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:109
 msgid ""
@@ -213,10 +221,12 @@ msgid ""
 ":cpp:func:`GDALGridCreate` parameters and  :ref:`gdal_grid_average` for "
 "the list of :ref:`gdal_grid` options."
 msgstr ""
+":cpp:func:`GDALGridCreate` パラメータのリストについては :cpp:class:`GDALGridMovingAverageOptions` を参照し,"
+" :ref:`gdal_grid_average` については :ref:`gdal_grid` オプションのリストを参照してください."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:113
 msgid "Nearest Neighbor"
-msgstr ""
+msgstr "最近傍"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:115
 msgid ""
@@ -225,6 +235,8 @@ msgid ""
 "node search ellipse and returns it as a result. If there are no points "
 "found, the specified NODATA value will be returned."
 msgstr ""
+"最近傍法は,補間や平滑化を行いません.単に,グリッドノード検索楕円内で見つかった最も近い点の値を取得し,"
+"結果として返します.点が見つからない場合,指定されたNODATA値が返されます."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:120
 msgid ""
@@ -232,26 +244,30 @@ msgid ""
 ":cpp:func:`GDALGridCreate` parameters and :ref:`gdal_grid_nearest` for "
 "the list of :ref:`gdal_grid` options."
 msgstr ""
+":cpp:func:`GDALGridCreate` パラメータのリストについては :cpp:class:`GDALGridNearestNeighborOptions` を参照し,"
+" :ref:`gdal_grid_nearest` については :ref:`gdal_grid` オプションのリストを参照してください."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:124
 msgid "Data Metrics Computation"
-msgstr ""
+msgstr "データメトリクスの計算"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:126
 msgid ""
 "All the metrics have the same set controlling options. See the "
 ":cpp:class:`GDALGridDataMetricsOptions`."
 msgstr ""
+"すべてのメトリクスには同じセットの制御オプションがあります. :cpp:class:`GDALGridDataMetricsOptions` を参照してください."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:130
 msgid "Minimum Data Value"
-msgstr ""
+msgstr "データの最小値"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:132
 msgid ""
 "Minimum value found in grid node `Search Ellipse`_. If there are no "
 "points found, the specified NODATA value will be returned."
 msgstr ""
+"グリッドノード `Search Ellipse`_ で見つかった最小値.点が見つからない場合,指定されたNODATA値が返されます."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:135
 msgid "Z=\\min{(Z_1,Z_2,\\ldots,Z_n)}"
@@ -259,13 +275,14 @@ msgstr ""
 
 #: ../../source/tutorials/gdal_grid_tut.rst:146
 msgid "Maximum Data Value"
-msgstr ""
+msgstr "データの最大値"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:148
 msgid ""
 "Maximum value found in grid node `Search Ellipse`_. If there are no "
 "points found, the specified NODATA value will be returned."
 msgstr ""
+"グリッドノード `Search Ellipse`_ で見つかった最大値.点が見つからない場合,指定されたNODATA値が返されます."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:151
 msgid "Z=\\max{(Z_1,Z_2,\\ldots,Z_n)}"
@@ -273,7 +290,7 @@ msgstr ""
 
 #: ../../source/tutorials/gdal_grid_tut.rst:162
 msgid "Data Range"
-msgstr ""
+msgstr "データ範囲"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:164
 msgid ""
@@ -281,6 +298,7 @@ msgid ""
 " Ellipse`_. If there are no points found, the specified NODATA value will"
 " be returned."
 msgstr ""
+"グリッド `Search Ellipse`_ で見つかった最小値と最大値の差.点が見つからない場合,指定されたNODATA値が返されます."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:168
 msgid "Z=\\max{(Z_1,Z_2,\\ldots,Z_n)}-\\min{(Z_1,Z_2,\\ldots,Z_n)}"
@@ -288,39 +306,44 @@ msgstr ""
 
 #: ../../source/tutorials/gdal_grid_tut.rst:179
 msgid "Search Ellipse"
-msgstr ""
+msgstr "検索楕円"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:181
 msgid ""
 "Search window in gridding algorithms specified in the form of rotated "
 "ellipse. It is described by the three parameters:"
 msgstr ""
+"グリッディングアルゴリズムで指定された回転楕円形式の検索ウィンドウ.3つのパラメータで記述されます:"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:184
 msgid ""
 ":math:`radius_1` is the first radius (:math:`x` axis if rotation angle is"
 " 0),"
 msgstr ""
+":math:`radius_1` は最初の半径です(回転角が0の場合は :math:`x` 軸）,"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:185
 msgid ""
 ":math:`radius_2` is the second radius (:math:`y` axis if rotation angle "
 "is 0),"
 msgstr ""
+":math:`radius_2` は2番目の半径です(回転角が0の場合は :math:`y` 軸）,"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:186
 msgid ""
 ":math:`angle` is a search ellipse rotation angle (rotated counter "
 "clockwise)."
 msgstr ""
+":math:`angle` は検索楕円の回転角度です（反時計回りに回転）."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:-1
 msgid "Search ellipse"
-msgstr ""
+msgstr "検索楕円"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:198
 msgid ""
 "Only points located inside the search ellipse (including its border line)"
 " will be used for computation."
 msgstr ""
+"計算には,検索楕円内（境界線を含む）にある点のみが使用されます."
 
