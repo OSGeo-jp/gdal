@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -65,6 +65,7 @@ msgid ""
 "list of all current features). The rest of this document discusses "
 "details on algorithms and their parameters implemented in GDAL Grid API."
 msgstr ""
+
 
 #: ../../source/tutorials/gdal_grid_tut.rst:42
 msgid "Interpolation of the Scattered Data"

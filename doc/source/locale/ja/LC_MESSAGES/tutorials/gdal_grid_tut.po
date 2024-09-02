@@ -10,10 +10,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ja\n"
-"Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/tutorials/gdal_grid_tut.rst:5
 msgid "GDAL Grid Tutorial"
-msgstr ""
+msgstr "GDALグリッドチュートリアル"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:8
 msgid "Introduction to Gridding"
-msgstr ""
+msgstr "グリッディングの紹介"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:10
 msgid ""
@@ -35,10 +35,14 @@ msgid ""
 "to convert them into the regular grid for further processing and "
 "combining with other grids."
 msgstr ""
+"グリッディングは,散在データから正規グリッド（またはラスター画像とも呼びます）"
+"を作成するプロセスです.通常,測定地域に散在する任意のデータセットがあり,それら"
+"を正規グリッドに変換して,さらなる処理や他のグリッドとの組み合わせに使用したいと考えています."
+
 
 #: ../../source/tutorials/gdal_grid_tut.rst:-1
 msgid "Scattered data gridding"
-msgstr ""
+msgstr "散在データのグリッディング"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:25
 msgid ""
@@ -49,6 +53,10 @@ msgid ""
 "could be used for better choosing the interpolation algorithm and "
 "parameters."
 msgstr ""
+"この問題は,データ補間または近似アルゴリズムを使用して解決できます.しかし,ここで"
+"は補間に限定されません.時にはデータを補間する必要がなく,代わりに領域全体で統計"
+"値やデータメトリクスを計算する必要があることがあります.統計値自体が有用であるか"
+"ら,補間アルゴリズムとパラメータをよりよく選択するために使用できます."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:31
 msgid ""
@@ -56,6 +64,8 @@ msgid ""
 "data (see `Interpolation of the Scattered Data`_) or compute data metrics"
 " (see `Data Metrics Computation`_)."
 msgstr ""
+"それがGDAL Grid APIの目的です.データを補間するのを支援します（ `Interpolation of the Scattered Data`_"
+" を参照）またはデータメトリクスを計算します（ `Data Metrics Computation`_ を参照）."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:35
 msgid ""
@@ -65,14 +75,18 @@ msgid ""
 "list of all current features). The rest of this document discusses "
 "details on algorithms and their parameters implemented in GDAL Grid API."
 msgstr ""
+"このインターフェースを使用する方法は2つあります.プログラム的には, :cpp:func:`GDALGridCreate`"
+" C関数を使用できます.エンドユーザー向けには, :ref:`gdal_grid` ユーティリティがあります"
+"（現在の機能の最新リストについてはそちらを参照してください）.このドキュメントの残りの部分では,"
+"GDAL Grid APIで実装されているアルゴリズムとそのパラメータについて詳しく説明します."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:42
 msgid "Interpolation of the Scattered Data"
-msgstr ""
+msgstr "散在データの補間"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:45
 msgid "Inverse Distance to a Power"
-msgstr ""
+msgstr "逆距離法"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:47
 msgid ""
@@ -82,16 +96,20 @@ msgid ""
 "geometry. The function will compute an interpolated value for the given "
 "position in the output grid."
 msgstr ""
+"逆距離法グリッディングメソッドは,重み付き平均補間器です.散在データ値を含む入力配列と,"
+"各データ点の座標および出力グリッドジオメトリを提供する必要があります.関数は,"
+"出力グリッド内の指定された位置に対して補間値を計算します."
 
 #: ../../source/tutorials/gdal_grid_tut.rst:53
 msgid ""
 "For every grid node the resulting value :math:`Z` will be calculated "
 "using the formula:"
 msgstr ""
+"各グリッドノードに対して,次の式を使用して結果値 :math:`Z` が計算されます:"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:56
 msgid "Z=\\frac{\\sum_{i=1}^n{\\frac{Z_i}{r_i^p}}}{\\sum_{i=1}^n{\\frac{1}{r_i^p}}}"
-msgstr ""
+msgstr "Z=\\frac{\\sum_{i=1}^n{\\frac{Z_i}{r_i^p}}}{\\sum_{i=1}^n{\\frac{1}{r_i^p}}}"
 
 #: ../../source/tutorials/gdal_grid_tut.rst:60
 #: ../../source/tutorials/gdal_grid_tut.rst:103
