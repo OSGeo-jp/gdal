@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama<yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,69 +21,81 @@ msgstr ""
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:5
 msgid "Multidimensional raster API tutorial"
-msgstr ""
+msgstr "多次元ラスタAPIチュートリアル"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:8
 msgid "Read the content of an array"
-msgstr ""
+msgstr "配列の内容を読む"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:11
 msgid "In C++"
-msgstr ""
+msgstr "C++の場合"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:53
 msgid "In C"
-msgstr ""
+msgstr "Cの場合"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:131
 msgid "In Python"
-msgstr ""
+msgstr "Pythonの場合"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:141
 msgid "If NumPy is available:"
-msgstr ""
+msgstr "NumPyが利用可能な場合:"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:153
 msgid "Other examples"
-msgstr ""
+msgstr "その他の例"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:155
 msgid "Test scripts from the GDAL autotest suite"
-msgstr ""
+msgstr "GDALの自動テストスイートからのテストスクリプト"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:157
 msgid ""
 ":ref:`MEM <raster.mem>` driver: "
 ":source_file:`autotest/gdrivers/memmultidim.py`"
 msgstr ""
+":ref:`MEM <raster.mem>` ドライバ: "
+":source_file:`autotest/gdrivers/memmultidim.py`"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:158
 msgid ""
 ":ref:`netCDF <raster.netcdf>` driver: "
 ":source_file:`autotest/gdrivers/netcdf_multidim.py`"
 msgstr ""
+":ref:`netCDF <raster.netcdf>` ドライバ: "
+":source_file:`autotest/gdrivers/netcdf_multidim.py`"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:159
 msgid ""
 ":ref:`HDF5 <raster.hdf5>` driver: "
 ":source_file:`autotest/gdrivers/hdf5multidim.py`"
 msgstr ""
+":ref:`HDF5 <raster.hdf5>` ドライバ: "
+":source_file:`autotest/gdrivers/hdf5multidim.py`"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:160
 msgid ""
 ":ref:`VRT <raster.vrt>` driver: "
 ":source_file:`autotest/gdrivers/vrtmultidim.py`"
 msgstr ""
+":ref:`VRT <raster.vrt>` ドライバ: "
+":source_file:`autotest/gdrivers/vrtmultidim.py`"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:161
 msgid ""
 ":ref:`gdalmdiminfo` tests: "
 ":source_file:`autotest/utilities/test_gdalmdiminfo_lib.py`"
 msgstr ""
+":ref:`gdalmdiminfo` テスト: "
+":source_file:`autotest/utilities/test_gdalmdiminfo_lib.py`"
 
 #: ../../source/tutorials/multidimensional_api_tut.rst:162
 msgid ""
 ":ref:`gdalmdimtranslate` tests: "
 ":source_file:`autotest/utilities/test_gdalmdimtranslate_lib.py`"
 msgstr ""
+":ref:`gdalmdimtranslate` テスト: "
+":source_file:`autotest/utilities/test_gdalmdimtranslate_lib.py`"
 

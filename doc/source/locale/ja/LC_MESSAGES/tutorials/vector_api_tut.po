@@ -30,16 +30,20 @@ msgid ""
 " review the :ref:`vector_data_model` document describing the key classes "
 "and their roles in OGR."
 msgstr ""
+"このドキュメントは、OGR C++クラスを使用してファイルからデータを読み書きする"
+"方法について説明することを目的としています.OGRの主要なクラスとその役割について"
+"説明した :ref:`vector_data_model` ドキュメントを最初に読むことを強くお勧めします."
 
 #: ../../source/tutorials/vector_api_tut.rst:12
 msgid ""
 "It also includes code snippets for the corresponding functions in C and "
 "Python."
 msgstr ""
+"また、それに対応するCおよびPythonの関数のコードスニペットも含まれています."
 
 #: ../../source/tutorials/vector_api_tut.rst:15
 msgid "Reading From OGR"
-msgstr ""
+msgstr "OGRからの読み込み"
 
 #: ../../source/tutorials/vector_api_tut.rst:17
 msgid ""
@@ -47,6 +51,8 @@ msgid ""
 " utility for dumping point layers from an OGR data source to stdout in "
 "comma-delimited format."
 msgstr ""
+"OGRでの読み込みをデモンストレーションするために、OGRデータソースからポイント"
+"レイヤーを標準出力にカンマ区切り形式でダンプする小さなユーティリティを構築します."
 
 #: ../../source/tutorials/vector_api_tut.rst:21
 msgid ""
@@ -55,6 +61,9 @@ msgid ""
 ":cpp:func:`GDALAllRegister` which registers all format drivers built into"
 " GDAL/OGR."
 msgstr ""
+"最初に,必要なすべてのフォーマットドライバを登録する必要があります. これは通常、"
+"GDAL/OGRに組み込まれたすべてのフォーマットドライバを登録する "
+":cpp:func:`GDALAllRegister` を呼び出すことで行われます."
 
 #: ../../source/tutorials/vector_api_tut.rst:25
 #: ../../source/tutorials/vector_api_tut.rst:57
@@ -72,7 +81,7 @@ msgstr ""
 #: ../../source/tutorials/vector_api_tut.rst:1528
 #: ../../source/tutorials/vector_api_tut.rst:1598
 msgid "In C++ :"
-msgstr ""
+msgstr "C++の場合 :"
 
 #: ../../source/tutorials/vector_api_tut.rst:37
 #: ../../source/tutorials/vector_api_tut.rst:70
@@ -92,7 +101,7 @@ msgstr ""
 #: ../../source/tutorials/vector_api_tut.rst:1557
 #: ../../source/tutorials/vector_api_tut.rst:1624
 msgid "In C :"
-msgstr ""
+msgstr "Cの場合 :"
 
 #: ../../source/tutorials/vector_api_tut.rst:48
 msgid ""
@@ -105,6 +114,13 @@ msgid ""
 "that don't require update access. On failure NULL is returned, and we "
 "report an error."
 msgstr ""
+"次に、入力のOGRデータソースを開く必要があります. データソースはファイル、"
+"RDBMS、ファイルでいっぱいのディレクトリ、または使用されているドライバによって"
+"は、リモートWebサービスである場合があります. ただし、データソース名は常に単一の"
+"文字列です. この場合、特定のシェープファイルを開くようにハードコードされています."
+"2番目の引数 (GDAL_OF_VECTOR) は、:cpp:func:`OGROpen` メソッドに、ベクタードライバを"
+"使用することを指示し、更新アクセスは不要であることを示します. 失敗した場合はNULLが"
+"返され、エラーが報告されます."
 
 #: ../../source/tutorials/vector_api_tut.rst:83
 msgid ""
@@ -114,6 +130,10 @@ msgid ""
 "index using :cpp:func:`GDALDataset::GetLayer`. However, we will just "
 "fetch the layer by name."
 msgstr ""
+"GDALDatasetには,関連付けられているレイヤーが多数存在する可能性があります. "
+"利用可能なレイヤーの数は :cpp:func:`GDALDataset::GetLayerCount` で問い合わせることが"
+"でき、個々のレイヤーは :cpp:func:`GDALDataset::GetLayer` を使用してインデックスで取得"
+"することができます. ただし、ここではレイヤーを名前で取得します."
 
 #: ../../source/tutorials/vector_api_tut.rst:105
 msgid ""
@@ -122,15 +142,18 @@ msgid ""
 " set of feature we get back, but for now we are interested in getting all"
 " features."
 msgstr ""
+"次に,レイヤーから地物を読み始めたいと思います. 開始する前に,レイヤーに属性"
+"フィルタまたは空間フィルタを割り当てて,取得する地物のセットを制限することができますが,"
+"今のところはすべての地物を取得することに興味があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:109
 #: ../../source/tutorials/vector_api_tut.rst:155
 msgid "With GDAL 2.3 and C++11:"
-msgstr ""
+msgstr "GDAL 2.3とC++11を使用する場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:116
 msgid "With GDAL 2.3 and C:"
-msgstr ""
+msgstr "GDAL 2.3とCを使用する場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:123
 msgid ""
@@ -141,15 +164,19 @@ msgid ""
 "layer using OGRLayer::GetNextFeature().  It will return NULL when we run "
 "out of features."
 msgstr ""
+"古いGDALバージョンを使用する場合,レイヤーを新しく開始しているため厳密には必要ではありませんが,"
+"しばしば :cpp:func:`OGRLayer::ResetReading` を呼び出して,レイヤーの先頭から開始していることを"
+"確認することが賢明です. OGRLayer::GetNextFeature() を使用してレイヤー内のすべての地物を反復処理します."
+"地物がなくなるとNULLが返されます."
 
 #: ../../source/tutorials/vector_api_tut.rst:129
 #: ../../source/tutorials/vector_api_tut.rst:195
 msgid "With GDAL < 2.3 and C++ :"
-msgstr ""
+msgstr "GDAL < 2.3とC++を使用する場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:140
 msgid "With GDAL < 2.3 and C :"
-msgstr ""
+msgstr "GDAL < 2.3とCを使用する場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:150
 msgid ""
@@ -159,6 +186,9 @@ msgid ""
 "over all the fields, and fetch and report the attributes based on their "
 "type."
 msgstr ""
+"地物のすべての属性フィールドをダンプするためには, :cpp:class:`OGRFeatureDefn` を取得すると便利です."
+"これは,レイヤーに関連付けられたオブジェクトで,すべてのフィールドの定義を含んでいます. すべてのフィールドを"
+"反復処理し,そのタイプに基づいて属性を取得して報告します."
 
 #: ../../source/tutorials/vector_api_tut.rst:276
 msgid ""
@@ -167,6 +197,9 @@ msgid ""
 ":cpp:func:`OGRFeature::GetFieldAsString` method.  In fact we could "
 "shorten the above by using GetFieldAsString() for all the types."
 msgstr ""
+"上記で明示的に処理されているフィールドタイプ以外にもいくつかのフィールドタイプがありますが, "
+":cpp:func:`OGRFeature::GetFieldAsString` メソッドを使用してそれらの合理的な表現を取得することができます."
+"実際,GetFieldAsString() をすべてのタイプに使用して上記を短縮することができます."
 
 #: ../../source/tutorials/vector_api_tut.rst:281
 msgid ""
@@ -176,6 +209,9 @@ msgid ""
 " type, and if it is a point, we cast it to point and operate on it.  If "
 "it is something else we write placeholders."
 msgstr ""
+"次に,地物からジオメトリを抽出し,ポイントジオメトリのxとyを書き出します. ジオメトリは一般的な "
+":cpp:class:`OGRGeometry` ポインタとして返されます. 次に,特定のジオメトリタイプを決定し,ポイントである場合は"
+"ポイントにキャストして操作します. それ以外の場合はプレースホルダを書き込みます."
 
 #: ../../source/tutorials/vector_api_tut.rst:327
 msgid ""
@@ -185,15 +221,18 @@ msgid ""
 "type code.  The 2D and 2.5D geometry cases are handled by the same C++ "
 "class, so our code will handle 2D or 3D cases properly."
 msgstr ""
+"上記で :cpp:func:`wkbFlatten` マクロを使用して, wkbPoint25D (z座標を持つポイント) のタイプを"
+"基本の2Dジオメトリタイプコード (wkbPoint) に変換します. 各2Dジオメトリタイプには対応する2.5Dタイプコードがあります."
+"2Dおよび2.5Dジオメトリケースは同じC++クラスで処理されるため,コードは2Dまたは3Dケースを適切に処理します."
 
 #: ../../source/tutorials/vector_api_tut.rst:333
 msgid "Several geometry fields can be associated to a feature."
-msgstr ""
+msgstr "複数のジオメトリフィールドを地物に関連付けることができます."
 
 #: ../../source/tutorials/vector_api_tut.rst:390
 #: ../../source/tutorials/vector_api_tut.rst:700
 msgid "In Python:"
-msgstr ""
+msgstr "Pythonの場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:402
 msgid ""
@@ -202,18 +241,22 @@ msgid ""
 "geometry owned by the OGRFeature.  There we don't actually delete the "
 "return geometry."
 msgstr ""
+":cpp:func:`OGRFeature::GetGeometryRef` と :cpp:func:`OGRFeature::GetGeomFieldRef` は, "
+"OGRFeatureが所有する内部ジオメトリへのポインタを返します. そこで,実際には返されたジオメトリを削除しません."
 
 #: ../../source/tutorials/vector_api_tut.rst:408
 msgid ""
 "With GDAL 2.3 and C++11, the looping over features is simply terminated "
 "by a closing curly bracket."
 msgstr ""
+"GDAL 2.3とC++11を使用する場合,地物の反復処理は単純に閉じカーリーブラケットで終了します."
 
 #: ../../source/tutorials/vector_api_tut.rst:415
 msgid ""
 "With GDAL 2.3 and C, the looping over features is simply terminated by "
 "the following."
 msgstr ""
+"GDAL 2.3とCを使用する場合,地物の反復処理は単純に以下で終了します."
 
 #: ../../source/tutorials/vector_api_tut.rst:424
 msgid ""
@@ -224,6 +267,10 @@ msgid ""
 "\"heap\" from the main program.  To be on the safe side we use a GDAL "
 "function to delete the feature."
 msgstr ""
+"GDAL < 2.3の場合, :cpp:func:`OGRLayer::GetNextFeature` メソッドは,現在所有している地物のコピーを返します."
+"そのため,使用の最後に地物を解放する必要があります. 単に \"delete\" することもできますが,これはGDAL DLLが"
+"メインプログラムと異なる \"ヒープ\" を持つWindowsビルドで問題を引き起こす可能性があります. 安全を期すために,"
+"GDAL関数を使用して地物を削除します."
 
 #: ../../source/tutorials/vector_api_tut.rst:446
 msgid ""
@@ -233,23 +280,26 @@ msgid ""
 "close the input file. Once again we do this with a custom delete method "
 "to avoid special win32 heap issues."
 msgstr ""
+":cpp:func:`GDALDataset::GetLayerByName` で返されるOGRLayerも,GDALDatasetが所有する内部レイヤーへの参照です."
+"そのため,削除する必要はありません. ただし,入力ファイルを閉じるためにデータソースを削除する必要があります."
+"再び,特別なwin32ヒープの問題を回避するために,これをカスタム削除メソッドで行います."
 
 #: ../../source/tutorials/vector_api_tut.rst:452
 #: ../../source/tutorials/vector_api_tut.rst:1293
 msgid "In C/C++ :"
-msgstr ""
+msgstr "C/C++の場合 :"
 
 #: ../../source/tutorials/vector_api_tut.rst:460
 msgid "All together our program looks like this."
-msgstr ""
+msgstr "すべてのプログラムは次のようになります."
 
 #: ../../source/tutorials/vector_api_tut.rst:462
 msgid "With GDAL 2.3 and C++11 :"
-msgstr ""
+msgstr "GDAL 2.3とC++11を使用する場合 :"
 
 #: ../../source/tutorials/vector_api_tut.rst:744
 msgid "Reading From OGR using the Arrow C Stream data interface"
-msgstr ""
+msgstr "Arrow C Streamデータインターフェースを使用してOGRから読み込む"
 
 #: ../../source/tutorials/vector_api_tut.rst:748
 msgid ""
@@ -262,18 +312,26 @@ msgid ""
 "<https://arrow.apache.org/docs/format/CStreamInterface.html>`_ is needed,"
 " or when column-oriented consumption of layers is required."
 msgstr ""
+"地物を1つずつ取得する代わりに,列指向のメモリレイアウトを使用してバッチで取得することも可能であり,"
+" :cpp:func:`OGRLayer::GetArrowStream` メソッドを使用します. このメソッドは,伝統的な "
+" :cpp:func:`OGRLayer::GetNextFeature` アプローチよりも使用が難しく, `Apache Arrow C Stream "
+"interface  <https://arrow.apache.org/docs/format/CStreamInterface.html>`_ との互換性が必要な場合や,"
+"レイヤーの列指向の利用が必要な場合にのみ推奨されます."
 
 #: ../../source/tutorials/vector_api_tut.rst:756
 msgid ""
 "Pending using an helper library, consumption of the Arrow C Stream "
 "interface requires reading of the following documents:"
 msgstr ""
+"ヘルパーライブラリを使用するまで,Arrow C Streamインターフェースの利用には以下のドキュメントの読み取りが必要です:"
 
 #: ../../source/tutorials/vector_api_tut.rst:759
 msgid ""
 "`Arrow C Stream interface "
 "<https://arrow.apache.org/docs/format/CStreamInterface.html>`_"
 msgstr ""
+"Arrow C Streamインターフェース"
+" <https://arrow.apache.org/docs/format/CStreamInterface.html>`_"
 
 #: ../../source/tutorials/vector_api_tut.rst:760
 #: ../../source/tutorials/vector_api_tut.rst:1686
@@ -281,6 +339,8 @@ msgid ""
 "`Arrow C data interface "
 "<https://arrow.apache.org/docs/format/CDataInterface.html>`_"
 msgstr ""
+"Arrow Cデータインターフェース"
+" <https://arrow.apache.org/docs/format/CDataInterface.html>`_"
 
 #: ../../source/tutorials/vector_api_tut.rst:761
 #: ../../source/tutorials/vector_api_tut.rst:1687
@@ -288,12 +348,15 @@ msgid ""
 "`Arrow Columnar Format "
 "<https://arrow.apache.org/docs/format/Columnar.html>`_."
 msgstr ""
+"Arrow Columnar 形式 "
+"<https://arrow.apache.org/docs/format/Columnar.html>`_."
 
 #: ../../source/tutorials/vector_api_tut.rst:763
 msgid ""
 "The Arrow C Stream interface interface consists of a set of C structures,"
 " ArrowArrayStream, that provides two main callbacks to get:"
 msgstr ""
+"Arrow C Streamインターフェースは,2つの主要なコールバックを提供する一連のC構造体,ArrowArrayStreamで構成されています:"
 
 #: ../../source/tutorials/vector_api_tut.rst:766
 msgid ""
@@ -301,6 +364,8 @@ msgid ""
 "set of field descriptions (name, type, metadata). All OGR data types have"
 " a corresponding Arrow data type."
 msgstr ""
+"get_schema() コールバックでArrowSchemaを取得します. ArrowSchemaは,フィールドの説明 (名前,タイプ,メタデータ) のセットを"
+"記述します. すべてのOGRデータ型には対応するArrowデータ型があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:770
 msgid ""
@@ -314,6 +379,12 @@ msgid ""
 "buffers and children arrays per data type is detailed in the `Arrow "
 "Columnar Format <https://arrow.apache.org/docs/format/Columnar.html>`_."
 msgstr ""
+"get_next() コールバックでArrowArrayのシーケンスを取得します. ArrowArrayは,特定の列/フィールドの値のセットを"
+"特定の地物のサブセットでキャプチャします. これはPandas DataFrameの `Series "
+"<https://arrow.apache.org/docs/python/pandas.html#series>`_ の相当物です. これは,サブ配列を集約できる可能性のある"
+"階層構造であり, OGRの使用では,主な配列はOGR属性およびジオメトリフィールドのコレクションであるStructArrayになります."
+"データ型ごとのバッファと子配列のレイアウトは, `Arrow Columnar Format "
+"<https://arrow.apache.org/docs/format/Columnar.html>`_ で詳細に説明されています."
 
 #: ../../source/tutorials/vector_api_tut.rst:780
 msgid ""
@@ -321,6 +392,8 @@ msgid ""
 " of floating-point type), the representation as a ArrowArray is "
 "*conceptually* the following one:"
 msgstr ""
+"レイヤーが2つのフィールド (1つは整数型,1つは浮動小数点型) の4つの地物で構成されている場合,ArrowArrayとしての表現は,"
+"*概念的に* 以下のようになります:"
 
 #: ../../source/tutorials/vector_api_tut.rst:789
 msgid ""
@@ -329,6 +402,8 @@ msgid ""
 " of iterating over individual features, one iterates over a batch of "
 "several features at once."
 msgstr ""
+"レイヤー全体の内容は,各レコードバッチが地物のサブセットのArrowArrayであるレコードバッチのシーケンスとして見ることができます."
+"個々の地物を反復処理する代わりに,一度に複数の地物のバッチを反復処理します."
 
 #: ../../source/tutorials/vector_api_tut.rst:794
 msgid ""
@@ -338,26 +413,31 @@ msgid ""
 "API/ABI compatibility with Apache Arrow C++. This header file must be "
 "explicitly included when the related array batch API is used."
 msgstr ""
+"ArrowArrayStream, ArrowSchema, ArrowArray構造体は,API/ABI互換性をApache Arrow C++と取得するために,"
+" ogr_recordbatch.h パブリックヘッダファイルに直接派生させて定義されています. このヘッダファイルは,"
+"関連する配列バッチAPIが使用される場合に明示的に含める必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:800
 msgid "The GetArrowStream() method has the following signature:"
-msgstr ""
+msgstr "GetArrowStream() メソッドのシグネチャは次のようになります:"
 
 #: ../../source/tutorials/vector_api_tut.rst:807
 msgid "It is also available in the C API as :cpp:func:`OGR_L_GetArrowStream`."
-msgstr ""
+msgstr "C APIでも :cpp:func:`OGR_L_GetArrowStream` として利用可能です."
 
 #: ../../source/tutorials/vector_api_tut.rst:809
 msgid ""
 "out_stream is a pointer to a ArrowArrayStream structure, that can be in a"
 " uninitialized state (the method will ignore any initial content)."
 msgstr ""
+"out_streamは,初期化されていない状態のArrowArrayStream構造体へのポインタであり,メソッドは初期内容を無視します."
 
 #: ../../source/tutorials/vector_api_tut.rst:812
 msgid ""
 "On successful return, and when the stream interfaces is no longer needed,"
 " it must must be freed with out_stream->release(out_stream)."
 msgstr ""
+"成功した場合,およびストリームインターフェイスが不要になった場合, out_stream->release(out_stream) で解放する必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:815
 msgid ""
@@ -377,16 +457,24 @@ msgid ""
 " a layer should be called on a layer, while an ArrowArrayStream on it is "
 "active."
 msgstr ""
+"特定のドライバ実装によって指定されていない限り,ArrowArrayStream構造体およびそのコールバックが返したArrowSchemaまたは"
+"ArrowArrayオブジェクトは,初期化されたOGRLayerが破棄された後 (通常はデータセットのクローズ時) には使用しないでください"
+"(解放される可能性があります). さらに,特定のドライバ実装によって指定されていない限り,特定のレイヤーで同時に1つの"
+"ArrowArrayStreamのみがアクティブになります (つまり,次のものを要求する前に最後にアクティブになったものを明示的に解放する"
+"必要があります). ArrowArrayStreamを使用している間にフィルタ状態を変更したり,無視される列を変更したり,スキーマを変更したり,"
+"ResetReading()/GetNextFeature()を使用したりすることは強く推奨されず,予期しない結果につながる可能性があります. 一般的な"
+"ルールとして,ArrowArrayStreamがアクティブな間にレイヤーの状態に影響を与えるOGRLayerメソッドは呼び出されるべきではありません."
 
 #: ../../source/tutorials/vector_api_tut.rst:829
 msgid ""
 "The papszOptions that may be provided is a NULL terminated list of "
 "key=value strings, that may be driver specific."
 msgstr ""
+"提供される可能性のあるpapszOptionsは,キー=値の文字列のNULL終端リストであり,ドライバに固有のものである可能性があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:832
 msgid "OGRLayer has a base implementation of GetArrowStream() that is such:"
-msgstr ""
+msgstr "OGRLayerには,次のようなGetArrowStream()の基本実装があります:"
 
 #: ../../source/tutorials/vector_api_tut.rst:834
 msgid ""
@@ -395,6 +483,8 @@ msgid ""
 " all OGR attribute fields and geometry fields to Arrow fields. The FID "
 "column may be omitted by providing the INCLUDE_FID=NO option."
 msgstr ""
+"get_schema() コールバックは,トップレベルオブジェクトがStruct型であり,子がFID列,すべてのOGR属性フィールドおよびジオメトリフィールドを"
+"Arrowフィールドに変換したスキーマを返します. FID列は,INCLUDE_FID=NOオプションを指定することで省略することができます."
 
 #: ../../source/tutorials/vector_api_tut.rst:839
 msgid ""
@@ -403,16 +493,19 @@ msgid ""
 "might have been released by other code, as documented in the Arrow C data"
 " interface:"
 msgstr ""
+"get_schema() が0を返し,スキーマが不要になった場合,以下の手順で解放する必要があります. これは,Arrow Cデータインターフェースで"
+"文書化されているように,他のコードによって解放されている可能性があることを考慮に入れるためです:"
 
 #: ../../source/tutorials/vector_api_tut.rst:850
 msgid "The get_next() callback retrieve the next record batch over the layer."
-msgstr ""
+msgstr "get_next() コールバックは,レイヤー上の次のレコードバッチを取得します."
 
 #: ../../source/tutorials/vector_api_tut.rst:852
 msgid ""
 "out_array is a pointer to a ArrowArray structure, that can be in a "
 "uninitialized state (the method will ignore any initial content)."
 msgstr ""
+"out_arrayは,初期化されていない状態のArrowArray構造体へのポインタであり,メソッドは初期内容を無視します."
 
 #: ../../source/tutorials/vector_api_tut.rst:855
 msgid ""
@@ -421,6 +514,8 @@ msgid ""
 "MAX_FEATURES_IN_BATCH=num option). The starting address of buffers "
 "allocated by the default implementation is aligned on 64-byte boundaries."
 msgstr ""
+"デフォルトの実装は,GetNextFeature()を内部的に使用して,最大65,536地物のバッチを取得します (MAX_FEATURES_IN_BATCH=numオプションで"
+"設定可能). デフォルトの実装によって割り当てられたバッファの開始アドレスは,64バイトの境界に整列されます."
 
 #: ../../source/tutorials/vector_api_tut.rst:860
 msgid ""
@@ -432,6 +527,10 @@ msgid ""
 "(using a list of coordinates). The GEOMETRY_ENCODING=WKB option can be "
 "passed to force the use of WKB (through the default implementation)"
 msgstr ""
+"デフォルトの実装は,スキーマの対応するエントリが ``ARROW:extension:name`` メタデータ項目に ``ogc.wkb`` と設定されている,"
+"バイナリフィールド内のWKBとしてジオメトリを出力します. 専門の実装は,他のフォーマットをデフォルトで出力する場合があります"
+"(特に,GeoArrow仕様に従ってエンコードされたジオメトリを返すArrowドライバ). GEOMETRY_ENCODING=WKBオプションを渡すことで,"
+"WKBの使用を強制することができます (デフォルトの実装を介して)."
 
 #: ../../source/tutorials/vector_api_tut.rst:868
 msgid ""
@@ -441,12 +540,16 @@ msgid ""
 "SetAttributeFilter(). Note however that specialized implementations may "
 "fallback to the default (slower) implementation when filters are set."
 msgstr ""
+"メソッドは,SetIgnoredFields() で設定された無視されるフィールドを考慮に入れることができます (デフォルトの実装は行います),"
+"SetSpatialFilter() および SetAttributeFilter() で設定されたフィルタを考慮に入れる必要があります. ただし,特定の実装は,"
+"フィルタが設定されている場合にデフォルト (遅い) 実装にフォールバックする場合があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:873
 msgid ""
 "Mixing calls to GetNextFeature() and get_next() is not recommended, as "
 "the behavior will be unspecified (but it should not crash)."
 msgstr ""
+"GetNextFeature() と get_next() の呼び出しを混在させることは推奨されません. 動作は未指定です (ただし,クラッシュすることはありません)."
 
 #: ../../source/tutorials/vector_api_tut.rst:876
 msgid ""
@@ -455,12 +558,15 @@ msgid ""
 " have been released by other code, as documented in the Arrow C data "
 "interface:"
 msgstr ""
+"get_next() が0を返し,配列が不要になった場合,以下の手順で解放する必要があります. これは,Arrow Cデータインターフェースで"
+"文書化されているように,他のコードによって解放されている可能性があることを考慮に入れるためです:"
 
 #: ../../source/tutorials/vector_api_tut.rst:886
 msgid ""
 "Drivers that have a specialized implementation advertise the new "
 "OLCFastGetArrowStream layer capability."
 msgstr ""
+"専門の実装を持つドライバは,新しいOLCFastGetArrowStreamレイヤー機能を表明します."
 
 #: ../../source/tutorials/vector_api_tut.rst:889
 msgid ""
@@ -475,22 +581,29 @@ msgid ""
 " use an ArrowArray object, in conjunction with the associated "
 "ArrowSchema."
 msgstr ""
+"ArrowArrayを直接使用する (プロデューサまたはコンシューマとして) ことは確かに簡単ではなく,Arrow Cデータインターフェースと"
+"列配列仕様についての深い理解が必要です. どのバッファからデータを読み取るか,どのデータ型のvoid*バッファをキャストするか,"
+"null/not_null情報を含むバッファを使用する方法,リスト型のデータ型のオフセットバッファを使用する方法などを知る必要があります."
+"SWIG Pythonバインディング (:source_file:`swig/include/gdal_array.i` ) のgdal_array._RecordBatchAsNumpy() メソッドの学習は,"
+"関連するArrowSchemaと共にArrowArrayオブジェクトを使用する方法のヒントを提供するかもしれません."
 
 #: ../../source/tutorials/vector_api_tut.rst:899
 msgid ""
 "The below example illustrates how to read the content of a layer that "
 "consists of a integer field and a geometry field:"
 msgstr ""
+"以下の例は,整数フィールドとジオメトリフィールドで構成されるレイヤーの内容を読み取る方法を示しています:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1028
 msgid ""
 "To write features by batches using an ArrowArray, consult "
 ":ref:`vector_api_tut_arrow_write`."
 msgstr ""
+"ArrowArrayを使用して地物をバッチで書き込む場合は, :ref:`vector_api_tut_arrow_write` を参照してください."
 
 #: ../../source/tutorials/vector_api_tut.rst:1031
 msgid "Writing To OGR"
-msgstr ""
+msgstr "OGRへの書き込み"
 
 #: ../../source/tutorials/vector_api_tut.rst:1033
 msgid ""
@@ -498,12 +611,15 @@ msgid ""
 "the above.  A short program that reads comma separated values from input "
 "text will be written to a point shapefile via OGR."
 msgstr ""
+"OGRを介して書き込む例として,上記の逆のことを行います. 入力テキストからカンマ区切り値を読み取り, OGRを介してポイント"
+"シェープファイルに書き込む短いプログラムを作成します."
 
 #: ../../source/tutorials/vector_api_tut.rst:1037
 msgid ""
 "As usual, we start by registering all the drivers, and then fetch the "
 "Shapefile driver as we will need it to create our output file."
 msgstr ""
+"通常通り,すべてのドライバを登録してから,出力ファイルを作成するためにShapefileドライバを取得します."
 
 #: ../../source/tutorials/vector_api_tut.rst:1080
 msgid ""
@@ -517,10 +633,15 @@ msgid ""
 "using defaults in this case.  Details of the options supported are also "
 "format specific."
 msgstr ""
+"次に,データソースを作成します. ESRI Shapefileドライバを使用すると,シェープファイルのディレクトリ全体を作成するか,"
+"データソースとして単一のシェープファイルを作成することができます. この場合,名前に拡張子を含めて単一のファイルを明示的に"
+"作成します. 他のドライバは異なる動作をします. 2番目,3番目,4番目,5番目の引数はラスターの次元に関連しています"
+"(ドライバにラスター機能がある場合). 呼び出しの最後の引数はオプション値のリストですが,この場合はデフォルト値を使用します."
+"サポートされているオプションの詳細は,フォーマットに固有です."
 
 #: ../../source/tutorials/vector_api_tut.rst:1089
 msgid "In C ++ :"
-msgstr ""
+msgstr "C++の場合 :"
 
 #: ../../source/tutorials/vector_api_tut.rst:1116
 msgid ""
@@ -530,6 +651,9 @@ msgid ""
 "passing any coordinate system information or other special layer creation"
 " options."
 msgstr ""
+"次に,出力レイヤーを作成します. この場合,データソースが単一のファイルであるため,1つのレイヤーのみを持つことができます."
+"wkbPointを渡して,このレイヤーでサポートされるジオメトリのタイプを指定します. この場合,座標系情報やその他の特別なレイヤー作成"
+"オプションを渡していません."
 
 #: ../../source/tutorials/vector_api_tut.rst:1149
 msgid ""
@@ -542,6 +666,11 @@ msgid ""
 "generally the defaults are OK.  For this example we will just have one "
 "attribute, a name string associated with the x,y point."
 msgstr ""
+"レイヤーが存在するため,レイヤーに表示される必要がある属性フィールドを作成する必要があります. 地物が書き込まれる前に,"
+"フィールドをレイヤーに追加する必要があります. フィールドを作成するには,フィールドに関する情報を持つ "
+":cpp:union:`OGRField` オブジェクトを初期化します. シェープファイルの場合,フィールドの幅と精度は出力.dbfファイルの作成に"
+"重要です. そのため,特に設定しますが,一般的にはデフォルトが適しています. この例では,1つの属性のみ, x,yポイントに関連付けられた"
+"名前文字列を持つことにします."
 
 #: ../../source/tutorials/vector_api_tut.rst:1157
 msgid ""
@@ -549,24 +678,26 @@ msgid ""
 ":cpp:func:`OGRLayer::CreateField` is copied internally. We retain "
 "ownership of the object."
 msgstr ""
+":cpp:func:`OGRLayer::CreateField` に渡すテンプレートOGRFieldは内部でコピーされます. オブジェクトの所有権は保持されます."
 
 #: ../../source/tutorials/vector_api_tut.rst:1160
 msgid "In C++:"
-msgstr ""
+msgstr "C++の場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1175
 msgid "In C:"
-msgstr ""
+msgstr "Cの場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1194
 msgid ""
 "The following snipping loops reading lines of the form \"x,y,name\" from "
 "stdin, and parsing them."
 msgstr ""
+"以下のスニペットは,stdinから \"x,y,name\" 形式の行を読み取り,解析するループです."
 
 #: ../../source/tutorials/vector_api_tut.rst:1197
 msgid "In C++ and in C :"
-msgstr ""
+msgstr "C++およびCの場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1208
 msgid ""
@@ -575,6 +706,8 @@ msgid ""
 "It is imperative that this feature be instantiated from the "
 "OGRFeatureDefn associated with the layer it will be written to."
 msgstr ""
+"地物をディスクに書き込むためには,ローカルOGRFeatureを作成し,属性を設定し,ジオメトリを添付してから,レイヤーに書き込もうとします."
+"この地物は,書き込まれるレイヤーに関連付けられたOGRFeatureDefnからインスタンス化されている必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:1231
 msgid ""
@@ -584,6 +717,9 @@ msgid ""
 "ownership of the geometry to the feature. This is generally more "
 "efficient as it avoids an extra deep object copy of the geometry."
 msgstr ""
+"ローカルジオメトリオブジェクトを作成し,そのコピーを地物に割り当てます (間接的に). :cpp:func:`OGRFeature::SetGeometryDirectly` は,"
+" :cpp:func:`OGRFeature::SetGeometry` と異なり,直接的なメソッドはジオメトリの所有権を地物に与えます. これは,ジオメトリの"
+"余分な深いオブジェクトコピーを回避するため,一般的に効率的です."
 
 #: ../../source/tutorials/vector_api_tut.rst:1260
 msgid ""
@@ -591,27 +727,31 @@ msgid ""
 ":cpp:func:`OGRLayer::CreateFeature` does not take ownership of our "
 "feature so we clean it up when done with it."
 msgstr ""
+"次に,ファイル内の地物を作成します. :cpp:func:`OGRLayer::CreateFeature` は,地物の所有権を取得しないため,使用が終わったら"
+"クリーンアップします."
 
 #: ../../source/tutorials/vector_api_tut.rst:1290
 msgid ""
 "Finally we need to close down the datasource in order to ensure headers "
 "are written out in an orderly way and all resources are recovered."
 msgstr ""
+"最後に,ヘッダが整然に書き出され,すべてのリソースが回収されるように,データソースを閉じる必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:1301
 msgid "The same program all in one block looks like this:"
-msgstr ""
+msgstr "同じプログラムを1つのブロックにまとめると,次のようになります:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1461
 #: ../../source/tutorials/vector_api_tut.rst:1653
 msgid "In Python :"
-msgstr ""
+msgstr "Pythonの場合:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1522
 msgid ""
 "Several geometry fields can be associated to a feature. This capability "
 "is just available for a few file formats, such as PostGIS."
 msgstr ""
+"複数のジオメトリフィールドを地物に関連付けることができます. この機能は,PostGISなどの一部のファイルフォーマットでのみ利用可能です."
 
 #: ../../source/tutorials/vector_api_tut.rst:1525
 msgid ""
@@ -619,6 +759,8 @@ msgid ""
 "Spatial reference system objects can be associated to each geometry "
 "field."
 msgstr ""
+"このようなデータソースを作成するには,最初にジオメトリフィールドを作成する必要があります. 空間参照システムオブジェクトを,"
+"各ジオメトリフィールドに関連付けることができます."
 
 #: ../../source/tutorials/vector_api_tut.rst:1593
 msgid ""
@@ -627,10 +769,12 @@ msgid ""
 "  It is imperative that this feature be instantiated from the "
 "OGRFeatureDefn associated with the layer it will be written to."
 msgstr ""
+"地物をディスクに書き込むためには,ローカルOGRFeatureを作成し,属性を設定し,ジオメトリを添付してから,レイヤーに書き込もうとします."
+"この地物は,書き込まれるレイヤーに関連付けられたOGRFeatureDefnからインスタンス化されている必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:1671
 msgid "Writing to OGR using the Arrow C Data interface"
-msgstr ""
+msgstr "Arrow Cデータインターフェースを使用してOGRに書き込む"
 
 #: ../../source/tutorials/vector_api_tut.rst:1675
 msgid ""
@@ -643,32 +787,39 @@ msgid ""
 "<https://arrow.apache.org/docs/format/CDataInterface.html>`_ is needed, "
 "or when column-oriented writing of layers is required."
 msgstr ""
+"地物を1つずつ書き込む代わりに,列指向のメモリレイアウトを使用してバッチで書き込むことも可能です. これには,"
+" :cpp:func:`OGRLayer::WriteArrowBatch` メソッドを使用します. このメソッドは,従来の :cpp:func:`OGRLayer::CreateFeature` "
+"アプローチよりも使用が難しく, `Apache Arrow Cデータインターフェース <https://arrow.apache.org/docs/format/CDataInterface.html>`_  "
+"との互換性が必要な場合や,レイヤーの列指向書き込みが必要な場合にのみ推奨されます."
 
 #: ../../source/tutorials/vector_api_tut.rst:1683
 msgid ""
 "Pending using an helper library, generation of the Arrow C Data interface"
 " requires reading of the following documents:"
 msgstr ""
+"ヘルパーライブラリを使用するまで,Arrow Cデータインターフェースの生成には,以下のドキュメントの読み取りが必要です:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1689
 msgid ""
 "Consult :ref:`vector_api_tut_arrow_stream` for introduction to the "
 "ArrowSchema and ArrowArray basic types involved for batch writing."
 msgstr ""
+"バッチ書き込みに関連するArrowSchemaおよびArrowArray基本型の紹介については, :ref:`vector_api_tut_arrow_stream` を参照してください."
 
 #: ../../source/tutorials/vector_api_tut.rst:1692
 msgid "The WriteArrowBatch() method has the following signature:"
-msgstr ""
+msgstr "WriteArrowBatch() メソッドのシグネチャは次のとおりです:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1708
 msgid "It is also available in the C API as :cpp:func:`OGR_L_WriteArrowBatch`."
-msgstr ""
+msgstr "C APIでも :cpp:func:`OGR_L_WriteArrowBatch` として利用可能です."
 
 #: ../../source/tutorials/vector_api_tut.rst:1710
 msgid ""
 "This is semantically close to calling "
 ":cpp:func:`OGRLayer::CreateFeature()` with multiple features at once."
 msgstr ""
+"これは,一度に複数の地物を持って :cpp:func:`OGRLayer::CreateFeature()` を呼び出すことに意味的に近いです."
 
 #: ../../source/tutorials/vector_api_tut.rst:1713
 msgid ""
@@ -676,12 +827,16 @@ msgid ""
 "generally map to a OGR attribute or geometry field (unless they are "
 "struct themselves)."
 msgstr ""
+"ArrowArrayは,struct (format=+s) 型である必要があり,その子は一般的にOGR属性またはジオメトリフィールドにマップします"
+"(struct自体でない限り)."
 
 #: ../../source/tutorials/vector_api_tut.rst:1716
 msgid ""
 "Method :cpp:func:`OGRLayer::IsArrowSchemaSupported` can be called to "
 "determine if the schema will be supported by WriteArrowBatch()."
 msgstr ""
+"メソッド :cpp:func:`OGRLayer::IsArrowSchemaSupported` を呼び出して,スキーマがWriteArrowBatch() でサポートされるかどうかを"
+"判断できます."
 
 #: ../../source/tutorials/vector_api_tut.rst:1719
 msgid ""
@@ -689,12 +844,15 @@ msgid ""
 "compatible type. For attribute fields, they should be created with "
 ":cpp:func:`OGRLayer::CreateFieldFromArrowSchema`."
 msgstr ""
+"対応する子配列のOGRフィールドは存在し,互換性のあるタイプである必要があります. 属性フィールドの場合, "
+":cpp:func:`OGRLayer::CreateFieldFromArrowSchema` で作成する必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:1723
 msgid ""
 "Arrays for geometry columns should be of binary or large binary type and "
 "contain WKB geometry."
 msgstr ""
+"ジオメトリ列の配列は,バイナリまたは大きなバイナリ型である必要があり, WKBジオメトリを含んでいる必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:1726
 msgid ""
@@ -702,10 +860,12 @@ msgid ""
 "(array->release==NULL) after this call (not by the base implementation, "
 "but in specialized ones such as Parquet or Arrow for example)"
 msgstr ""
+"この呼び出し後,渡された配列は解放された状態に設定される可能性があることに注意してください"
+"(ベース実装ではなく,ParquetやArrowなどの専門実装で行われることがあります)"
 
 #: ../../source/tutorials/vector_api_tut.rst:1730
 msgid "Supported options of the base implementation are:"
-msgstr ""
+msgstr "ベース実装のサポートされているオプションは次のとおりです:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1732
 msgid ""
@@ -717,6 +877,10 @@ msgid ""
 "create the feature. On output, the values of the FID column may be set "
 "with the FID of the created feature (if the array is not released)."
 msgstr ""
+"FID=name. 配列内のFID列の名前. 指定されていない場合,GetFIDColumn() がそれを決定するために使用されます. "
+"特別な名前OGRLayer::DEFAULT_ARROW_FID_NAME も認識されます. FID または GetFIDColumn() のどちらも設定されていない場合には,"
+"対応するArrowArrayはint32 (i) または int64 (l) 型である必要があります. 入力時に,FID列の値は地物を作成するために使用されます."
+"出力時には,FID列の値は作成された地物のFIDで設定される可能性があります (配列が解放されていない場合)."
 
 #: ../../source/tutorials/vector_api_tut.rst:1741
 msgid ""
@@ -728,6 +892,10 @@ msgid ""
 " The corresponding ArrowArray must be of type binary (w) or large binary "
 "(W)."
 msgstr ""
+"GEOMETRY_NAME=name. ジオメトリ列の名前. 指定されていない場合,GetGeometryColumn() が使用されます. "
+"GEOMETRY_NAME または GetGeometryColumn() のどちらも設定されていない場合,特別な名前OGRLayer::DEFAULT_ARROW_GEOMETRY_NAME も認識されます."
+"ジオメトリ列は,フィールドメタデータとしてARROW:extension:name=ogc.wkb を持っている場合にも識別されます. 対応するArrowArrayは,"
+"binary (w) または large binary (W) 型である必要があります."
 
 #: ../../source/tutorials/vector_api_tut.rst:1750
 msgid ""
@@ -735,6 +903,8 @@ msgid ""
 ":ref:`vector.parquet` and :ref:`vector.arrow`) advertise the "
 "OLCFastWriteArrowBatch layer capability."
 msgstr ""
+"専門の実装を持つドライバ ( :ref:`vector.parquet` および :ref:`vector.arrow` など) は,OLCFastWriteArrowBatch レイヤー機能を"
+"表明します."
 
 #: ../../source/tutorials/vector_api_tut.rst:1753
 msgid ""
@@ -742,6 +912,7 @@ msgid ""
 " format to another one (assuming it has at most a single geometry "
 "column):"
 msgstr ""
+"以下のPythonの例は,1つのジオメトリ列を持つレイヤーを別のフォーマットにコピーする方法を示しています:"
 
 #: ../../source/tutorials/vector_api_tut.rst:1821
 msgid ""
@@ -751,4 +922,7 @@ msgid ""
 "methods, 3 similar methods exist using the `PyArrow "
 "<https://arrow.apache.org/docs/python/index.html>`__ data types:"
 msgstr ""
+"Pythonバインディングの場合,上記の ogr.Layer.IsArrowSchemaSupported(), ogr.Layer.CreateFieldFromArrowSchema() および"
+"ogr.Layer.WriteArrowBatch() メソッドに加えて,3つの類似したメソッドが `PyArrow <https://arrow.apache.org/docs/python/index.html>`__ "
+"データ型を使用して存在します:"
 
