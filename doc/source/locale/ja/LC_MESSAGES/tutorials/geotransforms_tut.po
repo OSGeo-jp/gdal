@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/tutorials/geotransforms_tut.rst:5
 msgid "Geotransform Tutorial"
-msgstr ""
+msgstr "地理変換チュートリアル"
 
 #: ../../source/tutorials/geotransforms_tut.rst:8
 msgid "Introduction to Geotransforms:"
-msgstr ""
+msgstr "地理変換の紹介:"
 
 #: ../../source/tutorials/geotransforms_tut.rst:9
 msgid ""
@@ -33,42 +33,46 @@ msgid ""
 "space (row, column), also known as (pixel, line) to the georeferenced "
 "coordinate space (projected or geographic coordinates)."
 msgstr ""
+"地理変換は,画像座標空間（行,列）,または（ピクセル,ライン）から,"
+"地理座標空間（投影座標または地理座標）へのアフィン変換です."
 
 #: ../../source/tutorials/geotransforms_tut.rst:13
 msgid "A geotransform consists in a set of 6 coefficients:"
-msgstr ""
+msgstr "地理変換は、6つの係数のセットで構成されます:"
 
 #: ../../source/tutorials/geotransforms_tut.rst:15
 msgid "``GT(0)`` x-coordinate of the upper-left corner of the upper-left pixel."
-msgstr ""
+msgstr " ``GT(0)`` 左上のピクセルの左上のx座標."
 
 #: ../../source/tutorials/geotransforms_tut.rst:16
 msgid "``GT(1)`` w-e pixel resolution / pixel width."
-msgstr ""
+msgstr " ``GT(1)`` w-eピクセル解像度 / ピクセル幅."
 
 #: ../../source/tutorials/geotransforms_tut.rst:17
 msgid "``GT(2)`` row rotation (typically zero)."
-msgstr ""
+msgstr " ``GT(2)`` 行の回転（通常ゼロ）."
 
 #: ../../source/tutorials/geotransforms_tut.rst:18
 msgid "``GT(3)`` y-coordinate of the upper-left corner of the upper-left pixel."
-msgstr ""
+msgstr " ``GT(3)`` 左上のピクセルの左上のy座標."
 
 #: ../../source/tutorials/geotransforms_tut.rst:19
 msgid "``GT(4)`` column rotation (typically zero)."
-msgstr ""
+msgstr " ``GT(4)`` 列の回転（通常ゼロ）."
 
 #: ../../source/tutorials/geotransforms_tut.rst:20
 msgid ""
 "``GT(5)`` n-s pixel resolution / pixel height (negative value for a "
 "north-up image)."
 msgstr ""
+" ``GT(5)`` n-sピクセル解像度 / ピクセル高さ（北向き画像の場合は負の値）."
 
 #: ../../source/tutorials/geotransforms_tut.rst:23
 msgid ""
 "Transformation from image coordinate space to georeferenced coordinate "
 "space:"
 msgstr ""
+"画像座標空間から地理座標空間への変換:"
 
 #: ../../source/tutorials/geotransforms_tut.rst:30
 msgid ""
@@ -78,22 +82,26 @@ msgid ""
 "bottom right pixel. The pixel/line location of the center of the top left"
 " pixel would therefore be (0.5,0.5)."
 msgstr ""
+"上記のピクセル/ライン座標は,左上のピクセルの左上の(0.0,0.0)から、"
+"右下のピクセルの右下の(width_in_pixels,height_in_pixels)までです."
+"したがって,左上のピクセルの中心のピクセル/ラインの位置は(0.5,0.5)です."
 
 #: ../../source/tutorials/geotransforms_tut.rst:35
 msgid "In case of north up images:"
-msgstr ""
+msgstr "北向き画像の場合:"
 
 #: ../../source/tutorials/geotransforms_tut.rst:36
 msgid "``GT(2)``, ``GT(4)`` coefficients are zero."
-msgstr ""
+msgstr " ``GT(2)``, ``GT(4)`` 係数はゼロです."
 
 #: ../../source/tutorials/geotransforms_tut.rst:37
 msgid "``GT(1)``, ``GT(5)`` is the pixel size."
-msgstr ""
+msgstr " ``GT(1)``, ``GT(5)`` はピクセルサイズです."
 
 #: ../../source/tutorials/geotransforms_tut.rst:38
 msgid ""
 "``GT(0)``, ``GT(3)`` position is the top left corner of the top left "
 "pixel of the raster."
 msgstr ""
+" ``GT(0)``, ``GT(3)`` 位置はラスタの左上のピクセルの左上の角です."
 
