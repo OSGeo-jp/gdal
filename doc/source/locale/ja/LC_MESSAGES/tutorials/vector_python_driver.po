@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/tutorials/vector_python_driver.rst:5
 msgid "Vector driver in Python implementation tutorial"
-msgstr ""
+msgstr "ベクタードライバーのPython実装チュートリアル"
 
 #: ../../source/tutorials/vector_python_driver.rst:12
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../source/tutorials/vector_python_driver.rst:14
 msgid ""
@@ -34,12 +34,17 @@ msgid ""
 ":ref:`vector_driver_tut` first, which will give the general principles of"
 " how a vector driver works."
 msgstr ""
+"GDAL 3.1以降,Pythonで読み取り専用のベクタードライバーを作成する機能が追加"
+"されました.ベクタードライバーの動作原理についての一般的な原則を説明する"
+" :ref:`vector_driver_tut` を最初に読むことを強くお勧めします."
 
 #: ../../source/tutorials/vector_python_driver.rst:18
 msgid ""
 "This capability does not require the use of the GDAL/OGR SWIG Python "
 "bindings (but a vector Python driver may use them.)"
 msgstr ""
+"この機能はGDAL/OGR SWIG Pythonバインディングの使用を必要としません(ただし,"
+"ベクターPythonドライバーはそれらを使用するかもしれません.)"
 
 #: ../../source/tutorials/vector_python_driver.rst:21
 msgid ""
@@ -48,6 +53,10 @@ msgid ""
 "included in the GDAL repository. Drivers aiming at inclusion in GDAL "
 "master should priorly be ported to C++. The rationale for this is that:"
 msgstr ""
+"注:プロジェクト方針により,これは\"実験的\"な機能と見なされ,GDALプロジェクト"
+"はそのようなPythonドライバーをGDALリポジトリに含めることはありません. GDAL"
+"masterに含めることを目指すドライバーは,まずC++に移植する必要があります. その"
+"理由は次のとおりです:"
 
 #: ../../source/tutorials/vector_python_driver.rst:26
 msgid ""
@@ -55,34 +64,40 @@ msgid ""
 "whereas C++ benefits from static analysis (at compile time, and other "
 "checkers)."
 msgstr ""
+"Pythonコードの正確性は主に実行時にチェックできますが,C++は静的解析(コンパイル時"
+"およびその他のチェッカー)の恩恵を受けます."
 
 #: ../../source/tutorials/vector_python_driver.rst:28
 msgid ""
 "Python code is executed under the Python Global Interpreter Lock, which "
 "makes them not scale."
 msgstr ""
+"PythonコードはPython Global Interpreter Lockの下で実行されるため,スケーリン"
+"グされません."
 
 #: ../../source/tutorials/vector_python_driver.rst:30
 msgid "Not all builds of GDAL have Python available."
-msgstr ""
+msgstr "GDALのすべてのビルドにPythonが利用可能とは限りません."
 
 #: ../../source/tutorials/vector_python_driver.rst:34
 msgid "Linking mechanism to a Python interpreter"
-msgstr ""
+msgstr "Pythonインタプリタへのリンクメカニズム"
 
 #: ../../source/tutorials/vector_python_driver.rst:36
 msgid "See :ref:`linking_mechanism_to_python_interpreter`"
-msgstr ""
+msgstr " :ref:`linking_mechanism_to_python_interpreter` を参照してください"
 
 #: ../../source/tutorials/vector_python_driver.rst:39
 msgid "Driver location"
-msgstr ""
+msgstr "ドライバーの場所"
 
 #: ../../source/tutorials/vector_python_driver.rst:41
 msgid ""
 "Driver filenames must start with `gdal_` or `ogr_` and have the `.py` "
 "extension. They will be searched in the following directies:"
 msgstr ""
+"ドライバーファイル名は `gdal_` または `ogr_` で始まり, `.py` 拡張子を持つ必要がありま"
+"す. これらは以下のディレクトリで検索されます:"
 
 #: ../../source/tutorials/vector_python_driver.rst:44
 msgid ""
@@ -90,18 +105,24 @@ msgid ""
 "option (there may be several paths separated by `:` on Unix or `;` on "
 "Windows)"
 msgstr ""
+"``GDAL_PYTHON_DRIVER_PATH`` 構成オプションで指定されたディレクトリ(UNIXでは `:` で"
+"区切られた複数のパスがあるかもしれません)"
 
 #: ../../source/tutorials/vector_python_driver.rst:46
 msgid ""
 "if not defined, the directory pointed by the ``GDAL_DRIVER_PATH`` "
 "configuration option."
 msgstr ""
+"定義されていない場合, ``GDAL_DRIVER_PATH`` 構成オプションで指定されたディレクトリ"
+"です."
 
 #: ../../source/tutorials/vector_python_driver.rst:48
 msgid ""
 "if not defined, in the directory (hardcoded at compilation time on Unix "
 "builds) where native plugins are located."
 msgstr ""
+"定義されていない場合,ネイティブプラグインが配置されているディレクトリ(UNIXビルドで"
+"コンパイル時にハードコードされています)です."
 
 #: ../../source/tutorials/vector_python_driver.rst:51
 msgid ""
@@ -109,24 +130,28 @@ msgid ""
 "driver .py script. It is up to the user to make sure its current Python "
 "environment has all required dependencies installed."
 msgstr ""
+"GDALはドライバー .py スクリプトでインポートされるPython依存関係を管理しません."
+"必要な依存関係がインストールされていることを確認するのはユーザーの責任です."
 
 #: ../../source/tutorials/vector_python_driver.rst:56
 msgid "Import section"
-msgstr ""
+msgstr "インポートセクション"
 
 #: ../../source/tutorials/vector_python_driver.rst:58
 msgid "Drivers must have the following import section to load the base classes."
-msgstr ""
+msgstr "ドライバーはベースクラスをロードするために以下のインポートセクションを持つ必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:64
 msgid ""
 "The ``gdal_python_driver`` module is created dynamically by GDAL and is "
 "not present on the file system."
 msgstr ""
+"``gdal_python_driver`` モジュールはGDALによって動的に作成され,ファイルシステムに"
+"存在しません."
 
 #: ../../source/tutorials/vector_python_driver.rst:68
 msgid "Metadata section"
-msgstr ""
+msgstr "メタデータセクション"
 
 #: ../../source/tutorials/vector_python_driver.rst:70
 msgid ""
@@ -135,6 +160,9 @@ msgid ""
 "C++ code, without using the Python interpreter, so it is vital to respect"
 " the following constraints:"
 msgstr ""
+".pyファイルの最初の1000行には,必須およびオプションのKEY=VALUEドライバー指令が"
+"定義されている必要があります. これらはPythonインタプリタを使用せずにC++コードに"
+"よって解析されるため,以下の制約を厳守することが重要です:"
 
 #: ../../source/tutorials/vector_python_driver.rst:75
 msgid ""
@@ -142,6 +170,8 @@ msgid ""
 "DRIVER_`` (space character between sharp character and gdal, and between "
 "colon character and DRIVER\\_)"
 msgstr ""
+"各宣言は1行であり, ``# gdal: DRIVER_`` で始まる必要があります(シャープ文字とgdalの間"
+"にスペース文字, コロン文字とDRIVER\\_の間にスペース文字)"
 
 #: ../../source/tutorials/vector_python_driver.rst:77
 msgid ""
@@ -149,18 +179,21 @@ msgid ""
 "DRIVER_SUPPORTED_API_VERSION which can accept an array of integers), "
 "without expressions, function calls, escape sequences, etc."
 msgstr ""
+"値は文字列型のリテラル値である必要があります(# gdal: DRIVER_SUPPORTED_API_VERSION"
+"は整数の配列を受け入れることができます), 式, 関数呼び出し, エスケープシーケンスなどは"
+"使用できません."
 
 #: ../../source/tutorials/vector_python_driver.rst:80
 msgid "strings may be single or double-quoted"
-msgstr ""
+msgstr "文字列はシングルクォートまたはダブルクォートで囲まれている必要があります"
 
 #: ../../source/tutorials/vector_python_driver.rst:82
 msgid "The following directives must be declared:"
-msgstr ""
+msgstr "以下の指令が宣言されている必要があります:"
 
 #: ../../source/tutorials/vector_python_driver.rst:84
 msgid "``# gdal: DRIVER_NAME = \"NAME\"``: the short name of the driver"
-msgstr ""
+msgstr "``# gdal: DRIVER_NAME = \"NAME\"``: ドライバーの短い名前"
 
 #: ../../source/tutorials/vector_python_driver.rst:85
 msgid ""
@@ -168,30 +201,36 @@ msgid ""
 "supported by the driver. Must include 1, which is the only currently "
 "supported version in GDAL 3.1"
 msgstr ""
+"``# gdal: DRIVER_SUPPORTED_API_VERSION = [1]``: ドライバーがサポートするAPIバージョ"
+"ン. GDAL 3.1で唯一サポートされているバージョンである1を含める必要があります"
 
 #: ../../source/tutorials/vector_python_driver.rst:87
 msgid "``# gdal: DRIVER_DCAP_VECTOR = \"YES\"``: declares a vector driver"
-msgstr ""
+msgstr "``# gdal: DRIVER_DCAP_VECTOR = \"YES\"``: ベクタードライバーを宣言します"
 
 #: ../../source/tutorials/vector_python_driver.rst:88
 msgid "``# gdal: DRIVER_DMD_LONGNAME = \"a longer name of the driver\"``"
-msgstr ""
+msgstr "``# gdal: DRIVER_DMD_LONGNAME = \"ドライバーの長い名前\"``"
 
 #: ../../source/tutorials/vector_python_driver.rst:90
 msgid "Additional directives:"
-msgstr ""
+msgstr "追加の指令:"
 
 #: ../../source/tutorials/vector_python_driver.rst:92
 msgid ""
 "``# gdal: DRIVER_DMD_EXTENSIONS = \"ext1 ext2\"``: list of extension(s) "
 "recognized by the driver, without the dot, and separated by space"
 msgstr ""
+"``# gdal: DRIVER_DMD_EXTENSIONS = \"ext1 ext2\"``: ドライバーによって認識される拡張"
+"子(ドットなし)のリストで,スペースで区切られています"
 
 #: ../../source/tutorials/vector_python_driver.rst:94
 msgid ""
 "``# gdal: DRIVER_DMD_HELPTOPIC = \"https://example.com/my_help.html\"``: "
 "URL to a help page for the driver"
 msgstr ""
+"``# gdal: DRIVER_DMD_HELPTOPIC = \"https://example.com/my_help.html\"``: ドライバー"
+"のヘルプページへのURL"
 
 #: ../../source/tutorials/vector_python_driver.rst:96
 msgid ""
@@ -200,6 +239,9 @@ msgid ""
 "default='NO'/></OpenOptionList>\"`` where the XML is an "
 "``OptionOptionList``."
 msgstr ""
+"``# gdal: DRIVER_DMD_OPENOPTIONLIST = \"<OpenOptionList><Option "
+"name='OPT1' type='boolean' description='bla' "
+"default='NO'/></OpenOptionList>\"`` ここでXMLは ``OptionOptionList`` です."
 
 #: ../../source/tutorials/vector_python_driver.rst:98
 msgid ""
@@ -210,36 +252,42 @@ msgid ""
 "\"DMD_CONNECTION_PREFIX\"`` becomes ``# gdal: "
 "DRIVER_DMD_CONNECTION_PREFIX``"
 msgstr ""
+"および ``GDAL_DMD_`` または ``GDAL_DCAP`` で始まるgdal.hで見つかるすべてのメタデー"
+"タ項目を作成します. これは ``# gdal: DRIVER_`` で始まる項目名と ``GDAL_DMD_`` また"
+"は ``GDAL_DCAP`` メタデータ項目の値です. たとえば ``#define GDAL_DMD_CONNECTION_PREFIX"
+" \"DMD_CONNECTION_PREFIX\"`` は ``# gdal: DRIVER_DMD_CONNECTION_PREFIX`` になります."
 
 #: ../../source/tutorials/vector_python_driver.rst:104
 #: ../../source/tutorials/vector_python_driver.rst:144
 #: ../../source/tutorials/vector_python_driver.rst:175
 #: ../../source/tutorials/vector_python_driver.rst:201
 msgid "Example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/tutorials/vector_python_driver.rst:116
 msgid "Driver class"
-msgstr ""
+msgstr "ドライバークラス"
 
 #: ../../source/tutorials/vector_python_driver.rst:118
 msgid ""
 "The entry point .py script must contains a single class that inherits "
 "from ``gdal_python_driver.BaseDriver``."
 msgstr ""
+"エントリーポイント .py スクリプトには ``gdal_python_driver.BaseDriver`` を継承"
+"する単一のクラスが含まれている必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:121
 msgid "That class must define the following methods:"
-msgstr ""
+msgstr "そのクラスは以下のメソッドを定義する必要があります:"
 
 #: ../../source/tutorials/vector_python_driver.rst
 msgid "Parameters"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../source/tutorials/vector_python_driver.rst:126
 #: ../../source/tutorials/vector_python_driver.rst:137
 msgid "File name, or more generally, connection string."
-msgstr ""
+msgstr "ファイル名, または一般的には接続文字列."
 
 #: ../../source/tutorials/vector_python_driver.rst:127
 #: ../../source/tutorials/vector_python_driver.rst:138
@@ -248,44 +296,50 @@ msgid ""
 " at least 1024 bytes), or more if a native driver in the driver probe "
 "sequence has requested more previously."
 msgstr ""
+"ファイルの最初のバイト(ファイルの場合). 少なくとも1024(ファイルが少なくとも1024バ"
+"イトの場合), または以前にネイティブドライバーがより多くを要求した場合はそれ以上です."
 
 #: ../../source/tutorials/vector_python_driver.rst:129
 #: ../../source/tutorials/vector_python_driver.rst:140
 msgid "Open flags. To be ignored for now."
-msgstr ""
+msgstr "オープンフラグ. 現在は無視されます."
 
 #: ../../source/tutorials/vector_python_driver.rst:130
 #: ../../source/tutorials/vector_python_driver.rst:141
 msgid "Open options."
-msgstr ""
+msgstr "オープンオプション."
 
 #: ../../source/tutorials/vector_python_driver.rst
 msgid "Returns"
-msgstr ""
+msgstr "戻り値"
 
 #: ../../source/tutorials/vector_python_driver.rst:131
 msgid ""
 "True if the file is recognized by the driver, False if not, or -1 if that"
 " cannot be known from the first bytes."
 msgstr ""
+"ファイルがドライバーによって認識される場合はTrue, そうでない場合はFalse, 最初のバ"
+"イトからそれがわからない場合は-1です."
 
 #: ../../source/tutorials/vector_python_driver.rst:142
 msgid "an object deriving from gdal_python_driver.BaseDataset or None"
-msgstr ""
+msgstr "gdal_python_driver.BaseDataset または None から派生したオブジェクト"
 
 #: ../../source/tutorials/vector_python_driver.rst:162
 msgid "Dataset class"
-msgstr ""
+msgstr "データセットクラス"
 
 #: ../../source/tutorials/vector_python_driver.rst:164
 msgid ""
 "The Driver.open() method on success should return an object from a class "
 "that inherits from ``gdal_python_driver.BaseDataset``."
 msgstr ""
+"Driver.open() メソッドは成功した場合, ``gdal_python_driver.BaseDataset`` を継承"
+"するクラスからのオブジェクトを返す必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:168
 msgid "Layers"
-msgstr ""
+msgstr "レイヤー"
 
 #: ../../source/tutorials/vector_python_driver.rst:170
 msgid ""
@@ -295,14 +349,18 @@ msgid ""
 "attribute that is a sequence of objects from a class that inherits from "
 "``gdal_python_driver.BaseLayer``."
 msgstr ""
+"このオブジェクトの役割はベクターレイヤーを格納することです. 実装オプションは2つ"
+"あります. レイヤーの数が少ないか, 構築が高速である場合, ``__init__`` メソッドは "
+"``gdal_python_driver.BaseLayer`` を継承するクラスからのオブジェクトのシーケンスである"
+" ``layers`` 属性を定義できます."
 
 #: ../../source/tutorials/vector_python_driver.rst:184
 msgid "Otherwise, the following two methods should be defined:"
-msgstr ""
+msgstr "それ以外の場合, 以下の2つのメソッドを定義する必要があります:"
 
 #: ../../source/tutorials/vector_python_driver.rst:189
 msgid "the number of layers"
-msgstr ""
+msgstr "レイヤーの数"
 
 #: ../../source/tutorials/vector_python_driver.rst:194
 msgid ""
@@ -310,6 +368,9 @@ msgid ""
 " 1, but calling code might pass any value. In case of invalid index, None"
 " should be returned."
 msgstr ""
+"返すレイヤーのインデックス. 通常は0から self.layer_count() - 1 の間ですが, "
+"呼び出しコードは任意の値を渡すかもしれません. 無効なインデックスの場合は, None"
+" を返すべきです."
 
 #: ../../source/tutorials/vector_python_driver.rst:197
 msgid ""
@@ -317,10 +378,13 @@ msgid ""
 "code will take care of caching that object, and this method will only be "
 "called once for a given idx value."
 msgstr ""
+"gdal_python_driver.BaseLayer または None から派生したオブジェクト. C++コードはその"
+"オブジェクトをキャッシュし, このメソッドは特定のidx値に対して1回だけ呼び出されま"
+"す."
 
 #: ../../source/tutorials/vector_python_driver.rst:214
 msgid "Metadata"
-msgstr ""
+msgstr "メタデータ"
 
 #: ../../source/tutorials/vector_python_driver.rst:216
 msgid ""
@@ -328,60 +392,68 @@ msgid ""
 " value of type string, for the default metadata domain. Alternatively, "
 "the following method may be implemented."
 msgstr ""
+"データセットは,デフォルトのメタデータドメインの ``metadata`` 辞書を定義できます. ある"
+"いは,以下のメソッドを実装することもできます."
 
 #: ../../source/tutorials/vector_python_driver.rst:223
 msgid "metadata domain. Empty string for the default one"
-msgstr ""
+msgstr "メタデータドメイン. デフォルトの場合は空の文字列"
 
 #: ../../source/tutorials/vector_python_driver.rst:224
 msgid "None, or a dictionary of key:value pairs of type string;"
-msgstr ""
+msgstr "None, または文字列型の key:value ペアの辞書;"
 
 #: ../../source/tutorials/vector_python_driver.rst:227
 msgid "Other methods"
-msgstr ""
+msgstr "その他のメソッド"
 
 #: ../../source/tutorials/vector_python_driver.rst:229
 msgid "The following method may be optionally implemented:"
-msgstr ""
+msgstr "以下のメソッドはオプションで実装することができます:"
 
 #: ../../source/tutorials/vector_python_driver.rst:234
 msgid ""
 "Called at the destruction of the C++ peer GDALDataset object. Useful to "
 "close database connections for example."
 msgstr ""
+"C++の対応するGDALDatasetオブジェクトの破棄時に呼び出されます. たとえばデータベース"
+"接続を閉じるのに便利です."
 
 #: ../../source/tutorials/vector_python_driver.rst:239
 msgid "Layer class"
-msgstr ""
+msgstr "レイヤークラス"
 
 #: ../../source/tutorials/vector_python_driver.rst:241
 msgid ""
 "The Dataset object will instantiate one or several objects from a class "
 "that inherits from ``gdal_python_driver.BaseLayer``."
 msgstr ""
+"データセットオブジェクトは ``gdal_python_driver.BaseLayer`` を継承するクラスからの"
+"1つまたは複数のオブジェクトをインスタンス化します."
 
 #: ../../source/tutorials/vector_python_driver.rst:245
 msgid "Metadata, and other definitions"
-msgstr ""
+msgstr "メタデータ, およびその他の定義"
 
 #: ../../source/tutorials/vector_python_driver.rst:247
 msgid "The following attributes are required and must defined at __init__ time:"
-msgstr ""
+msgstr "以下の属性は必須であり, __init__ 時に定義する必要があります:"
 
 #: ../../source/tutorials/vector_python_driver.rst:252
 msgid "Layer name, of type string. If not set, a ``name`` method must be defined."
-msgstr ""
+msgstr "レイヤー名, 文字列型. 設定されていない場合, ``name`` メソッドを定義する必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:257
 msgid ""
 "Sequence of field definitions (may be empty). Each field is a dictionary "
 "with the following properties:"
 msgstr ""
+"フィールド定義のシーケンス(空にすることもできます). 各フィールドは以下のプロパティを"
+"持つ辞書です:"
 
 #: ../../source/tutorials/vector_python_driver.rst:263
 msgid "Required"
-msgstr ""
+msgstr "必須"
 
 #: ../../source/tutorials/vector_python_driver.rst:268
 msgid ""
@@ -390,22 +462,29 @@ msgid ""
 "``Integer16``, ``Integer64``, ``Boolean``, ``Real``, ``Float``, "
 "``Binary``, ``Date``, ``Time``, ``DateTime``"
 msgstr ""
+"ogr.OFT\\_ (SWIG Pythonバインディングから), または以下の文字列値のいずれか: ``String``"
+", ``Integer``, ``Integer16``, ``Integer64``, ``Boolean``, ``Real``, ``Float``, ``Binary``"
+", ``Date``, ``Time``, ``DateTime`` のいずれか"
 
 #: ../../source/tutorials/vector_python_driver.rst:272
 msgid ""
 "If that attribute is not set, a ``fields`` method must be defined and "
 "return such a sequence."
 msgstr ""
+"その属性が設定されていない場合, ``fields`` メソッドを定義し,そのようなシーケンスを返す"
+"必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:278
 msgid ""
 "Sequence of geometry field definitions (may be empty). Each field is a "
 "dictionary with the following properties:"
 msgstr ""
+"ジオメトリフィールド定義のシーケンス(空にすることもできます). 各フィールドは以下のプロ"
+"パティを持つ辞書です:"
 
 #: ../../source/tutorials/vector_python_driver.rst:284
 msgid "Required. May be empty"
-msgstr ""
+msgstr "必須. 空にすることもできます"
 
 #: ../../source/tutorials/vector_python_driver.rst:289
 msgid ""
@@ -415,6 +494,9 @@ msgid ""
 "``MultiPolygon``, ``GeometryCollections`` or all other values returned by"
 " :cpp:func:`OGRGeometryTypeToName`"
 msgstr ""
+"必須. ogr.wkb\\_ (SWIG Pythonバインディングから), または以下の文字列値のいずれか: ``Unknown``"
+", ``Point``, ``LineString``, ``Polygon``, ``MultiPoint``, ``MultiLineString``, ``MultiPolygon``"
+", ``GeometryCollections`` または :cpp:func:`OGRGeometryTypeToName` で返される他のすべての値"
 
 #: ../../source/tutorials/vector_python_driver.rst:297
 msgid ""
@@ -422,22 +504,29 @@ msgid ""
 "by :cpp:func:`OGRSpatialReference::SetFromUserInput`, such as a PROJ "
 "string, WKT string, or ``AUTHORITY:CODE``."
 msgstr ""
+"ジオメトリフィールドに添付されたSRSは, :cpp:func:`OGRSpatialReference::SetFromUserInput` "
+"によって取り込むことができる文字列として, PROJ文字列, WKT文字列, ``AUTHORITY:CODE`` "
+"などがあります."
 
 #: ../../source/tutorials/vector_python_driver.rst:301
 msgid ""
 "If that attribute is not set, a ``geometry_fields`` method must be "
 "defined and return such a sequence."
 msgstr ""
+"その属性が設定されていない場合, ``geometry_fields`` メソッドを定義し,そのようなシーケン"
+"スを返す必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:304
 msgid "The following attributes are optional:"
-msgstr ""
+msgstr "以下の属性はオプションです:"
 
 #: ../../source/tutorials/vector_python_driver.rst:309
 msgid ""
 "Feature ID column name, of type string. May be empty string. If not set, "
 "a ``fid_name`` method may be defined."
 msgstr ""
+"地物ID列名, 文字列型. 空の文字列にすることもできます. 設定されていない場合, "
+"``fid_name`` メソッドを定義することができます."
 
 #: ../../source/tutorials/vector_python_driver.rst:315
 msgid ""
@@ -445,68 +534,82 @@ msgid ""
 "default metadata domain. Alternatively, a ``metadata`` method that "
 "accepts a domain argument may be defined."
 msgstr ""
+"デフォルトのメタデータドメインのメタデータに対応する key: value 文字列の辞書. あるいは,"
+"ドメイン引数を受け入れる ``metadata`` メソッドを定義することができます."
 
 #: ../../source/tutorials/vector_python_driver.rst:322
 msgid ""
 "Can be set to True if the feature iterator takes into account the "
 "``attribute_filter`` attribute that can be set on the layer."
 msgstr ""
+"レイヤーに設定できる ``attribute_filter`` 属性を考慮する場合, True に設定できます."
 
 #: ../../source/tutorials/vector_python_driver.rst:328
 msgid ""
 "Can be set to True if the feature iterator takes into account the "
 "``spatial_filter`` attribute that can be set on the layer."
 msgstr ""
+"レイヤーに設定できる ``spatial_filter`` 属性を考慮する場合, True に設定できます."
 
 #: ../../source/tutorials/vector_python_driver.rst:334
 msgid ""
 "Can be set to True if the feature_count method takes into account the "
 "``attribute_filter`` attribute that can be set on the layer."
 msgstr ""
+"レイヤーに設定できる ``attribute_filter`` 属性を考慮する場合, True に設定できます."
 
 #: ../../source/tutorials/vector_python_driver.rst:340
 msgid ""
 "Can be set to True if the feature_count method takes into account the "
 "``spatial_filter`` attribute that can be set on the layer."
 msgstr ""
+"レイヤーに設定できる ``spatial_filter`` 属性を考慮する場合, True に設定できます."
 
 #: ../../source/tutorials/vector_python_driver.rst:344
 msgid "Feature iterator"
-msgstr ""
+msgstr "地物イテレータ"
 
 #: ../../source/tutorials/vector_python_driver.rst:346
 msgid ""
 "The Layer class must implement the iterator interface, so typically with "
 "a ``__iter__`` method."
 msgstr ""
+"レイヤークラスはイテレータインターフェースを実装する必要があります. 通常は ``__iter__``"
+" メソッドを使用します."
 
 #: ../../source/tutorials/vector_python_driver.rst:349
 msgid ""
 "The resulting iterator must produce dictionaries for each feature's "
 "content. The keys allowed in the returned dictionary are:"
 msgstr ""
+"生成されたイテレータは,各地物の内容に対して辞書を生成する必要があります. 返された辞書で"
+"許可されるキーは次のとおりです:"
 
 #: ../../source/tutorials/vector_python_driver.rst:355
 msgid ""
 "Strongly recommended. The value must be an integer to be recognized as a "
 "FID."
 msgstr ""
+"強く推奨されます. 値はFIDとして認識される整数である必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:360
 msgid "Required. The value must be the string ``\"OGRFeature\"``"
-msgstr ""
+msgstr "必須. 値は文字列 ``\"OGRFeature\"`` である必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:365
 msgid ""
 "Required. The value must be either a dictionary whose keys are field "
 "names; or None"
 msgstr ""
+"必須. 値はフィールド名であるキーを持つ辞書か, None である必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:370
 msgid ""
 "Required. the value must be a dictionary whose keys are geometry field "
 "names (possibly the empty string for unnamed geometry columns); or None."
 msgstr ""
+"必須. 値はジオメトリフィールド名(名前のないジオメトリ列の場合は空の文字列)であるキーを"
+"持つ辞書か, None である必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:373
 msgid ""
@@ -515,16 +618,20 @@ msgid ""
 "<https://docs.python.org/3/glossary.html#term-bytes-like-object>`__; or "
 "None."
 msgstr ""
+"各キーの値は, WKT文字列としてエンコードされたジオメトリ; ISO WKBとしてエンコードされた"
+"`bytes-like object <https://docs.python.org/3/glossary.html#term-bytes-like-object>`__; また"
+"は None である必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:380
 msgid ""
 "Optional. The value must be a string conforming to the "
 ":ref:`ogr_feature_style`."
 msgstr ""
+"オプション. 値は :ref:`ogr_feature_style` に準拠する文字列である必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:383
 msgid "Filtering"
-msgstr ""
+msgstr "フィルタリング"
 
 #: ../../source/tutorials/vector_python_driver.rst:385
 msgid ""
@@ -532,6 +639,9 @@ msgid ""
 "API will be evaluated by the generic C++ side of the driver, by iterating"
 " over all features of the layer."
 msgstr ""
+"デフォルトでは, OGR APIのユーザーによって設定された属性フィルタまたは空間フィルタは,"
+"レイヤーのすべての地物を反復処理することで, ドライバーの一般的なC++側によって評価され"
+"ます."
 
 #: ../../source/tutorials/vector_python_driver.rst:389
 msgid ""
@@ -540,6 +650,9 @@ msgid ""
 "to ``True``, the attribute filter (resp. spatial filter) must be honoured"
 " by the feature iterator method."
 msgstr ""
+"レイヤーオブジェクトの ``iterator_honour_attribute_filter`` (resp. "
+"``iterator_honour_spatial_filter``) 属性が ``True`` に設定されている場合, 属性フィルタ"
+"(resp. 空間フィルタ)は地物イテレータメソッドによって尊重される必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:393
 msgid ""
@@ -552,6 +665,12 @@ msgid ""
 "generic C++ side of the driver by calling the ``SetAttributeFilter`` "
 "method (see below passthrough example)"
 msgstr ""
+"属性フィルタはレイヤーオブジェクトの ``attribute_filter`` 属性に設定されます. これは "
+":ref:`OGR SQL <ogr_sql_dialect>` に準拠する文字列です. 属性フィルタがOGR APIによって変更"
+"されると, ``attribute_filter_changed`` オプションメソッドが呼び出されます(オプションメソッ"
+"ドについては以下のパラグラフを参照してください). ``attribute_filter_changed`` の実装は, "
+"``SetAttributeFilter`` メソッドを呼び出すことで, ドライバーの一般的なC++側による評価に"
+"フォールバックすることを決定できます(以下のパススルー例を参照してください)"
 
 #: ../../source/tutorials/vector_python_driver.rst:401
 msgid ""
@@ -565,22 +684,29 @@ msgid ""
 "driver by calling the ``SetSpatialFilter`` method (see below passthrough "
 "example)"
 msgstr ""
+"ジオメトリフィルタはレイヤーオブジェクトの ``spatial_filter`` 属性に設定されます. これは"
+"ISO WKTとしてエンコードされた文字列です. レイヤーのCRSで表現することがOGR APIのユーザー"
+"の責任です. 属性フィルタがOGR APIによって変更されると, ``spatial_filter_changed`` オプシ"
+"ョンメソッドが呼び出されます(オプションメソッドについては以下のパラグラフを参照してくださ"
+"い). ``spatial_filter_changed`` の実装は, ``SetSpatialFilter`` メソッドを呼び出すことで,"
+"ドライバーの一般的なC++側による評価にフォールバックすることを決定できます(以下のパススルー"
+"例を参照してください)"
 
 #: ../../source/tutorials/vector_python_driver.rst:411
 msgid "Optional methods"
-msgstr ""
+msgstr "オプションのメソッド"
 
 #: ../../source/tutorials/vector_python_driver.rst:413
 msgid "The following methods may be optionally implemented:"
-msgstr ""
+msgstr "以下のメソッドはオプションで実装することができます:"
 
 #: ../../source/tutorials/vector_python_driver.rst:418
 msgid "the list [xmin,ymin,xmax,ymax] with the spatial extent of the layer."
-msgstr ""
+msgstr "レイヤーの空間範囲のリスト [xmin,ymin,xmax,ymax]"
 
 #: ../../source/tutorials/vector_python_driver.rst:423
 msgid "the number of features of the layer."
-msgstr ""
+msgstr "レイヤーの地物数"
 
 #: ../../source/tutorials/vector_python_driver.rst:425
 msgid ""
@@ -588,16 +714,21 @@ msgid ""
 "self.feature_count_honour_spatial_filter are set to True, the attribute "
 "filter and/or spatial filter must be honoured by this method."
 msgstr ""
+"self.feature_count_honour_attribute_filter または self.feature_count_honour_spatial_filter が"
+"True に設定されている場合, 属性フィルタおよび/または空間フィルタはこのメソッドによって尊重"
+"される必要があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:432
 msgid "feature ID"
-msgstr ""
+msgstr "地物ID"
 
 #: ../../source/tutorials/vector_python_driver.rst:433
 msgid ""
 "a feature object in one of the formats of the ``__next__`` method "
 "described above, or None if no object matches fid"
 msgstr ""
+"``__next__`` メソッドの形式のいずれかで地物オブジェクト, またはfidに一致するオブジェクトが"
+"ない場合はNone"
 
 #: ../../source/tutorials/vector_python_driver.rst:439
 msgid ""
@@ -606,6 +737,9 @@ msgid ""
 "self.iterator_honour_attribute_filter or "
 "feature_count_honour_attribute_filter attributes."
 msgstr ""
+"このメソッドは, self.attribute_filter が変更されたときに呼び出されます. ドライバーは, "
+"self.iterator_honour_attribute_filter または feature_count_honour_attribute_filter 属性の"
+"値を変更する可能性があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:447
 msgid ""
@@ -614,6 +748,9 @@ msgid ""
 "to potentially change the value of self.iterator_honour_spatial_filter or"
 " feature_count_honour_spatial_filter attributes."
 msgstr ""
+"このメソッドは, self.spatial_filter が変更されたときに呼び出されます(その値はWKTでエンコード"
+"されたジオメトリです). ドライバーは, self.iterator_honour_spatial_filter または "
+"feature_count_honour_spatial_filter 属性の値を変更する可能性があります."
 
 #: ../../source/tutorials/vector_python_driver.rst:456
 msgid ""
@@ -622,14 +759,17 @@ msgid ""
 "BaseLayer.RandomRead, BaseLayer.StringsAsUTF8 or other strings supported "
 "by :cpp:func:`OGRLayer::TestCapability`"
 msgstr ""
+"可能な値は BaseLayer.FastGetExtent, BaseLayer.FastSpatialFilter, BaseLayer.FastFeatureCount, "
+"BaseLayer.RandomRead, BaseLayer.StringsAsUTF8 または :cpp:func:`OGRLayer::TestCapability` "
+"でサポートされている他の文字列です."
 
 #: ../../source/tutorials/vector_python_driver.rst:460
 msgid "True if the capability is supported, False otherwise."
-msgstr ""
+msgstr "機能がサポートされている場合はTrue, それ以外はFalseです."
 
 #: ../../source/tutorials/vector_python_driver.rst:463
 msgid "Full example"
-msgstr ""
+msgstr "完全な例"
 
 #: ../../source/tutorials/vector_python_driver.rst:465
 msgid ""
@@ -644,6 +784,13 @@ msgid ""
 "``attribute_filter_changed`` and ``spatial_filter_changed`` method "
 "implementations, could have omitted with the same result."
 msgstr ""
+"以下の例は, SWIG Python GDAL API への呼び出しを転送するパススルードライバーです. 実用的な"
+"用途はなく, APIのほとんどの使用例を示すことを目的としています. 実際のドライバーは, デモンスト"
+"レーションされたAPIの一部のみを使用します. たとえば, パススルードライバーは属性フィルタと空"
+"間フィルタを完全にダミーの方法で実装し, ドライバーのC++部分にコールバックします. "
+"``iterator_honour_attribute_filter`` および ``iterator_honour_spatial_filter`` 属性, "
+"``attribute_filter_changed`` および ``spatial_filter_changed`` メソッドの実装は, 同じ結果"
+"で省略することができます."
 
 #: ../../source/tutorials/vector_python_driver.rst:474
 msgid ""
@@ -655,14 +802,21 @@ msgid ""
 "to the native driver). The CityJSON driver mentioned in the :ref:`Other "
 "examples <other_examples>` paragraph does not need it."
 msgstr ""
+"ドライバーによって認識される接続文字列は "
+" ``PASSHTROUGH:connection_string_supported_by_non_python_drivers`` です. ドライバー名の接頭辞"
+"は絶対的な要件ではなく, この特定のドライバーに固有のものであり, ある程度人工的です(接頭辞が"
+"ない場合, 接続文字列は直接ネイティブドライバーに移動します). :ref:`Other examples <other_examples>` "
+"の段落で言及されているCityJSONドライバーはそれを必要としません.
 
 #: ../../source/tutorials/vector_python_driver.rst:631
 msgid "Other examples"
-msgstr ""
+msgstr "その他の例"
 
 #: ../../source/tutorials/vector_python_driver.rst:633
 msgid ""
 "Other examples, including a CityJSON driver, may be found at "
 "https://github.com/OSGeo/gdal/tree/master/examples/pydrivers"
 msgstr ""
+"CityJSONドライバーを含むその他の例は, https://github.com/OSGeo/gdal/tree/master/examples/pydrivers"
+" で見つけることができます."
 
