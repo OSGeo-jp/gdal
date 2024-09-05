@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/tutorials/gnm_api_tut.rst:5
 msgid "GNM API tutorial"
-msgstr ""
+msgstr "GNM API チュートリアル"
 
 #: ../../source/tutorials/gnm_api_tut.rst:9
 msgid ""
@@ -29,10 +29,13 @@ msgid ""
 "with networks. It is advised to read the :ref:`gnm_data_model` before to "
 "understand the purpose and structure of GNM classes."
 msgstr ""
+"このドキュメントは,ネットワークを扱うためのGNM C++クラスの使用方法を説明することを目的"
+"としています.GNMクラスの目的と構造を理解するために, :ref:`gnm_data_model` を読むことをお勧めします."
+
 
 #: ../../source/tutorials/gnm_api_tut.rst:12
 msgid "Managing networks"
-msgstr ""
+msgstr "ネットワークを管理する"
 
 #: ../../source/tutorials/gnm_api_tut.rst:14
 msgid ""
@@ -45,6 +48,12 @@ msgid ""
 " add some additional data: pumps layer, in order to manually edit network"
 " topology."
 msgstr ""
+"最初の例では,空間データのセット(パイプと井戸の2つのシェープファイル)を基に小さな水"
+"ネットワークを作成します.これらのファイルは, GDALソースツリーのautotest\\\\gnm\\\\dataに"
+"配置されています.一般的なネットワークフォーマットである :cpp:class:`GNMGdalNetwork` クラスを"
+"使用することで,ネットワークにGDALでサポートされているベクトルフォーマットの1つである"
+"ESRI Shapefileを選択できます.作成後,トポロジを構築し,追加データ(ポンプレイヤー)を追加して"
+"ネットワークトポロジを手動で編集します."
 
 #: ../../source/tutorials/gnm_api_tut.rst:16
 msgid ""
@@ -52,6 +61,8 @@ msgid ""
 "pairs), which will be passed as parameters during network creation. Here "
 "we create a network's name."
 msgstr ""
+"最初にGDALドライバを登録し,ネットワーク作成時のパラメータとして渡されるいくつかのオプション"
+"(文字列ペア)を作成します.ここでは,ネットワーク名を作成します."
 
 #: ../../source/tutorials/gnm_api_tut.rst:33
 msgid ""
@@ -61,6 +72,9 @@ msgid ""
 "the \"network part\" will be created and the resulting network will be "
 "returned."
 msgstr ""
+"いくつかのオプションは必須です.ネットワーク作成時には,次のパラメータを指定する必要があります:"
+"パス/名前;ネットワークストレージの形式;空間参照システム(EPSG, WKTなど).\"ネットワーク部分\"を"
+"持つ対応するデータセットが作成され,結果のネットワークが返されます."
 
 #: ../../source/tutorials/gnm_api_tut.rst:43
 msgid ""
@@ -70,6 +84,10 @@ msgid ""
 "that we use GDALDataset:: methods for working with \"class layers\", "
 "because :cpp:class:`GNMNetwork` inherited from GDALDataset."
 msgstr ""
+"現時点では, \"システムレイヤ\"のみで構成された空のネットワークがあります. \"クラスレイヤ\""
+"を持つフィーチャでネットワークを埋める必要があるため,特定の外部データセットを開き,そのデータ"
+"セットからネットワークにレイヤをコピーします.注意: \"クラスレイヤ\"との作業にはGDALDataset::"
+"メソッドを使用しています,なぜなら :cpp:class:`GNMNetwork` はGDALDatasetから継承しているからです."
 
 #: ../../source/tutorials/gnm_api_tut.rst:58
 msgid ""
@@ -85,6 +103,13 @@ msgid ""
 "our case. If the building will be successful the network's graph will be "
 "filled with the according connections."
 msgstr ""
+"コピーが成功した後,地物がいっぱいのネットワークがありますが,トポロジはありません.地物"
+"はネットワークに追加され,登録されましたが,まだ互いに接続されていません.ネットワークトポロジを構築"
+"する時期です. GNMでは,トポロジを手動で構築するか自動で構築するかの2つの方法があります.ほとんどの"
+"場合,自動構築がより便利ですが,手動構築は小さな編集に便利です.自動構築にはいくつかのパラメータが必要"
+"です: トポロジ構築に参加する\"クラスレイヤ\"を指定する必要があります(2つのレイヤを選択します),スナッ"
+"プ許容度,直接コストと逆コスト,方向,この場合は0.00005です.構築が成功すると,ネットワークのグラフが対応"
+"する接続で埋められます."
 
 #: ../../source/tutorials/gnm_api_tut.rst:81
 msgid ""
@@ -95,6 +120,10 @@ msgid ""
 " them to our built topology (modify topology). We create a new \"class "
 "layer\" in the network and add one feature to it."
 msgstr ""
+"この時点で,異なる目的(解析,異なる形式に変換など)に使用できるトポロジと空間データを持つ準備ができた"
+"ネットワークがあります.しかし,ネットワークのデータを変更する必要がある場合があります.たとえば,追加の"
+"地物を追加し,それらを構築されたトポロジに接続する必要があります(トポロジを変更).ネットワーク内で新しい"
+"\"クラスレイヤ\"を作成し,1つの地物を追加します."
 
 #: ../../source/tutorials/gnm_api_tut.rst:114
 msgid ""
@@ -115,21 +144,29 @@ msgid ""
 "ConnectFeatures() internally) such vales were set automatically according"
 " to the rule which we also set before."
 msgstr ""
+"作成が成功した後,地物はネットワークに登録され,他の地物と接続できます.これを行うためには2つの可能な方法"
+"があります.最初の場合は,接続のエッジとなる実際の地物が必要です.2番目の場合は,そのような地物が必要ないため,"
+" :cpp:func:`GNMGenericNetwork::ConnectFeatures` メソッドに-1を渡すと,この接続のために特別なシステムエッジが"
+"作成され,自動的にグラフに追加されます.この場合,1つのポイント地物のみを追加し,ライン地物をエッジにする必要が"
+"ないため,\"仮想\"接続を使用します.ソースとしてポイントのGFID,ターゲットとして既存の地物のGFIDの1つ,コネクタ"
+"として-1を渡します.コスト(直接と逆)とエッジの方向も手動で設定し,これらの値がグラフに書き込まれます.自動接続"
+"(内部的にもConnectFeatures() を使用)を使用した場合,これらの値は以前に設定したルールに従って自動的に設定されます."
 
 #: ../../source/tutorials/gnm_api_tut.rst:124
 msgid ""
 "After all we correctly close the network which frees the allocated "
 "resources."
 msgstr ""
+"最後に,割り当てられたリソースを解放するためにネットワークを正しく閉じます."
 
 #: ../../source/tutorials/gnm_api_tut.rst:131
 #: ../../source/tutorials/gnm_api_tut.rst:299
 msgid "All in one block:"
-msgstr ""
+msgstr "すべてを1つのブロックに:"
 
 #: ../../source/tutorials/gnm_api_tut.rst:237
 msgid "Analysing networks"
-msgstr ""
+msgstr "ネットワークの解析"
 
 #: ../../source/tutorials/gnm_api_tut.rst:239
 msgid ""
@@ -138,16 +175,19 @@ msgid ""
 " via Dijkstra algorithm performing the feature blockings and saving the "
 "resulting path into the file."
 msgstr ""
+"2番目の例では,最初の例で構築したネットワークを解析します. Dijkstraアルゴリズムを使用して2点間の最短"
+"経路を計算し,地物のブロックを実行し,結果の経路をファイルに保存します."
 
 #: ../../source/tutorials/gnm_api_tut.rst:241
 msgid "Initially we open our network, passing the path to its Shapefile dataset."
-msgstr ""
+msgstr "最初に,Shapefileデータセットへのパスを渡してネットワークを開きます."
 
 #: ../../source/tutorials/gnm_api_tut.rst:259
 msgid ""
 "Before any calculations we open the dataset which will hold the layer "
 "with the resulting path."
 msgstr ""
+"計算を行う前に,結果の経路を保持するレイヤを持つデータセットを開きます."
 
 #: ../../source/tutorials/gnm_api_tut.rst:275
 msgid ""
@@ -156,4 +196,6 @@ msgid ""
 "internal memory OGRLayer, which we copy to the real dataset. Now it can "
 "be visualized by GIS."
 msgstr ""
+"最後に,最短経路メソッドを使用して計算します.この経路は,ブロックされた地物を通過して見つけられ,内部メモリ"
+"OGRLayerに保存され,実際のデータセットにコピーされます.これでGISで可視化できます."
 
