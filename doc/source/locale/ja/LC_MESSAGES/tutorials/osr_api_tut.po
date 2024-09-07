@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/tutorials/osr_api_tut.rst:5
 msgid "OGR Coordinate Reference Systems and Coordinate Transformation tutorial"
-msgstr ""
+msgstr "OGR座標参照システムと座標変換チュートリアル"
 
 #: ../../source/tutorials/osr_api_tut.rst:16
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../source/tutorials/osr_api_tut.rst:18
 msgid ""
@@ -39,22 +39,31 @@ msgid ""
 "OGC WKT 1, ESRI WKT, WKT2:2015 and WKT2:2018) for describing coordinate "
 "systems."
 msgstr ""
+" :cpp:class:`OGRSpatialReference` および :cpp:class:`OGRCoordinateTransformation` クラスは, "
+"座標参照システム(CRSまたはSRSとして知られるもの, 通常は地図投影と測地基準を関連付けた投影CRS)を表現する"
+"サービスと, それらの間の変換を行うサービスを提供します. これらのサービスは, OpenGIS座標変換仕様に緩く"
+"モデル化されており, 座標システムを記述するためにWell Known Text (WKT)形式(そのさまざまなバージョン: "
+"OGC WKT 1, ESRI WKT, WKT2:2015およびWKT2:2018)に依存しています."
+
 
 #: ../../source/tutorials/osr_api_tut.rst:27
 msgid "References and applicable standards"
-msgstr ""
+msgstr "参考文献と適用可能な標準"
 
 #: ../../source/tutorials/osr_api_tut.rst:29
 msgid ""
 "`PROJ documentation <https://proj4.org>`_: projection methods and "
 "coordinate operations"
 msgstr ""
+" `PROJ documentation <https://proj4.org>`_: 投影方法と座標操作"
 
 #: ../../source/tutorials/osr_api_tut.rst:30
 msgid ""
 "`ISO:19111 and WKT standards "
 "<https://proj4.org/development/reference/cpp/cpp_general.html#standards>`_"
 msgstr ""
+"`ISO:19111 and WKT standards "
+"<https://proj4.org/development/reference/cpp/cpp_general.html#standards>`_"
 
 #: ../../source/tutorials/osr_api_tut.rst:31
 msgid ""
@@ -62,14 +71,16 @@ msgid ""
 "<http://geotiff.maptools.org/proj_list>`_: understanding formulations of "
 "projections in WKT for GeoTIFF"
 msgstr ""
+"`GeoTIFF Projections Transform List "
+"<http://geotiff.maptools.org/proj_list>`_: GeoTIFFのWKTでの投影の定式化の理解"
 
 #: ../../source/tutorials/osr_api_tut.rst:32
 msgid "`EPSG Geodesy web page <http://www.epsg.org>`_ is also a useful resource"
-msgstr ""
+msgstr " `EPSG測地学ウェブページ <http://www.epsg.org>`_ も有用なリソースです"
 
 #: ../../source/tutorials/osr_api_tut.rst:35
 msgid "Defining a Geographic Coordinate Reference System"
-msgstr ""
+msgstr "地理座標参照システムの定義"
 
 #: ../../source/tutorials/osr_api_tut.rst:37
 msgid ""
@@ -80,6 +91,10 @@ msgid ""
 "second is projected (such as UTM - positions are measured in meters or "
 "feet)."
 msgstr ""
+"CRSは :cpp:class:`OGRSpatialReference` クラスにカプセル化されています. OGRSpatialReferenceオブジェクトを"
+"有効な座標参照システムに初期化するためのいくつかの方法があります. 主要な2種類のCRSがあります. 1つ目は"
+"地理的なもの(位置は経度/緯度で測定されます)で,2つ目は投影されたもの(UTMなど - 位置はメートルまたはフィートで"
+"測定されます)."
 
 #: ../../source/tutorials/osr_api_tut.rst:43
 msgid ""
@@ -90,6 +105,9 @@ msgid ""
 "supplying all this information along with a user visible name for the "
 "geographic CRS."
 msgstr ""
+"地理的なCRSには,測地基準(半長軸と逆扁平率で記述される楕円体を意味する)に関する情報,基準子午線(通常はグリニッジ),"
+"および通常は度の角単位タイプが含まれます. 以下のコードは,地理的なCRSを初期化するために,この情報と地理的なCRSの"
+"ユーザー表示名を提供します."
 
 #: ../../source/tutorials/osr_api_tut.rst:63
 msgid ""
@@ -97,6 +115,7 @@ msgid ""
 "appropriate according to current geodesic terminology, and should be "
 "understood as CRS"
 msgstr ""
+" :cpp:func:`OGRSpatialReference::SetGeogCS` のCSの略称は,現在の測地学用語には適していません.これはCRSとして理解されるべきです"
 
 #: ../../source/tutorials/osr_api_tut.rst:66
 msgid ""
@@ -110,6 +129,11 @@ msgid ""
 "<https://github.com/OSGeo/PROJ/blob/master/data/sql/geodetic_datum.sql>`_"
 " file."
 msgstr ""
+"これらの値のうち, \"My geographic CRS\", \"My WGS84 Spheroid\", \"Greenwich\"および\"degree\"の名前は, "
+"キーではなく,ユーザーに表示されます. ただし,測地基準名\"World Geodetic System 1984\"は,測地基準を識別するための"
+"キーとして使用され,適切な測地基準変換が座標操作中に行われるように,EPSGレジストリから既知の値に設定する必要があります."
+"有効な測地基準のリストは, `geodetic_datum.sql "
+"<https://github.com/OSGeo/PROJ/blob/master/data/sql/geodetic_datum.sql>`_ ファイルの3列目に表示されます."
 
 #: ../../source/tutorials/osr_api_tut.rst:77
 msgid ""
@@ -117,6 +141,8 @@ msgid ""
 "underscore. And WGS_1984 is used as an alias of \"World Geodetic System "
 "1984\""
 msgstr ""
+"WKT 1では,測地基準名のスペース文字は通常アンダースコアに置き換えられます.そしてWGS_1984は\"World Geodetic System 1984\"の"
+"エイリアスとして使用されます"
 
 #: ../../source/tutorials/osr_api_tut.rst:80
 msgid ""
@@ -125,18 +151,23 @@ msgid ""
 "defined in a single call to "
 ":cpp:func:`OGRSpatialReference::SetWellKnownGeogCS`."
 msgstr ""
+"OGRSpatialReferenceには,いくつかのよく知られたCRSに対する組み込みサポートがあり,これには\"NAD27\", \"NAD83\", "
+"\"WGS72\"および\"WGS84\"が含まれます.これらは, :cpp:func:`OGRSpatialReference::SetWellKnownGeogCS` への単一の呼び出しで"
+"定義できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:91
 msgid ""
 "The abbreviation CS in SetWellKnownGeogCS() is not appropriate according "
 "to current geodesic terminology, and should be understood as CRS"
 msgstr ""
+"SetWellKnownGeogCS() のCSの略称は,現在の測地学用語には適していません.これはCRSとして理解されるべきです"
 
 #: ../../source/tutorials/osr_api_tut.rst:94
 msgid ""
 "Furthermore, any geographic CRS in the EPSG database can be set by its "
 "GCS code number if the EPSG database is available."
 msgstr ""
+"さらに,EPSGデータベースが利用可能な場合,そのGCSコード番号で任意の地理的なCRSを設定できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:101
 msgid ""
@@ -146,36 +177,42 @@ msgid ""
 "back into WKT. As of GDAL 3.0, the default format for WKT export is still"
 " OGC WKT 1."
 msgstr ""
+"投影定義のシリアル化および他のパッケージへの投影定義の送信には,座標システムのOpenGIS Well Known Text形式が使用されます."
+"OGRSpatialReferenceは,WKTから初期化するか,またはWKTに変換することができます. GDAL 3.0では,WKTエクスポートのデフォルト"
+"フォーマットはまだOGC WKT 1です."
 
 #: ../../source/tutorials/osr_api_tut.rst:115
 msgid "outputs:"
-msgstr ""
+msgstr "出力:"
 
 #: ../../source/tutorials/osr_api_tut.rst:125
 msgid "or in more readable form:"
-msgstr ""
+msgstr "またはより読みやすい形式で:"
 
 #: ../../source/tutorials/osr_api_tut.rst:142
 msgid ""
 "Starting with GDAL 3.0, the :cpp:func:`OGRSpatialReference::exportToWkt` "
 "method accepts options,"
 msgstr ""
+"GDAL 3.0から, :cpp:func:`OGRSpatialReference::exportToWkt` メソッドはオプションを受け入れます,"
 
 #: ../../source/tutorials/osr_api_tut.rst:170
 msgid ""
 "This method with options is available in C as the "
 ":cpp:func:`OSRExportToWktEx` function."
 msgstr ""
+"このメソッドはオプション付きでCで利用可能であり, :cpp:func:`OSRExportToWktEx` 関数として利用できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:172
 msgid ""
 "The :cpp:func:`OGRSpatialReference::importFromWkt` method can be used to "
 "set an OGRSpatialReference from a WKT CRS definition."
 msgstr ""
+" :cpp:func:`OGRSpatialReference::importFromWkt` メソッドを使用して,WKT CRS定義からOGRSpatialReferenceを設定できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:176
 msgid "CRS and axis order"
-msgstr ""
+msgstr "CRSと軸の順序"
 
 #: ../../source/tutorials/osr_api_tut.rst:178
 msgid ""
@@ -188,6 +225,10 @@ msgid ""
 "latitude, and the values along those axes are expressed generally in "
 "degree (ancient French-based CRS may use grad)."
 msgstr ""
+"以前のセクションで省略されていた \"詳細\" の1つは,CRS内の座標軸の順序に関するトピックです.地理的なCRSは,ISO:19111モデリングに"
+"よると,2つの主要なコンポーネントで構成されています:測地基準と `座標系 "
+"<http://docs.opengeospatial.org/as/18-005r4/18-005r4.html#42>`_ .2D地理的なCRSの場合,座標系の軸は経度と緯度であり,これらの軸に"
+"沿った値は一般的に度で表されます(古代フランス語ベースのCRSではグラードを使用する場合があります)."
 
 #: ../../source/tutorials/osr_api_tut.rst:185
 msgid ""
@@ -197,6 +238,9 @@ msgid ""
 "format and protocol specifications, etc. This is the source of various "
 "interoperability issues."
 msgstr ""
+"指定される順序,つまり緯度が最初で経度が2番目,またはその逆,は常に混乱の原因であり,"
+"測地権限, GISユーザー,ファイル形式およびプロトコル仕様などで使用される規則によって"
+"異なります.これはさまざまな相互運用性の問題の原因です."
 
 #: ../../source/tutorials/osr_api_tut.rst:190
 msgid ""
@@ -208,6 +252,9 @@ msgid ""
 "coordinates passed or returned by the Transform() method of this class "
 "used the longitude, latitude order."
 msgstr ""
+"GDAL 3.0以前, :cpp:class:`OGRSpatialReference` クラスは,CRSを定義する権限によって指定された軸の順序を尊重せず,"
+"その結果,順序が緯度が最初で経度が2番目の場合,軸の順序情報をWKT文字列から削除しました.このクラスのTransform()メソッドで"
+"渡される地理座標または返される地理座標を使用する座標変換も,経度,緯度の順序を使用していると仮定していました."
 
 #: ../../source/tutorials/osr_api_tut.rst:197
 msgid ""
@@ -217,6 +264,9 @@ msgid ""
 "\"EPSG:4326\" or \"WGS84\" strings use the latitude first, longitude "
 "second axis order."
 msgstr ""
+"GDAL 3.0から,CRSを定義する権限によって指定された軸の順序は,デフォルトでOGRCoordinateTransformationクラスによって尊重され,"
+"常にWKT1でエクスポートされます.その結果,\"EPSG:4326\"または\"WGS84\"文字列で作成されたCRSは,緯度が最初で経度が2番目の"
+"軸の順序を使用します."
 
 #: ../../source/tutorials/osr_api_tut.rst:202
 msgid ""
@@ -227,6 +277,9 @@ msgid ""
 "passed or returned, will be longitude, latitude. For that, the following "
 "must be called"
 msgstr ""
+"まだ経度,緯度の順序で座標を使用しているコードベースからの移行を支援するために,座標変換の目的で実際に渡される値または返される値の"
+"順序が経度,緯度であることを指定するために,OGRSpatialReferenceインスタンスにメタデータ情報を添付することができます.そのために,"
+"次のように呼び出す必要があります"
 
 #: ../../source/tutorials/osr_api_tut.rst:212
 msgid ""
@@ -234,6 +287,7 @@ msgid ""
 ":cpp:func:`OGRSpatialReference::SetAxisMappingStrategy` is the data axis "
 "to CRS axis mapping strategy."
 msgstr ""
+":cpp:func:`OGRSpatialReference::SetAxisMappingStrategy` に渡される引数は,データ軸からCRS軸へのマッピング戦略です."
 
 #: ../../source/tutorials/osr_api_tut.rst:215
 msgid ""
@@ -242,6 +296,8 @@ msgid ""
 "projected CRS with northing/easting order, the data will still be "
 "easting/northing ordered."
 msgstr ""
+":c:macro:`OAMS_TRADITIONAL_GIS_ORDER` は,緯度/経度の順序を持つ地理的なCRSの場合,データは引き続き経度/緯度の順序になります."
+"同様に,北/東の順序を持つ投影されたCRSの場合,データは引き続き東/北の順序になります."
 
 #: ../../source/tutorials/osr_api_tut.rst:216
 msgid ""
@@ -249,12 +305,15 @@ msgid ""
 "identical to the CRS axis. This is the default value when instantiating "
 "OGRSpatialReference."
 msgstr ""
+":c:macro:`OAMS_AUTHORITY_COMPLIANT` は,データ軸がCRS軸と同一であることを意味します.これは,OGRSpatialReferenceをインスタンス化するときの"
+"デフォルト値です."
 
 #: ../../source/tutorials/osr_api_tut.rst:217
 msgid ""
 ":c:macro:`OAMS_CUSTOM` means that the data axes are customly defined with"
 " SetDataAxisToSRSAxisMapping()."
 msgstr ""
+":c:macro:`OAMS_CUSTOM` は,データ軸がSetDataAxisToSRSAxisMapping()でカスタムに定義されていることを意味します."
 
 #: ../../source/tutorials/osr_api_tut.rst:219
 msgid ""
@@ -263,6 +322,8 @@ msgid ""
 "Easting first, Northing second convention, some defined in the EPSG "
 "registry use the reverse convention."
 msgstr ""
+"このセクションで議論された地理的なCRSの特定のケースについても,投影されたCRSにも同様に適用されます.ほとんどのものは,東が最初で"
+"北が2番目の規則を使用しますが,EPSGレジストリで定義された一部のものは逆の規則を使用します."
 
 #: ../../source/tutorials/osr_api_tut.rst:223
 msgid ""
@@ -272,10 +333,12 @@ msgid ""
 "\"CRS83\" or \"CRS84\" instead of \"NAD27\", \"NAD83\" and \"WGS84\" "
 "respectively."
 msgstr ""
+"特定のよく知られたCRSに対して従来のGIS順序を引き続き使用する別の方法は, \"NAD27\", \"NAD83\"および\"WGS84\"の代わりに"
+"\"CRS27\", \"CRS83\"または\"CRS84\"を指定して :cpp:func:`OGRSpatialReference::SetWellKnownGeogCS` を呼び出すことです."
 
 #: ../../source/tutorials/osr_api_tut.rst:232
 msgid "Defining a Projected CRS"
-msgstr ""
+msgstr "投影されたCRSの定義"
 
 #: ../../source/tutorials/osr_api_tut.rst:234
 msgid ""
@@ -285,6 +348,9 @@ msgid ""
 "and angular long/lat positions.  The following code defines a UTM zone 17"
 " projected CRS with an underlying geographic CRS (datum) of WGS84."
 msgstr ""
+"投影されたCRS(UTM, Lambert Conformal Conicなど)には,線形位置(メートルまたはフィート)と角度の経度/緯度位置の間の変換に使用される"
+"投影変換の定義として,基礎となる地理的なCRS(測地基準)が必要です.以下のコードは,UTMゾーン17の投影されたCRSを定義し,その基礎となる"
+"地理的なCRS(測地基準)はWGS84です."
 
 #: ../../source/tutorials/osr_api_tut.rst:249
 msgid ""
@@ -298,10 +364,14 @@ msgid ""
 "automatically reorder the internal representation as needed to remain "
 "valid."
 msgstr ""
+" :cpp:func:`OGRSpatialReference::SetProjCS` を呼び出すと,投影されたCRSのユーザー名が設定され,システムが投影されていることが確立されます."
+" :cpp:func:`OGRSpatialReference::SetWellKnownGeogCS` は,地理座標系を関連付け, :cpp:func:`OGRSpatialReference::SetUTM` 呼び出しは"
+"詳細な投影変換パラメータを設定します.この時点では,上記の順序は有効な定義を作成するために重要ですが,将来的には,オブジェクトは"
+"必要に応じて内部表現を自動的に再配置して有効なままにするでしょう."
 
 #: ../../source/tutorials/osr_api_tut.rst:259
 msgid "For now, be careful of the order of steps defining an OGRSpatialReference!"
-msgstr ""
+msgstr "現時点では,OGRSpatialReferenceを定義する手順の順序に注意してください!"
 
 #: ../../source/tutorials/osr_api_tut.rst:261
 msgid ""
@@ -309,6 +379,7 @@ msgid ""
 "the following.  Note that the UTM 17 was expanded into the details "
 "transverse mercator definition of the UTM zone."
 msgstr ""
+"上記の定義は,次のようなWKTバージョンを生成します. UTM 17は,UTMゾーンの詳細な横メルカトル定義に展開されていることに注意してください."
 
 #: ../../source/tutorials/osr_api_tut.rst:286
 msgid ""
@@ -317,10 +388,12 @@ msgid ""
 ":cpp:func:`OGRSpatialReference::SetLCC` (Lambert Conformal Conic), and "
 ":cpp:func:`OGRSpatialReference::SetMercator`."
 msgstr ""
+":cpp:func:`OGRSpatialReference::SetTM` (横メルカトル), :cpp:func:`OGRSpatialReference::SetLCC` (ランベルト正角円錐), "
+"および :cpp:func:`OGRSpatialReference::SetMercator` を含む多くの投影方法に対するメソッドがあります."
 
 #: ../../source/tutorials/osr_api_tut.rst:290
 msgid "Querying Coordinate Reference System"
-msgstr ""
+msgstr "座標参照システムの問い合わせ"
 
 #: ../../source/tutorials/osr_api_tut.rst:292
 msgid ""
@@ -339,12 +412,21 @@ msgid ""
 ":cpp:func:`OGRSpatialReference::GetLinearUnits` method can be used to "
 "fetch the linear units type, and translation to meters."
 msgstr ""
+"OGRSpatialReferenceが確立されると,それに関するさまざまな情報を問い合わせることができます. "
+" :cpp:func:`OGRSpatialReference::IsProjected` および :cpp:func:`OGRSpatialReference::IsGeographic` メソッドを使用して,"
+"それが投影されたCRSか地理的なCRSかを確立できます. :cpp:func:`OGRSpatialReference::GetSemiMajor`, "
+":cpp:func:`OGRSpatialReference::GetSemiMinor` および :cpp:func:`OGRSpatialReference::GetInvFlattening` メソッドを使用して,"
+"楕円体に関する情報を取得できます. :cpp:func:`OGRSpatialReference::GetAttrValue` メソッドを使用して,PROJCS, GEOGCS, DATUM, "
+"SPHEROIDおよびPROJECTION名の文字列を取得できます. :cpp:func:`OGRSpatialReference::GetProjParm` メソッドを使用して,"
+"投影パラメータを取得できます. :cpp:func:`OGRSpatialReference::GetLinearUnits` メソッドを使用して,線形単位タイプとメートルへの変換を取得できます."
+
 
 #: ../../source/tutorials/osr_api_tut.rst:303
 msgid ""
 "Note that the names of the projection method and parameters is the one of"
 " WKT 1."
 msgstr ""
+"投影方法とパラメータの名前は,WKT 1のものです."
 
 #: ../../source/tutorials/osr_api_tut.rst:306
 msgid ""
@@ -359,10 +441,15 @@ msgid ""
 " projections in ogrspatialreference.cpp can be consulted to find which "
 "parameters apply to which projections."
 msgstr ""
+"以下のコードは, :cpp:func:`OGRSpatialReference::GetAttrValue` を使用して投影を取得し, :cpp:func:`OGRSpatialReference::GetProjParm` を"
+"使用して投影パラメータを取得する方法を示しています. GetAttrValue() メソッドは,WKTテキスト表現の名前付きエントリに関連付けられた最初の"
+"\"value\"ノードを検索します. GetProjParm() で投影パラメータを取得する際には,投影パラメータ用の #define'ed 定数(例: SRS_PP_CENTRAL_MERIDIAN)"
+"を使用する必要があります.各投影のSetメソッドのコードは,どのパラメータがどの投影に適用されるかを見つけるために,ogrspatialreference.cpp"
+"のコードを参照できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:340
 msgid "Coordinate Transformation"
-msgstr ""
+msgstr "座標変換"
 
 #: ../../source/tutorials/osr_api_tut.rst:342
 msgid ""
@@ -372,6 +459,9 @@ msgid ""
 " the :cpp:func:`OGRCoordinateTransformation::Transform` method can be "
 "used to convert points between CRS."
 msgstr ""
+" :cpp:class:`OGRCoordinateTransformation` クラスは,異なるCRS間で位置を変換するために使用されます. 新しい変換オブジェクトは,"
+" :cpp:func:`OGRCreateCoordinateTransformation` を使用して作成され,その後 :cpp:func:`OGRCoordinateTransformation::Transform` メソッドを"
+"使用してCRS間でポイントを変換できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:373
 msgid ""
@@ -380,6 +470,8 @@ msgid ""
 "internals recognize that no transformation between the indicated systems "
 "can be established, and will return a NULL pointer."
 msgstr ""
+"変換が失敗する可能性があるいくつかのポイントがあります. まず,通常は内部で指定されたシステム間の変換が確立できないことが認識されるため,"
+"OGRCreateCoordinateTransformation() が失敗する可能性があり,その場合はNULLポインタが返されます."
 
 #: ../../source/tutorials/osr_api_tut.rst:379
 msgid ""
@@ -390,6 +482,9 @@ msgid ""
 " or FALSE if any of the points fail to transform.  The point array is "
 "left in an indeterminate state on error."
 msgstr ""
+"OGRCoordinateTransformation::Transform() メソッド自体も失敗する可能性があります. これは,上記の問題の1つの遅延結果として発生するか,"
+"または渡された1つ以上の点に対して数値的に未定義の操作の結果として発生する可能性があります. Transform() 関数は成功した場合に"
+"TRUEを返し,いずれかの点が変換に失敗した場合にはFALSEを返します.エラー時には,ポイント配列は不確定な状態になります."
 
 #: ../../source/tutorials/osr_api_tut.rst:387
 msgid ""
@@ -401,12 +496,16 @@ msgid ""
 " will be related to a vertical datum (mean sea level, gravity based, "
 "etc.)."
 msgstr ""
+"上記には示されていませんが,座標変換サービスは3Dポイントを取ることができ,楕円体および測地基準の高度差に対して高度を調整します."
+"地理的または投影されたCRSで指定された高度は,楕円体高度であると仮定されます.水平CRS(地理的または投影された)と垂直CRSで構成される"
+"複合CRSを使用する場合,高度は垂直基準(平均海面,重力ベースなど)に関連付けられます."
 
 #: ../../source/tutorials/osr_api_tut.rst:394
 msgid ""
 "Starting with GDAL 3.0, a time value (generally as a value in decimal "
 "years) can also be specified for time-dependent coordinate operations."
 msgstr ""
+"GDAL 3.0から,時間依存の座標操作に対して時間値(通常は10進年での値)も指定できます."
 
 #: ../../source/tutorials/osr_api_tut.rst:397
 msgid ""
@@ -416,10 +515,12 @@ msgid ""
 "long/lat. The returned coordinates will be in longitude, latitude order "
 "due to the call to SetAxisMappingStrategy(OAMS_TRADITIONAL_GIS_ORDER)"
 msgstr ""
+"以下の例は,投影された座標系と同じ地理的なCRSを使用して経度/緯度座標系を便利に作成し,それを使用して投影された座標と経度/緯度との間で"
+"変換する方法を示しています.返される座標は,SetAxisMappingStrategy(OAMS_TRADITIONAL_GIS_ORDER)を呼び出すことにより,経度,緯度の順序になります."
 
 #: ../../source/tutorials/osr_api_tut.rst:427
 msgid "Advanced Coordinate Transformation"
-msgstr ""
+msgstr "高度な座標変換"
 
 #: ../../source/tutorials/osr_api_tut.rst:429
 msgid ""
@@ -431,6 +532,9 @@ msgid ""
 " transform and area of use. For example, there are several dozens of "
 "possible coordinate operations for the NAD27 to WGS84 transformation."
 msgstr ""
+"OGRCreateCoordinateTransformation() は,ソースCRSからターゲットCRSへの変換を行ういくつかの候補座標操作を決定する可能性があります."
+"それらの候補座標操作はそれぞれ独自の使用領域を持っています. Transform() が呼び出されると,変換するポイントの座標と使用領域に基づいて,"
+"最適な座標操作を決定します.たとえば,NAD27からWGS84への変換には,いくつかの数十の可能な座標操作があります."
 
 #: ../../source/tutorials/osr_api_tut.rst:437
 msgid ""
@@ -438,6 +542,7 @@ msgid ""
 "transform are located is known, it is possible to specify it to restrict "
 "the candidate coordinate operations to consider:"
 msgstr ""
+"座標を変換する対象領域の境界ボックスがわかっている場合,それを指定して候補座標操作を制限することができます:"
 
 #: ../../source/tutorials/osr_api_tut.rst:447
 msgid ""
@@ -447,10 +552,12 @@ msgid ""
 "describing a CoordinateOperation, or a "
 "urn:ogc:def:coordinateOperation:EPSG::XXXX URN"
 msgstr ""
+"特定の座標操作を使用する必要がある場合,PROJ文字列(単一ステップ操作または +proj=pipeline で始まる複数ステップ文字列),"
+"CoordinateOperationを記述するWKT2文字列,または urn:ogc:def:coordinateOperation:EPSG::XXXX URN として指定することができます."
 
 #: ../../source/tutorials/osr_api_tut.rst:473
 msgid "Alternate Interfaces"
-msgstr ""
+msgstr "代替インターフェース"
 
 #: ../../source/tutorials/osr_api_tut.rst:475
 msgid ""
@@ -459,18 +566,20 @@ msgid ""
 "Methods are close analogs of the C++ methods but C and Python bindings "
 "are missing for some C++ methods."
 msgstr ""
+"座標系サービスのCインターフェースは,ogr_srs_api.hで定義されており,Pythonバインディングはosr.pyモジュールを介して利用できます."
+"メソッドはC++メソッドの近似であり,しかしCおよびPythonバインディングは一部のC++メソッドには存在しません."
 
 #: ../../source/tutorials/osr_api_tut.rst:481
 msgid "C bindings"
-msgstr ""
+msgstr "Cバインディング"
 
 #: ../../source/tutorials/osr_api_tut.rst:577
 msgid "Python bindings"
-msgstr ""
+msgstr "Pythonバインディング"
 
 #: ../../source/tutorials/osr_api_tut.rst:604
 msgid "History and implementation considerations"
-msgstr ""
+msgstr "歴史と実装上の考慮事項"
 
 #: ../../source/tutorials/osr_api_tut.rst:606
 msgid ""
@@ -485,6 +594,11 @@ msgid ""
 "Reprojection services were only available if GDAL had been build against "
 "the PROJ library."
 msgstr ""
+"GDAL 3.0以前, OGRSpatialReferenceクラスは, `Coordinate Transformation Services (CT) specification (01-009) "
+"<http://portal.opengeospatial.org/files/?artifact_id=999>`_ で指定されたOGC WKT(WKT 1)形式に強く結びついており,"
+"GDALによって解釈される方法がありました.これには, :ref:`wktproblems` ページで詳細に説明されているさまざまな注意事項が含まれていました."
+"このクラスは,主にWKT 1文字列のメモリ内ツリーのような表現を含んでいました.このクラスは,OGC WKT 1, WKT-ESRIおよびPROJ.4形式への"
+"インポートおよびエクスポートを直接実装していました.再投影サービスは,PROJライブラリを利用してGDALがビルドされている場合にのみ利用可能でした."
 
 #: ../../source/tutorials/osr_api_tut.rst:616
 msgid ""
@@ -501,4 +615,11 @@ msgid ""
 "also still monolithic. Users wanting direct and fine grained access to "
 "CRS representations might want to directly use the PROJ 6 C or C++ API."
 msgstr ""
+"GDAL 3.0から, `PROJ <https://proj4.org>`_ >= 6.0 ライブラリがGDALの必須依存関係になりました. PROJ 6には,"
+"OGC WKT 1, ESRI WKT, OGC WKT 2:2015およびOGC WKT 2:2018表現の組み込みサポートがあります. PROJ 6はまた,"
+"ISO-19111 / OGC Abstract Topic 2 \"Referencing by coordinate\" 標準のC++オブジェクトクラス階層を実装しています."
+"その結果,OGRSpatialReferenceクラスは,主にPROJ PJ* CRSオブジェクトのラッパーとして動作するように変更され,"
+"OGC WKT 1表現からできるだけ抽象化しようとしています.ただし,後方互換性のため,一部のメソッドは引数または返り値がOGC WKT 1固有であることを"
+"引き続き期待しています. OGRSpatialReferenceクラスの設計はまた,まだ一枚岩です.直接的で細かい粒度のCRS表現へのアクセスを望むユーザーは,"
+"PROJ 6 CまたはC++ APIを直接使用することができます."
 

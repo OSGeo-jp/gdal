@@ -22,11 +22,11 @@ msgstr ""
 #: ../../source/development/dev_documentation.rst:5
 #: ../../source/development/dev_documentation.rst:20
 msgid "Building documentation"
-msgstr ""
+msgstr "文書のビルド"
 
 #: ../../source/development/dev_documentation.rst:8
 msgid "Documentation overview"
-msgstr ""
+msgstr "ドキュメントの概要"
 
 #: ../../source/development/dev_documentation.rst:10
 msgid ""
@@ -34,12 +34,15 @@ msgid ""
 "built automatically from source comments using Doxygen and "
 "reStructuredText (rst) files containing manually-edited content."
 msgstr ""
+"GDALのドキュメントには,Doxygenを使用してソースコメントから自動的に構築されたCおよびC++の"
+" :ref:`API documentation <api>` と,手動で編集された内容を含むreStructuredText(rst)ファイルが含まれています."
 
 #: ../../source/development/dev_documentation.rst:14
 msgid ""
 "|Sphinx| is used to combine the above components into a complete set of "
 "documentation in HTML, PDF, and other formats."
 msgstr ""
+"|Sphinx| は,上記のコンポーネントを組み合わせて,HTML,PDFおよびその他の形式の完全なドキュメントセットを作成するために使用されます."
 
 #: ../../source/development/dev_documentation.rst:16
 msgid ""
@@ -47,30 +50,33 @@ msgid ""
 "``python3 -m pip install -r requirements.txt`` from the ``doc`` "
 "subdirectory."
 msgstr ""
+"|Sphinx| およびGDALで使用される拡張機能は,``doc``サブディレクトリから ``python3 -m pip install -r requirements.txt`` を実行することでインストールできます."
 
 #: ../../source/development/dev_documentation.rst:22
 msgid ""
 "Documentation can be generated with Makefile targets, from the ``doc`` "
 "subdirectory of the GDAL source repository (only on Unix systems)."
 msgstr ""
+"ドキュメントは,UnixシステムのGDALソースリポジトリの ``doc`` サブディレクトリからMakefileターゲットを使用して生成できます."
 
 #: ../../source/development/dev_documentation.rst:25
 msgid "The following targets are available:"
-msgstr ""
+msgstr "次のターゲットが利用可能です:"
 
 #: ../../source/development/dev_documentation.rst:27
 msgid ""
 "``html``: build HTML documentation into the ``doc/build/html`` directory,"
 " where they can be viewed using a web browser."
 msgstr ""
+"``html``: HTMLドキュメントを ``doc/build/html`` ディレクトリにビルドし,ウェブブラウザを使用して表示できます."
 
 #: ../../source/development/dev_documentation.rst:30
 msgid "``man``: build MAN pages into the ``doc/build/man`` directory."
-msgstr ""
+msgstr "``man``: ``doc/build/man`` ディレクトリに MANページをビルドします."
 
 #: ../../source/development/dev_documentation.rst:32
 msgid "``latexpdf``: build PDF documentation into the ``doc/build/pdf`` directory"
-msgstr ""
+msgstr "``latexpdf``: PDFドキュメントを ``doc/build/pdf`` ディレクトリにビルドします"
 
 #: ../../source/development/dev_documentation.rst:34
 msgid ""
@@ -79,6 +85,9 @@ msgid ""
 "source files are modified, hence this target must be explicitly run to "
 "refresh it."
 msgstr ""
+"``doxygen``: API Doxygen XMLおよびHTML出力を再生成し, ``html`` ターゲットで使用されます."
+"ソースファイルが変更されたときにDoxygenコンテンツが自動的に再構築されないため,このターゲットを明示的に実行して更新する必要があります."
+
 
 #: ../../source/development/dev_documentation.rst:38
 msgid ""
@@ -88,6 +97,9 @@ msgid ""
 "integration checks that verifies that there are no Doxygen warnings. "
 "Requires Doxygen >= 1.9.3 to be warning free."
 msgstr ""
+"``doxygen_check_warnings``: ``doxygen`` と同じですが,Doxygenが警告を出力したときにエラーとなります"
+"(``doxygen`` ターゲットはDoxygenの警告に対して寛容です).Doxygenの警告がないことを確認する連続統合チェックの1つを再現するために役立ちます."
+"Doxygen >= 1.9.3 が警告フリーであることが必要です."
 
 #: ../../source/development/dev_documentation.rst:44
 msgid ""
@@ -96,10 +108,12 @@ msgid ""
 " unknown to the spell checker but still considered valid should be added "
 "to the allow list in :file:`doc/source/spelling_wordlist.txt`"
 msgstr ""
+"``spelling``: ドキュメントのスペルチェックを実行し, C/C++ API(Doxygen)およびPython APIから生成されたドキュメントもカバーします."
+"スペルチェッカーには不明な単語がありますが,それらは有効と見なされるため, :file:`doc/source/spelling_wordlist.txt` に許可リストに追加する必要があります."
 
 #: ../../source/development/dev_documentation.rst:49
 msgid "``clean``: clean the ``doc/build`` directory."
-msgstr ""
+msgstr "``clean``: ``doc/build`` ディレクトリをクリーンアップします."
 
 #: ../../source/development/dev_documentation.rst:51
 msgid ""
@@ -110,6 +124,8 @@ msgid ""
 "the CMake BUILD_DOCS=ON variable is set (it is set by default if build "
 "preconditions are met, that is if Doxygen, Sphinx and make are available)"
 msgstr ""
+"これらのターゲットをCMakeターゲットとして実行することもできます.その場合,出力ディレクトリはCMakeビルドディレクトリの ``doc/build`` サブディレクトリになります."
+"ドキュメントのクリーンアップのみを行うには, ``clean_doc`` ターゲットを呼び出すことができます.注意:これらのCMakeターゲットは, CMake BUILD_DOCS=ON 変数が設定されている場合のみ利用可能です(Doxygen,Sphinxおよびmakeが利用可能である場合にはデフォルトで設定されます)."
 
 #: ../../source/development/dev_documentation.rst:59
 msgid ""
@@ -120,10 +136,15 @@ msgid ""
 "``http://127.0.0.1:8000``. The pages served will be automatically "
 "refreshed as changes are made to underlying ``rst`` documentation files."
 msgstr ""
+"編集中にドキュメントの変更を視覚化するために, |sphinx-autobuild| pythonパッケージをインストールすると便利です."
+"インストール後, ``doc``サブディレクトリから ``sphinx-autobuild -b html source build`` を実行すると,ドキュメント"
+"がビルドされ,ローカルウェブサーバで ``http://127.0.0.1:8000`` で提供されます.変更が ``rst`` ドキュメントファイルに"
+"加えられると,提供されるページは自動的にリフレッシュされます."
+
 
 #: ../../source/development/dev_documentation.rst:65
 msgid "Python API documentation"
-msgstr ""
+msgstr "Python API ドキュメント"
 
 #: ../../source/development/dev_documentation.rst:67
 msgid ""
@@ -141,18 +162,25 @@ msgid ""
 "bindings when generating documentation, so for it to see any changes the "
 "following steps must be completed:"
 msgstr ""
+"Sphinxは,Python関数のdocstringからPython APIのドキュメントを生成するために `autodoc <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_ 拡張機能を使用します."
+" ``autodoc`` によって正しく解析されるためには,docstringは `numpydoc Style guide <https://numpydoc.readthedocs.io/en/latest/format.html>`_ に従う必要があります."
+"Docstringは2つの場所にあります.関数がPythonで定義された場合(つまり, ``%pythoncode`` SWIGディレクティブを使用して定義された場合),docstringは関数定義内に配置する必要があります."
+"関数がC++のみで定義されている場合,docstringはdocstringのみを含む別のファイルに配置する必要があります( :source_file:`swig/include/python/docs` に配置されています)."
+"Sphinxはドキュメントを生成する際にPythonバインディングをロードするため,変更を反映させるためには以下の手順を完了する必要があります:"
 
 #: ../../source/development/dev_documentation.rst:78
 msgid ""
 "rebuild the Python bindings from the build directory (``cmake --build . "
 "--target python_binding``)"
 msgstr ""
+"ビルドディレクトリからPythonバインディングを再構築する( ``cmake --build . --target python_binding`` )"
 
 #: ../../source/development/dev_documentation.rst:79
 msgid ""
 "make the updated Python bindings visible to Python, either by installing "
 "them, or by running ``scripts/setdevenv.sh`` from the build directory"
 msgstr ""
+"更新されたPythonバインディングをPythonに表示可能にするために,それらをインストールするか,ビルドディレクトリから ``scripts/setdevenv.sh`` を実行します"
 
 #: ../../source/development/dev_documentation.rst:81
 msgid ""
@@ -160,10 +188,11 @@ msgid ""
 "the documentation appears (e.g., ``touch "
 "doc/source/api/python/osgeo.ogr.rst``)"
 msgstr ""
+"ドキュメントが表示されるページに関連する ``rst`` ファイルのタイムスタンプを更新します(例: ``touch doc/source/api/python/osgeo.ogr.rst``)"
 
 #: ../../source/development/dev_documentation.rst:87
 msgid "Sphinx RST Style guide"
-msgstr ""
+msgstr "Sphinx RST スタイルガイド"
 
 #: ../../source/development/dev_documentation.rst:89
 msgid ""
@@ -174,10 +203,14 @@ msgid ""
 "as well as the `Sphinx reStructuredText Primer "
 "<http://sphinx.pocoo.org/rest.html>`_."
 msgstr ""
+"このセクションには,SphinxとreStructuredTextの使用に関する構文ルール,ヒント,トリックが含まれています."
+"詳細については,この `reStructuredTextの包括的なガイド <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_ "
+"および `Sphinx reStructuredText Primer <http://sphinx.pocoo.org/rest.html>`_ を参照してください."
+
 
 #: ../../source/development/dev_documentation.rst:92
 msgid "Basic markup"
-msgstr ""
+msgstr "基本的なマークアップ"
 
 #: ../../source/development/dev_documentation.rst:94
 msgid ""
@@ -185,54 +218,56 @@ msgid ""
 "for complex formatting, one can be composed simply, just like one would "
 "any plain text document.  For basic formatting, see this table:"
 msgstr ""
+"reStructuredTextドキュメントはプレーンテキストで書かれています.複雑なフォーマットが必要ないため,プレーンテキストドキュメントのように簡単に構成できます."
+"基本的なフォーマットについては,この表を参照してください:"
 
 #: ../../source/development/dev_documentation.rst:100
 msgid "**Format**"
-msgstr ""
+msgstr "**フォーマット**"
 
 #: ../../source/development/dev_documentation.rst:101
 msgid "**Syntax**"
-msgstr ""
+msgstr "**構文**"
 
 #: ../../source/development/dev_documentation.rst:102
 msgid "**Output**"
-msgstr ""
+msgstr "**出力**"
 
 #: ../../source/development/dev_documentation.rst:103
 msgid "Italics"
-msgstr ""
+msgstr "イタリック"
 
 #: ../../source/development/dev_documentation.rst:104
 msgid "``*italics*`` (single asterisk)"
-msgstr ""
+msgstr "``*イタリック*`` (シングルアスタリスク)"
 
 #: ../../source/development/dev_documentation.rst:105
 msgid "*italics*"
-msgstr ""
+msgstr "イタリック"
 
 #: ../../source/development/dev_documentation.rst:106
 msgid "Bold"
-msgstr ""
+msgstr "太字"
 
 #: ../../source/development/dev_documentation.rst:107
 msgid "``**bold**`` (double asterisk)"
-msgstr ""
+msgstr "``**太字**`` (ダブルアスタリスク)"
 
 #: ../../source/development/dev_documentation.rst:108
 msgid "**bold**"
-msgstr ""
+msgstr "**太字**"
 
 #: ../../source/development/dev_documentation.rst:109
 msgid "Monospace"
-msgstr ""
+msgstr "等幅"
 
 #: ../../source/development/dev_documentation.rst:110
 msgid "`` ``monospace`` `` (double back quote)"
-msgstr ""
+msgstr "`` ``等幅`` `` (ダブルバッククォート)"
 
 #: ../../source/development/dev_documentation.rst:111
 msgid "``monospace``"
-msgstr ""
+msgstr "``等幅``"
 
 #: ../../source/development/dev_documentation.rst:113
 msgid ""
@@ -241,59 +276,63 @@ msgid ""
 "parameters, options, input, and files. By using directives consistently "
 "these items can be styled appropriately."
 msgstr ""
+"基本的なマークアップの使用は **推奨されません**!可能な限り,コマンド,パラメータ,オプション,入力,ファイルを論理的にマークするために,後述のSphinxインラインディレクティブを使用してください."
+"一貫してディレクティブを使用することで,これらの項目を適切にスタイル付けすることができます."
 
 #: ../../source/development/dev_documentation.rst:116
 msgid "Lists"
-msgstr ""
+msgstr "リスト"
 
 #: ../../source/development/dev_documentation.rst:118
 msgid ""
 "There are two types of lists, bulleted lists and numbered lists.  A "
 "**bulleted list** looks like this:"
 msgstr ""
+"2種類のリストがあります,箇条書きリストと番号付きリストです. **箇条書きリスト** は次のようになります:"
 
 #: ../../source/development/dev_documentation.rst:120
 msgid "An item"
-msgstr ""
+msgstr "アイテム"
 
 #: ../../source/development/dev_documentation.rst:121
 msgid "Another item"
-msgstr ""
+msgstr "別のアイテム"
 
 #: ../../source/development/dev_documentation.rst:122
 msgid "Yet another item"
-msgstr ""
+msgstr "さらに別のアイテム"
 
 #: ../../source/development/dev_documentation.rst:124
 #: ../../source/development/dev_documentation.rst:136
 msgid "This is accomplished with the following code::"
-msgstr ""
+msgstr "これは次のコードで実現されます::"
 
 #: ../../source/development/dev_documentation.rst:130
 msgid "A **numbered list** looks like this:"
-msgstr ""
+msgstr "**番号付きリスト** は次のようになります:"
 
 #: ../../source/development/dev_documentation.rst:132
 msgid "First item"
-msgstr ""
+msgstr "最初のアイテム"
 
 #: ../../source/development/dev_documentation.rst:133
 msgid "Second item"
-msgstr ""
+msgstr "2番目のアイテム"
 
 #: ../../source/development/dev_documentation.rst:134
 msgid "Third item"
-msgstr ""
+msgstr "3番目のアイテム"
 
 #: ../../source/development/dev_documentation.rst:142
 msgid ""
 "Note that numbers are automatically generated, making it easy to "
 "add/remove items."
 msgstr ""
+"数字は自動的に生成されるため,アイテムの追加/削除が簡単になります."
 
 #: ../../source/development/dev_documentation.rst:145
 msgid "List-tables"
-msgstr ""
+msgstr "リストテーブル"
 
 #: ../../source/development/dev_documentation.rst:147
 msgid ""
@@ -301,38 +340,40 @@ msgid ""
 "dealing with a long list of items, use list-tables.  For example, to talk"
 " about a list of options, create a table that looks like this:"
 msgstr ""
+"箇条書きリストは時に煩雑で追いにくいことがあります.アイテムの長いリストを扱う場合は,リストテーブルを使用してください."
+"たとえば,オプションのリストについて話す場合,次のようなテーブルを作成します:"
 
 #: ../../source/development/dev_documentation.rst:153
 msgid "Shapes"
-msgstr ""
+msgstr "形状"
 
 #: ../../source/development/dev_documentation.rst:154
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/development/dev_documentation.rst:155
 msgid "Square"
-msgstr ""
+msgstr "四角形"
 
 #: ../../source/development/dev_documentation.rst:156
 msgid "Four sides of equal length, 90 degree angles"
-msgstr ""
+msgstr "4つの辺が等しい,90度の角"
 
 #: ../../source/development/dev_documentation.rst:157
 msgid "Rectangle"
-msgstr ""
+msgstr "長方形"
 
 #: ../../source/development/dev_documentation.rst:158
 msgid "Four sides, 90 degree angles"
-msgstr ""
+msgstr "4つの辺,90度の角"
 
 #: ../../source/development/dev_documentation.rst:160
 msgid "This is done with the following code::"
-msgstr ""
+msgstr "これは次のコードで行います::"
 
 #: ../../source/development/dev_documentation.rst:174
 msgid "Page labels"
-msgstr ""
+msgstr "ページラベル"
 
 #: ../../source/development/dev_documentation.rst:176
 msgid ""
@@ -340,70 +381,76 @@ msgid ""
 "example if the page is named ``foo_bar.rst`` then the page should have "
 "the label::"
 msgstr ""
+"**すべてのページに,ファイル名と一致するラベルがあることを確認してください.** たとえば,ページの名前が ``foo_bar.rst`` の場合,ページには次のラベルが必要です::"
 
 #: ../../source/development/dev_documentation.rst:180
 msgid "Other pages can then link to that page by using the following code::"
-msgstr ""
+msgstr "他のページは,次のコードを使用してそのページにリンクできます::"
 
 #: ../../source/development/dev_documentation.rst:187
 msgid "Linking"
-msgstr ""
+msgstr "リンク"
 
 #: ../../source/development/dev_documentation.rst:189
 msgid ""
 "Links to other pages should never be titled as \"here\".  Sphinx makes "
 "this easy by automatically inserting the title of the linked document."
 msgstr ""
+"他のページへのリンクは,決して \"ここ\" というタイトルにすべきではありません."
+"Sphinxは,リンクされたドキュメントのタイトルを自動的に挿入することで,これを簡単にします."
 
 #: ../../source/development/dev_documentation.rst:191
 msgid "Bad"
-msgstr ""
+msgstr "悪い例"
 
 #: ../../source/development/dev_documentation.rst:192
 msgid "More information about linking can be found :ref:`here <linking>`."
-msgstr ""
+msgstr "リンクに関する詳細は :ref:`ここ <linking>` にあります."
 
 #: ../../source/development/dev_documentation.rst:194
 msgid "Good"
-msgstr ""
+msgstr "良い例"
 
 #: ../../source/development/dev_documentation.rst:194
 msgid "For more information, please see the section on :ref:`linking`."
-msgstr ""
+msgstr "詳細については, :ref:`linking` のセクションを参照してください."
 
 #: ../../source/development/dev_documentation.rst:196
 msgid "To insert a link to an external website::"
-msgstr ""
+msgstr "外部ウェブサイトへのリンクを挿入するには::"
 
 #: ../../source/development/dev_documentation.rst:200
 msgid ""
 "The resulting link would look like this: `Text of the link "
 "<http://example.com>`__"
 msgstr ""
+"結果のリンクは次のようになります: `リンクのテキスト <http://example.com>`__"
 
 #: ../../source/development/dev_documentation.rst:202
 msgid ""
 "It is very easy to have two links with the same text resulting in the "
 "following error::"
 msgstr ""
+"同じテキストを持つ2つのリンクを持つことは非常に簡単であり,次のエラーが発生します::"
 
 #: ../../source/development/dev_documentation.rst:206
 msgid "To avoid these warnings use of a double `__` generates an anonymous link."
-msgstr ""
+msgstr "これらの警告を回避するために,ダブル `__` の使用で匿名リンクが生成されます."
 
 #: ../../source/development/dev_documentation.rst:210
 msgid "Sections"
-msgstr ""
+msgstr "セクション"
 
 #: ../../source/development/dev_documentation.rst:212
 msgid ""
 "Use sections to break up long pages and to help Sphinx generate tables of"
 " contents."
 msgstr ""
+"長いページを分割し, Sphinxが目次を生成するのを助けるためにセクションを使用してください."
 
 #: ../../source/development/dev_documentation.rst:233
 msgid "Notes and warnings"
-msgstr ""
+msgstr "注意と警告"
 
 #: ../../source/development/dev_documentation.rst:235
 msgid ""
@@ -413,34 +460,36 @@ msgid ""
 "and warnings sparingly, however, as adding emphasis to everything makes "
 "the emphasis less effective."
 msgstr ""
+"メインテキストから目立たせるためにセクションのテキストが有益な場合, Sphinxには2つのボックス,ノートと警告があります."
+"それらは同じように機能し,色が異なります. ただし,すべてに強調を追加すると,強調が効果が低下しますので,注意と警告は控えめに使用する必要があります."
 
 #: ../../source/development/dev_documentation.rst:237
 msgid "Here is an example of a note:"
-msgstr ""
+msgstr "ノートの例です:"
 
 #: ../../source/development/dev_documentation.rst:239
 msgid "This is a note."
-msgstr ""
+msgstr "これはノートです."
 
 #: ../../source/development/dev_documentation.rst:241
 msgid "This note is generated with the following code::"
-msgstr ""
+msgstr "このノートは次のコードで生成されます::"
 
 #: ../../source/development/dev_documentation.rst:245
 msgid "Similarly, here is an example of a warning:"
-msgstr ""
+msgstr "同様に,警告の例です:"
 
 #: ../../source/development/dev_documentation.rst:247
 msgid "Beware of dragons."
-msgstr ""
+msgstr "ドラゴンに注意してください."
 
 #: ../../source/development/dev_documentation.rst:249
 msgid "This warning is generated by the following code::"
-msgstr ""
+msgstr "この警告は次のコードで生成されます::"
 
 #: ../../source/development/dev_documentation.rst:254
 msgid "Images"
-msgstr ""
+msgstr "画像"
 
 #: ../../source/development/dev_documentation.rst:256
 msgid ""
@@ -451,6 +500,10 @@ msgid ""
 " Sphinx theme automatically resizes large images.  It is also helpful to "
 "include a caption underneath the image.::"
 msgstr ""
+"可能な限り,ドキュメントに画像を追加してください. スクリーンショットなどの画像は,ドキュメントを理解しやすくするための非常に役立つ方法です."
+"スクリーンショットを作成する際には,不要なコンテンツ(ブラウザウィンドウ,デスクトップなど)を切り取るようにしてください."
+"画像のスケーリングは避けてください, Sphinxテーマは大きな画像を自動的にリサイズします. また,画像の下にキャプションを含めると便利です."
+"::"
 
 #: ../../source/development/dev_documentation.rst:263
 msgid ""
@@ -459,98 +512,105 @@ msgid ""
 " the above command. The root :file:`/` is the directory of the "
 ":file:`conf.py` file.::"
 msgstr ""
+"この例では,画像ファイルはソースページと同じディレクトリに存在します. そうでない場合,上記のコマンドにパス情報を挿入できます."
+"ルート :file:`/` は :file:`conf.py` ファイルのディレクトリです.::"
 
 #: ../../source/development/dev_documentation.rst:268
 msgid "External files"
-msgstr ""
+msgstr "外部ファイル"
 
 #: ../../source/development/dev_documentation.rst:270
 msgid ""
 "Text snippets, large blocks of downloadable code, and even zip files or "
 "other binary sources can all be included as part of the documentation."
 msgstr ""
+"テキストスニペット,ダウンロード可能なコードの大きなブロック,およびzipファイルやその他のバイナリソースをすべてドキュメントの一部として含めることができます."
 
 #: ../../source/development/dev_documentation.rst:272
 msgid "To include link to sample file, use the ``download`` directive::"
-msgstr ""
+msgstr "サンプルファイルへのリンクを含めるには, ``download`` ディレクティブを使用します::"
 
 #: ../../source/development/dev_documentation.rst:276
 msgid ""
 "The result of this code will generate a standard link to an "
 ":download:`external file <example.txt>`"
 msgstr ""
+"このコードの結果は,標準リンクを生成します :download:`外部ファイル <example.txt>`"
 
 #: ../../source/development/dev_documentation.rst:278
 msgid "To include the contents of a file, use ``literalinclude`` directive::"
-msgstr ""
+msgstr "ファイルの内容を含めるには, ``literalinclude`` ディレクティブを使用します::"
 
 #: ../../source/development/dev_documentation.rst:284
 msgid "Example of :command:`gdalinfo` use:"
-msgstr ""
+msgstr ":command:`gdalinfo` の使用例:"
 
 #: ../../source/development/dev_documentation.rst:288
 msgid ""
 "The ``literalinclude`` directive has options for syntax highlighting, "
 "line numbers and extracting just a snippet::"
 msgstr ""
+"``literalinclude`` ディレクティブには,シンタックスハイライト,行番号,スニペットの抽出のためのオプションがあります::"
 
 #: ../../source/development/dev_documentation.rst:300
 msgid "Reference files and paths"
-msgstr ""
+msgstr "ファイルとパスを参照する"
 
 #: ../../source/development/dev_documentation.rst:302
 msgid "Use the following syntax to reference files and paths::"
-msgstr ""
+msgstr "ファイルとパスを参照するには,次の構文を使用します::"
 
 #: ../../source/development/dev_documentation.rst:306
 msgid "This will output: :file:`myfile.txt`."
-msgstr ""
+msgstr "これは出力します: :file:`myfile.txt`."
 
 #: ../../source/development/dev_documentation.rst:308
 msgid "You can reference paths in the same way::"
-msgstr ""
+msgstr "同様にパスを参照することもできます::"
 
 #: ../../source/development/dev_documentation.rst:312
 msgid "This will output: :file:`path/to/myfile.txt`."
-msgstr ""
+msgstr "これは出力します: :file:`path/to/myfile.txt`."
 
 #: ../../source/development/dev_documentation.rst:314
 msgid "For Windows paths, use double backslashes::"
-msgstr ""
+msgstr "Windowsパスの場合,ダブルバックスラッシュを使用します::"
 
 #: ../../source/development/dev_documentation.rst:318
 msgid "This will output: :file:`C:\\\\myfile.txt`."
-msgstr ""
+msgstr "これは出力します: :file:`C:\\\\myfile.txt`."
 
 #: ../../source/development/dev_documentation.rst:320
 msgid "If you want to reference a non-specific path or file name::"
-msgstr ""
+msgstr "特定のパスやファイル名を参照したい場合::"
 
 #: ../../source/development/dev_documentation.rst:324
 msgid "This will output: :file:`{your/own/path/to}/myfile.txt`"
-msgstr ""
+msgstr "これは出力します: :file:`{your/own/path/to}/myfile.txt`"
 
 #: ../../source/development/dev_documentation.rst:326
 msgid "To reference a file in the GDAL source tree, use::"
-msgstr ""
+msgstr "GDALソースツリー内のファイルを参照するには,次のようにします::"
 
 #: ../../source/development/dev_documentation.rst:330
 msgid ""
 "This will output a link to the file on GitHub: "
 ":source_file:`gcore/gdaldriver.cpp`"
 msgstr ""
+"これはGitHub上のファイルへのリンクを出力します: "
+":source_file:`gcore/gdaldriver.cpp`"
 
 #: ../../source/development/dev_documentation.rst:333
 msgid "Reference code"
-msgstr ""
+msgstr "コードを参照する"
 
 #: ../../source/development/dev_documentation.rst:335
 msgid "To reference a class::"
-msgstr ""
+msgstr "クラスを参照するには::"
 
 #: ../../source/development/dev_documentation.rst:339
 msgid "To reference a method or function::"
-msgstr ""
+msgstr "メソッドまたは関数を参照するには::"
 
 #: ../../source/development/dev_documentation.rst:347
 msgid "Define and reference configuration options"
@@ -558,7 +618,7 @@ msgstr ""
 
 #: ../../source/development/dev_documentation.rst:349
 msgid "To define a configuration option, use::"
-msgstr ""
+msgstr "設定オプションを定義するには,次のようにします::"
 
 #: ../../source/development/dev_documentation.rst:358
 msgid ""
@@ -566,56 +626,59 @@ msgid ""
 "creation options (``.. co::``), dataset creation options (``.. dsco::``),"
 " or layer creation options (``.. lco::``)."
 msgstr ""
+"開くオプション(``.. oo::``),作成オプション(``.. co::``),データセット作成オプション(``.. dsco::``),またはレイヤ作成オプション(``.. lco::``)を定義するためにも同様の構文を使用できます."
 
 #: ../../source/development/dev_documentation.rst:362
 msgid ""
 "To reference a configuration option, such as **GDAL_CACHEMAX**, use the "
 "syntax in the table below."
 msgstr ""
+"**GDAL_CACHEMAX** などの設定オプションを参照するには,以下の表の構文を使用してください."
 
 #: ../../source/development/dev_documentation.rst:368
 msgid "Option type"
-msgstr ""
+msgstr "オプションタイプ"
 
 #: ../../source/development/dev_documentation.rst:369
 msgid "Syntax"
-msgstr ""
+msgstr "構文"
 
 #: ../../source/development/dev_documentation.rst:370
 msgid "Configuration option"
-msgstr ""
+msgstr "設定オプション"
 
 #: ../../source/development/dev_documentation.rst:374
 msgid "Creation option"
-msgstr ""
+msgstr "作成オプション"
 
 #: ../../source/development/dev_documentation.rst:378
 msgid "Open option"
-msgstr ""
+msgstr "オープンオプション"
 
 #: ../../source/development/dev_documentation.rst:382
 msgid "Dataset creation option"
-msgstr ""
+msgstr "データセット作成オプション"
 
 #: ../../source/development/dev_documentation.rst:386
 msgid "Layer creation option"
-msgstr ""
+msgstr "レイヤ作成オプション"
 
 #: ../../source/development/dev_documentation.rst:393
 msgid "Reference commands"
-msgstr ""
+msgstr "参照コマンド"
 
 #: ../../source/development/dev_documentation.rst:395
 msgid ""
 "Reference commands (such as :program:`gdalinfo`) with the following "
 "syntax::"
 msgstr ""
+"次の構文でコマンド( :program:`gdalinfo` など)を参照します::"
 
 #: ../../source/development/dev_documentation.rst:399
 msgid "Use ``option`` directive for command line options::"
-msgstr ""
+msgstr "コマンドラインオプションに ``option`` ディレクティブを使用します::"
 
 #: ../../source/development/dev_documentation.rst:405
 msgid "Use ``describe`` to document create parameters::"
-msgstr ""
+msgstr "作成パラメータを文書化するために ``describe`` を使用します::"
 
