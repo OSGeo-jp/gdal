@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,10 +17,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/development/rfc/rfc34_license_policy.rst:5
-msgid "RFC 34: License Policy Enforcement"
+msgid "RFC 34: License Policy Enforcement (not implemented)"
 msgstr ""
 
 #: ../../source/development/rfc/rfc34_license_policy.rst:7
@@ -32,7 +32,7 @@ msgid "Contact: warmerdam@pobox.com"
 msgstr ""
 
 #: ../../source/development/rfc/rfc34_license_policy.rst:11
-msgid "Status: Development"
+msgid "Status: On hold / not implemented"
 msgstr ""
 
 #: ../../source/development/rfc/rfc34_license_policy.rst:14
@@ -436,4 +436,10 @@ msgid ""
 "Frank Warmerdam will do the core implementation in trunk. Driver "
 "maintainers may need to update the metadata for particular drivers."
 msgstr ""
+
+#~ msgid "RFC 34: License Policy Enforcement"
+#~ msgstr ""
+
+#~ msgid "Status: Development"
+#~ msgstr ""
 

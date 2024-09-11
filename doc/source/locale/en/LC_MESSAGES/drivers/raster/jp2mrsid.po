@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/jp2mrsid.rst:5
 msgid "JP2MrSID -- JPEG2000 via MrSID SDK"
@@ -62,10 +62,10 @@ msgstr ""
 #: ../../source/drivers/raster/jp2mrsid.rst:29
 msgid ""
 "Georeferencing information can come from different sources : internal "
-"(GeoJP2 or GMLJP2 boxes), worldfile .j2w/.wld sidecar files, or PAM "
-"(Persistent Auxiliary metadata) .aux.xml sidecar files. By default, "
-"information is fetched in following order (first listed is the highest "
-"priority): PAM, GeoJP2, GMLJP2, WORLDFILE."
+"(GeoJP2 or GMLJP2 boxes), :ref:`worldfile <raster.wld>` .j2w/.wld sidecar"
+" files, or PAM (Persistent Auxiliary metadata) .aux.xml sidecar files. By"
+" default, information is fetched in following order (first listed is the "
+"highest priority): PAM, GeoJP2, GMLJP2, WORLDFILE."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2mrsid.rst:35
@@ -105,15 +105,27 @@ msgid ""
 "are supported."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2mrsid.rst:127
+#: ../../source/drivers/raster/jp2mrsid.rst:128
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2mrsid.rst:129
+#: ../../source/drivers/raster/jp2mrsid.rst:130
 msgid "Implemented as :source_file:`frmts/mrsid/mrsiddataset.cpp`."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2mrsid.rst:130
+#: ../../source/drivers/raster/jp2mrsid.rst:131
 msgid "`Extensis web site <http://www.extensis.com/support/developers>`__"
 msgstr ""
+
+#~ msgid ""
+#~ "Georeferencing information can come from "
+#~ "different sources : internal (GeoJP2 or"
+#~ " GMLJP2 boxes), worldfile .j2w/.wld sidecar"
+#~ " files, or PAM (Persistent Auxiliary "
+#~ "metadata) .aux.xml sidecar files. By "
+#~ "default, information is fetched in "
+#~ "following order (first listed is the "
+#~ "highest priority): PAM, GeoJP2, GMLJP2, "
+#~ "WORLDFILE."
+#~ msgstr ""
 

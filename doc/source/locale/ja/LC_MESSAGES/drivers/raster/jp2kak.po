@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 08:20+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -190,21 +190,25 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:237
-msgid "**Corder**: Defaults to \"PRCL\"."
+msgid "**Corder**: Progression order. Defaults to \"PRCL\"."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:238
 msgid ""
-"**Cprecincts**: Defaults to "
+"**Cprecincts**: Precincts settings. Defaults to "
 "\"{512,512},{256,512},{128,512},{64,512},{32,512},{16,512},{8,512},{4,512},{2,512}\"."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:240
-msgid "**ORGgen_plt**: Defaults to \"yes\"."
+msgid ""
+"**ORGgen_plt**: Whether to generate PLT markers (Paquet Length). Defaults"
+" to \"yes\"."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:241
-msgid "**ORGgen_tlm**: Kakadu SDK defaults used."
+msgid ""
+"**ORGgen_tlm**: Whether to generate TLM markers (Tile Length). Kakadu SDK"
+" defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:242
@@ -216,36 +220,43 @@ msgid "**Cmodes**: Kakadu SDK defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:244
-msgid "**Clevels**: Kakadu SDK defaults used."
+msgid "**Clevels**: Quality levels. Kakadu SDK defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:245
-msgid "**Rshift**: Kakadu SDK defaults used."
+msgid ""
+"**Cycc** =YES/NO: Whether to use YCbCr (lossy compression) or YUV "
+"(lossless compression) color space when encoding RGB images. Default to "
+"YES starting with GDAL 3.10 (was hardcoded to NO in previous versions)"
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:246
-msgid "**Rlevels**: Kakadu SDK defaults used."
+msgid "**Rshift**: Kakadu SDK defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:247
-msgid "**Rweight**: Kakadu SDK defaults used."
+msgid "**Rlevels**: Kakadu SDK defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:248
-msgid "**Qguard**: Kakadu SDK defaults used."
+msgid "**Rweight**: Kakadu SDK defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:249
-msgid ""
-"**Creversible**: If not set and QUALITY >= 99.5, set to \"yes\", "
-"otherwise to \"false\"."
+msgid "**Qguard**: Kakadu SDK defaults used."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:250
-msgid "**Sprofile**: Kakadu SDK defaults used."
+msgid ""
+"**Creversible** = YES/NO: If not set and QUALITY >= 99.5, set to \"yes\","
+" otherwise to \"false\"."
 msgstr ""
 
 #: ../../source/drivers/raster/jp2kak.rst:251
+msgid "**Sprofile**: Kakadu SDK defaults used."
+msgstr ""
+
+#: ../../source/drivers/raster/jp2kak.rst:252
 msgid ""
 "**RATE**: Kakadu SDK defaults used. One or more bit-rates, expressed in "
 "terms of the ratio between the total number of compressed bits (including"
@@ -264,26 +275,26 @@ msgid ""
 "The rates have to be in ASC order."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:263
+#: ../../source/drivers/raster/jp2kak.rst:264
 msgid "Known Kakadu SDK Issues"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:266
+#: ../../source/drivers/raster/jp2kak.rst:267
 msgid "Alpha Channel Writing in v7.8"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:268
+#: ../../source/drivers/raster/jp2kak.rst:269
 msgid ""
 "Kakadu SDK v7.8 has a bug in jp2_channels::set_opacity_mapping that can "
 "cause an error when writing images with an alpha channel. Please upgrade "
 "to version 7.9."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:279
+#: ../../source/drivers/raster/jp2kak.rst:280
 msgid "kdu_get_num_processors always returns 0 for some platforms"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:281
+#: ../../source/drivers/raster/jp2kak.rst:282
 msgid ""
 "On non-windows / non-mac installs (e.g. Linux), Kakadu SDK might not "
 "include unistd.h in kdu_arch.cpp. This means that \\_SC_NPROCESSORS_ONLN "
@@ -292,30 +303,30 @@ msgid ""
 "creating worker threads."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:288
+#: ../../source/drivers/raster/jp2kak.rst:289
 msgid "Standalone plugin compilation"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:292
+#: ../../source/drivers/raster/jp2kak.rst:293
 msgid ""
 "While this driver may be built as part of a whole GDAL build, either in "
 "libgdal itself, or as a plugin, it is also possible to only build this "
 "driver as a plugin, against an already built libgdal."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:296
+#: ../../source/drivers/raster/jp2kak.rst:297
 msgid ""
 "The version of the GDAL sources used to build the driver must match the "
 "version of the libgdal it is built against."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:299
+#: ../../source/drivers/raster/jp2kak.rst:300
 msgid ""
 "For example, from a \"build_jp2kak\" directory under the root of the GDAL"
 " source tree:"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:307
+#: ../../source/drivers/raster/jp2kak.rst:308
 msgid ""
 "Note that such a plugin, when used against a libgdal not aware of it, "
 "will be systematically loaded at GDAL driver initialization time, and "
@@ -324,22 +335,45 @@ msgid ""
 "GDAL_REGISTER_DRIVER_JP2KAK_FOR_LATER_PLUGIN=ON set."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:313
+#: ../../source/drivers/raster/jp2kak.rst:314
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:315
+#: ../../source/drivers/raster/jp2kak.rst:316
 msgid "Implemented as :source_file:`frmts/jp2kak/jp2kakdataset.cpp`."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:316
+#: ../../source/drivers/raster/jp2kak.rst:317
 msgid ""
 "If you're using a Kakadu SDK release before v7.5, configure & compile "
 "GDAL with eg. `CXXFLAGS=\"-DKDU_MAJOR_VERSION=7 -DKDU_MINOR_VERSION=3 "
 "-DKDU_PATCH_VERSION=2\"` for Kakadu SDK version 7.3.2."
 msgstr ""
 
-#: ../../source/drivers/raster/jp2kak.rst:320
+#: ../../source/drivers/raster/jp2kak.rst:321
 msgid "Alternate :ref:`raster.jp2openjpeg` driver."
 msgstr ""
+
+#~ msgid "**Corder**: Defaults to \"PRCL\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Cprecincts**: Defaults to "
+#~ "\"{512,512},{256,512},{128,512},{64,512},{32,512},{16,512},{8,512},{4,512},{2,512}\"."
+#~ msgstr ""
+
+#~ msgid "**ORGgen_plt**: Defaults to \"yes\"."
+#~ msgstr ""
+
+#~ msgid "**ORGgen_tlm**: Kakadu SDK defaults used."
+#~ msgstr ""
+
+#~ msgid "**Clevels**: Kakadu SDK defaults used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Creversible**: If not set and QUALITY"
+#~ " >= 99.5, set to \"yes\", otherwise"
+#~ " to \"false\"."
+#~ msgstr ""
 

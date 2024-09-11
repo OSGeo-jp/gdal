@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 02:24+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
@@ -33,8 +33,8 @@ msgid ""
 "only. :ref:`Binaries` produced by others are available for a variety of "
 "platforms and package managers."
 msgstr ""
-"GDALプロジェクトは, GDALをソースコードと :ref:`Containers` のみとして配布しています.他の"
-"人が作成した :ref:`Binaries` は,さまざまなプラットフォームとパッケージマネージャで利用可能です."
+"GDALプロジェクトは, GDALをソースコードと :ref:`Containers` のみとして配布しています.他の人が作成した "
+":ref:`Binaries` は,さまざまなプラットフォームとパッケージマネージャで利用可能です."
 
 #: ../../source/download.rst:16
 msgid "Source Code"
@@ -64,99 +64,106 @@ msgstr "開発ソース"
 msgid ""
 "The main repository for GDAL is located on GitHub at "
 "https://github.com/OSGeo/GDAL."
-msgstr ""
-"GDALのメインリポジトリは, GitHubの"
-"https://github.com/OSGeo/GDAL にあります."
+msgstr "GDALのメインリポジトリは, GitHubのhttps://github.com/OSGeo/GDAL にあります."
 
 #: ../../source/download.rst:40
 msgid ""
 "You can obtain a copy of the active source code by issuing the following "
 "command"
-msgstr ""
-"次のコマンドを実行することで,アクティブなソースコードのコピーを取得できます."
+msgstr "次のコマンドを実行することで,アクティブなソースコードのコピーを取得できます."
 
 #: ../../source/download.rst:48
 msgid ""
 "Additional information is available about :ref:`build_requirements` and "
 ":ref:`building_from_source`."
-msgstr ""
-":ref:`build_requirements` と :ref:`building_from_source` について追加の情報があります."
+msgstr ":ref:`build_requirements` と :ref:`building_from_source` について追加の情報があります."
 
-#: ../../source/download.rst:54
+#: ../../source/download.rst:51
+msgid "Maintenance policy"
+msgstr ""
+
+#: ../../source/download.rst:53
+msgid ""
+"The GDAL upstream team only maintains the branch on which the latest "
+"release has been done, with bugfixes releases issued roughly every 2 "
+"months. So, for example, during the development phase of GDAL 3.10.0, "
+"GDAL 3.9.x bugfixes releases are done based on the release/3.9 branch, "
+"but not older branches (GDAL 3.8.x or older)."
+msgstr ""
+
+#: ../../source/download.rst:61
 msgid "Binaries"
 msgstr "バイナリ"
 
-#: ../../source/download.rst:56
+#: ../../source/download.rst:63
 msgid ""
 "In this section we list a number of the binary distributions of GDAL all "
 "of which should have fully reproducible open source build recipes."
 msgstr ""
-"このセクションでは, GDALのいくつかのバイナリディストリビューションをリストします.これら"
-"はすべて完全に再現可能なオープンソースのビルドレシピを持っているはずです."
+"このセクションでは, "
+"GDALのいくつかのバイナリディストリビューションをリストします.これらはすべて完全に再現可能なオープンソースのビルドレシピを持っているはずです."
 
-#: ../../source/download.rst:59
+#: ../../source/download.rst:66
 msgid ""
 "Note that the maintainers of those distributions are generally not the "
 "maintainers of the GDAL sources, so please report any issue specific to "
 "those builds through their own support channels."
-msgstr ""
-"これらのディストリビューションのメンテナーは一般的にGDALソースのメンテナーではないため,"
-"それらのビルドに特有の問題は,それらのビルドのサポートチャネルを通じて報告してください."
+msgstr "これらのディストリビューションのメンテナーは一般的にGDALソースのメンテナーではないため,それらのビルドに特有の問題は,それらのビルドのサポートチャネルを通じて報告してください."
 
-#: ../../source/download.rst:64
+#: ../../source/download.rst:71
 msgid "Windows"
 msgstr ""
 
-#: ../../source/download.rst:66
+#: ../../source/download.rst:73
 msgid ""
 "Windows builds are available via `Conda Forge`_ (64-bit only). See the "
 ":ref:`conda` section for more detailed information. GDAL is also "
 "distributed by `GISInternals`_ and `OSGeo4W`_ and through the `NuGet`_ "
 "and :ref:`vcpkg` package managers."
 msgstr ""
-"Windowsビルドは `Conda Forge`_ (64ビットのみ) を通じて利用可能です.詳細な情報については,"
-" :ref:`conda` セクションを参照してください. GDALは `GISInternals`_ と `OSGeo4W`_  および"
-" `NuGet`_ と :ref:`vcpkg` パッケージマネージャを通じて配布されています."
+"Windowsビルドは `Conda Forge`_ (64ビットのみ) を通じて利用可能です.詳細な情報については, :ref:`conda` "
+"セクションを参照してください. GDALは `GISInternals`_ と `OSGeo4W`_  および `NuGet`_ と "
+":ref:`vcpkg` パッケージマネージャを通じて配布されています."
 
-#: ../../source/download.rst:76
+#: ../../source/download.rst:83
 msgid "Linux"
 msgstr ""
 
-#: ../../source/download.rst:78
+#: ../../source/download.rst:85
 msgid ""
 "Packages are available for `Debian`_, `Alpine_`, `Fedora_`, and other "
 "distributions."
-msgstr ""
-"パッケージは `Debian`_, `Alpine_`, `Fedora_`, および他のディストリビューション用に利用可能です."
+msgstr "パッケージは `Debian`_, `Alpine_`, `Fedora_`, および他のディストリビューション用に利用可能です."
 
-#: ../../source/download.rst:86
+#: ../../source/download.rst:93
 msgid "Mac OS"
 msgstr ""
 
-#: ../../source/download.rst:88
+#: ../../source/download.rst:95
 msgid "GDAL packages are available on `Homebrew`_."
 msgstr "GDALパッケージは `Homebrew`_ で利用可能です."
 
-#: ../../source/download.rst:94
+#: ../../source/download.rst:101
 msgid "Cross-Platform Package Managers"
 msgstr "クロスプラットフォームパッケージマネージャ"
 
-#: ../../source/download.rst:99
+#: ../../source/download.rst:106
 msgid "Conda"
 msgstr ""
 
-#: ../../source/download.rst:101
+#: ../../source/download.rst:108
 msgid ""
 "`Conda <https://anaconda.org>`__ can be used on multiple platforms "
 "(Windows, macOS, and Linux) to install software packages and manage "
 "environments. Conda packages for GDAL are available through `conda-forge "
 "<https://anaconda.org/conda-forge/gdal>`__."
 msgstr ""
-"`Conda <https://anaconda.org>`__ は,ソフトウェアパッケージをインストールし,環境を管理するために,"
-"複数のプラットフォーム (Windows, macOS, Linux) で使用できます. GDALのCondaパッケージは,"
-"`conda-forge <https://anaconda.org/conda-forge/gdal>`__ を通じて利用できます."
+"`Conda <https://anaconda.org>`__ "
+"は,ソフトウェアパッケージをインストールし,環境を管理するために,複数のプラットフォーム (Windows, macOS, Linux) "
+"で使用できます. GDALのCondaパッケージは,`conda-forge <https://anaconda.org/conda-"
+"forge/gdal>`__ を通じて利用できます."
 
-#: ../../source/download.rst:107
+#: ../../source/download.rst:114
 msgid "Latest version: |Conda badge|"
 msgstr "最新バージョン: |Conda badge|"
 
@@ -164,223 +171,232 @@ msgstr "最新バージョン: |Conda badge|"
 msgid "Conda badge"
 msgstr ""
 
-#: ../../source/download.rst:116
+#: ../../source/download.rst:123
 msgid "GDAL is available as several subpackages:"
 msgstr "GDALはいくつかのサブパッケージとして利用可能です:"
 
-#: ../../source/download.rst:118
+#: ../../source/download.rst:125
 msgid "``gdal``: Python bindings and Python utilities (depends on libgdal-core)"
 msgstr "``gdal`` : PythonバインディングとPythonユーティリティ (libgdal-core に依存)"
 
-#: ../../source/download.rst:119
+#: ../../source/download.rst:126
 msgid ""
 "``libgdal``: meta-package gathering all below libgdal-* packages (except "
 "libgdal-arrow-parquet)"
 msgstr ""
-"``libgdal`` : 以下の libgdal-* パッケージをすべて収集するメタパッケージ (libgdal-arrow-parquet を除く)"
+"``libgdal`` : 以下の libgdal-* パッケージをすべて収集するメタパッケージ (libgdal-arrow-parquet "
+"を除く)"
 
-#: ../../source/download.rst:120
+#: ../../source/download.rst:127
 msgid ""
 "``libgdal-arrow-parquet``: :ref:`vector.arrow` and :ref:`vector.parquet` "
 "drivers as a plugin (depends on libgdal-core)"
 msgstr ""
-"``libgdal-arrow-parquet`` : :ref:`vector.arrow` および :ref:`vector.parquet` ドライバをプラグインとして"
-"利用可能 (libgdal-core に依存)"
+"``libgdal-arrow-parquet`` : :ref:`vector.arrow` および :ref:`vector.parquet`"
+" ドライバをプラグインとして利用可能 (libgdal-core に依存)"
 
-#: ../../source/download.rst:121
+#: ../../source/download.rst:128
 msgid ""
 "``libgdal-core``: core library and C++ utilities, with a number of "
 "builtin drivers (available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-core`` : コアライブラリとC++ユーティリティ,いくつかの組み込みドライバを備えています (GDAL 3.9.1 以降利用可能)"
+"``libgdal-core`` : コアライブラリとC++ユーティリティ,いくつかの組み込みドライバを備えています (GDAL 3.9.1 "
+"以降利用可能)"
 
-#: ../../source/download.rst:122
+#: ../../source/download.rst:129
 msgid ""
 "``libgdal-fits``: :ref:`raster.fits` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-fits`` : :ref:`raster.fits` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-fits`` : :ref:`raster.fits` ドライバをプラグインとして利用可能 (libgdal-core "
+"に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:123
+#: ../../source/download.rst:130
 msgid ""
 "``libgdal-grib``: :ref:`raster.grib` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-grib`` : :ref:`raster.grib` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-grib`` : :ref:`raster.grib` ドライバをプラグインとして利用可能 (libgdal-core "
+"に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:124
+#: ../../source/download.rst:131
 msgid ""
 "``libgdal-hdf4``: :ref:`raster.hdf4` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-hdf4`` : :ref:`raster.hdf4` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-hdf4`` : :ref:`raster.hdf4` ドライバをプラグインとして利用可能 (libgdal-core "
+"に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:125
+#: ../../source/download.rst:132
 msgid ""
 "``libgdal-hdf5``: :ref:`raster.hdf5` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-hdf5`` : :ref:`raster.hdf5` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-hdf5`` : :ref:`raster.hdf5` ドライバをプラグインとして利用可能 (libgdal-core "
+"に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:126
+#: ../../source/download.rst:133
 msgid ""
 "``libgdal-jp2openjpeg``: :ref:`raster.jp2openjpeg` driver as a plugin "
 "(depends on libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-jp2openjpeg`` : :ref:`raster.jp2openjpeg` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-jp2openjpeg`` : :ref:`raster.jp2openjpeg` ドライバをプラグインとして利用可能 "
+"(libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:127
+#: ../../source/download.rst:134
 msgid ""
 "``libgdal-kea``: :ref:`raster.kea` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-kea`` : :ref:`raster.kea` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-kea`` : :ref:`raster.kea` ドライバをプラグインとして利用可能 (libgdal-core に依存, "
+"GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:128
+#: ../../source/download.rst:135
 msgid ""
 "``libgdal-netcdf``: :ref:`raster.netcdf` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-netcdf`` : :ref:`raster.netcdf` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-netcdf`` : :ref:`raster.netcdf` ドライバをプラグインとして利用可能 (libgdal-core"
+" に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:129
+#: ../../source/download.rst:136
 msgid ""
 "``libgdal-pdf``: :ref:`raster.pdf` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-pdf`` : :ref:`raster.pdf` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-pdf`` : :ref:`raster.pdf` ドライバをプラグインとして利用可能 (libgdal-core に依存, "
+"GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:130
+#: ../../source/download.rst:137
 msgid ""
 "``libgdal-postgisraster``: :ref:`raster.postgisraster` driver as a plugin"
 " (depends on libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-postgisraster`` : :ref:`raster.postgisraster` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-postgisraster`` : :ref:`raster.postgisraster` ドライバをプラグインとして利用可能"
+" (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:131
+#: ../../source/download.rst:138
 msgid ""
 "``libgdal-pg``: :ref:`vector.pg` driver as a plugin (depends on libgdal-"
 "core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-pg`` : :ref:`vector.pg` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-pg`` : :ref:`vector.pg` ドライバをプラグインとして利用可能 (libgdal-core に依存, "
+"GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:132
+#: ../../source/download.rst:139
 msgid ""
 "``libgdal-tiledb``: :ref:`raster.tiledb` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-tiledb`` : :ref:`raster.tiledb` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
+"``libgdal-tiledb`` : :ref:`raster.tiledb` ドライバをプラグインとして利用可能 (libgdal-core"
+" に依存, GDAL 3.9.1 以降利用可能)"
 
-#: ../../source/download.rst:133
+#: ../../source/download.rst:140
 msgid ""
 "``libgdal-xls``: :ref:`vector.xls` driver as a plugin (depends on "
 "libgdal-core, available since GDAL 3.9.1)"
 msgstr ""
-"``libgdal-xls`` : :ref:`vector.xls` ドライバをプラグインとして利用可能 (libgdal-core に依存, GDAL 3.9.1 以降利用可能)"
-
-#: ../../source/download.rst:136
-msgid ""
-"To install the ``gdal`` package (Python bindings and utilities), and "
-"``libgdal-core``:"
-msgstr ""
-"``gdal`` パッケージ (Pythonバインディングとユーティリティ) と ``libgdal-core`` をインストールするには:"
+"``libgdal-xls`` : :ref:`vector.xls` ドライバをプラグインとして利用可能 (libgdal-core に依存, "
+"GDAL 3.9.1 以降利用可能)"
 
 #: ../../source/download.rst:143
 msgid ""
-"To install the ``libgdal`` meta-package with all available drivers, but "
-"libgdal-arrow-parquet:"
-msgstr ""
-"利用可能なすべてのドライバを持つ ``libgdal`` メタパッケージをインストールするには,libgdal-arrow-parquet を除く:"
+"To install the ``gdal`` package (Python bindings and utilities), and "
+"``libgdal-core``:"
+msgstr "``gdal`` パッケージ (Pythonバインディングとユーティリティ) と ``libgdal-core`` をインストールするには:"
 
 #: ../../source/download.rst:150
+msgid ""
+"To install the ``libgdal`` meta-package with all available drivers, but "
+"libgdal-arrow-parquet:"
+msgstr "利用可能なすべてのドライバを持つ ``libgdal`` メタパッケージをインストールするには,libgdal-arrow-parquet を除く:"
+
+#: ../../source/download.rst:157
 msgid "To install the Arrow and Parquet drivers as plugins:"
 msgstr "Arrow および Parquet ドライバをプラグインとしてインストールするには:"
 
-#: ../../source/download.rst:158
+#: ../../source/download.rst:165
 msgid "GDAL master Conda builds"
 msgstr "GDAL master Conda ビルド"
 
-#: ../../source/download.rst:160
+#: ../../source/download.rst:167
 msgid ""
 "GDAL master builds are available in the `gdal-master "
 "<https://anaconda.org/gdal-master/gdal>`__ channel. They are based on "
 "dependencies from the ``conda-forge`` channel."
 msgstr ""
-"GDAL master ビルドは, `gdal-master <https://anaconda.org/gdal-master/gdal>`__ チャネルで利用可能です."
-"これらは ``conda-forge`` チャネルの依存関係に基づいています."
+"GDAL master ビルドは, `gdal-master <https://anaconda.org/gdal-master/gdal>`__"
+" チャネルで利用可能です.これらは ``conda-forge`` チャネルの依存関係に基づいています."
 
-#: ../../source/download.rst:163
+#: ../../source/download.rst:170
 msgid ""
 "First, install mamba into the ``base`` environment, create a dedicated "
 "``gdal_master_env`` environment, and then activate the dedicated "
 "``gdal_master_env`` environment."
 msgstr ""
-"最初に, ``base`` 環境に mamba をインストールし,専用の ``gdal_master_env`` 環境を作成し,"
-"その後,専用の ``gdal_master_env`` 環境をアクティブにします."
+"最初に, ``base`` 環境に mamba をインストールし,専用の ``gdal_master_env`` 環境を作成し,その後,専用の "
+"``gdal_master_env`` 環境をアクティブにします."
 
-#: ../../source/download.rst:173
+#: ../../source/download.rst:180
 msgid "Then install GDAL from the ``gdal-master`` channel:"
 msgstr "次に, ``gdal-master`` チャネルから GDAL をインストールします:"
 
-#: ../../source/download.rst:184
+#: ../../source/download.rst:191
 msgid "vcpkg"
 msgstr ""
 
-#: ../../source/download.rst:186
+#: ../../source/download.rst:193
 msgid ""
 "The GDAL port in the `vcpkg <https://github.com/Microsoft/vcpkg>`__ "
 "dependency manager is kept up to date by Microsoft team members and "
 "community contributors. You can download and install GDAL using the vcpkg"
 " as follows:"
 msgstr ""
-" `vcpkg <https://github.com/Microsoft/vcpkg>`__ 依存関係マネージャの GDALポートは,"
-"Microsoftチームメンバーとコミュニティの貢献者によって最新の状態に保たれています."
-"vcpkg を使用して GDAL をダウンロードして次のようにインストールすることができます:"
+" `vcpkg <https://github.com/Microsoft/vcpkg>`__ 依存関係マネージャの "
+"GDALポートは,Microsoftチームメンバーとコミュニティの貢献者によって最新の状態に保たれています.vcpkg を使用して GDAL "
+"をダウンロードして次のようにインストールすることができます:"
 
-#: ../../source/download.rst:197
+#: ../../source/download.rst:204
 msgid ""
 "If the version is out of date, please `create an issue or pull request "
 "<https://github.com/Microsoft/vcpkg>`__ on the vcpkg repository."
 msgstr ""
-"バージョンが古い場合は,  `<https://github.com/Microsoft/vcpkg>`__ の vcpkg リポジトリで"
-"issueを作成するか,プルリクエストを作成してください."
+"バージョンが古い場合は,  `<https://github.com/Microsoft/vcpkg>`__ の vcpkg "
+"リポジトリでissueを作成するか,プルリクエストを作成してください."
 
-
-#: ../../source/download.rst:200
+#: ../../source/download.rst:207
 msgid "Spack"
 msgstr ""
 
-#: ../../source/download.rst:202
+#: ../../source/download.rst:209
 msgid ""
 "Spack is a package management tool designed to support multiple versions "
 "and configurations of software on a wide variety of platforms and "
 "environments. It was designed for large supercomputing centers. Spack "
 "builds packages from sources, and allows tweaking their configurations."
-msgstr ""
-"Spackは,さまざまなプラットフォームと環境で複数のバージョンと構成のソフトウェアをサポートする"
-"ために設計されたパッケージ管理ツールです.大規模なスーパーコンピューティングセンター向けに設計されています."
-"Spackはソースからパッケージをビルドし,その構成を調整することができます."
+msgstr "Spackは,さまざまなプラットフォームと環境で複数のバージョンと構成のソフトウェアをサポートするために設計されたパッケージ管理ツールです.大規模なスーパーコンピューティングセンター向けに設計されています.Spackはソースからパッケージをビルドし,その構成を調整することができます."
 
-#: ../../source/download.rst:207
+#: ../../source/download.rst:214
 msgid ""
 "You can find information about GDAL in Spack at "
 "https://packages.spack.io/package.html?name=gdal"
 msgstr ""
-"SpackでのGDALに関する情報は, `https://packages.spack.io/package.html?name=gdal` で見つけることができます."
+"SpackでのGDALに関する情報は, `https://packages.spack.io/package.html?name=gdal` "
+"で見つけることができます."
 
-#: ../../source/download.rst:210
+#: ../../source/download.rst:217
 msgid "For the default GDAL build with a reduced number of drivers:"
 msgstr "デフォルトのGDALビルドでドライバの数を削減した場合:"
 
-#: ../../source/download.rst:218
+#: ../../source/download.rst:225
 msgid "For a build with netcdf driver enabled:"
 msgstr "netcdf ドライバを有効にしたビルドの場合:"
 
-#: ../../source/download.rst:228
+#: ../../source/download.rst:235
 msgid "Containers"
 msgstr "コンテナ"
 
-#: ../../source/download.rst:230
+#: ../../source/download.rst:237
 msgid ""
 "Docker images with nightly builds of GDAL master and tagged releases are "
 "available at `GitHub Container registry "
@@ -389,7 +405,7 @@ msgstr ""
 "GDAL masterとタグ付けされたリリースの夜間ビルドを含むDockerイメージは, `GitHub Container registry "
 "<https://github.com/OSGeo/gdal/pkgs/container/gdal>`_ で利用可能です."
 
-#: ../../source/download.rst:233
+#: ../../source/download.rst:240
 msgid ""
 "Information on the content of the different configurations can be found "
 "at `https://github.com/OSGeo/gdal/tree/master/docker "
@@ -398,11 +414,11 @@ msgstr ""
 "異なる構成の内容に関する情報は, `https://github.com/OSGeo/gdal/tree/master/docker "
 "<https://github.com/OSGeo/gdal/tree/master/docker>`_. で見つけることができます."
 
-#: ../../source/download.rst:238
+#: ../../source/download.rst:245
 msgid "Documentation"
 msgstr "文書"
 
-#: ../../source/download.rst:240
+#: ../../source/download.rst:247
 msgid ""
 "Besides being included when downloading the software, the documentation "
 "is also available independently as a `PDF file "
@@ -411,10 +427,10 @@ msgid ""
 "offline browsing. (The ZIP also includes the PDF.) The documentation "
 "reflects the latest state of the development branch of the software."
 msgstr ""
-"ソフトウェアをダウンロードする際に含まれているだけでなく,文書は `PDFファイル "
-"<https://gdal.org/gdal.pdf>`_ と `個々のHTMLページのZIP "
-"<https://github.com/OSGeo/gdal-docs/archive/refs/heads/master.zip>`_ としても独立して利用できます."
-"(ZIPにはPDFも含まれています.) 文書はソフトウェアの開発ブランチの最新状態を反映しています."
+"ソフトウェアをダウンロードする際に含まれているだけでなく,文書は `PDFファイル <https://gdal.org/gdal.pdf>`_ と"
+" `個々のHTMLページのZIP <https://github.com/OSGeo/gdal-"
+"docs/archive/refs/heads/master.zip>`_ としても独立して利用できます.(ZIPにはPDFも含まれています.) "
+"文書はソフトウェアの開発ブランチの最新状態を反映しています."
 
 #~ msgid ""
 #~ "**2024-06-26** `gdal-3.9.1.tar.gz`_ `3.9.1 Release"

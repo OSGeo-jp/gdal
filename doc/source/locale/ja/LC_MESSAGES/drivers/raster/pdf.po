@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 08:20+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -397,162 +397,173 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/raster/pdf.rst:732
-msgid "With GDAL >= 3.9"
+msgid "With GDAL >= 3.10"
 msgstr ""
 
 #: ../../source/drivers/raster/pdf.rst:734
+msgid ""
+"The scripts in the "
+"`<https://github.com/rouault/pdfium_build_gdal_3_10>`__ repository must "
+"be used to build a patched version of PDFium."
+msgstr ""
+
+#: ../../source/drivers/raster/pdf.rst:738
+msgid "With GDAL = 3.9"
+msgstr ""
+
+#: ../../source/drivers/raster/pdf.rst:740
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_9>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:738
+#: ../../source/drivers/raster/pdf.rst:744
 msgid "With GDAL = 3.8"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:740
+#: ../../source/drivers/raster/pdf.rst:746
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_8>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:744
+#: ../../source/drivers/raster/pdf.rst:750
 msgid "With GDAL 3.7"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:746
+#: ../../source/drivers/raster/pdf.rst:752
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_7>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:750
+#: ../../source/drivers/raster/pdf.rst:756
 msgid "With GDAL 3.5 and 3.6"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:752
+#: ../../source/drivers/raster/pdf.rst:758
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_5>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:756
+#: ../../source/drivers/raster/pdf.rst:762
 msgid "With GDAL 3.4"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:758
+#: ../../source/drivers/raster/pdf.rst:764
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_4>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:762
+#: ../../source/drivers/raster/pdf.rst:768
 msgid "With GDAL 3.2 and 3.3"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:764
+#: ../../source/drivers/raster/pdf.rst:770
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_2>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:768
+#: ../../source/drivers/raster/pdf.rst:774
 msgid "With GDAL 3.1.x"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:770
+#: ../../source/drivers/raster/pdf.rst:776
 msgid ""
 "The scripts in the `<https://github.com/rouault/pdfium_build_gdal_3_1>`__"
 " repository must be used to build a patched version of PDFium."
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:774
+#: ../../source/drivers/raster/pdf.rst:780
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:776
+#: ../../source/drivers/raster/pdf.rst:782
 msgid ""
 "Create a PDF from 2 rasters (main_raster and another_raster), such that "
 "main_raster is initially displayed, and they are exclusively displayed :"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:786
+#: ../../source/drivers/raster/pdf.rst:792
 msgid "Create of PDF with some JavaScript :"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:792
+#: ../../source/drivers/raster/pdf.rst:798
 msgid "where script.js is :"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:800
+#: ../../source/drivers/raster/pdf.rst:806
 msgid "See also"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:802
+#: ../../source/drivers/raster/pdf.rst:808
 msgid ":ref:`PDF vector <vector.pdf>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:804
+#: ../../source/drivers/raster/pdf.rst:810
 msgid "Specifications :"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:806
+#: ../../source/drivers/raster/pdf.rst:812
 msgid ""
 "`OGC GeoPDF Encoding Best Practice Version 2.2 (08-139r3) "
 "<http://portal.opengeospatial.org/files/?artifact_id=40537>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:808
+#: ../../source/drivers/raster/pdf.rst:814
 msgid ""
 "`Adobe Supplement to ISO 32000 "
 "<http://www.adobe.com/devnet/acrobat/pdfs/adobe_supplement_iso32000.pdf>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:810
+#: ../../source/drivers/raster/pdf.rst:816
 msgid ""
 "`PDF Reference, version 1.7 "
 "<http://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:812
+#: ../../source/drivers/raster/pdf.rst:818
 msgid ""
 "`Acrobat(R) JavaScript Scripting Reference "
 "<http://partners.adobe.com/public/developer/en/acrobat/sdk/AcroJS.pdf>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:815
+#: ../../source/drivers/raster/pdf.rst:821
 msgid "Libraries :"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:817
+#: ../../source/drivers/raster/pdf.rst:823
 msgid "`Poppler homepage <http://poppler.freedesktop.org/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:818
+#: ../../source/drivers/raster/pdf.rst:824
 msgid "`PoDoFo homepage <http://podofo.sourceforge.net/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:819
+#: ../../source/drivers/raster/pdf.rst:825
 msgid "`PDFium homepage <https://code.google.com/p/pdfium/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:820
+#: ../../source/drivers/raster/pdf.rst:826
 msgid ""
 "`PDFium forked version for simpler builds "
 "<https://github.com/rouault/pdfium>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:823
+#: ../../source/drivers/raster/pdf.rst:829
 msgid "Samples :"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:825
+#: ../../source/drivers/raster/pdf.rst:831
 msgid ""
 "`A few Geospatial PDF samples <https://www.terragotech.com/learn-more"
 "/sample-geopdfs>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pdf.rst:827
+#: ../../source/drivers/raster/pdf.rst:833
 msgid ""
 "`Tutorial to generate Geospatial PDF maps from OSM data "
 "<http://latuviitta.org/documents/Geospatial_PDF_maps_from_OSM_with_GDAL.pdf>`__"
@@ -563,5 +574,8 @@ msgstr ""
 #~ "composition file must validate is "
 #~ "`pdfcomposition.xsd "
 #~ "<https://raw.githubusercontent.com/OSGeo/gdal/master/data/pdfcomposition.xsd>`__"
+#~ msgstr ""
+
+#~ msgid "With GDAL >= 3.9"
 #~ msgstr ""
 

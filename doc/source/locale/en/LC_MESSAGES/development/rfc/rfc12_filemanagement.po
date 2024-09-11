@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/development/rfc/rfc12_filemanagement.rst:5
 msgid "RFC 12: Improved File Management"
@@ -56,7 +56,7 @@ msgstr ""
 #: ../../source/development/rfc/rfc12_filemanagement.rst:26
 msgid ""
 "The following new virtual method is added on the GDALDataset class, with "
-"an analygous C function."
+"an analogous C function."
 msgstr ""
 
 #: ../../source/development/rfc/rfc12_filemanagement.rst:33
@@ -300,4 +300,10 @@ msgid ""
 "of the identify, rename, copy and delete operations from the commandline "
 "in a convenient fashion."
 msgstr ""
+
+#~ msgid ""
+#~ "The following new virtual method is "
+#~ "added on the GDALDataset class, with "
+#~ "an analygous C function."
+#~ msgstr ""
 

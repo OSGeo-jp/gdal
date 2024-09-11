@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/gpkg.rst:4
 msgid "GPKG -- GeoPackage vector"
@@ -242,11 +242,24 @@ msgstr ""
 
 #: ../../source/drivers/vector/gpkg.rst:126
 msgid ""
+"ST_Length(geom *Geometry*): (GDAL >= 3.10): compute the area in units of "
+"the geometry SRS."
+msgstr ""
+
+#: ../../source/drivers/vector/gpkg.rst:127
+msgid ""
+"ST_Length(geom *Geometry*, use_ellipsoid *boolean*): (GDAL >= 3.10): "
+"compute the area in meters, considering the geometry on the ellipsoid "
+"(use_ellipsoid must be set to true/1)."
+msgstr ""
+
+#: ../../source/drivers/vector/gpkg.rst:130
+msgid ""
 "SetSRID(geom *Geometry*, srs_id *Integer*): overrides the geometry' SRS "
 "ID, without reprojection."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:128
+#: ../../source/drivers/vector/gpkg.rst:132
 msgid ""
 "ST_Transform(geom *Geometry*, target_srs_id *Integer*): reproject the "
 "geometry to the SRS of specified srs_id. If no SRS with that given srs_id"
@@ -254,7 +267,7 @@ msgid ""
 " interpreted as a EPSG code."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:132
+#: ../../source/drivers/vector/gpkg.rst:136
 msgid ""
 "ST_EnvIntersects(geom *Geometry*, minx *Double*, miny *Double*, maxx "
 "*Double*, maxy *Double*): (GDAL >= 3.7) Returns 1 if the minimum bounding"
@@ -262,7 +275,7 @@ msgid ""
 "(minx,miny)-(maxx,maxy), or 0 otherwise."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:135
+#: ../../source/drivers/vector/gpkg.rst:139
 msgid ""
 "ST_EnvIntersects(geom1 *Geometry*, geom2 *Geometry*): (GDAL >= 3.7) "
 "Returns 1 if the minimum bounding box of geom1 intersects the one of "
@@ -270,17 +283,17 @@ msgid ""
 "automatically uses spatial indices)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:140
+#: ../../source/drivers/vector/gpkg.rst:144
 msgid ""
 "The raster SQL functions mentioned at :ref:`raster.gpkg.raster` are also "
 "available."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:144
+#: ../../source/drivers/vector/gpkg.rst:148
 msgid "Link with Spatialite"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:146
+#: ../../source/drivers/vector/gpkg.rst:150
 msgid ""
 "If it has been compiled against Spatialite 4.2 or later, it is also "
 "possible to use Spatialite SQL functions. Explicit transformation from "
@@ -288,11 +301,11 @@ msgid ""
 " be done."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:155
+#: ../../source/drivers/vector/gpkg.rst:159
 msgid "Starting with Spatialite 4.3, CastAutomagic is no longer needed."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:157
+#: ../../source/drivers/vector/gpkg.rst:161
 msgid ""
 "Note that due to the loose typing mechanism of SQLite, if a geometry "
 "expression returns a NULL value for the first row, this will generally "
@@ -301,28 +314,28 @@ msgid ""
 "are returned first:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:168
+#: ../../source/drivers/vector/gpkg.rst:172
 msgid "Transaction support"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:170
+#: ../../source/drivers/vector/gpkg.rst:174
 msgid ""
 "The driver implements transactions at the database level, per "
 ":ref:`rfc-54`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:173
+#: ../../source/drivers/vector/gpkg.rst:177
 msgid "Relationships"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:177
+#: ../../source/drivers/vector/gpkg.rst:181
 msgid ""
 "Many-to-many relationship retrieval is supported, respecting the OGC "
 "GeoPackage Related Tables Extension. One-to-many relationships will also "
 "be reported for tables which utilize FOREIGN KEY constraints."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:180
+#: ../../source/drivers/vector/gpkg.rst:184
 msgid ""
 "Relationship creation, deletion and updating is supported since GDAL 3.7."
 " Relationships can only be updated to change their base or related table "
@@ -331,7 +344,7 @@ msgid ""
 " this is desired then a new relationship should be created instead."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:185
+#: ../../source/drivers/vector/gpkg.rst:189
 msgid ""
 "Note that when a many-to-many relationship is created in a GeoPackage, "
 "GDAL will always insert the mapping table into the gpkg_contents table. "
@@ -341,38 +354,38 @@ msgid ""
 " some other applications (e.g. ESRI software)."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:192
+#: ../../source/drivers/vector/gpkg.rst:196
 msgid "Dataset open options"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:194
+#: ../../source/drivers/vector/gpkg.rst:198
 msgid "|about-open-options| The following open options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:222
+#: ../../source/drivers/vector/gpkg.rst:226
 msgid ""
 "The attached database must be a GeoPackage one too, so that its geometry "
 "blobs are properly recognized (so typically not a Spatialite one)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:248
+#: ../../source/drivers/vector/gpkg.rst:252
 msgid ""
 "Note: open options are typically specified with \"-oo name=value\" syntax"
 " in most OGR utilities, or with the ``GDALOpenEx()`` API call."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:251
+#: ../../source/drivers/vector/gpkg.rst:255
 msgid ""
 "Note: configuration option :config:`OGR_SQLITE_JOURNAL` can be used to "
 "set the journal mode of the GeoPackage (and thus SQLite) file, see also "
 "https://www.sqlite.org/pragma.html#pragma_journal_mode."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:256
+#: ../../source/drivers/vector/gpkg.rst:260
 msgid "Creation issues"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:258
+#: ../../source/drivers/vector/gpkg.rst:262
 msgid ""
 "When creating a new GeoPackage file, the driver will attempt to force the"
 " database into a UTF-8 mode for text handling, satisfying the OGR strict "
@@ -380,7 +393,7 @@ msgid ""
 "whatever it is given."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:263
+#: ../../source/drivers/vector/gpkg.rst:267
 msgid ""
 "The driver updates the GeoPackage ``last_change`` timestamp when the file"
 " is created or modified. If consistent binary output is required for "
@@ -391,69 +404,69 @@ msgid ""
 "<https://www.geopackage.org/spec120/#r15>`__."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:272
+#: ../../source/drivers/vector/gpkg.rst:276
 msgid "Dataset creation options"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:274
+#: ../../source/drivers/vector/gpkg.rst:278
 msgid ""
 "|about-dataset-creation-options| The following creation options (specific"
 " to vector, or common with raster) are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:339
+#: ../../source/drivers/vector/gpkg.rst:343
 msgid ""
 "Other options are available for raster. See the :ref:`GeoPackage raster "
 "<raster.gpkg>` documentation page."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:343
+#: ../../source/drivers/vector/gpkg.rst:347
 msgid "Layer creation options"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:345
+#: ../../source/drivers/vector/gpkg.rst:349
 msgid ""
 "|about-layer-creation-options| The following layer creation options are "
 "available:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:485
+#: ../../source/drivers/vector/gpkg.rst:489
 msgid "Configuration options"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:487
+#: ../../source/drivers/vector/gpkg.rst:491
 msgid "|about-config-options| The following configuration options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:490
+#: ../../source/drivers/vector/gpkg.rst:494
 msgid ":copy-config:`OGR_SQLITE_JOURNAL`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:492
+#: ../../source/drivers/vector/gpkg.rst:496
 msgid ":copy-config:`OGR_SQLITE_CACHE`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:494
+#: ../../source/drivers/vector/gpkg.rst:498
 msgid ":copy-config:`OGR_SQLITE_SYNCHRONOUS`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:496
+#: ../../source/drivers/vector/gpkg.rst:500
 msgid ":copy-config:`OGR_SQLITE_LOAD_EXTENSIONS`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:498
+#: ../../source/drivers/vector/gpkg.rst:502
 msgid ":copy-config:`OGR_SQLITE_PRAGMA`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:510
+#: ../../source/drivers/vector/gpkg.rst:514
 msgid ":copy-config:`SQLITE_USE_OGR_VFS`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:525
+#: ../../source/drivers/vector/gpkg.rst:529
 msgid "Metadata"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:527
+#: ../../source/drivers/vector/gpkg.rst:531
 msgid ""
 "GDAL uses the standardized `gpkg_metadata "
 "<http://www.geopackage.org/spec/#_metadata_table>`__ and "
@@ -462,7 +475,7 @@ msgid ""
 "read and write metadata, on the dataset and layer objects."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:533
+#: ../../source/drivers/vector/gpkg.rst:537
 msgid ""
 "GDAL metadata, from the default metadata domain and possibly other "
 "metadata domains, is serialized in a single XML document, conformant with"
@@ -475,7 +488,7 @@ msgid ""
 " of the table}"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:543
+#: ../../source/drivers/vector/gpkg.rst:547
 msgid ""
 "Metadata not originating from GDAL can be read by the driver and will be "
 "exposed as metadata items with keys of the form GPKG_METADATA_ITEM_XXX "
@@ -484,31 +497,31 @@ msgid ""
 "interfaces ( although it can be through direct SQL commands)."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:549
+#: ../../source/drivers/vector/gpkg.rst:553
 msgid ""
 "The specific DESCRIPTION and IDENTIFIER metadata item of the default "
 "metadata domain can be used in read/write to read from/update the "
 "corresponding columns of the gpkg_contents table."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:554
+#: ../../source/drivers/vector/gpkg.rst:558
 msgid "Non-spatial tables"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:556
+#: ../../source/drivers/vector/gpkg.rst:560
 msgid ""
 "The core GeoPackage specification of GeoPackage 1.0 and 1.1 did not "
 "support non-spatial tables. This was added in GeoPackage 1.2 as the "
 "\"attributes\" data type."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:560
+#: ../../source/drivers/vector/gpkg.rst:564
 msgid ""
 "The driver allows creating and reading non-spatial tables with the "
 ":ref:`vector.geopackage_aspatial`."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:562
+#: ../../source/drivers/vector/gpkg.rst:566
 msgid ""
 "Starting with GDAL 2.2, the driver will also, by default, list non "
 "spatial tables that are not registered through the gdal_aspatial "
@@ -518,18 +531,18 @@ msgid ""
 "with the :lco:`ASPATIAL_VARIANT` layer creation option)."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:570
+#: ../../source/drivers/vector/gpkg.rst:574
 msgid "Spatial views"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:572
+#: ../../source/drivers/vector/gpkg.rst:576
 msgid ""
 "Views can be created and recognized as valid spatial layers if a "
 "corresponding record is inserted into the gpkg_contents and "
 "gpkg_geometry_columns table."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:576
+#: ../../source/drivers/vector/gpkg.rst:580
 msgid ""
 "Starting with GDAL 2.2, in the case of the columns in the SELECT clause "
 "of the view acts a integer primary key, then it can be recognized by OGR "
@@ -540,11 +553,11 @@ msgid ""
 "really a primary key."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:584
+#: ../../source/drivers/vector/gpkg.rst:588
 msgid "For example:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:592
+#: ../../source/drivers/vector/gpkg.rst:596
 msgid ""
 "This requires GDAL to be compiled with the SQLITE_HAS_COLUMN_METADATA "
 "option and SQLite3 with the SQLITE_ENABLE_COLUMN_METADATA option. "
@@ -553,7 +566,7 @@ msgid ""
 "example with \"ogrinfo --format GPKG\")."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:598
+#: ../../source/drivers/vector/gpkg.rst:602
 msgid ""
 "Starting with GDAL 3.7.1, it is possible to define a geometry column as "
 "the result of a Spatialite spatial function. Note however that this is an"
@@ -564,71 +577,71 @@ msgid ""
 ":ref:`vector.gpkg_spatialite_computed_geom_column`), like below:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:618
+#: ../../source/drivers/vector/gpkg.rst:622
 msgid "Coordinate Reference Systems"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:620
+#: ../../source/drivers/vector/gpkg.rst:624
 msgid ""
 "Valid geographic, projected and compound CRS supported in general by GDAL"
 " are also supported by GeoPackage and stored in the "
 "``gpkg_spatial_ref_sys`` table."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:623
+#: ../../source/drivers/vector/gpkg.rst:627
 msgid "Two special hard-coded CRS are reserved per the GeoPackage specification:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:625
+#: ../../source/drivers/vector/gpkg.rst:629
 msgid ""
 "srs_id=0, for a Undefined Geographic CRS. For GDAL 3.8 or earlier, this "
 "one is selected by default if creating a spatial layer without any "
 "explicit CRS"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:628
+#: ../../source/drivers/vector/gpkg.rst:632
 msgid ""
 "srs_id=-1, for a Undefined Projected CRS. It might be selected by "
 "creating a layer with a CRS instantiated from the following WKT string: "
 "``LOCAL_CS[\"Undefined Cartesian SRS\"]``. (GDAL >= 3.3)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:632
+#: ../../source/drivers/vector/gpkg.rst:636
 msgid ""
 "Starting with GDAL 3.9, a layer without any explicit CRS is mapped "
 "from/to a custom entry of srs_id=99999 with the following properties:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:635
+#: ../../source/drivers/vector/gpkg.rst:639
 msgid "``srs_name``: ``Undefined SRS``"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:636
+#: ../../source/drivers/vector/gpkg.rst:640
 msgid "``organization``: ``GDAL``"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:637
+#: ../../source/drivers/vector/gpkg.rst:641
 msgid "``organization_coordsys_id``: 99999"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:638
+#: ../../source/drivers/vector/gpkg.rst:642
 msgid ""
 "``definition``: ``LOCAL_CS[\"Undefined "
 "SRS\",LOCAL_DATUM[\"unknown\",32767],UNIT[\"unknown\",0],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]``"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:639
+#: ../../source/drivers/vector/gpkg.rst:643
 msgid ""
 "``definition_12_063`` (when the CRS WKT extension is used): "
 "``ENGCRS[\"Undefined "
 "SRS\",EDATUM[\"unknown\"],CS[Cartesian,2],AXIS[\"easting\",east,ORDER[1],LENGTHUNIT[\"unknown\",0]],AXIS[\"northing\",north,ORDER[2],LENGTHUNIT[\"unknown\",0]]]``"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:640
+#: ../../source/drivers/vector/gpkg.rst:644
 msgid "``description``: ``Custom undefined coordinate reference system``"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:642
+#: ../../source/drivers/vector/gpkg.rst:646
 msgid ""
 "Note that the use of a LOCAL_CS / EngineeringCRS is mostly to provide a "
 "valid CRS definition to comply with the requirements of the GeoPackage "
@@ -637,149 +650,149 @@ msgid ""
 "SRS of any kind\"."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:648
+#: ../../source/drivers/vector/gpkg.rst:652
 msgid "Level of support of GeoPackage Extensions"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:650
+#: ../../source/drivers/vector/gpkg.rst:654
 msgid "(Restricted to those that have a vector scope)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:652
+#: ../../source/drivers/vector/gpkg.rst:656
 msgid "Extensions"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:655
+#: ../../source/drivers/vector/gpkg.rst:659
 msgid "Extension name"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:656
+#: ../../source/drivers/vector/gpkg.rst:660
 msgid "OGC adopted extension ?"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:657
+#: ../../source/drivers/vector/gpkg.rst:661
 msgid "Supported by GDAL?"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:658
+#: ../../source/drivers/vector/gpkg.rst:662
 msgid ""
 "`Non-Linear Geometry Types "
 "<http://www.geopackage.org/guidance/extensions/nonlinear_geometry_types.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:659
-#: ../../source/drivers/vector/gpkg.rst:662
 #: ../../source/drivers/vector/gpkg.rst:663
-#: ../../source/drivers/vector/gpkg.rst:665
 #: ../../source/drivers/vector/gpkg.rst:666
-#: ../../source/drivers/vector/gpkg.rst:668
-#: ../../source/drivers/vector/gpkg.rst:671
-#: ../../source/drivers/vector/gpkg.rst:680
+#: ../../source/drivers/vector/gpkg.rst:667
+#: ../../source/drivers/vector/gpkg.rst:669
+#: ../../source/drivers/vector/gpkg.rst:670
+#: ../../source/drivers/vector/gpkg.rst:672
+#: ../../source/drivers/vector/gpkg.rst:675
+#: ../../source/drivers/vector/gpkg.rst:684
 msgid "Yes"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:660
+#: ../../source/drivers/vector/gpkg.rst:664
 msgid "Yes, since GDAL 2.1"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:661
+#: ../../source/drivers/vector/gpkg.rst:665
 msgid ""
 "`RTree Spatial Indexes "
 "<http://www.geopackage.org/guidance/extensions/rtree_spatial_indexes.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:664
+#: ../../source/drivers/vector/gpkg.rst:668
 msgid "`Metadata <http://www.geopackage.org/guidance/extensions/metadata.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:667
+#: ../../source/drivers/vector/gpkg.rst:671
 msgid "`Schema <http://www.geopackage.org/guidance/extensions/schema.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:669
+#: ../../source/drivers/vector/gpkg.rst:673
 msgid "Yes, since GDAL 3.3 (Geopackage constraints exposed as field domains)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:670
+#: ../../source/drivers/vector/gpkg.rst:674
 msgid ""
 "`WKT for Coordinate Reference Systems "
 "<http://www.geopackage.org/guidance/extensions/wkt_for_crs.md>`__ (WKT "
 "v2)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:672
+#: ../../source/drivers/vector/gpkg.rst:676
 msgid ""
 "Partially, since GDAL 2.2. GDAL can read databases using this extension, "
 "but cannot interpret a SRS entry that has only a WKT v2 entry."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:673
+#: ../../source/drivers/vector/gpkg.rst:677
 msgid ":ref:`vector.geopackage_aspatial`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:674
-#: ../../source/drivers/vector/gpkg.rst:677
+#: ../../source/drivers/vector/gpkg.rst:678
+#: ../../source/drivers/vector/gpkg.rst:681
 msgid "No"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:675
+#: ../../source/drivers/vector/gpkg.rst:679
 msgid "Yes. Deprecated in GDAL 2.2 for the *attributes* official data_type"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:676
+#: ../../source/drivers/vector/gpkg.rst:680
 msgid ":ref:`vector.gpkg_spatialite_computed_geom_column`"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:678
+#: ../../source/drivers/vector/gpkg.rst:682
 msgid "Yes, starting with GDAL 3.7.1"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:679
+#: ../../source/drivers/vector/gpkg.rst:683
 msgid ""
 "`OGC GeoPackage Related Tables Extension <http://www.geopackage.org/spec"
 "/related-tables/>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:681
+#: ../../source/drivers/vector/gpkg.rst:685
 msgid "Yes, starting with GDAL 3.6"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:684
+#: ../../source/drivers/vector/gpkg.rst:688
 msgid "Compressed files"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:686
+#: ../../source/drivers/vector/gpkg.rst:690
 msgid ""
 "Starting with GDAL 3.7, the driver can also support reading and creating "
 ".gpkg.zip files containing one .gpkg file."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:689
+#: ../../source/drivers/vector/gpkg.rst:693
 msgid ""
 "On large files, good read performance can only be achieved if the file "
 "inside the .zip is not compressed or compressed using the `SOZip "
 "<https://sozip.org>`__ optimization."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:693
+#: ../../source/drivers/vector/gpkg.rst:697
 msgid "Update of an existing file is not supported."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:695
+#: ../../source/drivers/vector/gpkg.rst:699
 msgid ""
 "Creation involves the creation of a temporary file. Sufficiently large "
 "files will be automatically compressed using the SOZip optimization."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:701
+#: ../../source/drivers/vector/gpkg.rst:705
 msgid "Geometry coordinate precision"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:703
+#: ../../source/drivers/vector/gpkg.rst:707
 msgid "3.9"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:705
+#: ../../source/drivers/vector/gpkg.rst:709
 msgid ""
 "The GeoPackage driver supports reading and writing the geometry "
 "coordinate precision, using the :cpp:class:`OGRGeomCoordinatePrecision` "
@@ -788,11 +801,11 @@ msgid ""
 "geometries that are written to be modified to comply with this precision."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:711
+#: ../../source/drivers/vector/gpkg.rst:715
 msgid "Several settings may be combined to apply further processing:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:713
+#: ../../source/drivers/vector/gpkg.rst:717
 msgid ""
 "if the :config:`OGR_APPLY_GEOM_SET_PRECISION` configuration option is set"
 " to ``YES``, the :cpp:func:`OGRGeometry::SetPrecision` method will be "
@@ -801,7 +814,7 @@ msgid ""
 "potential geometry invalidities resulting from the rounding."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:719
+#: ../../source/drivers/vector/gpkg.rst:723
 msgid ""
 "if the ``DISCARD_COORD_LSB`` layer creation option is set to YES, the "
 "less-significant bits of the WKB geometry encoding which are not relevant"
@@ -815,7 +828,7 @@ msgid ""
 "for later edition sessions."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:730
+#: ../../source/drivers/vector/gpkg.rst:734
 msgid ""
 "if the ``UNDO_DISCARD_COORD_LSB_ON_READING`` layer creation option is set"
 " to YES (only makes sense if the ``DISCARD_COORD_LSB`` layer creation "
@@ -826,7 +839,7 @@ msgid ""
 "3.9 or later."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:738
+#: ../../source/drivers/vector/gpkg.rst:742
 msgid ""
 "Implementation details: the coordinate precision is stored in a record in"
 " each of the ``gpkg_metadata`` and ``gpkg_metadata_reference`` table, "
@@ -834,15 +847,15 @@ msgid ""
 "the GeoPackage specification:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:743
+#: ../../source/drivers/vector/gpkg.rst:747
 msgid "gpkg_metadata.md_standard_uri = 'http://gdal.org'"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:744
+#: ../../source/drivers/vector/gpkg.rst:748
 msgid "gpkg_metadata.mime_type = 'text/xml'"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:745
+#: ../../source/drivers/vector/gpkg.rst:749
 msgid ""
 "gpkg_metadata.metadata = '<CoordinatePrecision "
 "xy_resolution=\"{xy_resolution}\" z_resolution=\"{z_resolution}\" "
@@ -850,40 +863,40 @@ msgid ""
 "undo_discard_coord_lsb_on_reading={true or false} />'"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:746
+#: ../../source/drivers/vector/gpkg.rst:750
 msgid "gpkg_metadata_reference.reference_scope = 'column'"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:747
+#: ../../source/drivers/vector/gpkg.rst:751
 msgid "gpkg_metadata_reference.table_name = '{table_name}'"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:748
+#: ../../source/drivers/vector/gpkg.rst:752
 msgid "gpkg_metadata_reference.column_name = '{geometry_column_name}'"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:750
+#: ../../source/drivers/vector/gpkg.rst:754
 msgid ""
 "Note that the xy_resolution, z_resolution or m_resolution attributes of "
 "the XML CoordinatePrecision element are optional. Their numeric value is "
 "expressed in the units of the SRS for xy_resolution and z_resolution."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:757
+#: ../../source/drivers/vector/gpkg.rst:761
 msgid "Performance hints"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:759
+#: ../../source/drivers/vector/gpkg.rst:763
 msgid ""
 "The same performance hints apply as those mentioned for the :ref:`SQLite "
 "driver <target_drivers_vector_sqlite_performance_hints>`."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:763
+#: ../../source/drivers/vector/gpkg.rst:767
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:765
+#: ../../source/drivers/vector/gpkg.rst:769
 msgid ""
 "Simple translation of a single shapefile into GeoPackage. The table 'abc'"
 " will be created with the features from abc.shp and attributes from "
@@ -892,58 +905,58 @@ msgid ""
 "ogr2ogr with **-update**."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:775
+#: ../../source/drivers/vector/gpkg.rst:779
 msgid ""
 "Update of an existing GeoPackage file – e.g. a GeoPackage template – by "
 "adding features to it from another GeoPackage file containing features "
 "according to the same or a backwards compatible database schema."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:784
+#: ../../source/drivers/vector/gpkg.rst:788
 msgid ""
 "Translation of a directory of shapefiles into a GeoPackage. Each file "
 "will end up as a new table within the GPKG file. The file "
 "``filename.gpkg`` must **not** already exist, as it will be created."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:792
+#: ../../source/drivers/vector/gpkg.rst:796
 msgid ""
 "Translation of a PostGIS database into a GeoPackage. Each table in the "
 "database will end up as a table in the GPKG file. The file "
 "``filename.gpkg`` must **not** already exist, as it will be created."
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:800
+#: ../../source/drivers/vector/gpkg.rst:804
 msgid "Perform a join between 2 GeoPackage databases:"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:809
+#: ../../source/drivers/vector/gpkg.rst:813
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:811
+#: ../../source/drivers/vector/gpkg.rst:815
 msgid ":ref:`GeoPackage raster <raster.gpkg>` documentation page"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:812
+#: ../../source/drivers/vector/gpkg.rst:816
 msgid ""
 "`Getting Started With GeoPackage <http://www.geopackage.org/guidance"
 "/getting-started.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:814
+#: ../../source/drivers/vector/gpkg.rst:818
 msgid ""
 "`OGC GeoPackage format standard <http://www.geopackage.org/spec/>`__ "
 "specification, HTML format (current/development version of the standard)"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:817
+#: ../../source/drivers/vector/gpkg.rst:821
 msgid ""
 "`OGC GeoPackage Encoding Standard "
 "<http://www.opengeospatial.org/standards/geopackage>`__ page"
 msgstr ""
 
-#: ../../source/drivers/vector/gpkg.rst:819
+#: ../../source/drivers/vector/gpkg.rst:823
 msgid "`SQLite <http://sqlite.org/>`__"
 msgstr ""
 

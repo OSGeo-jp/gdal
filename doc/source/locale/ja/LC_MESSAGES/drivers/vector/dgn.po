@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/dgn.rst:4
 msgid "Microstation DGN"
@@ -265,24 +265,32 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/vector/dgn.rst:126
+msgid "Open options"
+msgstr ""
+
+#: ../../source/drivers/vector/dgn.rst:130
+msgid "|about-open-options| The following open options are supported:"
+msgstr ""
+
+#: ../../source/drivers/vector/dgn.rst:145
 msgid "Dataset creation options"
 msgstr ""
 
-#: ../../source/drivers/vector/dgn.rst:128
+#: ../../source/drivers/vector/dgn.rst:147
 msgid ""
 "|about-dataset-creation-options| The following dataset-creation options "
 "are supported:"
 msgstr ""
 
-#: ../../source/drivers/vector/dgn.rst:185
+#: ../../source/drivers/vector/dgn.rst:218
 msgid "`Dgnlib Page <http://dgnlib.maptools.org/>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/dgn.rst:186
+#: ../../source/drivers/vector/dgn.rst:219
 msgid ":ref:`ogr_feature_style`"
 msgstr ""
 
-#: ../../source/drivers/vector/dgn.rst:187
+#: ../../source/drivers/vector/dgn.rst:220
 msgid ":ref:`DGNv8 driver <vector.dgnv8>` (using Teigha libraries)"
 msgstr ""
 

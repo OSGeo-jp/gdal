@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/gif.rst:5
 msgid "GIF -- Graphics Interchange Format"
@@ -55,25 +55,26 @@ msgstr ""
 
 #: ../../source/drivers/raster/gif.rst:19
 msgid ""
-"If an ESRI world file exists with the .gfw, .gifw or .wld extension, it "
-"will be read and used to establish the geotransform for the image."
+"If an ESRI :ref:`world file <raster.wld>` exists with the .gfw, .gifw or "
+".wld extension, it will be read and used to establish the geotransform "
+"for the image."
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:22
+#: ../../source/drivers/raster/gif.rst:23
 msgid ""
 "XMP metadata can be extracted from the file, and will be stored as XML "
 "raw content in the xml:XMP metadata domain."
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:26
+#: ../../source/drivers/raster/gif.rst:27
 msgid "Driver capabilities"
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:33
+#: ../../source/drivers/raster/gif.rst:34
 msgid "Creation Issues"
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:35
+#: ../../source/drivers/raster/gif.rst:36
 msgid ""
 "GIF files can only be created as 1 8bit band using the \"CreateCopy\" "
 "mechanism. If written from a file that is not colormapped, a default "
@@ -81,29 +82,37 @@ msgid ""
 "supported on creation."
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:40
+#: ../../source/drivers/raster/gif.rst:41
 msgid "|about-creation-options| The following creation options are supported:"
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:55
+#: ../../source/drivers/raster/gif.rst:57
 msgid ""
 "GDAL's internal GIF support is implemented based on source from the "
 "giflib 4.1.6 library (written by Gershon Elbor, Eric Raymond and Toshio "
 "Kuratomi), hence generating LZW compressed GIF."
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:59
+#: ../../source/drivers/raster/gif.rst:61
 msgid ""
 "The driver was written with the financial support of the `DM Solutions "
 "Group <http://www.dmsolutions.ca/>`__, and `CIET International "
 "<http://www.ciet.org/>`__."
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:64
+#: ../../source/drivers/raster/gif.rst:66
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/gif.rst:66
+#: ../../source/drivers/raster/gif.rst:68
 msgid "`giflib Home Page <http://sourceforge.net/projects/giflib/>`__"
 msgstr ""
+
+#~ msgid ""
+#~ "If an ESRI world file exists with"
+#~ " the .gfw, .gifw or .wld extension,"
+#~ " it will be read and used to"
+#~ " establish the geotransform for the "
+#~ "image."
+#~ msgstr ""
 

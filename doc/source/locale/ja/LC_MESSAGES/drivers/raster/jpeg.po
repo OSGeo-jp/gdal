@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/jpeg.rst:5
 msgid "JPEG -- JPEG JFIF File Format"
@@ -59,11 +59,11 @@ msgstr ""
 msgid ""
 "EXIF metadata can be read from JPEG files (but this will not result in a "
 "georeferenced image even if the EXIF_GPSLatitude and EXIF_GPSLongitude "
-"tags are set). But if an ESRI world file exists with the .jgw, "
-".jpgw/.jpegw or .wld suffixes, it will be read and used to establish the "
-"geotransform for the image. If available a MapInfo .tab file will also be"
-" used for georeferencing. Overviews can be built for JPEG files as an "
-"external .ovr file."
+"tags are set). But if an ESRI :ref:`world file <raster.wld>` exists with "
+"the .jgw, .jpgw/.jpegw or .wld suffixes, it will be read and used to "
+"establish the geotransform for the image. If available a MapInfo .tab "
+"file will also be used for georeferencing. Overviews can be built for "
+"JPEG files as an external .ovr file."
 msgstr ""
 
 #: ../../source/drivers/raster/jpeg.rst:29
@@ -199,28 +199,28 @@ msgstr ""
 msgid "|about-creation-options| The following creation options are supported:"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:180
+#: ../../source/drivers/raster/jpeg.rst:181
 msgid ""
 "Low values result in higher compression ratios, but poorer image quality "
 "with strong blocking artifacts. Values above 95 are not meaningfully "
 "better quality but can be substantially larger."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:276
+#: ../../source/drivers/raster/jpeg.rst:277
 msgid "EXIF and GPS tags"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:278
+#: ../../source/drivers/raster/jpeg.rst:279
 msgid "The below tables list the EXIF and GPS tags that can be written."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:280
+#: ../../source/drivers/raster/jpeg.rst:281
 msgid ""
 "The \"Metadata item name\" column presents the name of the metadata item "
 "to attach to the source dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:282
+#: ../../source/drivers/raster/jpeg.rst:283
 msgid ""
 "The \"Hex code\" column is the value of the corresponding TIFF EXIF/GPS "
 "tag (for reference only)"
@@ -230,14 +230,14 @@ msgstr ""
 msgid "The \"Type\" column is the TIFF type associated."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:286
+#: ../../source/drivers/raster/jpeg.rst:287
 msgid ""
 "ASCII is for text values that are NUL-terminated (for a fixed length tag,"
 " the length includes this NUL-terminating characters). e.g "
 "EXIF_Make=the_make"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:289
+#: ../../source/drivers/raster/jpeg.rst:290
 msgid ""
 "BYTE/UNDEFINED is for values that can be made of any byte value. The "
 "value of the corresponding GDAL metadata item must be a string of "
@@ -245,35 +245,35 @@ msgid ""
 "GDAL also accepts an ASCII string: e.g. EXIF_ExifVersion=0231"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:294
+#: ../../source/drivers/raster/jpeg.rst:295
 msgid ""
 "SHORT is for unsigned integer values in the range [0,65535]. Some tags "
 "may accept multiple values, in which case they must be separated by "
 "space."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:297
+#: ../../source/drivers/raster/jpeg.rst:298
 msgid ""
 "LONG is for unsigned integer values in the range [0,4294967295]. Some "
 "tags may accept multiple values, in which case they must be separated by "
 "space."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:300
+#: ../../source/drivers/raster/jpeg.rst:301
 msgid ""
 "RATIONAL is for positive floating-point values. Some tags may accept "
 "multiple values, in which case they must be separated by space. e.g "
 "EXIF_GPSLatitude=49 2 3.5"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:303
+#: ../../source/drivers/raster/jpeg.rst:304
 msgid ""
 "SRATIONAL is for positive or negative floating-point values. Some tags "
 "may accept multiple values, in which case they must be separated by "
 "space."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:307
+#: ../../source/drivers/raster/jpeg.rst:308
 msgid ""
 "When an item accepts a fixed number of values and that more are provided,"
 " they will be truncated with a warning. In the case they are less values "
@@ -281,7 +281,7 @@ msgid ""
 "zeroes"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:312
+#: ../../source/drivers/raster/jpeg.rst:313
 msgid ""
 "The \"Number of values\" column is the number of values for the item. "
 "Might be \"variable\" if there is no restriction, or a fixed value. For "
@@ -289,135 +289,134 @@ msgid ""
 "number of actual printable characters is number of values - 1."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:316
+#: ../../source/drivers/raster/jpeg.rst:317
 msgid ""
 "The \"Optionality\" column indicates whether the item should be present "
 "(\"Mandatory\"), is \"Recommended\" or \"Optional\". GDAL does not "
 "enforce this."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:320
+#: ../../source/drivers/raster/jpeg.rst:321
 msgid ""
 "Many items have more restrictions on the valid content that are not "
 "expressed in the below tables. Consult the EXIF specification for more "
 "information."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:325
-#: ../../source/drivers/raster/jpeg.rst:421
+#: ../../source/drivers/raster/jpeg.rst:326
+#: ../../source/drivers/raster/jpeg.rst:422
 msgid "Metadata item name"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:325
-#: ../../source/drivers/raster/jpeg.rst:421
+#: ../../source/drivers/raster/jpeg.rst:326
+#: ../../source/drivers/raster/jpeg.rst:422
 msgid "Hex code"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:325
-#: ../../source/drivers/raster/jpeg.rst:421
+#: ../../source/drivers/raster/jpeg.rst:326
+#: ../../source/drivers/raster/jpeg.rst:422
 msgid "Type"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:325
-#: ../../source/drivers/raster/jpeg.rst:421
+#: ../../source/drivers/raster/jpeg.rst:326
+#: ../../source/drivers/raster/jpeg.rst:422
 msgid "Number of values"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:325
-#: ../../source/drivers/raster/jpeg.rst:421
+#: ../../source/drivers/raster/jpeg.rst:326
+#: ../../source/drivers/raster/jpeg.rst:422
 msgid "Optionality"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:327
+#: ../../source/drivers/raster/jpeg.rst:328
 msgid "EXIF_Document_Name"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:327
+#: ../../source/drivers/raster/jpeg.rst:328
 msgid "0x010D"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:327
 #: ../../source/drivers/raster/jpeg.rst:328
 #: ../../source/drivers/raster/jpeg.rst:329
 #: ../../source/drivers/raster/jpeg.rst:330
-#: ../../source/drivers/raster/jpeg.rst:336
+#: ../../source/drivers/raster/jpeg.rst:331
 #: ../../source/drivers/raster/jpeg.rst:337
 #: ../../source/drivers/raster/jpeg.rst:338
-#: ../../source/drivers/raster/jpeg.rst:344
-#: ../../source/drivers/raster/jpeg.rst:348
-#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:339
+#: ../../source/drivers/raster/jpeg.rst:345
+#: ../../source/drivers/raster/jpeg.rst:349
 #: ../../source/drivers/raster/jpeg.rst:359
 #: ../../source/drivers/raster/jpeg.rst:360
 #: ../../source/drivers/raster/jpeg.rst:361
 #: ../../source/drivers/raster/jpeg.rst:362
-#: ../../source/drivers/raster/jpeg.rst:378
+#: ../../source/drivers/raster/jpeg.rst:363
 #: ../../source/drivers/raster/jpeg.rst:379
 #: ../../source/drivers/raster/jpeg.rst:380
-#: ../../source/drivers/raster/jpeg.rst:385
-#: ../../source/drivers/raster/jpeg.rst:409
+#: ../../source/drivers/raster/jpeg.rst:381
+#: ../../source/drivers/raster/jpeg.rst:386
 #: ../../source/drivers/raster/jpeg.rst:410
 #: ../../source/drivers/raster/jpeg.rst:411
-#: ../../source/drivers/raster/jpeg.rst:413
+#: ../../source/drivers/raster/jpeg.rst:412
 #: ../../source/drivers/raster/jpeg.rst:414
 #: ../../source/drivers/raster/jpeg.rst:415
-#: ../../source/drivers/raster/jpeg.rst:424
-#: ../../source/drivers/raster/jpeg.rst:426
-#: ../../source/drivers/raster/jpeg.rst:431
+#: ../../source/drivers/raster/jpeg.rst:416
+#: ../../source/drivers/raster/jpeg.rst:425
+#: ../../source/drivers/raster/jpeg.rst:427
 #: ../../source/drivers/raster/jpeg.rst:432
 #: ../../source/drivers/raster/jpeg.rst:433
-#: ../../source/drivers/raster/jpeg.rst:435
-#: ../../source/drivers/raster/jpeg.rst:437
-#: ../../source/drivers/raster/jpeg.rst:439
-#: ../../source/drivers/raster/jpeg.rst:441
+#: ../../source/drivers/raster/jpeg.rst:434
+#: ../../source/drivers/raster/jpeg.rst:436
+#: ../../source/drivers/raster/jpeg.rst:438
+#: ../../source/drivers/raster/jpeg.rst:440
 #: ../../source/drivers/raster/jpeg.rst:442
-#: ../../source/drivers/raster/jpeg.rst:444
-#: ../../source/drivers/raster/jpeg.rst:446
-#: ../../source/drivers/raster/jpeg.rst:448
-#: ../../source/drivers/raster/jpeg.rst:452
+#: ../../source/drivers/raster/jpeg.rst:443
+#: ../../source/drivers/raster/jpeg.rst:445
+#: ../../source/drivers/raster/jpeg.rst:447
+#: ../../source/drivers/raster/jpeg.rst:449
+#: ../../source/drivers/raster/jpeg.rst:453
 msgid "ASCII"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:327
 #: ../../source/drivers/raster/jpeg.rst:328
 #: ../../source/drivers/raster/jpeg.rst:329
 #: ../../source/drivers/raster/jpeg.rst:330
-#: ../../source/drivers/raster/jpeg.rst:336
-#: ../../source/drivers/raster/jpeg.rst:338
-#: ../../source/drivers/raster/jpeg.rst:344
-#: ../../source/drivers/raster/jpeg.rst:348
+#: ../../source/drivers/raster/jpeg.rst:331
+#: ../../source/drivers/raster/jpeg.rst:337
+#: ../../source/drivers/raster/jpeg.rst:339
+#: ../../source/drivers/raster/jpeg.rst:345
 #: ../../source/drivers/raster/jpeg.rst:349
 #: ../../source/drivers/raster/jpeg.rst:350
-#: ../../source/drivers/raster/jpeg.rst:375
+#: ../../source/drivers/raster/jpeg.rst:351
 #: ../../source/drivers/raster/jpeg.rst:376
 #: ../../source/drivers/raster/jpeg.rst:377
 #: ../../source/drivers/raster/jpeg.rst:378
 #: ../../source/drivers/raster/jpeg.rst:379
 #: ../../source/drivers/raster/jpeg.rst:380
-#: ../../source/drivers/raster/jpeg.rst:387
-#: ../../source/drivers/raster/jpeg.rst:396
-#: ../../source/drivers/raster/jpeg.rst:407
-#: ../../source/drivers/raster/jpeg.rst:410
+#: ../../source/drivers/raster/jpeg.rst:381
+#: ../../source/drivers/raster/jpeg.rst:388
+#: ../../source/drivers/raster/jpeg.rst:397
+#: ../../source/drivers/raster/jpeg.rst:408
 #: ../../source/drivers/raster/jpeg.rst:411
-#: ../../source/drivers/raster/jpeg.rst:413
+#: ../../source/drivers/raster/jpeg.rst:412
 #: ../../source/drivers/raster/jpeg.rst:414
 #: ../../source/drivers/raster/jpeg.rst:415
-#: ../../source/drivers/raster/jpeg.rst:431
-#: ../../source/drivers/raster/jpeg.rst:441
-#: ../../source/drivers/raster/jpeg.rst:450
+#: ../../source/drivers/raster/jpeg.rst:416
+#: ../../source/drivers/raster/jpeg.rst:432
+#: ../../source/drivers/raster/jpeg.rst:442
 #: ../../source/drivers/raster/jpeg.rst:451
+#: ../../source/drivers/raster/jpeg.rst:452
 msgid "variable"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:327
-#: ../../source/drivers/raster/jpeg.rst:335
+#: ../../source/drivers/raster/jpeg.rst:328
 #: ../../source/drivers/raster/jpeg.rst:336
-#: ../../source/drivers/raster/jpeg.rst:338
+#: ../../source/drivers/raster/jpeg.rst:337
 #: ../../source/drivers/raster/jpeg.rst:339
 #: ../../source/drivers/raster/jpeg.rst:340
 #: ../../source/drivers/raster/jpeg.rst:341
-#: ../../source/drivers/raster/jpeg.rst:343
+#: ../../source/drivers/raster/jpeg.rst:342
 #: ../../source/drivers/raster/jpeg.rst:344
-#: ../../source/drivers/raster/jpeg.rst:346
+#: ../../source/drivers/raster/jpeg.rst:345
 #: ../../source/drivers/raster/jpeg.rst:347
 #: ../../source/drivers/raster/jpeg.rst:348
 #: ../../source/drivers/raster/jpeg.rst:349
@@ -428,12 +427,12 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:354
 #: ../../source/drivers/raster/jpeg.rst:355
 #: ../../source/drivers/raster/jpeg.rst:356
-#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:357
 #: ../../source/drivers/raster/jpeg.rst:359
 #: ../../source/drivers/raster/jpeg.rst:360
 #: ../../source/drivers/raster/jpeg.rst:361
 #: ../../source/drivers/raster/jpeg.rst:362
-#: ../../source/drivers/raster/jpeg.rst:364
+#: ../../source/drivers/raster/jpeg.rst:363
 #: ../../source/drivers/raster/jpeg.rst:365
 #: ../../source/drivers/raster/jpeg.rst:366
 #: ../../source/drivers/raster/jpeg.rst:367
@@ -442,14 +441,14 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:370
 #: ../../source/drivers/raster/jpeg.rst:371
 #: ../../source/drivers/raster/jpeg.rst:372
-#: ../../source/drivers/raster/jpeg.rst:374
+#: ../../source/drivers/raster/jpeg.rst:373
 #: ../../source/drivers/raster/jpeg.rst:375
 #: ../../source/drivers/raster/jpeg.rst:376
 #: ../../source/drivers/raster/jpeg.rst:377
 #: ../../source/drivers/raster/jpeg.rst:378
 #: ../../source/drivers/raster/jpeg.rst:379
 #: ../../source/drivers/raster/jpeg.rst:380
-#: ../../source/drivers/raster/jpeg.rst:385
+#: ../../source/drivers/raster/jpeg.rst:381
 #: ../../source/drivers/raster/jpeg.rst:386
 #: ../../source/drivers/raster/jpeg.rst:387
 #: ../../source/drivers/raster/jpeg.rst:388
@@ -462,9 +461,9 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:395
 #: ../../source/drivers/raster/jpeg.rst:396
 #: ../../source/drivers/raster/jpeg.rst:397
-#: ../../source/drivers/raster/jpeg.rst:400
+#: ../../source/drivers/raster/jpeg.rst:398
 #: ../../source/drivers/raster/jpeg.rst:401
-#: ../../source/drivers/raster/jpeg.rst:403
+#: ../../source/drivers/raster/jpeg.rst:402
 #: ../../source/drivers/raster/jpeg.rst:404
 #: ../../source/drivers/raster/jpeg.rst:405
 #: ../../source/drivers/raster/jpeg.rst:406
@@ -477,7 +476,7 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:413
 #: ../../source/drivers/raster/jpeg.rst:414
 #: ../../source/drivers/raster/jpeg.rst:415
-#: ../../source/drivers/raster/jpeg.rst:423
+#: ../../source/drivers/raster/jpeg.rst:416
 #: ../../source/drivers/raster/jpeg.rst:424
 #: ../../source/drivers/raster/jpeg.rst:425
 #: ../../source/drivers/raster/jpeg.rst:426
@@ -509,97 +508,97 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:452
 #: ../../source/drivers/raster/jpeg.rst:453
 #: ../../source/drivers/raster/jpeg.rst:454
+#: ../../source/drivers/raster/jpeg.rst:455
 msgid "Optional"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:328
+#: ../../source/drivers/raster/jpeg.rst:329
 msgid "EXIF_ImageDescription"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:328
+#: ../../source/drivers/raster/jpeg.rst:329
 msgid "0x010E"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:328
 #: ../../source/drivers/raster/jpeg.rst:329
 #: ../../source/drivers/raster/jpeg.rst:330
 #: ../../source/drivers/raster/jpeg.rst:331
-#: ../../source/drivers/raster/jpeg.rst:337
-#: ../../source/drivers/raster/jpeg.rst:345
-#: ../../source/drivers/raster/jpeg.rst:373
-#: ../../source/drivers/raster/jpeg.rst:398
+#: ../../source/drivers/raster/jpeg.rst:332
+#: ../../source/drivers/raster/jpeg.rst:338
+#: ../../source/drivers/raster/jpeg.rst:346
+#: ../../source/drivers/raster/jpeg.rst:374
 #: ../../source/drivers/raster/jpeg.rst:399
-#: ../../source/drivers/raster/jpeg.rst:402
+#: ../../source/drivers/raster/jpeg.rst:400
+#: ../../source/drivers/raster/jpeg.rst:403
 msgid "Recommended"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:329
+#: ../../source/drivers/raster/jpeg.rst:330
 msgid "EXIF_Make"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:329
+#: ../../source/drivers/raster/jpeg.rst:330
 msgid "0x010F"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:330
+#: ../../source/drivers/raster/jpeg.rst:331
 msgid "EXIF_Model"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:330
+#: ../../source/drivers/raster/jpeg.rst:331
 msgid "0x0110"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:331
+#: ../../source/drivers/raster/jpeg.rst:332
 msgid "EXIF_Orientation"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:331
+#: ../../source/drivers/raster/jpeg.rst:332
 msgid "0x0112"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:331
-#: ../../source/drivers/raster/jpeg.rst:334
+#: ../../source/drivers/raster/jpeg.rst:332
 #: ../../source/drivers/raster/jpeg.rst:335
-#: ../../source/drivers/raster/jpeg.rst:342
-#: ../../source/drivers/raster/jpeg.rst:347
-#: ../../source/drivers/raster/jpeg.rst:349
-#: ../../source/drivers/raster/jpeg.rst:351
-#: ../../source/drivers/raster/jpeg.rst:371
+#: ../../source/drivers/raster/jpeg.rst:336
+#: ../../source/drivers/raster/jpeg.rst:343
+#: ../../source/drivers/raster/jpeg.rst:348
+#: ../../source/drivers/raster/jpeg.rst:350
+#: ../../source/drivers/raster/jpeg.rst:352
 #: ../../source/drivers/raster/jpeg.rst:372
 #: ../../source/drivers/raster/jpeg.rst:373
-#: ../../source/drivers/raster/jpeg.rst:375
-#: ../../source/drivers/raster/jpeg.rst:382
-#: ../../source/drivers/raster/jpeg.rst:390
+#: ../../source/drivers/raster/jpeg.rst:374
+#: ../../source/drivers/raster/jpeg.rst:376
+#: ../../source/drivers/raster/jpeg.rst:383
 #: ../../source/drivers/raster/jpeg.rst:391
-#: ../../source/drivers/raster/jpeg.rst:393
-#: ../../source/drivers/raster/jpeg.rst:397
+#: ../../source/drivers/raster/jpeg.rst:392
+#: ../../source/drivers/raster/jpeg.rst:394
 #: ../../source/drivers/raster/jpeg.rst:398
 #: ../../source/drivers/raster/jpeg.rst:399
-#: ../../source/drivers/raster/jpeg.rst:401
+#: ../../source/drivers/raster/jpeg.rst:400
 #: ../../source/drivers/raster/jpeg.rst:402
-#: ../../source/drivers/raster/jpeg.rst:404
+#: ../../source/drivers/raster/jpeg.rst:403
 #: ../../source/drivers/raster/jpeg.rst:405
 #: ../../source/drivers/raster/jpeg.rst:406
-#: ../../source/drivers/raster/jpeg.rst:408
-#: ../../source/drivers/raster/jpeg.rst:453
+#: ../../source/drivers/raster/jpeg.rst:407
+#: ../../source/drivers/raster/jpeg.rst:409
+#: ../../source/drivers/raster/jpeg.rst:454
 msgid "SHORT"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:331
 #: ../../source/drivers/raster/jpeg.rst:332
 #: ../../source/drivers/raster/jpeg.rst:333
 #: ../../source/drivers/raster/jpeg.rst:334
-#: ../../source/drivers/raster/jpeg.rst:342
-#: ../../source/drivers/raster/jpeg.rst:345
+#: ../../source/drivers/raster/jpeg.rst:335
+#: ../../source/drivers/raster/jpeg.rst:343
 #: ../../source/drivers/raster/jpeg.rst:346
 #: ../../source/drivers/raster/jpeg.rst:347
-#: ../../source/drivers/raster/jpeg.rst:351
+#: ../../source/drivers/raster/jpeg.rst:348
 #: ../../source/drivers/raster/jpeg.rst:352
 #: ../../source/drivers/raster/jpeg.rst:353
 #: ../../source/drivers/raster/jpeg.rst:354
 #: ../../source/drivers/raster/jpeg.rst:355
 #: ../../source/drivers/raster/jpeg.rst:356
-#: ../../source/drivers/raster/jpeg.rst:364
+#: ../../source/drivers/raster/jpeg.rst:357
 #: ../../source/drivers/raster/jpeg.rst:365
 #: ../../source/drivers/raster/jpeg.rst:366
 #: ../../source/drivers/raster/jpeg.rst:367
@@ -610,18 +609,18 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:372
 #: ../../source/drivers/raster/jpeg.rst:373
 #: ../../source/drivers/raster/jpeg.rst:374
-#: ../../source/drivers/raster/jpeg.rst:382
+#: ../../source/drivers/raster/jpeg.rst:375
 #: ../../source/drivers/raster/jpeg.rst:383
 #: ../../source/drivers/raster/jpeg.rst:384
-#: ../../source/drivers/raster/jpeg.rst:386
-#: ../../source/drivers/raster/jpeg.rst:388
+#: ../../source/drivers/raster/jpeg.rst:385
+#: ../../source/drivers/raster/jpeg.rst:387
 #: ../../source/drivers/raster/jpeg.rst:389
 #: ../../source/drivers/raster/jpeg.rst:390
-#: ../../source/drivers/raster/jpeg.rst:392
+#: ../../source/drivers/raster/jpeg.rst:391
 #: ../../source/drivers/raster/jpeg.rst:393
 #: ../../source/drivers/raster/jpeg.rst:394
 #: ../../source/drivers/raster/jpeg.rst:395
-#: ../../source/drivers/raster/jpeg.rst:397
+#: ../../source/drivers/raster/jpeg.rst:396
 #: ../../source/drivers/raster/jpeg.rst:398
 #: ../../source/drivers/raster/jpeg.rst:399
 #: ../../source/drivers/raster/jpeg.rst:400
@@ -631,1168 +630,1185 @@ msgstr ""
 #: ../../source/drivers/raster/jpeg.rst:404
 #: ../../source/drivers/raster/jpeg.rst:405
 #: ../../source/drivers/raster/jpeg.rst:406
-#: ../../source/drivers/raster/jpeg.rst:408
-#: ../../source/drivers/raster/jpeg.rst:428
+#: ../../source/drivers/raster/jpeg.rst:407
+#: ../../source/drivers/raster/jpeg.rst:409
 #: ../../source/drivers/raster/jpeg.rst:429
-#: ../../source/drivers/raster/jpeg.rst:434
-#: ../../source/drivers/raster/jpeg.rst:436
-#: ../../source/drivers/raster/jpeg.rst:438
-#: ../../source/drivers/raster/jpeg.rst:440
-#: ../../source/drivers/raster/jpeg.rst:447
-#: ../../source/drivers/raster/jpeg.rst:449
-#: ../../source/drivers/raster/jpeg.rst:453
+#: ../../source/drivers/raster/jpeg.rst:430
+#: ../../source/drivers/raster/jpeg.rst:435
+#: ../../source/drivers/raster/jpeg.rst:437
+#: ../../source/drivers/raster/jpeg.rst:439
+#: ../../source/drivers/raster/jpeg.rst:441
+#: ../../source/drivers/raster/jpeg.rst:448
+#: ../../source/drivers/raster/jpeg.rst:450
 #: ../../source/drivers/raster/jpeg.rst:454
+#: ../../source/drivers/raster/jpeg.rst:455
 msgid "1"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:332
+#: ../../source/drivers/raster/jpeg.rst:333
 msgid "EXIF_XResolution"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:332
+#: ../../source/drivers/raster/jpeg.rst:333
 msgid "0x011A"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:332
 #: ../../source/drivers/raster/jpeg.rst:333
-#: ../../source/drivers/raster/jpeg.rst:339
+#: ../../source/drivers/raster/jpeg.rst:334
 #: ../../source/drivers/raster/jpeg.rst:340
 #: ../../source/drivers/raster/jpeg.rst:341
-#: ../../source/drivers/raster/jpeg.rst:343
-#: ../../source/drivers/raster/jpeg.rst:345
+#: ../../source/drivers/raster/jpeg.rst:342
+#: ../../source/drivers/raster/jpeg.rst:344
 #: ../../source/drivers/raster/jpeg.rst:346
-#: ../../source/drivers/raster/jpeg.rst:364
-#: ../../source/drivers/raster/jpeg.rst:366
-#: ../../source/drivers/raster/jpeg.rst:369
+#: ../../source/drivers/raster/jpeg.rst:347
+#: ../../source/drivers/raster/jpeg.rst:365
+#: ../../source/drivers/raster/jpeg.rst:367
 #: ../../source/drivers/raster/jpeg.rst:370
-#: ../../source/drivers/raster/jpeg.rst:374
-#: ../../source/drivers/raster/jpeg.rst:386
-#: ../../source/drivers/raster/jpeg.rst:388
+#: ../../source/drivers/raster/jpeg.rst:371
+#: ../../source/drivers/raster/jpeg.rst:375
+#: ../../source/drivers/raster/jpeg.rst:387
 #: ../../source/drivers/raster/jpeg.rst:389
-#: ../../source/drivers/raster/jpeg.rst:392
-#: ../../source/drivers/raster/jpeg.rst:400
-#: ../../source/drivers/raster/jpeg.rst:403
-#: ../../source/drivers/raster/jpeg.rst:412
-#: ../../source/drivers/raster/jpeg.rst:425
-#: ../../source/drivers/raster/jpeg.rst:427
-#: ../../source/drivers/raster/jpeg.rst:429
+#: ../../source/drivers/raster/jpeg.rst:390
+#: ../../source/drivers/raster/jpeg.rst:393
+#: ../../source/drivers/raster/jpeg.rst:401
+#: ../../source/drivers/raster/jpeg.rst:404
+#: ../../source/drivers/raster/jpeg.rst:413
+#: ../../source/drivers/raster/jpeg.rst:426
+#: ../../source/drivers/raster/jpeg.rst:428
 #: ../../source/drivers/raster/jpeg.rst:430
-#: ../../source/drivers/raster/jpeg.rst:434
-#: ../../source/drivers/raster/jpeg.rst:436
-#: ../../source/drivers/raster/jpeg.rst:438
-#: ../../source/drivers/raster/jpeg.rst:440
-#: ../../source/drivers/raster/jpeg.rst:443
-#: ../../source/drivers/raster/jpeg.rst:445
-#: ../../source/drivers/raster/jpeg.rst:447
-#: ../../source/drivers/raster/jpeg.rst:449
-#: ../../source/drivers/raster/jpeg.rst:454
+#: ../../source/drivers/raster/jpeg.rst:431
+#: ../../source/drivers/raster/jpeg.rst:435
+#: ../../source/drivers/raster/jpeg.rst:437
+#: ../../source/drivers/raster/jpeg.rst:439
+#: ../../source/drivers/raster/jpeg.rst:441
+#: ../../source/drivers/raster/jpeg.rst:444
+#: ../../source/drivers/raster/jpeg.rst:446
+#: ../../source/drivers/raster/jpeg.rst:448
+#: ../../source/drivers/raster/jpeg.rst:450
+#: ../../source/drivers/raster/jpeg.rst:455
 msgid "RATIONAL"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:332
 #: ../../source/drivers/raster/jpeg.rst:333
 #: ../../source/drivers/raster/jpeg.rst:334
-#: ../../source/drivers/raster/jpeg.rst:342
-#: ../../source/drivers/raster/jpeg.rst:357
-#: ../../source/drivers/raster/jpeg.rst:363
-#: ../../source/drivers/raster/jpeg.rst:381
+#: ../../source/drivers/raster/jpeg.rst:335
+#: ../../source/drivers/raster/jpeg.rst:343
+#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:364
 #: ../../source/drivers/raster/jpeg.rst:382
 #: ../../source/drivers/raster/jpeg.rst:383
 #: ../../source/drivers/raster/jpeg.rst:384
+#: ../../source/drivers/raster/jpeg.rst:385
 msgid "**Mandatory**"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:333
+#: ../../source/drivers/raster/jpeg.rst:334
 msgid "EXIF_YResolution"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:333
+#: ../../source/drivers/raster/jpeg.rst:334
 msgid "0x011B"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:334
+#: ../../source/drivers/raster/jpeg.rst:335
 msgid "EXIF_ResolutionUnit"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:334
+#: ../../source/drivers/raster/jpeg.rst:335
 msgid "0x0128"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:335
+#: ../../source/drivers/raster/jpeg.rst:336
 msgid "EXIF_TransferFunction"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:335
+#: ../../source/drivers/raster/jpeg.rst:336
 msgid "0x012D"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:335
+#: ../../source/drivers/raster/jpeg.rst:336
 msgid "768"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:336
+#: ../../source/drivers/raster/jpeg.rst:337
 msgid "EXIF_Software"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:336
+#: ../../source/drivers/raster/jpeg.rst:337
 msgid "0x0131"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:337
+#: ../../source/drivers/raster/jpeg.rst:338
 msgid "EXIF_DateTime"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:337
+#: ../../source/drivers/raster/jpeg.rst:338
 msgid "0x0132"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:337
-#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:338
 #: ../../source/drivers/raster/jpeg.rst:359
+#: ../../source/drivers/raster/jpeg.rst:360
 msgid "20"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:338
+#: ../../source/drivers/raster/jpeg.rst:339
 msgid "EXIF_Artist"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:338
+#: ../../source/drivers/raster/jpeg.rst:339
 msgid "0x013B"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:339
+#: ../../source/drivers/raster/jpeg.rst:340
 msgid "EXIF_WhitePoint"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:339
+#: ../../source/drivers/raster/jpeg.rst:340
 msgid "0x013E"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:339
-#: ../../source/drivers/raster/jpeg.rst:391
-#: ../../source/drivers/raster/jpeg.rst:424
-#: ../../source/drivers/raster/jpeg.rst:426
-#: ../../source/drivers/raster/jpeg.rst:432
+#: ../../source/drivers/raster/jpeg.rst:340
+#: ../../source/drivers/raster/jpeg.rst:392
+#: ../../source/drivers/raster/jpeg.rst:425
+#: ../../source/drivers/raster/jpeg.rst:427
 #: ../../source/drivers/raster/jpeg.rst:433
-#: ../../source/drivers/raster/jpeg.rst:435
-#: ../../source/drivers/raster/jpeg.rst:437
-#: ../../source/drivers/raster/jpeg.rst:439
-#: ../../source/drivers/raster/jpeg.rst:442
-#: ../../source/drivers/raster/jpeg.rst:444
-#: ../../source/drivers/raster/jpeg.rst:446
-#: ../../source/drivers/raster/jpeg.rst:448
+#: ../../source/drivers/raster/jpeg.rst:434
+#: ../../source/drivers/raster/jpeg.rst:436
+#: ../../source/drivers/raster/jpeg.rst:438
+#: ../../source/drivers/raster/jpeg.rst:440
+#: ../../source/drivers/raster/jpeg.rst:443
+#: ../../source/drivers/raster/jpeg.rst:445
+#: ../../source/drivers/raster/jpeg.rst:447
+#: ../../source/drivers/raster/jpeg.rst:449
 msgid "2"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:340
+#: ../../source/drivers/raster/jpeg.rst:341
 msgid "EXIF_PrimaryChromaticities"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:340
+#: ../../source/drivers/raster/jpeg.rst:341
 msgid "0x013F"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:340
-#: ../../source/drivers/raster/jpeg.rst:343
+#: ../../source/drivers/raster/jpeg.rst:341
+#: ../../source/drivers/raster/jpeg.rst:344
 msgid "6"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:341
+#: ../../source/drivers/raster/jpeg.rst:342
 msgid "EXIF_YCbCrCoefficients"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:341
+#: ../../source/drivers/raster/jpeg.rst:342
 msgid "0x0211"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:341
-#: ../../source/drivers/raster/jpeg.rst:425
-#: ../../source/drivers/raster/jpeg.rst:427
-#: ../../source/drivers/raster/jpeg.rst:430
-#: ../../source/drivers/raster/jpeg.rst:443
-#: ../../source/drivers/raster/jpeg.rst:445
+#: ../../source/drivers/raster/jpeg.rst:342
+#: ../../source/drivers/raster/jpeg.rst:426
+#: ../../source/drivers/raster/jpeg.rst:428
+#: ../../source/drivers/raster/jpeg.rst:431
+#: ../../source/drivers/raster/jpeg.rst:444
+#: ../../source/drivers/raster/jpeg.rst:446
 msgid "3"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:342
+#: ../../source/drivers/raster/jpeg.rst:343
 msgid "EXIF_YCbCrPositioning"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:342
+#: ../../source/drivers/raster/jpeg.rst:343
 msgid "0x0213"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:343
+#: ../../source/drivers/raster/jpeg.rst:344
 msgid "EXIF_ReferenceBlackWhite"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:343
+#: ../../source/drivers/raster/jpeg.rst:344
 msgid "0x0214"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:344
+#: ../../source/drivers/raster/jpeg.rst:345
 msgid "EXIF_Copyright"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:344
+#: ../../source/drivers/raster/jpeg.rst:345
 msgid "0x8298"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:345
+#: ../../source/drivers/raster/jpeg.rst:346
 msgid "EXIF_ExposureTime"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:345
+#: ../../source/drivers/raster/jpeg.rst:346
 msgid "0x829A"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:346
+#: ../../source/drivers/raster/jpeg.rst:347
 msgid "EXIF_FNumber"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:346
+#: ../../source/drivers/raster/jpeg.rst:347
 msgid "0x829D"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:347
+#: ../../source/drivers/raster/jpeg.rst:348
 msgid "EXIF_ExposureProgram"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:347
+#: ../../source/drivers/raster/jpeg.rst:348
 msgid "0x8822"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:348
+#: ../../source/drivers/raster/jpeg.rst:349
 msgid "EXIF_SpectralSensitivity"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:348
+#: ../../source/drivers/raster/jpeg.rst:349
 msgid "0x8824"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:349
+#: ../../source/drivers/raster/jpeg.rst:350
 msgid "EXIF_ISOSpeedRatings"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:349
+#: ../../source/drivers/raster/jpeg.rst:350
 msgid "0x8827"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:350
+#: ../../source/drivers/raster/jpeg.rst:351
 msgid "EXIF_OECF"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:350
+#: ../../source/drivers/raster/jpeg.rst:351
 msgid "0x8828"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:350
-#: ../../source/drivers/raster/jpeg.rst:357
-#: ../../source/drivers/raster/jpeg.rst:363
-#: ../../source/drivers/raster/jpeg.rst:376
+#: ../../source/drivers/raster/jpeg.rst:351
+#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:364
 #: ../../source/drivers/raster/jpeg.rst:377
-#: ../../source/drivers/raster/jpeg.rst:381
-#: ../../source/drivers/raster/jpeg.rst:387
-#: ../../source/drivers/raster/jpeg.rst:394
+#: ../../source/drivers/raster/jpeg.rst:378
+#: ../../source/drivers/raster/jpeg.rst:382
+#: ../../source/drivers/raster/jpeg.rst:388
 #: ../../source/drivers/raster/jpeg.rst:395
 #: ../../source/drivers/raster/jpeg.rst:396
-#: ../../source/drivers/raster/jpeg.rst:407
-#: ../../source/drivers/raster/jpeg.rst:450
+#: ../../source/drivers/raster/jpeg.rst:397
+#: ../../source/drivers/raster/jpeg.rst:408
 #: ../../source/drivers/raster/jpeg.rst:451
+#: ../../source/drivers/raster/jpeg.rst:452
 msgid "UNDEFINED"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:351
+#: ../../source/drivers/raster/jpeg.rst:352
 msgid "EXIF_SensitivityType"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:351
+#: ../../source/drivers/raster/jpeg.rst:352
 msgid "0x8830"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:352
+#: ../../source/drivers/raster/jpeg.rst:353
 msgid "EXIF_StandardOutputSensitivity"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:352
+#: ../../source/drivers/raster/jpeg.rst:353
 msgid "0x8831"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:352
 #: ../../source/drivers/raster/jpeg.rst:353
 #: ../../source/drivers/raster/jpeg.rst:354
 #: ../../source/drivers/raster/jpeg.rst:355
 #: ../../source/drivers/raster/jpeg.rst:356
-#: ../../source/drivers/raster/jpeg.rst:383
+#: ../../source/drivers/raster/jpeg.rst:357
 #: ../../source/drivers/raster/jpeg.rst:384
+#: ../../source/drivers/raster/jpeg.rst:385
 msgid "LONG"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:353
+#: ../../source/drivers/raster/jpeg.rst:354
 msgid "EXIF_RecommendedExposureIndex"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:353
+#: ../../source/drivers/raster/jpeg.rst:354
 msgid "0x8832"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:354
+#: ../../source/drivers/raster/jpeg.rst:355
 msgid "EXIF_ISOSpeed"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:354
+#: ../../source/drivers/raster/jpeg.rst:355
 msgid "0x8833"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:355
+#: ../../source/drivers/raster/jpeg.rst:356
 msgid "EXIF_ISOSpeedLatitudeyyy"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:355
+#: ../../source/drivers/raster/jpeg.rst:356
 msgid "0x8834"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:356
+#: ../../source/drivers/raster/jpeg.rst:357
 msgid "EXIF_ISOSpeedLatitudezzz"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:356
+#: ../../source/drivers/raster/jpeg.rst:357
 msgid "0x8835"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:357
+#: ../../source/drivers/raster/jpeg.rst:358
 msgid "EXIF_ExifVersion"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:357
+#: ../../source/drivers/raster/jpeg.rst:358
 msgid "0x9000"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:357
-#: ../../source/drivers/raster/jpeg.rst:363
-#: ../../source/drivers/raster/jpeg.rst:381
-#: ../../source/drivers/raster/jpeg.rst:412
-#: ../../source/drivers/raster/jpeg.rst:423
+#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:364
+#: ../../source/drivers/raster/jpeg.rst:382
+#: ../../source/drivers/raster/jpeg.rst:413
+#: ../../source/drivers/raster/jpeg.rst:424
 msgid "4"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:359
 msgid "EXIF_DateTimeOriginal"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:358
+#: ../../source/drivers/raster/jpeg.rst:359
 msgid "0x9003"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:359
+#: ../../source/drivers/raster/jpeg.rst:360
 msgid "EXIF_DateTimeDigitized"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:359
+#: ../../source/drivers/raster/jpeg.rst:360
 msgid "0x9004"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:360
+#: ../../source/drivers/raster/jpeg.rst:361
 msgid "EXIF_OffsetTime"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:360
+#: ../../source/drivers/raster/jpeg.rst:361
 msgid "0x9010"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:360
 #: ../../source/drivers/raster/jpeg.rst:361
 #: ../../source/drivers/raster/jpeg.rst:362
+#: ../../source/drivers/raster/jpeg.rst:363
 msgid "7"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:361
+#: ../../source/drivers/raster/jpeg.rst:362
 msgid "EXIF_OffsetTimeOriginal"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:361
+#: ../../source/drivers/raster/jpeg.rst:362
 msgid "0x9011"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:362
+#: ../../source/drivers/raster/jpeg.rst:363
 msgid "EXIF_OffsetTimeDigitized"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:362
+#: ../../source/drivers/raster/jpeg.rst:363
 msgid "0x9012"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:363
+#: ../../source/drivers/raster/jpeg.rst:364
 msgid "EXIF_ComponentsConfiguration"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:363
+#: ../../source/drivers/raster/jpeg.rst:364
 msgid "0x9101"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:364
+#: ../../source/drivers/raster/jpeg.rst:365
 msgid "EXIF_CompressedBitsPerPixel"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:364
+#: ../../source/drivers/raster/jpeg.rst:365
 msgid "0x9102"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:365
+#: ../../source/drivers/raster/jpeg.rst:366
 msgid "EXIF_ShutterSpeedValue"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:365
+#: ../../source/drivers/raster/jpeg.rst:366
 msgid "0x9201"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:365
-#: ../../source/drivers/raster/jpeg.rst:367
+#: ../../source/drivers/raster/jpeg.rst:366
 #: ../../source/drivers/raster/jpeg.rst:368
+#: ../../source/drivers/raster/jpeg.rst:369
 msgid "SRATIONAL"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:366
+#: ../../source/drivers/raster/jpeg.rst:367
 msgid "EXIF_ApertureValue"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:366
+#: ../../source/drivers/raster/jpeg.rst:367
 msgid "0x9202"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:367
+#: ../../source/drivers/raster/jpeg.rst:368
 msgid "EXIF_BrightnessValue"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:367
+#: ../../source/drivers/raster/jpeg.rst:368
 msgid "0x9203"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:368
+#: ../../source/drivers/raster/jpeg.rst:369
 msgid "EXIF_ExposureBiasValue"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:368
+#: ../../source/drivers/raster/jpeg.rst:369
 msgid "0x9204"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:369
+#: ../../source/drivers/raster/jpeg.rst:370
 msgid "EXIF_MaxApertureValue"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:369
+#: ../../source/drivers/raster/jpeg.rst:370
 msgid "0x9205"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:370
+#: ../../source/drivers/raster/jpeg.rst:371
 msgid "EXIF_SubjectDistance"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:370
+#: ../../source/drivers/raster/jpeg.rst:371
 msgid "0x9206"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:371
+#: ../../source/drivers/raster/jpeg.rst:372
 msgid "EXIF_MeteringMode"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:371
+#: ../../source/drivers/raster/jpeg.rst:372
 msgid "0x9207"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:372
+#: ../../source/drivers/raster/jpeg.rst:373
 msgid "EXIF_LightSource"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:372
+#: ../../source/drivers/raster/jpeg.rst:373
 msgid "0x9208"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:373
+#: ../../source/drivers/raster/jpeg.rst:374
 msgid "EXIF_Flash"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:373
+#: ../../source/drivers/raster/jpeg.rst:374
 msgid "0x9209"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:374
+#: ../../source/drivers/raster/jpeg.rst:375
 msgid "EXIF_FocalLength"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:374
+#: ../../source/drivers/raster/jpeg.rst:375
 msgid "0x920A"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:375
+#: ../../source/drivers/raster/jpeg.rst:376
 msgid "EXIF_SubjectArea"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:375
+#: ../../source/drivers/raster/jpeg.rst:376
 msgid "0x9214"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:376
+#: ../../source/drivers/raster/jpeg.rst:377
 msgid "EXIF_MakerNote"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:376
+#: ../../source/drivers/raster/jpeg.rst:377
 msgid "0x927C"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:377
+#: ../../source/drivers/raster/jpeg.rst:378
 msgid "EXIF_UserComment"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:377
+#: ../../source/drivers/raster/jpeg.rst:378
 msgid "0x9286"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:378
+#: ../../source/drivers/raster/jpeg.rst:379
 msgid "EXIF_SubSecTime"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:378
+#: ../../source/drivers/raster/jpeg.rst:379
 msgid "0x9290"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:379
+#: ../../source/drivers/raster/jpeg.rst:380
 msgid "EXIF_SubSecTime_Original"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:379
+#: ../../source/drivers/raster/jpeg.rst:380
 msgid "0x9291"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:380
+#: ../../source/drivers/raster/jpeg.rst:381
 msgid "EXIF_SubSecTime_Digitized"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:380
+#: ../../source/drivers/raster/jpeg.rst:381
 msgid "0x9292"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:381
+#: ../../source/drivers/raster/jpeg.rst:382
 msgid "EXIF_FlashpixVersion"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:381
+#: ../../source/drivers/raster/jpeg.rst:382
 msgid "0xA000"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:382
+#: ../../source/drivers/raster/jpeg.rst:383
 msgid "EXIF_ColorSpace"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:382
+#: ../../source/drivers/raster/jpeg.rst:383
 msgid "0xA001"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:383
+#: ../../source/drivers/raster/jpeg.rst:384
 msgid "EXIF_PixelXDimension"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:383
+#: ../../source/drivers/raster/jpeg.rst:384
 msgid "0xA002"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:384
+#: ../../source/drivers/raster/jpeg.rst:385
 msgid "EXIF_PixelYDimension"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:384
+#: ../../source/drivers/raster/jpeg.rst:385
 msgid "0xA003"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:385
+#: ../../source/drivers/raster/jpeg.rst:386
 msgid "EXIF_RelatedSoundFile"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:385
+#: ../../source/drivers/raster/jpeg.rst:386
 msgid "0xA004"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:385
+#: ../../source/drivers/raster/jpeg.rst:386
 msgid "13"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:386
+#: ../../source/drivers/raster/jpeg.rst:387
 msgid "EXIF_FlashEnergy"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:386
+#: ../../source/drivers/raster/jpeg.rst:387
 msgid "0xA20B"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:387
+#: ../../source/drivers/raster/jpeg.rst:388
 msgid "EXIF_SpatialFrequencyResponse"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:387
+#: ../../source/drivers/raster/jpeg.rst:388
 msgid "0xA20C"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:388
+#: ../../source/drivers/raster/jpeg.rst:389
 msgid "EXIF_FocalPlaneXResolution"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:388
+#: ../../source/drivers/raster/jpeg.rst:389
 msgid "0xA20E"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:389
+#: ../../source/drivers/raster/jpeg.rst:390
 msgid "EXIF_FocalPlaneYResolution"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:389
+#: ../../source/drivers/raster/jpeg.rst:390
 msgid "0xA20F"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:390
+#: ../../source/drivers/raster/jpeg.rst:391
 msgid "EXIF_FocalPlaneResolutionUnit"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:390
+#: ../../source/drivers/raster/jpeg.rst:391
 msgid "0xA210"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:391
+#: ../../source/drivers/raster/jpeg.rst:392
 msgid "EXIF_SubjectLocation"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:391
+#: ../../source/drivers/raster/jpeg.rst:392
 msgid "0xA214"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:392
+#: ../../source/drivers/raster/jpeg.rst:393
 msgid "EXIF_ExposureIndex"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:392
+#: ../../source/drivers/raster/jpeg.rst:393
 msgid "0xA215"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:393
+#: ../../source/drivers/raster/jpeg.rst:394
 msgid "EXIF_SensingMethod"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:393
+#: ../../source/drivers/raster/jpeg.rst:394
 msgid "0xA217"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:394
+#: ../../source/drivers/raster/jpeg.rst:395
 msgid "EXIF_FileSource"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:394
+#: ../../source/drivers/raster/jpeg.rst:395
 msgid "0xA300"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:395
+#: ../../source/drivers/raster/jpeg.rst:396
 msgid "EXIF_SceneType"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:395
+#: ../../source/drivers/raster/jpeg.rst:396
 msgid "0xA301"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:396
+#: ../../source/drivers/raster/jpeg.rst:397
 msgid "EXIF_CFAPattern"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:396
+#: ../../source/drivers/raster/jpeg.rst:397
 msgid "0xA302"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:397
+#: ../../source/drivers/raster/jpeg.rst:398
 msgid "EXIF_CustomRendered"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:397
+#: ../../source/drivers/raster/jpeg.rst:398
 msgid "0xA401"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:398
+#: ../../source/drivers/raster/jpeg.rst:399
 msgid "EXIF_ExposureMode"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:398
+#: ../../source/drivers/raster/jpeg.rst:399
 msgid "0xA402"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:399
+#: ../../source/drivers/raster/jpeg.rst:400
 msgid "EXIF_WhiteBalance"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:399
+#: ../../source/drivers/raster/jpeg.rst:400
 msgid "0xA403"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:400
+#: ../../source/drivers/raster/jpeg.rst:401
 msgid "EXIF_DigitalZoomRatio"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:400
+#: ../../source/drivers/raster/jpeg.rst:401
 msgid "0xA404"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:401
+#: ../../source/drivers/raster/jpeg.rst:402
 msgid "EXIF_FocalLengthIn35mmFilm"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:401
+#: ../../source/drivers/raster/jpeg.rst:402
 msgid "0xA405"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:402
+#: ../../source/drivers/raster/jpeg.rst:403
 msgid "EXIF_SceneCaptureType"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:402
+#: ../../source/drivers/raster/jpeg.rst:403
 msgid "0xA406"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:403
+#: ../../source/drivers/raster/jpeg.rst:404
 msgid "EXIF_GainControl"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:403
+#: ../../source/drivers/raster/jpeg.rst:404
 msgid "0xA407"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:404
+#: ../../source/drivers/raster/jpeg.rst:405
 msgid "EXIF_Contrast"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:404
+#: ../../source/drivers/raster/jpeg.rst:405
 msgid "0xA408"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:405
+#: ../../source/drivers/raster/jpeg.rst:406
 msgid "EXIF_Saturation"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:405
+#: ../../source/drivers/raster/jpeg.rst:406
 msgid "0xA409"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:406
+#: ../../source/drivers/raster/jpeg.rst:407
 msgid "EXIF_Sharpness"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:406
+#: ../../source/drivers/raster/jpeg.rst:407
 msgid "0xA40A"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:407
+#: ../../source/drivers/raster/jpeg.rst:408
 msgid "EXIF_DeviceSettingDescription"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:407
+#: ../../source/drivers/raster/jpeg.rst:408
 msgid "0xA40B"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:408
+#: ../../source/drivers/raster/jpeg.rst:409
 msgid "EXIF_SubjectDistanceRange"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:408
+#: ../../source/drivers/raster/jpeg.rst:409
 msgid "0xA40C"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:409
+#: ../../source/drivers/raster/jpeg.rst:410
 msgid "EXIF_ImageUniqueID"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:409
+#: ../../source/drivers/raster/jpeg.rst:410
 msgid "0xA420"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:409
+#: ../../source/drivers/raster/jpeg.rst:410
 msgid "33"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:410
+#: ../../source/drivers/raster/jpeg.rst:411
 msgid "EXIF_CameraOwnerName"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:410
+#: ../../source/drivers/raster/jpeg.rst:411
 msgid "0xA430"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:411
+#: ../../source/drivers/raster/jpeg.rst:412
 msgid "EXIF_BodySerialNumber"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:411
+#: ../../source/drivers/raster/jpeg.rst:412
 msgid "0xA431"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:412
+#: ../../source/drivers/raster/jpeg.rst:413
 msgid "EXIF_LensSpecification"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:412
+#: ../../source/drivers/raster/jpeg.rst:413
 msgid "0xA432"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:413
+#: ../../source/drivers/raster/jpeg.rst:414
 msgid "EXIF_LensMake"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:413
+#: ../../source/drivers/raster/jpeg.rst:414
 msgid "0xA433"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:414
+#: ../../source/drivers/raster/jpeg.rst:415
 msgid "EXIF_LensModel"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:414
+#: ../../source/drivers/raster/jpeg.rst:415
 msgid "0xA434"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:415
+#: ../../source/drivers/raster/jpeg.rst:416
 msgid "EXIF_LensSerialNumber"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:415
+#: ../../source/drivers/raster/jpeg.rst:416
 msgid "0xA435"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:418
+#: ../../source/drivers/raster/jpeg.rst:419
 msgid "GPS tags:"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:423
+#: ../../source/drivers/raster/jpeg.rst:424
 msgid "EXIF_GPSVersionID"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:423
+#: ../../source/drivers/raster/jpeg.rst:424
 msgid "0x0000"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:423
-#: ../../source/drivers/raster/jpeg.rst:428
+#: ../../source/drivers/raster/jpeg.rst:424
+#: ../../source/drivers/raster/jpeg.rst:429
 msgid "BYTE"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:424
+#: ../../source/drivers/raster/jpeg.rst:425
 msgid "EXIF_GPSLatitudeRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:424
+#: ../../source/drivers/raster/jpeg.rst:425
 msgid "0x0001"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:425
+#: ../../source/drivers/raster/jpeg.rst:426
 msgid "EXIF_GPSLatitude"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:425
+#: ../../source/drivers/raster/jpeg.rst:426
 msgid "0x0002"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:426
+#: ../../source/drivers/raster/jpeg.rst:427
 msgid "EXIF_GPSLongitudeRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:426
+#: ../../source/drivers/raster/jpeg.rst:427
 msgid "0x0003"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:427
+#: ../../source/drivers/raster/jpeg.rst:428
 msgid "EXIF_GPSLongitude"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:427
+#: ../../source/drivers/raster/jpeg.rst:428
 msgid "0x0004"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:428
+#: ../../source/drivers/raster/jpeg.rst:429
 msgid "EXIF_GPSAltitudeRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:428
+#: ../../source/drivers/raster/jpeg.rst:429
 msgid "0x0005"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:429
+#: ../../source/drivers/raster/jpeg.rst:430
 msgid "EXIF_GPSAltitude"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:429
+#: ../../source/drivers/raster/jpeg.rst:430
 msgid "0x0006"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:430
+#: ../../source/drivers/raster/jpeg.rst:431
 msgid "EXIF_GPSTimeStamp"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:430
+#: ../../source/drivers/raster/jpeg.rst:431
 msgid "0x0007"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:431
+#: ../../source/drivers/raster/jpeg.rst:432
 msgid "EXIF_GPSSatellites"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:431
+#: ../../source/drivers/raster/jpeg.rst:432
 msgid "0x0008"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:432
+#: ../../source/drivers/raster/jpeg.rst:433
 msgid "EXIF_GPSStatus"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:432
+#: ../../source/drivers/raster/jpeg.rst:433
 msgid "0x0009"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:433
+#: ../../source/drivers/raster/jpeg.rst:434
 msgid "EXIF_GPSMeasureMode"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:433
+#: ../../source/drivers/raster/jpeg.rst:434
 msgid "0x000A"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:434
+#: ../../source/drivers/raster/jpeg.rst:435
 msgid "EXIF_GPSDOP"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:434
+#: ../../source/drivers/raster/jpeg.rst:435
 msgid "0x000B"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:435
+#: ../../source/drivers/raster/jpeg.rst:436
 msgid "EXIF_GPSSpeedRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:435
+#: ../../source/drivers/raster/jpeg.rst:436
 msgid "0x000C"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:436
+#: ../../source/drivers/raster/jpeg.rst:437
 msgid "EXIF_GPSSpeed"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:436
+#: ../../source/drivers/raster/jpeg.rst:437
 msgid "0x000D"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:437
+#: ../../source/drivers/raster/jpeg.rst:438
 msgid "EXIF_GPSTrackRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:437
+#: ../../source/drivers/raster/jpeg.rst:438
 msgid "0x000E"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:438
+#: ../../source/drivers/raster/jpeg.rst:439
 msgid "EXIF_GPSTrack"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:438
+#: ../../source/drivers/raster/jpeg.rst:439
 msgid "0x000F"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:439
+#: ../../source/drivers/raster/jpeg.rst:440
 msgid "EXIF_GPSImgDirectionRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:439
+#: ../../source/drivers/raster/jpeg.rst:440
 msgid "0x0010"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:440
+#: ../../source/drivers/raster/jpeg.rst:441
 msgid "EXIF_GPSImgDirection"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:440
+#: ../../source/drivers/raster/jpeg.rst:441
 msgid "0x0011"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:441
+#: ../../source/drivers/raster/jpeg.rst:442
 msgid "EXIF_GPSMapDatum"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:441
+#: ../../source/drivers/raster/jpeg.rst:442
 msgid "0x0012"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:442
+#: ../../source/drivers/raster/jpeg.rst:443
 msgid "EXIF_GPSDestLatitudeRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:442
+#: ../../source/drivers/raster/jpeg.rst:443
 msgid "0x0013"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:443
+#: ../../source/drivers/raster/jpeg.rst:444
 msgid "EXIF_GPSDestLatitude"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:443
+#: ../../source/drivers/raster/jpeg.rst:444
 msgid "0x0014"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:444
+#: ../../source/drivers/raster/jpeg.rst:445
 msgid "EXIF_GPSDestLongitudeRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:444
+#: ../../source/drivers/raster/jpeg.rst:445
 msgid "0x0015"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:445
+#: ../../source/drivers/raster/jpeg.rst:446
 msgid "EXIF_GPSDestLongitude"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:445
+#: ../../source/drivers/raster/jpeg.rst:446
 msgid "0x0016"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:446
+#: ../../source/drivers/raster/jpeg.rst:447
 msgid "EXIF_GPSDestBearingRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:446
+#: ../../source/drivers/raster/jpeg.rst:447
 msgid "0x0017"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:447
+#: ../../source/drivers/raster/jpeg.rst:448
 msgid "EXIF_GPSDestBearing"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:447
+#: ../../source/drivers/raster/jpeg.rst:448
 msgid "0x0018"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:448
+#: ../../source/drivers/raster/jpeg.rst:449
 msgid "EXIF_GPSDestDistanceRef"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:448
+#: ../../source/drivers/raster/jpeg.rst:449
 msgid "0x0019"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:449
+#: ../../source/drivers/raster/jpeg.rst:450
 msgid "EXIF_GPSDestDistance"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:449
+#: ../../source/drivers/raster/jpeg.rst:450
 msgid "0x001A"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:450
+#: ../../source/drivers/raster/jpeg.rst:451
 msgid "EXIF_GPSProcessingMethod"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:450
+#: ../../source/drivers/raster/jpeg.rst:451
 msgid "0x001B"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:451
+#: ../../source/drivers/raster/jpeg.rst:452
 msgid "EXIF_GPSAreaInformation"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:451
+#: ../../source/drivers/raster/jpeg.rst:452
 msgid "0x001C"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:452
+#: ../../source/drivers/raster/jpeg.rst:453
 msgid "EXIF_GPSDateStamp"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:452
+#: ../../source/drivers/raster/jpeg.rst:453
 msgid "0x001D"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:452
+#: ../../source/drivers/raster/jpeg.rst:453
 msgid "11"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:453
+#: ../../source/drivers/raster/jpeg.rst:454
 msgid "EXIF_GPSDifferential"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:453
+#: ../../source/drivers/raster/jpeg.rst:454
 msgid "0x001E"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:454
+#: ../../source/drivers/raster/jpeg.rst:455
 msgid "EXIF_GPSHPositioningError"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:454
+#: ../../source/drivers/raster/jpeg.rst:455
 msgid "0x001F"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:458
+#: ../../source/drivers/raster/jpeg.rst:459
 msgid "FLIR metadata"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:462
+#: ../../source/drivers/raster/jpeg.rst:463
 msgid ""
 "Metadata encoded according to the FLIR convention (infrared images) is "
 "available in the ``FLIR`` metadata domain."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:465
+#: ../../source/drivers/raster/jpeg.rst:466
 msgid "Metadata from the following sections is supported:"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:467
+#: ../../source/drivers/raster/jpeg.rst:468
 msgid "Header"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:468
+#: ../../source/drivers/raster/jpeg.rst:469
 msgid "RawData"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:469
+#: ../../source/drivers/raster/jpeg.rst:470
 msgid "CameraInfo"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:470
+#: ../../source/drivers/raster/jpeg.rst:471
 msgid "PaletteInfo"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:471
+#: ../../source/drivers/raster/jpeg.rst:472
 msgid "GPSInfo"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:473
+#: ../../source/drivers/raster/jpeg.rst:474
 msgid "Consult https://exiftool.org/TagNames/FLIR.html for details."
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:475
+#: ../../source/drivers/raster/jpeg.rst:476
 msgid ""
 "The thermal image data, stored either as raw data or in PNG, is exposed "
 "as a GDAL subdataset whose name is "
 "``JPEG:\"filename.jpg\":FLIR_RAW_THERMAL_IMAGE``"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:479
+#: ../../source/drivers/raster/jpeg.rst:480
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:481
+#: ../../source/drivers/raster/jpeg.rst:482
 msgid "`Independent JPEG Group <http://www.ijg.org/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:482
+#: ../../source/drivers/raster/jpeg.rst:483
 msgid "`libjpeg-turbo <http://sourceforge.net/projects/libjpeg-turbo/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:483
+#: ../../source/drivers/raster/jpeg.rst:484
 msgid ":ref:`raster.gtiff`"
 msgstr ""
 
-#: ../../source/drivers/raster/jpeg.rst:484
+#: ../../source/drivers/raster/jpeg.rst:485
 msgid ""
 "`EXIF v2.31 specification "
 "<http://www.cipa.jp/std/documents/e/DC-008-Translation-2016-E.pdf>`__"
 msgstr ""
+
+#~ msgid ""
+#~ "EXIF metadata can be read from "
+#~ "JPEG files (but this will not "
+#~ "result in a georeferenced image even "
+#~ "if the EXIF_GPSLatitude and EXIF_GPSLongitude"
+#~ " tags are set). But if an ESRI"
+#~ " world file exists with the .jgw, "
+#~ ".jpgw/.jpegw or .wld suffixes, it will"
+#~ " be read and used to establish "
+#~ "the geotransform for the image. If "
+#~ "available a MapInfo .tab file will "
+#~ "also be used for georeferencing. "
+#~ "Overviews can be built for JPEG "
+#~ "files as an external .ovr file."
+#~ msgstr ""
 

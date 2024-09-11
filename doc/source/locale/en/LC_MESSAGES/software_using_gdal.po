@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 03:46+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/software_using_gdal.rst:5
 msgid "Software using GDAL"
@@ -61,113 +61,119 @@ msgstr ""
 
 #: ../../source/software_using_gdal.rst:15
 msgid ""
+"`DuckDB Spatial Extension <https://duckdb.org/docs/extensions/spatial>`_:"
+" Spatial extension for DuckDB"
+msgstr ""
+
+#: ../../source/software_using_gdal.rst:16
+msgid ""
 "`EOxServer <http://eoxserver.org>`_  OGC-compliant server for Earth "
 "Observation (EO) data supporting WMS and WCS with EO application profiles"
 " (EOxServer Open License)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:16
+#: ../../source/software_using_gdal.rst:17
 msgid ""
 "`exactextract <https://github.com/isciences/exactextract>`_ Fast and "
 "accurate raster/vector zonal statistics (Apache 2.0)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:17
+#: ../../source/software_using_gdal.rst:18
 msgid ""
 "`Feature Data Objects (FDO)  <http://fdo.osgeo.org>`_  Open source "
 "spatial data access libraries (LGPL)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:18
+#: ../../source/software_using_gdal.rst:19
 msgid ""
 "`Fiona  <http://pypi.python.org/pypi/Fiona>`_  Fiona is OGR's neater "
 "Python API – sleek and elegant on the outside, indomitable power on the "
 "inside."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:19
+#: ../../source/software_using_gdal.rst:20
 msgid ""
 "`gdal3.js.org <https://gdal3.js.org>`_  Convert raster and vector "
 "geospatial data to various formats and coordinate systems entirely in the"
 " browser."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:20
+#: ../../source/software_using_gdal.rst:21
 msgid ""
 "`GdalToTiles  <http://www.codeplex.com/gdal2tilescsharp>`_  C# Program "
 "(open source) for making image tiles for Google Earth with KML "
 "Superoverlay."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:21
+#: ../../source/software_using_gdal.rst:22
 msgid ""
 "`GeoDa  <http://geodacenter.github.io/index.html>`_  Introduction to "
 "Spatial Data Analysis (spatial autocorrelation and spatial regression) "
 "(GPL)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:22
+#: ../../source/software_using_gdal.rst:23
 msgid ""
 "`GeoDjango  <https://docs.djangoproject.com/en/dev/ref/contrib/gis/>`_  A"
 " framework for building geographic web applications."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:23
+#: ../../source/software_using_gdal.rst:24
 msgid ""
 "`GeoKettle  "
 "<https://live.osgeo.org/archive/10.0/en/overview/geokettle_overview.html>`_"
 "  An open source spatial ETL (Extract, Transform and Load) tool (LGPL)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:24
+#: ../../source/software_using_gdal.rst:25
 msgid ""
 "`GeoNotebook  <https://github.com/OpenGeoscience/geonotebook>`_  a "
 "Jupyter notebook extension for geospatial visualization and analysis. "
 "(Apache 2.0)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:25
+#: ../../source/software_using_gdal.rst:26
 msgid ""
 "`GeoServer  <http://geoserver.org>`_  a open source software server "
 "written in Java that allows users to share and edit geospatial data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:26
+#: ../../source/software_using_gdal.rst:27
 msgid ""
 "`GMT (Generic Mapping Tools)  <http://gmt.soest.hawaii.edu>`_  an open "
 "source collection of tools for processing and displaying xy and xyz "
 "datasets."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:27
+#: ../../source/software_using_gdal.rst:28
 msgid ""
 "`GRASS GIS  <http://grass.osgeo.org>`_  A raster/vector open source GIS "
 "that uses GDAL for raster/vector import and export (via "
 "r.in.gdal/r.out.gdal)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:28
+#: ../../source/software_using_gdal.rst:29
 msgid "`gstat  <http://www.gstat.org>`_  a geostatistical modelling package."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:29
+#: ../../source/software_using_gdal.rst:30
 msgid ""
 "`GuidosToolbox  "
 "<https://forest.jrc.ec.europa.eu/en/activities/lpa/gtb/>`_  A multi-"
 "platform desktop application for generic image object analysis."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:30
+#: ../../source/software_using_gdal.rst:31
 msgid "`gvSIG  <http://www.gvsig.com>`_  Desktop GIS Client."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:31
+#: ../../source/software_using_gdal.rst:32
 msgid ""
 "`ILWIS  <http://www.itc.nl/ilwis>`_  Remote Sensing and GIS Desktop "
 "Package."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:32
+#: ../../source/software_using_gdal.rst:33
 msgid ""
 "`Image I/O-Ext  <https://github.com/geosolutions-it/imageio-ext>`_  "
 "includes gdalframework, a framework leveraging on GDAL via SWIG's "
@@ -175,46 +181,46 @@ msgid ""
 "formats."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:33
+#: ../../source/software_using_gdal.rst:34
 msgid ""
 "`libLAS  <https://liblas.org>`_  Open Source LAS 1.0/1.1 ASPRS LiDAR data"
 " translation toolset"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:34
+#: ../../source/software_using_gdal.rst:35
 msgid ""
 "`Loader  <https://github.com/AstunTechnology/Loader>`_  A simple loader "
 "for geographic data in GML and KML that needs some preparation before "
 "loading via ogr2ogr."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:35
+#: ../../source/software_using_gdal.rst:36
 msgid "`MapGuide  <http://mapguide.osgeo.org>`_  Open source web mapping server."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:36
+#: ../../source/software_using_gdal.rst:37
 msgid "`Mapnik  <http://mapnik.org>`_  C++/ Python mapping toolkit"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:37
+#: ../../source/software_using_gdal.rst:38
 msgid ""
 "`MapServer  <http://mapserver.org/index.html>`_  A popular web mapping "
 "application with GDAL support."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:38
+#: ../../source/software_using_gdal.rst:39
 msgid ""
 "`MapWindow  <http://www.mapwindow.org>`_  open source ActiveX control "
 "with GIS functionality."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:39
+#: ../../source/software_using_gdal.rst:40
 msgid ""
 "`MultiSpec <https://github.com/larrybiehl/MultiSpec>`_ Application for "
 "interactively analyzing multispectral/hyperspectral image data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:40
+#: ../../source/software_using_gdal.rst:41
 msgid ""
 "`NASA Ames Stereo Pipeline  "
 "<https://github.com/NeoGeographyToolkit/StereoPipeline>`_  Software for "
@@ -222,45 +228,45 @@ msgid ""
 "(Apache 2.0)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:41
+#: ../../source/software_using_gdal.rst:42
 msgid ""
 "`NASA WorldWind  <https://worldwind.arc.nasa.gov/>`_   Multiplatform "
 "virtual globe library to quickly and easily create interactive "
 "visualizations of 3D globes, map and geographical information."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:42
+#: ../../source/software_using_gdal.rst:43
 msgid ""
 "`NextGIS Formbuilder  <http://nextgis.com/nextgis-formbuilder>`_ Desktop "
 "application for creating and editing forms."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:43
+#: ../../source/software_using_gdal.rst:44
 msgid ""
 "`NextGIS Web  <http://nextgis.com/nextgis-web>`_ Server-side Web GIS and "
 "a framework for storage, visualization and permissions management of all "
 "kinds"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:44
+#: ../../source/software_using_gdal.rst:45
 msgid ""
 "`Ogr2 GUI  <https://sourceforge.net/projects/ogr2gui/>`_ Graphical user "
 "interface for ogr2ogr"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:45
+#: ../../source/software_using_gdal.rst:46
 msgid ""
 "`OpenCPN  <http://opencpn.org>`_  A concise ChartPlotter/Navigator. A "
 "cross-platform ship-borne GUI application."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:46
+#: ../../source/software_using_gdal.rst:47
 msgid ""
 "`OpenEV  <http://openev.sourceforge.net>`_  An OpenGL/GTK/Python based "
 "graphical viewer which exclusively uses GDAL for raster access."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:47
+#: ../../source/software_using_gdal.rst:48
 msgid ""
 "`OFGT <https://github.com/openforis/geospatial-toolkit>`_  a collection "
 "of utilities for multipurpose forest monitoring under the `Open Foris "
@@ -268,13 +274,13 @@ msgid ""
 "Initiative."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:48
+#: ../../source/software_using_gdal.rst:49
 msgid ""
 "`OpenFLUID  <https://www.openfluid-project.org>`_  a software platform "
 "for spatial modelling of landscapes dynamics"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:49
+#: ../../source/software_using_gdal.rst:50
 msgid ""
 "`OpenSceneGraph  <http://www.openscenegraph.org>`_  3D rendering engine "
 "with `osgdem "
@@ -282,340 +288,340 @@ msgid ""
 " and `osgEarth <http://wush.net/trac/osgearth/wiki/Downloads>`_ plugins."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:50
+#: ../../source/software_using_gdal.rst:51
 msgid ""
 "`Opticks  <http://opticks.org>`_  an open source remote sensing "
 "application and development framework, with a GDAL plugin."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:51
+#: ../../source/software_using_gdal.rst:52
 msgid ""
 "`Orfeo Toolbox (OTB)  <http://www.orfeo-toolbox.org>`_  a general remote "
 "sensing image processing library."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:52
+#: ../../source/software_using_gdal.rst:53
 msgid ""
 "`OSSIM  <http://www.ossim.org>`_  Another geospatial viewing and analysis"
 " environment which uses GDAL as one of several plugins."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:53
+#: ../../source/software_using_gdal.rst:54
 msgid "`PDAL  <https://pdal.io>`_  Point Cloud Data Abstraction Library"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:54
+#: ../../source/software_using_gdal.rst:55
 msgid ""
 "`pktools  <http://pktools.nongnu.org/html/index.html>`_  open source "
 "(GPLv3) tools written in C++ for remote sensing image processing"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:55
+#: ../../source/software_using_gdal.rst:56
 msgid ""
 "`PNMapcalc  <http://pawel.netzel.pl/index.php?id=software#a_mapcalc>`_  A"
 " raster map calculator with C-like scripting language."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:56
+#: ../../source/software_using_gdal.rst:57
 msgid ""
 "`PostGIS  <http://www.postgis.net>`_ spatial database extender for "
 "PostgreSQL: The raster loader and many of the raster SQL functions rely "
 "on GDAL."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:57
+#: ../../source/software_using_gdal.rst:58
 msgid ""
 "`PostgreSQL OGR Foreign Data Wrapper <https://github.com/pramsey/pgsql-"
 "ogr-fdw>`_ Expose OGR layer as PostgreSQL foreign tables."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:58
+#: ../../source/software_using_gdal.rst:59
 msgid "`QGIS <http://www.qgis.org>`_ A cross platform desktop GIS."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:59
+#: ../../source/software_using_gdal.rst:60
 msgid ""
 "`R <http://www.r-project.org>`_ A free software environment for "
 "statistical computing and graphics, with bindings to GDAL via the rgdal "
 "package."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:60
+#: ../../source/software_using_gdal.rst:61
 msgid ""
 "`Rasterio  <https://rasterio.readthedocs.io>`_  Python library and "
 "command line utilities to read and write GDAL rasters."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:61
+#: ../../source/software_using_gdal.rst:62
 msgid ""
 "`Rasterix  <https://github.com/mogasw/rasterix/>`_  A cross platform open"
 " source utility to process raster data based on Qt and GDAL."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:62
+#: ../../source/software_using_gdal.rst:63
 msgid ""
 "`SAGA GIS  <http://www.saga-gis.org/en/index.html>`_ A free geographic "
 "information system (GIS), with a special 'Application Programming "
 "Interface' (API) for geographic data processing."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:63
+#: ../../source/software_using_gdal.rst:64
 msgid ""
 "`SNAP  <http://step.esa.int/main/toolboxes/snap>`_  Sentinel Application "
 "Platform for Earth Observation processing and analysis."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:64
+#: ../../source/software_using_gdal.rst:65
 msgid ""
 "`StarSpan  <https://github.com/Ecotrust/starspan>`_  raster/vector "
 "analysis."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:65
+#: ../../source/software_using_gdal.rst:66
 msgid ""
 "`t-rex  <http://t-rex.tileserver.ch>`_  Vector tile server written in "
 "Rust."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:66
+#: ../../source/software_using_gdal.rst:67
 msgid ""
 "`Thuban  <http://thuban.intevation.org>`_  A multi-platform interactive "
 "geographic data viewer."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:67
+#: ../../source/software_using_gdal.rst:68
 msgid ""
 "`Vertual Terrain Project  <http://www.vterrain.org>`_  fostering tools "
 "for easy construction of the real world in interactive, 3D digital form."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:68
+#: ../../source/software_using_gdal.rst:69
 msgid ""
 "`ViRGiS <https://www.virgis.org/>`__ Creating a GIS Platform in Virtual "
 "Reality / Mixed Reality"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:71
+#: ../../source/software_using_gdal.rst:72
 msgid "Proprietary license / Other"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:73
+#: ../../source/software_using_gdal.rst:74
 msgid ""
 "`3D DEM Viewer <http://www.msmacrosystem.nl/Ilwis/index.html>`_ from MS "
 "MacroSystem."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:74
+#: ../../source/software_using_gdal.rst:75
 msgid ""
 "`Cadcorp SIS: <http://www.cadcorp.com>`_ A Windows GIS with a GDAL and "
 "OGR plugins."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:75
+#: ../../source/software_using_gdal.rst:76
 msgid ""
 "`Carmenta Engine  <http://www.carmenta.com>`_ (previously known as "
 "SpatialAce): A GIS Rapid Application Development environment"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:76
+#: ../../source/software_using_gdal.rst:77
 msgid ""
 "`CARTO <http://www.carto.com>`_ A cloud mapping platform to analyze and "
 "visualize geospatial data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:77
+#: ../../source/software_using_gdal.rst:78
 msgid "`Cartographica <http://www.macgis.com>`_ Macintosh GIS package."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:78
+#: ../../source/software_using_gdal.rst:79
 msgid ""
 "`CatchmentSIM <https://csse.com.au/index.php/products/catchmentsim>`_  A "
 "Windows terrain analysis model for hydrologic applications."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:79
+#: ../../source/software_using_gdal.rst:80
 msgid ""
 "`Daylon Leveller <https://www.daylongraphics.com/products/leveller.php>`_"
 " A terrain/heightfield/bumpmap modeler"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:80
+#: ../../source/software_using_gdal.rst:81
 msgid ""
 "`Eonfusion <http://www.eonfusion.com>`_  Analysis and visualization of "
 "time-varying spatial datasets integrated via true data fusion."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:81
+#: ../../source/software_using_gdal.rst:82
 msgid ""
 "`ERDAS ER Viewer  <https://www.hexagongeospatial.com/products/power-"
 "portfolio/other-producer-products/erdas-er-viewer>`_ Image viewer for "
 "very large JPEG 2000 and ECW files."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:82
+#: ../../source/software_using_gdal.rst:83
 msgid "`ESRI ArcGIS 9.2+ <http://www.esri.com>`_  A popular GIS platform."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:83
+#: ../../source/software_using_gdal.rst:84
 msgid ""
 "`Eternix Blaze <http://www.eternix.co.il>`_ Advanced geo-spatial "
 "visualization application and SDK."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:84
+#: ../../source/software_using_gdal.rst:85
 msgid ""
 "`FalconView  <http://www.falconview.org>`_  Windows-based GIS platform "
 "with roots in military mission planning, now available as a free GIS "
 "visualization and analysis package."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:85
+#: ../../source/software_using_gdal.rst:86
 msgid ""
 "`flighttrack  <http://flighttrack.sourceforge.net>`_  GPS track viewing "
 "and downloading software for Mac."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:86
+#: ../../source/software_using_gdal.rst:87
 msgid ""
 "`FME  <http://www.safe.com>`_  A GIS translator package includes a GDAL "
 "plugin."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:87
+#: ../../source/software_using_gdal.rst:88
 msgid ""
 "`GenGIS  <http://kiwi.cs.dal.ca/GenGIS>`_  Software for geospatial "
 "analysis of genetic data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:88
+#: ../../source/software_using_gdal.rst:89
 msgid ""
 "`Geographic Imager  <https://www.avenza.com/geographic-imager>`_  DEM / "
 "aerial / satellite image processing GIS plug-in for Adobe Photoshop, by "
 "Avenza Systems."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:89
+#: ../../source/software_using_gdal.rst:90
 msgid ""
 "`GeoDMS  <http://www.objectvision.hosting.it-rex.nl/geodms>`_  A "
 "framework for building spatial calculation models."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:90
+#: ../../source/software_using_gdal.rst:91
 msgid "`GeoFusion  <http://www.geofusion.com>`_  3D visualization."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:91
+#: ../../source/software_using_gdal.rst:92
 msgid ""
 "`GeoView Pro  <https://apps.apple.com/lu/app/geoview-"
 "pro/id590559352?l=fr>`_  IOS mobile mapping application."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:92
+#: ../../source/software_using_gdal.rst:93
 msgid ""
 "`Geoweb3d  <http://www.geoweb3d.com>`_  A 3D virtual globe that provides "
 "on-the-fly, game-quality visualization of GIS data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:93
+#: ../../source/software_using_gdal.rst:94
 msgid "`Google Earth  <http://earth.google.com>`_  A 3D world viewer."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:94
+#: ../../source/software_using_gdal.rst:95
 msgid ""
 "`GPSeismic  <http://www.gpseismic.com>`_  A suite of applications for "
 "seismic survey."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:95
+#: ../../source/software_using_gdal.rst:96
 msgid ""
 "`HydroDaVE Explorer  <http://www.hydrodave.com>`_  A web-enabled client "
 "that provides users an easy to use, secure, and reliable data management "
 "platform to efficiently manage, access, and analyze environmental data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:96
+#: ../../source/software_using_gdal.rst:97
 msgid ""
 "`IDRISI  <http://www.idrisi.com>`_  A GIS and Image Processing Windows "
 "Desktop application. Uses GDAL to import/export/warp raster data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:97
+#: ../../source/software_using_gdal.rst:98
 msgid ""
 "`Infraworks  <https://www.autodesk.com/products/infraworks/overview>`_  a"
 " BIM software for infrastructure project design, part of the Autodesk "
 "suite."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:98
+#: ../../source/software_using_gdal.rst:99
 msgid ""
 "`iShare  <https://www.astuntechnology.com/cloud-products/ishare/>`_  Web "
 "data integration and publishing platform by Astun Technology."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:99
+#: ../../source/software_using_gdal.rst:100
 msgid ""
 "`Makai Voyager  <http://voyager.makai.com>`_  An advanced 3D/4D "
 "geospatial visualization platform."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:100
+#: ../../source/software_using_gdal.rst:101
 msgid ""
 "`MapInfo Professional  <http://www.mapinfo.com/product/mapinfo-"
 "professional>`_  Desktop GIS and mapping application"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:101
+#: ../../source/software_using_gdal.rst:102
 msgid ""
 "`MapTiler  <http://www.maptiler.com>`_  Generator of tiles for "
 "interactive maps and overlays made from raster images and geodata."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:102
+#: ../../source/software_using_gdal.rst:103
 msgid ""
 "`Maptitude Mapping Software "
 "<http://www.caliper.com/maptitude/mappingsoftware.htm>`_  Desktop GIS and"
 " business mapping application"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:103
+#: ../../source/software_using_gdal.rst:104
 msgid ""
 "`MicroImages TNT <http://www.microimages.com>`_  advanced software for "
 "geospatial analysis (Windows, Linux, Mac OS X and UNIX)"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:104
+#: ../../source/software_using_gdal.rst:105
 msgid ""
 "`Micromine  <http://www.micromine.com>`_  A mining software solution that"
 " uses GDAL for reading/writing various geospatial file formats."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:105
+#: ../../source/software_using_gdal.rst:106
 msgid ""
 "`Mirone  <http://joa-quim.pt/mirone/main.html>`_  Matlab based package "
 "for geospatial, oceanographic and geophysical analysis of grids"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:106
+#: ../../source/software_using_gdal.rst:107
 msgid ""
 "`Mygeodata Converter  "
 "<http://mygeodata.eu/apps/converter/index_EN.html>`_  Online converter of"
 " GDAL raster and OGR vector formats"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:107
+#: ../../source/software_using_gdal.rst:108
 msgid ""
 "`OPALS  <https://opals.geo.tuwien.ac.at/html/stable/index.html>`_ "
 "Orientation and Processing of Airborne Laser Scanning Data"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:108
+#: ../../source/software_using_gdal.rst:109
 msgid ""
 "`Procura  <http://www.michellcomputing.co.uk/procura.html>`_ Landholding "
 "inspection system developed for the UK Homes and Communities Agency. GDAL"
 " is used for checking out background mapping."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:109
+#: ../../source/software_using_gdal.rst:110
 msgid ""
 "`ScanMagic  "
 "<https://www.scanex.ru/en/software/vizualizatsiya-i-katalogizatsiya/scan-"
@@ -623,107 +629,107 @@ msgid ""
 " remote sensing data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:110
+#: ../../source/software_using_gdal.rst:111
 msgid ""
 "`Scalable Algorithmics (SCALGO)  <http://scalgo.com>`_  Software for "
 "efficiently constructing and performing computations on very large raster"
 " and TIN terrain models."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:111
+#: ../../source/software_using_gdal.rst:112
 msgid ""
 "`Scenomics  <http://www.scenomics.com>`_  Software for building terrain "
 "databases uses GDAL for projection and data import/export."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:112
+#: ../../source/software_using_gdal.rst:113
 msgid ""
 "`scenProc  <http://www.scenerydesign.org/scenproc>`_ scenProc: A tool to "
 "create scenery for Microsoft Flight Simulator and Lockheed Martin "
 "Prepar3D by processing G"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:113
+#: ../../source/software_using_gdal.rst:114
 msgid ""
 "`SeaView  <https://www.seaviewgis.com>`_  A 3D GIS package for "
 "geophysical and hydrographical data (side scan sonar, subbottom profiler,"
 " magnetometer, multibeam, etc."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:114
+#: ../../source/software_using_gdal.rst:115
 msgid ""
 "`SkylineGlobe  <http://www.skylineglobe.com>`_  The Skyline suite of "
 "interactive applications allows you to build, view, query and analyze "
 "customized, virtual 3D landscapes."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:115
+#: ../../source/software_using_gdal.rst:116
 msgid ""
 "`SpacEyes3D  <http://www.spaceyes.com>`_  3D visualization software for "
 "cartographic data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:116
+#: ../../source/software_using_gdal.rst:117
 msgid ""
 "`Spatial Manager  <http://www.spatialmanager.com>`_  A product suite "
 "designed designed to manage spatial data in a simple, fast and "
 "inexpensive way. Uses GDAL to import/export data."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:117
+#: ../../source/software_using_gdal.rst:118
 msgid ""
 "`TacitView  <https://www.insitu.com/information-delivery/information-"
 "processing/tacitview>`_  An imagery visualization and exploitation "
 "package for military intelligence."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:118
+#: ../../source/software_using_gdal.rst:119
 msgid ""
 "`TatukGIS  <http://www.tatukgis.com>`_  Desktop GIS mapping and data "
 "editing application."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:119
+#: ../../source/software_using_gdal.rst:120
 msgid ""
 "`Team Awareness Kit <https://tak.gov>`_  Suite of georeferenced imagery "
 "and situational awareness tools developed for military planning and "
 "execution, now available for civilian use."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:120
+#: ../../source/software_using_gdal.rst:121
 msgid ""
 "`TerraGo Technologies  <http://www.terragotech.com>`_  The GeoPDF file "
 "format is used to distribute and collaborate geospatial data and uses "
 "GDAL for data import/export."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:121
+#: ../../source/software_using_gdal.rst:122
 msgid ""
 "`TerrainView  <http://www.viewtec.net>`_  Interactive real-time 3D GIS "
 "Software."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:122
+#: ../../source/software_using_gdal.rst:123
 msgid ""
 "`TransCAD GIS  <http://www.caliper.com>`_  Desktop Transportation "
 "Analysis Software"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:123
+#: ../../source/software_using_gdal.rst:124
 msgid ""
 "`TravTime  <https://travtime.software.informer.com/download/>`_  .NET "
 "Application for visualizing, processing and analyzing GPS data for travel"
 " time, speed, and de"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:124
+#: ../../source/software_using_gdal.rst:125
 msgid ""
 "`VectorWorks <http://www.vectorworks.net>`_ The Vectorworks line of "
 "software products provides professional design solutions in the AEC, "
 "entertainment and landscape design industries."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:125
+#: ../../source/software_using_gdal.rst:126
 msgid ""
 "`WindNinja  <https://www.firelab.org/project/windninja>`_  wind model for"
 " fire behavior modeling."

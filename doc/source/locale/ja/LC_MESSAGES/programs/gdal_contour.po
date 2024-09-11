@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -149,24 +149,32 @@ msgid "Generate contour polygons rather than contour lines."
 msgstr ""
 
 #: ../../source/programs/gdal_contour.rst:129
+msgid ""
+"Group n features per transaction (default 100 000). Increase the value "
+"for better performance when writing into DBMS drivers that have "
+"transaction support. ``n`` can be set to unlimited to load the data into "
+"a single transaction. If set to 0, no explicit transaction is done."
+msgstr ""
+
+#: ../../source/programs/gdal_contour.rst:138
 msgid "Be quiet: do not print progress indicators."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:132
+#: ../../source/programs/gdal_contour.rst:141
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:134
+#: ../../source/programs/gdal_contour.rst:143
 msgid ""
 "Functionality of this utility can be done from C with "
 ":cpp:func:`GDALContourGenerate`."
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:137
+#: ../../source/programs/gdal_contour.rst:146
 msgid "Example"
 msgstr ""
 
-#: ../../source/programs/gdal_contour.rst:139
+#: ../../source/programs/gdal_contour.rst:148
 msgid ""
 "This would create 10-meter contours from the DEM data in :file:`dem.tif` "
 "and produce a shapefile in :file:`contour.shp|shx|dbf` with the contour "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
@@ -31,10 +31,9 @@ msgid ""
 "gis.it/fossil/libspatialite/index>`_ support too to benefit from spatial "
 "functions."
 msgstr ""
-"``SQLite`` 方言は :ref:`ogr_sql_dialect` の代替SQL方言として使用できます. "
-"これは, GDAL/OGRがSQLiteのサポートをビルドされていることを前提としています. "
-"空間関数を利用するためには, `Spatialite <https://www.gaia-gis.it/fossil/libspatialite/index>`_ "
-"のサポートも望ましいです."
+"``SQLite`` 方言は :ref:`ogr_sql_dialect` の代替SQL方言として使用できます. これは, "
+"GDAL/OGRがSQLiteのサポートをビルドされていることを前提としています. 空間関数を利用するためには, `Spatialite "
+"<https://www.gaia-gis.it/fossil/libspatialite/index>`_ のサポートも望ましいです."
 
 #: ../../source/user/sql_sqlite_dialect.rst:14
 msgid ""
@@ -44,8 +43,8 @@ msgid ""
 ":cpp:func:`GDALDataset::ExecuteSQL`, or with the `-dialect` option of the"
 " :ref:`ogrinfo` or :ref:`ogr2ogr` utilities."
 msgstr ""
-"SQLite方言はOGR SQL方言と同様に, 任意のOGRデータソースで使用できます. "
-"``SQLite`` 方言は, :cpp:func:`GDALDataset::ExecuteSQL` の方言パラメータとして ``SQLite`` 文字列を渡すか, "
+"SQLite方言はOGR SQL方言と同様に, 任意のOGRデータソースで使用できます. ``SQLite`` 方言は, "
+":cpp:func:`GDALDataset::ExecuteSQL` の方言パラメータとして ``SQLite`` 文字列を渡すか, "
 ":ref:`ogrinfo` や :ref:`ogr2ogr` ユーティリティの `-dialect` オプションでリクエストできます."
 
 #: ../../source/user/sql_sqlite_dialect.rst:19
@@ -58,8 +57,9 @@ msgid ""
 ":ref:`ogr_sql_dialect`"
 msgstr ""
 "これは主にSELECT文を実行するために使用されますが, 更新をサポートするデータソースの場合, "
-"INSERT/UPDATE/DELETE文も実行できます. GDALは内部的に `SQLiteの仮想テーブルメカニズム <https://sqlite.org/vtab.html>`_ "
-"を使用しているため, ALTER TABLEのような操作はサポートされていません. ALTER TABLEやDROP TABLEを実行するには, "
+"INSERT/UPDATE/DELETE文も実行できます. GDALは内部的に `SQLiteの仮想テーブルメカニズム "
+"<https://sqlite.org/vtab.html>`_ を使用しているため, ALTER "
+"TABLEのような操作はサポートされていません. ALTER TABLEやDROP TABLEを実行するには, "
 ":ref:`ogr_sql_dialect` を使用してください."
 
 #: ../../source/user/sql_sqlite_dialect.rst:25
@@ -71,21 +71,20 @@ msgid ""
 " when necessary, since going through the virtual table mechanism might "
 "affect performance."
 msgstr ""
-"データソースがSQLiteデータベース(GeoPackage, SpatiaLite)の場合, SQLite方言はネイティブSQL方言として機能し, "
-"仮想テーブルメカニズムは使用されません. この場合でも, \"-dialect INDIRECT_SQLITE\" を指定することでGDALに仮想テーブルを使用させることができます. "
-"これは必要な場合にのみ使用するべきです. 仮想テーブルメカニズムを経由するとパフォーマンスに影響する可能性があるためです."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+"データソースがSQLiteデータベース(GeoPackage, SpatiaLite)の場合, "
+"SQLite方言はネイティブSQL方言として機能し, 仮想テーブルメカニズムは使用されません. この場合でも, \"-dialect "
+"INDIRECT_SQLITE\" を指定することでGDALに仮想テーブルを使用させることができます. これは必要な場合にのみ使用するべきです. "
+"仮想テーブルメカニズムを経由するとパフォーマンスに影響する可能性があるためです."
 
 #: ../../source/user/sql_sqlite_dialect.rst:31
 msgid ""
 "The syntax of the SQL statements is fully the one of the SQLite SQL "
 "engine. You can refer to the following pages:"
-msgstr ""
-"SQLステートメントの構文は完全にSQLite SQLエンジンのものです. 以下の"
-"ページを参照してください:"
+msgstr "SQLステートメントの構文は完全にSQLite SQLエンジンのものです. 以下のページを参照してください:"
 
 #: ../../source/user/sql_sqlite_dialect.rst:34
 msgid "`SELECT <http://www.sqlite.org/lang_select.html>`_"
-msgstr  "`SELECT <http://www.sqlite.org/lang_select.html>`_"
+msgstr "`SELECT <http://www.sqlite.org/lang_select.html>`_"
 
 #: ../../source/user/sql_sqlite_dialect.rst:35
 msgid "`INSERT <http://www.sqlite.org/lang_insert.html>`_"
@@ -93,7 +92,7 @@ msgstr "`INSERT <http://www.sqlite.org/lang_insert.html>`_"
 
 #: ../../source/user/sql_sqlite_dialect.rst:36
 msgid "`UPDATE <http://www.sqlite.org/lang_update.html>`_"
-msgstr  "`UPDATE <http://www.sqlite.org/lang_update.html>`_"
+msgstr "`UPDATE <http://www.sqlite.org/lang_update.html>`_"
 
 #: ../../source/user/sql_sqlite_dialect.rst:37
 msgid "`DELETE <http://www.sqlite.org/lang_delete.html>`_"
@@ -112,24 +111,22 @@ msgid ""
 "simplest form of OGR SQLITE SELECT statement looks like this:"
 msgstr ""
 "SELECT文は, レイヤーの地物(データベースのテーブル行に類似)を取得するために使用されます. "
-"クエリの結果は地物の一時レイヤーとして表されます. データソースのレイヤーはデータベースのテーブルに類似し, "
-"地物の属性は列の値に類似します. OGR SQLITE SELECT文の最も単純な形式は次のようになります:"
+"クエリの結果は地物の一時レイヤーとして表されます. データソースのレイヤーはデータベースのテーブルに類似し, 地物の属性は列の値に類似します. "
+"OGR SQLITE SELECT文の最も単純な形式は次のようになります:"
 
 #: ../../source/user/sql_sqlite_dialect.rst:52
 msgid ""
 "More complex statements can of course be used, including WHERE, JOIN, "
 "USING, GROUP BY, ORDER BY, sub SELECT, ..."
 msgstr ""
-"WHERE, JOIN, USING, GROUP BY, ORDER BY, sub SELECTなどを含むより複雑なステートメント"
-"を使用することもできます."
+"WHERE, JOIN, USING, GROUP BY, ORDER BY, sub "
+"SELECTなどを含むより複雑なステートメントを使用することもできます."
 
 #: ../../source/user/sql_sqlite_dialect.rst:55
 msgid ""
 "The table names that can be used are the layer names available in the "
 "datasource on which the ExecuteSQL() method is called."
-msgstr ""
-"使用できるテーブル名は, ExecuteSQL()メソッドが呼び出されるデータソースで利用可能な"
-"レイヤー名です."
+msgstr "使用できるテーブル名は, ExecuteSQL()メソッドが呼び出されるデータソースで利用可能なレイヤー名です."
 
 #: ../../source/user/sql_sqlite_dialect.rst:58
 msgid ""
@@ -137,8 +134,8 @@ msgid ""
 "datasources with the following syntax : "
 "\"other_datasource_name\".\"layer_name\"."
 msgstr ""
-"OGRSQLと同様に, 他のデータソースのレイヤーを参照することも可能です. "
-"次の構文を使用します: \"other_datasource_name\".\"layer_name\"."
+"OGRSQLと同様に, 他のデータソースのレイヤーを参照することも可能です. 次の構文を使用します: "
+"\"other_datasource_name\".\"layer_name\"."
 
 #: ../../source/user/sql_sqlite_dialect.rst:65
 msgid ""
@@ -148,8 +145,8 @@ msgid ""
 "from the master database."
 msgstr ""
 "マスターデータソースがSQLiteデータベース(GeoPackage, SpatiaLite)の場合, "
-"間接的なSQLite方言を使用する必要があります. そうでない場合, 追加のデータソースは"
-"決して開かれませんが, 結合に使用されるテーブルはマスターデータベースから検索されます."
+"間接的なSQLite方言を使用する必要があります. そうでない場合, 追加のデータソースは決して開かれませんが, "
+"結合に使用されるテーブルはマスターデータベースから検索されます."
 
 #: ../../source/user/sql_sqlite_dialect.rst:74
 msgid ""
@@ -157,8 +154,8 @@ msgid ""
 "JOIN, ... clauses are the field names of the layers. Expressions, SQLite "
 "functions, spatial functions, etc... can also be used."
 msgstr ""
-"結果の列リスト, WHERE, JOINなどの句で使用できる列名は, レイヤーのフィールド名です. "
-"式, SQLite関数, 空間関数なども使用できます."
+"結果の列リスト, WHERE, JOINなどの句で使用できる列名は, レイヤーのフィールド名です. 式, SQLite関数, "
+"空間関数なども使用できます."
 
 #: ../../source/user/sql_sqlite_dialect.rst:79
 msgid ""
@@ -167,8 +164,9 @@ msgid ""
 "the underlying OGR layers. Joins can be very expensive operations if the "
 "secondary table is not indexed on the key field being used."
 msgstr ""
-"WHERE句やJOIN句でフィールドに対する条件が表現されると, できる限り, それらは基になるOGRレイヤーに適用される属性フィルタとして"
-"変換されます. キーフィールドにインデックスがない場合, JOINは非常に重い操作になる可能性があります."
+"WHERE句やJOIN句でフィールドに対する条件が表現されると, できる限り, "
+"それらは基になるOGRレイヤーに適用される属性フィルタとして変換されます. キーフィールドにインデックスがない場合, "
+"JOINは非常に重い操作になる可能性があります."
 
 #: ../../source/user/sql_sqlite_dialect.rst:85
 msgid "LIKE operator"
@@ -179,15 +177,19 @@ msgid ""
 "In SQLite, the LIKE operator is case insensitive, unless ``PRAGMA "
 "case_sensitive_like = 1`` has been issued."
 msgstr ""
-"SQLiteでは, LIKE演算子は大文字小文字を区別しません. ``PRAGMA case_sensitive_like = 1`` が発行されて"
-"いない限りです."
+"SQLiteでは, LIKE演算子は大文字小文字を区別しません. ``PRAGMA case_sensitive_like = 1`` "
+"が発行されていない限りです."
 
 #: ../../source/user/sql_sqlite_dialect.rst:90
 msgid ""
 "Starting with GDAL 3.9, GDAL installs a custom LIKE comparison, such that"
-" UTF-8 characters are taken into account by ``LIKE`` and ``ILIKE`` "
-"operators. For ILIKE case insensitive comparisons, this is restricted to "
-"the `ASCII "
+" UTF-8 characters are taken into account by ``LIKE`` operator."
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:93
+#, fuzzy
+msgid ""
+"For case insensitive comparisons, this is restricted to the `ASCII "
 "<https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)>`__, `Latin-1 "
 "Supplement <https://en.wikipedia.org/wiki/Latin-"
 "1_Supplement_(Unicode_block)>`__, `Latin Extended-A "
@@ -196,17 +198,21 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ and `Cyrillic "
 "<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ Unicode categories."
 msgstr ""
-"GDAL 3.9以降, GDALはUTF-8文字を ``LIKE`` および ``ILIKE`` 演算子で考慮するカスタムLIKE比較をインストールします. "
-"ILIKEの大文字小文字を区別しない比較の場合, これは `ASCII <https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)>`__, "
-"`Latin-1 Supplement <https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)>`__, `Latin Extended-A <https://en.wikipedia.org/wiki/Latin_Extended-A>`__, "
-"`Latin Extended-B <https://en.wikipedia.org/wiki/Latin_Extended-B>`__, `Greek and Coptic <https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ "
-"および `Cyrillic <https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ Unicodeカテゴリに制限されます."
+"GDAL 3.9以降, GDALはUTF-8文字を ``LIKE`` および ``ILIKE`` "
+"演算子で考慮するカスタムLIKE比較をインストールします. ILIKEの大文字小文字を区別しない比較の場合, これは `ASCII "
+"<https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)>`__, `Latin-1 "
+"Supplement <https://en.wikipedia.org/wiki/Latin-"
+"1_Supplement_(Unicode_block)>`__, `Latin Extended-A "
+"<https://en.wikipedia.org/wiki/Latin_Extended-A>`__, `Latin Extended-B "
+"<https://en.wikipedia.org/wiki/Latin_Extended-B>`__, `Greek and Coptic "
+"<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ および `Cyrillic "
+"<https://en.wikipedia.org/wiki/Greek_and_Coptic>`__ Unicodeカテゴリに制限されます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:101
+#: ../../source/user/sql_sqlite_dialect.rst:102
 msgid "Delimited identifiers"
 msgstr "デリミテッド識別子"
 
-#: ../../source/user/sql_sqlite_dialect.rst:103
+#: ../../source/user/sql_sqlite_dialect.rst:104
 msgid ""
 "If names of layers or attributes are reserved keywords in SQL like 'FROM'"
 " or they begin with a number or underscore they must be handled as "
@@ -214,34 +220,35 @@ msgid ""
 "queries. Double quotes can be used even when they are not strictly "
 "needed."
 msgstr ""
-"レイヤーや属性の名前がSQLの予約キーワードである場合(例: 'FROM')や, 数字やアンダースコアで始まる場合, "
-"クエリで \"デリミテッド識別子\" として扱われ, ダブルクォーテーションで囲まれます. ダブルクォーテーションは, "
+"レイヤーや属性の名前がSQLの予約キーワードである場合(例: 'FROM')や, 数字やアンダースコアで始まる場合, クエリで "
+"\"デリミテッド識別子\" として扱われ, ダブルクォーテーションで囲まれます. ダブルクォーテーションは, "
 "厳密に必要でない場合でも使用できます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:112
+#: ../../source/user/sql_sqlite_dialect.rst:113
 msgid ""
 "When SQL statements are used in the command shell and the statement "
 "itself is put between double quotes, the internal double quotes must be "
 "escaped with \\\\"
 msgstr ""
-"SQLステートメントがコマンドシェルで使用され, ステートメント自体がダブルクォーテーションで囲まれている場合, "
-"内部のダブルクォーテーションは \\\\ でエスケープする必要があります."
+"SQLステートメントがコマンドシェルで使用され, ステートメント自体がダブルクォーテーションで囲まれている場合, 内部のダブルクォーテーションは "
+"\\\\ でエスケープする必要があります."
 
-#: ../../source/user/sql_sqlite_dialect.rst:120
+#: ../../source/user/sql_sqlite_dialect.rst:121
 msgid "Geometry field"
 msgstr "ジオメトリフィールド"
 
-#: ../../source/user/sql_sqlite_dialect.rst:122
+#: ../../source/user/sql_sqlite_dialect.rst:123
 msgid ""
 "The ``GEOMETRY`` special field represents the geometry of the feature "
 "returned by OGRFeature::GetGeometryRef(). It can be explicitly specified "
 "in the result column list of a SELECT, and is automatically selected if "
 "the * wildcard is used."
 msgstr ""
-"``GEOMETRY`` 特殊フィールドは, OGRFeature::GetGeometryRef() によって返される地物のジオメトリを表します. "
-"SELECTの結果列リストで明示的に指定することができ, * ワイルドカードが使用されると自動的に選択されます."
+"``GEOMETRY`` 特殊フィールドは, OGRFeature::GetGeometryRef() "
+"によって返される地物のジオメトリを表します. SELECTの結果列リストで明示的に指定することができ, * "
+"ワイルドカードが使用されると自動的に選択されます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:127
+#: ../../source/user/sql_sqlite_dialect.rst:128
 msgid ""
 "For OGR layers that have a non-empty geometry column name (generally for "
 "RDBMS datasources), as returned by OGRLayer::GetGeometryColumn(), the "
@@ -251,101 +258,95 @@ msgid ""
 "the name to use in the SQL statement is always \"geometry\". Here we'll "
 "use it case-insensitively (as all field names are in a SELECT statement):"
 msgstr ""
-"一般的にRDBMSデータソースの場合, OGRLayer::GetGeometryColumn() によって返されるジオメトリ列名が空でないOGRレイヤーに対して, "
-"SQLステートメントのジオメトリ特殊フィールドの名前は, 基になるOGRレイヤーのジオメトリ列の名前になります. "
-"ソースレイヤーのジオメトリ列の名前が空の場合, shapefileなどの場合, SQLステートメントで使用する名前は常に \"geometry\" です. "
-"ここでは, 大文字小文字を区別せずに使用します(すべてのフィールド名がSELECTステートメントであるため):"
+"一般的にRDBMSデータソースの場合, OGRLayer::GetGeometryColumn() "
+"によって返されるジオメトリ列名が空でないOGRレイヤーに対して, SQLステートメントのジオメトリ特殊フィールドの名前は, "
+"基になるOGRレイヤーのジオメトリ列の名前になります. ソースレイヤーのジオメトリ列の名前が空の場合, shapefileなどの場合, "
+"SQLステートメントで使用する名前は常に \"geometry\" です. ここでは, "
+"大文字小文字を区別せずに使用します(すべてのフィールド名がSELECTステートメントであるため):"
 
-#: ../../source/user/sql_sqlite_dialect.rst:138
-#: ../../source/user/sql_sqlite_dialect.rst:150
-#: ../../source/user/sql_sqlite_dialect.rst:225
-#: ../../source/user/sql_sqlite_dialect.rst:354
-#: ../../source/user/sql_sqlite_dialect.rst:365
+#: ../../source/user/sql_sqlite_dialect.rst:139
+#: ../../source/user/sql_sqlite_dialect.rst:151
+#: ../../source/user/sql_sqlite_dialect.rst:226
+#: ../../source/user/sql_sqlite_dialect.rst:355
+#: ../../source/user/sql_sqlite_dialect.rst:366
 msgid "returns:"
 msgstr "リターン:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:161
+#: ../../source/user/sql_sqlite_dialect.rst:162
 msgid "Feature id (FID)"
 msgstr "地物ID (FID)"
 
-#: ../../source/user/sql_sqlite_dialect.rst:163
+#: ../../source/user/sql_sqlite_dialect.rst:164
 msgid ""
 "The feature id is a special property of a feature and not treated as an "
 "attribute of the feature.  In some cases it is convenient to be able to "
 "utilize the feature id in queries and result sets as a regular field.  To"
 " do so use the name ``rowid``."
 msgstr ""
-"地物IDは地物の特別なプロパティであり, 地物の属性として扱われません. "
-"場合によっては, 地物IDをクエリや結果セットで通常のフィールドとして利用できると便利です. "
-"その場合は ``rowid`` という名前を使用します."
+"地物IDは地物の特別なプロパティであり, 地物の属性として扱われません. 場合によっては, "
+"地物IDをクエリや結果セットで通常のフィールドとして利用できると便利です. その場合は ``rowid`` という名前を使用します."
 
-#: ../../source/user/sql_sqlite_dialect.rst:168
+#: ../../source/user/sql_sqlite_dialect.rst:169
 msgid ""
 "Starting with GDAL 3.8, if the layer has a named FID column "
 "(:cpp:func:`OGRLayer::GetFIDColumn` != \"\"), this name may also be used."
 msgstr ""
-"GDAL 3.8以降, レイヤーに名前付きFID列がある場合 (:cpp:func:`OGRLayer::GetFIDColumn` != \"\"), "
-"この名前も使用できます."
+"GDAL 3.8以降, レイヤーに名前付きFID列がある場合 (:cpp:func:`OGRLayer::GetFIDColumn` != "
+"\"\"), この名前も使用できます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:171
-#: ../../source/user/sql_sqlite_dialect.rst:179
+#: ../../source/user/sql_sqlite_dialect.rst:172
+#: ../../source/user/sql_sqlite_dialect.rst:180
 msgid ""
 "The field wildcard expansions will not include the feature id, but it may"
 " be explicitly included using a syntax like:"
-msgstr ""
-"フィールドワイルドカードの展開には地物IDは含まれませんが, 次のような構文を使用して"
-"明示的に含めることができます:"
+msgstr "フィールドワイルドカードの展開には地物IDは含まれませんが, 次のような構文を使用して明示的に含めることができます:"
 
-
-#: ../../source/user/sql_sqlite_dialect.rst:186
+#: ../../source/user/sql_sqlite_dialect.rst:187
 msgid "It is of course possible to rename it:"
 msgstr "これの名前を変更することも可能です:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:193
+#: ../../source/user/sql_sqlite_dialect.rst:194
 msgid "OGR_STYLE special field"
 msgstr "OGR_STYLE特殊フィールド"
 
-#: ../../source/user/sql_sqlite_dialect.rst:195
+#: ../../source/user/sql_sqlite_dialect.rst:196
 msgid ""
 "The ``OGR_STYLE`` special field represents the style string of the "
 "feature returned by OGRFeature::GetStyleString(). By using this field and"
 " the ``LIKE`` operator the result of the query can be filtered by the "
 "style. For example we can select the annotation features as:"
 msgstr ""
-"``OGR_STYLE`` 特殊フィールドは, OGRFeature::GetStyleString() によって返される地物のスタイル文字列を表します. "
-"このフィールドと ``LIKE`` 演算子を使用することで, クエリの結果をスタイルでフィルタリングすることができます. "
-"例えば, アノテーション地物を選択することができます:"
+"``OGR_STYLE`` 特殊フィールドは, OGRFeature::GetStyleString() "
+"によって返される地物のスタイル文字列を表します. このフィールドと ``LIKE`` 演算子を使用することで, "
+"クエリの結果をスタイルでフィルタリングすることができます. 例えば, アノテーション地物を選択することができます:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:205
+#: ../../source/user/sql_sqlite_dialect.rst:206
 msgid "Statistics functions"
 msgstr "統計関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:207
+#: ../../source/user/sql_sqlite_dialect.rst:208
 msgid ""
 "In addition to standard COUNT(), SUM(), AVG(), MIN(), MAX(), the "
 "following aggregate functions are available:"
-msgstr ""
-"標準の COUNT(), SUM(), AVG(), MIN(), MAX() に加えて, 次の集計関数が"
-"利用可能です:"
+msgstr "標準の COUNT(), SUM(), AVG(), MIN(), MAX() に加えて, 次の集計関数が利用可能です:"
 
-
-#: ../../source/user/sql_sqlite_dialect.rst:210
+#: ../../source/user/sql_sqlite_dialect.rst:211
 msgid "STDDEV_POP: (GDAL >= 3.10) numerical population standard deviation."
 msgstr "STDDEV_POP: (GDAL >= 3.10) 数値の母集団標準偏差."
 
-#: ../../source/user/sql_sqlite_dialect.rst:211
+#: ../../source/user/sql_sqlite_dialect.rst:212
 msgid ""
 "STDDEV_SAMP: (GDAL >= 3.10) numerical `sample standard deviation "
 "<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__"
 msgstr ""
-"STDDEV_SAMP: (GDAL >= 3.10) 数値の "
-"`標本標準偏差 <https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__"
+"STDDEV_SAMP: (GDAL >= 3.10) 数値の `標本標準偏差 "
+"<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__"
 
-#: ../../source/user/sql_sqlite_dialect.rst:214
+#: ../../source/user/sql_sqlite_dialect.rst:215
 msgid "Spatialite SQL functions"
 msgstr "Spatialite SQL関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:216
+#: ../../source/user/sql_sqlite_dialect.rst:217
 msgid ""
 "When GDAL/OGR is build with support for the `Spatialite <https://www"
 ".gaia-gis.it/fossil/libspatialite/index>`_ library, a lot of `extra SQL "
@@ -353,11 +354,12 @@ msgid ""
 "latest.html>`_, in particular spatial functions, can be used in results "
 "column fields, WHERE clauses, etc...."
 msgstr ""
-"GDAL/OGRが `Spatialite <https://www.gaia-gis.it/fossil/libspatialite/index>`_ ライブラリのサポートでビルドされている場合, "
-"多くの `追加のSQL関数 <http://www.gaia-gis.it/gaia-sins/spatialite-sql-latest.html>`_ が利用可能になります. "
-"特に空間関数は, 結果の列フィールド, WHERE句などで使用できます."
+"GDAL/OGRが `Spatialite <https://www.gaia-"
+"gis.it/fossil/libspatialite/index>`_ ライブラリのサポートでビルドされている場合, 多くの `追加のSQL関数"
+" <http://www.gaia-gis.it/gaia-sins/spatialite-sql-latest.html>`_ "
+"が利用可能になります. 特に空間関数は, 結果の列フィールド, WHERE句などで使用できます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:241
+#: ../../source/user/sql_sqlite_dialect.rst:242
 msgid ""
 "Note that due to the loose typing mechanism of SQLite, if a geometry "
 "expression returns a NULL value for the first row, this will generally "
@@ -365,141 +367,138 @@ msgid ""
 "then useful to sort the results by making sure that non-null geometries "
 "are returned first:"
 msgstr ""
-"SQLiteの緩い型付けメカニズムのため, ジオメトリ式が最初の行でNULL値を返すと,"
-" 一般的にOGRはその列をジオメトリ列として認識しません. "
-"そのため, 非NULLジオメトリが最初に返されるように結果をソートすることが役立つ場合があります:"
+"SQLiteの緩い型付けメカニズムのため, ジオメトリ式が最初の行でNULL値を返すと, 一般的にOGRはその列をジオメトリ列として認識しません."
+" そのため, 非NULLジオメトリが最初に返されるように結果をソートすることが役立つ場合があります:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:251
+#: ../../source/user/sql_sqlite_dialect.rst:252
 msgid "OGR datasource SQL functions"
 msgstr "OGRデータソースSQL関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:253
+#: ../../source/user/sql_sqlite_dialect.rst:254
 msgid ""
 "The ``ogr_datasource_load_layers(datasource_name[, update_mode[, "
 "prefix]])`` function can be used to automatically load all the layers of "
 "a datasource as :ref:`VirtualOGR tables <vector.sqlite>`."
 msgstr ""
-"``ogr_datasource_load_layers(datasource_name[, update_mode[, prefix]])`` 関数は, "
-"データソースのすべてのレイヤーを "
-":ref:`VirtualOGR tables <vector.sqlite>` として自動的にロードするために使用できます."
+"``ogr_datasource_load_layers(datasource_name[, update_mode[, prefix]])`` "
+"関数は, データソースのすべてのレイヤーを :ref:`VirtualOGR tables <vector.sqlite>` "
+"として自動的にロードするために使用できます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:269
+#: ../../source/user/sql_sqlite_dialect.rst:270
 msgid "OGR layer SQL functions"
 msgstr "OGRレイヤーSQL関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:271
+#: ../../source/user/sql_sqlite_dialect.rst:272
 msgid ""
 "The following SQL functions are available and operate on a layer name : "
 "``ogr_layer_Extent()``, ``ogr_layer_SRID()``, "
 "``ogr_layer_GeometryType()`` and ``ogr_layer_FeatureCount()``"
 msgstr ""
-"次のSQL関数が利用可能で, レイヤー名に対して動作します: "
-"``ogr_layer_Extent()``, ``ogr_layer_SRID()``, "
-"``ogr_layer_GeometryType()`` および ``ogr_layer_FeatureCount()``"
+"次のSQL関数が利用可能で, レイヤー名に対して動作します: ``ogr_layer_Extent()``, "
+"``ogr_layer_SRID()``, ``ogr_layer_GeometryType()`` および "
+"``ogr_layer_FeatureCount()``"
 
-#: ../../source/user/sql_sqlite_dialect.rst:289
+#: ../../source/user/sql_sqlite_dialect.rst:290
 msgid "OGR compression functions"
 msgstr "OGR圧縮関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:291
+#: ../../source/user/sql_sqlite_dialect.rst:292
 msgid ""
 "``ogr_deflate(text_or_blob[, compression_level])`` returns a binary blob "
 "compressed with the ZLib deflate algorithm. See "
 ":cpp:func:`CPLZLibDeflate`"
 msgstr ""
-"``ogr_deflate(text_or_blob[, compression_level])`` は, ZLib deflateアルゴリズムで圧縮されたバイナリblobを返します. "
-":cpp:func:`CPLZLibDeflate` を参照してください."
+"``ogr_deflate(text_or_blob[, compression_level])`` は, ZLib "
+"deflateアルゴリズムで圧縮されたバイナリblobを返します. :cpp:func:`CPLZLibDeflate` を参照してください."
 
-#: ../../source/user/sql_sqlite_dialect.rst:294
+#: ../../source/user/sql_sqlite_dialect.rst:295
 msgid ""
 "``ogr_inflate(compressed_blob)`` returns the decompressed binary blob, "
 "from a blob compressed with the ZLib deflate algorithm. If the "
 "decompressed binary is a string, use CAST(ogr_inflate(compressed_blob) AS"
 " VARCHAR). See CPLZLibInflate()."
 msgstr ""
-"``ogr_inflate(compressed_blob)`` は, ZLib deflateアルゴリズムで圧縮されたblobから解凍されたバイナリblobを返します. "
-"解凍されたバイナリが文字列の場合, CAST(ogr_inflate(compressed_blob) AS VARCHAR) を使用してください. "
-"CPLZLibInflate() を参照してください."
+"``ogr_inflate(compressed_blob)`` は, ZLib "
+"deflateアルゴリズムで圧縮されたblobから解凍されたバイナリblobを返します. 解凍されたバイナリが文字列の場合, "
+"CAST(ogr_inflate(compressed_blob) AS VARCHAR) を使用してください. CPLZLibInflate()"
+" を参照してください."
 
-#: ../../source/user/sql_sqlite_dialect.rst:300
+#: ../../source/user/sql_sqlite_dialect.rst:301
 msgid "Other functions"
 msgstr "その他の関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:302
+#: ../../source/user/sql_sqlite_dialect.rst:303
 msgid ""
 "The ``hstore_get_value()`` function can be used to extract a value "
 "associate to a key from a HSTORE string, formatted like "
 "\"key=>value,other_key=>other_value,...\""
 msgstr ""
-"``hstore_get_value()`` 関数は, \"key=>value,other_key=>other_value,...\" の"
-"ようにフォーマットされたHSTORE文字列からキーに関連付けられた値を抽出するために使用できます."
+"``hstore_get_value()`` 関数は, \"key=>value,other_key=>other_value,...\" "
+"のようにフォーマットされたHSTORE文字列からキーに関連付けられた値を抽出するために使用できます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:312
+#: ../../source/user/sql_sqlite_dialect.rst:313
 msgid "Raster related functions"
 msgstr "ラスタ関連関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:314
+#: ../../source/user/sql_sqlite_dialect.rst:315
 msgid ""
 "The ``gdal_get_pixel_value()`` function (added in GDAL 3.7) can be used "
 "to extract the value of a pixel in a GDAL dataset. It requires the "
 "configuration option OGR_SQLITE_ALLOW_EXTERNAL_ACCESS to be set to YES "
 "(for security reasons)."
 msgstr ""
-"``gdal_get_pixel_value()`` 関数 (GDAL 3.7で追加) は, GDALデータセットの"
-"ピクセルの値を抽出するために使用できます. "
-"セキュリティ上の理由から, OGR_SQLITE_ALLOW_EXTERNAL_ACCESS設定オプション"
-"をYESに設定する必要があります."
+"``gdal_get_pixel_value()`` 関数 (GDAL 3.7で追加) は, "
+"GDALデータセットのピクセルの値を抽出するために使用できます. セキュリティ上の理由から, "
+"OGR_SQLITE_ALLOW_EXTERNAL_ACCESS設定オプションをYESに設定する必要があります."
 
-#: ../../source/user/sql_sqlite_dialect.rst:318
+#: ../../source/user/sql_sqlite_dialect.rst:319
 msgid "It takes 5 or 6 arguments:"
 msgstr "5または6つの引数が必要です:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:320
+#: ../../source/user/sql_sqlite_dialect.rst:321
 msgid "a string with the dataset name"
 msgstr "データセット名の文字列"
 
-#: ../../source/user/sql_sqlite_dialect.rst:321
+#: ../../source/user/sql_sqlite_dialect.rst:322
 msgid "a band number (numbering starting at 1)"
 msgstr "バンド番号 (1から始まる番号)"
 
-#: ../../source/user/sql_sqlite_dialect.rst:322
+#: ../../source/user/sql_sqlite_dialect.rst:323
 msgid ""
 "a string being \"georef\" to indicate that subsequent values will be "
 "georeferenced coordinates, or \"pixel\" to indicate that subsequent "
 "values will be in column, line pixel space"
 msgstr ""
-"後続の値がジオリファレンス座標であることを示す \"georef\" または, "
-"後続の値が列, 行ピクセル空間であることを示す \"pixel\" である文字列"
+"後続の値がジオリファレンス座標であることを示す \"georef\" または, 後続の値が列, 行ピクセル空間であることを示す \"pixel\""
+" である文字列"
 
-#: ../../source/user/sql_sqlite_dialect.rst:325
+#: ../../source/user/sql_sqlite_dialect.rst:326
 msgid "georeferenced X value or column number"
 msgstr "ジオリファレンスされたX値または列番号"
 
-#: ../../source/user/sql_sqlite_dialect.rst:326
+#: ../../source/user/sql_sqlite_dialect.rst:327
 msgid "georeferenced Y value or line number"
 msgstr "ジオリファレンスされたY値または行番号"
 
-#: ../../source/user/sql_sqlite_dialect.rst:327
+#: ../../source/user/sql_sqlite_dialect.rst:328
 msgid ""
 "resampling method among ``nearest`` (default), ``bilinear``, ``cubic``, "
 "``cubicspline``. Optional, added in GDAL 3.10"
 msgstr ""
-"``nearest`` (デフォルト), ``bilinear``, ``cubic``, ``cubicspline`` の中からのリサンプリング方法. "
-"オプション指定, GDAL 3.10で追加"
+"``nearest`` (デフォルト), ``bilinear``, ``cubic``, ``cubicspline`` "
+"の中からのリサンプリング方法. オプション指定, GDAL 3.10で追加"
 
-#: ../../source/user/sql_sqlite_dialect.rst:337
+#: ../../source/user/sql_sqlite_dialect.rst:338
 msgid "OGR geocoding functions"
 msgstr "OGRジオコーディング関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:339
+#: ../../source/user/sql_sqlite_dialect.rst:340
 msgid ""
 "The following SQL functions are available : ``ogr_geocode(...)`` and "
 "``ogr_geocode_reverse(...)``."
-msgstr ""
-"次のSQL関数が利用可能です: ``ogr_geocode(...)`` および "
-"``ogr_geocode_reverse(...)``."
+msgstr "次のSQL関数が利用可能です: ``ogr_geocode(...)`` および ``ogr_geocode_reverse(...)``."
 
-#: ../../source/user/sql_sqlite_dialect.rst:341
+#: ../../source/user/sql_sqlite_dialect.rst:342
 msgid ""
 "``ogr_geocode(name_to_geocode [, field_to_return [, option1 [, option2, "
 "...]]])`` where name_to_geocode is a literal or a column name that must "
@@ -510,22 +509,20 @@ msgid ""
 "option2, etc.. must be of the key=value format, and are options "
 "understood by :cpp:func:`OGRGeocodeCreateSession` or OGRGeocode()."
 msgstr ""
-" ``ogr_geocode(name_to_geocode [, field_to_return [, option1 [, option2, ...]]])`` は, "
-"ジオコーディングする必要があるリテラルまたは列名です. field_to_return が指定されている場合, "
-"ジオコーディングによって返されるレイヤーのフィールド名であることができます. "
-"ジオメトリ(デフォルト)の場合は  \"geometry\" になります. ジオコーディングサービスの生の応答(XML文字列)を返すために, "
-"特別なフィールド  \"raw\" も使用できます. option1, option2などは, key=value形式である必要があり, "
-" :cpp:func:`OGRGeocodeCreateSession` または OGRGeocode() で理解されるオプションです."
+" ``ogr_geocode(name_to_geocode [, field_to_return [, option1 [, option2, "
+"...]]])`` は, ジオコーディングする必要があるリテラルまたは列名です. field_to_return が指定されている場合, "
+"ジオコーディングによって返されるレイヤーのフィールド名であることができます. ジオメトリ(デフォルト)の場合は  \"geometry\" "
+"になります. ジオコーディングサービスの生の応答(XML文字列)を返すために, 特別なフィールド  \"raw\" も使用できます. "
+"option1, option2などは, key=value形式である必要があり,  "
+":cpp:func:`OGRGeocodeCreateSession` または OGRGeocode() で理解されるオプションです."
 
-#: ../../source/user/sql_sqlite_dialect.rst:348
+#: ../../source/user/sql_sqlite_dialect.rst:349
 msgid ""
 "This function internally uses the OGRGeocode() API. Refer to it for more "
 "details."
-msgstr ""
-"この関数は内部的にOGRGeocode() APIを使用しています. 詳細については, それを参照"
-"してください."
+msgstr "この関数は内部的にOGRGeocode() APIを使用しています. 詳細については, それを参照してください."
 
-#: ../../source/user/sql_sqlite_dialect.rst:400
+#: ../../source/user/sql_sqlite_dialect.rst:401
 msgid ""
 "``ogr_geocode_reverse(longitude, latitude, field_to_return [, option1 [, "
 "option2, ...]])`` where longitude, latitude is the coordinate to query. "
@@ -536,34 +533,35 @@ msgid ""
 "format, and are options understood by OGRGeocodeCreateSession() or "
 "OGRGeocodeReverse()."
 msgstr ""
-"``ogr_geocode_reverse(longitude, latitude, field_to_return [, option1 [, option2, ...]])`` は, "
-"longitude, latitude がクエリする座標です. field_to_return は, OGRGeocodeReverse() によって返されるレイヤーのフィールド名である必要があります "
-"(例: 'display_name'). ジオコーディングサービスの生の応答(XML文字列)を返すために, "
-"特別なフィールド \"raw\" も使用できます. option1, option2などは, key=value形式である必要があり, "
-"OGRGeocodeCreateSession() または OGRGeocodeReverse() で理解されるオプションです."
+"``ogr_geocode_reverse(longitude, latitude, field_to_return [, option1 [, "
+"option2, ...]])`` は, longitude, latitude がクエリする座標です. field_to_return は, "
+"OGRGeocodeReverse() によって返されるレイヤーのフィールド名である必要があります (例: 'display_name'). "
+"ジオコーディングサービスの生の応答(XML文字列)を返すために, 特別なフィールド \"raw\" も使用できます. option1, "
+"option2などは, key=value形式である必要があり, OGRGeocodeCreateSession() または "
+"OGRGeocodeReverse() で理解されるオプションです."
 
-#: ../../source/user/sql_sqlite_dialect.rst:407
+#: ../../source/user/sql_sqlite_dialect.rst:408
 msgid ""
 "``ogr_geocode_reverse(geometry, field_to_return [, option1 [, option2, "
 "...]])`` is also accepted as an alternate syntax where geometry is a "
 "(Spatialite) point geometry."
 msgstr ""
-"``ogr_geocode_reverse(geometry, field_to_return [, option1 [, option2, ...]])`` は, "
-"geometryが(Spatialite)ポイントジオメトリである場合の代替構文としても受け入れられます."
+"``ogr_geocode_reverse(geometry, field_to_return [, option1 [, option2, "
+"...]])`` は, geometryが(Spatialite)ポイントジオメトリである場合の代替構文としても受け入れられます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:410
+#: ../../source/user/sql_sqlite_dialect.rst:411
 msgid ""
 "This function internally uses the :cpp:func:`OGRGeocodeReverse` API. "
 "Refer to it for more details."
 msgstr ""
-"この関数は内部的に :cpp:func:`OGRGeocodeReverse` API を使用しています. "
-"詳細については, それを参照してください."
+"この関数は内部的に :cpp:func:`OGRGeocodeReverse` API を使用しています. 詳細については, "
+"それを参照してください."
 
-#: ../../source/user/sql_sqlite_dialect.rst:413
+#: ../../source/user/sql_sqlite_dialect.rst:414
 msgid "Spatialite spatial index"
 msgstr "Spatialite空間インデックス"
 
-#: ../../source/user/sql_sqlite_dialect.rst:415
+#: ../../source/user/sql_sqlite_dialect.rst:416
 msgid ""
 "Spatialite spatial index mechanism can be triggered by making sure a "
 "spatial index virtual table is mentioned in the SQL (of the form "
@@ -572,19 +570,17 @@ msgid ""
 "will be built to be used to speed up the spatial queries."
 msgstr ""
 "Spatialite空間インデックスメカニズムは, SQLに空間インデックス仮想テーブルが言及されていることを確認するか, "
-"より新しいVirtualSpatialIndex拡張機能を使用することでトリガーされます. この場合, "
-"空間クエリの高速化に使用するために, メモリ内のRTreeが構築されます."
+"より新しいVirtualSpatialIndex拡張機能を使用することでトリガーされます. この場合, 空間クエリの高速化に使用するために, "
+"メモリ内のRTreeが構築されます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:420
+#: ../../source/user/sql_sqlite_dialect.rst:421
 msgid ""
 "For example, a spatial intersection between 2 layers, by using a spatial "
 "index on one of the layers to limit the number of actual geometry "
 "intersection computations :"
-msgstr ""
-"例えば, 1つのレイヤーに空間インデックスを使用して実際のジオメトリ交差計算の数を制限することで, "
-"2つのレイヤー間の空間交差を行う:"
+msgstr "例えば, 1つのレイヤーに空間インデックスを使用して実際のジオメトリ交差計算の数を制限することで, 2つのレイヤー間の空間交差を行う:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:432
+#: ../../source/user/sql_sqlite_dialect.rst:433
 msgid "or more elegantly :"
 msgstr "またはよりエレガントな方法:"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/srtmhgt.rst:5
 msgid "SRTMHGT -- SRTM HGT Format"
@@ -54,28 +54,34 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/raster/srtmhgt.rst:24
+msgid ""
+"Starting with GDAL 3.10, the driver also supports reading and writing 0.5"
+" degree resolution SRTM HGT files."
+msgstr ""
+
+#: ../../source/drivers/raster/srtmhgt.rst:27
 msgid "See Also:"
 msgstr ""
 
-#: ../../source/drivers/raster/srtmhgt.rst:26
+#: ../../source/drivers/raster/srtmhgt.rst:29
 msgid ""
 "`SRTM documentation "
 "<http://dds.cr.usgs.gov/srtm/version2_1/Documentation>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/srtmhgt.rst:28
+#: ../../source/drivers/raster/srtmhgt.rst:31
 msgid "`SRTM FAQ <http://www2.jpl.nasa.gov/srtm/faq.html>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/srtmhgt.rst:29
+#: ../../source/drivers/raster/srtmhgt.rst:32
 msgid "`SRTM data <http://dds.cr.usgs.gov/srtm/version2_1/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/srtmhgt.rst:31
+#: ../../source/drivers/raster/srtmhgt.rst:34
 msgid "NOTE: Implemented as :source_file:`frmts/srtmhgt/srtmhgtdataset.cpp`."
 msgstr ""
 
-#: ../../source/drivers/raster/srtmhgt.rst:34
+#: ../../source/drivers/raster/srtmhgt.rst:37
 msgid "Driver capabilities"
 msgstr ""
 

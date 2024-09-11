@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 08:20+0900\n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Synopsis"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:31
+#: ../../source/programs/gdal_viewshed.rst:32
 msgid "Description"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:33
+#: ../../source/programs/gdal_viewshed.rst:34
 msgid ""
 "By default the :program:`gdal_viewshed` generates a binary visibility "
 "raster from one band of the input raster elevation model (DEM). The "
@@ -45,7 +45,7 @@ msgid ""
 " minimum visible height raster of type Float64."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:38
+#: ../../source/programs/gdal_viewshed.rst:39
 msgid ""
 "The algorithm as implemented currently will only output meaningful "
 "results if the georeferencing is in a projected coordinate reference "
@@ -81,7 +81,7 @@ msgid ""
 "documentation for legal creation options for each format."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:49
+#: ../../source/programs/gdal_viewshed.rst:50
 msgid ""
 "Select an input band **band** containing the DEM data. Bands are numbered"
 " from 1. Only a single band can be used. Only the part of the raster "
@@ -89,49 +89,51 @@ msgid ""
 "processed."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:55
+#: ../../source/programs/gdal_viewshed.rst:56
 msgid "The value to be set for the cells in the output raster that have no data."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:58
+#: ../../source/programs/gdal_viewshed.rst:59
 msgid ""
 "Currently, no special processing of input cells at a nodata value is done"
 " (which may result in erroneous results)."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:63
+#: ../../source/programs/gdal_viewshed.rst:64
 msgid ""
 "The X position of the observer (in SRS units).  If the coordinate is "
 "outside of the raster, all space between the observer and the raster is "
-"assumed not to occlude visibility of the raster."
+"assumed not to occlude visibility of the raster. (Not supported in "
+"cumulative mode.)"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:69
+#: ../../source/programs/gdal_viewshed.rst:70
 msgid ""
 "The Y position of the observer (in SRS units).  If the coordinate is "
 "outside of the raster, all space between the observer and the raster is "
-"assumed not to occlude visibility of the raster."
+"assumed not to occlude visibility of the raster. (Not supported in "
+"cumulative mode.)"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:75
+#: ../../source/programs/gdal_viewshed.rst:76
 msgid ""
 "The height of the observer above the DEM surface in the height unit of "
 "the DEM. Default: 2"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:79
+#: ../../source/programs/gdal_viewshed.rst:80
 msgid ""
 "The height of the target above the DEM surface in the height unit of the "
 "DEM. Default: 0"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:83
+#: ../../source/programs/gdal_viewshed.rst:84
 msgid ""
-"Maximum distance from observer to compute visibiliy. It is also used to "
-"clamp the extent of the output raster."
+"Maximum distance from observer to compute visibility. It is also used to "
+"clamp the extent of the output raster. (Not supported in cumulative mode)"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:88
+#: ../../source/programs/gdal_viewshed.rst:90
 msgid ""
 "Coefficient to consider the effect of the curvature and refraction. When "
 "calculating visibility between two points (i.e. Line Of Sight or "
@@ -139,7 +141,7 @@ msgid ""
 "conditions and depends on the wavelength."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:92
+#: ../../source/programs/gdal_viewshed.rst:94
 msgid ""
 "Different applications for calculating visibility use different "
 "interchangeable notation to describe this phenomena: Refraction "
@@ -147,11 +149,11 @@ msgid ""
 "gdal_viewshed uses the Curvature Coefficient notation."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:96
+#: ../../source/programs/gdal_viewshed.rst:98
 msgid "{CurvCoeff}=1-{RefractionCoeff}"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:100
+#: ../../source/programs/gdal_viewshed.rst:102
 msgid ""
 "Changes in air density curve the light downward causing an observer to "
 "see further and the earth to appear less curved, as if the sphere (earth)"
@@ -159,13 +161,13 @@ msgid ""
 " sphere diameter and the actual sphere diameter is given by the formula:"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:104
+#: ../../source/programs/gdal_viewshed.rst:106
 msgid ""
 "{SphereDiameterFactor}=1/{CurvCoeff}=1/(1-{RefractionCoeff})\n"
 "\n"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:107
+#: ../../source/programs/gdal_viewshed.rst:109
 msgid ""
 "For visible light, the standard atmospheric refraction coefficient that "
 "is generally used is 1/7. Thus the default value (since GDAL 3.4) for "
@@ -175,142 +177,166 @@ msgid ""
 "is 1.0, to account for the no refraction use case."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:113
+#: ../../source/programs/gdal_viewshed.rst:115
 msgid "The height of the DEM is corrected according to the following formula:"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:115
+#: ../../source/programs/gdal_viewshed.rst:117
 msgid "Height_{Corrected}=Height_{DEM}-{CurvCoeff}\\frac{{TargetDistance}^2}{SphereDiameter}"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:119
+#: ../../source/programs/gdal_viewshed.rst:121
 msgid ""
 "Typical coefficient values are given in the table below (use Curvature "
 "Coeff value for the cc option)"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:122
+#: ../../source/programs/gdal_viewshed.rst:124
 msgid "Use Case"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:122
+#: ../../source/programs/gdal_viewshed.rst:124
 msgid "Refraction Coeff"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:122
+#: ../../source/programs/gdal_viewshed.rst:124
 msgid "**Curvature Coeff**"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:122
+#: ../../source/programs/gdal_viewshed.rst:124
 msgid "Sphere Diameter Factor"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:123
+#: ../../source/programs/gdal_viewshed.rst:125
 msgid "No Refraction"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:123
-#: ../../source/programs/gdal_viewshed.rst:126
+#: ../../source/programs/gdal_viewshed.rst:125
+#: ../../source/programs/gdal_viewshed.rst:128
 msgid "0"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:123
-#: ../../source/programs/gdal_viewshed.rst:126
+#: ../../source/programs/gdal_viewshed.rst:125
+#: ../../source/programs/gdal_viewshed.rst:128
 msgid "1"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:124
+#: ../../source/programs/gdal_viewshed.rst:126
 msgid "Visible Light"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:124
+#: ../../source/programs/gdal_viewshed.rst:126
 msgid "1/7"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:124
+#: ../../source/programs/gdal_viewshed.rst:126
 msgid "6/7 (=~0.85714)"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:124
+#: ../../source/programs/gdal_viewshed.rst:126
 msgid "7/6 (=~1.1666)"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:125
+#: ../../source/programs/gdal_viewshed.rst:127
 msgid "Radio Waves"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:125
+#: ../../source/programs/gdal_viewshed.rst:127
 msgid "0.25 ~ 0.325"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:125
+#: ../../source/programs/gdal_viewshed.rst:127
 msgid "0.75 ~ 0.675"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:125
+#: ../../source/programs/gdal_viewshed.rst:127
 msgid "1.33 ~ 1.48"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:126
+#: ../../source/programs/gdal_viewshed.rst:128
 msgid "Flat Earth"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:126
+#: ../../source/programs/gdal_viewshed.rst:128
 msgid "inf"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:131
-msgid "Pixel value to set for invisible areas. Default: 0"
+#: ../../source/programs/gdal_viewshed.rst:133
+msgid ""
+"Pixel value to set for invisible areas. (Not supported in cumulative "
+"mode) Default: 0"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:135
+#: ../../source/programs/gdal_viewshed.rst:137
 msgid ""
 "Pixel value to set for the cells that fall outside of the range specified"
-" by the observer location and the maximum distance. Default: 0"
+" by the observer location and the maximum distance. (Not supported in "
+"cumulative mode) Default: 0"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:140
-msgid "Pixel value to set for visible areas. Default: 255"
-msgstr ""
-
-#: ../../source/programs/gdal_viewshed.rst:144
-msgid "Sets what information the output contains."
+#: ../../source/programs/gdal_viewshed.rst:142
+msgid ""
+"Pixel value to set for visible areas. (Not supported in cumulative mode) "
+"Default: 255"
 msgstr ""
 
 #: ../../source/programs/gdal_viewshed.rst:146
-msgid "Possible values: NORMAL, DEM, GROUND"
+msgid "Sets what information the output contains."
 msgstr ""
 
 #: ../../source/programs/gdal_viewshed.rst:148
-msgid "NORMAL returns a raster of type Byte containing visible locations."
+msgid "Possible values: NORMAL, DEM, GROUND, ACCUM"
 msgstr ""
 
 #: ../../source/programs/gdal_viewshed.rst:150
+msgid "NORMAL returns a raster of type Byte containing visible locations."
+msgstr ""
+
+#: ../../source/programs/gdal_viewshed.rst:152
 msgid ""
 "DEM and GROUND will return a raster of type Float64 containing the "
 "minimum target height for target to be visible from the DEM surface or "
 "ground level respectively. Flags -tz, -iv and -vv will be ignored."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:154
+#: ../../source/programs/gdal_viewshed.rst:156
+msgid ""
+"Cumulative (ACCUM) mode will create an eight bit raster the same size as "
+"the input raster where each cell represents the relative observability "
+"from a grid of observer points. See the -os option."
+msgstr ""
+
+#: ../../source/programs/gdal_viewshed.rst:160
 msgid "Default NORMAL"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:157
+#: ../../source/programs/gdal_viewshed.rst:164
+msgid ""
+"Cell Spacing between observers (only supported in cumulative mode) "
+"Default: 10"
+msgstr ""
+
+#: ../../source/programs/gdal_viewshed.rst:168
+msgid ""
+"Relative number of jobs to run at once. (only supported in cumulative "
+"mode) Default: 3"
+msgstr ""
+
+#: ../../source/programs/gdal_viewshed.rst:172
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:159
+#: ../../source/programs/gdal_viewshed.rst:174
 msgid ""
 "Functionality of this utility can be done from C with "
 ":cpp:func:`GDALViewshedGenerate`."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:162
+#: ../../source/programs/gdal_viewshed.rst:177
 msgid "Example"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:164
+#: ../../source/programs/gdal_viewshed.rst:179
 msgid ""
 "Screenshot of 2 combined viewshed analysis, with the yellow pixels "
 "showing the area that is visible from the both observation locations (the"
@@ -318,17 +344,17 @@ msgid ""
 "location."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:172
+#: ../../source/programs/gdal_viewshed.rst:187
 msgid ""
 "Create a viewshed raster with a radius of 500 for a person standing at "
 "location (-10147017, 5108065)."
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:179
+#: ../../source/programs/gdal_viewshed.rst:194
 msgid "Reference"
 msgstr ""
 
-#: ../../source/programs/gdal_viewshed.rst:181
+#: ../../source/programs/gdal_viewshed.rst:196
 msgid ""
 "Generating Viewsheds without Using Sightlines. Wang, Jianjun, Robinson, "
 "Gary J., and White, Kevin. Photogrammetric Engineering and Remote "
@@ -340,5 +366,46 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "The Y position of the observer (in SRS units)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The X position of the observer (in"
+#~ " SRS units).  If the coordinate is"
+#~ " outside of the raster, all space "
+#~ "between the observer and the raster "
+#~ "is assumed not to occlude visibility "
+#~ "of the raster."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Y position of the observer (in"
+#~ " SRS units).  If the coordinate is"
+#~ " outside of the raster, all space "
+#~ "between the observer and the raster "
+#~ "is assumed not to occlude visibility "
+#~ "of the raster."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Maximum distance from observer to "
+#~ "compute visibiliy. It is also used "
+#~ "to clamp the extent of the output"
+#~ " raster."
+#~ msgstr ""
+
+#~ msgid "Pixel value to set for invisible areas. Default: 0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Pixel value to set for the cells"
+#~ " that fall outside of the range "
+#~ "specified by the observer location and"
+#~ " the maximum distance. Default: 0"
+#~ msgstr ""
+
+#~ msgid "Pixel value to set for visible areas. Default: 255"
+#~ msgstr ""
+
+#~ msgid "Possible values: NORMAL, DEM, GROUND"
 #~ msgstr ""
 
