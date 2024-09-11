@@ -30,6 +30,8 @@
  ****************************************************************************/
 
 #include <cassert>
+#include <cmath>
+
 #include "ogr_fgdb.h"
 #include "ogrpgeogeometry.h"
 #include "cpl_conv.h"
@@ -1835,7 +1837,7 @@ char *FGdbLayer::CreateFieldDefn(OGRFieldDefn &oField, int bApproxOK,
             if (osVal[0] == '\'' && osVal.back() == '\'')
             {
                 osVal = osVal.substr(1);
-                osVal.resize(osVal.size() - 1);
+                osVal.pop_back();
                 char *pszTmp = CPLUnescapeString(osVal, nullptr, CPLES_SQL);
                 osVal = pszTmp;
                 CPLFree(pszTmp);
@@ -4009,8 +4011,8 @@ OGRErr FGdbLayer::GetExtent(OGREnvelope *psExtent, int bForce)
     psExtent->MaxX = envelope.xMax;
     psExtent->MaxY = envelope.yMax;
 
-    if (CPLIsNan(psExtent->MinX) || CPLIsNan(psExtent->MinY) ||
-        CPLIsNan(psExtent->MaxX) || CPLIsNan(psExtent->MaxY))
+    if (std::isnan(psExtent->MinX) || std::isnan(psExtent->MinY) ||
+        std::isnan(psExtent->MaxX) || std::isnan(psExtent->MaxY))
         return OGRERR_FAILURE;
 
     return OGRERR_NONE;

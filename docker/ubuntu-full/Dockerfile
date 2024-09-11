@@ -68,6 +68,7 @@ RUN . /buildscripts/bh-set-envvars.sh \
        libbrotli-dev${APT_ARCH_SUFFIX} \
        libarchive-dev${APT_ARCH_SUFFIX} \
        libaec-dev${APT_ARCH_SUFFIX} \
+       libavif-dev${APT_ARCH_SUFFIX} \
     && rm -rf /var/lib/apt/lists/*
 
 # Build likbkea
@@ -190,7 +191,7 @@ RUN . /buildscripts/bh-set-envvars.sh \
     && cd .. \
     && rm -rf libOpenDRIVE-${OPENDRIVE_VERSION} \
     ); fi
-    
+
 #Build File Geodatabase
 
 ARG WITH_FILEGDB=
@@ -221,12 +222,12 @@ RUN . /buildscripts/bh-set-envvars.sh \
 
 ARG WITH_PDFIUM=yes
 RUN if echo "$WITH_PDFIUM" | grep -Eiq "^(y(es)?|1|true)$"  ; then ( \
-  wget -q https://github.com/rouault/pdfium_build_gdal_3_9/releases/download/pdfium_6309_v1/install-ubuntu2004-rev6309.tar.gz \
-  && tar -xzf install-ubuntu2004-rev6309.tar.gz \
+  wget -q https://github.com/rouault/pdfium_build_gdal_3_10/releases/download/pdfium_6677_v1/install-ubuntu2004-rev6677.tar.gz \
+  && tar -xzf install-ubuntu2004-rev6677.tar.gz \
   && chown -R root:root install \
   && mv install/lib/* /usr/lib/ \
   && mv install/include/* /usr/include/ \
-  && rm -rf install-ubuntu2004-rev6309.tar.gz install \
+  && rm -rf install-ubuntu2004-rev6677.tar.gz install \
   && apt-get update -y \
   && apt-get install -y --fix-missing --no-install-recommends liblcms2-dev${APT_ARCH_SUFFIX} \
   && rm -rf /var/lib/apt/lists/* \
@@ -341,6 +342,7 @@ RUN apt-get update \
         libbrotli1 \
         libarchive13 \
         libaec0 \
+        libavif16 \
         libspdlog1.12 libmagic1t64 \
         python-is-python3 \
         # pil for antialias option of gdal2tiles

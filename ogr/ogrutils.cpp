@@ -151,7 +151,7 @@ std::string intelliround(std::string &s)
     if (s[i - 2] == '0' && s[i - 3] == '0' && s[i - 4] == '0' &&
         s[i - 5] == '0' && s[i - 6] == '0')
     {
-        s.resize(s.size() - 1);
+        s.pop_back();
     }
     // I don't understand this case exactly.  It's like saying if the
     // value is large enough and there are sufficient sig digits before
@@ -2329,4 +2329,16 @@ int OGRFormatFloat(char *pszBuffer, int nBufferLen, float fVal, int nPrecision,
     }
 
     return nSize;
+}
+
+int OGR_GET_MS(float fSec)
+{
+    if (std::isnan(fSec))
+        return 0;
+    if (fSec >= 999)
+        return 999;
+    if (fSec <= 0)
+        return 0;
+    const float fValue = (fSec - static_cast<int>(fSec)) * 1000 + 0.5f;
+    return static_cast<int>(fValue);
 }

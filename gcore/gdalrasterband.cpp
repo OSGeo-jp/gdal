@@ -3351,12 +3351,10 @@ GDALGetRasterSampleOverviewEx(GDALRasterBandH hBand, GUIntBig nDesiredSamples)
  * CE_Failure is returned, and CPLGetLastErrorNo() will return
  * CPLE_NotSupported.
  *
- * WARNING:  It is not possible to build overviews for a single band in
- * TIFF format, and thus this method does not work for TIFF format, or any
- * formats that use the default overview building in TIFF format.  Instead
- * it is necessary to build overviews on the dataset as a whole using
- * GDALDataset::BuildOverviews().  That makes this method pretty useless
- * from a practical point of view.
+ * WARNING: Most formats don't support per-band overview computation, but
+ * require that overviews are computed for all bands of a dataset, using
+ * GDALDataset::BuildOverviews(). The only exception for official GDAL drivers
+ * is the HFA driver which supports this method.
  *
  * @param pszResampling one of "NEAREST", "GAUSS", "CUBIC", "AVERAGE", "MODE",
  * "AVERAGE_MAGPHASE" "RMS" or "NONE" controlling the downsampling method
@@ -3980,7 +3978,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
 
     int bGotNoDataValue = FALSE;
     const double dfNoDataValue = GetNoDataValue(&bGotNoDataValue);
-    bGotNoDataValue = bGotNoDataValue && !CPLIsNan(dfNoDataValue);
+    bGotNoDataValue = bGotNoDataValue && !std::isnan(dfNoDataValue);
     bool bGotFloatNoDataValue = false;
     float fNoDataValue = 0.0f;
     ComputeFloatNoDataValue(eDataType, dfNoDataValue, bGotNoDataValue,
@@ -4117,7 +4115,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                     {
                         const float fValue =
                             static_cast<float *>(pData)[iOffset];
-                        if (CPLIsNan(fValue) ||
+                        if (std::isnan(fValue) ||
                             (bGotFloatNoDataValue &&
                              ARE_REAL_EQUAL(fValue, fNoDataValue)))
                             continue;
@@ -4126,7 +4124,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                     }
                     case GDT_Float64:
                         dfValue = static_cast<double *>(pData)[iOffset];
-                        if (CPLIsNan(dfValue))
+                        if (std::isnan(dfValue))
                             continue;
                         break;
                     case GDT_CInt16:
@@ -4135,7 +4133,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                             static_cast<GInt16 *>(pData)[iOffset * 2];
                         const double dfImag =
                             static_cast<GInt16 *>(pData)[iOffset * 2 + 1];
-                        if (CPLIsNan(dfReal) || CPLIsNan(dfImag))
+                        if (std::isnan(dfReal) || std::isnan(dfImag))
                             continue;
                         dfValue = sqrt(dfReal * dfReal + dfImag * dfImag);
                     }
@@ -4146,7 +4144,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                             static_cast<GInt32 *>(pData)[iOffset * 2];
                         const double dfImag =
                             static_cast<GInt32 *>(pData)[iOffset * 2 + 1];
-                        if (CPLIsNan(dfReal) || CPLIsNan(dfImag))
+                        if (std::isnan(dfReal) || std::isnan(dfImag))
                             continue;
                         dfValue = sqrt(dfReal * dfReal + dfImag * dfImag);
                     }
@@ -4157,7 +4155,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                             static_cast<float *>(pData)[iOffset * 2];
                         const double dfImag =
                             static_cast<float *>(pData)[iOffset * 2 + 1];
-                        if (CPLIsNan(dfReal) || CPLIsNan(dfImag))
+                        if (std::isnan(dfReal) || std::isnan(dfImag))
                             continue;
                         dfValue = sqrt(dfReal * dfReal + dfImag * dfImag);
                     }
@@ -4168,7 +4166,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                             static_cast<double *>(pData)[iOffset * 2];
                         const double dfImag =
                             static_cast<double *>(pData)[iOffset * 2 + 1];
-                        if (CPLIsNan(dfReal) || CPLIsNan(dfImag))
+                        if (std::isnan(dfReal) || std::isnan(dfImag))
                             continue;
                         dfValue = sqrt(dfReal * dfReal + dfImag * dfImag);
                     }
@@ -4362,7 +4360,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                         {
                             const float fValue =
                                 static_cast<float *>(pData)[iOffset];
-                            if (CPLIsNan(fValue) ||
+                            if (std::isnan(fValue) ||
                                 (bGotFloatNoDataValue &&
                                  ARE_REAL_EQUAL(fValue, fNoDataValue)))
                                 continue;
@@ -4371,7 +4369,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                         }
                         case GDT_Float64:
                             dfValue = static_cast<double *>(pData)[iOffset];
-                            if (CPLIsNan(dfValue))
+                            if (std::isnan(dfValue))
                                 continue;
                             break;
                         case GDT_CInt16:
@@ -4398,7 +4396,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                                 static_cast<float *>(pData)[iOffset * 2];
                             double dfImag =
                                 static_cast<float *>(pData)[iOffset * 2 + 1];
-                            if (CPLIsNan(dfReal) || CPLIsNan(dfImag))
+                            if (std::isnan(dfReal) || std::isnan(dfImag))
                                 continue;
                             dfValue = sqrt(dfReal * dfReal + dfImag * dfImag);
                         }
@@ -4409,7 +4407,7 @@ CPLErr GDALRasterBand::GetHistogram(double dfMin, double dfMax, int nBuckets,
                                 static_cast<double *>(pData)[iOffset * 2];
                             double dfImag =
                                 static_cast<double *>(pData)[iOffset * 2 + 1];
-                            if (CPLIsNan(dfReal) || CPLIsNan(dfImag))
+                            if (std::isnan(dfReal) || std::isnan(dfImag))
                                 continue;
                             dfValue = sqrt(dfReal * dfReal + dfImag * dfImag);
                         }
@@ -6054,7 +6052,7 @@ static inline double GetPixelValue(GDALDataType eDataType, bool bSignedByte,
         case GDT_Float32:
         {
             const float fValue = static_cast<const float *>(pData)[iOffset];
-            if (CPLIsNan(fValue) ||
+            if (std::isnan(fValue) ||
                 (bGotFloatNoDataValue && ARE_REAL_EQUAL(fValue, fNoDataValue)))
             {
                 bValid = false;
@@ -6065,7 +6063,7 @@ static inline double GetPixelValue(GDALDataType eDataType, bool bSignedByte,
         }
         case GDT_Float64:
             dfValue = static_cast<const double *>(pData)[iOffset];
-            if (CPLIsNan(dfValue))
+            if (std::isnan(dfValue))
             {
                 bValid = false;
                 return 0.0;
@@ -6079,7 +6077,7 @@ static inline double GetPixelValue(GDALDataType eDataType, bool bSignedByte,
             break;
         case GDT_CFloat32:
             dfValue = static_cast<const float *>(pData)[iOffset * 2];
-            if (CPLIsNan(dfValue))
+            if (std::isnan(dfValue))
             {
                 bValid = false;
                 return 0.0;
@@ -6087,7 +6085,7 @@ static inline double GetPixelValue(GDALDataType eDataType, bool bSignedByte,
             break;
         case GDT_CFloat64:
             dfValue = static_cast<const double *>(pData)[iOffset * 2];
-            if (CPLIsNan(dfValue))
+            if (std::isnan(dfValue))
             {
                 bValid = false;
                 return 0.0;
@@ -6266,7 +6264,7 @@ CPLErr GDALRasterBand::ComputeStatistics(int bApproxOK, double *pdfMin,
 
     int bGotNoDataValue = FALSE;
     const double dfNoDataValue = GetNoDataValue(&bGotNoDataValue);
-    bGotNoDataValue = bGotNoDataValue && !CPLIsNan(dfNoDataValue);
+    bGotNoDataValue = bGotNoDataValue && !std::isnan(dfNoDataValue);
     bool bGotFloatNoDataValue = false;
     float fNoDataValue = 0.0f;
     ComputeFloatNoDataValue(eDataType, dfNoDataValue, bGotNoDataValue,
@@ -7101,7 +7099,7 @@ CPLErr GDALRasterBand::ComputeRasterMinMax(int bApproxOK, double *adfMinMax)
     /* -------------------------------------------------------------------- */
     int bGotNoDataValue = FALSE;
     const double dfNoDataValue = GetNoDataValue(&bGotNoDataValue);
-    bGotNoDataValue = bGotNoDataValue && !CPLIsNan(dfNoDataValue);
+    bGotNoDataValue = bGotNoDataValue && !std::isnan(dfNoDataValue);
     bool bGotFloatNoDataValue = false;
     float fNoDataValue = 0.0f;
     ComputeFloatNoDataValue(eDataType, dfNoDataValue, bGotNoDataValue,
