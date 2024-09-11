@@ -32,6 +32,11 @@ msgid ""
 "honored by everyone who participates in the GDAL community formally or "
 "informally, or claims any affiliation with the project."
 msgstr ""
+"この行動規範は,私たちがGDALのフォーラムやイベントにおいてどのように振る"
+"舞うか,また,私たちの行動によってどのような判断が下されるかを規定するも"
+"のです.私たちは,GDALコミュニティに公式または非公式に参加するすべての"
+"人,あるいはGDALプロジェクトとの関係を主張するすべての人が,この行動規範"
+"を守ることを期待します."
 
 #: ../../source/community/code_of_conduct.rst:13
 msgid "Introduction"
@@ -44,11 +49,11 @@ msgid ""
 "honored by everyone who participates in the GDAL community formally or "
 "informally, or claims any affiliation with the GDAL project."
 msgstr ""
-"この行動規範は、私たちがGDALのフォーラムやイベントにおいてどのように振る"
-"舞うか、また、私たちの行動によってどのような判断が下されるかを規定するも"
-"のです。私たちは、GDALコミュニティに公式または非公式に参加するすべての"
-"人、あるいはGDALプロジェクトとの関係を主張するすべての人が、この行動規範"
-"を守ることを期待します。"
+"この行動規範は,私たちがGDALのフォーラムやイベントにおいてどのように振る"
+"舞うか,また,私たちの行動によってどのような判断が下されるかを規定するも"
+"のです.私たちは,GDALコミュニティに公式または非公式に参加するすべての"
+"人,あるいはGDALプロジェクトとの関係を主張するすべての人が,この行動規範"
+"を守ることを期待します."
 
 #: ../../source/community/code_of_conduct.rst:20
 msgid ""
@@ -57,6 +62,10 @@ msgid ""
 "wiki, blogs, Twitter, and any other forums which the community uses for "
 "communication and interactions."
 msgstr ""
+"この行動規範は,対面イベント（カンファレンスや関連する社交イベントなど）"
+",IRC,公開および非公開のメーリングリスト,イシュートラッカー,ウィキ,ブ"
+"ログ,Twitter,およびコミュニティがコミュニケーションや相互作用に使用す"
+"るその他のフォーラムに適用されます."
 
 #: ../../source/community/code_of_conduct.rst:25
 msgid ""
@@ -66,6 +75,11 @@ msgid ""
 "can enrich all of us and the technical communities in which we "
 "participate."
 msgstr ""
+"この行動規範は,網羅的または完全ではありません.これは,協力的で共有された"
+"環境と目標についての私たちの共通理解を凝縮するためのものです.私たちは,"
+"この行動規範が文字通りだけでなく精神的にも従われることを期待しており,"
+"それによって私たち全員と私たちが参加する技術コミュニティ全体が豊かにな"
+"ることを期待しています."
 
 #: ../../source/community/code_of_conduct.rst:31
 msgid "Diversity Statement"
@@ -78,6 +92,11 @@ msgid ""
 "always work to treat everyone well. No matter how you identify yourself "
 "or how others perceive you: we welcome you. Specific Guidelines"
 msgstr ""
+"GDALは,誰もが参加することを歓迎し,奨励します.私たちは,誰もが参加し"
+"てよいと感じるコミュニティであることを約束し,常に誰に対してもよく扱"
+"うよう努めます.自分自身をどのように位置づけるか,また他の人がどのよう"
+"にあなたを認識するかに関わらず:私たちはあなたを歓迎します.具体的なガ"
+"イドライン"
 
 #: ../../source/community/code_of_conduct.rst:39
 msgid "We strive to:"
@@ -85,7 +104,7 @@ msgstr "私たちは次のことに努めます:"
 
 #: ../../source/community/code_of_conduct.rst:41
 msgid "Be open."
-msgstr ""
+msgstr "オープンであること."
 
 #: ../../source/community/code_of_conduct.rst:43
 msgid ""
@@ -97,10 +116,16 @@ msgid ""
 "that any inadvertent mistakes made by people answering will be more "
 "easily detected and corrected."
 msgstr ""
+"私たちは誰でもコミュニティに参加するよう招待します.プロジェクト関連の"
+"メッセージについては,機密情報について議論していない限り,公開されたコミ"
+"ュニケーション手段を使用することをお勧めします.これは,ヘルプやプロジェク"
+"ト関連のサポートに関するメッセージにも適用されます;公開されたサポートリ"
+"クエストは,質問に回答する可能性が高くなるだけでなく,回答者が誤りを犯す"
+"ことがより簡単に検出および修正されることを確認します."
 
 #: ../../source/community/code_of_conduct.rst:50
 msgid "Be empathetic, welcoming, friendly, and patient."
-msgstr ""
+msgstr "共感的であり,歓迎的であり,友好的であり,忍耐強いこと."
 
 #: ../../source/community/code_of_conduct.rst:52
 msgid ""
@@ -113,10 +138,17 @@ msgid ""
 "should be respectful when dealing with other community members as well "
 "as with people outside our community."
 msgstr ""
+"私たちは一緒に紛争を解決し,良い意図を前提とし,共感的な態度で行動する"
+"よう最善を尽くします.私たちは時折いくらかの不満を感じるかもしれませんが,"
+"不満を個人攻撃に変えることは許しません.人々が不快感を感じたり脅かさ"
+"れたりするコミュニティは生産的なものではありません.私たちのコミュニティ"
+"は多文化的で多言語的であり,私たちの一部は母国語話者ではありません.他の"
+"コミュニティメンバーと取引する際にはもちろん,コミュニティ外の人々と取引"
+"する際にも,敬意を持って接しているべきです."
 
 #: ../../source/community/code_of_conduct.rst:60
 msgid "Be collaborative."
-msgstr ""
+msgstr "協力的であること."
 
 #: ../../source/community/code_of_conduct.rst:62
 msgid ""
@@ -127,10 +159,16 @@ msgid ""
 "colleagues, and we take those consequences seriously when making "
 "decisions."
 msgstr ""
+"私たちの作業は他の人々によって使用され,その結果,私たちは他の人々の作業"
+"に依存することになります.私たちがGDALの利益のために何かを作るとき,私た"
+"ちは他の人々にその作業がどのように機能するかを説明することを喜んで行い,"
+"彼らがその作業をさらに向上させるために作業を構築できるようにします.私"
+"たちが行うすべての決定はユーザーや同僚に影響を与え,決定を下す際にはその"
+"結果を真剣に受け止めます."
 
 #: ../../source/community/code_of_conduct.rst:68
 msgid "Be inquisitive."
-msgstr ""
+msgstr "好奇心を持つこと."
 
 #: ../../source/community/code_of_conduct.rst:70
 msgid ""
@@ -139,10 +177,14 @@ msgid ""
 "appropriate forum. Those who are asked should be responsive and helpful, "
 "within the context of our shared goal of improving GDAL."
 msgstr ""
+"誰もすべてを知っているわけではありません!早めに質問をすることで,後で"
+"多くの問題を回避できるため,質問は推奨されますが,適切なフォーラムに質問"
+"を向けることができます.質問を受けた人は,私たちの共通の目標であるGDALを"
+"改善するという文脈の中で,迅速かつ助けになるようにするべきです."
 
 #: ../../source/community/code_of_conduct.rst:75
 msgid "Be careful in the words that we choose."
-msgstr ""
+msgstr "選択する言葉に注意すること."
 
 #: ../../source/community/code_of_conduct.rst:77
 msgid ""
@@ -150,10 +192,14 @@ msgid ""
 "professionalism in all interactions, and take responsibility for our own "
 "speech. Be kind to others. Do not insult or put down other participants."
 msgstr ""
+"私たちがプロフェッショナルまたはボランティアとして参加している場合で"
+"あっても,私たちはすべての相互作用でプロフェッショナリズムを重視し,自分"
+"自身の発言に責任を持ちます.他の人に親切であること.他の参加者を侮辱した"
+"り,軽蔑したりしないでください."
 
 #: ../../source/community/code_of_conduct.rst:81
 msgid "Be concise."
-msgstr ""
+msgstr "簡潔であること."
 
 #: ../../source/community/code_of_conduct.rst:83
 msgid ""
@@ -163,6 +209,11 @@ msgid ""
 "strive to be empathetic, welcoming, friendly and patient. When a long "
 "explanation is necessary, consider adding a summary."
 msgstr ""
+"一度書いたものは何百人もの人に読まれることを念頭に置いてください.短い"
+"メールを書くことは,人々が会話をできるだけ効率的に理解できることを意味し"
+"ます.短いメールは常に共感的であり,歓迎的であり,友好的であり,忍耐強いこ"
+"とを目指すべきです.長い説明が必要な場合は,要約を追加することを検討してく"
+"ださい."
 
 #: ../../source/community/code_of_conduct.rst:89
 msgid ""
@@ -171,16 +222,21 @@ msgid ""
 "thread still contains the other messages with arguments that have "
 "already been made."
 msgstr ""
+"新しいアイデアを会話に持ち込むようにしてください.各メールがスレッドに独自"
+"のものを追加するようにし,スレッドの残りの部分にはすでに行われた議論を含"
+"む他のメッセージが含まれていることを念頭に置いてください."
 
 #: ../../source/community/code_of_conduct.rst:93
 msgid ""
 "Try to stay on topic, especially in discussions that are already fairly "
 "large."
 msgstr ""
+"特にすでにかなり大きな議論の中で,トピックに沿っているようにしてくださ"
+"い."
 
 #: ../../source/community/code_of_conduct.rst:95
 msgid "Step down considerately."
-msgstr ""
+msgstr "慎重に辞任すること."
 
 #: ../../source/community/code_of_conduct.rst:97
 msgid ""
@@ -192,68 +248,81 @@ msgid ""
 "goals or achievements. Likewise, community members should respect any "
 "individual's choice to leave the project."
 msgstr ""
+"すべてのプロジェクトのメンバーは来たり去ったりします.誰かがプロジェクト"
+"から離れたり,プロジェクトから離れたりするときは,離れることを人々に伝え,"
+"他の人が彼らが離れたところから引き継ぐことができるよう適切な手順を踏む"
+"べきです.その際,プロジェクトに引き続き参加している人々に対して敬意を持ち"
+"続け,プロジェクトの目標や成果を誤解しないようにするべきです.同様に,コミ"
+"ュニティメンバーは,個々の選択を尊重するべきです."
 
 #: ../../source/community/code_of_conduct.rst:106
 msgid "Anti-Harassment"
-msgstr ""
+msgstr "ハラスメント防止"
 
 #: ../../source/community/code_of_conduct.rst:108
 msgid ""
 "Harassment and other exclusionary behavior are not acceptable. This "
 "includes, but is not limited to:"
 msgstr ""
+"ハラスメントやその他の排除的な行動は許容されません.これには,以下のもの"
+"が含まれますが,これに限定されません:"
 
 #: ../../source/community/code_of_conduct.rst:111
 msgid ""
 "Personal insults or discriminatory jokes and language, especially those "
 "using racist or sexist terms."
 msgstr ""
+"個人的な侮辱や差別的なジョークや言葉,特に人種差別的または性差別的な用"
+"語を使用するもの."
 
 #: ../../source/community/code_of_conduct.rst:112
 msgid "Offensive comments, excessive or unnecessary profanity."
-msgstr ""
+msgstr "攻撃的なコメント,過度または不必要な卑語."
 
 #: ../../source/community/code_of_conduct.rst:113
 msgid "Intimidation, violent threats or demands."
-msgstr ""
+msgstr "脅迫,暴力的な脅迫または要求."
 
 #: ../../source/community/code_of_conduct.rst:114
 msgid "Sustained disruption of sessions or events."
-msgstr ""
+msgstr "セッションやイベントの持続的な妨害."
 
 #: ../../source/community/code_of_conduct.rst:115
 msgid "Stalking, harassing photography or recording."
-msgstr ""
+msgstr "ストーキング,嫌がらせの写真撮影または録音."
 
 #: ../../source/community/code_of_conduct.rst:116
 msgid "Unwelcome physical contact or sexual attention."
-msgstr ""
+msgstr "歓迎されない肉体的接触または性的関心."
 
 #: ../../source/community/code_of_conduct.rst:117
 msgid ""
 "Repeated harassment of others. In general, if someone asks you to stop, "
 "then stop."
 msgstr ""
+"他者への繰り返しの嫌がらせ.一般的には,誰かがあなたにやめるように頼んだ場合は,やめてください."
 
 #: ../../source/community/code_of_conduct.rst:118
 msgid ""
 "Posting (or threatening to post) other people's personally identifying "
 "information (\"doxing\")."
 msgstr ""
+"他の人々の個人を特定する情報（\"ドキシング\"）を投稿する（または投稿すると脅迫すること）."
 
 #: ../../source/community/code_of_conduct.rst:119
 msgid ""
 "Sharing private content, such as emails sent privately or non-publicly, "
 "or unlogged forums such as IRC channel history."
 msgstr ""
+"プライベートなコンテンツの共有,例えば,プライベートまたは非公開で送信されたメール,またはIRCチャンネルの履歴などのログが取られていないフォーラムの共有."
 
 #: ../../source/community/code_of_conduct.rst:120
 msgid "Advocating for, or encouraging, any of the above behavior."
-msgstr ""
+msgstr "上記の行動を支持または奨励すること."
 
 #: ../../source/community/code_of_conduct.rst:123
 msgid "Reporting Guidelines"
-msgstr ""
+msgstr "報告ガイドライン"
 
 #: ../../source/community/code_of_conduct.rst:125
 msgid ""
@@ -267,26 +336,37 @@ msgid ""
 "Board. Serious or persistent offenders may be expelled from the event or "
 "forum by event organizers or forum leaders."
 msgstr ""
+"誰かがこの行動規範に違反していると思う場合は,その人に返信し,この行動規"
+"範を指摘してください.そのようなメッセージは,適切なものであれば公開または"
+"非公開で行うことができます.善意を前提としてください;参加者が自分の悪い"
+"行動に気づいていない可能性が高いため,意図的に議論の質を低下させようと"
+"している可能性よりも高いです.状況に対処する際に困難がある場合は,懸念を"
+"イベントスタッフ,フォーラムリーダー,またはGDAL理事会に報告することができま"
+"す.重大または持続的な違反者は,イベント主催者またはフォーラムリーダーによ"
+"ってイベントまたはフォーラムから追放される可能性があります."
 
 #: ../../source/community/code_of_conduct.rst:134
 msgid ""
 "To privately email the code of conduct committee leadership use "
 "coc@osgeo.org."
 msgstr ""
+"行動規範委員会のリーダーシップにプライベートメールを送信するには,"
+"coc@osgeo.org を利用して下さい."
 
 #: ../../source/community/code_of_conduct.rst:137
 msgid "Credits"
-msgstr ""
+msgstr "クレジット"
 
 #: ../../source/community/code_of_conduct.rst:139
 msgid ""
 "GDAL re-uses the `OSGeo Code of Conduct <https://www.osgeo.org/resources/"
 "osgeo-code-of-conduct/>`__"
 msgstr ""
+"GDALは `OSGeo行動規範 <https://www.osgeo.org/resources/osgeo-code-of-conduct/>`__ を再利用しています."
 
 #: ../../source/community/index.rst:5
 msgid "Community"
-msgstr ""
+msgstr "コミュニティ"
 
 #: ../../source/community/index.rst:7
 msgid ""
@@ -298,6 +378,13 @@ msgid ""
 "testing. The `Chat`_ room is for real-time chat activities such as "
 "meetings and interactive debugging sessions."
 msgstr ""
+"GDALのコミュニティは,`Mailing List`_, `GitHub`_, および `Chat`_ を通じて"
+"相互作用しています.どの会場でも質問をすることや参加することを歓迎します."
+" `Mailing List`_ コミュニケーションチャネルは,一般的な質問,開発ディスカッ"
+"ション,およびフィードバックのためのものです. `GitHub`_ コミュニケーショ"
+"ンチャネルは,開発活動,バグレポート,およびテストのためのものです. `Chat`_"
+" ルームは,会議や対話型デバッグセッションなどのリアルタイムチャット活動のた"
+"めのものです."
 
 #: ../../source/community/index.rst:20
 msgid ""
@@ -307,10 +394,15 @@ msgid ""
 "community formally or informally, or claims any affiliation with the "
 "project."
 msgstr ""
+"GDALは,どのGDALフォーラムやイベントでどのように振る舞うか,また,私たちの"
+"行動によってどのような判断が下されるかを規定する :ref:`code_of_conduct` を"
+"使用しています.私たちは,GDALコミュニティに公式または非公式に参加するすべ"
+"ての人,またはプロジェクトとの関係を主張するすべての人が,この行動規範を守"
+"ることを期待します."
 
 #: ../../source/community/index.rst:32
 msgid "Mailing List"
-msgstr ""
+msgstr "メーリングリスト"
 
 #: ../../source/community/index.rst:34
 msgid ""
@@ -318,6 +410,9 @@ msgid ""
 "OK to ask questions about how to use GDAL, how to integrate GDAL into "
 "your own software, and report issues that you might have."
 msgstr ""
+"GDALの開発者やユーザーは,GDALメーリングリストに参加しています. GDALの使"
+"い方や,自分自身のソフトウェアにGDALを統合する方法,および発生している問"
+"題について質問することは問題ありません."
 
 #: ../../source/community/index.rst:38
 msgid "http://lists.osgeo.org/mailman/listinfo/gdal-dev"
@@ -336,6 +431,11 @@ msgid ""
 "and we welcome those who are willing to roll up their sleeves and start "
 "filing tickets, pushing code, generating builds, and answering questions."
 msgstr ""
+"ソフトウェアに問題がある場合は,"
+" http://github.com/OSGeo/GDAL にアクセスしてください. GitHubは,"
+"ソフトウェアの現在の開発バージョンを `git`_ リビジョン管理システムで取得できる場所でもあります."
+"GDALプロジェクトは,あらゆる形式の貢献を受け入れることを熱望しており,"
+"チケットを作成し,コードをプッシュし,ビルドを生成し,質問に回答する意志のある人々を歓迎します."
 
 #: ../../source/community/index.rst:54
 msgid "Chat"
@@ -349,20 +449,25 @@ msgid ""
 "are going to be more productive communication channels in most "
 "situations."
 msgstr ""
+"Libera.Chat`_ のIRCチャンネル #gdal でいくつかのGDAL開発者を見つけることができます."
+"このメカニズムは通常,アクティブな会議や他のコミュニティとの連絡に予約されています."
+"ほとんどの状況では, `Mailing List`_ と `GitHub`_ がより生産的なコミュニケーションチャネルになります."
 
 #: ../../source/community/index.rst:67
 msgid "Social media"
-msgstr ""
+msgstr "ソーシャルメディア"
 
 #: ../../source/community/index.rst:69
 msgid ""
 "You can follow GDAL official news on Mastodon: https://mastodon.social/"
 "@gdal / @gdal@mastodon.social"
 msgstr ""
+"GDALの公式ニュースをMastodonでフォローすることができます: https://mastodon.social/"
+"@gdal / @gdal@mastdon.social"
 
 #: ../../source/community/index.rst:73
 msgid "Conference"
-msgstr ""
+msgstr "カンファレンス"
 
 #: ../../source/community/index.rst:-1
 msgid "FOSS4G 2023"
@@ -378,14 +483,20 @@ msgid ""
 "them. The conference will be held at Prizren, Kosovo from June 26th to "
 "July 2nd 2023."
 msgstr ""
+"`FOSS4G 2023 <https://2023.foss4g.org/>`_ は,フリーおよびオープンソースの"
+"地理空間ソフトウェアに関する年次カンファレンスです. GDAL/OGRに関連するプレ"
+"ゼンテーションが含まれ,GDAL/OGR開発コミュニティの一部が参加します. GDAL/"
+"OGR,他のFOSS地理空間技術,およびそれらのコミュニティに興味を持つ人々のため"
+"のイベントです.カンファレンスは,2023年6月26日から7月2日までコソボのプリズ"
+"レンで開催されます."
 
 #: ../../source/community/index.rst:82
 msgid "Governance and Community Participation"
-msgstr ""
+msgstr "ガバナンスとコミュニティ参加"
 
 #: ../../source/community/index.rst:85
 msgid "OSGeo Project Membership"
-msgstr ""
+msgstr "OSGeoプロジェクトメンバーシップ"
 
 #: ../../source/community/index.rst:87
 msgid ""
@@ -396,6 +507,10 @@ msgid ""
 "and began a transition to a more community oriented governance model - "
 "in keeping with OSGeo expectations."
 msgstr ""
+"もともと,多くのGDAL/OGRのオリジナルの著者であるFrank Warmerdamによっ"
+"てGDALがリードされていましたが,さまざまな人々からの貢献と意見がありまし"
+"た.2006年2月に, `Open Source Geospatial Foundation (OSGeo) <https://www.osgeo.org/>`_ の創設プロジェクトとなり,"
+"OSGeoの期待に沿ったよりコミュニティ志向のガバナンスモデルへの移行が開始されました."
 
 #: ../../source/community/index.rst:94
 msgid ""
@@ -404,18 +519,24 @@ msgid ""
 "users and contributors can be assured of responsible project operation "
 "and continuity of the project. In particular:"
 msgstr ""
+"OSGeoプロジェクトとしてのメンバーシップは,GDAL/OGRプロジェクトがさまざま"
+"なベストプラクティスを採用していることを保証し,ユーザーや貢献者が責任あ"
+"るプロジェクト運営とプロジェクトの継続性を確信できるようにします.特に:"
 
 #: ../../source/community/index.rst:98
 msgid ""
 "A consensus oriented Project Management Committee will be in charge of "
 "the project."
 msgstr ""
+"コンセンサス志向のプロジェクトマネジメント委員会がプロジェクトを担当します."
 
 #: ../../source/community/index.rst:99
 msgid ""
 "Project source code and contributions will be vetted to ensure code is "
 "properly made available, protecting contributors and users of GDAL/OGR."
 msgstr ""
+"プロジェクトのソースコードと貢献は,コードが適切に利用可能であることを確"
+"認し,GDAL/OGRの貢献者とユーザーを保護します."
 
 #: ../../source/community/index.rst:101
 msgid ""
@@ -423,10 +544,12 @@ msgid ""
 "the foundation, with responsible backup and redundancy to minimize "
 "disruptions."
 msgstr ""
+"プロジェクトで使用されるシステムインフラの一部は,中断を最小限に抑えるた"
+"めの責任あるバックアップと冗長性を提供します."
 
 #: ../../source/community/index.rst:107
 msgid "Project Steering Committee"
-msgstr ""
+msgstr "プロジェクトステアリング委員会"
 
 #: ../../source/community/index.rst:109
 msgid ""
@@ -436,6 +559,10 @@ msgid ""
 "overall responsible for decisions related to the GDAL/OGR project. The "
 "current members are (@github username):"
 msgstr ""
+"2006年4月(GDAL/OGR 1.3.2リリースに続いて）,プロジェクトはプロジェクト"
+"ステアリング委員会の手に委ねられました.このプロジェクトステアリング委員"
+"会は, :ref:`rfc-1` の規則に従って運営され, GDAL/OGRプロジェクトに関連する"
+"決定に全体的に責任を負います.現在のメンバーは(@githubユーザー名):"
 
 #: ../../source/community/index.rst:114
 msgid "Frank Warmerdam      (@warmerdam)"
@@ -479,7 +606,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:125
 msgid "Past members:"
-msgstr ""
+msgstr "過去のメンバー:"
 
 #: ../../source/community/index.rst:127
 msgid "Andrey Kiselev       (@strezen) (retired in 2019)"
@@ -495,11 +622,13 @@ msgid ""
 "input from all subscribers is welcome. A :ref:`list of past RFC "
 "<rfclist>` is available for review."
 msgstr ""
+"PSCへの提案の議論はgdal-devで行われ,すべての購読者からの入力を歓迎します."
+"過去のRFCの :ref:`リスト <rfclist>` がレビュー用に利用可能です."
 
 #: ../../source/community/index.rst:135
 #: ../../source/community/service_providers.rst:5
 msgid "GDAL Service Providers"
-msgstr ""
+msgstr "GDALサービスプロバイダー"
 
 #: ../../source/community/index.rst:139
 msgid ""
@@ -508,12 +637,15 @@ msgid ""
 "`service_providers` who can assist you in getting the best out of your "
 "GDAL investment."
 msgstr ""
+"GDALは,世界中の多くの企業や個人によって開発およびサポートされています."
+"GDALの資産を最大限に活用するために,あなたを支援している人々は :ref:`service_providers` のリストを参照してください."
 
 #: ../../source/community/service_providers.rst:7
 msgid ""
 "GDAL is developed and supported by a rich ecosystem of businesses and "
 "individuals around the world."
 msgstr ""
+"GDALは,世界中の多くの企業や個人によって開発およびサポートされています."
 
 #: ../../source/community/service_providers.rst:10
 msgid ""
@@ -523,6 +655,11 @@ msgid ""
 "the way to specialized development and support services to advance the "
 "software and support your organization's mission-critical applications."
 msgstr ""
+"このページでは,GDALの投資を最大限に活用するためにあなたを支援できるサー"
+"ビスプロバイダーのリストを提供します.彼らのサービスは,トレーニングやテク"
+"ニカルサポートから始めるのを手伝うことから,ソフトウェアを進化させ,組織"
+"のミッションクリティカルなアプリケーションをサポートするための専門的な開"
+"発およびサポートサービスまで幅広いです."
 
 #: ../../source/community/service_providers.rst:20
 msgid ""
@@ -531,20 +668,26 @@ msgid ""
 "think your organization should be listed here, please submit a pull "
 "request to add it to this page."
 msgstr ""
+"このリストは限定的ではなく,おそらくあなたの地域にはここにリストされてい"
+"ない他のサービスプロバイダーがいる可能性があります.あなたの組織がここに"
+"リストされるべきだと思う場合は,このページに追加するためのプルリクエスト"
+"を提出してください."
 
 #: ../../source/community/service_providers.rst:26
 msgid ""
 "We take responsibility for the accuracy, reliability or completeness of "
 "the provided information for Core Contributors only."
 msgstr ""
+"私たちは,Core Contributorsに関してのみ提供された情報の正確性,信頼性,また"
+"は完全性に責任を負います."
 
 #: ../../source/community/service_providers.rst:32
 msgid "Service Providers order is randomized on page load."
-msgstr ""
+msgstr "サービスプロバイダーの順序はページの読み込み時にランダムになります."
 
 #: ../../source/community/service_providers.rst:35
 msgid "Core Contributors"
-msgstr ""
+msgstr "コアコントリビューター"
 
 #: ../../source/community/service_providers.rst:37
 msgid ""
@@ -553,6 +696,9 @@ msgid ""
 "development of the software and are usually the best to go to for "
 "support."
 msgstr ""
+"コアコントリビューター組織には,GDALコミッターおよび/またはPSCメンバーが"
+"チームの一部としており,そのため,ソフトウェアのコア開発に最も近く,通常,サ"
+"ポートを受けるために最適です."
 
 #: ../../source/community/service_providers.rst:41
 msgid ""
@@ -560,12 +706,17 @@ msgid ""
 "to ensure that any improvement to be made to GDAL gets done in the right "
 "way and will be included in future releases of the software."
 msgstr ""
+"彼らはアーキテクチャに十分近いため,何が可能かを知り,GDALに対して行われる"
+"改善が正しい方法で行われ,ソフトウェアの将来のリリースに含まれることを確"
+"認します."
 
 #: ../../source/community/service_providers.rst:45
 msgid ""
 "They wrote the software that you use, so you can trust them to help you "
 "get the most out of it."
 msgstr ""
+"彼らはあなたが使用しているソフトウェアを書いた人なので,あなたがそれを最大限に活用"
+"するのを手伝う場合信頼できます."
 
 #: ../../source/community/service_providers.rst:50
 msgid "|logo_spatialys|"
@@ -582,6 +733,10 @@ msgid ""
 "Open Source geospatial software - such as GDAL/OGR, PROJ, MapServer, and "
 "QGIS - and Open standards."
 msgstr ""
+" `Spatialys`_ (フランス) は,Even Rouaultによって設立された会社で,"
+"オープンソースの地理空間ソフトウェア"
+"(GDAL/OGR, PROJ, MapServer, QGISなど)やオープンスタンダードに関する最高"
+"の専門知識をクライアントに提供することに専念しています."
 
 #: ../../source/community/service_providers.rst:60
 msgid "|logo_hobu|"
@@ -602,10 +757,15 @@ msgid ""
 "en/latest/specifications/projjson.html>`__, and `Cloud Optimized Point "
 "Cloud <https://copc.io/>`__."
 msgstr ""
+"`Hobu, Inc.`_ (アメリカ) は,Howard Butlerによって設立された `sam.gov <https://sam.gov>`__ 登録の会社です."
+" `PDAL <https://pdal.io>`__ "
+"GDAL/OGR, PROJ, `GeoJSON <https://datatracker.ietf.org/doc/html/rfc7946>`__,  "
+" `PROJJSON <https://proj.org/en/latest/specifications/projjson.html>`__,および `Cloud Optimized Point Cloud <https://copc.io/>`__ "
+"などのオープンスタンダード などのオープンソース地理空間ソフトウェアの作成,拡張,および管理をサポートする20年以上の経験を持っています."
 
 #: ../../source/community/service_providers.rst:74
 msgid "Contributors"
-msgstr ""
+msgstr "コントリビューター"
 
 #: ../../source/community/service_providers.rst:76
 msgid ""
@@ -614,20 +774,24 @@ msgid ""
 "community for their contributions to various aspects of the software "
 "over the years and are very well positioned to assist you with GDAL."
 msgstr ""
+"ここにリストされているコントリビューターは,通常,GDALコミュニティで長年にわたる"
+"ソフトウェアのさまざまな側面への貢献で認められているパワーユーザーや経験豊富な統合者"
+"をチームの一部として持っており,あなたをGDALでサポートするのに非常に適しています."
 
 #: ../../source/community/service_providers.rst:83
 msgid "None listed yet."
-msgstr ""
+msgstr "まだリストされていません."
 
 #: ../../source/community/service_providers.rst:87
 msgid "Other Service Providers"
-msgstr ""
+msgstr "その他のサービスプロバイダー"
 
 #: ../../source/community/service_providers.rst:89
 msgid ""
 "The service providers in this category offer services around GDAL and "
 "related Open Source technologies."
 msgstr ""
+"このカテゴリのサービスプロバイダーは,GDALおよび関連するオープンソース技術に関するサービスを提供しています."
 
 #: ../../source/community/service_providers.rst:94
 msgid "|logo_faunalia|"
@@ -646,6 +810,11 @@ msgid ""
 "Faunalia has its main branch in Italy, and operates worldwide. Faunalia "
 "provides training services on GDAL."
 msgstr ""
+" `Faunalia`_ (イタリア) は,15年以上にわたり,主にQGIS, PostGISなどのフリー"
+"およびオープンソースソフトウェアに基づく地理情報システム(GIS)分野で活"
+"動している会社です.主な顧客は,公共機関,民間企業,団体です. Faunaliaはイタ"
+"リアに本社を置き,世界中で活動しています. FaunaliaはGDALに関するトレーニン"
+"グサービスを提供しています."
 
 #: ../../source/community/service_providers.rst:102
 msgid "|logo_kartoza|"
@@ -662,6 +831,9 @@ msgid ""
 "location-related problems for individuals, businesses and governments "
 "around the world. Kartoza provides training services on GDAL."
 msgstr ""
+"`Kartoza`_ (南アフリカ) は,南アフリカを拠点とするフリーおよびオープンソース"
+"GIS (FOSSGIS) サービスプロバイダーです.私たちは,世界中の個人,企業,政府の"
+"複雑な位置に関連する問題を解決するためにGISソフトウェアを使用しています."
 
 #: ../../source/community/service_providers.rst:110
 msgid "|logo_mundialis|"
@@ -680,19 +852,27 @@ msgid ""
 "satellite, aerial and drone imagery for land degradation and landuse "
 "change. We offer support and training for GRASS GIS and GDAL."
 msgstr ""
+" `mundialis`_ (ドイツ) は,大量の地理空間およびリモートセンシングデータの処"
+"理に特化しています. GRASS GIS, actinia, QGISを中心としたオープンソース地"
+"理空間システムを私たちのプロセスチェーン,プロジェクト,およびカスタマイズ"
+"されたソリューションに組み込んでいます.私たちは,土地劣化と土地利用変化の"
+"ための衛星,航空,およびドローン画像を分析しています. GRASS GISとGDALのサ"
+"ポートとトレーニングを提供しています."
 
 #: ../../source/community/service_providers.rst:155
 msgid ""
 "Search for GDAL service providers with the `OSGeo Service Providers "
 "<https://www.osgeo.org/service-providers/>`__"
 msgstr ""
+" `OSGeo Service Providers <https://www.osgeo.org/service-providers/>`__ でGDALサービスプロバイダーを検索してください."
 
 #: ../../source/community/service_providers.rst:158
 msgid "How to Add a Company"
-msgstr ""
+msgstr "会社を追加する方法"
 
 #: ../../source/community/service_providers.rst:160
 msgid ""
 "The steps to add a company to the service providers list are outlined in "
 "the :ref:`rfc-79` document."
 msgstr ""
+"サービスプロバイダーリストに会社を追加する手順は, :ref:`rfc-79` ドキュメントに記載されています."

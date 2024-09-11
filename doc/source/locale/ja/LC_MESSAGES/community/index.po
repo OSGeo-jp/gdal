@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -33,6 +33,12 @@ msgid ""
 "testing. The `Chat`_ room is for real-time chat activities such as "
 "meetings and interactive debugging sessions."
 msgstr ""
+"GDAL のコミュニティは `メーリングリスト`_、`GitHub`_、および `チャット`_ を通じて"
+"交流しています.質問をしたり,すべての場で参加することを歓迎します. `メーリング"
+"リスト`_ は一般的な質問,開発の議論,フィードバック用のコミュニケーションチャ"
+"ネルです. `GitHub`_ は開発活動,バグレポート,テスト用のコミュニケーションチャ"
+"ネルです. `チャット`_  ルームは会議や対話型のデバッグセッションなどのリアルタイム"
+"のチャット活動用です."
 
 #: ../../source/community/index.rst:16
 msgid "Code of Conduct"
@@ -46,6 +52,10 @@ msgid ""
 "community formally or informally, or claims any affiliation with the "
 "project."
 msgstr ""
+"GDAL は,どの GDAL フォーラムやイベントでどのように振る舞うかを規定する :ref:`code_of_conduct` "
+"を使用しています. GDAL コミュニティに公式または非公式に参加するすべての"
+"人,またはプロジェクトとの関連性を主張するすべての人によって尊重されることを期"
+"待しています."
 
 #: ../../source/community/index.rst:32
 msgid "Mailing List"
@@ -57,6 +67,9 @@ msgid ""
 "OK to ask questions about how to use GDAL, how to integrate GDAL into "
 "your own software, and report issues that you might have."
 msgstr ""
+"GDAL の開発者やユーザーは GDAL メーリングリストに参加しています. GDAL の使い"
+"方や,独自のソフトウェアに GDAL を統合する方法,および発生している問題について"
+"質問することは問題ありません."
 
 #: ../../source/community/index.rst:38
 msgid "http://lists.osgeo.org/mailman/listinfo/gdal-dev"
@@ -75,6 +88,12 @@ msgid ""
 " we welcome those who are willing to roll up their sleeves and start "
 "filing tickets, pushing code, generating builds, and answering questions."
 msgstr ""
+"ソフトウェアに問題がある場合は,"
+" http://github.com/OSGeo/GDAL にアクセスしてください. GitHub は,ソフトウェアの"
+"現在の開発バージョンを `git`_ リビジョン管理システムで取得できる場所でもありま"
+"す. GDAL プロジェクトは,あらゆる形式の貢献を受け入れることを熱望しており,スリー"
+"ブをまくってチケットを作成し,コードをプッシュし,ビルドを生成し,質問に答えること"
+"を望んでいます."
 
 #: ../../source/community/index.rst:54
 msgid "Chat"
@@ -88,6 +107,10 @@ msgid ""
 "avenues are going to be more productive communication channels in most "
 "situations."
 msgstr ""
+"`Libera.Chat`_ の IRC チャンネル #gdal でいくつかの GDAL 開発者を見つけることが"
+"できます. このメカニズムは通常,アクティブな会議や他のコミュニティとの連絡に予約"
+"されています. ほとんどの場合, `メーリングリスト`_ と `GitHub`_ がより生産的なコミ"
+"ュニケーションチャネルになります."
 
 #: ../../source/community/index.rst:67
 msgid "Social media"
@@ -98,6 +121,8 @@ msgid ""
 "You can follow GDAL official news on Mastodon: "
 "https://mastodon.social/@gdal / @gdal@mastodon.social"
 msgstr ""
+"GDAL の公式ニュースは Mastodon でフォローできます: "
+"https://mastodon.social/@gdal / @gdal@mstodon.social"
 
 #: ../../source/community/index.rst:73
 msgid "Conference"
@@ -117,14 +142,19 @@ msgid ""
 "them. The conference will be held at Prizren, Kosovo from June 26th to "
 "July 2nd 2023."
 msgstr ""
+"`FOSS4G 2023 <https://2023.foss4g.org/>`_ は,フリーおよびオープンソースの地理"
+"空間ソフトウェアの主要な年次カンファレンスです. GDAL/OGR に関連するプレゼンテーシ"
+"ョンが含まれ,GDAL/OGR 開発コミュニティの一部が参加します. GDAL/OGR に興味がある"
+"人,他の FOSS 地理空間技術およびそれらのコミュニティに関心のある人のためのイベン"
+"トです. 2023 年 6 月 26 日から 7 月 2 日まで,コソボのプリズレンで開催されます."
 
 #: ../../source/community/index.rst:82
 msgid "Governance and Community Participation"
-msgstr ""
+msgstr "ガバナンスとコミュニティ参加"
 
 #: ../../source/community/index.rst:85
 msgid "OSGeo Project Membership"
-msgstr ""
+msgstr "OSGeo プロジェクトメンバーシップ"
 
 #: ../../source/community/index.rst:87
 msgid ""
@@ -135,6 +165,11 @@ msgid ""
 " began a transition to a more community oriented governance model - in "
 "keeping with OSGeo expectations."
 msgstr ""
+"もともと,多くの GDAL/OGR のオリジナルの著者である Frank Warmerdam によって GDAL"
+" がリードされていましたが,さまざまな人々からの貢献と入力がありました. 2006 年 2 月"
+"に,`Open Source Geospatial Foundation (OSGeo) <https://www.osgeo.org/>`_ の創設プロジェ"
+"クトとなり,OSGeo の期待に沿ったコミュニティ志向のガバナンスモデルへの移行が開始さ"
+"れました."
 
 #: ../../source/community/index.rst:94
 msgid ""
@@ -143,18 +178,24 @@ msgid ""
 " contributors can be assured of responsible project operation and "
 "continuity of the project. In particular:"
 msgstr ""
+"OSGeo プロジェクトとしてのメンバーシップは,GDAL/OGR プロジェクトがさまざまなベ"
+"ストプラクティスを採用していることを保証し,ユーザーや貢献者が責任あるプロジェクト"
+"運営とプロジェクトの継続性を確信できるようにします. 特に以下の点が挙げられます:"
 
 #: ../../source/community/index.rst:98
 msgid ""
 "A consensus oriented Project Management Committee will be in charge of "
 "the project."
 msgstr ""
+"コンセンサス志向のプロジェクトマネジメント委員会がプロジェクトを担当します."
 
 #: ../../source/community/index.rst:99
 msgid ""
 "Project source code and contributions will be vetted to ensure code is "
 "properly made available, protecting contributors and users of GDAL/OGR."
 msgstr ""
+"プロジェクトのソースコードと貢献は,コードが適切に提供されていることを確認し,"
+"GDAL/OGR の貢献者とユーザーを保護します."
 
 #: ../../source/community/index.rst:101
 msgid ""
@@ -162,10 +203,12 @@ msgid ""
 " foundation, with responsible backup and redundancy to minimize "
 "disruptions."
 msgstr ""
+"プロジェクトで使用されるシステムインフラの一部は,中断を最小限に抑えるために,責"
+"任あるバックアップと冗長性を提供します."
 
 #: ../../source/community/index.rst:107
 msgid "Project Steering Committee"
-msgstr ""
+msgstr "プロジェクトステアリング委員会"
 
 #: ../../source/community/index.rst:109
 msgid ""
@@ -175,6 +218,10 @@ msgid ""
 "overall responsible for decisions related to the GDAL/OGR project. The "
 "current members are (@github username):"
 msgstr ""
+"2006 年 4 月 (GDAL/OGR 1.3.2 リリース後) 以降,プロジェクトはプロジェクトステアリ"
+"ング委員会の手に委ねられました. このプロジェクトステアリング委員会は, :ref:`rfc-1`"
+" の規則の下で運営され, GDAL/OGR プロジェクトに関連する決定に全体的に責任を負いま"
+"す. 現在のメンバーは (@github ユーザー名):"
 
 #: ../../source/community/index.rst:114
 msgid "Frank Warmerdam      (@warmerdam)"
@@ -218,7 +265,7 @@ msgstr ""
 
 #: ../../source/community/index.rst:125
 msgid "Past members:"
-msgstr ""
+msgstr "過去のメンバー:"
 
 #: ../../source/community/index.rst:127
 msgid "Andrey Kiselev       (@strezen) (retired in 2019)"
@@ -234,10 +281,12 @@ msgid ""
 "input from all subscribers is welcome. A :ref:`list of past RFC "
 "<rfclist>` is available for review."
 msgstr ""
+"PSC への提案の議論は gdal-dev で行われ,すべての購読者からの入力を歓迎します. "
+" :ref:`過去の RFC のリスト <rfclist>` がレビュー用に利用可能です."
 
 #: ../../source/community/index.rst:135
 msgid "GDAL Service Providers"
-msgstr ""
+msgstr "GDAL サービスプロバイダー"
 
 #: ../../source/community/index.rst:139
 msgid ""
@@ -246,4 +295,7 @@ msgid ""
 ":ref:`service_providers` who can assist you in getting the best out of "
 "your GDAL investment."
 msgstr ""
+"GDAL は世界中の多くの企業や個人によって開発およびサポートされています. GDAL "
+"資源を最大限に活用するために,あなたを支援できる :ref:`service_providers` のリ"
+"ストを参照してください."
 
