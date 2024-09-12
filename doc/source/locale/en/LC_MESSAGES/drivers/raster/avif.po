@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-11 11:33+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/drivers/raster/avif.rst:5
+msgid "AVIF -- AV1 Image File Format"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:-1
+msgid "Driver short name"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:9
+msgid "AVIF"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:-1
+msgid "Build dependencies"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:11
+msgid "libavif"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:13
+msgid ""
+"AV1 Image File Format (AVIF) is an open, royalty-free image file format "
+"specification for storing images or image sequences compressed with AV1 "
+"in the HEIF container format."
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:17
+msgid ""
+"It supports 8-bit, 10-bit and 12-bit images, single-bland, single-band "
+"and alpha channel, RGB and RGBA."
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:20
+msgid ""
+"Files containing animations (several images) will be exposed as GDAL "
+"subdatasets."
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:22
+msgid ""
+"Compression and decompression is done on entire images, so the driver can"
+" not handle arbitrary sizes images."
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:25
+msgid ""
+"Note: read-only support for AVIF files is also available through the "
+":ref:`raster.heif` driver if the AVIF driver is not available, and if "
+"libheif has been compiled with an AV1 compatible decoder."
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:30
+msgid "Driver capabilities"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:37
+msgid "Color Profile Metadata"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:39
+msgid ""
+"GDAL can deal with the following color profile metadata in the "
+"COLOR_PROFILE domain:"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:42
+msgid "SOURCE_ICC_PROFILE (Base64 encoded ICC profile embedded in file.)"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:45
+msgid "Creation options"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:47
+msgid "|about-creation-options| The following creation options are supported:"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:120
+msgid "See Also"
+msgstr ""
+
+#: ../../source/drivers/raster/avif.rst:122
+msgid "`libavif <https://github.com/AOMediaCodec/libavif>`__"
+msgstr ""
+

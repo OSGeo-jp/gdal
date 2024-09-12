@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/community/service_providers.rst:5
 msgid "GDAL Service Providers"
-msgstr ""
+msgstr "GDAL サービスプロバイダ"
 
 #: ../../source/community/service_providers.rst:7
 msgid ""
 "GDAL is developed and supported by a rich ecosystem of businesses and "
 "individuals around the world."
 msgstr ""
+"GDAL は世界中の多くの企業や個人によって開発およびサポートされています."
 
 #: ../../source/community/service_providers.rst:10
 msgid ""
@@ -37,6 +38,9 @@ msgid ""
 "to specialized development and support services to advance the software "
 "and support your organization's mission-critical applications."
 msgstr ""
+"このページでは,GDAL の投資を最大限に活用するためのサポートを提供するサービスプロバイダのリストを提供します."
+"彼らのサービスは,トレーニングやテクニカルサポートから始めるのを手伝うことから、ソフトウェアを進化させ,"
+"組織のミッションクリティカルなアプリケーションをサポートするための専門開発およびサポートサービスまで幅広いです."
 
 #: ../../source/community/service_providers.rst:20
 msgid ""
@@ -45,20 +49,23 @@ msgid ""
 "think your organization should be listed here, please submit a pull "
 "request to add it to this page."
 msgstr ""
+"このリストは完全ではなく,おそらくあなたの地域にはここにリストされていない他のサービスプロバイダがいるでしょう."
+"あなたの組織がここにリストされるべきだと思う場合は,このページに追加するためのプルリクエストを提出してください."
 
 #: ../../source/community/service_providers.rst:26
 msgid ""
 "We take responsibility for the accuracy, reliability or completeness of "
 "the provided information for Core Contributors only."
 msgstr ""
+"Core Contributors に関してのみ,提供された情報の正確性,信頼性,完全性について責任を負います."
 
 #: ../../source/community/service_providers.rst:32
 msgid "Service Providers order is randomized on page load."
-msgstr ""
+msgstr "サービスプロバイダの表示順序はページロード時にランダムになります."
 
 #: ../../source/community/service_providers.rst:35
 msgid "Core Contributors"
-msgstr ""
+msgstr "コアコントリビュータ"
 
 #: ../../source/community/service_providers.rst:37
 msgid ""
@@ -67,6 +74,8 @@ msgid ""
 "development of the software and are usually the best to go to for "
 "support."
 msgstr ""
+"Core Contributor 組織は,GDAL Committers および/または PSC メンバーをチームの一部として持っており,"
+"そのため,ソフトウェアのコア開発に最も近く,通常はサポートを受けるために最適です."
 
 #: ../../source/community/service_providers.rst:41
 msgid ""
@@ -74,12 +83,15 @@ msgid ""
 "to ensure that any improvement to be made to GDAL gets done in the right "
 "way and will be included in future releases of the software."
 msgstr ""
+"GDALで何が可能か,および GDAL に行われる改善が正しい方法で行われ,"
+"ソフトウェアの将来のリリースに含まれることの構想に彼らはとても近くにいます."
 
 #: ../../source/community/service_providers.rst:45
 msgid ""
 "They wrote the software that you use, so you can trust them to help you "
 "get the most out of it."
 msgstr ""
+"あなたが使用しているソフトウェアを書いたので,あなたがそれを最大限に活用するのを手伝うために彼らを信頼できます."
 
 #: ../../source/community/service_providers.rst:50
 msgid "|logo_spatialys|"
@@ -96,6 +108,8 @@ msgid ""
 "Open Source geospatial software - such as GDAL/OGR, PROJ, MapServer, and "
 "QGIS - and Open standards."
 msgstr ""
+" `Spatialys`_  (フランス) は Even Rouault によって設立された会社で,"
+"GDAL/OGR, PROJ, MapServer, QGIS などのオープンソースジオスペーシャルソフトウェアおよびオープンスタンダードに関する専門知識を提供することに専念しています."
 
 #: ../../source/community/service_providers.rst:60
 msgid "|logo_hobu|"
@@ -116,10 +130,15 @@ msgid ""
 "<https://proj.org/en/latest/specifications/projjson.html>`__, and `Cloud "
 "Optimized Point Cloud <https://copc.io/>`__."
 msgstr ""
+"`Hobu, Inc.`_  (アメリカ) は Howard Butler によって設立された `sam.gov "
+"<https://sam.gov>`__  に登録された会社で, `PDAL <https://pdal.io>`__ , GDAL/OGR, PROJ などのオープンソースジオスペーシャルソフトウェアの作成,拡張,管理をサポートする20年以上の経験があり,"
+"`GeoJSON <https://datatracker.ietf.org/doc/html/rfc7946>`__, `PROJJSON "
+"<https://proj.org/en/latest/specifications/projjson.html>`__, `Cloud "
+"Optimized Point Cloud <https://copc.io/>`__ などのオープンスタンダードをサポートしています."
 
 #: ../../source/community/service_providers.rst:74
 msgid "Contributors"
-msgstr ""
+msgstr "コントリビュータ"
 
 #: ../../source/community/service_providers.rst:76
 msgid ""
@@ -128,20 +147,23 @@ msgid ""
 "community for their contributions to various aspects of the software over"
 " the years and are very well positioned to assist you with GDAL."
 msgstr ""
+"ここにリストされているコントリビュータは通常,チームの一部としてGDAL コミュニティで長年にわたりソフトウェアのさまざまな側面に貢献していることが認識されているパワーユーザーおよび経験豊富な統合者を持っており,"
+"GDAL をサポートするために非常に適しています."
 
 #: ../../source/community/service_providers.rst:83
 msgid "None listed yet."
-msgstr ""
+msgstr "まだリストされていません."
 
 #: ../../source/community/service_providers.rst:87
 msgid "Other Service Providers"
-msgstr ""
+msgstr "その他のサービスプロバイダ"
 
 #: ../../source/community/service_providers.rst:89
 msgid ""
 "The service providers in this category offer services around GDAL and "
 "related Open Source technologies."
 msgstr ""
+"このカテゴリのサービスプロバイダは,GDAL および関連するオープンソース技術に関するサービスを提供しています."
 
 #: ../../source/community/service_providers.rst:94
 msgid "|logo_faunalia|"
@@ -160,6 +182,8 @@ msgid ""
 "Faunalia has its main branch in Italy, and operates worldwide. Faunalia "
 "provides training services on GDAL."
 msgstr ""
+"`Faunalia`_  (イタリア) は,15年以上にわたり主に QGIS, PostGIS などのフリーおよびオープンソースソフトウェアに基づく地理情報システム(GIS)分野で活動している会社です."
+"主な顧客は公共機関,民間企業,団体です. Faunalia はイタリアに本社を置き,世界中で活動しています. Faunalia は GDAL に関するトレーニングサービスを提供しています."
 
 #: ../../source/community/service_providers.rst:102
 msgid "|logo_kartoza|"
@@ -176,6 +200,8 @@ msgid ""
 "location-related problems for individuals, businesses and governments "
 "around the world. Kartoza provides training services on GDAL."
 msgstr ""
+" `Kartoza`_  (南アフリカ) は南アフリカに拠点を置くフリーおよびオープンソースGIS (FOSSGIS) サービスプロバイダです."
+"私たちは世界中の個人,企業,政府のために複雑な位置に関連する問題を解決するために GIS ソフトウェアを使用しています. Kartoza は GDAL に関するトレーニングサービスを提供しています."
 
 #: ../../source/community/service_providers.rst:110
 msgid "|logo_mundialis|"
@@ -194,20 +220,25 @@ msgid ""
 "satellite, aerial and drone imagery for land degradation and landuse "
 "change. We offer support and training for GRASS GIS and GDAL."
 msgstr ""
+" `mundialis`_  (ドイツ) は大量のジオスペーシャルおよびリモートセンシングデータの処理に特化しています."
+"GRASS GIS, actinia, QGIS などのオープンソースジオスペーシャルシステムを中心としたサービスは,プロセスチェーン,プロジェクト,カスタマイズされたソリューションに組み込まれています."
+"土地劣化および土地利用変化のための衛星,航空,ドローン画像を分析します. GRASS GIS および GDAL のサポートおよびトレーニングを提供しています."
 
 #: ../../source/community/service_providers.rst:155
 msgid ""
 "Search for GDAL service providers with the `OSGeo Service Providers "
 "<https://www.osgeo.org/service-providers/>`__"
 msgstr ""
+"`OSGeo Service Providers <https://www.osgeo.org/service-providers/>`__ で GDAL サービスプロバイダを検索してください."
 
 #: ../../source/community/service_providers.rst:158
 msgid "How to Add a Company"
-msgstr ""
+msgstr "会社を追加する方法"
 
 #: ../../source/community/service_providers.rst:160
 msgid ""
 "The steps to add a company to the service providers list are outlined in "
 "the :ref:`rfc-79` document."
 msgstr ""
+"サービスプロバイダリストに会社を追加する手順は, :ref:`rfc-79` ドキュメントに記載されています."
 
