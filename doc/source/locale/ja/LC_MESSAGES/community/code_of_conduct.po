@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -30,6 +30,11 @@ msgid ""
 " everyone who participates in the GDAL community formally or informally, "
 "or claims any affiliation with the project."
 msgstr ""
+"この行動規範は,私たちがGDALのフォーラムやイベントにおいてどのように振る"
+"舞うか,また,私たちの行動によってどのような判断が下されるかを規定するも"
+"のです.私たちは,GDALコミュニティに公式または非公式に参加するすべての"
+"人,あるいはプロジェクトとの関係を主張するすべての人が,この行動規範を"
+"守ることを期待します."
 
 #: ../../source/community/code_of_conduct.rst:13
 msgid "Introduction"
@@ -42,11 +47,11 @@ msgid ""
 " everyone who participates in the GDAL community formally or informally, "
 "or claims any affiliation with the GDAL project."
 msgstr ""
-"この行動規範は、私たちがGDALのフォーラムやイベントにおいてどのように振る"
-"舞うか、また、私たちの行動によってどのような判断が下されるかを規定するも"
-"のです。私たちは、GDALコミュニティに公式または非公式に参加するすべての"
-"人、あるいはGDALプロジェクトとの関係を主張するすべての人が、この行動規範"
-"を守ることを期待します。"
+"この行動規範は,私たちがGDALのフォーラムやイベントにおいてどのように振る"
+"舞うか,また,私たちの行動によってどのような判断が下されるかを規定するも"
+"のです.私たちは,GDALコミュニティに公式または非公式に参加するすべての"
+"人,あるいはGDALプロジェクトとの関係を主張するすべての人が,この行動規範"
+"を守ることを期待します."
 
 #: ../../source/community/code_of_conduct.rst:20
 msgid ""
@@ -55,6 +60,10 @@ msgid ""
 "wiki, blogs, Twitter, and any other forums which the community uses for "
 "communication and interactions."
 msgstr ""
+"この行動規範は,対面イベント(カンファレンスや関連する社交イベントなど),"
+"IRC,公開および非公開のメーリングリスト,イシュートラッカー,ウィキ,ブログ,"
+"Twitter,およびコミュニティがコミュニケーションや相互作用に使用するその他"
+"のフォーラムに適用されます."
 
 #: ../../source/community/code_of_conduct.rst:25
 msgid ""
@@ -63,6 +72,10 @@ msgid ""
 " it to be followed in spirit as much as in the letter, so that it can "
 "enrich all of us and the technical communities in which we participate."
 msgstr ""
+"この行動規範は完全ではありません.それは,協力的で共有された環境と目標の"
+"共通理解を抽出するために役立ちます.私たちは,それが文字通りに従われるだ"
+"けでなく,精神的にも従われることを期待しています.それにより,私たち全員"
+"と私たちが参加する技術コミュニティが豊かになることを期待しています."
 
 #: ../../source/community/code_of_conduct.rst:31
 msgid "Diversity Statement"
@@ -75,6 +88,11 @@ msgid ""
 "always work to treat everyone well. No matter how you identify yourself "
 "or how others perceive you: we welcome you. Specific Guidelines"
 msgstr ""
+"GDALは,誰もが参加することを歓迎し,奨励します.私たちは,誰もが参加して"
+"うれしいと感じるコミュニティであることを約束し,常に誰に対してもよく扱"
+"うよう努めます.自分自身をどのように位置づけるか,他の人がどのようにあ"
+"なたを認識するかに関わらず:私たちはあなたを歓迎します.具体的なガイドラ"
+"イン"
 
 #: ../../source/community/code_of_conduct.rst:39
 msgid "We strive to:"
@@ -82,7 +100,7 @@ msgstr "私たちは次のことに努めます:"
 
 #: ../../source/community/code_of_conduct.rst:41
 msgid "Be open."
-msgstr ""
+msgstr "オープンであること"
 
 #: ../../source/community/code_of_conduct.rst:43
 msgid ""
@@ -94,10 +112,16 @@ msgid ""
 " any inadvertent mistakes made by people answering will be more easily "
 "detected and corrected."
 msgstr ""
+"私たちは誰でも私たちのコミュニティに参加するよう招待します.プロジェクト"
+"関連のメッセージについては,機密情報を議論していない限り,公開されたコミュ"
+"ニケーション手段を使用することをお勧めします.これは,ヘルプやプロジェクト関"
+"連のサポートに関するメッセージにも適用されます;公開されたサポートリクエスト"
+"は,質問に対する回答を得る可能性が高いだけでなく,回答者が誤りを犯した場合"
+"にも,それがより簡単に検出および修正されることを確認します."
 
 #: ../../source/community/code_of_conduct.rst:50
 msgid "Be empathetic, welcoming, friendly, and patient."
-msgstr ""
+msgstr "共感的であり,歓迎的であり,友好的であり,忍耐強いこと"
 
 #: ../../source/community/code_of_conduct.rst:52
 msgid ""
@@ -110,10 +134,17 @@ msgid ""
 " be respectful when dealing with other community members as well as with "
 "people outside our community."
 msgstr ""
+"私たちは,紛争を解決するために協力し,良い意図を前提とし,共感的な態度で行"
+"動するよう最善を尽くします.私たちは時折,皆が少しの不満を感じるかもしれま"
+"せんが,不満を個人攻撃に変えることは許しません.人々が不快に感じたり,脅か"
+"されたりするコミュニティは生産的なものではありません.私たちには多文化,多"
+"言語のコミュニティがあり,私たちの一部は母国語話者ではありません.他のコミ"
+"ュニティメンバーと取引する際,およびコミュニティ外の人々と取引する際にも,"
+"敬意を持つべきです."
 
 #: ../../source/community/code_of_conduct.rst:60
 msgid "Be collaborative."
-msgstr ""
+msgstr "協力的であること"
 
 #: ../../source/community/code_of_conduct.rst:62
 msgid ""
@@ -124,10 +155,15 @@ msgid ""
 "colleagues, and we take those consequences seriously when making "
 "decisions."
 msgstr ""
+"私たちの作業は他の人々によって使用され,逆に私たちは他の人々の作業に依存"
+"します.私たちがGDALの利益のために何かを作るとき,私たちは他の人々にそれが"
+"どのように機能するかを説明することを喜んで行い,彼らがその作業をさらに良く"
+"するために作業を構築できるようにします.私たちが行うすべての決定はユーザー"
+"や同僚に影響を与え,決定を行う際にはその結果を真剣に受け止めます."
 
 #: ../../source/community/code_of_conduct.rst:68
 msgid "Be inquisitive."
-msgstr ""
+msgstr "好奇心を持つこと"
 
 #: ../../source/community/code_of_conduct.rst:70
 msgid ""
@@ -136,10 +172,14 @@ msgid ""
 "appropriate forum. Those who are asked should be responsive and helpful, "
 "within the context of our shared goal of improving GDAL."
 msgstr ""
+"誰もがすべてを知っているわけではありません!早めに質問をすることで,後で"
+"多くの問題を回避できるため,質問は推奨されますが,適切なフォーラムに向けら"
+"れるかもしれません.質問を受けた人は,私たちの共通の目標であるGDALの改善の"
+"文脈の中で,迅速かつ助けになるようにするべきです."
 
 #: ../../source/community/code_of_conduct.rst:75
 msgid "Be careful in the words that we choose."
-msgstr ""
+msgstr "選択する言葉に注意すること"
 
 #: ../../source/community/code_of_conduct.rst:77
 msgid ""
@@ -147,10 +187,14 @@ msgid ""
 "professionalism in all interactions, and take responsibility for our own "
 "speech. Be kind to others. Do not insult or put down other participants."
 msgstr ""
+"私たちがプロフェッショナルまたはボランティアとして参加している場合でも,"
+"私たちはすべての相互作用でプロフェッショナリズムを重視し,自分自身の発言"
+"に責任を持ちます.他の人に親切であること.他の参加者を侮辱したり,軽蔑したり"
+"しないでください."
 
 #: ../../source/community/code_of_conduct.rst:81
 msgid "Be concise."
-msgstr ""
+msgstr "簡潔であること"
 
 #: ../../source/community/code_of_conduct.rst:83
 msgid ""
@@ -160,6 +204,10 @@ msgid ""
 "strive to be empathetic, welcoming, friendly and patient. When a long "
 "explanation is necessary, consider adding a summary."
 msgstr ""
+"一度書いたものが何百人もの人に読まれることを念頭に置いてください.短いメー"
+"ルを書くことは,人々が会話をできるだけ効率的に理解できることを意味します."
+"短いメールは常に共感的であり,歓迎的であり,友好的であり,忍耐強いことを目指"
+"すべきです.長い説明が必要な場合は,要約を追加することを検討してください."
 
 #: ../../source/community/code_of_conduct.rst:89
 msgid ""
@@ -167,16 +215,20 @@ msgid ""
 " unique to the thread, keeping in mind that the rest of the thread still "
 "contains the other messages with arguments that have already been made."
 msgstr ""
+"各メールがスレッドに独自のものを追加するように,新しいアイデアを会話に持"
+"ち込むようにしてください.スレッドの残りの部分には,すでに行われた議論を含"
+"む他のメッセージが含まれていることを念頭に置いてください."
 
 #: ../../source/community/code_of_conduct.rst:93
 msgid ""
 "Try to stay on topic, especially in discussions that are already fairly "
 "large."
 msgstr ""
+"特にすでにかなり大きな議論の中で,トピックにとどまるようにしてください."
 
 #: ../../source/community/code_of_conduct.rst:95
 msgid "Step down considerately."
-msgstr ""
+msgstr "慎重に辞任すること"
 
 #: ../../source/community/code_of_conduct.rst:97
 msgid ""
@@ -188,68 +240,84 @@ msgid ""
 "goals or achievements. Likewise, community members should respect any "
 "individual's choice to leave the project."
 msgstr ""
+"すべてのプロジェクトのメンバーは来たり去ったりします.誰かがプロジェクト"
+"から離れたり,プロジェクトから離れたりするときは,離れることを人々に伝え,"
+"他の人々が彼らが離れたところから引き継げるように適切な手順を踏むべきです."
+"その際,プロジェクトに引き続き参加している人々に対して敬意を持ち続け,プロ"
+"ジェクトの目標や成果を誤解しないようにするべきです.同様に,コミュニティメン"
+"バーは,個々の選択を尊重するべきです."
 
 #: ../../source/community/code_of_conduct.rst:106
 msgid "Anti-Harassment"
-msgstr ""
+msgstr "ハラスメントに対する取り組み"
 
 #: ../../source/community/code_of_conduct.rst:108
 msgid ""
 "Harassment and other exclusionary behavior are not acceptable. This "
 "includes, but is not limited to:"
 msgstr ""
+"ハラスメントやその他の排除的な行動は許容されません.これには,以下のもの"
+"が含まれますが,これに限定されません:"
 
 #: ../../source/community/code_of_conduct.rst:111
 msgid ""
 "Personal insults or discriminatory jokes and language, especially those "
 "using racist or sexist terms."
 msgstr ""
+"個人的な侮辱や差別的なジョークや言葉,特に人種差別的または性差別的な用語"
+"を使用するもの."
 
 #: ../../source/community/code_of_conduct.rst:112
 msgid "Offensive comments, excessive or unnecessary profanity."
-msgstr ""
+msgstr "攻撃的なコメント,過度または不必要な卑語."
 
 #: ../../source/community/code_of_conduct.rst:113
 msgid "Intimidation, violent threats or demands."
-msgstr ""
+msgstr "脅迫,暴力的な脅迫または要求."
 
 #: ../../source/community/code_of_conduct.rst:114
 msgid "Sustained disruption of sessions or events."
-msgstr ""
+msgstr "セッションやイベントの持続的な妨害."
 
 #: ../../source/community/code_of_conduct.rst:115
 msgid "Stalking, harassing photography or recording."
-msgstr ""
+msgstr "ストーキング,嫌がらせの写真撮影または録音."
 
 #: ../../source/community/code_of_conduct.rst:116
 msgid "Unwelcome physical contact or sexual attention."
-msgstr ""
+msgstr "歓迎されない肉体的接触または性的注意."
 
 #: ../../source/community/code_of_conduct.rst:117
 msgid ""
 "Repeated harassment of others. In general, if someone asks you to stop, "
 "then stop."
 msgstr ""
+"他者への繰り返しの嫌がらせ.一般的には,誰かがあなたにやめるように頼む"
+"ときは,やめてください."
 
 #: ../../source/community/code_of_conduct.rst:118
 msgid ""
 "Posting (or threatening to post) other people's personally identifying "
 "information (\"doxing\")."
 msgstr ""
+"他の人々の個人を特定する情報(\"ドキシング\")を投稿する(または投稿する"
+"と脅す)."
 
 #: ../../source/community/code_of_conduct.rst:119
 msgid ""
 "Sharing private content, such as emails sent privately or non-publicly, "
 "or unlogged forums such as IRC channel history."
 msgstr ""
+"プライベートなコンテンツ,例えば非公開または非公開のメール,またはIRCチャ"
+"ンネルの履歴など,を共有すること."
 
 #: ../../source/community/code_of_conduct.rst:120
 msgid "Advocating for, or encouraging, any of the above behavior."
-msgstr ""
+msgstr "上記の行動を支持したり,奨励したりすること."
 
 #: ../../source/community/code_of_conduct.rst:123
 msgid "Reporting Guidelines"
-msgstr ""
+msgstr "報告ガイドライン"
 
 #: ../../source/community/code_of_conduct.rst:125
 msgid ""
@@ -263,20 +331,31 @@ msgid ""
 "persistent offenders may be expelled from the event or forum by event "
 "organizers or forum leaders."
 msgstr ""
+"誰かがこの行動規範を破っていると思う場合,その人に返信し,この行動規範を"
+"指摘することができます.そのようなメッセージは,公開または非公開のどちらが"
+"適切かによって異なります.善意を前提としてください;参加者が自分の悪い行動"
+"に気づいていない可能性が高いです.議論の質を低下させようと意図的に行動し"
+"ている可能性よりも.状況に対処する際に困難がある場合は,懸念をイベントスタ"
+"ッフ,フォーラムリーダー,またはGDAL理事会に報告することができます.重大また"
+"は持続的な違反者は,イベント主催者またはフォーラムリーダーによってイベント"
+"やフォーラムから追放される可能性があります."
 
 #: ../../source/community/code_of_conduct.rst:134
 msgid ""
 "To privately email the code of conduct committee leadership use "
 "coc@osgeo.org."
 msgstr ""
+"行動規範委員会のリーダーシップにプライベートメールを送信するには,"
+"coc@osgeo.org を使用してください."
 
 #: ../../source/community/code_of_conduct.rst:137
 msgid "Credits"
-msgstr ""
+msgstr "クレジット"
 
 #: ../../source/community/code_of_conduct.rst:139
 msgid ""
 "GDAL re-uses the `OSGeo Code of Conduct <https://www.osgeo.org/resources"
 "/osgeo-code-of-conduct/>`__"
 msgstr ""
+"GDALは, `OSGeo Code of Conduct <https://www.osgeo.org/resources/osgeo-code-of-conduct/>`__ を再利用しています."
 
