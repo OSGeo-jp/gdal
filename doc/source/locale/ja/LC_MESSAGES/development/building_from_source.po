@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-15 10:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,49 +21,50 @@ msgstr ""
 
 #: ../../source/development/building_from_source.rst:5
 msgid "Building GDAL from source"
-msgstr ""
+msgstr "GDAL のソースからのビルド"
 
 #: ../../source/development/building_from_source.rst:10
 msgid "Build requirements"
-msgstr ""
+msgstr "ビルド要件"
 
 #: ../../source/development/building_from_source.rst:12
 msgid "The minimum requirements to build GDAL are:"
-msgstr ""
+msgstr "GDAL をビルドするための最小要件は次のとおりです:"
 
 #: ../../source/development/building_from_source.rst:14
 msgid ""
 "CMake >= 3.16, and an associated build system (make, ninja, Visual "
 "Studio, etc.)"
 msgstr ""
+"CMake >= 3.16, および関連するビルドシステム (make, ninja, Visual Studio, など)"
 
 #: ../../source/development/building_from_source.rst:15
 msgid "C99 compiler"
-msgstr ""
+msgstr "C99 コンパイラ"
 
 #: ../../source/development/building_from_source.rst:16
 msgid "C++17 compiler since GDAL 3.9 (C++11 in previous versions)"
-msgstr ""
+msgstr "GDAL 3.9 以降は C++17 コンパイラ (以前のバージョンでは C++11)"
 
 #: ../../source/development/building_from_source.rst:17
 msgid "PROJ >= 6.3.1"
-msgstr ""
+msgstr "PROJ >= 6.3.1"
 
 #: ../../source/development/building_from_source.rst:19
 msgid "Additional requirements to run the GDAL test suite are:"
-msgstr ""
+msgstr "GDAL テストスイートを実行するための追加要件は次のとおりです:"
 
 #: ../../source/development/building_from_source.rst:21
 msgid "SWIG >= 4, for building bindings to other programming languages"
-msgstr ""
+msgstr "他のプログラミング言語へのバインディングをビルドするための SWIG >= 4"
 
 #: ../../source/development/building_from_source.rst:22
 msgid "Python >= 3.8"
-msgstr ""
+msgstr "Python >= 3.8"
 
 #: ../../source/development/building_from_source.rst:23
 msgid "Python packages listed in `autotest/requirements.txt`"
-msgstr ""
+msgstr "`autotest/requirements.txt` にリストされた Python パッケージ"
 
 #: ../../source/development/building_from_source.rst:25
 msgid ""
@@ -72,10 +73,14 @@ msgid ""
 "libjpeg, etc. Consult :ref:`raster_drivers` and :ref:`vector_drivers` "
 "pages for information on dependencies of optional drivers."
 msgstr ""
+"多くのビルドには SQLite3, expat, libcurl, zlib, libtiff, libgeotiff, "
+"libpng, libjpeg などのオプションライブラリが強く推奨されます.オプション"
+"ドライバの依存関係については, :ref:`raster_drivers` および :ref:`vector_"
+"drivers` ページを参照してください."
 
 #: ../../source/development/building_from_source.rst:31
 msgid "CMake (GDAL versions >= 3.5.0)"
-msgstr ""
+msgstr "CMake (GDAL バージョン >= 3.5.0)"
 
 #: ../../source/development/building_from_source.rst:33
 msgid ""
@@ -84,16 +89,22 @@ msgid ""
 "any platform. After unpacking the source distribution archive (or cloning"
 " the repository) step into the source tree:"
 msgstr ""
+"バージョン 3.5.0 以降, GDAL は CMake ビルドシステムを使用してビルドできます."
+"CMake ビルドシステムを使用すると, ほぼすべてのプラットフォームで GDAL をコ"
+"ンパイルおよびインストールできます. ソース配布アーカイブを展開した後 (または"
+"リポジトリをクローンした後) ソースツリーに移動します:"
 
 #: ../../source/development/building_from_source.rst:42
 msgid "Create a build directory and step into it:"
-msgstr ""
+msgstr "ビルドディレクトリを作成し, そのディレクトリに移動します:"
 
 #: ../../source/development/building_from_source.rst:49
 msgid ""
 "From the build directory you can now configure CMake, build and install "
 "the binaries:"
 msgstr ""
+"ビルドディレクトリから CMake を設定し, バイナリをビルドおよびインストールでき"
+"ます:"
 
 #: ../../source/development/building_from_source.rst:59
 msgid ""
@@ -103,6 +114,11 @@ msgid ""
 " or ``-DOGR_ENABLE_DRIVER_<driver_name>=ON``. See :ref:`selection-of-"
 "drivers` for more details."
 msgstr ""
+"最小限のビルドの場合, 初期の ``cmake`` コマンドにこれらのオプションを追加し"
+"ます: ``-DGDAL_BUILD_OPTIONAL_DRIVERS=OFF -DOGR_BUILD_OPTIONAL_DRIVERS=OFF``."
+" 特定のドライバを有効にするには, ``-DGDAL_ENABLE_DRIVER_<driver_name>=ON`` また"
+"は ``-DOGR_ENABLE_DRIVER_<driver_name>=ON`` を追加します. 詳細については, :ref:`"
+"selection-of-drivers` を参照してください."
 
 #: ../../source/development/building_from_source.rst:65
 msgid ""
@@ -113,28 +129,39 @@ msgid ""
 "recommended. It is also not supported on Windows multi-configuration "
 "generator (such as VisualStudio)."
 msgstr ""
+"CMake (>= 3.14) の ``--prefix /installation/prefix`` オプションは GDAL 3.7.0 以"
+"降でサポートされていますが, 設定時に CMAKE_INSTALL_PREFIX を設定するのとは異な"
+"り, GDAL_DATA パスが libgdal バイナリにハードコードされないため, お勧めできませ"
+"ん. また, Windows のマルチ構成ジェネレータ (VisualStudio など) ではサポートされて"
+"いません."
 
 #: ../../source/development/building_from_source.rst:72
 msgid ""
 "If a dependency is installed in a custom location, specify the paths to "
 "the include directory and the library:"
 msgstr ""
+"依存関係がカスタムの場所にインストールされている場合, include ディレクトリとライ"
+"ブラリへのパスを指定します:"
 
 #: ../../source/development/building_from_source.rst:79
 msgid "Alternatively, a custom prefix can be specified:"
-msgstr ""
+msgstr "または, カスタムプレフィックスを指定できます:"
 
 #: ../../source/development/building_from_source.rst:85
 msgid ""
 "It is strongly recommended (and sometimes compulsory) to specify paths on"
 " Windows using forward slashes as well, e.g.: ``c:/path/to/include``."
 msgstr ""
+"Windows でのパスはスラッシュも使用することが強く推奨されます (時には強制的に), 例"
+"えば: ``c:/path/to/include``."
 
 #: ../../source/development/building_from_source.rst:88
 msgid ""
 "You can unset existing cached variables, by using the -U switch of cmake,"
 " for example with wildcards:"
 msgstr ""
+"ワイルドカードを使用して, cmake の -U スイッチを使用して既存のキャッシュ変数を解"
+"除できます. たとえば:"
 
 #: ../../source/development/building_from_source.rst:94
 msgid ""
@@ -144,6 +171,10 @@ msgid ""
 "lib, *e.g.* ``set (GDAL_LIB_OUTPUT_NAME gdal_x64 CACHE STRING \"\" "
 "FORCE)``:"
 msgstr ""
+"依存関係の設定を ``ConfigUser.cmake`` ファイルにまとめ, -C オプションを使用して"
+"それを使用できます. ファイルには CACHE オプションを使用する set() コマンドが含ま"
+"れています. たとえば, 共有ライブラリの異なる名前を設定できます. 例: ``set (GDAL_"
+"LIB_OUTPUT_NAME gdal_x64 CACHE STRING \"\" FORCE)``:"
 
 #: ../../source/development/building_from_source.rst:104
 msgid ""
@@ -152,30 +183,38 @@ msgid ""
 "conflict with new settings. If strange errors appear during cmake run, "
 "you may try removing CMakeCache.txt to start from a clean state."
 msgstr ""
+"依存関係を追加/変更/削除するために GDAL を設定する際に反復する場合, 一部のキャッ"
+"シュ変数は前回の実行から CMakeCache.txt に残り, 新しい設定と競合する可能性がありま"
+"す. cmake 実行中に奇妙なエラーが発生した場合, CMakeCache.txt を削除してクリーンな状"
+"態から開始することができます."
 
 #: ../../source/development/building_from_source.rst:109
 msgid ""
 "Refer to :ref:`using_gdal_in_cmake` for how to use GDAL in a CMake "
 "project."
 msgstr ""
+"CMake プロジェクトで GDAL を使用する方法については, :ref:`using_gdal_in_cmake`"
+" を参照してください."
 
 #: ../../source/development/building_from_source.rst:112
 msgid "Building on Windows"
-msgstr ""
+msgstr "Windows でのビルド"
 
 #: ../../source/development/building_from_source.rst:114
 msgid "On Windows, one may need to specify generator:"
-msgstr ""
+msgstr "Windows では, ジェネレータを指定する必要があるかもしれません:"
 
 #: ../../source/development/building_from_source.rst:122
 msgid "Building on MacOS"
-msgstr ""
+msgstr "MacOS でのビルド"
 
 #: ../../source/development/building_from_source.rst:124
 msgid ""
 "On MacOS, there are a couple of libraries that do not function properly "
 "when the GDAL build requirements are installed using Homebrew."
 msgstr ""
+"MacOS では, GDAL ビルド要件が Homebrew を使用してインストールされている場合, "
+"正常に機能しないライブラリがいくつかあります."
 
 #: ../../source/development/building_from_source.rst:126
 msgid ""
@@ -184,6 +223,10 @@ msgid ""
 "detection issue. In order to build GDAL successfully, configure CMake to "
 "not find the Arrow package:"
 msgstr ""
+"現在の Homebrew ディストリビューションに含まれている `Apache Arrow <https://"
+"arrow.apache.org/docs/index.html>`_ ライブラリは壊れており, 検出問題を引き起こしま"
+"す. GDAL を正常にビルドするためには, CMake を設定して Arrow パッケージを見つけ"
+"ないようにします:"
 
 #: ../../source/development/building_from_source.rst:133
 msgid ""
@@ -192,20 +235,26 @@ msgid ""
 "headers. You should either install Boost manually or disable libkml when "
 "building on MacOS:"
 msgstr ""
+"同様に, 最近の Homebrew のバージョンでは, `Boost <https://www.boost.org/>`_ が "
+"libkml とバンドルされなくなり, Boost ヘッダーが見つからないため, MacOS でビルドする"
+"際に libkml を無効にするか, Boost を手動でインストールする必要があります:"
 
 #: ../../source/development/building_from_source.rst:141
 msgid "CMake general configure options"
-msgstr ""
+msgstr "CMake 一般的な設定オプション"
 
 #: ../../source/development/building_from_source.rst:143
 msgid ""
 "Options to configure a CMake are provided using ``-D<var>=<value>``. All "
 "cached entries can be viewed using ``cmake -LAH`` from a build directory."
 msgstr ""
+"CMake を設定するためのオプションは ``-D<var>=<value>`` を使用して提供されます. ビル"
+"ドディレクトリから ``cmake -LAH`` を使用してすべてのキャッシュエントリを表示できま"
+"す."
 
 #: ../../source/development/building_from_source.rst:148
 msgid "Build applications. Default is ON."
-msgstr ""
+msgstr "アプリケーションをビルドします. デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:152
 msgid ""
@@ -213,6 +262,9 @@ msgid ""
 "documentation for `BUILD_SHARED_LIBS "
 "<https://cmake.org/cmake/help/v3.10/variable/BUILD_SHARED_LIBS.html>`_."
 msgstr ""
+"GDAL ライブラリを共有してビルドします. デフォルトは ON です. `BUILD_SHARED_LIBS "
+"<https://cmake.org/cmake/help/v3.10/variable/BUILD_SHARED_LIBS.html>`_ の CMake ドキュ"
+"メントも参照してください."
 
 #: ../../source/development/building_from_source.rst:158
 msgid ""
@@ -221,6 +273,10 @@ msgid ""
 "`CMAKE_BUILD_TYPE "
 "<https://cmake.org/cmake/help/v3.10/variable/CMAKE_BUILD_TYPE.html>`_."
 msgstr ""
+"ビルドの種類を選択します. オプションは: None (デフォルト), Debug, Release, "
+"RelWithDebInfo, または MinSizeRel です. `CMAKE_BUILD_TYPE "
+"<https://cmake.org/cmake/help/v3.10/variable/CMAKE_BUILD_TYPE.html>`_ の CMake ドキュ"
+"メントも参照してください."
 
 #: ../../source/development/building_from_source.rst:164
 msgid ""
@@ -229,36 +285,45 @@ msgid ""
 "specifying ``--config Release`` with CMake multi-configuration build "
 "tools (see example below)."
 msgstr ""
+"構成時に ``-DCMAKE_BUILD_TYPE=Release`` (または類似のもの) を指定しない場合, デフォ"
+"ルトのビルドは最適化されません. または, CMake マルチ構成ビルドツールで ``--config "
+"Release`` を指定することで最適化されます (以下の例を参照)."
 
 #: ../../source/development/building_from_source.rst:171
 msgid "C compiler. Ignored for some generators, such as Visual Studio."
-msgstr ""
+msgstr "C コンパイラ. Visual Studio などの一部のジェネレータでは無視されます."
 
 #: ../../source/development/building_from_source.rst:175
 msgid ""
 "Flags used by the C compiler during all build types. This is initialized "
 "by the :envvar:`CFLAGS` environment variable."
 msgstr ""
+"すべてのビルドタイプで使用される C コンパイラによって使用されるフラグ. これは "
+":envvar:`CFLAGS` 環境変数によって初期化されます."
 
 #: ../../source/development/building_from_source.rst:180
 msgid "C++ compiler. Ignored for some generators, such as Visual Studio."
-msgstr ""
+msgstr "C++ コンパイラ. Visual Studio などの一部のジェネレータでは無視されます."
 
 #: ../../source/development/building_from_source.rst:184
 msgid ""
 "Flags used by the C++ compiler during all build types. This is "
 "initialized by the :envvar:`CXXFLAGS` environment variable."
 msgstr ""
+"すべてのビルドタイプで使用される C++ コンパイラによって使用されるフラグ. これは "
+":envvar:`CXXFLAGS` 環境変数によって初期化されます."
 
 #: ../../source/development/building_from_source.rst:189
 msgid "Where to install the software. Default for Unix-like is ``/usr/local/``."
-msgstr ""
+msgstr "ソフトウェアをインストールする場所. Unix のデフォルトは ``/usr/local/`` です."
 
 #: ../../source/development/building_from_source.rst:194
 msgid ""
 "List of directories specifying installation prefixes to be searched when "
 "external dependencies are looked for."
 msgstr ""
+"外部依存関係を検索する際に検索されるインストールプレフィックスを指定するディレクト"
+"リのリスト."
 
 #: ../../source/development/building_from_source.rst:197
 msgid ""
@@ -267,6 +332,10 @@ msgid ""
 "package. See "
 "https://cmake.org/cmake/help/latest/release/3.12.html?highlight=root#commands"
 msgstr ""
+"CMake 3.12 以降, 特定のパッケージのプレフィックスを定義するために ``<Packagename>_"
+"ROOT`` 変数を使用することもできます. 詳細については, "
+"https://cmake.org/cmake/help/latest/release/3.12.html?highlight=root#commands を参照し"
+"てください."
 
 #: ../../source/development/building_from_source.rst:205
 msgid ""
@@ -277,6 +346,12 @@ msgid ""
 "aware of any at writing time though). We don't recommend it for mission "
 "critical builds."
 msgstr ""
+"デフォルトは OFF です. GDAL をビルドするために "
+"https://cmake.org/cmake/help/latest/variable/CMAKE_UNITY_BUILD.html "
+"機能を使用するために ON に設定できます. これにより GDAL ビルド時間が短縮されます."
+" この機能は現在も実験的なものと見なされており, 微妙なバグを隠している可能性があります "
+"(ただし, 現時点では私たちはそのようなバグを認識していません). ミッションクリティカ"
+"ルなビルドにはお勧めしません."
 
 #: ../../source/development/building_from_source.rst:214
 msgid ""
@@ -284,6 +359,9 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Interprocedural_optimization>`_ (IPO), if "
 "available, default OFF."
 msgstr ""
+"利用可能な場合, コンパイラの `interprocedural optimization "
+"<https://en.wikipedia.org/wiki/Interprocedural_optimization>`_ (IPO) を使用してラ"
+"イブラリをビルドします. デフォルトは OFF です."
 
 #: ../../source/development/building_from_source.rst:220
 msgid ""
@@ -295,10 +373,16 @@ msgid ""
 "<https://cmake.org/cmake/help/latest/variable/CMAKE_SKIP_INSTALL_RPATH.html>`__"
 " variable is not set."
 msgstr ""
+"インストールされたバイナリの rpath がライブラリへの相対パスとして書き込まれるように"
+"設定します. このオプションは `CMAKE_INSTALL_RPATH "
+"<https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_RPATH.html>`__ 変数をオーバ"
+"ーライドし, `CMAKE_SKIP_INSTALL_RPATH "
+"<https://cmake.org/cmake/help/latest/variable/CMAKE_SKIP_INSTALL_RPATH.html>`__ 変数が設"
+"定されていないことを前提としています."
 
 #: ../../source/development/building_from_source.rst:228
 msgid "CMake package dependent options"
-msgstr ""
+msgstr "CMake パッケージ依存オプション"
 
 #: ../../source/development/building_from_source.rst:232
 msgid ""
@@ -306,6 +390,9 @@ msgid ""
 "automatically found if they are in default locations used by CMake. This "
 "can be also tuned for example with the ``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
+"一般的に, パッケージ (外部依存関係) は, CMake が使用するデフォルトの場所にある場合"
+"に自動的に見つかります. これは ``CMAKE_PREFIX_PATH`` 変数などで調整することもで"
+"きます."
 
 #: ../../source/development/building_from_source.rst:236
 msgid ""
@@ -316,16 +403,23 @@ msgid ""
 " Note that the case of the package name matters for the _ROOT, "
 "_INCLUDE_DIR and _LIBRARY variables."
 msgstr ""
+"CMake 3.12 以降, 特定のパッケージのプレフィックスを定義するために ``<Packagename>_"
+"ROOT`` 変数を使用することもできます. 詳細については, "
+"https://cmake.org/cmake/help/latest/release/3.12.html?highlight=root#commands を参照し"
+"てください. _ROOT, _INCLUDE_DIR, _LIBRARY 変数についてはパッケージ名の大文字と小文字"
+"が重要であることに注意してください."
 
 #: ../../source/development/building_from_source.rst:242
 msgid ""
 "Most dependencies that would be found can also be disabled by setting the"
 " following option:"
 msgstr ""
+"見つかる依存関係のほとんどは, 次のオプションを設定することで無効にすることもでき"
+"ます:"
 
 #: ../../source/development/building_from_source.rst:247
 msgid "Control whether a found dependency can be used for the GDAL build."
-msgstr ""
+msgstr "見つかった依存関係を GDAL ビルドに使用できるかどうかを制御します."
 
 #: ../../source/development/building_from_source.rst:249
 msgid ""
@@ -334,6 +428,9 @@ msgid ""
 "following option to OFF. Individual libraries shall then be enabled "
 "explicitly with GDAL_USE_<Packagename_in_upper_case>:BOOL=ON."
 msgstr ""
+"次のオプションを OFF に設定することで, GDAL に対して外部依存関係 (必須の PROJ 以外"
+"のもの) の使用をデフォルトで無効にすることもできます. 個々のライブラリは, "
+"GDAL_USE_<Packagename_in_upper_case>:BOOL=ON で明示的に有効にする必要があります."
 
 #: ../../source/development/building_from_source.rst:256
 msgid ""
@@ -345,6 +442,11 @@ msgid ""
 "\"-UGDAL_USE_*\" to cancel the activation of previously detected "
 "libraries."
 msgstr ""
+"デフォルトは ON です. OFF に設定すると, GDAL_USE_<Packagename_in_upper_case>:BOOL=ON "
+"で個別に有効にされていない限り, すべての外部依存関係 (ただし必須のもの) が無効にな"
+"ります. このオプションは CMakeCache.txt が作成される前に設定する必要があります. "
+"CMakeCache.txt が作成された後に OFF に設定された場合, 以前に検出されたライブラリの有"
+"効化をキャンセルするために \"-UGDAL_USE_*\" で cmake を再起動する必要があります."
 
 #: ../../source/development/building_from_source.rst:263
 msgid ""
@@ -355,6 +457,11 @@ msgid ""
 "set, this has precedence over the external library that may be detected. "
 "The behavior can also be globally controlled with the following variable:"
 msgstr ""
+"GDAL の依存関係の一部 (GEOTIFF, GIF, JPEG, JSONC, LERC, OPENCAD, PNG, QHULL, TIFF, "
+"ZLIB) には, GDAL ソースコードツリー内にそのソースコードのコピーが含まれています. "
+"GDAL_USE_<Packagename_in_upper_case>_INTERNAL:BOOL=ON 変数を設定することで, この内"
+"部コピーを有効にすることができます. 設定された場合, これは検出された外部ライブラリ"
+"よりも優先されます. 次の変数でも動作をグローバルに制御できます:"
 
 #: ../../source/development/building_from_source.rst:271
 msgid ""
@@ -366,6 +473,11 @@ msgid ""
 "corresponding external library is found and enabled. This option should "
 "be set before CMakeCache.txt is created."
 msgstr ""
+"内部ライブラリがどのように使用されるかを制御します. ON に設定すると, それらは常に使"
+"用されます. OFF に設定すると, それらは使用されません (GDAL_USE_<Packagename_in_upper_"
+"case>_INTERNAL:BOOL=ON で個別に有効にされていない限り). WHEN_NO_EXTERNAL (デフォルト"
+"値) に設定すると, 対応する外部ライブラリが見つからず有効にされていない場合のみ使"
+"用されます. このオプションは CMakeCache.txt が作成される前に設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:282
 msgid ""
@@ -375,10 +487,14 @@ msgid ""
 "are at least required: ZLIB, TIFF, GEOTIFF and JSONC. Enabling them as "
 "external or internal libraries is thus required."
 msgstr ""
+"GDAL_USE_EXTERNAL_LIBS=OFF と GDAL_USE_INTERNAL_LIBS=OFF を一緒に使用すると, 次のラ"
+"イブラリ (外部依存関係としても, 内部コピーとしても) が少なくとも必要であるため, "
+"CMake 構成エラーが発生します: ZLIB, TIFF, GEOTIFF, JSONC. したがって, それらを外部"
+"または内部ライブラリとして有効にする必要があります."
 
 #: ../../source/development/building_from_source.rst:290
 msgid "Archive"
-msgstr ""
+msgstr "アーカイブ"
 
 #: ../../source/development/building_from_source.rst:292
 msgid ""
@@ -386,10 +502,13 @@ msgid ""
 "variety of archive and compression formats. It might be used since GDAL "
 "3.7 to enable the :ref:`/vsi7z/ <vsi7z>` virtual file system."
 msgstr ""
+"`libarchive <https://www.libarchive.org/>`_ は, 様々なアーカイブおよび圧縮形式をサポ"
+"ートするライブラリです. GDAL 3.7 以降, :ref:`/vsi7z/ <vsi7z>` 仮想ファイルシステムを"
+"有効にするために使用されるかもしれません."
 
 #: ../../source/development/building_from_source.rst:298
 msgid "Path to an include directory with the ``archive.h`` header file."
-msgstr ""
+msgstr "``archive.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:302
 #: ../../source/development/building_from_source.rst:363
@@ -421,17 +540,19 @@ msgstr ""
 #: ../../source/development/building_from_source.rst:1987
 #: ../../source/development/building_from_source.rst:2038
 msgid "Path to a shared or static library file."
-msgstr ""
+msgstr "共有または静的ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:306
 msgid ""
 "Control whether to use libarchive. Defaults to ON when libarchive is "
 "found."
 msgstr ""
+"libarchive を使用するかどうかを制御します. libarchive が見つかった場合, デフォルト"
+"は ON です."
 
 #: ../../source/development/building_from_source.rst:310
 msgid "Armadillo"
-msgstr ""
+msgstr "Armadillo"
 
 #: ../../source/development/building_from_source.rst:312
 msgid ""
@@ -442,14 +563,19 @@ msgid ""
 "packages may also need to be installed: ``blas blas-devel libblas "
 "libcblas liblapack liblapacke``"
 msgstr ""
+"`Armadillo <http://arma.sourceforge.net/>`_ C++ ライブラリは, Thin Plate Spline "
+"変換器に関連する計算を高速化するために使用されます. 詳細については, "
+"https://cmake.org/cmake/help/latest/module/FindArmadillo.html を参照してください. "
+"Conda-Forge 依存関係を使用した Windows ビルドの場合, 次のパッケージもインストールする"
+"必要があるかもしれません: ``blas blas-devel libblas libcblas liblapack liblapacke``"
 
 #: ../../source/development/building_from_source.rst:320
 msgid "Control whether to use Armadillo. Defaults to ON when Armadillo is found."
-msgstr ""
+msgstr "Armadillo を使用するかどうかを制御します. Armadillo が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:324
 msgid "Arrow"
-msgstr ""
+msgstr "Arrow"
 
 #: ../../source/development/building_from_source.rst:326
 msgid ""
@@ -457,16 +583,21 @@ msgid ""
 "library is required for the :ref:`vector.arrow` and :ref:`vector.parquet`"
 " drivers. Specify install prefix in the ``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
+"`Apache Arrow C++ <https://github.com/apache/arrow/tree/master/cpp>`_ ライブラリは, "
+":ref:`vector.arrow` および :ref:`vector.parquet` ドライバに必要です. ``CMAKE_PREFIX_"
+"PATH`` 変数でインストールプレフィックスを指定します."
 
 #: ../../source/development/building_from_source.rst:332
 msgid "Control whether to use Arrow. Defaults to ON when Arrow is found."
-msgstr ""
+msgstr "Arrow を使用するかどうかを制御します. Arrow が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:336
 msgid ""
 "Control whether to use statically built Arrow libraries. Defaults to OFF "
 "when Arrow is found."
 msgstr ""
+"静的にビルドされた Arrow ライブラリを使用するかどうかを制御します. Arrow が見つかった"
+"場合, デフォルトは OFF です."
 
 #: ../../source/development/building_from_source.rst:339
 msgid "basisu"
@@ -480,10 +611,14 @@ msgid ""
 "Specify install prefix in the ``CMAKE_PREFIX_PATH`` variable or "
 "``basisu_ROOT`` variable."
 msgstr ""
+"`Basis Universal "
+"<https://github.com/rouault/basis_universal/tree/cmake>` ライブラリは, "
+":ref:`raster.basisu` および :ref:`raster.ktx2` ドライバに必要です. "
+"インストールプレフィックスを ``CMAKE_PREFIX_PATH`` 変数または ``basisu_ROOT`` 変数で指定します."
 
 #: ../../source/development/building_from_source.rst:347
 msgid "Control whether to use basisu. Defaults to ON when basisu is found."
-msgstr ""
+msgstr "basisu を使用するかどうかを制御します. basisu が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:351
 msgid "Blosc"
@@ -495,14 +630,17 @@ msgid ""
 "meta-compression, with different backends (LZ4, Snappy, Zlib, Zstd, "
 "etc.). It is used by the :ref:`raster.zarr` driver."
 msgstr ""
+"`Blosc <https://github.com/Blosc/c-blosc>`_ は, 異なるバックエンド (LZ4, Snappy, Zlib, "
+"Zstd など) を持つメタ圧縮を提供するライブラリです. :ref:`raster.zarr` ドライバで使用"
+"されます."
 
 #: ../../source/development/building_from_source.rst:359
 msgid "Path to an include directory with the ``blosc.h`` header file."
-msgstr ""
+msgstr "``blosc.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:367
 msgid "Control whether to use Blosc. Defaults to ON when Blosc is found."
-msgstr ""
+msgstr "Blosc を使用するかどうかを制御します. Blosc が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:371
 msgid "BRUNSLI"
@@ -513,24 +651,28 @@ msgid ""
 "The `Brunsli <https://github.com/google/brunsli>`_ JPEG repacking "
 "library, used by the :ref:`raster.marfa` driver."
 msgstr ""
+"`Brunsli <https://github.com/google/brunsli>`_ JPEG リパッキングライブラリは, "
+":ref:`raster.marfa` ドライバで使用されます."
 
 #: ../../source/development/building_from_source.rst:378
 msgid ""
 "Path to an include directory with the ``brunsli/decode.h`` and "
 "``brunsli\\encode.h`` header files."
 msgstr ""
+"``brunsli/decode.h`` および ``brunsli\\encode.h`` ヘッダーファイルを含む include ディレ"
+"クトリへのパス."
 
 #: ../../source/development/building_from_source.rst:382
 msgid "Path to the brunslienc-c library file."
-msgstr ""
+msgstr "brunslienc-c ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:386
 msgid "Path to the brunslidec-c library file."
-msgstr ""
+msgstr "brunslidec-c ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:390
 msgid "Control whether to use BRUNSLI. Defaults to ON when Brunsli is found."
-msgstr ""
+msgstr "BRUNSLI を使用するかどうかを制御します. Brunsli が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:394
 msgid "CFITSIO"
@@ -542,14 +684,16 @@ msgid ""
 "required for the :ref:`raster.fits` driver. It can be detected with pkg-"
 "config."
 msgstr ""
+"`C FITS I/O <https://heasarc.gsfc.nasa.gov/fitsio/>`_ ライブラリは, :ref:`raster.fits` "
+"ドライバに必要です. pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:401
 msgid "Path to an include directory with the ``fitsio.h`` header file."
-msgstr ""
+msgstr "``fitsio.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:409
 msgid "Control whether to use CFITSIO. Defaults to ON when CFITSIO is found."
-msgstr ""
+msgstr "CFITSIO を使用するかどうかを制御します. CFITSIO が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:413
 msgid "Crnlib"
@@ -560,18 +704,20 @@ msgid ""
 "`Crnlib / crunch <https://github.com/rouault/crunch/tree/build_fixes>`_ "
 "is required for the :ref:`raster.dds` driver."
 msgstr ""
+"`Crnlib / crunch <https://github.com/rouault/crunch/tree/build_fixes>`_ は, :ref:`raster.dds` "
+"ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:420
 msgid "Path to Crnlib include directory with ``crunch/crnlib.h`` header."
-msgstr ""
+msgstr "``crunch/crnlib.h`` ヘッダーを含む Crnlib include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:424
 msgid "Path to Crnlib library to be linked."
-msgstr ""
+msgstr "リンクする Crnlib ライブラリへのパス."
 
 #: ../../source/development/building_from_source.rst:428
 msgid "Control whether to use Crnlib. Defaults to ON when Crnlib is found."
-msgstr ""
+msgstr "Crnlib を使用するかどうかを制御します. Crnlib が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:432
 msgid "CURL"
@@ -582,24 +728,26 @@ msgid ""
 "`libcurl <https://curl.se/>`_ is required for all network accesses (HTTP,"
 " etc.)."
 msgstr ""
+"`libcurl <https://curl.se/>`_ はすべてのネットワークアクセス (HTTP など) に必要です."
 
 #: ../../source/development/building_from_source.rst:438
 msgid "Path to an include directory with the ``curl`` directory."
-msgstr ""
+msgstr "``curl`` ディレクトリを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:442
 msgid ""
 "Path to a shared or static library file, such as ``libcurl.so``, "
 "``libcurl.lib``, or other name."
 msgstr ""
+"``libcurl.so``, ``libcurl.lib`` などの共有または静的ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:449
 msgid "Must be set to ON when linking against a static build of Curl."
-msgstr ""
+msgstr "Curl の静的ビルドにリンクする場合は, 必ず ON に設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:453
 msgid "Control whether to use Curl. Defaults to ON when Curl is found."
-msgstr ""
+msgstr "Curl を使用するかどうかを制御します. Curl が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:457
 msgid "CryptoPP"
@@ -614,6 +762,10 @@ msgid ""
 " system. It is also required for the :ref:`/vsicrypt/ <vsicrypt>` virtual"
 " file system."
 msgstr ""
+"`Crypto++ <https://github.com/weidai11/cryptopp>`_ ライブラリは, Google Cloud の一部の"
+"認証方法で使用される RSA SHA256 署名機能に使用できます. :ref:`raster.eedai` 画像を使"
+"用するか, :ref:`/vsigs/ <vsigs>` 仮想ファイルシステムを使用する場合に必要かもしれませ"
+"ん. :ref:`/vsicrypt/ <vsicrypt>` 仮想ファイルシステムにも必要です."
 
 #: ../../source/development/building_from_source.rst:467
 #: ../../source/development/building_from_source.rst:1114
@@ -621,7 +773,7 @@ msgstr ""
 #: ../../source/development/building_from_source.rst:1854
 #: ../../source/development/building_from_source.rst:1983
 msgid "Path to the base include directory."
-msgstr ""
+msgstr "ベース include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:471
 msgid ""
@@ -629,16 +781,20 @@ msgid ""
 "``CRYPTOPP_LIBRARY_DEBUG`` can also be specified to a similar library for"
 " building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, "
+"``CRYPTOPP_LIBRARY_DEBUG`` という類似の変数を指定できます."
 
 #: ../../source/development/building_from_source.rst:477
 msgid ""
 "Defaults to OFF. Might be required to set to ON when linking against "
 "cryptopp.dll"
 msgstr ""
+"デフォルトは OFF です. cryptopp.dll にリンクする場合は, 必ず ON に設定する必要があるか"
+"もしれません."
 
 #: ../../source/development/building_from_source.rst:482
 msgid "Control whether to use CryptoPP. Defaults to ON when CryptoPP is found."
-msgstr ""
+msgstr "CryptoPP を使用するかどうかを制御します. CryptoPP が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:486
 msgid "Deflate"
@@ -651,10 +807,13 @@ msgid ""
 "offers faster performance than ZLib, but is not a full replacement for "
 "it, consequently it must be used as a complement to ZLib."
 msgstr ""
+"`libdeflate <https://github.com/ebiggers/libdeflate>`_ は, 損失のない Deflate/Zip 圧縮"
+"アルゴリズムを提供する圧縮ライブラリです. ZLib よりも高速なパフォーマンスを提供します"
+"が, ZLib の完全な置換ではないため, ZLib の補完として使用する必要があります."
 
 #: ../../source/development/building_from_source.rst:496
 msgid "Path to an include directory with the ``libdeflate.h`` header file."
-msgstr ""
+msgstr "``libdeflate.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:500
 msgid ""
@@ -662,10 +821,12 @@ msgid ""
 "``Deflate_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, "
+"``Deflate_LIBRARY_DEBUG`` という類似の変数を指定できます."
 
 #: ../../source/development/building_from_source.rst:506
 msgid "Control whether to use Deflate. Defaults to ON when Deflate is found."
-msgstr ""
+msgstr "Deflate を使用するかどうかを制御します. Deflate が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:510
 msgid "ECW"
@@ -677,6 +838,8 @@ msgid ""
 ":ref:`raster.ecw` driver. Currently only support for ECW SDK 3.3 and 5.5 "
 "is offered."
 msgstr ""
+"Hexagon ECW SDK (クローズドソース/プロプライエタリ) は, :ref:`raster.ecw` ドライバに必要"
+"です. 現在, ECW SDK 3.3 および 5.5 に対するサポートのみが提供されています."
 
 #: ../../source/development/building_from_source.rst:515
 msgid ""
@@ -684,30 +847,33 @@ msgid ""
 "directory into which there are include and lib subdirectories, typically "
 "ending with ERDAS-ECW_JPEG_2000_SDK-5.5.0/Desktop_Read-Only."
 msgstr ""
+"ECW SDK 5.5 の場合, ECW_ROOT または CMAKE_PREFIX_PATH は, 通常 ERDAS-ECW_JPEG_2000_SDK-"
+"5.5.0/Desktop_Read-Only で終わる include および lib サブディレクトリが含まれるディレクト"
+"リを指す必要があります."
 
 #: ../../source/development/building_from_source.rst:521
 msgid "Path to the include directory with the ``NCSECWClient.h`` header file."
-msgstr ""
+msgstr "``NCSECWClient.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:525
 msgid "Path to library file libNCSEcw"
-msgstr ""
+msgstr "libNCSEcw ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:529
 msgid "Path to library file libNCSCnet (only needed for SDK 3.3)"
-msgstr ""
+msgstr "libNCSCnet ライブラリファイルへのパス (SDK 3.3 のみ必要)."
 
 #: ../../source/development/building_from_source.rst:533
 msgid "Path to library file libNCSEcwC (only needed for SDK 3.3)"
-msgstr ""
+msgstr "libNCSEcwC ライブラリファイルへのパス (SDK 3.3 のみ必要)."
 
 #: ../../source/development/building_from_source.rst:537
 msgid "Path to library file libNCSUtil (only needed for SDK 3.3)"
-msgstr ""
+msgstr "libNCSUtil ライブラリファイルへのパス (SDK 3.3 のみ必要)."
 
 #: ../../source/development/building_from_source.rst:541
 msgid "Control whether to use ECW. Defaults to ON when ECW is found."
-msgstr ""
+msgstr "ECW を使用するかどうかを制御します. ECW が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:545
 msgid "EXPAT"
@@ -721,18 +887,22 @@ msgid ""
 " SVG, WFS, XSLX, etc.). It is strongly recommended. Other driver such as "
 "ILI or GMLAS may also require the XercesC library."
 msgstr ""
+"`Expat <https:///github.com/libexpat/libexpat>`_ は, 多くの OGR ドライバ (GML, GeoRSS, "
+"GPX, KML, LVBAG, OSM, ODS, SVG, WFS, XSLX など) で XML パース機能を有効にするために必"
+"要なストリーム指向の XML パーサライブラリです. このライブラリは強く推奨されます. ILI や GMLAS などの他"
+"のドライバは, XercesC ライブラリも必要とするかもしれません."
 
 #: ../../source/development/building_from_source.rst:555
 msgid "Path to the include directory with the ``expat.h`` header file."
-msgstr ""
+msgstr "``expat.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:565
 msgid "Must be set to ON when linking against a static build of Expat."
-msgstr ""
+msgstr "Expat の静的ビルドにリンクする場合は, 必ず ON に設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:569
 msgid "Control whether to use EXPAT. Defaults to ON when EXPAT is found."
-msgstr ""
+msgstr "EXPAT を使用するかどうかを制御します. EXPAT が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:573
 msgid "FileGDB"
@@ -745,32 +915,36 @@ msgid ""
 "(not to be confused with the :ref:`vector.openfilegdb` driver that has no"
 " external requirements)"
 msgstr ""
+"`FileGDB SDK <https://github.com/Esri/file-geodatabase-api>`_ (クローズドソース/プロプラ"
+"イエタリ) は, :ref:`vector.filegdb` ドライバに必要です (:ref:`vector.openfilegdb` ドライバ"
+"とは異なり, 外部要件はありません)."
 
 #: ../../source/development/building_from_source.rst:579
 msgid ""
 "FileGDB_ROOT or CMAKE_PREFIX_PATH should point to the directory of the "
 "SDK."
 msgstr ""
+"FileGDB_ROOT または CMAKE_PREFIX_PATH は, SDK のディレクトリを指す必要があります."
 
 #: ../../source/development/building_from_source.rst:583
 msgid "Path to the include directory with the ``FileGDBAPI.h`` header file."
-msgstr ""
+msgstr "``FileGDBAPI.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:587
 msgid "Path to library file"
-msgstr ""
+msgstr "ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:591
 msgid "Path to Release library file (only used on Windows)"
-msgstr ""
+msgstr "リリースライブラリファイルへのパス (Windows のみ使用)."
 
 #: ../../source/development/building_from_source.rst:595
 msgid "Path to Debug library file (only used on Windows)"
-msgstr ""
+msgstr "デバッグライブラリファイルへのパス (Windows のみ使用)."
 
 #: ../../source/development/building_from_source.rst:599
 msgid "Control whether to use FileGDB. Defaults to ON when FileGDB is found."
-msgstr ""
+msgstr "FileGDB を使用するかどうかを制御します. FileGDB が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:603
 msgid "FreeXL"
@@ -781,14 +955,16 @@ msgid ""
 "The `FreeXL <https://www.gaia-gis.it/fossil/freexl/index>`_ library is "
 "required for the :ref:`vector.xls` driver."
 msgstr ""
+"`FreeXL <https://www.gaia-gis.it/fossil/freexl/index>`_ ライブラリは, :ref:`vector.xls` ドラ"
+"イバに必要です."
 
 #: ../../source/development/building_from_source.rst:610
 msgid "Path to an include directory with the ``freexl.h`` header file."
-msgstr ""
+msgstr "``freexl.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:618
 msgid "Control whether to use FreeXL. Defaults to ON when FreeXL is found."
-msgstr ""
+msgstr "FreeXL を使用するかどうかを制御します. FreeXL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:622
 msgid "FYBA"
@@ -799,26 +975,28 @@ msgid ""
 "The `OpenFyba <https://github.com/kartverket/fyba>`_ libraries are needed"
 " to build the :ref:`vector.sosi` driver."
 msgstr ""
+"`OpenFyba <https://github.com/kartverket/fyba>`_ ライブラリは, :ref:`vector.sosi` ドライバ"
+"をビルドするために必要です."
 
 #: ../../source/development/building_from_source.rst:628
 msgid "Path to an include directory with the ``fyba.h`` header file."
-msgstr ""
+msgstr "``fyba.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:632
 msgid "Path to a library file ``fyba``"
-msgstr ""
+msgstr "ライブラリファイル ``fyba`` へのパス."
 
 #: ../../source/development/building_from_source.rst:636
 msgid "Path to a library file ``fygm``"
-msgstr ""
+msgstr "ライブラリファイル ``fygm`` へのパス."
 
 #: ../../source/development/building_from_source.rst:640
 msgid "Path to a library file ``fyut``"
-msgstr ""
+msgstr "ライブラリファイル ``fyut`` へのパス."
 
 #: ../../source/development/building_from_source.rst:644
 msgid "Control whether to use FYBA. Defaults to ON when FYBA is found."
-msgstr ""
+msgstr "FYBA を使用するかどうかを制御します. FYBA が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:648
 msgid "GEOTIFF"
@@ -829,10 +1007,12 @@ msgid ""
 "It is required for the :ref:`raster.gtiff` drivers, and a few other "
 "drivers. If not found, an internal copy of libgeotiff can be used."
 msgstr ""
+":ref:`raster.gtiff` ドライバおよび他のいくつかのドライバに必要です. 見つからない場合, "
+"libgeotiff の内部コピーを使用できます."
 
 #: ../../source/development/building_from_source.rst:655
 msgid "Path to an include directory with the libgeotiff header files."
-msgstr ""
+msgstr "libgeotiff ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:659
 msgid ""
@@ -841,12 +1021,17 @@ msgid ""
 "``GEOTIFF_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"``libgeotiff.so``, ``geotiff.lib`` などの共有または静的ライブラリファイルへのパス. デバッグ"
+"リリース用の類似のライブラリに対しても, ``GEOTIFF_LIBRARY_DEBUG`` という類似の変数を指定"
+"できます."
 
 #: ../../source/development/building_from_source.rst:666
 msgid ""
 "Control whether to use external libgeotiff. Defaults to ON when external "
 "libgeotiff is found."
 msgstr ""
+"外部 libgeotiff を使用するかどうかを制御します. 外部 libgeotiff が見つかった場合, デフォルト"
+"は ON です."
 
 #: ../../source/development/building_from_source.rst:670
 msgid ""
@@ -854,6 +1039,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_GEOTIFF=ON"
 msgstr ""
+"内部 libgeotiff コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に"
+"依存します. ON に設定されている場合, GDAL_USE_GEOTIFF=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:675
 msgid "GEOS"
@@ -867,18 +1054,21 @@ msgid ""
 "(intersection, buffer, etc.). The ``geos-config`` program can be used to "
 "detect it."
 msgstr ""
+"`GEOS <https://github.com/libgeos/geos>`_ は, 2次元ベクトルジオメトリ上での操作を実行するた"
+"めの C++ ライブラリです. OGR で利用可能なほとんどのジオメトリ処理操作のバックエンドとして"
+"使用されます (交差, バッファなど). ``geos-config`` プログラムを使用して検出できます."
 
 #: ../../source/development/building_from_source.rst:684
 msgid "Path to an include directory with the ``geos_c.h`` header file."
-msgstr ""
+msgstr "``geos_c.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:688
 msgid "Path to a shared or static library file (libgeos_c)."
-msgstr ""
+msgstr "共有または静的ライブラリファイル (libgeos_c) へのパス."
 
 #: ../../source/development/building_from_source.rst:692
 msgid "Control whether to use GEOS. Defaults to ON when GEOS is found."
-msgstr ""
+msgstr "GEOS を使用するかどうかを制御します. GEOS が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:696
 msgid "GIF"
@@ -889,16 +1079,19 @@ msgid ""
 "`giflib <http://giflib.sourceforge.net/>`_ is required for the "
 ":ref:`raster.gif` driver. If not found, an internal copy can be used."
 msgstr ""
+"`giflib <http://giflib.sourceforge.net/>`_ は, :ref:`raster.gif` ドライバに必要です. 見つか"
+"らない場合, 内部コピーを使用できます."
 
 #: ../../source/development/building_from_source.rst:703
 msgid "Path to an include directory with the ``gif_lib.h`` header file."
-msgstr ""
+msgstr "``gif_lib.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:711
 msgid ""
 "Control whether to use external giflib. Defaults to ON when external "
 "giflib is found."
 msgstr ""
+"外部 giflib を使用するかどうかを制御します. 外部 giflib が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:715
 msgid ""
@@ -906,6 +1099,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_GIF=ON"
 msgstr ""
+"内部 giflib コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存"
+"します. ON に設定されている場合, GDAL_USE_GIF=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:720
 msgid "GTA"
@@ -916,14 +1111,15 @@ msgid ""
 "The `GTA <https://marlam.de/gta/>`_ library is required for the "
 ":ref:`raster.gta` driver."
 msgstr ""
+"`GTA <https://marlam.de/gta/>`_ ライブラリは, :ref:`raster.gta` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:726
 msgid "Path to an include directory with the ``gta/gta.h`` header file."
-msgstr ""
+msgstr "``gta/gta.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:734
 msgid "Control whether to use GTA. Defaults to ON when GTA is found."
-msgstr ""
+msgstr "GTA を使用するかどうかを制御します. GTA が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:738
 msgid "HEIF"
@@ -934,14 +1130,16 @@ msgid ""
 "The `HEIF <https://github.com/strukturag/libheif>`_ (>= 1.1) library used"
 " by the :ref:`raster.heif` driver. It can be detected with pkg-config."
 msgstr ""
+"`HEIF <https://github.com/strukturag/libheif>`_ (>= 1.1) ライブラリは, :ref:`raster.heif` ド"
+"ライバで使用されます. pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:745
 msgid "Path to an include directory with the ``libheif/heif.h`` header file."
-msgstr ""
+msgstr "``libheif/heif.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:753
 msgid "Control whether to use HEIF. Defaults to ON when HEIF is found."
-msgstr ""
+msgstr "HEIF を使用するかどうかを制御します. HEIF が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:756
 msgid "HDF4"
@@ -952,10 +1150,12 @@ msgid ""
 "The `HDF4 <https://support.hdfgroup.org/products/hdf4/>`_ C library is "
 "needed for the :ref:`raster.hdf4` driver."
 msgstr ""
+"`HDF4 <https://support.hdfgroup.org/products/hdf4/>`_ C ライブラリは, :ref:`raster.hdf4` ドラ"
+"イバに必要です."
 
 #: ../../source/development/building_from_source.rst:763
 msgid "Path to an include directory with the ``hdf.h`` header file."
-msgstr ""
+msgstr "``hdf.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:767
 msgid ""
@@ -963,6 +1163,8 @@ msgid ""
 "variable ``HDF4_df_LIBRARY_DEBUG`` can also be specified to a similar "
 "library for building Debug releases."
 msgstr ""
+"共有または静的 ``dfalt`` または ``df`` ライブラリファイルへのパス. デバッグリリース用の類似の"
+"ライブラリに対しても, ``HDF4_df_LIBRARY_DEBUG`` という類似の変数を指定できます."
 
 #: ../../source/development/building_from_source.rst:773
 msgid ""
@@ -970,6 +1172,8 @@ msgid ""
 "similar variable ``HDF4_mfhdf_LIBRARY_DEBUG`` can also be specified to a "
 "similar library for building Debug releases."
 msgstr ""
+"共有または静的 ``mfhdfalt`` または ``mfhdf`` ライブラリファイルへのパス. デバッグリリース用の"
+"類似のライブラリに対しても, ``HDF4_mfhdf_LIBRARY_DEBUG`` という類似の変数を指定できます."
 
 #: ../../source/development/building_from_source.rst:779
 msgid ""
@@ -977,6 +1181,9 @@ msgid ""
 "``HDF4_xdr_LIBRARY_DEBUG`` can also be specified to a similar library for"
 " building Debug releases. It is generally not needed for Linux builds"
 msgstr ""
+"共有または静的 ``xdr`` ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対"
+"しても, ``HDF4_xdr_LIBRARY_DEBUG`` という類似の変数を指定できます. 通常, Linux ビルドには必"
+"要ありません."
 
 #: ../../source/development/building_from_source.rst:786
 msgid ""
@@ -984,6 +1191,9 @@ msgid ""
 "``HDF4_szip_LIBRARY_DEBUG`` can also be specified to a similar library "
 "for building Debug releases. It is generally not needed for Linux builds"
 msgstr ""
+"共有または静的 ``szip`` ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対"
+"しても, ``HDF4_szip_LIBRARY_DEBUG`` という類似の変数を指定できます. 通常, Linux ビルドには必"
+"要ありません."
 
 #: ../../source/development/building_from_source.rst:793
 msgid ""
@@ -993,10 +1203,13 @@ msgid ""
 "HDF4_{comp_name}_LIBRARY_[RELEASE/DEBUG] variables will be available to "
 "configure the library file."
 msgstr ""
+"このオプションの値はデフォルトで ``df;mfhdf;xdr;szip`` となるリストです. HDF4 のリンクに異なる"
+"ライブラリが必要な場合は, HDF4_{comp_name}_LIBRARY_[RELEASE/DEBUG] 変数が利用可能になり, ライ"
+"ブラリファイルを設定できます."
 
 #: ../../source/development/building_from_source.rst:800
 msgid "Control whether to use HDF4. Defaults to ON when HDF4 is found."
-msgstr ""
+msgstr "HDF4 を使用するかどうかを制御します. HDF4 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:804
 msgid "HDF5"
@@ -1010,10 +1223,13 @@ msgid ""
 "https://cmake.org/cmake/help/latest/module/FindHDF5.html module is used "
 "to detect the HDF5 library."
 msgstr ""
+"`HDF5 <https://github.com/HDFGroup/hdf5>`_ C ライブラリは, :ref:`raster.hdf5` "
+"および :ref:`raster.bag` ドライバに必要です. HDF5 CXX ライブラリは, :ref:`raster.kea` "
+"ドライバに必要です. HDF5 ライブラリを検出するために, https://cmake.org/cmake/help/latest/module/FindHDF5.html モジュールが使用されます."
 
 #: ../../source/development/building_from_source.rst:814
 msgid "Control whether to use HDF5. Defaults to ON when HDF5 is found."
-msgstr ""
+msgstr "HDF5 を使用するかどうかを制御します. HDF5 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:818
 msgid ""
@@ -1024,6 +1240,11 @@ msgid ""
 "safety enabled when linking against a HDF5 library. In other situations, "
 "the setting must be manually set when needed."
 msgstr ""
+"HDF5 ライブラリの呼び出しを囲むグローバルロックを追加するかどうかを制御します. HDF5 ライブラ"
+"リがスレッドセーフが有効になっていない状態でビルドされており, HDF5 ドライバがマルチスレッドで使"
+"用されている場合に必要です. Unix では, HDF5 ライブラリにリンクする際にスレッドセーフが有効になっ"
+"ているかどうかを検出するヒューリスティックがあります. その他の状況では, 必要に応じて手動で設定"
+"する必要があります."
 
 #: ../../source/development/building_from_source.rst:829
 msgid "HDFS"
@@ -1035,18 +1256,20 @@ msgid ""
 "project-dist/hadoop-hdfs/LibHdfs.html>`_ native library is needed for the"
 " :ref:`/vsihdfs/ <vsihdfs>` virtual file system."
 msgstr ""
+"`Hadoop File System <https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/LibHdfs.html>`_ "
+"ネイティブライブラリは, :ref:`/vsihdfs/ <vsihdfs>` 仮想ファイルシステムに必要です."
 
 #: ../../source/development/building_from_source.rst:836
 msgid "Path to an include directory with the ``hdfs.h`` header file."
-msgstr ""
+msgstr "``hdfs.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:840
 msgid "Path to a shared or static ``hdfs`` library file."
-msgstr ""
+msgstr "共有または静的 ``hdfs`` ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:844
 msgid "Control whether to use HDFS. Defaults to ON when HDFS is found."
-msgstr ""
+msgstr "HDFS を使用するかどうかを制御します. HDFS が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:848
 msgid "Iconv"
@@ -1060,14 +1283,18 @@ msgid ""
 " leverage the API of the operating system for a few base conversions, but"
 " using Iconv will provide additional capabilities."
 msgstr ""
+"`Iconv <https://www.gnu.org/software/libiconv/>`_ ライブラリは, テキストを一つのエンコーディ"
+"ングから別のエンコーディングに変換するために使用されます. 一般的に, Unix ライクなシステムで"
+"はシステムライブラリとして利用可能です. Windows では, GDAL はいくつかの基本的な変換に対して"
+"オペレーティングシステムの API を利用できますが, Iconv を使用すると追加の機能が提供されます."
 
 #: ../../source/development/building_from_source.rst:858
 msgid "Path to an include directory with the ``iconv.h`` header file."
-msgstr ""
+msgstr "``iconv.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:866
 msgid "Control whether to use Iconv. Defaults to ON when Iconv is found."
-msgstr ""
+msgstr "Iconv を使用するかどうかを制御します. Iconv が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:870
 msgid "IDB"
@@ -1079,40 +1306,47 @@ msgid ""
 "to build the :ref:`vector.idb` driver. IDB_ROOT or CMAKE_PREFIX_PATH "
 "should point to the directory of the SDK."
 msgstr ""
+"Informix DataBase Client SDK (クローズドソース/プロプライエタリ) は, :ref:`vector.idb` ドライバを"
+"ビルドするために必要です. IDB_ROOT または CMAKE_PREFIX_PATH は, SDK のディレクトリを指す必要があります."
 
 #: ../../source/development/building_from_source.rst:879
 msgid ""
 "Path to an include directory (typically ending with ``incl``) with the "
 "``c++/it.h`` header file."
 msgstr ""
+"``c++/it.h`` ヘッダーファイルを含む include ディレクトリ (通常は ``incl`` で終わる) へのパス."
 
 #: ../../source/development/building_from_source.rst:883
 msgid ""
 "Path to a library file ``ifc++`` (typically in the ``lib/c++`` sub "
 "directory)"
 msgstr ""
+"ライブラリファイル ``ifc++`` (通常は ``lib/c++`` サブディレクトリにある) へのパス."
 
 #: ../../source/development/building_from_source.rst:887
 msgid ""
 "Path to a library file ``ifdmi`` (typically in the ``lib/dmi`` sub "
 "directory)"
 msgstr ""
+"ライブラリファイル ``ifdmi`` (通常は ``lib/dmi`` サブディレクトリにある) へのパス."
 
 #: ../../source/development/building_from_source.rst:891
 msgid ""
 "Path to a library file ``ifsql`` (typically in the ``lib/esql`` sub "
 "directory)"
 msgstr ""
+"ライブラリファイル ``ifsql`` (通常は ``lib/esql`` サブディレクトリにある) へのパス."
 
 #: ../../source/development/building_from_source.rst:895
 msgid ""
 "Path to a library file ``ifcli`` (typically in the ``lib/cli`` sub "
 "directory)"
 msgstr ""
+"ライブラリファイル ``ifcli`` (通常は ``lib/cli`` サブディレクトリにある) へのパス."
 
 #: ../../source/development/building_from_source.rst:899
 msgid "Control whether to use IDB. Defaults to ON when IDB is found."
-msgstr ""
+msgstr "IDB を使用するかどうかを制御します. IDB が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:903
 msgid "JPEG"
@@ -1128,6 +1362,11 @@ msgid ""
 "https://cmake.org/cmake/help/latest/module/FindJPEG.html for more details"
 " on how the library is detected."
 msgstr ""
+"libjpeg は, :ref:`raster.jpeg` ドライバに必要であり, 他のいくつかのドライバ (:ref:`raster.gpkg`"
+", :ref:`raster.marfa`, 内部 libtiff など) で使用される場合があります. 見つからない場合, 内部"
+"コピーの libjpeg (6b) を使用できます. 最高のパフォーマンスを得るために,"
+" `libjpeg-turbo <https://github.com/libjpeg-turbo/libjpeg-turbo>`_ の使用を強くお勧めします."
+" ライブラリの検出方法についての詳細は, https://cmake.org/cmake/help/latest/module/FindJPEG.html を参照してください."
 
 #: ../../source/development/building_from_source.rst:915
 msgid ""
@@ -1135,10 +1374,12 @@ msgid ""
 " library with libjpeg ABI, not TurboJPEG. See https://libjpeg-"
 "turbo.org/About/TurboJPEG for the difference."
 msgstr ""
+"libjpeg-turbo を使用する場合, JPEG_LIBRARY[_RELEASE/_DEBUG] は, TurboJPEG ではなく libjpeg ABI を"
+"持つライブラリを指す必要があります. 違いについては, https://libjpeg-turbo.org/About/TurboJPEG を参照してください."
 
 #: ../../source/development/building_from_source.rst:921
 msgid "Path to an include directory with the ``jpeglib.h`` header file."
-msgstr ""
+msgstr "``jpeglib.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:925
 msgid ""
@@ -1146,12 +1387,14 @@ msgid ""
 "``JPEG_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, ``JPEG_LIBRARY_DEBUG`` という類似の変数を指定できます."
 
 #: ../../source/development/building_from_source.rst:931
 msgid ""
 "Control whether to use external libjpeg. Defaults to ON when external "
 "libjpeg is found."
 msgstr ""
+"外部 libjpeg を使用するかどうかを制御します. 外部 libjpeg が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:935
 msgid ""
@@ -1159,6 +1402,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_JPEG=ON"
 msgstr ""
+"内部 libjpeg コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存"
+"します. ON に設定されている場合, GDAL_USE_JPEG=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:940
 msgid ""
@@ -1166,6 +1411,8 @@ msgid ""
 "This can be used to check a build time that the expected JPEG library is "
 "the one that is included by GDAL."
 msgstr ""
+"外部 libjpeg と共に使用されます. たとえば, libjpeg 8 ABI の場合は 80 です. これは, ビルド時に"
+"期待される JPEG ライブラリが GDAL によって含まれているかどうかをチェックするために使用できます."
 
 #: ../../source/development/building_from_source.rst:946
 msgid "JPEG12"
@@ -1180,10 +1427,13 @@ msgid ""
 "independently of if for regular 8 bit JPEG an external or internal "
 "libjpeg is used."
 msgstr ""
+"libjpeg-12 ビットは, 12ビットの深度を持つ JPEG 画像を処理するために, :ref:`raster.jpeg`, :ref:`raster.gtiff` "
+"(内部 libtiff を使用する場合), :ref:`raster.jpeg` , :ref:`raster.marfa` , :ref:`raster.nitf` ドライバで使用できます."
+" これは, 内部 libjpeg (6b) でのみサポートされています. 通常の 8ビット JPEG に外部または内部 libjpeg を使用するかどうかに関係なく使用できます."
 
 #: ../../source/development/building_from_source.rst:956
 msgid "Control whether to use internal libjpeg-12 copy. Defaults to ON."
-msgstr ""
+msgstr "内部 libjpeg-12 コピーを使用するかどうかを制御します. デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:960
 msgid ""
@@ -1194,6 +1444,10 @@ msgid ""
 " built against libjpeg-turbo >= 2.2 is needed to get 12-bit JPEG support "
 "in the GeoTIFF support."
 msgstr ""
+"GDAL 3.7 以降, libjpeg-turbo >= 2.2 を使用している場合, ネイティブでデュアル 8/12ビットをサポート"
+"するために, JPEG, MRF, NITF または GeoTIFF (内部 libtiff でビルドされた場合) ドライバで 12ビット"
+"JPEG サポートを得るために, 内部 libjpeg-12 を使用する必要はありません. 外部 libtiff を使用している"
+"場合, GeoTIFF サポートで 12ビット JPEG サポートを得るには, libjpeg-turbo >= 2.2 でビルドされた libtiff >= 4.5 が必要です."
 
 #: ../../source/development/building_from_source.rst:968
 msgid "JSON-C"
@@ -1205,14 +1459,16 @@ msgid ""
 "read and write JSON content. It can be detected with pkg-config. If not "
 "found, an internal copy of json-c can be used."
 msgstr ""
+"`json-c <https://github.com/json-c/json-c>`_ ライブラリは, JSON コンテンツの読み書きに必要です."
+" pkg-config で検出できます. 見つからない場合, json-c の内部コピーを使用できます."
 
 #: ../../source/development/building_from_source.rst:977
 msgid "Path to an include directory with the ``json.h`` header file."
-msgstr ""
+msgstr "``json.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:985
 msgid "Control whether to use JSON-C. Defaults to ON when JSON-C is found."
-msgstr ""
+msgstr "JSON-C を使用するかどうかを制御します. JSON-C が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:989
 msgid ""
@@ -1220,6 +1476,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_JSONC=ON"
 msgstr ""
+"内部 JSON-C コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存"
+"します. ON に設定されている場合, GDAL_USE_JSONC=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:994
 msgid "JXL"
@@ -1231,14 +1489,16 @@ msgid ""
 ":ref:`raster.gtiff` driver, when built against internal libtiff. It can "
 "be detected with pkg-config."
 msgstr ""
+"`libjxl <https://github.com/libjxl/libjxl>` ライブラリは, 内部 libtiff に対してビルドされた :ref:`raster.gtiff` ドライバで使用されます."
+" pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:1002
 msgid "Path to an include directory with the ``jxl/decode.h`` header file."
-msgstr ""
+msgstr "``jxl/decode.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1010
 msgid "Control whether to use JXL. Defaults to ON when JXL is found."
-msgstr ""
+msgstr "JXL を使用するかどうかを制御します. JXL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1014
 msgid "KDU"
@@ -1254,28 +1514,35 @@ msgid ""
 "For other platforms, users need to manually specify the KDU_LIBRARY and "
 "KDU_AUX_LIBRARY variable."
 msgstr ""
+"Kakadu ライブラリ (プロプライエタリ) は, :ref:`raster.jp2kak` および :ref:`raster.jpipkak` ドライバに必要です."
+" 標準化されたインストールレイアウトや固定されたライブラリファイル名はないため, Kakadu アーティファクトを見つけるのは少し難しいです."
+" 現在, KDU_ROOT 変数からの自動検出は Linux, Mac および Windows x86_64 ビルドにのみ実装されています."
+" 他のプラットフォームでは, ユーザーは KDU_LIBRARY および KDU_AUX_LIBRARY 変数を手動で指定する必要があります."
 
 #: ../../source/development/building_from_source.rst:1026
 msgid ""
 "Path to the root of the Kakadu build tree, from which the "
 "``coresys/common/kdu_elementary.h`` header file should be found."
 msgstr ""
+"Kakadu ビルドツリーのルートへのパスで, ``coresys/common/kdu_elementary.h`` ヘッダーファイルが見つかるべきです."
 
 #: ../../source/development/building_from_source.rst:1031
 msgid ""
 "Path to a shared library file whose name is like libkdu_vXYR.so on Unix "
 "or kdu_vXYR.lib on Windows, where X.Y is the Kakadu version."
 msgstr ""
+"Unix では libkdu_vXYR.so または Windows では kdu_vXYR.lib のような名前の共有ライブラリファイルへのパスで, X.Y は Kakadu のバージョンです."
 
 #: ../../source/development/building_from_source.rst:1036
 msgid ""
 "Path to a shared library file whose name is like libkdu_aXYR.so on Unix "
 "or kdu_aXYR.lib on Windows, where X.Y is the Kakadu version."
 msgstr ""
+"Unix では libkdu_aXYR.so または Windows では kdu_aXYR.lib のような名前の共有ライブラリファイルへのパスで, X.Y は Kakadu のバージョンです."
 
 #: ../../source/development/building_from_source.rst:1041
 msgid "Control whether to use KDU. Defaults to ON when KDU is found."
-msgstr ""
+msgstr "KDU を使用するかどうかを制御します. KDU が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1044
 msgid "KEA"
@@ -1286,14 +1553,15 @@ msgid ""
 "The `KEA <http://www.kealib.org/>`_ library is required for the "
 ":ref:`raster.kea` driver. The HDF5 CXX library is also required."
 msgstr ""
+"`KEA <http://www.kealib.org/>`_ ライブラリは, :ref:`raster.kea` ドライバに必要です. HDF5 CXX ライブラリも必要です."
 
 #: ../../source/development/building_from_source.rst:1051
 msgid "Path to an include directory with the ``libkea/KEACommon.h`` header file."
-msgstr ""
+msgstr "``libkea/KEACommon.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1059
 msgid "Control whether to use KEA. Defaults to ON when KEA is found."
-msgstr ""
+msgstr "KEA を使用するかどうかを制御します. KEA が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1063
 msgid "LERC"
@@ -1307,14 +1575,16 @@ msgid ""
 "while encoding, so the precision of the original input image is preserved"
 " (within user defined error bounds)."
 msgstr ""
+"`LERC <https://github.com/esri/lerc>`_ は, 任意のピクセルタイプ (RGB または Byte だけでなく) に対して高速なエンコードとデコードをサポートするオープンソースの画像またはラスタ形式です."
+" ユーザーは, エンコード時にピクセルごとの最大圧縮エラーを設定するため, 元の入力画像の精度が保存されます (ユーザー定義のエラー境界内で)."
 
 #: ../../source/development/building_from_source.rst:1072
 msgid "Path to an include directory with the ``Lerc_c_api.h`` header file."
-msgstr ""
+msgstr "``Lerc_c_api.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1080
 msgid "Control whether to use LERC. Defaults to ON when LERC is found."
-msgstr ""
+msgstr "LERC を使用するかどうかを制御します. LERC が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1084
 msgid ""
@@ -1322,6 +1592,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_LERC=ON"
 msgstr ""
+"LERC 内部ライブラリを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存"
+"します. ON に設定されている場合, GDAL_USE_LERC=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:1088
 msgid "LIBAEC"
@@ -1334,14 +1606,16 @@ msgid ""
 "CCSDS recommended standard 121.0-B-3. It is used by the "
 ":ref:`raster.grib` driver."
 msgstr ""
+"`libaec <https://gitlab.dkrz.de/k202009/libaec>`_ は, CCSDS 推奨標準 121.0-B-3 で定義されている拡張ゴロム・ライス符号化を提供する圧縮ライブラリです."
+" :ref:`raster.grib` ドライバで使用されます."
 
 #: ../../source/development/building_from_source.rst:1096
 msgid "Path to an include directory with the ``libaec.h`` header file."
-msgstr ""
+msgstr "``libaec.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1104
 msgid "Control whether to use LIBAEC. Defaults to ON when LIBAEC is found."
-msgstr ""
+msgstr "LIBAEC を使用するかどうかを制御します. LIBAEC が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1107
 msgid "LibKML"
@@ -1352,30 +1626,31 @@ msgid ""
 "`LibKML <https://github.com/libkml/libkml>`_ is required for the "
 ":ref:`vector.libkml` driver. It can be detected with pkg-config."
 msgstr ""
+"`LibKML <https://github.com/libkml/libkml>`_ は, :ref:`vector.libkml` ドライバに必要です. pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:1118
 msgid "Path to a shared or static library file for ``kmlbase``"
-msgstr ""
+msgstr "共有または静的ライブラリファイル ``kmlbase`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1122
 msgid "Path to a shared or static library file for ``kmldom``"
-msgstr ""
+msgstr "共有または静的ライブラリファイル ``kmldom`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1126
 msgid "Path to a shared or static library file for ``kmlengine``"
-msgstr ""
+msgstr "共有または静的ライブラリファイル ``kmlengine`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1130
 msgid "Path to a shared or static library file for ``minizip``"
-msgstr ""
+msgstr "共有または静的ライブラリファイル ``minizip`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1134
 msgid "Path to a shared or static library file for ``uriparser``"
-msgstr ""
+msgstr "共有または静的ライブラリファイル ``uriparser`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1138
 msgid "Control whether to use LibKML. Defaults to ON when LibKML is found."
-msgstr ""
+msgstr "LibKML を使用するかどうかを制御します. LibKML が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1141
 msgid "LibLZMA"
@@ -1387,14 +1662,16 @@ msgid ""
 "offers the lossless LZMA2 compression algorithm. It is used by the "
 "internal libtiff library or the :ref:`raster.zarr` driver."
 msgstr ""
+"`LibLZMA <https://tukaani.org/xz/>`_ は, LZMA2 圧縮アルゴリズムを提供する圧縮ライブラリです."
+" 内部 libtiff ライブラリまたは :ref:`raster.zarr` ドライバで使用されます."
 
 #: ../../source/development/building_from_source.rst:1149
 msgid "Path to an include directory with the ``lzma.h`` header file."
-msgstr ""
+msgstr "``lzma.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1157
 msgid "Control whether to use LibLZMA. Defaults to ON when LibLZMA is found."
-msgstr ""
+msgstr "LibLZMA を使用するかどうかを制御します. LibLZMA が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1161
 msgid "libOpenDRIVE"
@@ -1405,6 +1682,7 @@ msgid ""
 "`libOpenDRIVE <https://github.com/pageldev/libOpenDRIVE>`_ in version >= "
 "0.6.0 is required for the :ref:`vector.xodr` driver."
 msgstr ""
+"`libOpenDRIVE <https://github.com/pageldev/libOpenDRIVE>`_ のバージョン >= 0.6.0 が, :ref:`vector.xodr` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1167
 msgid ""
@@ -1413,12 +1691,15 @@ msgid ""
 " created when installing libOpenDRIVE and contains the necessary "
 "configuration files for inclusion into other project builds."
 msgstr ""
+"libOpenDRIVE CMake 構成ディレクトリへのパス ``<installDir>/cmake/``. :file:`cmmake/` "
+"パスは, 通常, libOpenDRIVE をインストールすると自動的に作成され, 他のプロジェクトビルドに含めるための必要な構成ファイルが含まれています."
 
 #: ../../source/development/building_from_source.rst:1171
 msgid ""
 "Control whether to use libOpenDRIVE. Defaults to ON when libOpenDRIVE is "
 "found."
 msgstr ""
+"libOpenDRIVE を使用するかどうかを制御します. libOpenDRIVE が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1175
 msgid "LibQB3"
@@ -1429,10 +1710,11 @@ msgid ""
 "The `QB3 <https://github.com/lucianpls/QB3>`_ compression, used by the "
 ":ref:`raster.marfa` driver."
 msgstr ""
+"`QB3 <https://github.com/lucianpls/QB3>`_ 圧縮は, :ref:`raster.marfa` ドライバで使用されます."
 
 #: ../../source/development/building_from_source.rst:1182
 msgid "Control whether to use LibQB3. Defaults to ON when LibQB3 is found."
-msgstr ""
+msgstr "LibQB3 を使用するかどうかを制御します. LibQB3 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1186
 msgid "LibXml2"
@@ -1445,10 +1727,13 @@ msgid ""
 "(PDF, GMLAS, GML OGR VRT) and for advanced capabilities in GMLJP2v2 "
 "generation."
 msgstr ""
+"`LibXml2 <http://xmlsoft.org/>`_ 処理ライブラリは, いくつかのドライバ "
+"(PDF, GMLAS, GML OGR VRT) で XML ファイルを XML スキーマ (.xsd) に対して検証するために使用されます."
+" また, GMLJP2v2 生成の高度な機能にも使用されます."
 
 #: ../../source/development/building_from_source.rst:1202
 msgid "Control whether to use LibXml2. Defaults to ON when LibXml2 is found."
-msgstr ""
+msgstr "LibXml2 を使用するかどうかを制御します. LibXml2 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1206
 msgid "LURATECH"
@@ -1459,24 +1744,26 @@ msgid ""
 "The Luratech JPEG2000 SDK (closed source/proprietary) is required for the"
 " :ref:`raster.jp2lura` driver."
 msgstr ""
+"Luratech JPEG2000 SDK (クローズドソース/プロプライエタリ) は, :ref:`raster.jp2lura` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1211
 msgid ""
 "LURATECH_ROOT or CMAKE_PREFIX_PATH should point to the directory of the "
 "SDK."
 msgstr ""
+"LURATECH_ROOT または CMAKE_PREFIX_PATH は, SDK のディレクトリを指す必要があります."
 
 #: ../../source/development/building_from_source.rst:1215
 msgid "Path to the include directory with the ``lwf_jp2.h`` header file."
-msgstr ""
+msgstr "``lwf_jp2.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1219
 msgid "Path to library file lib_lwf_jp2.a / lwf_jp2.lib"
-msgstr ""
+msgstr "ライブラリファイル lib_lwf_jp2.a / lwf_jp2.lib へのパス"
 
 #: ../../source/development/building_from_source.rst:1223
 msgid "Control whether to use LURATECH. Defaults to ON when LURATECH is found."
-msgstr ""
+msgstr "LURATECH を使用するかどうかを制御します. LURATECH が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1227
 msgid "LZ4"
@@ -1488,10 +1775,12 @@ msgid ""
 " the lossless LZ4 compression algorithm. It is used by the "
 ":ref:`raster.zarr` driver."
 msgstr ""
+"`LZ4 <https://github.com/lz4/lz4>`_ は, LZ4 圧縮アルゴリズムを提供する圧縮ライブラリです."
+" :ref:`raster.zarr` ドライバで使用されます."
 
 #: ../../source/development/building_from_source.rst:1235
 msgid "Path to an include directory with the ``lz4.h`` header file."
-msgstr ""
+msgstr "``lz4.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1239
 msgid ""
@@ -1499,10 +1788,11 @@ msgid ""
 "``LZ4_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, ``LZ4_LIBRARY_DEBUG`` という類似の変数を指定できます."
 
 #: ../../source/development/building_from_source.rst:1245
 msgid "Control whether to use LZ4. Defaults to ON when LZ4 is found."
-msgstr ""
+msgstr "LZ4 を使用するかどうかを制御します. LZ4 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1249
 msgid "MONGOCXX"
@@ -1514,28 +1804,31 @@ msgid ""
 " libraries are needed to build the :ref:`vector.mongodbv3` driver. They "
 "can be detected with pkg-config."
 msgstr ""
+"`MongoCXX <https://github.om/mongodb/mongo-cxx-driver>`_ および BsonCXX ライブラリは, :ref:`vector.mongodbv3` ドライバをビルドするために必要です."
+" pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:1257
 msgid "Path to an include directory with the ``mongocxx/client.hpp`` header file."
-msgstr ""
+msgstr "``mongocxx/client.hpp`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1261
 msgid ""
 "Path to an include directory with the ``bsoncxx/config/version.hpp`` "
 "header file."
 msgstr ""
+"``bsoncxx/config/version.hpp`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1265
 msgid "Path to a library file ``mongocxx``"
-msgstr ""
+msgstr "ライブラリファイル ``mongocxx`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1269
 msgid "Path to a library file ``bsoncxx``"
-msgstr ""
+msgstr "ライブラリファイル ``bsoncxx`` へのパス"
 
 #: ../../source/development/building_from_source.rst:1273
 msgid "Control whether to use MONGOCXX. Defaults to ON when MONGOCXX is found."
-msgstr ""
+msgstr "MONGOCXX を使用するかどうかを制御します. MONGOCXX が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1277
 msgid "MRSID"
@@ -1546,6 +1839,7 @@ msgid ""
 "The MRSID Raster DSDK (closed source/proprietary) is required for the "
 ":ref:`raster.mrsid` driver."
 msgstr ""
+"MRSID Raster DSDK (クローズドソース/プロプライエタリ) は, :ref:`raster.mrsid` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1282
 msgid ""
@@ -1554,24 +1848,27 @@ msgid ""
 "be in the LD_LIBRARY_PATH so that the linking of applications succeeds "
 "and libtbb.so can be found."
 msgstr ""
+"MRSID_ROOT または CMAKE_PREFIX_PATH は, Raster_DSDK で終わる SDK のディレクトリを指す必要があります."
+" Linux では, lib サブディレクトリが LD_LIBRARY_PATH にある必要があります. これにより, アプリケーションのリンクが成功し, libtbb.so が見つかります."
 
 #: ../../source/development/building_from_source.rst:1289
 msgid "Path to the include directory with the ``lt_base.h`` header file."
-msgstr ""
+msgstr "``lt_base.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1293
 msgid "Path to library file libltidsdk"
-msgstr ""
+msgstr "ライブラリファイル libltidsdk へのパス"
 
 #: ../../source/development/building_from_source.rst:1297
 msgid ""
 "Whether to enable JPEG2000 support through the MrSID SDK. The default "
 "value of this option is OFF."
 msgstr ""
+"MrSID SDK を介して JPEG2000 サポートを有効にするかどうか. このオプションのデフォルト値は OFF です."
 
 #: ../../source/development/building_from_source.rst:1302
 msgid "Control whether to use MRSID. Defaults to ON when MRSID is found."
-msgstr ""
+msgstr "MRSID を使用するかどうかを制御します. MRSID が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1306
 msgid "MSSQL_NCLI"
@@ -1585,26 +1882,30 @@ msgid ""
 " used. The library is normally found if installed in standard location, "
 "and at version 11."
 msgstr ""
+"Microsoft SQL Native Client Library (クローズドソース/プロプライエタリ) は, :ref:`vector.mssqlspatial` ドライバでバルクコピーを有効にするために必要です."
+" MSSQL_NCLI と MSSQL_ODBC の両方が見つかり有効になっている場合, MSSQL_ODBC が使用されます."
+" 通常, 標準の場所にインストールされており, バージョン 11 で見つかります."
 
 #: ../../source/development/building_from_source.rst:1315
 msgid "Major version of the Native Client, typically 11"
-msgstr ""
+msgstr "Native Client のメジャーバージョン, 通常は 11"
 
 #: ../../source/development/building_from_source.rst:1319
 msgid "Path to include directory with ``sqlncli.h`` header."
-msgstr ""
+msgstr "``sqlncli.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1323
 #: ../../source/development/building_from_source.rst:1348
 #: ../../source/development/building_from_source.rst:1367
 msgid "Path to library to be linked."
-msgstr ""
+msgstr "リンクするライブラリへのパス."
 
 #: ../../source/development/building_from_source.rst:1327
 msgid ""
 "Control whether to use MSSQL_NCLI. Defaults to ON when MSSQL_NCLI is "
 "found."
 msgstr ""
+"MSSQL_NCLI を使用するかどうかを制御します. MSSQL_NCLI が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1331
 msgid "MSSQL_ODBC"
@@ -1618,20 +1919,25 @@ msgid ""
 " be used. The library is normally found if installed in standard "
 "location, and at version 17."
 msgstr ""
+"Microsoft SQL Native ODBC driver Library (クローズドソース/プロプライエタリ) は, :ref:`vector.mssqlspatial` "
+"ドライバでバルクコピーを有効にするために必要です."
+" MSSQL_NCLI と MSSQL_ODBC の両方が見つかり有効になっている場合, MSSQL_ODBC が使用されます."
+" 通常, 標準の場所にインストールされており, バージョン 17 が見つかります."
 
 #: ../../source/development/building_from_source.rst:1340
 msgid "Major version of the Native Client, typically 17"
-msgstr ""
+msgstr "Native Client のメジャーバージョン, 通常は 17"
 
 #: ../../source/development/building_from_source.rst:1344
 msgid "Path to include directory with ``msodbcsql.h`` header."
-msgstr ""
+msgstr "``msodbcsql.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1352
 msgid ""
 "Control whether to use MSSQL_ODBC. Defaults to ON when MSSQL_ODBC is "
 "found."
 msgstr ""
+"MSSQL_ODBC を使用するかどうかを制御します. MSSQL_ODBC が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1356
 msgid "MYSQL"
@@ -1642,14 +1948,15 @@ msgid ""
 "The MySQL or MariaDB client library is required to enable the "
 ":ref:`vector.mysql` driver."
 msgstr ""
+"MySQL または MariaDB クライアントライブラリは, :ref:`vector.mysql` ドライバを有効にするために必要です."
 
 #: ../../source/development/building_from_source.rst:1363
 msgid "Path to include directory with ``mysql.h`` header file."
-msgstr ""
+msgstr "``mysql.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1371
 msgid "Control whether to use MYSQL. Defaults to ON when MYSQL is found."
-msgstr ""
+msgstr "MYSQL を使用するかどうかを制御します. MYSQL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1375
 msgid "NetCDF"
@@ -1661,14 +1968,16 @@ msgid ""
 " the :ref:`raster.netcdf` driver. The ``nc-config`` program can be used "
 "to detect it."
 msgstr ""
+"`netCDF <https://github.com/Ubidata/netcdf-c>`_ は, :ref:`raster.netcdf` ドライバを有効にするために必要です."
+" ``nc-config`` プログラムを使用して検出できます."
 
 #: ../../source/development/building_from_source.rst:1383
 msgid "Path to an include directory with the ``netcdf.h`` header file."
-msgstr ""
+msgstr "``netcdf.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1391
 msgid "Control whether to use netCDF. Defaults to ON when netCDF is found."
-msgstr ""
+msgstr "netCDF を使用するかどうかを制御します. netCDF が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1395
 msgid "ODBC"
@@ -1681,18 +1990,20 @@ msgid ""
 " is normally automatically found in system directories on Unix and "
 "Windows."
 msgstr ""
+"ODBC は, さまざまなドライバに必要です: :ref:`vector.odbc`, :ref:`vector.pgeo`, :ref:`vector.hana` および :ref:`vector.mssqlspatial`."
+" 通常, Unix および Windows のシステムディレクトリで自動的に見つかります."
 
 #: ../../source/development/building_from_source.rst:1403
 msgid "Path to ODBC include directory with ``sql.h`` header."
-msgstr ""
+msgstr "``sql.h`` ヘッダーを含む ODBC include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1407
 msgid "Path to ODBC library to be linked."
-msgstr ""
+msgstr "リンクする ODBC ライブラリへのパス."
 
 #: ../../source/development/building_from_source.rst:1411
 msgid "Control whether to use ODBC. Defaults to ON when ODBC is found."
-msgstr ""
+msgstr "ODBC を使用するかどうかを制御します. ODBC が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1415
 msgid "ODBC-CPP"
@@ -1703,14 +2014,15 @@ msgid ""
 "The `odbc-cpp-wrapper library <https://github.com/SAP/odbc-cpp-wrapper>`_"
 " is required for the :ref:`vector.hana` driver."
 msgstr ""
+"`odbc-cpp-wrapper ライブラリ <https://github.com/SAP/odbc-cpp-wrapper>`_ は, :ref:`vector.hana` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1422
 msgid "Path to an include directory with the ``odbc/Environment.h`` header file."
-msgstr ""
+msgstr "``odbc/Environment.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1430
 msgid "Control whether to use ODBC-CPP. Defaults to ON when ODBC-CPP is found."
-msgstr ""
+msgstr "ODBC-CPP を使用するかどうかを制御します. ODBC-CPP が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1434
 msgid "OGDI"
@@ -1721,14 +2033,16 @@ msgid ""
 "The `OGDI <https://github.com/libogdi/ogdi/>`_ library is required for "
 "the :ref:`vector.ogdi` driver. It can be detected with pkg-config."
 msgstr ""
+"`OGDI <https://github.com/libogdi/ogdi/>`_ ライブラリは, :ref:`vector.ogdi` ドライバに必要です."
+" pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:1441
 msgid "Path to an include directory with the ``ecs.h`` header file."
-msgstr ""
+msgstr "``ecs.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1449
 msgid "Control whether to use OGDI. Defaults to ON when OGDI is found."
-msgstr ""
+msgstr "OGDI を使用するかどうかを制御します. OGDI が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1453
 msgid "OpenCAD"
@@ -1740,16 +2054,19 @@ msgid ""
 " for the :ref:`vector.cad` driver. If not found, an internal copy can be "
 "used."
 msgstr ""
+"`libopencad <https://github.com/nextgis-borsch/lib_opencad>`_ は, :ref:`vector.cad` ドライバに必要です."
+" 見つからない場合, 内部コピーを使用できます."
 
 #: ../../source/development/building_from_source.rst:1460
 msgid "Path to an include directory with the ``opencad.h`` header file."
-msgstr ""
+msgstr "``opencad.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1468
 msgid ""
 "Control whether to use external libopencad. Defaults to ON when external "
 "libopencad is found."
 msgstr ""
+"外部 libopencad を使用するかどうかを制御します. 外部 libopencad が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1472
 msgid ""
@@ -1757,6 +2074,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_OPENCAD=ON"
 msgstr ""
+"内部 libopencad コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存します."
+" ON に設定されている場合, GDAL_USE_OPENCAD=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:1478
 msgid "OpenCL"
@@ -1767,6 +2086,7 @@ msgid ""
 "The OpenCL library may be used to accelerate warping computations, "
 "typically with a GPU."
 msgstr ""
+"OpenCL ライブラリは, 通常, GPU を使用してワーピング計算を高速化するために使用できます."
 
 #: ../../source/development/building_from_source.rst:1483
 msgid ""
@@ -1777,14 +2097,17 @@ msgid ""
 "runtime. The warping option USE_OPENCL or the configuration option "
 "GDAL_USE_OPENCL must be set to YES to enable it."
 msgstr ""
+"(GDAL 3.5 および 3.6) 現在の OpenCL ワーピング実装が一般的な実装よりも遅れているため, 検出された場合でもデフォルトで無効になっています."
+" GDAL 3.7 以降, OpenCL が検出された場合, ビルドサポートがデフォルトで有効になりますが, ランタイムでデフォルトで無効になります."
+" ワーピングオプション USE_OPENCL または構成オプション GDAL_USE_OPENCL を YES に設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:1491
 msgid "Path to an include directory with the ``CL/cl.h`` header file."
-msgstr ""
+msgstr "``CL/cl.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1499
 msgid "Control whether to use OPENCL. Defaults to *OFF* when OPENCL is found."
-msgstr ""
+msgstr "OPENCL を使用するかどうかを制御します. OPENCL が見つかった場合, デフォルトは *OFF* です."
 
 #: ../../source/development/building_from_source.rst:1503
 msgid "OpenEXR"
@@ -1795,6 +2118,7 @@ msgid ""
 "`OpenEXR <https://github.com/AcademySoftwareFoundation/openexr>`_ is "
 "required for the :ref:`raster.exr` driver"
 msgstr ""
+"`OpenEXR <https://github.com/AcademySoftwareFoundation/openexr>`_ は, :ref:`raster.exr` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1507
 msgid ""
@@ -1803,11 +2127,13 @@ msgid ""
 ">= 3 additionally specify ``Imath_ROOT`` as this is a separate library "
 "now, i.e. /DEV/lib/imath-3.1.3"
 msgstr ""
+"``OpenEXR_ROOT`` 変数を指定して, /lib および /include サブディレクトリの親ディレクトリを指定します. つまり, /DEV/lib/openexr-3.0 です."
+" OpenEXR >= 3 の場合は, これは別のライブラリなので, ``Imath_ROOT`` も指定してください. つまり, /DEV/lib/imath-3.1.3 です."
 
 #: ../../source/development/building_from_source.rst:1512
 #: ../../source/development/building_from_source.rst:1517
 msgid "or"
-msgstr ""
+msgstr "または"
 
 #: ../../source/development/building_from_source.rst:1514
 msgid ""
@@ -1815,6 +2141,8 @@ msgid ""
 "find OpenEXR's pkgconfig. For example "
 "-DCMAKE_PREFIX_PATH=/DEV/lib/openexr-3.0;/DEV/lib/imath-3.1.3"
 msgstr ""
+"OpenEXR の pkgconfig を見つけるために ``CMAKE_PREFIX_PATH`` 変数に追加してルートディレクトリを指定します. たとえば "
+"-DCMAKE_PREFIX_PATH=/DEV/lib/openexr-3.0;/DEV/lib/imath-3.1.3"
 
 #: ../../source/development/building_from_source.rst:1519
 msgid ""
@@ -1822,10 +2150,13 @@ msgid ""
 " ``OpenEXR_LIBRARY``, ``OpenEXR_UTIL_LIBRARY``, ``OpenEXR_HALF_LIBRARY``,"
 " ``OpenEXR_IEX_LIBRARY`` explicitly"
 msgstr ""
+"具体的には, ``OpenEXR_INCLUDE_DIR`` , ``Imath_INCLUDE_DIR`` , ``OpenEXR_LIBRARY`` "
+", ``OpenEXR_UTIL_LIBRARY``, ``OpenEXR_HALF_LIBRARY``, ``OpenEXR_IEX_LIBRARY`` を明示的に設定します."
+
 
 #: ../../source/development/building_from_source.rst:1527
 msgid "Control whether to use OpenEXR. Defaults to ON when OpenEXR is found."
-msgstr ""
+msgstr "OpenEXR を使用するかどうかを制御します. OpenEXR が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1531
 msgid "OpenJPEG"
@@ -1838,14 +2169,16 @@ msgid ""
 " :ref:`raster.jp2openjpeg` driver, or other drivers that use JPEG-2000 "
 "functionality."
 msgstr ""
+"`OpenJPEG <https://github.com/uclouvain/openjpeg>`_ ライブラリは, C 言語で書かれたオープンソースの JPEG-2000 コーデックです."
+" :ref:`raster.jp2openjpeg` ドライバ, または JPEG-2000 機能を使用する他のドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1539
 msgid "Path to an include directory with the ``openjpeg.h`` header file."
-msgstr ""
+msgstr "``openjpeg.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1547
 msgid "Control whether to use OpenJPEG. Defaults to ON when OpenJPEG is found."
-msgstr ""
+msgstr "OpenJPEG を使用するかどうかを制御します. OpenJPEG が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1553
 msgid ""
@@ -1854,6 +2187,9 @@ msgid ""
 "search is attempted. If set to empty string, default CMake logic "
 "(https://cmake.org/cmake/help/latest/command/find_package.html) applies."
 msgstr ""
+"find_package(OpenJPEG) で使用されるモードを制御します. OpenJPEG < 2.5.1 との互換性のため, デフォルトは MODULE です."
+" CONFIG に設定すると, Config モードの検索のみが試行されます. 空の文字列に設定すると, デフォルトの CMake ロジック"
+" (https://cmake.org/cmake/help/latest/command/find_package.html) が適用されます."
 
 #: ../../source/development/building_from_source.rst:1560
 msgid "OpenSSL"
@@ -1867,6 +2203,9 @@ msgid ""
 "Google Cloud. It might be required to use the :ref:`raster.eedai` images "
 "or use the :ref:`/vsigs/ <vsigs>` virtual file system."
 msgstr ""
+"`OpenSSL <https://github.com/openssl/openssl>`_ ライブラリの Crypto コンポーネントは, Google Cloud の一部の認証メソッド"
+"で使用される RSA SHA256 署名機能に使用できます."
+" :ref:`raster.eedai` 画像を使用するか, :ref:`/vsigs/ <vsigs>` 仮想ファイルシステムを使用するためには, 必要かもしれません."
 
 #: ../../source/development/building_from_source.rst:1567
 msgid ""
@@ -1875,10 +2214,12 @@ msgid ""
 "following options may be needed: -DOPENSSL_USE_STATIC_LIBS=TRUE "
 "-DOPENSSL_MSVC_STATIC_RT=TRUE"
 msgstr ""
+"ライブラリの設定方法の詳細については, https://cmake.org/cmake/help/latest/module/FindOpenSSL.html を参照してください."
+" 静的リンクの場合, 次のオプションが必要になる場合があります: -DOPENSSL_USE_STATIC_LIBS=TRUE -DOPENSSL_MSVC_STATIC_RT=TRUE"
 
 #: ../../source/development/building_from_source.rst:1573
 msgid "Control whether to use OpenSSL. Defaults to ON when OpenSSL is found."
-msgstr ""
+msgstr "OpenSSL を使用するかどうかを制御します. OpenSSL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1577
 msgid "Oracle"
@@ -1889,14 +2230,15 @@ msgid ""
 "The Oracle Instant Client SDK (closed source/proprietary) is required for"
 " the :ref:`vector.oci` and the :ref:`raster.georaster` drivers"
 msgstr ""
+"Oracle Instant Client SDK (クローズドソース/プロプライエタリ) は, :ref:`vector.oci` および :ref:`raster.georaster` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1584
 msgid "Path to the root directory of the Oracle Instant Client SDK."
-msgstr ""
+msgstr "Oracle Instant Client SDK のルートディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1588
 msgid "Control whether to use Oracle. Defaults to ON when Oracle is found."
-msgstr ""
+msgstr "Oracle を使用するかどうかを制御します. Oracle が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1592
 msgid "Parquet"
@@ -1909,16 +2251,19 @@ msgid ""
 "for the :ref:`vector.parquet` driver. Specify install prefix in the "
 "``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
+"`Apache Arrow C++ <https://github.com/apache/arrow/tree/master/cpp>` ライブラリの Parquet コンポーネントは, :ref:`vector.parquet` ドライバに必要です."
+" ``CMAKE_PREFIX_PATH`` 変数にインストールプレフィックスを指定します."
 
 #: ../../source/development/building_from_source.rst:1600
 msgid "Control whether to use Parquet. Defaults to ON when Parquet is found."
-msgstr ""
+msgstr "Parquet を使用するかどうかを制御します. Parquet が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1604
 msgid ""
 "Control whether to use statically built Arrow libraries. Defaults to OFF "
 "when Parquet is found."
 msgstr ""
+"静的にビルドされた Arrow ライブラリを使用するかどうかを制御します. Parquet が見つかった場合, デフォルトは OFF です."
 
 #: ../../source/development/building_from_source.rst:1608
 msgid "PCRE2"
@@ -1930,18 +2275,20 @@ msgid ""
 "compatible Regular Expressions support. It is used for the REGEXP "
 "operator in drivers using SQLite3."
 msgstr ""
+"`PCRE2 <https://github.com/PhilipHazel/pcre2>`_ は, Perl 互換の正規表現サポートを実装しています."
+" SQLite3 を使用するドライバで REGEXP 演算子に使用されます."
 
 #: ../../source/development/building_from_source.rst:1615
 msgid "Path to an include directory with the ``pcre2.h`` header file."
-msgstr ""
+msgstr "``pcre2.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1619
 msgid "Path to a shared or static library file with \"pcre2-8\" in its name."
-msgstr ""
+msgstr "名前に \"pcre2-8\" が含まれる共有または静的ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:1623
 msgid "Control whether to use PCRE2. Defaults to ON when PCRE2 is found."
-msgstr ""
+msgstr "PCRE2 を使用するかどうかを制御します. PCRE2 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1627
 msgid "PDFIUM"
@@ -1952,14 +2299,16 @@ msgid ""
 "The `PDFium <https://github.com/rouault/pdfium_build_gdal_3_5>`_ library "
 "is one of the possible backends for the :ref:`raster.pdf` driver."
 msgstr ""
+"`PDFium <https://github.com/rouault/pdfium_build_gdal_3_5>`_ ライブラリは, :ref:`raster.pdf` ドライバで利用可能なバックエンドの1つです."
+
 
 #: ../../source/development/building_from_source.rst:1634
 msgid "Path to an include directory with the ``public/fpdfview.h`` header file."
-msgstr ""
+msgstr "``public/fpdfview.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1642
 msgid "Control whether to use PDFIUM. Defaults to ON when PDFIUM is found."
-msgstr ""
+msgstr "PDFIUM を使用するかどうかを制御します. PDFIUM が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1646
 msgid "PNG"
@@ -1974,10 +2323,14 @@ msgid ""
 "https://cmake.org/cmake/help/latest/module/FindPNG.html for more details "
 "on how the library is detected."
 msgstr ""
+"`libpng <https://github.com/glennrp/libpng>`_ は, :ref:`raster.png` ドライバに必要であり, 他のいくつかのドライバ "
+"( :ref:`raster.grib` , :ref:`raster.gpkg` など) で使用される場合があります."
+" 見つからない場合, libpng の内部コピーを使用できます."
+" ライブラリが検出される方法の詳細については, https://cmake.org/cmake/help/latest/module/FindPNG.html を参照してください."
 
 #: ../../source/development/building_from_source.rst:1656
 msgid "Path to an include directory with the ``png.h`` header file."
-msgstr ""
+msgstr "``png.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1660
 msgid ""
@@ -1985,12 +2338,14 @@ msgid ""
 "``PNG_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, 類似の変数 ``PNG_LIBRARY_DEBUG`` を指定できます."
 
 #: ../../source/development/building_from_source.rst:1666
 msgid ""
 "Control whether to use external libpng. Defaults to ON when external "
 "libpng is found."
 msgstr ""
+"外部 libpng を使用するかどうかを制御します. 外部 libpng が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1670
 msgid ""
@@ -1998,6 +2353,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_PNG=ON"
 msgstr ""
+"内部 libpng コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存します."
+" ON に設定されている場合, GDAL_USE_PNG=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:1675
 msgid "Poppler"
@@ -2008,20 +2365,22 @@ msgid ""
 "The `Poppler <https://poppler.freedesktop.org/>`_ library is one of the "
 "possible backends for the :ref:`raster.pdf` driver."
 msgstr ""
+"`Poppler <https://poppler.freedesktop.org/>`_ ライブラリは, :ref:`raster.pdf` ドライバで利用可能なバックエンドの1つです."
 
 #: ../../source/development/building_from_source.rst:1680
 msgid ""
 "Note that GDAL requires Poppler private headers, that are only installed "
 "if configuring Poppler with -DENABLE_UNSTABLE_API_ABI_HEADERS."
 msgstr ""
+"GDAL は Poppler のプライベートヘッダーが必要ですが, Poppler を -DENABLE_UNSTABLE_API_ABI_HEADERS で設定している場合のみインストールされます."
 
 #: ../../source/development/building_from_source.rst:1685
 msgid "Path to an include directory with the ``poppler-config.h`` header file."
-msgstr ""
+msgstr "``poppler-config.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1693
 msgid "Control whether to use Poppler. Defaults to ON when Poppler is found."
-msgstr ""
+msgstr "Poppler を使用するかどうかを制御します. Poppler が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1697
 msgid "PostgreSQL"
@@ -2033,10 +2392,11 @@ msgid ""
 "required for the :ref:`vector.pg` and :ref:`raster.postgisraster` "
 "drivers."
 msgstr ""
+"`PostgreSQL クライアントライブラリ <https://www.postgresql.org/>`_ は, :ref:`vector.pg` および :ref:`raster.postgisraster` ドライバに必要です."
 
 #: ../../source/development/building_from_source.rst:1704
 msgid "Path to an include directory with the ``libpq-fe.h`` header file."
-msgstr ""
+msgstr "``libpq-fe.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1708
 msgid ""
@@ -2044,12 +2404,15 @@ msgid ""
 "variable ``PostgreSQL_LIBRARY_DEBUG`` can also be specified to a similar "
 "library for building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイル ``pq`` / ``libpq`` へのパス. デバッグリリース用の"
+"類似のライブラリに対しても, 類似の変数 ``PostgreSQL_LIBRARY_DEBUG`` を指定できます."
 
 #: ../../source/development/building_from_source.rst:1714
 msgid ""
 "Control whether to use PostgreSQL. Defaults to ON when PostgreSQL is "
 "found."
 msgstr ""
+"PostgreSQL を使用するかどうかを制御します. PostgreSQL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1718
 msgid "PROJ"
@@ -2060,10 +2423,11 @@ msgid ""
 "`PROJ <https://github.com/OSGeo/PROJ/>`_ >= 6.3 is a *required* "
 "dependency for GDAL."
 msgstr ""
+"`PROJ <https://github.com/OSGeo/PROJ/>`_ >= 6.3 は, GDAL の *必須* 依存関係です."
 
 #: ../../source/development/building_from_source.rst:1724
 msgid "Path to an include directory with the ``proj.h`` header file."
-msgstr ""
+msgstr "``proj.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1728
 msgid ""
@@ -2071,6 +2435,8 @@ msgid ""
 "``proj.lib``, or other name. A similar variable ``PROJ_LIBRARY_DEBUG`` "
 "can also be specified to a similar library for building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス, たとえば ``libproj.so``, ``proj.lib`` などの名前. デバッグリリース用の"
+"類似のライブラリに対しても, 類似の変数 ``PROJ_LIBRARY_DEBUG`` を指定できます."
 
 #: ../../source/development/building_from_source.rst:1737
 msgid ""
@@ -2081,6 +2447,10 @@ msgid ""
 "fallbacks to default MODULE mode otherwise. Other values are passed "
 "directly to find_package()"
 msgstr ""
+"find_package(PROJ) で使用されるモードを制御します. デフォルトの CMake 検索ロジック "
+"(https://cmake.org/cmake/help/latest/command/find_package.html) が適用される方法を変更します."
+" PROJ >= 8 の場合は CONFIG モードが適用され, それ以外の場合はデフォルトの MODULE モードにフォールバックします."
+" 他の値は find_package() に直接渡されます."
 
 #: ../../source/development/building_from_source.rst:1745
 msgid "QHULL"
@@ -2092,26 +2462,30 @@ msgid ""
 "linear interpolation of gdal_grid. If not found, an internal copy can be "
 "used."
 msgstr ""
+"`QHULL <https://github.com/qhull/qhull>`_ ライブラリは, gdal_grid の線形補間に使用されます."
+" 見つからない場合, QHULL の内部コピーを使用できます."
 
 #: ../../source/development/building_from_source.rst:1752
 msgid ""
 "Name of the pkg-config package, typically ``qhull_r`` or "
 "``qhullstatic_r``. Defaults to ``qhull_r``"
 msgstr ""
+"通常は ``qhull_r`` または ``qhullstatic_r`` のような pkg-config パッケージの名前です. デフォルトは ``qhull_r`` です."
 
 #: ../../source/development/building_from_source.rst:1756
 msgid ""
 "Path to an include directory with the ``libqhull_r/libqhull_r.h`` header "
 "file."
 msgstr ""
+"``libqhull_r/libqhull_r.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1760
 msgid "Path to a shared or static library file to the reentrant library."
-msgstr ""
+msgstr "再入可能ライブラリへの共有または静的ライブラリファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:1764
 msgid "Control whether to use QHULL. Defaults to ON when QHULL is found."
-msgstr ""
+msgstr "QHULL を使用するかどうかを制御します. QHULL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1768
 msgid ""
@@ -2119,6 +2493,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_QHULL=ON"
 msgstr ""
+"内部 QHULL コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存します."
+" ON に設定されている場合, GDAL_USE_QHULL=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:1773
 msgid "RASTERLITE2"
@@ -2130,18 +2506,22 @@ msgid ""
 "(>= 1.1.0) library used by the :ref:`raster.rasterlite2` driver. It can "
 "be detected with pkg-config."
 msgstr ""
+"`RasterLite2 <https://www.gaia-gis.it/fossil/librasterlite2/index>`_ (>= 1.1.0) ライブラリは, :ref:`raster.rasterlite2` ドライバで使用されます."
+" pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:1781
 msgid ""
 "Path to an include directory with the ``rasterlite2/rasterlite2.h`` "
 "header file."
 msgstr ""
+"``rasterlite2/rasterlite2.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1789
 msgid ""
 "Control whether to use RasterLite2. Defaults to ON when RasterLite2 is "
 "found."
 msgstr ""
+"RasterLite2 を使用するかどうかを制御します. RasterLite2 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1793
 msgid "rdb"
@@ -2153,10 +2533,12 @@ msgid ""
 "(closed source/proprietary) library is required for the :ref:`raster.rdb`"
 " driver. Specify install prefix in the ``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
+"`RDB <https://repository.riegl.com/software/libraries/rdblib>` (クローズドソース/プロプライエタリ) ライブラリは, :ref:`raster.rdb` ドライバに必要です."
+" ``CMAKE_PREFIX_PATH`` 変数にインストールプレフィックスを指定します."
 
 #: ../../source/development/building_from_source.rst:1801
 msgid "Control whether to use rdb. Defaults to ON when rdb is found."
-msgstr ""
+msgstr "rdb を使用するかどうかを制御します. rdb が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1805
 msgid "SPATIALITE"
@@ -2168,16 +2550,19 @@ msgid ""
 "library used by the :ref:`vector.sqlite` and :ref:`vector.gpkg` drivers, "
 "and the :ref:`sql_sqlite_dialect`. It can be detected with pkg-config."
 msgstr ""
+"`Spatialite <https://www.gaia-gis.it/fossil/libspatialite/index>`_ ライブラリは, :ref:`vector.sqlite` および :ref:`vector.gpkg` ドライバ, および :ref:`sql_sqlite_dialect` で使用されます."
+" pkg-config で検出できます."
 
 #: ../../source/development/building_from_source.rst:1813
 msgid "Path to an include directory with the ``spatialite.h`` header file."
-msgstr ""
+msgstr "``spatialite.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1821
 msgid ""
 "Control whether to use Spatialite. Defaults to ON when Spatialite is "
 "found."
 msgstr ""
+"Spatialite を使用するかどうかを制御します. Spatialite が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1825
 msgid "SQLite3"
@@ -2189,20 +2574,23 @@ msgid ""
 "the :ref:`vector.sqlite` and :ref:`vector.gpkg` drivers (and also used by"
 " other drivers), and the :ref:`sql_sqlite_dialect`."
 msgstr ""
+"`SQLite3 <https://sqlite.org/index.html>`_ ライブラリは, :ref:`vector.sqlite` および :ref:`vector.gpkg` "
+"ドライバ (および他のドライバで使用される) および :ref:`sql_sqlite_dialect` に必要です."
 
 #: ../../source/development/building_from_source.rst:1833
 msgid "Path to an include directory with the ``sqlite3.h`` header file."
-msgstr ""
+msgstr "``sqlite3.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1837
 msgid ""
 "Path to a shared or static library file, such as ``libsqlite3.so``, "
 "``sqlite3.lib`` or other name."
 msgstr ""
+"共有または静的ライブラリファイルへのパス, たとえば ``libsqlite3.so``, ``sqlite3.lib`` などの名前."
 
 #: ../../source/development/building_from_source.rst:1842
 msgid "Control whether to use SQLite3. Defaults to ON when SQLite3 is found."
-msgstr ""
+msgstr "SQLite3 を使用するかどうかを制御します. SQLite3 が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1846
 msgid "SFCGAL"
@@ -2214,6 +2602,8 @@ msgid ""
 "which supports ISO 19107:2013 and OGC Simple Features Access 1.2 for 3D "
 "operations (PolyhedralSurface, TINs, ...)"
 msgstr ""
+"`SFCGAL <https://github.com/Osla ndia/SFCGAL>`_ は, 3D 操作 (PolyhedralSurface, TINs, ...) "
+"に対して ISO 19107:2013 および OGC Simple Features Access 1.2 をサポートするジオメトリライブラリです."
 
 #: ../../source/development/building_from_source.rst:1858
 msgid ""
@@ -2221,10 +2611,11 @@ msgid ""
 "``SFCGAL_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, 類似の変数 ``SFCGAL_LIBRARY_DEBUG`` を指定できます."
 
 #: ../../source/development/building_from_source.rst:1864
 msgid "Control whether to use SFCGAL. Defaults to ON when SFCGAL is found."
-msgstr ""
+msgstr "SFCGAL を使用するかどうかを制御します. SFCGAL が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1868
 msgid "SWIG"
@@ -2236,10 +2627,12 @@ msgid ""
 "programs written in C and C++ with a variety of high-level programming "
 "languages. It is used for the Python, Java and CSharp bindings."
 msgstr ""
+"`SWIG <http://swig.org/>`_ は, C および C++ で書かれたプログラムをさまざまな高水準プログラミング言語と接続するソフトウェア開発ツールです."
+" Python, Java, CSharp バインディングに使用されます."
 
 #: ../../source/development/building_from_source.rst:1876
 msgid "Path to the SWIG executable."
-msgstr ""
+msgstr "SWIG 実行可能ファイルへのパス."
 
 #: ../../source/development/building_from_source.rst:1878
 msgid ""
@@ -2249,6 +2642,8 @@ msgid ""
 "generated, but FindSWIG will prefer a \"swig-4.0\" binary if found "
 "elsewhere in the PATH."
 msgstr ""
+"明示的に設定する必要がある場合があり, インストールされたバイナリのディレクトリを PATH に追加しても十分でない場合があります."
+" ソースからビルドする場合, \"swig\" バイナリが生成されますが, FindSWIG は PATH の他の場所で \"swig-4.0\" バイナリを優先します."
 
 #: ../../source/development/building_from_source.rst:1886
 msgid "TEIGHA"
@@ -2263,12 +2658,16 @@ msgid ""
 "LD_LIBRARY_PATH so that the linking of applications succeeds. The "
 "TEIGHA_ROOT variable must be set."
 msgstr ""
+"TEIGHA / Open Design Alliance ライブラリ (クローズドソース/プロプライエタリ) は, :ref:`vector.dwg` および :ref:`vector.dgnv8` ドライバに必要です."
+" Linux では, 共有ライブラリで構成された SDK の場合, アプリケーションのリンクが成功するように, SDK の bin/{platform_name} サブディレクトリを LD_LIBRARY_PATH に設定する必要があります."
+" TEIGHA_ROOT 変数を設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:1897
 msgid ""
 "Path to the base directory where the Kernel and Drawings package must be "
 "extracted."
 msgstr ""
+"カーネルおよび図面パッケージを展開する必要があるベースディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1902
 msgid ""
@@ -2277,10 +2676,12 @@ msgid ""
 " Otherwise this variable must be set for recent SDK versions (at least "
 "with 2021 and later)."
 msgstr ""
+"``OdActivationInfo`` ファイルがあるディレクトリへのパス. ファイルが TEIGHA_ROOT のどこかにある場合, 自動的に検出されます."
+" それ以外の場合, この変数は最新の SDK バージョン (少なくとも 2021 以降) で設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:1909
 msgid "Control whether to use TEIGHA. Defaults to ON when TEIGHA is found."
-msgstr ""
+msgstr "TEIGHA を使用するかどうかを制御します. TEIGHA が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1913
 msgid "TIFF"
@@ -2292,10 +2693,12 @@ msgid ""
 ":ref:`raster.gtiff` drivers, and a few other drivers. If not found, an "
 "internal copy of libtiff can be used."
 msgstr ""
+"`libtiff <https://gitlab.com/libtiff/libtiff/>`_ は, :ref:`raster.gtiff` ドライバおよび他のいくつかのドライバに必要です."
+" 見つからない場合, libtiff の内部コピーを使用できます."
 
 #: ../../source/development/building_from_source.rst:1921
 msgid "Path to an include directory with the ``tiff.h`` header file."
-msgstr ""
+msgstr "``tiff.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1925
 msgid ""
@@ -2303,12 +2706,15 @@ msgid ""
 "``tiff.lib``, or other name. A similar variable ``TIFF_LIBRARY_DEBUG`` "
 "can also be specified to a similar library for building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス, たとえば ``libtiff.so``, ``tiff.lib`` などの名前."
+" デバッグリリース用の類似のライブラリに対しても, 類似の変数 ``TIFF_LIBRARY_DEBUG`` を指定できます."
 
 #: ../../source/development/building_from_source.rst:1932
 msgid ""
 "Control whether to use external libtiff. Defaults to ON when external "
 "libtiff is found."
 msgstr ""
+"外部 libtiff を使用するかどうかを制御します. 外部 libtiff が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1936
 msgid ""
@@ -2316,6 +2722,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_TIFF=ON"
 msgstr ""
+"内部 libtiff コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存します."
+" ON に設定されている場合, GDAL_USE_TIFF=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:1941
 msgid "TileDB"
@@ -2327,14 +2735,16 @@ msgid ""
 "for the :ref:`raster.tiledb` driver. Specify install prefix in the "
 "``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
+"`TileDB <https://github.com/TileDB-Inc/TileDB>` ライブラリは, :ref:`raster.tiledb` ドライバに必要です."
+" ``CMAKE_PREFIX_PATH`` 変数にインストールプレフィックスを指定します."
 
 #: ../../source/development/building_from_source.rst:1946
 msgid "TileDB >= 2.15 is required since GDAL 3.9"
-msgstr ""
+msgstr "GDAL 3.9 以降では, TileDB >= 2.15 が必要です."
 
 #: ../../source/development/building_from_source.rst:1950
 msgid "Control whether to use TileDB. Defaults to ON when TileDB is found."
-msgstr ""
+msgstr "TileDB を使用するかどうかを制御します. TileDB が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1954
 msgid "WebP"
@@ -2346,14 +2756,16 @@ msgid ""
 "library. It is required for the :ref:`raster.webp` driver, and may be "
 "used by the :ref:`raster.gpkg` and the internal libtiff library."
 msgstr ""
+"`WebP <https://github.com/webmproject/libwebp>`_ は, 画像圧縮ライブラリです."
+" :ref:`raster.webp` ドライバに必要であり, :ref:`raster.gpkg` および内部 libtiff ライブラリで使用される場合があります."
 
 #: ../../source/development/building_from_source.rst:1962
 msgid "Path to an include directory with the ``webp/encode.h`` header file."
-msgstr ""
+msgstr "``webp/encode.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:1970
 msgid "Control whether to use WebP. Defaults to ON when WebP is found."
-msgstr ""
+msgstr "WebP を使用するかどうかを制御します. WebP が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1974
 msgid "XercesC"
@@ -2366,10 +2778,13 @@ msgid ""
 "the :ref:`vector.nas`, :ref:`vector.ili` and :ref:`vector.gmlas` drivers."
 " It can also be used as an alternative to Expat for the GML driver."
 msgstr ""
+"`Xerces-C <https://github.com/apache/xerces-c>`_ は, XML パーサーライブラリであり,"
+" :ref:`vector.nas`, :ref:`vector.ili` および :ref:`vector.gmlas` ドライバで XML パーサー機能を有効にするために必要です."
+" GML ドライバの代替として Expat に使用することもできます."
 
 #: ../../source/development/building_from_source.rst:1991
 msgid "Control whether to use XercesC. Defaults to ON when XercesC is found."
-msgstr ""
+msgstr "XercesC を使用するかどうかを制御します. XercesC が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:1995
 msgid "ZLIB"
@@ -2380,10 +2795,11 @@ msgid ""
 "`ZLib <https://github.com/madler/zlib>`_ is a compression library which "
 "offers the lossless Deflate/Zip compression algorithm."
 msgstr ""
+"`ZLib <https://github.com/madler/zlib>`_ は, 損失のない Deflate/Zip 圧縮アルゴリズムを提供する圧縮ライブラリです."
 
 #: ../../source/development/building_from_source.rst:2002
 msgid "Path to an include directory with the ``zlib.h`` header file."
-msgstr ""
+msgstr "``zlib.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:2006
 msgid ""
@@ -2391,16 +2807,18 @@ msgid ""
 "``ZLIB_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
+"共有または静的ライブラリファイルへのパス. デバッグリリース用の類似のライブラリに対しても, 類似の変数 ``ZLIB_LIBRARY_DEBUG`` を指定できます."
 
 #: ../../source/development/building_from_source.rst:2012
 msgid ""
 "Link to static external ZLIB directory. Only used if "
 "GDAL_USE_ZLIB_INTERNAL=OFF and MSVC."
 msgstr ""
+"静的外部 ZLIB ディレクトリへのリンク. GDAL_USE_ZLIB_INTERNAL=OFF および MSVC の場合のみ使用されます."
 
 #: ../../source/development/building_from_source.rst:2017
 msgid "Control whether to use ZLIB. Defaults to ON when ZLIB is found."
-msgstr ""
+msgstr "ZLIB を使用するかどうかを制御します. ZLIB が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:2021
 msgid ""
@@ -2408,6 +2826,8 @@ msgid ""
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_ZLIB=ON"
 msgstr ""
+"内部 zlib コピーを使用するかどうかを制御します. デフォルトは GDAL_USE_INTERNAL_LIBS に依存します."
+" ON に設定されている場合, GDAL_USE_ZLIB=ON より優先されます."
 
 #: ../../source/development/building_from_source.rst:2026
 msgid "ZSTD"
@@ -2420,28 +2840,31 @@ msgid ""
 " but incompatible with it). It is used by the internal libtiff library or"
 " the :ref:`raster.zarr` driver."
 msgstr ""
+"`ZSTD <https://github.com/facebook/zstd>`_ は, 損失のない ZStd 圧縮アルゴリズムを提供する圧縮ライブラリです (Deflate/ZIP よりも高速ですが, 互換性はありません)."
+" 内部 libtiff ライブラリまたは :ref:`raster.zarr` ドライバで使用されます."
 
 #: ../../source/development/building_from_source.rst:2034
 msgid "Path to an include directory with the ``zstd.h`` header file."
-msgstr ""
+msgstr "``zstd.h`` ヘッダーファイルを含む include ディレクトリへのパス."
 
 #: ../../source/development/building_from_source.rst:2042
 msgid "Control whether to use ZSTD. Defaults to ON when ZSTD is found."
-msgstr ""
+msgstr "ZSTD を使用するかどうかを制御します. ZSTD が見つかった場合, デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:2048
 msgid "Selection of drivers"
-msgstr ""
+msgstr "ドライバーの選択"
 
 #: ../../source/development/building_from_source.rst:2050
 msgid ""
 "By default, all drivers that have their build requirements satisfied will"
 " be built-in in the GDAL core library."
 msgstr ""
+"デフォルトでは, ビルド要件を満たしているすべてのドライバが GDAL コアライブラリに組み込まれます."
 
 #: ../../source/development/building_from_source.rst:2053
 msgid "The following options are available to select a subset of drivers:"
-msgstr ""
+msgstr "ドライバのサブセットを選択するために利用可能なオプションは次のとおりです:"
 
 #: ../../source/development/building_from_source.rst:2059
 #: ../../source/development/building_from_source.rst:2198
@@ -2449,16 +2872,18 @@ msgid ""
 "Independently of options that control global behavior, drivers can be "
 "individually enabled or disabled with those options."
 msgstr ""
+"グローバルな動作を制御するオプションとは独立して, これらのオプションで個々のドライバを有効または無効にできます."
 
 #: ../../source/development/building_from_source.rst:2064
 msgid ""
 "<driver_name> above and below is *generally*, but not systematically the "
 "short driver name."
 msgstr ""
+"上記および以下の <driver_name> は, 一般的には短いドライバ名ですが, 一貫しているわけではありません."
 
 #: ../../source/development/building_from_source.rst:2066
 msgid "Some drivers may also be grouped together for build purposes."
-msgstr ""
+msgstr "ビルド目的でいくつかのドライバをグループ化することもあります."
 
 #: ../../source/development/building_from_source.rst:2068
 msgid ""
@@ -2467,124 +2892,142 @@ msgid ""
 "MFF, LAN, LCP, LOSLAS, NDF, NTv2, PAUX, PNM, ROIPAC, RRASTER, SNODAS) are"
 " controlled by the GDAL_ENABLE_DRIVER_RAW option."
 msgstr ""
+"いくつかの \"raw\" ラスタードライバ (ACE2, BT, BYN, CPG, CTable2, "
+"DIPEx, DOQ1, DOQ2, EHDR, EIR, ENVI, FAST, GenBIN, GSC, GTX, MFF2, "
+"ISCE, KRO, MFF, LAN, LCP, LOSLAS, NDF, NTv2, PAUX, PNM, ROIPAC, RRASTER, SNODAS) は, GDAL_ENABLE_DRIVER_RAW オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2073
 msgid ""
 "Planetary raster formats (PDS, PDS4, ISIS2, ISIS3, VICAR) are controlled "
 "by the GDAL_ENABLE_DRIVER_PDS option."
 msgstr ""
+"惑星ラスターフォーマット (PDS, PDS4, ISIS2, ISIS3, VICAR) は, GDAL_ENABLE_DRIVER_PDS オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2076
 msgid ""
 "The AAIGRID, GRASSASCIIGRID and ISG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_AAIGRID option."
 msgstr ""
+"AAIGRID, GRASSASCIIGRID, ISG ラスタードライバは, GDAL_ENABLE_DRIVER_AAIGRID オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2078
 msgid ""
 "The ECW and JP2ECW raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_ECW option."
 msgstr ""
+"ECW, JP2ECW ラスタードライバは, GDAL_ENABLE_DRIVER_ECW オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2080
 msgid ""
 "The vector EEDA and raster EEDAI drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_EEDA option."
 msgstr ""
+"ベクター EEDA, ラスタ EEDAI ドライバは, GDAL_ENABLE_DRIVER_EEDA オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2082
 msgid ""
 "The GSAG, GSBG and GS7BG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_GSG option."
 msgstr ""
+"GSAG, GSBG, GS7BG ラスタードライバは, GDAL_ENABLE_DRIVER_GSG オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2084
 msgid ""
 "The HDF5 and BAG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_HDF5 option."
 msgstr ""
+"HDF5, BAG ラスタードライバは, GDAL_ENABLE_DRIVER_HDF5 オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2086
 msgid ""
 "The MrSID and JP2MrSID raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_MRSID option."
 msgstr ""
+"MrSID, JP2MrSID ラスタードライバは, GDAL_ENABLE_DRIVER_MRSID オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2088
 msgid ""
 "The NITF, RPFTOC and ECRGTOC raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_NITF option."
 msgstr ""
+"NITF, RPFTOC, ECRGTOC ラスタードライバは, GDAL_ENABLE_DRIVER_NITF オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2090
 msgid ""
 "The NWT_GRD and NWT_GRC raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_NORTHWOOD option."
 msgstr ""
+"NWT_GRD, NWT_GRC ラスタードライバは, GDAL_ENABLE_DRIVER_NORTHWOOD オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2092
 msgid ""
 "The SRP and ADRG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_ADRG option."
 msgstr ""
+"SRP, ADRG ラスタードライバは, GDAL_ENABLE_DRIVER_ADRG オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2094
 msgid ""
 "The Interlis 1 and Interlis 2 vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_ILI option."
 msgstr ""
+"Interlis 1, Interlis 2 ベクタードライバは, GDAL_ENABLE_DRIVER_ILI オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2096
 msgid ""
 "The WFS and OAPIF vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_WFS option."
 msgstr ""
+"WFS, OAPIF ベクタードライバは, GDAL_ENABLE_DRIVER_WFS オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2098
 msgid ""
 "The AVCBIN and AVCE00 vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_AVC option."
 msgstr ""
+"AVCBIN, AVCE00 ベクタードライバは, GDAL_ENABLE_DRIVER_AVC オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2100
 msgid ""
 "The DWG and DGNv8 vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_DWG option."
 msgstr ""
+"DWG, DGNv8 ベクタードライバは, GDAL_ENABLE_DRIVER_DWG オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2102
 msgid "There might be variations in naming, e.g. :"
-msgstr ""
+msgstr "名前には変化があるかもしれません, 例:"
 
 #: ../../source/development/building_from_source.rst:2104
 msgid "the \"AIG\" raster driver is controlled by GDAL_ENABLE_DRIVER_AIGRID."
-msgstr ""
+msgstr "\"AIG\" ラスタードライバは, GDAL_ENABLE_DRIVER_AIGRID オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2106
 msgid "the \"ESAT\" raster driver is controlled by GDAL_ENABLE_DRIVER_ENVISAT."
-msgstr ""
+msgstr "\"ESAT\" ラスタードライバは, GDAL_ENABLE_DRIVER_ENVISAT オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2108
 msgid "the \"GeoRaster\" raster driver is controlled by GDAL_ENABLE_DRIVER_GEOR."
-msgstr ""
+msgstr "\"GeoRaster\" ラスタードライバは, GDAL_ENABLE_DRIVER_GEOR オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2110
 msgid "the \"RST\" raster driver is controlled by GDAL_ENABLE_DRIVER_IDRISI."
-msgstr ""
+msgstr "\"RST\" ラスタードライバは, GDAL_ENABLE_DRIVER_IDRISI オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2112
 msgid ""
 "the \"ElasticSearch\" vector driver is controlled by "
 "OGR_ENABLE_DRIVER_ELASTIC."
 msgstr ""
+"\"ElasticSearch\" ベクタードライバは, OGR_ENABLE_DRIVER_ELASTIC オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2114
 msgid "the \"PostgreSQL\" vector driver is controlled by OGR_ENABLE_DRIVER_PG."
-msgstr ""
+msgstr "\"PostgreSQL\" ベクタードライバは, OGR_ENABLE_DRIVER_PG オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2116
 msgid "the \"UK .NTF\" vector driver is controlled by OGR_ENABLE_DRIVER_NTF."
-msgstr ""
+msgstr "\"UK .NTF\" ベクタードライバは, OGR_ENABLE_DRIVER_NTF オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2120
 msgid ""
@@ -2593,36 +3036,39 @@ msgid ""
 "GDAL_ENABLE_DRIVER_<driver_name> option or a "
 "OGR_ENABLE_DRIVER_<driver_name> one, but not both:"
 msgstr ""
+"ラスターとベクターの両方を持つドライバ (および単一の GDALDriver インスタンスで内部的に実装されている)"
+" は, GDAL_ENABLE_DRIVER_<driver_name> オプションまたは OGR_ENABLE_DRIVER_<driver_name> オプションのいずれかで制御されますが, 両方ではありません:"
 
 #: ../../source/development/building_from_source.rst:2124
 msgid "The CAD drivers are controlled by the OGR_ENABLE_DRIVER_CAD option."
-msgstr ""
+msgstr "CAD ドライバは, OGR_ENABLE_DRIVER_CAD オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2125
 msgid "The netCDF drivers are controlled by the GDAL_ENABLE_DRIVER_NETCDF option."
-msgstr ""
+msgstr "netCDF ドライバは, GDAL_ENABLE_DRIVER_NETCDF オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2126
 msgid "The PDF drivers are controlled by the GDAL_ENABLE_DRIVER_PDF option."
-msgstr ""
+msgstr "PDF ドライバは, GDAL_ENABLE_DRIVER_PDF オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2127
 msgid "The GPKG drivers are controlled by the OGR_ENABLE_DRIVER_GPKG option."
-msgstr ""
+msgstr "GPKG ドライバは, OGR_ENABLE_DRIVER_GPKG オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2128
 msgid "The NGW drivers are controlled by the OGR_ENABLE_DRIVER_NGW option."
-msgstr ""
+msgstr "NGW ドライバは, OGR_ENABLE_DRIVER_NGW オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2129
 msgid "The SQLite drivers are controlled by the OGR_ENABLE_DRIVER_SQLITE option."
-msgstr ""
+msgstr "SQLite ドライバは, OGR_ENABLE_DRIVER_SQLITE オプションで制御されます."
 
 #: ../../source/development/building_from_source.rst:2133
 msgid ""
 "The GDAL_ENABLE_DRIVER_<driver_name> and OGR_ENABLE_DRIVER_<driver_name> "
 "options are only created when their required dependencies are found."
 msgstr ""
+"GDAL_ENABLE_DRIVER_<driver_name> および OGR_ENABLE_DRIVER_<driver_name> オプションは, 必要な依存関係が見つかった場合にのみ作成されます."
 
 #: ../../source/development/building_from_source.rst:2141
 msgid ""
@@ -2632,6 +3078,9 @@ msgid ""
 "``OGR_ENABLE_DRIVER_<driver_name>`` variables (when they are not yet "
 "set)."
 msgstr ""
+"すべてのオプションの GDAL/ラスター, およびすべてのオプションの OGR/ベクタードライバをグローバルに有効または無効にします."
+" より正確には, これらの変数を ON に設定すると, ``GDAL_ENABLE_DRIVER_<driver_name>`` または ``OGR_ENABLE_DRIVER_<driver_name>`` 変数"
+"のデフォルト値に影響します (まだ設定されていない場合)."
 
 #: ../../source/development/building_from_source.rst:2146
 msgid ""
@@ -2643,6 +3092,9 @@ msgid ""
 "drivers. It might be needed to pass ``-UGDAL_ENABLE_DRIVER_* "
 "-UOGR_ENABLE_DRIVER_*`` to reset their state."
 msgstr ""
+"これは, ``GDAL_ENABLE_DRIVER_<driver_name>:BOOL=ON`` または ``OGR_ENABLE_DRIVER_<driver_name>:BOOL=ON`` 変数を使用して, ドライバのサブセットの個別の有効化と組み合わせることができます."
+" 最初の CMake の実行後に GDAL_BUILD_OPTIONAL_DRIVERS/ OGR_BUILD_OPTIONAL_DRIVERS の値を変更しても, 個々のドライバの有効化は変更されません."
+" その状態をリセットするには, ``-UGDAL_ENABLE_DRIVER_* -UOGR_ENABLE_DRIVER_*`` を渡す必要があるかもしれません."
 
 #: ../../source/development/building_from_source.rst:2155
 msgid ""
@@ -2651,6 +3103,9 @@ msgid ""
 "Shapefile\", \"MapInfo File\", OGR_VRT, Memory, KML, GeoJSON, GeoJSONSeq,"
 " ESRIJSON, TopoJSON."
 msgstr ""
+"次の GDAL ドライバは無効にできません: VRT, DERIVED, GTiff, COG, HFA, MEM."
+" 次の OGR ドライバは無効にできません: \"ESRI Shapefile\", \"MapInfo File\", OGR_VRT, Memory, KML, GeoJSON, GeoJSONSeq,"
+" ESRIJSON, TopoJSON."
 
 #: ../../source/development/building_from_source.rst:2160
 msgid ""
@@ -2664,14 +3119,19 @@ msgid ""
 "and :source_file:`ogr/ogrsf_frmts/CMakeLists.txt` for dependencies of "
 "vector drivers."
 msgstr ""
+"-DOGR_BUILD_OPTIONAL_DRIVERS=OFF ですべての OGR/ベクタードライバを無効にすると, 一部の GDAL/ラスタードライバを有効にするためには, "
+"一部のベクタードライバを有効にする必要がある (およびその逆も同様です)."
+" そのような依存関係が満たされていない場合, CMake エラーが発生し, 問題の解決方法についてのヒントが表示されます."
+" また, ラスタードライバの依存関係についてはファイル :source_file:`frmts/CMakeLists.txt` ,"
+" ベクタードライバの依存関係については :source_file:`ogr/ogrsf_frmts/CMakeLists.txt` を参照することで, そのようなエラーを事前に予測することも可能です."
 
 #: ../../source/development/building_from_source.rst:2171
 msgid "Example of minimal build with the JP2OpenJPEG and SVG drivers enabled::"
-msgstr ""
+msgstr "JP2OpenJPEG および SVG ドライバを有効にして最小限のビルドの例:"
 
 #: ../../source/development/building_from_source.rst:2179
 msgid "Build drivers as plugins"
-msgstr ""
+msgstr "ドライバをプラグインとしてビルドする"
 
 #: ../../source/development/building_from_source.rst:2181
 msgid ""
@@ -2682,16 +3142,20 @@ msgid ""
 "license different (proprietary, copyleft, ...) from the core GDAL "
 "library."
 msgstr ""
+"重要なサブセット, すべてではありませんが, ドライバをプラグインとしてビルドすることもできます."
+" つまり, 独立した .dll/.so 共有ライブラリとしてビルドし, GDAL インストールの ``gdalplugins`` サブディレクトリにインストールします."
+" これは, コア GDAL ライブラリと異なるライセンス (プロプライエタリ, コピーレフト, ...) を持つライブラリに依存するドライバに特に有用です."
 
 #: ../../source/development/building_from_source.rst:2187
 msgid "The list of drivers that can be built as plugins can be obtained with::"
-msgstr ""
+msgstr "プラグインとしてビルドできるドライバのリストは次のコマンドで取得できます:"
 
 #: ../../source/development/building_from_source.rst:2191
 msgid ""
 "The following options are available to select the plugin/builtin status "
 "of a driver:"
 msgstr ""
+"ドライバのプラグイン/ビルトインステータスを選択するために利用可能なオプションは次のとおりです:"
 
 #: ../../source/development/building_from_source.rst:2201
 msgid ""
@@ -2699,6 +3163,8 @@ msgid ""
 "``GDAL_ENABLE_DRIVER_{driver_name}:BOOL=ON`` or "
 "``OGR_ENABLE_DRIVER_{driver_name}:BOOL=ON`` option must be set."
 msgstr ""
+"ドライバをビルドするためには, 対応する基本の ``GDAL_ENABLE_DRIVER_{driver_name}:BOOL=ON`` "
+"または ``OGR_ENABLE_DRIVER_{driver_name}:BOOL=ON`` オプションを設定する必要があります."
 
 #: ../../source/development/building_from_source.rst:2207
 msgid ""
@@ -2708,6 +3174,9 @@ msgid ""
 "``OGR_ENABLE_DRIVER_<driver_name>_PLUGIN`` variables (when they are not "
 "yet set)."
 msgstr ""
+"すべての (プラグイン対応の) GDAL および OGR ドライバをプラグインとしてビルドするかどうかをグローバルに有効または無効にします."
+" より正確には, この変数を ON に設定すると, ``GDAL_ENABLE_DRIVER_<driver_name>_PLUGIN`` または"
+" ``OGR_ENABLE_DRIVER_<driver_name>_PLUGIN`` 変数のデフォルト値に影響します (まだ設定されていない場合)."
 
 #: ../../source/development/building_from_source.rst:2212
 msgid ""
@@ -2719,12 +3188,17 @@ msgid ""
 " might be needed to pass ``-UGDAL_ENABLE_DRIVER_* -UOGR_ENABLE_DRIVER_*``"
 " to reset their state."
 msgstr ""
+"プラグインステータスの個別の有効化/無効化と組み合わせるために, ``GDAL_ENABLE_DRIVER_{driver_name}_PLUGIN:BOOL`` "
+"または ``OGR_ENABLE_DRIVER_{driver_name}_PLUGIN:BOOL`` 変数を使用することができます."
+" 最初の CMake の実行後に GDAL_ENABLE_PLUGINS の値を変更しても, 個々のドライバのプラグインステータスの有効化は変更されません."
+" その状態をリセットするには, ``-UGDAL_ENABLE_DRIVER_* -UOGR_ENABLE_DRIVER_*`` を渡す必要があるかもしれません."
 
 #: ../../source/development/building_from_source.rst:2218
 msgid ""
 "Example of build with all potential drivers as plugins, except the "
 "JP2OpenJPEG one::"
 msgstr ""
+"JP2OpenJPEG ドライバを除くすべての潜在的なドライバをプラグインとしてビルドする例:"
 
 #: ../../source/development/building_from_source.rst:2224
 msgid ""
@@ -2733,6 +3207,8 @@ msgid ""
 "dependencies, that are not part of GDAL core dependencies (e.g. are "
 "netCDF, HDF4, Oracle, PDF, etc.)."
 msgstr ""
+"``GDAL_ENABLE_PLUGINS:BOOL=ON`` に関する微妙な点があります. これは, 外部依存関係を持ち, "
+"GDAL コア依存関係の一部ではない (netCDF, HDF4, Oracle, PDF など) プラグイン対応のドライバのプラグインステータスのみを制御します."
 
 #: ../../source/development/building_from_source.rst:2230
 msgid ""
@@ -2742,20 +3218,24 @@ msgid ""
 "dependencies (e.g GPX). Building such drivers as plugins is generally not"
 " necessary, hence the use of a different option from GDAL_ENABLE_PLUGINS."
 msgstr ""
+"外部依存関係を持たない (BMP, FlatGeobuf など) ドライバ, または GDAL コア依存関係の一部である (GPX など) ドライバのプラグインとしてのビルドを"
+"グローバルに有効または無効にします. このようなドライバをプラグインとしてビルドすることは"
+"一般的に必要ありませんので, GDAL_ENABLE_PLUGINS とは異なるオプションを使用しています."
 
 #: ../../source/development/building_from_source.rst:2236
 msgid ""
 "In some circumstances, it might be desirable to prevent loading of GDAL "
 "plugins. This can be done with:"
 msgstr ""
+"一部の状況では, GDAL プラグインの読み込みを防ぐことが望ましい場合があります. これは次のように行うことができます:"
 
 #: ../../source/development/building_from_source.rst:2241
 msgid "Set to OFF to disable loading of GDAL plugins. Default is ON."
-msgstr ""
+msgstr "GDAL プラグインの読み込みを無効にするには OFF に設定します. デフォルトは ON です."
 
 #: ../../source/development/building_from_source.rst:2245
 msgid "Deferred loaded plugins"
-msgstr ""
+msgstr "遅延読み込みプラグイン"
 
 #: ../../source/development/building_from_source.rst:2247
 msgid ""
@@ -2766,6 +3246,9 @@ msgid ""
 "dynamically loaded library. For builds where libgdal and its plugins are "
 "built in a single operation, this is fully transparent to the user."
 msgstr ""
+"GDAL 3.9 以降, プラグインとしてビルドできるいくつかの in-tree ドライバは, 遅延読み込みの方法で読み込まれます."
+" これにより, 外部ライブラリに依存しない一部のコードがコア libgdal に含まれ, ドライバのほとんどのコードが別の動的に読み込まれるライブラリに含まれます."
+" libgdal とそのプラグインが単一の操作でビルドされるビルドでは, これはユーザにとって完全に透過的です."
 
 #: ../../source/development/building_from_source.rst:2254
 msgid ""
@@ -2774,20 +3257,24 @@ msgid ""
 "available, but could be installed. It is possible to give more hints on "
 "how to install a plugin by setting the following option:"
 msgstr ""
+"プラグインドライバがコア libgdal で知られているが, 実行時にプラグインとして利用できない場合, "
+"GDAL はプラグインが利用できないことをユーザに通知しますが, インストールすることができます."
+" プラグインのインストール方法についてのヒントをより詳しく指定することができます."
 
 #: ../../source/development/building_from_source.rst:2263
 msgid "Custom message to give a hint to the user how to install a missing plugin"
-msgstr ""
+msgstr "欠落しているプラグインをインストールする方法をユーザに示すためのカスタムメッセージ"
 
 #: ../../source/development/building_from_source.rst:2266
 msgid "For example, if doing a build with::"
-msgstr ""
+msgstr "例えば, 次のようにビルドする場合:"
 
 #: ../../source/development/building_from_source.rst:2270
 msgid ""
 "and opening a Parquet file while the plugin is not installed will display"
 " the following error::"
 msgstr ""
+"プラグインがインストールされていない状態で Parquet ファイルを開くと, 次のエラーが表示されます:"
 
 #: ../../source/development/building_from_source.rst:2277
 msgid ""
@@ -2796,6 +3283,8 @@ msgid ""
 " work, given that the core libgdal built initially would lack code needed"
 " to declare the plugin(s)."
 msgstr ""
+"libgdal が最初にビルドされ, その後プラグインドライバが後のインクリメンタルビルドでビルドされるより具体的なビルドの場合, "
+"このアプローチは機能しません. 最初にビルドされたコア libgdal には, プラグインを宣言するために必要なコードが欠落しているためです."
 
 #: ../../source/development/building_from_source.rst:2282
 msgid ""
@@ -2804,21 +3293,24 @@ msgid ""
 "later built. Note that it is safe to distribute such a libgdal library, "
 "even if the plugins are not always available at runtime."
 msgstr ""
+"そのような状況では, GDAL をビルドするユーザは, 最初の libgdal ビルド時に, 後で 1 つまたは複数のプラグインがビルドされることを明示的に宣言する必要があります."
+" プラグインが常に利用可能でない場合でも, そのような libgdal ライブラリを配布することは安全です."
 
 #: ../../source/development/building_from_source.rst:2287
 #: ../../source/development/building_from_source.rst:2329
 msgid "This can be done with the following option:"
-msgstr ""
+msgstr "次のオプションで行うことができます:"
 
 #: ../../source/development/building_from_source.rst:2293
 msgid "Declares that a driver will be later built as a plugin."
-msgstr ""
+msgstr "ドライバが後でプラグインとしてビルドされることを宣言します."
 
 #: ../../source/development/building_from_source.rst:2295
 msgid ""
 "Setting this option to drivers not ready for it will lead to an explicit "
 "CMake error."
 msgstr ""
+"このオプションを準備ができていないドライバに設定すると, 明示的な CMake エラーが発生します."
 
 #: ../../source/development/building_from_source.rst:2299
 msgid ""
@@ -2831,10 +3323,14 @@ msgid ""
 "GDAL_USE_<driver_name>=OFF. It must of course be re-enabled later when "
 "the plugin is built."
 msgstr ""
+"一部のドライバ (ECW, HEIF, JP2KAK, JPEG, JPEGXL, KEA, LERC, MrSID, MSSQLSpatial, netCDF, OpenJPEG, PDF, TileDB, WEBP) では, "
+"libgdal に埋め込まれたメタデータおよび/またはデータセット識別コードは, 依存ライブラリのオプション機能 (netCDF の場合は libnetcdf など) に依存します."
+" そのような状況では, 依存ライブラリが CMake 構成時に利用可能であることが望ましいですが, GDAL_USE_<driver_name>=OFF で無効にしておく必要があります."
+" もちろん, プラグインがビルドされるときに再度有効にする必要があります."
 
 #: ../../source/development/building_from_source.rst:2308
 msgid "For example for netCDF::"
-msgstr ""
+msgstr "netCDF の例:"
 
 #: ../../source/development/building_from_source.rst:2317
 msgid ""
@@ -2843,10 +3339,12 @@ msgid ""
 "libgdal build time without requiring the dependent libraries needed to "
 "build the plugin later to be available."
 msgstr ""
+"他のドライバの場合, GDAL_REGISTER_DRIVER_<driver_name>_FOR_LATER_PLUGIN / OGR_REGISTER_DRIVER_<driver_name>_FOR_LATER_PLUGIN を"
+" libgdal ビルド時に宣言することができます. 後でプラグインをビルドするために必要な依存ライブラリが利用可能である必要はありません."
 
 #: ../../source/development/building_from_source.rst:2323
 msgid "Out-of-tree deferred loaded plugins"
-msgstr ""
+msgstr "アウトオブツリー遅延読み込みプラグイン"
 
 #: ../../source/development/building_from_source.rst:2325
 msgid ""
@@ -2854,6 +3352,8 @@ msgid ""
 "capability, provided libgdal is built with CMake variable(s) pointing to "
 "external code containing the code for registering a proxy driver."
 msgstr ""
+"アウトオブツリードライバも, プロキシドライバを登録するコードを含む外部コードを指す CMake 変数を使用して libgdal がビルドされている場合, "
+"遅延読み込み機能を利用できます."
 
 #: ../../source/development/building_from_source.rst:2333
 msgid ""
@@ -2862,16 +3362,19 @@ msgid ""
 "care of creating a GDALPluginDriverProxy instance and calling "
 ":cpp:func:`GDALDriverManager::DeclareDeferredPluginDriver` on it."
 msgstr ""
+"指定されたファイルは, ``void DeclareDeferred<driver_name>(void)`` という C リンケージを持つメソッドを宣言する必要があります."
+" このメソッドは, GDALPluginDriverProxy インスタンスを作成し, その上で :cpp:func:`GDALDriverManager::DeclareDeferredPluginDriver` を呼び出します."
 
 #: ../../source/development/building_from_source.rst:2340
 msgid "Python bindings options"
-msgstr ""
+msgstr "Python バインディングオプション"
 
 #: ../../source/development/building_from_source.rst:2344
 msgid ""
 "Whether Python bindings should be built. It is ON by default, but only "
 "effective if a Python installation is found."
 msgstr ""
+"Python バインディングをビルドするかどうか. デフォルトでは ON ですが, Python インストールが見つかった場合のみ有効です."
 
 #: ../../source/development/building_from_source.rst:2347
 msgid ""
@@ -2879,6 +3382,8 @@ msgid ""
 " and the setuptools module. numpy and its header and development library "
 "are also strongly recommended."
 msgstr ""
+"通常の Python インストールには, Python ランタイム (>= 3.6) と setuptools モジュールが含まれるべきです."
+" numpy およびそのヘッダーおよび開発ライブラリの存在も強く推奨されます."
 
 #: ../../source/development/building_from_source.rst:2351
 msgid ""
@@ -2888,38 +3393,42 @@ msgid ""
 " detailed in https://cmake.org/cmake/help/git-"
 "stage/module/FindPython.html"
 msgstr ""
+"Python インストールは通常, パス内に見つかるか, Python インストーラの他の標準的なインストールメカニズムを通じて登録されます."
+" また, https://cmake.org/cmake/help/git-stage/module/FindPython.html で詳細に説明されているように, いくつかの変数を使用して指定することもできます."
 
 #: ../../source/development/building_from_source.rst:2356
 msgid "GDAL also provides the following option:"
-msgstr ""
+msgstr "GDAL は以下のオプションも提供しています:"
 
 #: ../../source/development/building_from_source.rst:2360
 msgid ""
 "When it is specified, Python_FIND_STRATEGY=VERSION is assumed. Note that "
 "the patch number must be provided, as the EXACT strategy is used"
 msgstr ""
+"指定された場合, Python_FIND_STRATEGY=VERSION が想定されます. パッチ番号を提供する必要があることに注意してください, EXACT 戦略が使用されます."
 
 #: ../../source/development/building_from_source.rst:2363
 msgid "Other useful options:"
-msgstr ""
+msgstr "その他の便利なオプション:"
 
 #: ../../source/development/building_from_source.rst:2367
 msgid "Specify 'ONLY' to use virtualenv activated."
-msgstr ""
+msgstr "アクティブ化ている仮想環境を利用するために'ONLY' を指定できます."
 
 #: ../../source/development/building_from_source.rst:2371
 msgid "Specify Python installation prefix."
-msgstr ""
+msgstr "Python インストールプレフィックスを指定します."
 
 #: ../../source/development/building_from_source.rst:2373
 msgid "Examples::"
-msgstr ""
+msgstr "例::"
 
 #: ../../source/development/building_from_source.rst:2380
 msgid ""
 "The following options are advanced ones and only taken into account "
 "during the ``install`` CMake target."
 msgstr ""
+"以下のオプションは高度なものであり, ``install`` CMake ターゲットの実行中のみ考慮されます."
 
 #: ../../source/development/building_from_source.rst:2385
 msgid ""
@@ -2927,6 +3436,8 @@ msgid ""
 "``CMAKE_INSTALL_PREFIX`` option. It is used to set the value of the "
 "``--prefix`` option of ``python3 setup.py install``."
 msgstr ""
+"このオプションはディレクトリ名を指定して, ``CMAKE_INSTALL_PREFIX`` オプションを上書きすることができます."
+" これは, ``python3 setup.py install`` の ``--prefix`` オプションの値を設定するために使用されます."
 
 #: ../../source/development/building_from_source.rst:2391
 msgid ""
@@ -2935,6 +3446,9 @@ msgid ""
 " set to ``deb`` when it is detected that the Python installation looks "
 "for the ``site-packages`` subdirectory. Otherwise it is unspecified."
 msgstr ""
+"このオプションは, ``python3 setup.py install`` の ``--install-layout`` オプションの値を設定するために指定できます."
+" Python インストールが ``site-packages`` サブディレクトリを探しているように見える場合, インストールレイアウトはデフォルトで ``deb`` に設定されます."
+" それ以外の場合は未指定です."
 
 #: ../../source/development/building_from_source.rst:2398
 msgid ""
@@ -2942,6 +3456,8 @@ msgid ""
 "option of ``python3 setup.py install``. It is only taken into account on "
 "MacOS systems, when the Python installation is a framework."
 msgstr ""
+"このオプションは, ``python3 setup.py install`` の ``--install-lib`` オプションの値を設定するために指定できます."
+" Python インストールがフレームワークである場合, これは MacOS システムでのみ考慮されます."
 
 #: ../../source/development/building_from_source.rst:2404
 msgid ""
@@ -2949,10 +3465,12 @@ msgid ""
 "etc.) which link each against libgdal. Consequently, a static build of "
 "libgdal is not compatible with the bindings."
 msgstr ""
+"Python バインディングは, libgdal にリンクされるいくつかのモジュール (osgeo.gdal, osgeo.ogr など) で構成されています."
+" そのため, libgdal の静的ビルドはバインディングと互換性がありません."
 
 #: ../../source/development/building_from_source.rst:2411
 msgid "Java bindings options"
-msgstr ""
+msgstr "Java バインディングオプション"
 
 #: ../../source/development/building_from_source.rst:2415
 msgid ""
@@ -2963,12 +3481,16 @@ msgid ""
 "https://cmake.org/cmake/help/latest/module/FindJNI.html. The ``ant`` "
 "binary must also be available in the PATH."
 msgstr ""
+"Java バインディングをビルドするかどうか. デフォルトでは ON ですが, Java ランタイムおよび開発パッケージが見つかった場合のみ有効です."
+" 設定できる関連するオプションについては, https://cmake.org/cmake/help/latest/module/FindJava.html および"
+" https://cmake.org/cmake/help/latest/module/FindJNI.html で説明されています. ``ant`` バイナリも PATH に利用可能である必要があります."
 
 #: ../../source/development/building_from_source.rst:2424
 msgid ""
 "Subdirectory into which to install the :file:`gdal.jar` file. It defaults"
 " to \"${CMAKE_INSTALL_DATADIR}/java\""
 msgstr ""
+":file:`gdal.jar` ファイルをインストールするサブディレクトリ. デフォルトは \"${CMAKE_INSTALL_DATADIR}/java\" です."
 
 #: ../../source/development/building_from_source.rst:2428
 msgid ""
@@ -2976,6 +3498,7 @@ msgid ""
 "directory. Starting with GDAL 3.8, this is controlled by the "
 "``GDAL_JAVA_JNI_INSTALL_DIR`` variable."
 msgstr ""
+"GDAL 3.8 以前, gdalalljni ライブラリもそのディレクトリにインストールされていました. GDAL 3.8 以降, これは ``GDAL_JAVA_JNI_INSTALL_DIR`` 変数で制御されます."
 
 #: ../../source/development/building_from_source.rst:2436
 msgid ""
@@ -2983,12 +3506,14 @@ msgid ""
 ":file:`libgdalalljni.dylib` / :file:`gdalalljni.dll` library. It defaults"
 " to \"${CMAKE_INSTALL_LIBDIR}/jni\"."
 msgstr ""
+":file:`libgdalalljni.so` / :file:`libgdalalljni.dylib` / :file:`gdalalljni.dll` ライブラリをインストールするサブディレクトリ. デフォルトは \"${CMAKE_INSTALL_LIBDIR}/jni\" です."
 
 #: ../../source/development/building_from_source.rst:2441
 msgid ""
 "Prior to GDAL 3.8, the gdalalljni library was installed in the directory "
 "controlled by the ``GDAL_JAVA_INSTALL_DIR`` variable."
 msgstr ""
+"GDAL 3.8 以前, gdalalljni ライブラリは ``GDAL_JAVA_INSTALL_DIR`` 変数で制御されるディレクトリにインストールされていました."
 
 #: ../../source/development/building_from_source.rst:2447
 msgid ""
@@ -2996,28 +3521,31 @@ msgid ""
 "org.osgeo.ogr, etc.) which link each against libgdal. Consequently, a "
 "static build of libgdal is not compatible with the bindings."
 msgstr ""
+"Java バインディングは, libgdal にリンクされるいくつかのモジュール (org.osgeo.gdal, org.osgeo.ogr など) で構成されています."
+" そのため, libgdal の静的ビルドはバインディングと互換性がありません."
 
 #: ../../source/development/building_from_source.rst:2451
 msgid "Option only to be used by maintainers:"
-msgstr ""
+msgstr "メンテナンス担当者のみが使用するオプション:"
 
 #: ../../source/development/building_from_source.rst:2455
 msgid "GPG key to sign build artifacts. Needed to generate bundle.jar."
-msgstr ""
+msgstr "ビルドアーティファクトに署名するための GPG キー. bundle.jar を生成するために必要です."
 
 #: ../../source/development/building_from_source.rst:2459
 msgid "GPG pass phrase to sign build artifacts."
-msgstr ""
+msgstr "ビルドアーティファクトに署名するための GPG パスフレーズ."
 
 #: ../../source/development/building_from_source.rst:2462
 msgid "C# bindings options"
-msgstr ""
+msgstr "C# バインディングオプション"
 
 #: ../../source/development/building_from_source.rst:2464
 msgid ""
 "For more details on how to build and use the C# bindings read the "
 "dedicated section :ref:`csharp_compile_cmake`."
 msgstr ""
+"C# バインディングのビルドおよび使用方法の詳細については, 専用のセクション :ref:`csharp_compile_cmake` を参照してください."
 
 #: ../../source/development/building_from_source.rst:2468
 msgid ""
@@ -3027,10 +3555,13 @@ msgid ""
 "described in ``cmake/modules/thirdparty/FindDotNetFrameworkSdk.cmake`` "
 "and ``cmake/modules/thirdparty/FindMono.cmake``."
 msgstr ""
+"C# バインディングをビルドするかどうか. デフォルトでは ON ですが, C# ランタイムおよび開発パッケージが見つかった場合のみ有効です."
+".NET SDK または Mono のいずれかを使用できます. 設定できる関連するオプションについては, ``cmake/modules/thirdparty/FindDotNetFrameworkSdk.cmake`` および"
+" ``cmake/modules/thirdparty/FindMono.cmake`` で説明されています."
 
 #: ../../source/development/building_from_source.rst:2476
 msgid "Forces the use of Mono as opposed to .NET to compile the C# bindings."
-msgstr ""
+msgstr "C# バインディングをコンパイルするために .NET ではなく Mono を使用するように強制します."
 
 #: ../../source/development/building_from_source.rst:2480
 msgid ""
@@ -3039,6 +3570,9 @@ msgid ""
 "<https://docs.microsoft.com/en-us/dotnet/standard/frameworks#supported-"
 "target-frameworks>`_"
 msgstr ""
+"C# バインディングライブラリをコンパイルする際に使用する .NET (または Mono) ターゲット SDK を設定します."
+" `List of acceptable contents for .NET <https://docs.microsoft.com/en-us/dotnet/standard/frameworks#supported-target-frameworks>`_ "
+
 
 #: ../../source/development/building_from_source.rst:2484
 msgid ""
@@ -3047,6 +3581,8 @@ msgid ""
 "<https://docs.microsoft.com/en-us/dotnet/standard/frameworks#supported-"
 "target-frameworks>`_"
 msgstr ""
+"C# サンプルアプリケーションをコンパイルする際に使用する .NET (または Mono) ターゲット SDK を設定します."
+" `List of acceptable contents for .NET <https://docs.microsoft.com/en-us/dotnet/standard/frameworks#supported-target-frameworks>`_ "
 
 #: ../../source/development/building_from_source.rst:2488
 msgid ""
@@ -3054,6 +3590,8 @@ msgid ""
 "building the bindings on top of an existing GDAL installation - for "
 "instance on top of the CONDA package."
 msgstr ""
+"GDAL をビルドせずに C# バインディングをビルドします. これは既存の GDAL インストールの上にバインディングをビルドするときに使用する必要があります."
+" たとえば, CONDA パッケージの上にバインディングをビルドするような場合に利用します."
 
 #: ../../source/development/building_from_source.rst:2492
 msgid ""
@@ -3061,10 +3599,12 @@ msgid ""
 " which link each against libgdal. Consequently, a static build of libgdal"
 " is not compatible with the bindings."
 msgstr ""
+"C# バインディングは, libgdal にリンクされるいくつかのモジュール (OSGeo.GDAL, OSGeo.OGR など) で構成されています."
+" そのため, libgdal の静的ビルドはバインディングと互換性がありません."
 
 #: ../../source/development/building_from_source.rst:2497
 msgid "Driver specific options"
-msgstr ""
+msgstr "ドライバ固有のオプション"
 
 #: ../../source/development/building_from_source.rst:2501
 msgid ""
@@ -3074,10 +3614,13 @@ msgid ""
 "(requires the ``git`` binary to be available at configuration time) into "
 "the build tree and build the needed files from it into the driver."
 msgstr ""
+":ref:`raster.msg` ドライバは, このオプションが ON に設定されている場合のみビルドされます (デフォルトは OFF です)."
+" その効果は, ビルドツリーに https://gitlab.eumetsat.int/open-source/PublicDecompWT.git リポジトリをダウンロードし"
+" (構成時に ``git`` バイナリが利用可能である必要があります), その中から必要なファイルをドライバにビルドすることです."
 
 #: ../../source/development/building_from_source.rst:2508
 msgid "Cross-compiling for Android"
-msgstr ""
+msgstr "Android 用のクロスコンパイル"
 
 #: ../../source/development/building_from_source.rst:2510
 msgid ""
@@ -3086,14 +3629,16 @@ msgid ""
 ":source_file:`.github/workflows/android_cmake/start.sh` for an example of"
 " a build script to cross-compile from Ubuntu."
 msgstr ""
+"最初に https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html#cross-compiling-for-android と"
+":source_file:`.github/workflows/android_cmake/start.sh` を参照して, Ubuntu からクロスコンパイルするビルドスクリプトの例を確認してください."
 
 #: ../../source/development/building_from_source.rst:2516
 msgid "Typical build issues"
-msgstr ""
+msgstr "典型的なビルドの問題"
 
 #: ../../source/development/building_from_source.rst:2519
 msgid "How do I get PROJ ?"
-msgstr ""
+msgstr "PROJ はどこで入手できますか ?"
 
 #: ../../source/development/building_from_source.rst:2521
 msgid ""
@@ -3102,10 +3647,12 @@ msgid ""
 "and library must be available when configuring GDAL's CMake. Consult "
 "`PROJ installation <https://proj.org/install.html>`__."
 msgstr ""
+"PROJ は, GDAL のソースコードツリーにベンダー化されていない GDAL のビルド時依存関係です. そのため, GDAL の CMake を構成するときに PROJ ヘッダーとライブラリが利用可能である必要があります."
+"`PROJ インストール <https://proj.org/install.html>`__ を参照してください."
 
 #: ../../source/development/building_from_source.rst:2526
 msgid "Conflicting PROJ libraries"
-msgstr ""
+msgstr "PROJ ライブラリの競合"
 
 #: ../../source/development/building_from_source.rst:2528
 msgid ""
@@ -3114,6 +3661,8 @@ msgid ""
 "PROJ build conflicts with packaged dependencies, such as spatialite or "
 "libgeotiff, that themselves link to another copy of PROJ."
 msgstr ""
+"カスタム PROJ ビルド (つまり, 配布チャンネルから来ていない PROJ ビルド) を使用している場合, これが他のパッケージ依存関係 (たとえば spatialite や libgeotiff など) と競合することがあります."
+" これらのパッケージ依存関係は, 別の PROJ のコピーにリンクしています."
 
 #: ../../source/development/building_from_source.rst:2533
 msgid ""
@@ -3126,6 +3675,9 @@ msgid ""
 "definitely not recommended to use this solution in a production "
 "environment."
 msgstr ""
+"これを解決するためのクリーンな方法は, 他のライブラリをカスタム PROJ ビルドに対してソースから再ビルドすることです."
+" Linux ベースのシステムの場合, PROJ 6, 7, 8, 9 シリーズで C API/ABI が保持されているため, カスタム PROJ ビルドが他のライブラリで使用されている PROJ よりも新しい場合, 古い ``libproj.so.XX`` 名を新しい ``libproj.so.YY`` にエイリアスすること (``ln -s`` を使用) ができます."
+" ただし, 本番環境でこの解決策を使用することは絶対に推奨されません."
 
 #: ../../source/development/building_from_source.rst:2541
 msgid ""
@@ -3134,16 +3686,20 @@ msgid ""
 "``malloc_consolidate(): invalid chunk size`` and/or ``Aborted (core "
 "dumped)`` error message)"
 msgstr ""
+"いずれの場合でも, ``ldd libgdal.so | grep libproj`` が複数の行を報告する場合, "
+"実行時にクラッシュが発生します (多くの場合, プロセス終了時に ``malloc_consolidate(): invalid chunk size`` "
+"および/または ``Aborted (core dumped)`` エラーメッセージが表示されます)"
 
 #: ../../source/development/building_from_source.rst:2547
 msgid "Autoconf/nmake (GDAL versions < 3.5.0)"
-msgstr ""
+msgstr "Autoconf/nmake (GDAL バージョン < 3.5.0)"
 
 #: ../../source/development/building_from_source.rst:2549
 msgid ""
 "See https://trac.osgeo.org/gdal/wiki/BuildHints for hints for GDAL < 3.5 "
 "autoconf and nmake build systems."
 msgstr ""
+"GDAL < 3.5 の autoconf および nmake ビルドシステムのヒントについては, https://trac.osgeo.org/gdal/wiki/BuildHints を参照してください."
 
 #~ msgid ""
 #~ "`libOpenDRIVE <https://github.com/pageldev/libOpenDRIVE>`_ "
