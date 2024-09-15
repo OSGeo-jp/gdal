@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-08 08:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../../source/development/dev_environment.rst:5
 msgid "Setting up a development environment"
-msgstr ""
+msgstr "開発環境の設定"
 
 #: ../../source/development/dev_environment.rst:8
 msgid "Build requirements"
-msgstr ""
+msgstr "ビルド要件"
 
 #: ../../source/development/dev_environment.rst:10
 msgid "See :ref:`build_requirements`"
-msgstr ""
+msgstr ":ref:`build_requirements` を参照してください"
 
 #: ../../source/development/dev_environment.rst:13
 msgid "Vagrant"
@@ -43,6 +43,8 @@ msgid ""
 "sets up an Ubuntu virtual machine with a comprehensive set of "
 "dependencies."
 msgstr ""
+"`Vagrant <https://www.vagrantup.com>`_ は,VirtualBox などの仮想化製品と連携して再現可能な開発環境を作成するツールです."
+"GDAL には,包括的な依存関係を持つ Ubuntu 仮想マシンを設定する Vagrant 構成ファイルが含まれています."
 
 #: ../../source/development/dev_environment.rst:19
 msgid ""
@@ -50,6 +52,7 @@ msgid ""
 "virtual machine can be set up by running the following from the source "
 "root directory:"
 msgstr ""
+"Vagrant がインストールされ, GDAL ソースがダウンロードされたら,ソースルートディレクトリから以下を実行して仮想マシンを設定できます:"
 
 #: ../../source/development/dev_environment.rst:27
 msgid ""
@@ -58,26 +61,30 @@ msgid ""
 "inside the VM. To rebuild GDAL after changing source files, you can "
 "connect to the VM and re-run the build command:"
 msgstr ""
+"ソースルートディレクトリは仮想マシン内で ``/vagrant`` に公開されているため,ホストで GDAL ソースファイルを変更すると,VM内で変更が反映されます."
+"ソースファイルを変更した後に GDAL を再構築するには,VMに接続してビルドコマンドを再実行できます:"
 
 #: ../../source/development/dev_environment.rst:36
 msgid ""
 "Note that the following directories on the host will be created (and can "
 "be removed if the Vagrant environment is no longer needed):"
 msgstr ""
+"ホスト上に以下のディレクトリが作成されます(不要になった場合は削除できます):"
 
 #: ../../source/development/dev_environment.rst:39
 msgid ""
 "``../apt-cache/ubuntu/jammy64``: contains a cache of Ubuntu packages of "
 "the VM, to allow faster VM reconstruction"
 msgstr ""
+"``../apt-cache/ubuntu/jammy64``: VM の Ubuntu パッケージのキャッシュを含み,VM の再構築を高速化します"
 
 #: ../../source/development/dev_environment.rst:41
 msgid "``build_vagrant``: CMake build directory"
-msgstr ""
+msgstr "``build_vagrant``: CMake ビルドディレクトリ"
 
 #: ../../source/development/dev_environment.rst:42
 msgid "``ccache_vagrant``: CCache directory"
-msgstr ""
+msgstr "``ccache_vagrant``: CCache ディレクトリ"
 
 #: ../../source/development/dev_environment.rst:45
 msgid "Docker"
@@ -93,6 +100,9 @@ msgid ""
 " GDAL using the clang address sanitizer (ASAN) in the same environment "
 "that is used in GitHub Actions:"
 msgstr ""
+"GitHub Actions で GDAL のビルドとテストに使用される Linux 環境は,開発用の任意のマシンにプルできる Docker イメージで定義されています."
+"各ビルドに使用される Docker イメージは, :source_file:`.github/workflows/linux_build.yml` で指定されています."
+"例として,以下のコマンドを GDAL ソースルートから実行して, GitHub Actions で使用されている環境と同じ環境で clang アドレスサニタイザ(ASAN) を使用して GDAL をビルドおよびテストできます:"
 
 #: ../../source/development/dev_environment.rst:65
 msgid ""
@@ -100,38 +110,43 @@ msgid ""
 "``-u $(id -u):$(id -g) -v /etc/passwd:/etc/passwd`` to the ``docker run``"
 " command above."
 msgstr ""
+"ビルドされたオブジェクトが root に所有されるのを避けるために,上記の ``docker run`` "
+"コマンドに ``-u $(id -u):$(id -g) -v /etc/passwd:/etc/passwd`` を追加すると便利です."
 
 #: ../../source/development/dev_environment.rst:69
 msgid "Building on Windows with Conda dependencies and Visual Studio"
-msgstr ""
+msgstr "Windows で Conda 依存関係と Visual Studio を使用してビルド"
 
 #: ../../source/development/dev_environment.rst:71
 msgid ""
 "It is less appropriate for Debug builds of GDAL, than other methods, such"
 " as using vcpkg."
 msgstr ""
+"vcpkg を使用するなどの他の方法よりも, GDAL のデバッグビルドには適していません."
 
 #: ../../source/development/dev_environment.rst:74
 msgid "Install git"
-msgstr ""
+msgstr "git のインストール"
 
 #: ../../source/development/dev_environment.rst:76
 msgid "Install `git <https://git-scm.com/download/win>`_"
-msgstr ""
+msgstr "`git <https://git-scm.com/download/win>`_ をインストールします"
 
 #: ../../source/development/dev_environment.rst:79
 msgid "Install miniconda"
-msgstr ""
+msgstr "miniconda のインストール"
 
 #: ../../source/development/dev_environment.rst:81
 msgid ""
 "Install `miniconda <https://repo.anaconda.com/miniconda/Miniconda3"
 "-latest-Windows-x86_64.exe>`_"
 msgstr ""
+"`miniconda <https://repo.anaconda.com/miniconda/Miniconda3"
+"-latest-Windows-x86_64.exe>`_ をインストールします"
 
 #: ../../source/development/dev_environment.rst:84
 msgid "Install Visual Studio"
-msgstr ""
+msgstr "Visual Studio のインストール"
 
 #: ../../source/development/dev_environment.rst:86
 msgid ""
@@ -140,14 +155,18 @@ msgid ""
 "Installer Workloads tab check Desktop development with C++. Only the "
 "latest Community Edition (2022) is available."
 msgstr ""
+"`Visual Studio "
+"<https://visualstudio.microsoft.com/vs/community/>`_ をインストールします."
+"Visual Studio インストーラの Workloads タブで Desktop development with C++ をチェックします."
+"最新の Community Edition (2022) のみが利用可能です."
 
 #: ../../source/development/dev_environment.rst:91
 msgid "Install GDAL dependencies"
-msgstr ""
+msgstr "GDAL の依存関係のインストール"
 
 #: ../../source/development/dev_environment.rst:93
 msgid "Start a Conda enabled console and assuming there is a c:\\\\dev directory"
-msgstr ""
+msgstr "利用可能なコンソールでCondaを開始し, c:\\\\dev ディレクトリがあると仮定します"
 
 #: ../../source/development/dev_environment.rst:110
 msgid ""
@@ -155,26 +174,28 @@ msgid ""
 "writing) to set the appropriate environment for cmake to pick up. It also"
 " finds and works with Visual Studio 2022 if that is installed."
 msgstr ""
+"``compilers`` パッケージは,cmake が適切な環境を選択するために ``vs2019_win-64`` (執筆時点) をインストールします."
+"インストールされている場合は,Visual Studio 2022 とも機能します."
 
 #: ../../source/development/dev_environment.rst:115
 msgid "Checkout GDAL sources"
-msgstr ""
+msgstr "GDAL ソースのチェックアウト"
 
 #: ../../source/development/dev_environment.rst:123
 msgid "Build GDAL"
-msgstr ""
+msgstr "GDAL のビルド"
 
 #: ../../source/development/dev_environment.rst:125
 msgid "From a Conda enabled console"
-msgstr ""
+msgstr "Conda が有効なコンソールから"
 
 #: ../../source/development/dev_environment.rst:139
 msgid "Run GDAL tests"
-msgstr ""
+msgstr "GDAL テストの実行"
 
 #: ../../source/development/dev_environment.rst:151
 msgid "Setting development environment variables"
-msgstr ""
+msgstr "開発環境変数の設定"
 
 #: ../../source/development/dev_environment.rst:153
 msgid ""
@@ -182,32 +203,36 @@ msgid ""
 "to be able to execute C++ or Python utilities of the build directory, or "
 "run tests."
 msgstr ""
+"GDAL がビルドされると,ビルドディレクトリの C++ または Python ユーティリティを実行したり,テストを実行するために,いくつかの環境変数を設定する必要があります."
 
 #: ../../source/development/dev_environment.rst:156
 msgid "This can be done by sourcing the following from the build directory:"
-msgstr ""
+msgstr "これは,ビルドディレクトリから以下のソースを実行することで行えます:"
 
 #: ../../source/development/dev_environment.rst:162
 msgid ""
 "(with adjustments to the above path if the build directory is not a "
 "subdirectory of the GDAL source root)."
 msgstr ""
+"(ビルドディレクトリが GDAL ソースルートのサブディレクトリでない場合は,上記のパスを調整してください)."
 
 #: ../../source/development/dev_environment.rst:164
 msgid ""
 "For Windows, a similar ``scripts/setdevenv.bat`` script exists (it "
 "currently assumes a Release build)."
 msgstr ""
+"Windows の場合,類似の ``scripts/setdevenv.bat`` スクリプトが存在します(現在は Release ビルドを想定しています)."
 
 #: ../../source/development/dev_environment.rst:171
 msgid ""
 "To verify that environment variables have been set correctly, you can "
 "check the version of a GDAL binary:"
 msgstr ""
+"環境変数が正しく設定されているかどうかを確認するには, GDAL バイナリのバージョンで確認できます:"
 
 #: ../../source/development/dev_environment.rst:178
 msgid "and the Python bindings:"
-msgstr ""
+msgstr "および Python バインディングで確認できます:"
 
 #~ msgid ""
 #~ "The ``compilers`` package will install "
