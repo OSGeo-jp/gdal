@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-20 02:24+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,33 +21,36 @@ msgstr ""
 
 #: ../../source/development/dev_practices.rst:5
 msgid "Development practices"
-msgstr ""
+msgstr "開発プラクティス"
 
 #: ../../source/development/dev_practices.rst:8
 msgid "Making changes to GDAL"
-msgstr ""
+msgstr "GDAL への変更"
 
 #: ../../source/development/dev_practices.rst:10
 msgid ""
 "Minor changes to GDAL, such as bug fixes, may be made by opening a GitHub"
 " pull request."
 msgstr ""
+"バグ修正などの小さな変更は, GitHub プルリクエストを作成して行うことができます."
 
 #: ../../source/development/dev_practices.rst:12
 msgid ""
 "Major changes should be discussed on the |gdal-dev| listserv and may "
 "require the drafting of a RFC (request for comment) document."
 msgstr ""
+"大きな変更は |gdal-dev| リストサーバで議論されるべきであり, RFC (リクエストフォーコメント) ドキュメントの作成が必要な場合があります."
 
 #: ../../source/development/dev_practices.rst:15
 msgid ""
 "GDAL's policy on substantial code additions is documented at "
 ":ref:`rfc-85`."
 msgstr ""
+"GDAL における大規模なコード追加に関するポリシーは, :ref:`rfc-85` に記載されています."
 
 #: ../../source/development/dev_practices.rst:20
 msgid "Portability"
-msgstr ""
+msgstr "ポータビリティ"
 
 #: ../../source/development/dev_practices.rst:22
 msgid ""
@@ -56,6 +59,8 @@ msgid ""
 "functions in the port directory provide services to abstract platform "
 "specific operations."
 msgstr ""
+"GDAL は,32 ビットおよび 64 ビットのコンピューティング環境,リトルエンディアンおよびビッグエンディアンの CPU に広くポータブルであるように努めています."
+"ポートディレクトリの CPL 関数は,プラットフォーム固有の操作を抽象化するサービスを提供します."
 
 #: ../../source/development/dev_practices.rst:27
 msgid ""
@@ -64,20 +69,23 @@ msgid ""
 "allocation, path parsing, filesystem I/O (using VSILFILE* / "
 "VSIVirtualFile*), ODBC access, etc."
 msgstr ""
+"一般的に,メモリ割り当て,パス解析,ファイルシステム I/O"
+"(VSILFILE* / VSIVirtualFile* を使用),ODBC アクセスなどの操作において,OS 関数の代わりに CPL 関数を使用するべきです."
 
 #: ../../source/development/dev_practices.rst:33
 msgid "C/C++ standards"
-msgstr ""
+msgstr "C/C++ 標準"
 
 #: ../../source/development/dev_practices.rst:35
 msgid ""
 "The current C and C++ standards adopted by GDAL/OGR are C99 and C++17 "
 "(last updated per :ref:`rfc-98`)."
 msgstr ""
+"GDAL/OGR で採用されている現在の C および C++ 標準は,C99 および C++17 です(:ref:`rfc-98` で最終更新)."
 
 #: ../../source/development/dev_practices.rst:39
 msgid "Variable naming"
-msgstr ""
+msgstr "変数名"
 
 #: ../../source/development/dev_practices.rst:41
 msgid ""
@@ -87,6 +95,9 @@ msgid ""
 "with changes. Most importantly, please avoiding using it improperly as "
 "that can be very confusing."
 msgstr ""
+"多くの既存の GDAL/OGR コードは,適応型ハンガリア命名規則を使用しています.この規則の使用は必須ではありま"
+"せんが,この規則を使用しているコードを維持する場合は,変更時に引き続きこれに従うことが望ましいです."
+"最も重要なのは,それを不適切に使用しないようにすることです.それは非常に混乱を招く可能性があるためです."
 
 #: ../../source/development/dev_practices.rst:47
 msgid ""
@@ -94,134 +105,141 @@ msgid ""
 "and potentially semantics of a variable. The following are some prefixes "
 "used in GDAL/OGR."
 msgstr ""
+"ハンガリア命名法では,接頭辞は変数の型や意味について何かを伝えます.以下は,GDAL/OGR で使用されるいくつかの接頭辞です."
 
 #: ../../source/development/dev_practices.rst:51
 msgid "*a*: array"
-msgstr ""
+msgstr "*a*: 配列"
 
 #: ../../source/development/dev_practices.rst:52
 msgid ""
 "*b*: C/C++ bool. In C code that pre-dates C99 adoption, it is also used "
 "for ints with only TRUE/FALSE values."
 msgstr ""
+"*b*: C/C++ bool. C99 採用以前の C コードでは,TRUE/FALSE 値のみを持つ int にも使用されます."
 
 #: ../../source/development/dev_practices.rst:53
 msgid "*by*: byte (GByte / unsigned char)."
-msgstr ""
+msgstr "*by*: バイト (GByte / unsigned char)."
 
 #: ../../source/development/dev_practices.rst:54
 msgid "*df*: floating point value (double precision)"
-msgstr ""
+msgstr "*df*: 浮動小数点数 (倍精度)"
 
 #: ../../source/development/dev_practices.rst:55
 msgid "*e*: enumeration"
-msgstr ""
+msgstr "*e*: 列挙"
 
 #: ../../source/development/dev_practices.rst:56
 msgid "*i*: integer number used as a zero based array or loop index."
-msgstr ""
+msgstr "*i*: ゼロベースの配列またはループインデックスとして使用される整数."
 
 #: ../../source/development/dev_practices.rst:57
 msgid "*f*: floating point value (single precision)"
-msgstr ""
+msgstr "*f*: 浮動小数点数 (単精度)"
 
 #: ../../source/development/dev_practices.rst:58
 msgid "*h*: an opaque handle (such as GDALDatasetH)."
-msgstr ""
+msgstr "*h*: 不透明なハンドル (GDALDatasetH など)."
 
 #: ../../source/development/dev_practices.rst:59
 msgid "*n*: integer number (size unspecified)"
-msgstr ""
+msgstr "*n*: 整数 (サイズ未指定)"
 
 #: ../../source/development/dev_practices.rst:60
 msgid "*o*: C++ object"
-msgstr ""
+msgstr "*o*: C++ オブジェクト"
 
 #: ../../source/development/dev_practices.rst:61
 msgid "*os*: CPLString or std::string"
-msgstr ""
+msgstr "*os*: CPLString または std::string"
 
 #: ../../source/development/dev_practices.rst:62
 msgid "*p*: pointer"
-msgstr ""
+msgstr "*p*: ポインタ"
 
 #: ../../source/development/dev_practices.rst:63
 msgid "*psz*: pointer to a null-terminated string. (eg. \"char \\*pszName;\")"
-msgstr ""
+msgstr "*psz*: ヌル終端文字列へのポインタ (例.\"char \\*pszName;\")"
 
 #: ../../source/development/dev_practices.rst:64
 msgid "*sz*: null-terminated string (eg.\" char szName[100];\")"
-msgstr ""
+msgstr "*sz*: ヌル終端文字列 (例.\" char szName[100];\")"
 
 #: ../../source/development/dev_practices.rst:65
 msgid "*k*: compile-time constant"
-msgstr ""
+msgstr "*k*: コンパイル時定数"
 
 #: ../../source/development/dev_practices.rst:67
 msgid ""
 "Prefixes can be stacked. The following are some examples of meaningful "
 "variables."
 msgstr ""
+"接頭辞は重ねることができます.以下は,意味のある変数のいくつかの例です."
 
 #: ../../source/development/dev_practices.rst:70
 msgid "\\*char !\\*\\ *papszTokens*: Pointer to an array of strings."
-msgstr ""
+msgstr "\\*char !\\*\\ *papszTokens*: 文字列の配列へのポインタ."
 
 #: ../../source/development/dev_practices.rst:71
 msgid "\\*int *panBands*: Pointer to the first element of an array of numbers."
-msgstr ""
+msgstr "\\*int *panBands*: 数値の配列の最初の要素へのポインタ."
 
 #: ../../source/development/dev_practices.rst:73
 msgid ""
 "\\*double *padfScanline*: Pointer to the first element of an array of "
 "doubles."
 msgstr ""
+"\\*double *padfScanline*: 倍精度浮動小数点数の配列の最初の要素へのポインタ."
 
 #: ../../source/development/dev_practices.rst:75
 msgid "\\*double *pdfMeanRet*: Pointer to a single double."
-msgstr ""
+msgstr "\\*double *pdfMeanRet*: 単一の倍精度浮動小数点数へのポインタ."
 
 #: ../../source/development/dev_practices.rst:76
 msgid "\\*GDALRasterBand *poBand*: Pointer to a single object."
-msgstr ""
+msgstr "\\*GDALRasterBand *poBand*: 単一のオブジェクトへのポインタ."
 
 #: ../../source/development/dev_practices.rst:77
 msgid "\\*GByte *pabyHeader*: Pointer to an array of bytes."
-msgstr ""
+msgstr "\\*GByte *pabyHeader*: バイトの配列へのポインタ."
 
 #: ../../source/development/dev_practices.rst:79
 msgid ""
 "It may also be noted that the standard convention for variable names is "
 "to capitalize each word in a variable name."
 msgstr ""
+"変数名の標準的な規則は,変数名の各単語の先頭を大文字にすることです."
 
 #: ../../source/development/dev_practices.rst:83
 msgid "Function and class naming"
-msgstr ""
+msgstr "関数およびクラスの命名"
 
 #: ../../source/development/dev_practices.rst:85
 msgid ""
 "Functions and classes should have a selective enough namespace (\"GDAL\" "
 "or \"OGR\" prefix, or use of C++ namespace) to avoid symbol collision."
 msgstr ""
+"関数およびクラスは,シンボルの衝突を回避するために十分な名前空間 (\"GDAL\" または \"OGR\" 接頭辞,または C++ 名前空間の使用) を持つべきです."
 
 #: ../../source/development/dev_practices.rst:88
 msgid "File naming and code formatting"
-msgstr ""
+msgstr "ファイル名とコードのフォーマット"
 
 #: ../../source/development/dev_practices.rst:90
 msgid ""
 "All source files (.h, .c, .cpp, .py, etc.) should have a header with "
 "copyright attribution and the text of the GDAL X/MIT license."
 msgstr ""
+"すべてのソースファイル (.h, .c, .cpp, .py など) には,著作権表示と GDAL X/MIT ライセンスのテキストが含まれているヘッダーが必要です."
 
 #: ../../source/development/dev_practices.rst:91
 msgid "Use lower case filenames."
-msgstr ""
+msgstr "小文字のファイル名を使用します."
 
 #: ../../source/development/dev_practices.rst:92
 msgid "Use .cpp extension for C++ files (not .cc)."
-msgstr ""
+msgstr "C++ ファイルには .cpp 拡張子を使用します (.cc ではありません)."
 
 #: ../../source/development/dev_practices.rst:93
 msgid ""
@@ -229,10 +247,13 @@ msgid ""
 "Python code formatting is enforced by Black. The pre-commit utility "
 "should be used to enforce them automatically. See :ref:`commit_hooks`."
 msgstr ""
+"C/C++ コードのフォーマットルールは, :source_file:`.clang-format` で定義されています."
+"Python コードのフォーマットは Black によって強制されます. pre-commit ユーティリティを使用して,これらを自動的に強制する必要があります."
+" :ref:`commit_hooks` を参照してください."
 
 #: ../../source/development/dev_practices.rst:97
 msgid "Memory allocation"
-msgstr ""
+msgstr "メモリ割り当て"
 
 #: ../../source/development/dev_practices.rst:99
 msgid ""
@@ -246,6 +267,11 @@ msgid ""
 "dimensions or raster block sizes. Similarly, ``VSIMalloc3(x, y, z)`` can "
 "be used as a replacement for ``CPLMalloc(x * y * z)``."
 msgstr ""
+"大規模なメモリ割り当ては, :cpp:func:`VSIMalloc` ファミリの関数を使用して行うべきです."
+"これにより, ``nullptr`` が返されます. :ref:`rfc-19` に従って, :cpp:func:`VSIMalloc2` を使用することができます."
+"これにより, ``CPLMalloc(x * y)`` または  ``VSIMalloc(x * y)`` を行う代わりに,潜在的なオーバーフローを検出し,それが発生した場合は NULL ポインタを返します."
+"これは, x と y がラスタの寸法またはラスタブロックサイズに関連している GDAL ラスタドライバで有用です."
+"同様に, ``VSIMalloc3(x, y, z)`` は, ``CPLMalloc(x * y * z)`` の代わりに使用できます."
 
 #: ../../source/development/dev_practices.rst:107
 msgid ""
@@ -253,10 +279,12 @@ msgid ""
 "``std::vector`` that may throw ``std::bad_alloc``, a try/catch block "
 "should be used around blocks that may allocate a large amount of memory."
 msgstr ""
+"``std::bad_alloc`` をスローする可能性がある ``std::vector`` などの標準ライブラリデータ構造を使用する場合,"
+"大量のメモリを割り当てる可能性のあるブロックの周りに try/catch ブロックを使用する必要があります."
 
 #: ../../source/development/dev_practices.rst:110
 msgid "Adding a new driver"
-msgstr ""
+msgstr "新しいドライバの追加"
 
 #: ../../source/development/dev_practices.rst:112
 msgid ""
@@ -265,6 +293,8 @@ msgid ""
 "try to re-use existing library dependencies as much as possible, e.g. "
 "Expat for SAX XML parsing."
 msgstr ""
+"ドライバがサードパーティライブラリに依存している場合,ドライバのコンパイルはライブラリの存在に依存する必要があります."
+"ドライバは,可能な限り既存のライブラリ依存関係を再利用するようにする必要があります. 例: SAX XML パーサリングのための Expat."
 
 #: ../../source/development/dev_practices.rst:113
 msgid ""
@@ -275,6 +305,9 @@ msgid ""
 "it would recognize). Check that it can deal with unusual filenames. For a"
 " GDAL driver, similar checks, as well for the optional Identify() method."
 msgstr ""
+"ベクトルドライバの場合,ドライバの Open() メソッド (しばしばデータソースの Open() メソッドに委任される) が十分に選択的であることを確認してください."
+"つまり,ドライバに適していないデータファイルを受け入れないこと,および十分に堅牢であること (認識するコンテンツに対する小さな変化に対してクラッシュしないこと) を確認してください."
+"異常なファイル名に対処できるかどうかを確認してください. GDAL ドライバの場合,オプションの Identify() メソッドについても同様のチェックを行ってください."
 
 #: ../../source/development/dev_practices.rst:114
 msgid ""
@@ -284,6 +317,9 @@ msgid ""
 "and ``GDALTest`` class may simplify testing of basic driver "
 "functionality."
 msgstr ""
+"ドライバをカバーするテストセットを Python テストスイートに追加する必要があります."
+"適切な場合,小さなサンプルデータファイルを autotest/gdrivers/data または autotest/ogr/data に追加することができます."
+"``test_ogrsf`` ユーティリティと ``GDALTest`` クラスは,基本的なドライバ機能のテストを簡素化することができます."
 
 #: ../../source/development/dev_practices.rst:115
 msgid ""
@@ -294,40 +330,44 @@ msgid ""
 "should provide a link to a more detailed format description and mention "
 "needed third-party libraries."
 msgstr ""
+"ドライバのためのドキュメントページを作成する必要があります."
+"ドキュメントは,最低限,ドライバで処理されるフォーマットについて簡単に説明し,接続文字列,作成オプション,構成オプションなどの特定の構文を説明する必要があります."
+"ドキュメントは,より詳細なフォーマットの説明へのリンクを提供し,必要なサードパーティライブラリを言及する必要があります."
 
 #: ../../source/development/dev_practices.rst:118
 msgid "Writing tests"
-msgstr ""
+msgstr "テストの書き方"
 
 #: ../../source/development/dev_practices.rst:120
 msgid "See :ref:`writing_tests`."
-msgstr ""
+msgstr ":ref:`writing_tests` を参照してください."
 
 #: ../../source/development/dev_practices.rst:123
 msgid "Git usage"
-msgstr ""
+msgstr "Git の使用"
 
 #: ../../source/development/dev_practices.rst:125
 msgid ""
 "This section collects a few best practices for git usage for GDAL "
 "development."
 msgstr ""
+"このセクションでは,GDAL 開発のための git 使用のいくつかのベストプラクティスをまとめています."
 
 #: ../../source/development/dev_practices.rst:128
 msgid "Initiating your work repository"
-msgstr ""
+msgstr "作業リポジトリの初期化"
 
 #: ../../source/development/dev_practices.rst:130
 msgid "Fork |OSGeo/gdal| from the GitHub UI, and then run:"
-msgstr ""
+msgstr "GitHub UI から |OSGeo/gdal| をフォークし,次に以下を実行します:"
 
 #: ../../source/development/dev_practices.rst:139
 msgid "Working with a feature branch"
-msgstr ""
+msgstr "フィーチャーブランチでの作業"
 
 #: ../../source/development/dev_practices.rst:175
 msgid "From the GitHub UI, issue a pull request."
-msgstr ""
+msgstr "GitHub UI からプルリクエストを発行します."
 
 #: ../../source/development/dev_practices.rst:177
 msgid ""
@@ -337,14 +377,17 @@ msgid ""
 "have to force-push your branch with ``git push -f my_user_name "
 "my_new_feature_branch``."
 msgstr ""
+"プルリクエストの議論や自動チェックで変更が必要な場合,ローカルでコミットしてプッシュします."
+"適切な履歴を取得するためには,``git rebase -i master`` を使用してコミットを結合する必要があります."
+"その場合,``git push -f my_user_name my_new_feature_branch`` でブランチを強制プッシュする必要があります."
 
 #: ../../source/development/dev_practices.rst:184
 msgid "Updating your local master against upstream master"
-msgstr ""
+msgstr "ローカルの master をアップストリームの master に更新する"
 
 #: ../../source/development/dev_practices.rst:195
 msgid "Commit messages"
-msgstr ""
+msgstr "コミットメッセージ"
 
 #: ../../source/development/dev_practices.rst:197
 msgid ""
@@ -352,10 +395,11 @@ msgid ""
 "short description, and when relevant, a reference to a issue (with 'fixes"
 " #' if it actually fixes it)"
 msgstr ""
+"コミットメッセージには,コンポーネント名 (例: ドライバ名),短い説明,および適切な場合には,問題への参照 ('fixes #' が実際に修正している場合) を示すべきです."
 
 #: ../../source/development/dev_practices.rst:210
 msgid "Commit hooks"
-msgstr ""
+msgstr "コミットフック"
 
 #: ../../source/development/dev_practices.rst:212
 msgid ""
@@ -363,16 +407,19 @@ msgid ""
 "a commit is made. The hooks are cloned with the repository and can be "
 "installed using `pre-commit <https://pre-commit.com>`_:"
 msgstr ""
+"GDAL は,コミット前にコードフォーマッタやリンタを実行するための pre-commit フックを提供しています."
+"フックはリポジトリと共にクローンされ,`pre-commit <https://pre-commit.com>`_ を使用してインストールすることができます:"
 
 #: ../../source/development/dev_practices.rst:222
 msgid ""
 "Once installed, the hooks can be run manually via ``pre-commit run --all-"
 "files``."
 msgstr ""
+"インストールされると,フックは ``pre-commit run --all-files`` を使用して手動で実行できます."
 
 #: ../../source/development/dev_practices.rst:225
 msgid "Blame ignore file"
-msgstr ""
+msgstr "Blame 無視ファイル"
 
 #: ../../source/development/dev_practices.rst:227
 msgid ""
@@ -381,18 +428,20 @@ msgid ""
 " modify your git configuration as following to ignore the revision of the"
 " whole-tree reformatting:"
 msgstr ""
+"GDAL 3.7 開発中に行われた全体ツリーコードの再フォーマットにより,``git blame`` 情報が誤解を招く可能性があります."
+"それを避けるために,以下のように git 設定を変更して,全体ツリーリフォーマットのリビジョンを無視する必要があります:"
 
 #: ../../source/development/dev_practices.rst:238
 msgid "Backporting bugfixes from master to a stable branch"
-msgstr ""
+msgstr "master から安定ブランチにバグ修正をバックポートする"
 
 #: ../../source/development/dev_practices.rst:250
 msgid "If changes are needed, do them and ``git commit -a --amend``"
-msgstr ""
+msgstr "変更が必要な場合,それを行い,``git commit -a --amend`` を実行します"
 
 #: ../../source/development/dev_practices.rst:254
 msgid "Things you should NOT do"
-msgstr ""
+msgstr "行ってはいけないこと"
 
 #: ../../source/development/dev_practices.rst:256
 msgid ""
@@ -400,44 +449,50 @@ msgid ""
 "the history of anything that has been committed to "
 "https://github.com/OSGeo/gdal"
 msgstr ""
+"(|OSGeo/gdal| にプッシュ権限を持つ人向け) コミットを修正したり, https://github.com/OSGeo/gdal に"
+"コミットされたものの履歴を修正したりしてはいけません."
 
 #: ../../source/development/dev_practices.rst:260
 msgid ""
 "Committing symbolic links is allowed only under the .github directory in "
 "order to avoid potential problems on Windows."
 msgstr ""
+"シンボリックリンクをコミットすることは,Windows での潜在的な問題を回避するために,.github ディレクトリ内でのみ許可されています."
 
 #: ../../source/development/dev_practices.rst:264
 msgid "Source tree layout"
-msgstr ""
+msgstr "ソースツリーレイアウト"
 
 #: ../../source/development/dev_practices.rst:266
 msgid ""
 ":file:`alg`: Algorithms: rasterization, polygonization, warper engine, "
 "etc."
 msgstr ""
+":file:`alg`: アルゴリズム: ラスタ化,ポリゴン化,ワーパーエンジンなど."
 
 #: ../../source/development/dev_practices.rst:267
 msgid ":file:`apps`: C++ command line utilities"
-msgstr ""
+msgstr ":file:`apps`: C++ コマンドラインユーティリティ"
 
 #: ../../source/development/dev_practices.rst:268
 msgid ":file:`autotest`: Regression test suite (C++ and Python)"
-msgstr ""
+msgstr ":file:`autotest`: リグレッションテストスイート (C++ および Python)"
 
 #: ../../source/development/dev_practices.rst:269
 msgid ":file:`cmake`: CMake modules and helpers functions"
-msgstr ""
+msgstr ":file:`cmake`: CMake モジュールとヘルパー関数"
 
 #: ../../source/development/dev_practices.rst:270
 msgid ":file:`doc`: Source code of GDAL documentation and scripts"
-msgstr ""
+msgstr ":file:`doc`: GDAL ドキュメントおよびスクリプトのソースコード"
 
 #: ../../source/development/dev_practices.rst:271
 msgid ""
 ":file:`docker`: Dockerfile's for `GDAL Docker images "
 "<https://github.com/OSGeo/gdal/blob/master/docker/README.md>`__"
 msgstr ""
+":file:`docker`: `GDAL Docker イメージ <https://github.com/OSGeo/gdal/blob/master/docker/README.md>`__ "
+"の Dockerfile"
 
 #: ../../source/development/dev_practices.rst:272
 msgid ""
@@ -445,22 +500,26 @@ msgid ""
 ":cpp:class:`GDALDataset`, :cpp:class:`GDALRasterBand`, "
 ":cpp:class:`GDALDriver`, overview building, etc."
 msgstr ""
+":file:`gcore`: ラスタコア機能. ベースクラス: :cpp:class:`GDALDataset`, :cpp:class:`GDALRasterBand`, :cpp:class:`GDALDriver`, 概要ビルドなど."
 
 #: ../../source/development/dev_practices.rst:273
 msgid ""
 ":file:`frmts`: GDAL/raster drivers (mostly, with the exception of the "
 "GDAL GeoPackage raster support in ogr/ogrsf_frmts/gpkg)"
 msgstr ""
+":file:`frmts`: GDAL/ラスタドライバ (主に,ogr/ogrsf_frmts/gpkg の GDAL GeoPackage ラスタサポートを除く)"
 
 #: ../../source/development/dev_practices.rst:274
 msgid ""
 ":file:`fuzzer`: Source code and scripts for GDAL `OSS-Fuzz integration "
 "<https://github.com/google/oss-fuzz>`__"
 msgstr ""
+":file:`fuzzer`: GDAL `OSS-Fuzz 統合 <https://github.com/google/oss-fuzz>`__ "
+"のソースコードとスクリプト"
 
 #: ../../source/development/dev_practices.rst:275
 msgid ":file:`gnm`: Source code for :ref:`gnm_data_model`"
-msgstr ""
+msgstr ":file:`gnm`: :ref:`gnm_data_model` のソースコード"
 
 #: ../../source/development/dev_practices.rst:276
 msgid ""
@@ -468,26 +527,30 @@ msgid ""
 ":cpp:class:`OGRGeomFieldDefn`, :cpp:class:`OGRFeatureDefn`, "
 ":cpp:class:`OGRGeometry` and derived classes, OGR SQL, etc."
 msgstr ""
+":file:`ogr`: OGR ベクトルコアクラス: :cpp:class:`OGRFieldDefn`,"
+" :cpp:class:`OGRGeomFieldDefn`, :cpp:class:`OGRFeatureDefn`, :cpp:class:`OGRGeometry` および派生クラス, OGR SQL など."
 
 #: ../../source/development/dev_practices.rst:277
 msgid ":file:`ogr/ogrsf_frmts`: OGR/vector drivers"
-msgstr ""
+msgstr ":file:`ogr/ogrsf_frmts`: OGR/ベクトルドライバ"
 
 #: ../../source/development/dev_practices.rst:278
 msgid ""
 ":file:`ogr/ogrsf_frmts/generic`: OGR vector core class: `OGRLayer`, OGR "
 "SQL generic layer"
 msgstr ""
+":file:`ogr/ogrsf_frmts/generic`: OGR ベクトルコアクラス: `OGRLayer`, OGR SQL 汎用レイヤー"
 
 #: ../../source/development/dev_practices.rst:279
 msgid ":file:`port`: :ref:`CPL (Common Portability Library) <cpl>`"
-msgstr ""
+msgstr ":file:`port`: :ref:`CPL (Common Portability Library) <cpl>`"
 
 #: ../../source/development/dev_practices.rst:280
 msgid ""
 ":file:`perftests`: C++ and Python scripts to check the speed/performance "
 "of various aspects of GDAL."
 msgstr ""
+":file:`perftests`: GDAL のさまざまな側面の速度/パフォーマンスをチェックするための C++ および Python スクリプト."
 
 #: ../../source/development/dev_practices.rst:281
 msgid ""
@@ -495,22 +558,28 @@ msgid ""
 " release generation, and other auxiliary tasks. None of them are for end "
 "users."
 msgstr ""
+":file:`scripts`: 継続的インテグレーション,リリース生成,およびその他の補助タスクに使用されるさまざまなユーティリティスクリプト."
+"いずれもエンドユーザー向けではありません."
 
 #: ../../source/development/dev_practices.rst:282
 msgid ":file:`swig/include`: definition of SWIG Python, Java, C# bindings"
-msgstr ""
+msgstr ":file:`swig/include`: SWIG Python, Java, C# バインディングの定義"
 
 #: ../../source/development/dev_practices.rst:283
 msgid ""
 ":file:`swig/python/gdal-utils/scripts`: Launcher scripts for "
 "installed/public GDAL Python utilities. No real functionality there"
 msgstr ""
+":file:`swig/python/gdal-utils/scripts`: インストールされた/公開された GDAL Python ユーティリティのランチャースクリプト."
+"実際の機能はありません"
 
 #: ../../source/development/dev_practices.rst:284
 msgid ""
 ":file:`swig/python/gdal-utils/osgeo_utils`: Core code for GDAL Python "
 "utilities. Available in the PyPI gdal and gdal-utils packages."
 msgstr ""
+":file:`swig/python/gdal-utils/osgeo_utils`: GDAL Python ユーティリティのコアコード."
+"PyPI gdal および gdal-utils パッケージで利用可能です."
 
 #: ../../source/development/dev_practices.rst:285
 msgid ""
@@ -518,6 +587,8 @@ msgid ""
 "and generally not or very little documented. May serve as a staging area "
 "for future scripts that are going to be promoted as official."
 msgstr ""
+":file:`swig/python/gdal-utils/samples`: インストールされていないスクリプトであり,一般的にはほとんどまたはほとんどドキュメント化されていません."
+"将来公式として昇格される予定のスクリプトのステージングエリアとして機能するかもしれません."
 
 #: ../../source/development/dev_practices.rst:286
 msgid ""
@@ -525,24 +596,27 @@ msgid ""
 " by GDAL Python utilities. Available in the PyPI gdal and gdal-utils "
 "packages."
 msgstr ""
+":file:`swig/python/gdal-utils/auxiliary`: GDAL Python ユーティリティで使用されるヘルパーメソッドとクラス."
+"PyPI gdal および gdal-utils パッケージで利用可能です."
 
 #: ../../source/development/dev_practices.rst:287
 msgid ""
 ":file:`third_party`: Third-party libraries used by libgdal. Other may be "
 "found in:"
 msgstr ""
+":file:`third_party`: libgdal で使用されるサードパーティライブラリ. 他のものは以下で見つけることができます:"
 
 #: ../../source/development/dev_practices.rst:289
 msgid ":file:`alg/internal_libqhull`"
-msgstr ""
+msgstr ":file:`alg/internal_libqhull`"
 
 #: ../../source/development/dev_practices.rst:290
 msgid ":file:`apps/argparse`"
-msgstr ""
+msgstr ":file:`apps/argparse`"
 
 #: ../../source/development/dev_practices.rst:291
 msgid ":file:`frmts/gtiff/libtiff`"
-msgstr ""
+msgstr ":file:`frmts/gtiff/libtiff`"
 
 #: ../../source/development/dev_practices.rst:292
 msgid ":file:`frmts/gtiff/libgeotiff`"
