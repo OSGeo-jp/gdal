@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/development/testing.rst:5
 msgid "Automated testing"
-msgstr ""
+msgstr "自動テスト"
 
 #: ../../source/development/testing.rst:7
 msgid ""
 "GDAL includes a comprehensive test suite, implemented using a combination"
 " of Python (via pytest) and C++ (via gtest)."
 msgstr ""
+"GDAL には,Python (pytest 経由) と C++ (gtest 経由) の組み合わせを使用して実装された包括的なテストスイートが含まれています."
 
 #: ../../source/development/testing.rst:9
 msgid ""
@@ -36,16 +37,19 @@ msgid ""
 "environment variables so that tests are run on the the built version of "
 "GDAL, rather than an installed system copy."
 msgstr ""
+"CMake を使用して GDAL をビルドした後, ``ctest -v --output-on-failure`` を使用して完全なテストスイートを実行できます."
+"これにより,テストがインストールされたシステムコピーではなく,ビルドされたバージョンの GDAL で実行されるように環境変数が自動的に設定されます."
 
 #: ../../source/development/testing.rst:13
 msgid "Running a subset of tests using ``ctest``"
-msgstr ""
+msgstr "``ctest`` を使用してテストのサブセットを実行する"
 
 #: ../../source/development/testing.rst:15
 msgid ""
 "The complete set of test suites known to ``ctest`` can be viewed running "
 "``ctest -N``."
 msgstr ""
+"``ctest`` によって認識されている完全なテストスイートのセットは,``ctest -N`` を実行して表示できます."
 
 #: ../../source/development/testing.rst:17
 msgid ""
@@ -53,6 +57,9 @@ msgid ""
 "which selects tests using a provided regular expression. For example, "
 "``ctest -R autotest`` would run the Python-based tests."
 msgstr ""
+"``ctest`` の ``-R`` 引数を使用してテストのサブセットを実行できます."
+"これにより,指定された正規表現を使用してテストを選択できます."
+"たとえば,``ctest -R autotest`` は Python ベースのテストを実行します."
 
 #: ../../source/development/testing.rst:20
 msgid ""
@@ -60,10 +67,12 @@ msgid ""
 "expression. For example, ``ctest -E gdrivers`` would exclude the suite of"
 " driver tests."
 msgstr ""
+"``-E`` 引数を使用して正規表現を使用してテストを除外できます."
+"たとえば,``ctest -E gdrivers`` はドライバーテストのスイートを除外します."
 
 #: ../../source/development/testing.rst:23
 msgid "Running a subset of tests using ``pytest``"
-msgstr ""
+msgstr "``pytest`` を使用してテストのサブセットを実行します"
 
 #: ../../source/development/testing.rst:25
 msgid ""
@@ -75,6 +84,10 @@ msgid ""
 "<setting_dev_environment_variables>` so that the development build of "
 "GDAL is tested, rather than a system version."
 msgstr ""
+"``ctest`` によって公開されるテストサブセットはまだかなり大きく,いくつかは実行に数分かかる場合があります."
+"より高いレベルの特異性が必要な場合,``pytest`` を直接呼び出して,グループのテストまたは個々のテストを実行できます."
+"``pytest`` を実行する前に,システムバージョンではなく,開発ビルドの GDAL がテストされるように, "
+":ref:`development environment variables <setting_dev_environment_variables>` を設定することが重要です."
 
 #: ../../source/development/testing.rst:29
 msgid ""
@@ -83,6 +96,9 @@ msgid ""
 "directory, so this can be done by running the following from the build "
 "directory:"
 msgstr ""
+"その後,``pytest`` を呼び出すことで,個々のファイルでテストを実行できます."
+"Linux および MacOS ビルドでは,テストはビルドディレクトリにシンボリックリンクされて"
+"いるため,ビルドディレクトリから次のコマンドを実行することでこれを行うことができます:"
 
 #: ../../source/development/testing.rst:37
 msgid ""
@@ -91,34 +107,41 @@ msgid ""
 "directory. To accommodate this, the above command would be modified as "
 "follows:"
 msgstr ""
+"Windows では,テストファイルはソースツリーに残りますが,pytest の設定ファイル ``pytest.ini`` はビルドディレクトリにのみ利用可能です."
+"これに対応するために,上記のコマンドは次のように変更されます:"
 
 #: ../../source/development/testing.rst:43
 msgid ""
 "A subset of tests within an individual test file can be run by providing "
 "a regular expression to the ``-k`` argument to ``pytest``."
 msgstr ""
+"個々のテストファイル内のテストのサブセットは,``pytest`` の ``-k`` 引数に正規表現を指定することで実行できます."
 
 #: ../../source/development/testing.rst:49
 msgid ""
 "``pytest`` can also report information on the tests without running them."
 " For example, to list tests containing \"tiff\" in the name:"
 msgstr ""
+"``pytest`` は,テストを実行せずにテストに関する情報を報告することもできます."
+"たとえば,名前に \"tiff\" が含まれるテストをリストするには:"
 
 #: ../../source/development/testing.rst:57
 msgid ""
 "Not all Python tests can be run independently; some tests depend on state"
 " set by a previous tests in the same file."
 msgstr ""
+"すべての Python テストを独立して実行することはできません.一部のテストは,同じファイル内の前のテストによって設定された状態に依存しています."
 
 #: ../../source/development/testing.rst:61
 msgid "Checking for memory leaks and access errors using Valgrind"
-msgstr ""
+msgstr "Valgrind を使用してメモリリークとアクセスエラーをチェックする"
 
 #: ../../source/development/testing.rst:63
 msgid ""
 "The GDAL unit test suite can be run using the Valgrind tool to detect "
 "memory errors such as leaks and incorrect reads/writes."
 msgstr ""
+"GDAL ユニットテストスイートは,Valgrind ツールを使用してメモリエラー (リークや不正な読み取り/書き込みなど) を検出するために実行できます."
 
 #: ../../source/development/testing.rst:66
 msgid ""
@@ -126,6 +149,7 @@ msgid ""
 "factor of ten) so it is generally advisable to run a subset of the tests "
 "using the methods described above."
 msgstr ""
+"テストスイートは Valgrind の下でかなり遅くなります (おそらく 10 倍程度),したがって,通常は上記の方法でテストのサブセットを実行することが望ましいです."
 
 #: ../../source/development/testing.rst:70
 msgid ""
@@ -133,12 +157,15 @@ msgid ""
 "Although it is possible to use Valgrind with ctest, it is simpler to call"
 " ``pytest`` or ``gdal_unit_test`` directly."
 msgstr ""
+"``valgrind ctest`` を呼び出しても,テストは ``valgrind`` の下で実行されません."
+"Valgrind を ctest と組み合わせて使用することは可能ですが,``pytest`` または ``gdal_unit_test`` を直接呼び出す方が簡単です."
 
 #: ../../source/development/testing.rst:74
 msgid ""
 "The following preparatory steps are necessary to avoid numerous false-"
 "positive errors from Valgrind:"
 msgstr ""
+"Valgrind からの多数の false-positive エラーを回避するためには,次の準備手順が必要です:"
 
 #: ../../source/development/testing.rst:77
 msgid ""
@@ -150,6 +177,9 @@ msgid ""
 "https://raw.githubusercontent.com/python/cpython/3.11/Misc/valgrind-"
 "python.supp)"
 msgstr ""
+"多くの false-positive エラーは Python 自体によって生成されます.これらのほとんどは,テストを実行するために使用される Python インタプリタのバージョンに対応する抑制ファイルを取得することで削除できます."
+"このファイルは,Python のソースディストリビューションにあるか,直接 GitHub からダウンロードできます (たとえば, "
+"https://raw.githubusercontent.com/python/cpython/3.11/Misc/valgrind-python.supp)"
 
 #: ../../source/development/testing.rst:84
 msgid ""
@@ -157,6 +187,8 @@ msgid ""
 "libraries that it uses (e.g., SWIG, numpy). These can be removed by "
 "``autotest/valgrind-gdal.supp`` file in the GDAL repository."
 msgstr ""
+"GDAL テストスイートまたはそれが使用するライブラリ (SWIG, numpy など) によっていくつかの false-positive エラーが生成されます."
+"これらは,``autotest/valgrind-gdal.supp`` ファイルで GDAL リポジトリから削除できます."
 
 #: ../../source/development/testing.rst:88
 msgid ""
@@ -164,6 +196,8 @@ msgid ""
 "should be used instead of Python's internal memory allocator. This can be"
 " done by setting the ``PYTHONMALLOC`` environment variable to ``malloc``."
 msgstr ""
+"Python ユニットテストを実行する場合,Python の内部メモリアロケータの代わりにデフォルトのシステムメモリアロケータを使用する必要があります."
+"これは,``PYTHONMALLOC`` 環境変数を ``malloc`` に設定することで行うことができます."
 
 #: ../../source/development/testing.rst:92
 msgid ""
@@ -172,12 +206,15 @@ msgid ""
 " be removed from the output using ``grep -v \"invalid file "
 "descriptor\\|alternative log fd\"``."
 msgstr ""
+"Python ユニットテストを実行する場合,Valgrind は現在抑制できない多数の \"Invalid file descriptor\" 警告を報告します."
+"これらは,``grep -v \"invalid file descriptor\\|alternative log fd\"`` を使用して出力から削除できます."
 
 #: ../../source/development/testing.rst:97
 msgid ""
 "Combining the following, we can run valgrind for a subset of Python tests"
 " as follows:"
 msgstr ""
+"以下を組み合わせることで,次のように Python テストのサブセットのために valgrind を実行できます:"
 
 #: ../../source/development/testing.rst:108
 msgid ""
@@ -185,10 +222,11 @@ msgid ""
 "reference the suppression files and other common arguments in a "
 "``~/.valgrindrc`` file."
 msgstr ""
+"上記のような冗長なコマンドを避けるためには,抑制ファイルやその他の一般的な引数を ``~/.valgrindrc`` ファイルに記述すると便利です."
 
 #: ../../source/development/testing.rst:116
 msgid "Recommendations on how to write new tests"
-msgstr ""
+msgstr "新しいテストの書き方に関する推奨事項"
 
 #: ../../source/development/testing.rst:118
 msgid ""
@@ -196,6 +234,8 @@ msgid ""
 "higher in Python and there is no associated compilation time (compilation"
 " time affects feedback received from continuous integration)."
 msgstr ""
+"可能な限り Python ベースのテストを使用することが推奨されます. "
+"Python では生産性が高く,関連するコンパイル時間がないため (コンパイル時間は継続的統合から受け取るフィードバックに影響します)."
 
 #: ../../source/development/testing.rst:122
 msgid ""
@@ -205,16 +245,20 @@ msgid ""
 "operators, iterator interfaces, etc.) or C/C++ functionality not mapped "
 "to SWIG (e.g. CPL utility functions/classes)"
 msgstr ""
+"C/C++ ベースのテストは,SWIG Python バインディングを使用してテストできない C++ 固有の側面に予約するべきです."
+"たとえば,C++ 演算子 (コピー/ムーブコンストラクタ/代入演算子,イテレータインタフェースなど) のテストや,SWIG に"
+"マッピングされていない C/C++ 機能 (たとえば,CPL ユーティリティ関数/クラス) のテストです."
 
 #: ../../source/development/testing.rst:128
 msgid "Python tests"
-msgstr ""
+msgstr "Python テスト"
 
 #: ../../source/development/testing.rst:130
 msgid ""
 "Python tests use the `pytest <https://docs.pytest.org/en/latest/>`__ "
 "framework since :ref:`rfc-72`."
 msgstr ""
+"Python テストは, :ref:`rfc-72` 以降,`pytest <https://docs.pytest.org/en/latest/>`__ フレームワークを使用しています."
 
 #: ../../source/development/testing.rst:133
 msgid ""
@@ -225,12 +269,16 @@ msgid ""
 " pytest's ```tmp_path`` fixture <https://docs.pytest.org/en/7.1.x/how-"
 "to/tmp_path.html#the-tmp-path-fixture>`__."
 msgstr ""
+"テストケースは,他のテストケースと独立しているため,潜在的に分離された方法で実行されるか,他のテストケースと並行して実行されるように書かれるべきです."
+"特に一時ファイルは,他のテストと競合しない名前で作成する必要があります:可能であれば,pytest の ``tmp_path`` フィクスチャを使用してください."
+" <https://docs.pytest.org/en/7.1.x/how-to/tmp_path.html#the-tmp-path-fixture>`__."
 
 #: ../../source/development/testing.rst:138
 msgid ""
 "Use ``@pytest.mark.require_driver(driver_name)`` as an annotation for a "
 "test case that requires an optional driver to be present."
 msgstr ""
+"オプションのドライバが存在する必要があるテストケースには,``@pytest.mark.require_driver(driver_name)`` をアノテーションとして使用します."
 
 #: ../../source/development/testing.rst:141
 msgid ""
@@ -239,6 +287,8 @@ msgid ""
 " for all its test cases. This is typically when writing tests for a "
 "particular driver."
 msgstr ""
+"特定のドライバが利用可能である必要があるテストファイルの最初に ``pytestmark = pytest.mark.require_driver(\"driver_name\")`` を使用します."
+"これは,通常,特定のドライバのテストを書くときに使用します."
 
 #: ../../source/development/testing.rst:146
 msgid ""
@@ -247,6 +297,8 @@ msgid ""
 "special pre-conditions, use a lot of RAM, etc. and is thus not "
 "appropriate to be automatically run by continuous integration."
 msgstr ""
+"特別な前提条件が必要であるため,通常はデフォルトで実行されないテストを示すために,``@pytest.mark.require_run_on_demand`` をアノテーションとして使用します."
+"たとえば,多くの RAM を使用するなど,継続的統合によって自動的に実行されるのに適していない場合です."
 
 #: ../../source/development/testing.rst:151
 msgid ""
@@ -254,6 +306,8 @@ msgid ""
 " that test for variations, instead of for() constructs. More details at "
 "https://docs.pytest.org/en/latest/parametrize.html"
 msgstr ""
+"変化をテストするテスト関数のアノテーションとして,``@pytest.mark.parametrize(...)`` を使用します."
+"詳細は,https://docs.pytest.org/en/latest/parametrize.html にあります."
 
 #: ../../source/development/testing.rst:155
 msgid "e.g.:"
@@ -261,13 +315,14 @@ msgstr ""
 
 #: ../../source/development/testing.rst:164
 msgid "instead of"
-msgstr ""
+msgstr "代わりに"
 
 #: ../../source/development/testing.rst:173
 msgid ""
 "`Fixtures <https://docs.pytest.org/en/latest/how-to/fixtures.html>`__ can"
 " be used to share set-up and tear-down code between test cases."
 msgstr ""
+"`Fixtures <https://docs.pytest.org/en/latest/how-to/fixtures.html>`__ を使用して,テストケース間でセットアップとティアダウンのコードを共有できます."
 
 #: ../../source/development/testing.rst:176
 msgid ""
@@ -275,22 +330,26 @@ msgid ""
 "that takes care to unregister a given driver before the test case is run,"
 " and re-register it afterwards:"
 msgstr ""
+"たとえば,テストケースが実行される前に指定されたドライバを登録解除し,その後に"
+"再登録するためのテストファイルのすべてのテストケースに自動的にロードされるフィクスチャ:"
 
 #: ../../source/development/testing.rst:195
 msgid ""
 "or a fixture that runs preliminary checks to discover if a driver has "
 "some optional capabilities, and skip a test case if not:"
 msgstr ""
+"または,ドライバにオプションの機能があるかどうかを発見するための事前チェックを実行し,機能がない場合はテストケースをスキップするフィクスチャ:"
 
 #: ../../source/development/testing.rst:220
 msgid "C++ tests"
-msgstr ""
+msgstr "C++ テスト"
 
 #: ../../source/development/testing.rst:222
 msgid ""
 "GDAL C++ tests use the `GoogleTest "
 "<https://github.com/google/googletest>`__ framework since :ref:`rfc-88`."
 msgstr ""
+"GDAL C++ テストは, :ref:`rfc-88` 以降,`GoogleTest <https://github.com/google/googletest>`__ フレームワークを使用しています."
 
 #: ../../source/development/testing.rst:225
 msgid ""
@@ -304,14 +363,18 @@ msgid ""
 "afterwards. The ASSERT_xxxx family of assertions should be used for such "
 "cases where early exit of the test case is desired."
 msgstr ""
+"一般的な失敗しないアサーションは,``EXPECT_TRUE(cond)``, ``EXPECT_FALSE(cond)``, ``EXPECT_EQ(a, b)``, ``EXPECT_NE(a, b)``, ``EXPECT_STREQ(a, b)``, ``EXPECT_LE(a, b)``, ``EXPECT_LT(a, b)``, ``EXPECT_GE(a, b)``, ``EXPECT_GT(a, b)``, ``EXPECT_NEAR(a, b, tolerance)`` です."
+"これらのアサーションのいずれかが失敗すると,残りのテストケースの実行が続行されるため,通常は,ポインタを NULL に対してテストし,"
+"その後無条件にデリファレンスする場合には使用しないでください.""
+"早期にテストケースを終了する場合には,ASSERT_xxxx ファミリのアサーションを使用する必要があります."
 
 #: ../../source/development/testing.rst:234
 msgid "GoogleTest also offers capabilities for parametrized tests. For example:"
-msgstr ""
+msgstr "GoogleTest は,パラメータ化されたテストの機能も提供しています.たとえば:"
 
 #: ../../source/development/testing.rst:286
 msgid "Test coverage reports"
-msgstr ""
+msgstr "テストカバレッジレポート"
 
 #: ../../source/development/testing.rst:288
 msgid ""
@@ -319,6 +382,7 @@ msgid ""
 "GDAL with the ``gcov`` GCC module to get the line coverage of running "
 "Python and C++ autotest tests."
 msgstr ""
+"GDAL 継続的統合には,``gcov`` GCC モジュールを使用して Python および C++ autotest テストの行カバレッジを取得する ``coverage`` 構成があります."
 
 #: ../../source/development/testing.rst:292
 msgid ""
@@ -327,6 +391,8 @@ msgid ""
 "upload results to https://coveralls.io/github/OSGeo/gdal, for both push "
 "and pull requests events."
 msgstr ""
+"これは,`Coveralls GitHub Action <https://github.com/marketplace/actions/coveralls-github-action>`__ によって使用され,"
+"https://coveralls.io/github/OSGeo/gdal に結果をアップロードします.プッシュとプルリクエストイベントの両方です."
 
 #: ../../source/development/testing.rst:296
 msgid ""
@@ -334,10 +400,12 @@ msgid ""
 "master build, generated by ``lcov``, is also available at https"
 "://gdalautotest-coverage-results.github.io/coverage_html/index.html"
 msgstr ""
+"``lcov`` によって生成された最新の master ビルドの行カバレッジ結果のやや見栄えの良い出力も,"
+"https://gdalautotest-coverage-results.github.io/coverage_html/index.html で利用できます."
 
 #: ../../source/development/testing.rst:301
 msgid "Post-commit testing"
-msgstr ""
+msgstr "コミット後のテスト"
 
 #: ../../source/development/testing.rst:303
 msgid ""
@@ -345,4 +413,7 @@ msgid ""
 "<https://scan.coverity.com>`__. Developers/maintainers can request access"
 " on the `GDAL project page <https://scan.coverity.com/projects/749>`__."
 msgstr ""
+"週次の静的解析は,`Coverity <https://scan.coverity.com>`__ によって実行されます."
+"開発者/メンテナーは,`GDAL プロジェクトページ <https://scan.coverity.com/projects/749>`__ でアクセスをリクエストできます."
+
 
