@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/development/cmake.rst:5
 msgid "Using GDAL in CMake projects"
-msgstr ""
+msgstr "Cmake プロジェクトでの GDAL の利用"
 
 #: ../../source/development/cmake.rst:9
 msgid ""
@@ -30,12 +30,16 @@ msgid ""
 " by the CMake configuration which comes with the library. Typical usage "
 "is:"
 msgstr ""
+"GDAL ライブラリ 3.5 以上を CMake プロジェクトで使用する推奨される方法は,ライブラリに付属する CMake 構成で提供される"
+"インポートされたライブラリターゲット ``GDAL::GDAL`` にリンクすることです.典型的な使用法は次のとおりです:"
 
 #: ../../source/development/cmake.rst:19
 msgid ""
 "By adding the imported library target ``GDAL::GDAL`` to the target link "
 "libraries, CMake will also pass the include directories to the compiler."
 msgstr ""
+"インポートされたライブラリターゲット ``GDAL::GDAL`` をターゲットリンクライブラリに追加することで,CMake はコンパイラに"
+"インクルードディレクトリを渡します."
 
 #: ../../source/development/cmake.rst:23
 msgid ""
@@ -44,6 +48,8 @@ msgid ""
 "the cache variable or environment variable ``CMAKE_PREFIX_PATH``. In "
 "particular, CMake will consult (and set) the cache variable ``GDAL_DIR``."
 msgstr ""
+"CMake コマンド ``find_package`` は,構成をいくつかの場所で検索します.検索は,キャッシュ変数または環境変数 ``CMAKE_PREFIX_PATH`` を"
+"設定することですべてのパッケージに調整できます.特に,CMake はキャッシュ変数 ``GDAL_DIR`` を参照して(および設定して)います."
 
 #: ../../source/development/cmake.rst:29
 msgid ""
@@ -51,4 +57,6 @@ msgid ""
 "CMake <https://cmake.org/cmake/help/latest/module/FindGDAL.html>`__. This"
 " also creates the ``GDAL::GDAL`` target. It requires CMake version 3.14."
 msgstr ""
+"GDAL 3.5 より前では,`CMake で提供される検索モジュール <https://cmake.org/cmake/help/latest/module/FindGDAL.html>`__ を"
+"使用することをお勧めします.これは ``GDAL::GDAL`` ターゲットも作成します. CMake バージョン 3.14 が必要です."
 
