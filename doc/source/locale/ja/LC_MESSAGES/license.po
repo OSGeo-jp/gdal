@@ -28,6 +28,7 @@ msgid ""
 "In general GDAL/OGR is licensed under an MIT style license with the "
 "following terms:"
 msgstr ""
+"一般的に, GDAL/OGR は以下の条件を持つ MIT スタイルのライセンスの下でライセンスされています:"
 
 #: ../../source/license.rst:13
 msgid ""
@@ -39,12 +40,18 @@ msgid ""
 " persons to whom the Software is furnished to do so, subject to the "
 "following conditions:"
 msgstr ""
+"このソフトウェアおよび関連するドキュメントファイル（以下「ソフトウェア」と呼ぶ）のコピーを取得するすべての人に対して,"
+"以下の条件に従うことを条件として,ソフトウェアを制限なしで取り扱う権利が無償で付与されます."
+"これには,使用,コピー,変更,統合,公開,配布,サブライセンス,および/またはソフトウェアのコピーを販売する権利が含まれます."
+"また,ソフトウェアが提供された人に対して,ソフトウェアを使用することを許可します."
+"ただし,以下の条件に従うものとします:"
 
 #: ../../source/license.rst:20
 msgid ""
 "The above copyright notice and this permission notice shall be included "
 "in all copies or substantial portions of the Software."
 msgstr ""
+"上記の著作権表示およびこの許可表示は,ソフトウェアのすべてのコピーまたは実質的な部分に含まれる必要があります."
 
 #: ../../source/license.rst:23
 msgid ""
@@ -56,8 +63,12 @@ msgid ""
 "OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE"
 " USE OR OTHER DEALINGS IN THE SOFTWARE."
 msgstr ""
+"ソフトウェアは,明示的または黙示的な保証を含め,いかなる種類の保証もなしに提供されます."
+"これには,商品性,特定目的への適合性,および非侵害の保証が含まれます. 作者または著作権者は,"
+"ソフトウェアまたはソフトウェアの使用またはその他の取引に起因し,またはそれに関連して生じる契約行為,"
+"不法行為またはその他の行為による,いかなるクレーム,損害またはその他の責任についても,一切の責任を負いません."
 
 #: ../../source/license.rst:31
 msgid "The full licensing terms are available in the `LICENSE.TXT`_ file."
-msgstr ""
+msgstr "完全なライセンス条項は `LICENSE.TXT`_ ファイルで利用できます."
 

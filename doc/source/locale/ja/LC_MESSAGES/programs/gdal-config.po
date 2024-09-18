@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal-config.rst:9
 msgid "Determines various information about a GDAL installation."
-msgstr ""
+msgstr "GDAL インストールに関するさまざまな情報を決定します."
 
 #: ../../source/programs/gdal-config.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal-config.rst:28
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal-config.rst:30
 msgid ""
@@ -42,30 +42,33 @@ msgid ""
 "by configure scripts for applications using GDAL but can be queried by an"
 " end user."
 msgstr ""
+"このユーティリティスクリプト(Unix システムで利用可能)は,GDAL インストールに関するさまざまな情報を決定するために使用できます."
+"通常は,GDAL を使用するアプリケーションの設定スクリプトによってのみ使用されますが,エンドユーザーによってクエリできます."
 
 #: ../../source/programs/gdal-config.rst:37
 msgid "the top level directory for the GDAL installation."
-msgstr ""
+msgstr "GDAL インストールのトップレベルディレクトリ."
 
 #: ../../source/programs/gdal-config.rst:41
 msgid "The libraries and link directives required to use GDAL."
-msgstr ""
+msgstr "GDAL を使用するために必要なライブラリとリンクディレクティブ."
 
 #: ../../source/programs/gdal-config.rst:45
 msgid "The include and macro definition required to compiled modules using GDAL."
-msgstr ""
+msgstr "GDAL を使用してモジュールをコンパイルするために必要なインクルードとマクロ定義."
 
 #: ../../source/programs/gdal-config.rst:50
 msgid "Reports the GDAL version."
-msgstr ""
+msgstr "GDAL バージョンを報告します."
 
 #: ../../source/programs/gdal-config.rst:54
 msgid ""
 "Reports \"yes\" or \"no\" to standard output depending on whether OGR is "
 "built into GDAL."
 msgstr ""
+"OGR が GDAL に組み込まれているかどうかに応じて,標準出力に \"yes\" または \"no\" を報告します."
 
 #: ../../source/programs/gdal-config.rst:59
 msgid "Reports which formats are configured into GDAL to stdout."
-msgstr ""
+msgstr "どのフォーマットが GDAL に設定されているかを標準出力に報告します."
 

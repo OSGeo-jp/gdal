@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_calc.rst:9
 msgid "Command line raster calculator with numpy syntax."
-msgstr ""
+msgstr "numpy 構文を使用したコマンドラインラスター計算機."
 
 #: ../../source/programs/gdal_calc.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_calc.rst:-1
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "解説"
 
 #: ../../source/programs/gdal_calc.rst:25
 msgid ""
@@ -43,22 +43,28 @@ msgid ""
 "must have the same dimensions (unless extent option is used), but no "
 "projection checking is performed (unless projectionCheck option is used)."
 msgstr ""
+"numpy 構文を使用したコマンドラインラスター計算機. ``+``, ``-``, ``*``, ``/`` などの numpy 配列でサポートされる基本的な算術と ``>`` のような"
+"論理演算子を使用します."
+"すべてのファイルは同じ次元である必要があります(範囲オプションが使用されていない限り),ただし,"
+"投影チェックは実行されません(投影チェックオプションが使用されていない限り)."
 
 #: ../../source/programs/gdal_calc.rst:33
 msgid ""
 "gdal_calc is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal_calc は Python ユーティリティであり,GDAL Python バインディングが利用可能な場合のみ利用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法の簡単なメッセージを表示して終了します."
 
 #: ../../source/programs/gdal_calc.rst:39
 msgid ""
@@ -66,12 +72,15 @@ msgid ""
 "numpy array functions (i.e. ``log10()``). Multiple ``--calc`` options can"
 " be listed to produce a multiband file (GDAL >= 3.2)."
 msgstr ""
+"``+``, ``-``, ``/``, ``*`` または任意の numpy 配列関数(``log10()`` など)を使用した numpy 構文での計算."
+"複数の ``--calc`` オプションをリストアップして,マルチバンドファイルを生成できます(GDAL >= 3.2)."
 
 #: ../../source/programs/gdal_calc.rst:44
 msgid ""
 "Input gdal raster file, you can use any letter (a-z, A-Z).  (lower case "
 "supported since GDAL 3.3)"
 msgstr ""
+"入力 gdal ラスターファイル,任意の文字 (a-z, A-Z) を使用できます. (小文字は GDAL 3.3 以降でサポートされています)"
 
 #: ../../source/programs/gdal_calc.rst:46
 msgid ""
@@ -83,26 +92,32 @@ msgid ""
 "below). In case the calculation does not return a 2D array an error would"
 " be generated."
 msgstr ""
+"文字を繰り返すことができます,または複数の値(スペースで区切られた値)を提供できます(GDAL >= 3.3). GDAL 3.5 以降,ワイルドカード例外"
+"(?, \\*) がすべてのシェル/プラットフォームでサポートされています. その効果は,3 次元 numpy 配列を作成することです."
+"この場合,計算式はこの入力を 3 次元配列として使用し,2D 配列を返さなければなりません(以下の例を参照). 計算が 2D 配列を返さない場合,"
+"エラーが生成されます."
 
 #: ../../source/programs/gdal_calc.rst:54
 msgid "Number of raster band for file A (default 1)."
-msgstr ""
+msgstr "ファイル A のラスターバンドの数(デフォルト 1)."
 
 #: ../../source/programs/gdal_calc.rst:58
 msgid "Output file to generate or fill."
-msgstr ""
+msgstr "生成または塗りつぶす出力ファイル."
 
 #: ../../source/programs/gdal_calc.rst:62
 msgid ""
 "Output NoDataValue (default datatype specific value). To indicate not "
 "setting a NoDataValue use --NoDataValue=none (GDAL >= 3.3)"
 msgstr ""
+"出力 NoDataValue (デフォルトのデータ型固有の値). NoDataValue を設定しないことを示すには,--NoDataValue=none を使用します(GDAL >= 3.3)"
 
 #: ../../source/programs/gdal_calc.rst:66
 msgid ""
 "Using the Python API: ``None`` value will indicate default datatype "
 "specific value. ``'none'`` value will indicate not setting a NoDataValue."
 msgstr ""
+"Python API を使用する場合: ``None`` 値はデフォルトのデータ型固有の値を示します. ``'none'`` 値は NoDataValue を設定しないことを示します."
 
 #: ../../source/programs/gdal_calc.rst:74
 msgid ""
@@ -113,6 +128,9 @@ msgid ""
 "other value. The output will not have a set NoDataValue, unless you "
 "explicitly specified a specific value by setting --NoDataValue=<value>."
 msgstr ""
+"入力バンドの NoDataValue を無視します. デフォルトでは,入力バンドの NoDataValue は計算に参加しません. この設定を設定することで,"
+"入力 NoDataValue に特別な処理は行われず,他の値と同様に計算に参加します. 出力には "
+"特定の値を明示的に指定して --NoDataValue=<value> を設定しない限り NoDataValue が設定されません."
 
 #: ../../source/programs/gdal_calc.rst:81
 msgid ""
@@ -120,6 +138,8 @@ msgid ""
 "``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, ``Float64``, "
 "``Float32``, ``CInt16``, ``CInt32``, ``CFloat64``, ``CFloat32``]."
 msgstr ""
+"出力データ型は,以下のいずれかである必要があります[``Byte``, ``Int8``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, "
+"``Float64``, ``Float32``, ``CInt16``, ``CInt32``, ``CFloat64``, ``CFloat32``]."
 
 #: ../../source/programs/gdal_calc.rst:85
 msgid ""
@@ -128,16 +148,19 @@ msgid ""
 "result will honor the original datatype. This may lead into unexpected "
 "results in the final result."
 msgstr ""
+"``--type`` を使用して設定されたデータ型に関係なく,同じタイプのオペランドを使用して中間算術演算を行う場合,演算結果は元のデータ型を尊重します."
+"これは最終結果で予期しない結果につながる可能性があります."
 
 #: ../../source/programs/gdal_calc.rst:90
 msgid ""
 "UInt64, Int64, CInt16, CInt32, CFloat32, CFloat64 have been added in GDAL"
 " 3.5.3 Int8 has been added in GDAL 3.7"
 msgstr ""
+"UInt64, Int64, CInt16, CInt32, CFloat32, CFloat64 は GDAL 3.5.3 で追加されました. Int8 は GDAL 3.7 で追加されました."
 
 #: ../../source/programs/gdal_calc.rst:95
 msgid "GDAL format for output file."
-msgstr ""
+msgstr "出力ファイルの GDAL フォーマット."
 
 #: ../../source/programs/gdal_calc.rst:99
 msgid ""
@@ -146,6 +169,8 @@ msgid ""
 "Supported formats: txt (i.e. like gdaldem, but color names are not "
 "supported), qlr, qml (i.e. exported from QGIS)"
 msgstr ""
+"出力ラスターに使用するカラーテーブルのファイル名(または ColorTable オブジェクト)を指定できます(パレットインデックス解釈付き)."
+"サポートされるフォーマット: txt (gdaldem のような), qlr, qml (QGIS からエクスポートされたもの)"
 
 #: ../../source/programs/gdal_calc.rst:106
 msgid ""
@@ -153,42 +178,50 @@ msgid ""
 " option is mutually exclusive with the `projwin` option, which is used "
 "for providing a custom extent."
 msgstr ""
+"このオプションは,異なる範囲のラスタをどのように処理するかを決定します. このオプションは,カスタム範囲を提供するために使用される `projwin` オプションと"
+"排他的です."
 
 #: ../../source/programs/gdal_calc.rst:109
 msgid ""
 "For all the options below the pixel size (resolution) and SRS (Spatial "
 "Reference System) of all the input rasters must be the same."
 msgstr ""
+"以下のすべてのオプションにおいて,すべての入力ラスタのピクセルサイズ(解像度)と SRS (空間参照システム)は同じである必要があります."
 
 #: ../../source/programs/gdal_calc.rst:111
 msgid ""
 "``ignore`` (default) - only the dimensions of the rasters are compared. "
 "if the dimensions do not agree the operation will fail."
 msgstr ""
+"``ignore`` (デフォルト) - ラスタの次元のみが比較されます. 次元が一致しない場合,操作は失敗します."
 
 #: ../../source/programs/gdal_calc.rst:113
 msgid ""
 "``fail`` - the dimensions and the extent (bounds) of the rasters must "
 "agree, otherwise the operation will fail."
 msgstr ""
+"``fail`` - ラスタの次元と範囲(境界)が一致している必要があります. そうでない場合,操作は失敗します."
 
 #: ../../source/programs/gdal_calc.rst:115
 msgid ""
 "``union`` - the extent (bounds) of the output will be the minimal "
 "rectangle that contains all the input extents."
 msgstr ""
+"``union`` - 出力の範囲(境界)は,すべての入力範囲を含む最小の長方形になります."
 
 #: ../../source/programs/gdal_calc.rst:117
 msgid ""
 "``intersect`` - the extent (bounds) of the output will be the maximal "
 "rectangle that is contained in all the input extents."
 msgstr ""
+"``intersect`` - 出力の範囲(境界)は,すべての入力範囲に含まれる最大の長方形になります."
 
 #: ../../source/programs/gdal_calc.rst:123
 msgid ""
 "This option provides a custom extent for the output, it is mutually "
 "exclusive with the `extent` option."
 msgstr ""
+"このオプションは,出力のカスタム範囲を提供します. これは `extent` オプションと排他的です."
 
 #: ../../source/programs/gdal_calc.rst:129
 msgid ""
@@ -196,6 +229,7 @@ msgid ""
 "option, if the projection is not the same for all bands then the "
 "operation will fail."
 msgstr ""
+"デフォルトでは,投影チェックは実行されません. このオプションを設定することで,すべてのバンドの投影が同じでない場合,操作は失敗します."
 
 #: ../../source/programs/gdal_calc.rst:136
 msgid ""
@@ -203,16 +237,19 @@ msgid ""
 "may be listed. See format specific documentation for legal creation "
 "options for each format."
 msgstr ""
+"出力フォーマットドライバに作成オプションを渡します. 複数のオプションをリストアップできます. 各フォーマットの法的な作成オプションについては,"
+"フォーマット固有のドキュメントを参照してください."
 
 #: ../../source/programs/gdal_calc.rst:142
 msgid "The same as creation-option_."
-msgstr ""
+msgstr "creation-option_ と同じです."
 
 #: ../../source/programs/gdal_calc.rst:146
 msgid ""
 "Process all bands of given raster (a-z, A-Z). Requires a single calc for "
 "all bands."
 msgstr ""
+"指定されたラスタのすべてのバンド(a-z, A-Z)を処理します. すべてのバンドに対して単一の計算が必要です."
 
 #: ../../source/programs/gdal_calc.rst:150
 msgid ""
@@ -221,54 +258,60 @@ msgid ""
 "that if this option is *not* specified and the output file already "
 "exists, it will be updated in place."
 msgstr ""
+"出力ファイルがすでに存在する場合は上書きします. ここでの上書きは,ファイルをゼロから削除して再作成することとして理解する必要があります."
+"このオプションが指定されていない場合,出力ファイルがすでに存在する場合,その場所で更新されます."
 
 #: ../../source/programs/gdal_calc.rst:157
 msgid "Print debugging information."
-msgstr ""
+msgstr "デバッグ情報を出力します."
 
 #: ../../source/programs/gdal_calc.rst:161
 msgid "Suppress progress messages."
-msgstr ""
+msgstr "進行メッセージを抑制します."
 
 #: ../../source/programs/gdal_calc.rst:165
 msgid "Python options"
-msgstr ""
+msgstr "Python オプション"
 
 #: ../../source/programs/gdal_calc.rst:169
 msgid ""
 "The following options are available by using function the python "
 "interface of gdal_calc. They are not available using the command prompt."
 msgstr ""
+"次のオプションは, gdal_calc の Python インターフェースを使用して利用できます. コマンドプロンプトを使用しては利用できません."
 
 #: ../../source/programs/gdal_calc.rst:174
 msgid ""
 "A dictionary of custom functions or other names to be available for use "
 "in the Calc expression."
 msgstr ""
+"Calc 式で使用できるカスタム関数やその他の名前の辞書."
 
 #: ../../source/programs/gdal_calc.rst:178
 msgid ""
 "If enabled, the output dataset would be returned from the function and "
 "not closed."
 msgstr ""
+"有効にすると,出力データセットは関数から返され,閉じられません."
 
 #: ../../source/programs/gdal_calc.rst:182
 msgid ""
 "Allows specifying a ColorTable object (with Palette Index interpretation)"
 " to be used for the output raster."
 msgstr ""
+"出力ラスタに使用する ColorTable オブジェクト(パレットインデックス解釈付き)を指定できます."
 
 #: ../../source/programs/gdal_calc.rst:185
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_calc.rst:187
 msgid "Add two files together:"
-msgstr ""
+msgstr "2 つのファイルを追加します:"
 
 #: ../../source/programs/gdal_calc.rst:193
 msgid "Average of two layers:"
-msgstr ""
+msgstr "2 つのレイヤーの平均:"
 
 #: ../../source/programs/gdal_calc.rst:201
 msgid ""
@@ -276,30 +319,31 @@ msgid ""
 "datatype, for example integers, you may need to force the conversion of "
 "one of the operands before the division operation."
 msgstr ""
+"前の例では,入力 A と B が同じデータ型である場合,例えば整数である場合,除算操作の前にオペランドの変換を強制する必要があることに注意してください."
 
 #: ../../source/programs/gdal_calc.rst:208
 msgid "Add three files together (two options with the same result):"
-msgstr ""
+msgstr "3 つのファイルを追加します(2 つのオプションで同じ結果):"
 
 #: ../../source/programs/gdal_calc.rst:218
 msgid "Average of three layers (two options with the same result):"
-msgstr ""
+msgstr "3 つのレイヤーの平均(2 つのオプションで同じ結果):"
 
 #: ../../source/programs/gdal_calc.rst:228
 msgid "Maximum of three layers  (two options with the same result):"
-msgstr ""
+msgstr "3 つのレイヤーの最大値(2 つのオプションで同じ結果):"
 
 #: ../../source/programs/gdal_calc.rst:238
 msgid "Set values of zero and below to null:"
-msgstr ""
+msgstr "0 以下の値を null に設定します:"
 
 #: ../../source/programs/gdal_calc.rst:244
 msgid "Using logical operator to keep a range of values from input:"
-msgstr ""
+msgstr "入力から値の範囲を保持するための論理演算子の使用:"
 
 #: ../../source/programs/gdal_calc.rst:250
 msgid "Work with multiple bands:"
-msgstr ""
+msgstr "複数のバンドで作業:"
 
 #~ msgid ""
 #~ "Despite the datatype set using "

@@ -25,7 +25,7 @@ msgstr "gdal2xyz"
 
 #: ../../source/programs/gdal2xyz.rst:9
 msgid "Translates a raster file into `xyz` format."
-msgstr "ラスターファイルを `xyz` フォーマットに変換する。"
+msgstr "ラスターファイルを `xyz` フォーマットに変換します."
 
 #: ../../source/programs/gdal2xyz.rst:14
 msgid "Synopsis"
@@ -41,44 +41,49 @@ msgid ""
 "into xyz format. `gdal2xyz` can be used as an alternative to "
 "`gdal_translate of=xyz`. Features include:"
 msgstr ""
+":program:`gdal2xyz` ユーティリティは,ラスターファイルを xyz フォーマットに変換するために使用できます."
+"`gdal2xyz` は `gdal_translate of=xyz` の代替として使用できます.機能には次のものがあります:"
 
 #: ../../source/programs/gdal2xyz.rst:33
 msgid "Select more then one band"
-msgstr "複数のバンドを選択する"
+msgstr "複数のバンドを選択します"
 
 #: ../../source/programs/gdal2xyz.rst:34
 msgid "Skip or replace nodata value"
-msgstr "ノデータの値をスキップまたは置換する"
+msgstr "nodataの値をスキップまたは置換します"
 
 #: ../../source/programs/gdal2xyz.rst:35
 msgid "Return the output as numpy arrays."
-msgstr "出力をnumpy配列で返す。"
+msgstr "出力をnumpy配列で返します."
 
 #: ../../source/programs/gdal2xyz.rst:39
 msgid ""
 "gdal2xyz is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal2xyz は Python ユーティリティであり,GDAL Python バインディングが利用可能な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr "このヘルプメッセージを表示して終了する"
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal2xyz.rst:47
 msgid "How many rows/cols to skip in each iteration."
-msgstr "各反復でスキップする行数/列数。"
+msgstr "各反復でスキップする行数/列数."
 
 #: ../../source/programs/gdal2xyz.rst:51
 msgid ""
 "Selects a subwindow from the source image for copying based on pixel/line"
 " location."
 msgstr ""
+"ピクセル/ラインの位置に基づいてソース画像からコピーするためのサブウィンドウを選択します."
 
 #: ../../source/programs/gdal2xyz.rst:55
 msgid ""
@@ -87,18 +92,21 @@ msgid ""
 "**-b** switches may be used. When no -b switch is used, the first band "
 "will be used. In order to use all input bands set `-allbands` or `-b 0`."
 msgstr ""
+"出力のための入力スペクトルバンドからバンド *band* を選択します. バンドは,スペクトルバンドが指定された順序で1から番号付けされます."
+"複数の **-b** スイッチを使用できます. **-b** スイッチを使用しない場合,最初のバンドが使用されます. すべての入力バンドを使用するには,"
+"`-allbands` または `-b 0` を設定します."
 
 #: ../../source/programs/gdal2xyz.rst:63
 msgid "Select all input bands."
-msgstr "すべての入力バンドを選択する。"
+msgstr "すべての入力バンドを選択します."
 
 #: ../../source/programs/gdal2xyz.rst:67
 msgid "Use comma instead of space as a delimiter."
-msgstr "区切り文字として、スペースの代わりにカンマを使用する。"
+msgstr "区切り文字として、スペースの代わりにカンマを使用します."
 
 #: ../../source/programs/gdal2xyz.rst:71
 msgid "Exclude the output lines with nodata value (as determined by srcnodata)"
-msgstr "(srcnodataによって決定される)nodata値を持つ出力行を除外する"
+msgstr "(srcnodataによって決定される)nodata値を持つ出力行を除外します"
 
 #: ../../source/programs/gdal2xyz.rst:75
 msgid ""
@@ -106,6 +114,8 @@ msgid ""
 "(`None`) - Use the dataset nodata value; `Sequence`/`Number` - Use the "
 "given nodata value (per band or per dataset)."
 msgstr ""
+"データセットの nodata 値(スキップまたは置換のため) デフォルト(`None`) - データセットの nodata 値を使用します;"
+"`Sequence`/`Number` - 指定された nodata 値を使用します(バンドごとまたはデータセットごと)。"
 
 #: ../../source/programs/gdal2xyz.rst:81
 msgid ""
@@ -114,22 +124,24 @@ msgid ""
 " `Sequence`/`Number` - Replace the `srcnodata` with the given nodata "
 "value (per band or per dataset)."
 msgstr ""
+"ソースの nodata を指定された nodata で置き換えます. `-skipnodata` を設定していない場合のみ効果があります."
+"デフォルト(`None`) - `srcnodata` を使用し,置換は行いません; `Sequence`/`Number` - `srcnodata` を指定された nodata 値で置き換えます(バンドごとまたはデータセットごと)。"
 
 #: ../../source/programs/gdal2xyz.rst:87
 msgid "Show help message and exit."
-msgstr "ヘルプメッセージを表示して終了する。"
+msgstr "ヘルプメッセージを表示して終了します."
 
 #: ../../source/programs/gdal2xyz.rst:91
 msgid ""
 "The source dataset name. It can be either file name, URL of data source "
 "or subdataset name for multi-dataset files."
 msgstr ""
-"ソースデータセット名。ファイル名、データソースのURL、またはマルチデータセットファイルの場合は"
-"サブデータセット名のいずれかになります。"
+"ソースデータセット名.ファイル名,データソースのURL,またはマルチデータセットファイルの場合は"
+"サブデータセット名のいずれかになります."
 
 #: ../../source/programs/gdal2xyz.rst:96
 msgid "The destination file name."
-msgstr "保存先のファイル名。"
+msgstr "保存先のファイル名."
 
 #: ../../source/programs/gdal2xyz.rst:100
 msgid "Examples"
@@ -142,6 +154,9 @@ msgid ""
 "cell. The remaining columns represent the first and second bands. We also"
 " replace the dataset nodata values with zeros."
 msgstr ""
+"入力ファイル `input.tif` から `xyz` フォーマットのテキストファイルを作成します."
+"最初の列 x と y は各セルの中心の座標です. 残りの列は,最初と2番目のバンドを表します."
+"また,データセットの nodata 値をゼロに置き換えます."
 
 #: ../../source/programs/gdal2xyz.rst:114
 msgid "Caveats"
@@ -152,6 +167,6 @@ msgid ""
 "gdal2xyz output values with a limited precision. Use ``gdal_translate -of"
 " XYZ`` if more precision is desired."
 msgstr ""
-"gdal2xyz の出力の精度は限定されています。さらに高い精度が必要な場合は ``gdal_translate -of"
-" XYZ`` を使用してください。"
+"gdal2xyz の出力の精度は限定されています.さらに高い精度が必要な場合は ``gdal_translate -of"
+" XYZ`` を使用してください."
 
