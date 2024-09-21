@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,27 +25,29 @@ msgstr ""
 
 #: ../../source/programs/gdal_edit.rst:9
 msgid "Edit in place various information of an existing GDAL dataset."
-msgstr ""
+msgstr "既存の GDAL データセットのさまざまな情報を編集します."
 
 #: ../../source/programs/gdal_edit.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_edit.rst:31
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_edit.rst:33
 msgid ""
 ":program:`gdal_edit` can be used to edit in place various information of "
 "an existing GDAL dataset (projection, geotransform, nodata, metadata)."
 msgstr ""
+":program:`gdal_edit` は,既存の GDAL データセットのさまざまな情報(投影,ジオトランスフォーム,ノーデータ,メタデータ)を編集するために使用できます."
 
 #: ../../source/programs/gdal_edit.rst:37
 msgid ""
 "It works only with raster formats that support update access to existing "
 "datasets."
 msgstr ""
+"既存のデータセットに対する更新アクセスをサポートするラスターフォーマットのみで動作します."
 
 #: ../../source/programs/gdal_edit.rst:41
 msgid ""
@@ -54,22 +56,26 @@ msgid ""
 "accessible through the GDAL API. This is for example the case of the "
 ":ref:`raster.gtiff` format (this is not a exhaustive list)."
 msgstr ""
+"フォーマットによっては,更新された情報の古い値がファイル内に \"ゴースト\" 状態で残っている場合があります."
+"GDAL API を介してアクセスできなくなっても,このような場合があります.例えば, :ref:`raster.gtiff` フォーマットの場合です(これは完全なリストではありません)."
 
 #: ../../source/programs/gdal_edit.rst:48
 msgid ""
 "gdal_edit is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal_edit は Python ユーティリティであり,GDAL Python バインディングが利用可能な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_edit.rst:54
 msgid ""
@@ -77,6 +83,8 @@ msgid ""
 "use the dataset in update-mode. In which case, updated information will "
 "go into PAM :file:`.aux.xml` files."
 msgstr ""
+"データセットを読み取り専用で開きます.データセットを更新モードで使用することを拒否するドライバには便利かもしれません."
+"この場合,更新された情報は PAM :file:`.aux.xml` ファイルに保存されます."
 
 #: ../../source/programs/gdal_edit.rst:60
 msgid ""
@@ -85,20 +93,23 @@ msgid ""
 "the existing coordinate system will be removed (for TIFF/GeoTIFF, might "
 "not be well supported besides that)."
 msgstr ""
+"ターゲット座標系を定義します.この座標系はデータセットに書き込まれます.空の文字列"
+"または None が指定された場合,既存の座標系が削除されます(TIFF/GeoTIFF の場合,それ以外はうまくサポートされないかもしれません)."
 
 #: ../../source/programs/gdal_edit.rst:68
 msgid ""
 "Assign/override the coordinate epoch of the dataset, as a decimal year "
 "(e.g., 2021.3)."
 msgstr ""
+"データセットの座標エポックを割り当て/上書きします.小数年(例:2021.3)として指定します."
 
 #: ../../source/programs/gdal_edit.rst:74
 msgid "Remove the coordinate epoch of the dataset."
-msgstr ""
+msgstr "データセットの座標エポックを削除します."
 
 #: ../../source/programs/gdal_edit.rst:80
 msgid "Assign/override the georeferenced bounds of the dataset."
-msgstr ""
+msgstr "データセットのジオリファレンスされた境界を割り当て/上書きします."
 
 #: ../../source/programs/gdal_edit.rst:84
 msgid ""
@@ -107,28 +118,31 @@ msgid ""
 " this also supports rotated datasets (edges not parallel to coordinate "
 "system axes)."
 msgstr ""
+"データセットのジオリファレンスされた境界を3つの点から割り当て/上書きします:左上,右上,左下."
+" :option:`-a_ullr` とは異なり,これは回転したデータセット(座標系の軸に平行でないエッジ)もサポートします."
 
 #: ../../source/programs/gdal_edit.rst:92
 msgid ""
 "Set target resolution. The values must be expressed in georeferenced "
 "units. Both must be positive values."
 msgstr ""
+"ターゲット解像度を設定します.値はジオリファレンスされた単位で表される必要があります.両方とも正の値である必要があります."
 
 #: ../../source/programs/gdal_edit.rst:97
 msgid "Remove the georeference information."
-msgstr ""
+msgstr "ジオリファレンス情報を削除します."
 
 #: ../../source/programs/gdal_edit.rst:101
 msgid "Remove RPC information."
-msgstr ""
+msgstr "RPC 情報を削除します."
 
 #: ../../source/programs/gdal_edit.rst:107
 msgid "Remove band statistics information."
-msgstr ""
+msgstr "バンド統計情報を削除します."
 
 #: ../../source/programs/gdal_edit.rst:113
 msgid "Calculate and store band statistics."
-msgstr ""
+msgstr "バンド統計を計算して保存します."
 
 #: ../../source/programs/gdal_edit.rst:119
 msgid ""
@@ -137,18 +151,20 @@ msgid ""
 "statistics are calclulated from the file and the ones set to None are "
 "used from the real statistics."
 msgstr ""
+"バンド統計のユーザー定義値(最小値,最大値,平均値,標準偏差)を保存します."
+"値のいずれかが None に設定されている場合,実際の統計値がファイルから計算され,そのうち None に設定されたものが実際の統計値から使用されます."
 
 #: ../../source/programs/gdal_edit.rst:128
 msgid "Calculate and store approximate band statistics."
-msgstr ""
+msgstr "バンド統計を計算して保存します."
 
 #: ../../source/programs/gdal_edit.rst:134
 msgid "Assign a specified nodata value to output bands."
-msgstr ""
+msgstr "指定されたノーデータ値を出力バンドに割り当てます."
 
 #: ../../source/programs/gdal_edit.rst:138
 msgid "Remove existing nodata values."
-msgstr ""
+msgstr "既存のノーデータ値を削除します."
 
 #: ../../source/programs/gdal_edit.rst:144
 msgid ""
@@ -162,12 +178,18 @@ msgid ""
 " values would be calculated as: true_value = (pixel_value * scale) + "
 "offset"
 msgstr ""
+"出力バンドに指定されたスケール値を割り当てます.単一のスケール値が提供された場合,すべてのバンドに設定されます."
+"代わりに,バンドごとに1つのスケール値を提供できます.この場合,スケール値の数はバンドの数と一致する必要があります."
+"スケールが必要ない場合,値を 1 に設定することをお勧めします.スケールとオフセットは一般的に一緒に使用されます."
+"たとえば,スケールとオフセットは,精度が 0.1 で-100 から始まる符号なし 16 ビット整数ファイルに標高を格納するために使用されるかもしれません."
+"真の値は次のように計算されます: true_value = (pixel_value * scale) + offset"
 
 #: ../../source/programs/gdal_edit.rst:154
 msgid ""
 "These values can be applied using -unscale during a "
 ":program:`gdal_translate` run."
 msgstr ""
+"これらの値は, :program:`gdal_translate` 実行中に -unscale を使用して適用できます."
 
 #: ../../source/programs/gdal_edit.rst:160
 msgid ""
@@ -177,28 +199,34 @@ msgid ""
 " match the number of bands. If no offset is needed, it recommended to set"
 " the value to 0. For more see scale."
 msgstr ""
+"出力バンドに指定されたオフセット値を割り当てます.単一のオフセット値が提供された場合,すべてのバンドに設定されます."
+"代わりに,バンドごとに1つのオフセット値を提供できます.この場合,オフセット値の数はバンドの数と一致する必要があります."
+"オフセットが必要ない場合,値を 0 に設定することをお勧めします.詳細についてはスケールを参照してください."
 
 #: ../../source/programs/gdal_edit.rst:171
 msgid "Assign a unit to output band(s)."
-msgstr ""
+msgstr "出力バンドに単位を割り当てます."
 
 #: ../../source/programs/gdal_edit.rst:177
 msgid ""
 "Change the color interpretation of band X (where X is a valid band "
 "number, starting at 1)."
 msgstr ""
+"バンド X (X は 1 から始まる有効なバンド番号) の色の解釈を変更します."
 
 #: ../../source/programs/gdal_edit.rst:184
 msgid ""
 "Add the indicated ground control point to the dataset. This option may be"
 " provided multiple times to provide a set of GCPs."
 msgstr ""
+"指定された地上制御点をデータセットに追加します.このオプションは,複数回提供して GCP のセットを提供できます."
 
 #: ../../source/programs/gdal_edit.rst:189
 msgid ""
 "Remove existing metadata (in the default metadata domain). Can be "
 "combined with :option:`-mo`."
 msgstr ""
+"既存のメタデータ(デフォルトのメタデータドメイン)を削除します. :option:`-mo` と組み合わせることができます."
 
 #: ../../source/programs/gdal_edit.rst:196
 msgid ""
@@ -206,24 +234,28 @@ msgid ""
 " This metadata is added to the existing metadata items, unless "
 ":option:`-unsetmd` is also specified."
 msgstr ""
+"可能であれば,出力データセットに設定するメタデータキーと値を渡します."
+"このメタデータは, :option:`-unsetmd` も指定されていない限り,既存のメタデータ項目に追加されます."
 
 #: ../../source/programs/gdal_edit.rst:202
 msgid "Open option (format specific)."
-msgstr ""
+msgstr "オープンオプション(フォーマット固有)."
 
 #: ../../source/programs/gdal_edit.rst:206
 msgid ""
 "The :option:`-a_ullr`, :option:`-a_ulurll`, :option:`-tr` and "
 ":option:`-unsetgt` options are exclusive."
 msgstr ""
+":option:`-a_ullr`, :option:`-a_ulurll`, :option:`-tr` および :option:`-unsetgt` オプションは排他的です."
 
 #: ../../source/programs/gdal_edit.rst:208
 msgid ""
 "The :option:`-unsetstats` and either :option:`-stats` or "
 ":option:`-approx_stats` options are exclusive."
 msgstr ""
+":option:`-unsetstats` と :option:`-stats` または :option:`-approx_stats` オプションは排他的です."
 
 #: ../../source/programs/gdal_edit.rst:211
 msgid "Example"
-msgstr ""
+msgstr "例"
 

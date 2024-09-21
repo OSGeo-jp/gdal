@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_footprint.rst:11
 msgid "Compute footprint of a raster."
-msgstr ""
+msgstr "ラスターのフットプリントを計算します."
 
 #: ../../source/programs/gdal_footprint.rst:16
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_footprint.rst:36
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_footprint.rst:38
 msgid ""
@@ -43,22 +43,27 @@ msgid ""
 "polygons/multipolygons corresponding to areas where pixels are valid, and"
 " write to an output vector file."
 msgstr ""
+":program:`gdal_footprint` ユーティリティは,ラスターファイルのフットプリントを計算するために使用できます."
+"ノーデータ値(または一般的にはラスターバンドに付属するマスクバンド)を考慮し,有効なピクセルが存在する領域に"
+"対応するポリゴン/マルチポリゴンを生成し,出力ベクトルファイルに書き込みます."
 
 #: ../../source/programs/gdal_footprint.rst:43
 msgid ""
 "The :program:`nearblack` utility may be run as a pre-processing step to "
 "generate proper mask bands."
 msgstr ""
+":program:`nearblack` ユーティリティは,適切なマスクバンドを生成するための前処理ステップとして実行できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_footprint.rst:53
 msgid ""
@@ -67,6 +72,8 @@ msgid ""
 "account. The way multiple bands are combined is controlled by "
 ":option:`-combine_bands`"
 msgstr ""
+"興味のあるバンド. 1 からラスターのバンド数までの間.複数回指定できます.指定しない場合,すべてのバンドが考慮されます."
+"複数のバンドが組み合わされる方法は, :option:`-combine_bands` で制御されます."
 
 #: ../../source/programs/gdal_footprint.rst:60
 msgid ""
@@ -76,6 +83,9 @@ msgid ""
 "the selected bands. ``intersection`` means that a pixel is valid only "
 "ifit is valid for all selected bands."
 msgstr ""
+"選択されたバンドのマスクバンドがベクトル化される前に,単一のマスクバンドを生成する方法を定義します."
+"デフォルト値は ``union`` です:つまり,ピクセルが選択されたバンドの少なくとも 1 つで有効である場合,有効です."
+"``intersection`` は,ピクセルがすべての選択されたバンドで有効である場合のみ有効です."
 
 #: ../../source/programs/gdal_footprint.rst:69
 msgid ""
@@ -85,6 +95,9 @@ msgid ""
 " overview level. This option is mutually exclusive with "
 ":option:`-srcnodata`."
 msgstr ""
+"ソースラスターにオーバービューがある場合に使用するソースファイルのオーバービューレベルを指定します."
+"デフォルトでは,完全な解像度レベルが使用されます.インデックスは 0 から始まり,つまり 0 は最初のオーバービューレベルを意味します."
+"このオプションは, :option:`-srcnodata` と相互排他です."
 
 #: ../../source/programs/gdal_footprint.rst:76
 msgid ""
@@ -96,6 +109,9 @@ msgid ""
 "not specified, the intrinsic mask band of each selected bands will be "
 "used."
 msgstr ""
+"入力バンドのノーデータ値を設定します(各バンドに異なる値を指定できます).単一の値が指定された場合,すべての選択されたバンドに適用されます."
+"複数の値が指定された場合,選択されたバンドの数と同じ数の値が必要であり,すべての値を引用符で囲んで単一のオペレーティングシステム引数として"
+"まとめる必要があります.オプションが指定されていない場合,各選択されたバンドの固有のマスクバンドが使用されます."
 
 #: ../../source/programs/gdal_footprint.rst:86
 msgid ""
@@ -105,6 +121,9 @@ msgid ""
 "specified with :option:`-t_srs`). If specifying ``pixel``, the "
 "coordinates of the footprint geometry are column and line indices."
 msgstr ""
+"ターゲット座標系.デフォルトでは,入力データセットがジオリファレンスされている場合,``georef`` が暗黙的に指定されます."
+"つまり,フットプリントジオメトリはラスターの CRS(または :option:`-t_srs` で指定された CRS)の座標として表されます."
+"``pixel`` を指定すると,フットプリントジオメトリの座標は列と行のインデックスです."
 
 #: ../../source/programs/gdal_footprint.rst:94
 msgid ""
@@ -113,16 +132,19 @@ msgid ""
 "WKT. Specifying this option implies -t_cs georef The footprint is "
 "reprojected from the CRS of the source raster to the specified CRS."
 msgstr ""
+"出力ファイルのターゲット CRS. <srs_def> は通常の GDAL/OGR 形式,完全な WKT,PROJ.4,EPSG:n または WKT を含むファイルのいずれかである可能性があります."
+"このオプションを指定すると, -t_cs georef が暗黙的に指定されます.フットプリントは,ソースラスターの CRS から指定された CRS に再投影されます."
 
 #: ../../source/programs/gdal_footprint.rst:103
 msgid ""
 "When specified, multipolygons are split as several features each with one"
 " single polygon."
 msgstr ""
+"指定された場合,マルチポリゴンは,それぞれが単一のポリゴンを持つ複数のフィーチャとして分割されます."
 
 #: ../../source/programs/gdal_footprint.rst:108
 msgid "When specified, the convex hull of (multi)polygons is computed."
-msgstr ""
+msgstr "指定された場合,(マルチ)ポリゴンの凸包が計算されます."
 
 #: ../../source/programs/gdal_footprint.rst:112
 msgid ""
@@ -132,6 +154,8 @@ msgid ""
 "georeferenced units of the source raster. This option is applied before "
 "the reprojection implied by :option:`-t_srs`."
 msgstr ""
+"このオプションの指定値は,出力ジオメトリの連続する2点間の最大距離です.距離の単位は, :option:`-t_cs` が ``pixel`` の場合はピクセル,"
+"それ以外の場合はソースラスターのジオリファレンス単位です.このオプションは, :option:`-t_srs` によって暗黙的に指定された再投影の前に適用されます."
 
 #: ../../source/programs/gdal_footprint.rst:120
 msgid ""
@@ -142,6 +166,9 @@ msgid ""
 " units of the target vector dataset. This option is applied after the "
 "reprojection implied by :option:`-t_srs`."
 msgstr ""
+"このオプションの指定値は, :cpp:func:`OGRGeometry::Simplify` メソッドを使用して出力ジオメトリの連続する点をマージするために使用される許容値です."
+"距離の単位は, :option:`-t_cs` が ``pixel`` の場合はピクセル,それ以外の場合はターゲットベクトルデータセットのジオリファレンス単位です."
+"このオプションは, :option:`-t_srs` によって暗黙的に指定された再投影の後に適用されます."
 
 #: ../../source/programs/gdal_footprint.rst:129
 msgid ""
@@ -150,6 +177,8 @@ msgid ""
 " units of the target vector dataset. This option is applied after the "
 "reprojection implied by :option:`-t_srs`"
 msgstr ""
+"リングの面積の最小値.面積の単位は, :option:`-t_cs` が ``pixel`` の場合は平方ピクセル,それ以外の場合はターゲットベクトルデータセットのジオリファレンス単位です."
+"このオプションは, :option:`-t_srs` によって暗黙的に指定された再投影の後に適用されます."
 
 #: ../../source/programs/gdal_footprint.rst:136
 msgid ""
@@ -158,20 +187,23 @@ msgid ""
 "point). The default value is 100. ``unlimited`` can be used to remove "
 "that limitation."
 msgstr ""
+"各出力ジオメトリの最大点数(各リングの終了点をカウントしない,これは常に最初の点と同じです).デフォルト値は 100 です."
+"``unlimited`` を使用して,その制限を解除できます."
 
 #: ../../source/programs/gdal_footprint.rst:142
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターとその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/gdal_footprint.rst:146
 msgid "Dataset open option (format specific)"
-msgstr ""
+msgstr "データセットオープンオプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_footprint.rst:150
 msgid ""
 "Select the output format. Use the short format name. Guessed from the "
 "file extension if not specified"
 msgstr ""
+"出力フォーマットを選択します.短いフォーマット名を使用します.指定されていない場合は,ファイルの拡張子から推測されます"
 
 #: ../../source/programs/gdal_footprint.rst:157
 msgid ""
@@ -180,12 +212,15 @@ msgid ""
 "\"location\". To prevent writing the path of the input dataset, use "
 ":option:`-no_location`"
 msgstr ""
+"入力データセットのパスが格納される結果のベクトルデータセットのフィールドの名前を指定します."
+"デフォルトのフィールド名は \"location\" です.入力データセットのパスの書き込みを防ぐには, :option:`-no_location` を使用します"
 
 #: ../../source/programs/gdal_footprint.rst:166
 msgid ""
 "Turns off the writing of the path of the input dataset as a field in the "
 "output vector dataset."
 msgstr ""
+"出力ベクトルデータセットのフィールドとして入力データセットのパスの書き込みをオフにします."
 
 #: ../../source/programs/gdal_footprint.rst:173
 msgid ""
@@ -193,26 +228,27 @@ msgid ""
 "filename is written in the location field exactly as specified on the "
 "command line."
 msgstr ""
+"入力データセットの絶対パスの書き込みを有効にします.デフォルトでは,ファイル名はコマンドラインで指定されたとおりに場所フィールドに書き込まれます."
 
 #: ../../source/programs/gdal_footprint.rst:179
 msgid "Layer creation option (format specific)"
-msgstr ""
+msgstr "レイヤ作成オプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_footprint.rst:183
 msgid "Dataset creation option (format specific)"
-msgstr ""
+msgstr "データセット作成オプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_footprint.rst:187
 msgid "Name of the target layer. ``footprint`` if not specified."
-msgstr ""
+msgstr "ターゲットレイヤの名前.指定されていない場合は ``footprint`` です."
 
 #: ../../source/programs/gdal_footprint.rst:191
 msgid "Overwrite the target layer if it exists."
-msgstr ""
+msgstr "ターゲットレイヤが存在する場合は上書きします."
 
 #: ../../source/programs/gdal_footprint.rst:195
 msgid "The source raster file name."
-msgstr ""
+msgstr "ソースラスターファイル名."
 
 #: ../../source/programs/gdal_footprint.rst:199
 msgid ""
@@ -220,40 +256,42 @@ msgid ""
 " the new footprint is appended to them, unless :option:`-overwrite` is "
 "used."
 msgstr ""
+"出力ベクトルファイル名.ファイルと出力レイヤが存在する場合,新しいフットプリントが追加されます. :option:`-overwrite` が使用されていない限りです."
 
 #: ../../source/programs/gdal_footprint.rst:203
 msgid ""
 "Post-vectorization geometric operations are applied in the following "
 "order:"
 msgstr ""
+"ベクトル化後の幾何学的操作は,次の順序で適用されます:"
 
 #: ../../source/programs/gdal_footprint.rst:205
 msgid "optional splitting (:option:`-split_polys`)"
-msgstr ""
+msgstr "分割オプション(:option:`-split_polys`)"
 
 #: ../../source/programs/gdal_footprint.rst:206
 msgid "optional densification (:option:`-densify`)"
-msgstr ""
+msgstr "密度オプション(:option:`-densify`)"
 
 #: ../../source/programs/gdal_footprint.rst:207
 msgid "optional reprojection (:option:`-t_srs`)"
-msgstr ""
+msgstr "再投影オプション(:option:`-t_srs`)"
 
 #: ../../source/programs/gdal_footprint.rst:208
 msgid "optional filtering by minimum ring area (:option:`-min_ring_area`)"
-msgstr ""
+msgstr "最小リング面積によるオプションフィルタリング(:option:`-min_ring_area`)"
 
 #: ../../source/programs/gdal_footprint.rst:209
 msgid "optional application of convex hull (:option:`-convex_hull`)"
-msgstr ""
+msgstr "凸包の適用オプション(:option:`-convex_hull`)"
 
 #: ../../source/programs/gdal_footprint.rst:210
 msgid "optional simplification (:option:`-simplify`)"
-msgstr ""
+msgstr "簡略化オプション(:option:`-simplify`)"
 
 #: ../../source/programs/gdal_footprint.rst:211
 msgid "limitation of number of points (:option:`-max_points`)"
-msgstr ""
+msgstr "点数の制限(:option:`-max_points`)"
 
 #: ../../source/programs/gdal_footprint.rst:214
 msgid "C API"
@@ -261,15 +299,16 @@ msgstr ""
 
 #: ../../source/programs/gdal_footprint.rst:216
 msgid "This utility is also callable from C with :cpp:func:`GDALFootprint`."
-msgstr ""
+msgstr "このユーティリティは,C からも :cpp:func:`GDALFootprint` で呼び出すことができます."
 
 #: ../../source/programs/gdal_footprint.rst:220
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_footprint.rst:222
 msgid ""
 "Compute the footprint of a GeoTIFF file as a GeoJSON file using WGS 84 "
 "longitude, latitude coordinates"
 msgstr ""
+"WGS 84 経度,緯度座標を使用して,GeoTIFF ファイルのフットプリントを GeoJSON ファイルとして計算します"
 

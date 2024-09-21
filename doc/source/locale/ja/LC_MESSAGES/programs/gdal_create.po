@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_create.rst:11
 msgid "Create a raster file (without source dataset)."
-msgstr ""
+msgstr "ラスターファイルを作成します(ソースデータセットなし)."
 
 #: ../../source/programs/gdal_create.rst:16
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_create.rst:35
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_create.rst:37
 msgid ""
@@ -42,16 +42,19 @@ msgid ""
 "as CRS, geotransform, nodata value, metadata. It can be used also in "
 "special cases, like creating a PDF file from a XML composition file."
 msgstr ""
+":program:`gdal_create` ユーティリティは,次元,バンド数などのパラメータを設定して新しいラスターファイルを初期化するために使用できます."
+"CRS,ジオトランスフォーム,ノーデータ値,メタデータなど.また,XML構成ファイルからPDFファイルを作成するなどの特殊なケースでも使用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/options/ot.rst:3
 msgid ""
@@ -61,6 +64,9 @@ msgid ""
 "``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` or "
 "``CFloat64``."
 msgstr ""
+"出力画像バンドをドライバでサポートされている特定のデータ型に強制します.これは次のいずれかである可能性があります:"
+"``Byte``, ``Int8``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, ``Float32``, ``Float64``, "
+"``CInt16``, ``CInt32``, ``CFloat32`` または ``CFloat64``."
 
 #: ../../source/programs/options/of.rst:3
 msgid ""
@@ -68,16 +74,18 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は GTiff でした).短いフォーマット名を使用します."
 
 #: ../../source/programs/gdal_create.rst:52
 msgid ""
 "Set the size of the output file in pixels. First figure is width. Second "
 "one is height."
 msgstr ""
+"出力ファイルのサイズをピクセル単位で設定します.最初の数字は幅です.2番目は高さです."
 
 #: ../../source/programs/gdal_create.rst:57
 msgid "Number of bands. Defaults to 1 if -outsize is specified, or 0 otherwise."
-msgstr ""
+msgstr "バンド数. -outsize が指定されている場合はデフォルトで 1,それ以外の場合は 0 です."
 
 #: ../../source/programs/gdal_create.rst:61
 msgid ""
@@ -86,6 +94,9 @@ msgid ""
 "the second one to the second band, etc.). If a single value is specified,"
 " it will apply to all bands."
 msgstr ""
+"バンドに焼き込む固定値. バンドごとに1つの :option:`-burn` オプションのリストを提供できます"
+"(最初の値は最初のバンドに適用され,2番目の値は2番目のバンドに適用されます)."
+"単一の値が指定されている場合,すべてのバンドに適用されます."
 
 #: ../../source/programs/gdal_create.rst:68
 msgid ""
@@ -93,18 +104,19 @@ msgid ""
 "the usual GDAL/OGR forms, complete WKT, PROJ.4, EPSG:n or a file "
 "containing the WKT. No reprojection is done."
 msgstr ""
+"出力ファイルの投影を上書きします. <srs_def> は通常の GDAL/OGR 形式,完全な WKT,PROJ.4,EPSG:n または WKT を含むファイルのいずれかである可能性があります."
 
 #: ../../source/programs/gdal_create.rst:74
 msgid "Assign the georeferenced bounds of the output file."
-msgstr ""
+msgstr "出力ファイルのジオリファレンスされた境界を割り当てます."
 
 #: ../../source/programs/gdal_create.rst:78
 msgid "Assign a specified nodata value to output bands."
-msgstr ""
+msgstr "指定されたノーデータ値を出力バンドに割り当てます."
 
 #: ../../source/programs/gdal_create.rst:82
 msgid "Passes a metadata key and value to set on the output dataset if possible."
-msgstr ""
+msgstr "可能であれば,出力データセットに設定するメタデータキーと値を渡します."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -113,6 +125,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の情報を制御するために使用できる1つ以上のオプションがあります."
+"たとえば,GeoTIFF ドライバは,圧縮を制御する作成オプションやファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -124,10 +138,13 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,一部のシンプルなフォーマットには作成オプションが全くありません."
+"フォーマットでサポートされているオプションのリストは,コマンドラインオプション :ref:`--formats <raster_common_options_formats>` でリストできますが,"
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです."
 
 #: ../../source/programs/gdal_create.rst:88
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターとその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/gdal_create.rst:94
 msgid ""
@@ -135,24 +152,26 @@ msgid ""
 "of options -outsize, -bands, -ot, -a_srs, -a_ullr and -a_nodata. Note "
 "that the pixel values will *not* be copied."
 msgstr ""
+"オプション -outsize,-bands,-ot,-a_srs,-a_ullr および -a_nodata のデフォルト値のテンプレートとして機能する GDAL 入力データセットの名前."
+"ピクセル値はコピーされないことに注意してください."
 
 #: ../../source/programs/gdal_create.rst:100
 msgid "The destination file name."
-msgstr ""
+msgstr "出力ファイル名."
 
 #: ../../source/programs/gdal_create.rst:103
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_create.rst:105
 msgid "Initialize a new GeoTIFF file with a uniform value of 10"
-msgstr ""
+msgstr "一様な値 10 で新しい GeoTIFF ファイルを初期化します"
 
 #: ../../source/programs/gdal_create.rst:112
 msgid "Create a PDF file from a XML composition file:"
-msgstr ""
+msgstr "XML 構成ファイルから PDF ファイルを作成します:"
 
 #: ../../source/programs/gdal_create.rst:120
 msgid "Initialize a blank GeoTIFF file from an input one:"
-msgstr ""
+msgstr "入力ファイルから空の GeoTIFF ファイルを初期化します:"
 

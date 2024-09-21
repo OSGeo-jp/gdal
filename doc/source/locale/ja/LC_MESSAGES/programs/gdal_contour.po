@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,41 +25,44 @@ msgstr ""
 
 #: ../../source/programs/gdal_contour.rst:9
 msgid "Builds vector contour lines from a raster elevation model."
-msgstr ""
+msgstr "ラスター標高モデルからベクトル等高線を作成します."
 
 #: ../../source/programs/gdal_contour.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_contour.rst:27
 msgid "Description"
-msgstr ""
+msgstr "解説"
 
 #: ../../source/programs/gdal_contour.rst:29
 msgid ""
 "The :program:`gdal_contour` generates a vector contour file from the "
 "input raster elevation model (DEM)."
 msgstr ""
+":program:`gdal_contour` は,入力ラスター標高モデル(DEM)からベクトル等高線ファイルを生成します."
 
 #: ../../source/programs/gdal_contour.rst:32
 msgid ""
 "The contour line-strings are oriented consistently and the high side will"
 " be on the right, i.e. a line string goes clockwise around a top."
 msgstr ""
+"等高線ラインストリングは一貫して方向がつけられ,高い側が右側になります.つまり,ラインストリングはトップを時計回りに回ります."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_contour.rst:41
 msgid "Picks a particular band to get the DEM from. Defaults to band 1."
-msgstr ""
+msgstr "DEMから取得する特定のバンドを選択します.デフォルトはバンド 1 です."
 
 #: ../../source/programs/gdal_contour.rst:45
 msgid ""
@@ -67,6 +70,7 @@ msgid ""
 "provided no elevation attribute is attached. Ignored in polygonal "
 "contouring (:option:`-p`) mode."
 msgstr ""
+"標高を格納する属性の名前を指定します.指定しない場合,標高属性は付加されません.多角形等高線(:option:`-p`)モードでは無視されます."
 
 #: ../../source/programs/gdal_contour.rst:51
 msgid ""
@@ -74,6 +78,7 @@ msgid ""
 "of contour polygon. If not provided no minimum elevation attribute is "
 "attached. Ignored in default line contouring mode."
 msgstr ""
+"等高線ポリゴンの最小標高を格納する属性の名前を指定します.指定しない場合,最小標高属性は付加されません.デフォルトのライン等高線モードでは無視されます."
 
 #: ../../source/programs/gdal_contour.rst:59
 msgid ""
@@ -81,72 +86,78 @@ msgid ""
 "of contour polygon. If not provided no maximum elevation attribute is "
 "attached. Ignored in default line contouring mode."
 msgstr ""
+"等高線ポリゴンの最大標高を格納する属性の名前を指定します.指定しない場合,最大標高属性は付加されません.デフォルトのライン等高線モードでは無視されます."
 
 #: ../../source/programs/gdal_contour.rst:67
 msgid ""
 "Force production of 3D vectors instead of 2D. Includes elevation at every"
 " vertex."
 msgstr ""
+"2D ではなく 3D ベクトルの生成を強制します.すべての頂点に標高を含みます."
 
 #: ../../source/programs/gdal_contour.rst:72
 msgid ""
 "Ignore any nodata value implied in the dataset - treat all values as "
 "valid."
 msgstr ""
+"データセットに含まれる暗黙の nodata 値を無視し,すべての値を有効として扱います."
 
 #: ../../source/programs/gdal_contour.rst:76
 msgid "Input pixel value to treat as \"nodata\"."
-msgstr ""
+msgstr "\"nodata\" として扱う入力ピクセル値."
 
 #: ../../source/programs/gdal_contour.rst:80
 msgid "Create output in a particular format."
-msgstr ""
+msgstr "特定のフォーマットで出力を作成します."
 
 #: ../../source/programs/gdal_contour.rst:84
 msgid ""
 "If not specified, the format is guessed from the extension (previously "
 "was ESRI Shapefile)."
 msgstr ""
+"指定しない場合,フォーマットは拡張子から推測されます(以前は ESRI Shapefile でした)."
 
 #: ../../source/programs/gdal_contour.rst:88
 msgid "Dataset creation option (format specific)"
-msgstr ""
+msgstr "データセット作成オプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_contour.rst:92
 msgid "Layer creation option (format specific)"
-msgstr ""
+msgstr "レイヤ作成オプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_contour.rst:96
 msgid "Elevation interval between contours. Must specify either -i or -fl or -e."
-msgstr ""
+msgstr "標高線間の高さ間隔. -i または -fl または -e を指定する必要があります."
 
 #: ../../source/programs/gdal_contour.rst:101
 msgid "Offset from zero relative to which to interpret intervals."
-msgstr ""
+msgstr "間隔を解釈するためのゼロからのオフセット."
 
 #: ../../source/programs/gdal_contour.rst:103
 msgid ""
 "For example, `-i 100` requests contours at ...-100, 0, 100... Further "
 "adding `-off 25` makes that request instead ...-75, 25, 125..."
 msgstr ""
+"たとえば,`-i 100` は ...-100, 0, 100... で等高線を要求します.さらに `-off 25` を追加すると,その代わりに ...-75, 25, 125... になります."
 
 #: ../../source/programs/gdal_contour.rst:108
 msgid "Name one or more \"fixed levels\" to extract."
-msgstr ""
+msgstr "抽出する 1 つ以上の \"固定レベル\" の名前を指定します."
 
 #: ../../source/programs/gdal_contour.rst:112
 msgid ""
 "Generate levels on an exponential scale: `base ^ k`, for `k` an integer. "
 "Must specify either -i or -fl or -e."
 msgstr ""
+"指数スケールでレベルを生成します:`base ^ k`, `k` は整数です. -i または -fl または -e を指定する必要があります."
 
 #: ../../source/programs/gdal_contour.rst:119
 msgid "Provide a name for the output vector layer. Defaults to \"contour\"."
-msgstr ""
+msgstr "出力ベクトルレイヤの名前を指定します.デフォルトは \"contour\" です."
 
 #: ../../source/programs/gdal_contour.rst:123
 msgid "Generate contour polygons rather than contour lines."
-msgstr ""
+msgstr "等高線ラインではなく等高線ポリゴンを生成します."
 
 #: ../../source/programs/gdal_contour.rst:129
 msgid ""
@@ -155,10 +166,12 @@ msgid ""
 "transaction support. ``n`` can be set to unlimited to load the data into "
 "a single transaction. If set to 0, no explicit transaction is done."
 msgstr ""
+"トランザクションごとに n 個のフィーチャをグループ化します(デフォルトは 100,000).トランザクションサポートを持つ DBMS ドライバに書き込むときのパフォーマンスを向上させるために値を増やします."
+"``n`` はデータを単一のトランザクションにロードするために無制限に設定できます.0 に設定すると,明示的なトランザクションは行われません."
 
 #: ../../source/programs/gdal_contour.rst:138
 msgid "Be quiet: do not print progress indicators."
-msgstr ""
+msgstr "表示を静かにします:進行状況インジケータを表示しません."
 
 #: ../../source/programs/gdal_contour.rst:141
 msgid "C API"
@@ -169,10 +182,11 @@ msgid ""
 "Functionality of this utility can be done from C with "
 ":cpp:func:`GDALContourGenerate`."
 msgstr ""
+"このユーティリティの機能は,C から :cpp:func:`GDALContourGenerate` で行うことができます."
 
 #: ../../source/programs/gdal_contour.rst:146
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_contour.rst:148
 msgid ""
@@ -180,6 +194,8 @@ msgid ""
 "and produce a shapefile in :file:`contour.shp|shx|dbf` with the contour "
 "elevations in the ``elev`` attribute."
 msgstr ""
+"これにより,DEM データの :file:`dem.tif` から 10 メートルの等高線が作成され,等高線標高が ``elev`` 属性に含まれる"
+" :file:`contour.shp|shx|dbf` のシェープファイルが生成されます."
 
 #~ msgid ""
 #~ "Elevation interval between contours. Ignored"
