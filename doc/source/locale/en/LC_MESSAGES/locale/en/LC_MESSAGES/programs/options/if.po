@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-20 09:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/if.rst:3
+msgid ""
+"Format/driver name to be attempted to open the input file(s). It is "
+"generally not necessary to specify it, but it can be used to skip "
+"automatic driver detection, when it fails to select the appropriate "
+"driver. This option can be repeated several times to specify several "
+"candidate drivers. Note that it does not force those drivers to open the "
+"dataset. In particular, some drivers have requirements on file "
+"extensions."
+msgstr ""
+

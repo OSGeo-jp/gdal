@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-09-20 09:05+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/index.rst:5
 msgid "Raster drivers"
@@ -63,38 +63,39 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:43
 #: ../../source/drivers/raster/driver_summary.rst:44
 #: ../../source/drivers/raster/driver_summary.rst:45
-#: ../../source/drivers/raster/driver_summary.rst:55
-#: ../../source/drivers/raster/driver_summary.rst:57
+#: ../../source/drivers/raster/driver_summary.rst:49
+#: ../../source/drivers/raster/driver_summary.rst:50
+#: ../../source/drivers/raster/driver_summary.rst:51
 #: ../../source/drivers/raster/driver_summary.rst:61
-#: ../../source/drivers/raster/driver_summary.rst:73
-#: ../../source/drivers/raster/driver_summary.rst:74
-#: ../../source/drivers/raster/driver_summary.rst:91
-#: ../../source/drivers/raster/driver_summary.rst:92
+#: ../../source/drivers/raster/driver_summary.rst:63
+#: ../../source/drivers/raster/driver_summary.rst:67
+#: ../../source/drivers/raster/driver_summary.rst:79
+#: ../../source/drivers/raster/driver_summary.rst:80
 #: ../../source/drivers/raster/driver_summary.rst:97
-#: ../../source/drivers/raster/driver_summary.rst:99
+#: ../../source/drivers/raster/driver_summary.rst:98
 #: ../../source/drivers/raster/driver_summary.rst:103
-#: ../../source/drivers/raster/driver_summary.rst:104
 #: ../../source/drivers/raster/driver_summary.rst:105
 #: ../../source/drivers/raster/driver_summary.rst:109
 #: ../../source/drivers/raster/driver_summary.rst:110
 #: ../../source/drivers/raster/driver_summary.rst:111
 #: ../../source/drivers/raster/driver_summary.rst:115
+#: ../../source/drivers/raster/driver_summary.rst:116
+#: ../../source/drivers/raster/driver_summary.rst:117
 #: ../../source/drivers/raster/driver_summary.rst:121
-#: ../../source/drivers/raster/driver_summary.rst:122
-#: ../../source/drivers/raster/driver_summary.rst:123
 #: ../../source/drivers/raster/driver_summary.rst:127
 #: ../../source/drivers/raster/driver_summary.rst:128
-#: ../../source/drivers/raster/driver_summary.rst:139
-#: ../../source/drivers/raster/driver_summary.rst:140
+#: ../../source/drivers/raster/driver_summary.rst:129
+#: ../../source/drivers/raster/driver_summary.rst:133
+#: ../../source/drivers/raster/driver_summary.rst:134
 #: ../../source/drivers/raster/driver_summary.rst:145
 #: ../../source/drivers/raster/driver_summary.rst:146
 #: ../../source/drivers/raster/driver_summary.rst:151
-#: ../../source/drivers/raster/driver_summary.rst:153
+#: ../../source/drivers/raster/driver_summary.rst:152
 #: ../../source/drivers/raster/driver_summary.rst:157
-#: ../../source/drivers/raster/driver_summary.rst:158
 #: ../../source/drivers/raster/driver_summary.rst:159
 #: ../../source/drivers/raster/driver_summary.rst:163
 #: ../../source/drivers/raster/driver_summary.rst:164
+#: ../../source/drivers/raster/driver_summary.rst:165
 #: ../../source/drivers/raster/driver_summary.rst:169
 #: ../../source/drivers/raster/driver_summary.rst:170
 #: ../../source/drivers/raster/driver_summary.rst:175
@@ -102,124 +103,124 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:181
 #: ../../source/drivers/raster/driver_summary.rst:182
 #: ../../source/drivers/raster/driver_summary.rst:187
+#: ../../source/drivers/raster/driver_summary.rst:188
 #: ../../source/drivers/raster/driver_summary.rst:193
-#: ../../source/drivers/raster/driver_summary.rst:194
-#: ../../source/drivers/raster/driver_summary.rst:205
-#: ../../source/drivers/raster/driver_summary.rst:206
-#: ../../source/drivers/raster/driver_summary.rst:217
-#: ../../source/drivers/raster/driver_summary.rst:218
-#: ../../source/drivers/raster/driver_summary.rst:241
-#: ../../source/drivers/raster/driver_summary.rst:242
-#: ../../source/drivers/raster/driver_summary.rst:243
+#: ../../source/drivers/raster/driver_summary.rst:199
+#: ../../source/drivers/raster/driver_summary.rst:200
+#: ../../source/drivers/raster/driver_summary.rst:211
+#: ../../source/drivers/raster/driver_summary.rst:212
+#: ../../source/drivers/raster/driver_summary.rst:223
+#: ../../source/drivers/raster/driver_summary.rst:224
 #: ../../source/drivers/raster/driver_summary.rst:247
 #: ../../source/drivers/raster/driver_summary.rst:248
-#: ../../source/drivers/raster/driver_summary.rst:259
-#: ../../source/drivers/raster/driver_summary.rst:260
+#: ../../source/drivers/raster/driver_summary.rst:249
+#: ../../source/drivers/raster/driver_summary.rst:253
+#: ../../source/drivers/raster/driver_summary.rst:254
 #: ../../source/drivers/raster/driver_summary.rst:265
-#: ../../source/drivers/raster/driver_summary.rst:277
-#: ../../source/drivers/raster/driver_summary.rst:278
-#: ../../source/drivers/raster/driver_summary.rst:279
-#: ../../source/drivers/raster/driver_summary.rst:289
-#: ../../source/drivers/raster/driver_summary.rst:290
-#: ../../source/drivers/raster/driver_summary.rst:291
+#: ../../source/drivers/raster/driver_summary.rst:266
+#: ../../source/drivers/raster/driver_summary.rst:271
+#: ../../source/drivers/raster/driver_summary.rst:283
+#: ../../source/drivers/raster/driver_summary.rst:284
+#: ../../source/drivers/raster/driver_summary.rst:285
 #: ../../source/drivers/raster/driver_summary.rst:295
+#: ../../source/drivers/raster/driver_summary.rst:296
 #: ../../source/drivers/raster/driver_summary.rst:297
-#: ../../source/drivers/raster/driver_summary.rst:307
-#: ../../source/drivers/raster/driver_summary.rst:308
-#: ../../source/drivers/raster/driver_summary.rst:309
+#: ../../source/drivers/raster/driver_summary.rst:301
+#: ../../source/drivers/raster/driver_summary.rst:303
 #: ../../source/drivers/raster/driver_summary.rst:313
 #: ../../source/drivers/raster/driver_summary.rst:314
+#: ../../source/drivers/raster/driver_summary.rst:315
 #: ../../source/drivers/raster/driver_summary.rst:319
-#: ../../source/drivers/raster/driver_summary.rst:331
-#: ../../source/drivers/raster/driver_summary.rst:343
-#: ../../source/drivers/raster/driver_summary.rst:344
-#: ../../source/drivers/raster/driver_summary.rst:345
+#: ../../source/drivers/raster/driver_summary.rst:320
+#: ../../source/drivers/raster/driver_summary.rst:325
+#: ../../source/drivers/raster/driver_summary.rst:337
 #: ../../source/drivers/raster/driver_summary.rst:349
+#: ../../source/drivers/raster/driver_summary.rst:350
+#: ../../source/drivers/raster/driver_summary.rst:351
 #: ../../source/drivers/raster/driver_summary.rst:355
-#: ../../source/drivers/raster/driver_summary.rst:356
-#: ../../source/drivers/raster/driver_summary.rst:357
-#: ../../source/drivers/raster/driver_summary.rst:367
-#: ../../source/drivers/raster/driver_summary.rst:368
-#: ../../source/drivers/raster/driver_summary.rst:379
-#: ../../source/drivers/raster/driver_summary.rst:380
+#: ../../source/drivers/raster/driver_summary.rst:361
+#: ../../source/drivers/raster/driver_summary.rst:362
+#: ../../source/drivers/raster/driver_summary.rst:363
+#: ../../source/drivers/raster/driver_summary.rst:373
+#: ../../source/drivers/raster/driver_summary.rst:374
 #: ../../source/drivers/raster/driver_summary.rst:385
 #: ../../source/drivers/raster/driver_summary.rst:386
-#: ../../source/drivers/raster/driver_summary.rst:387
 #: ../../source/drivers/raster/driver_summary.rst:391
-#: ../../source/drivers/raster/driver_summary.rst:415
-#: ../../source/drivers/raster/driver_summary.rst:416
-#: ../../source/drivers/raster/driver_summary.rst:427
-#: ../../source/drivers/raster/driver_summary.rst:428
-#: ../../source/drivers/raster/driver_summary.rst:445
-#: ../../source/drivers/raster/driver_summary.rst:446
-#: ../../source/drivers/raster/driver_summary.rst:457
+#: ../../source/drivers/raster/driver_summary.rst:392
+#: ../../source/drivers/raster/driver_summary.rst:393
+#: ../../source/drivers/raster/driver_summary.rst:397
+#: ../../source/drivers/raster/driver_summary.rst:421
+#: ../../source/drivers/raster/driver_summary.rst:422
+#: ../../source/drivers/raster/driver_summary.rst:433
+#: ../../source/drivers/raster/driver_summary.rst:434
+#: ../../source/drivers/raster/driver_summary.rst:451
+#: ../../source/drivers/raster/driver_summary.rst:452
 #: ../../source/drivers/raster/driver_summary.rst:463
 #: ../../source/drivers/raster/driver_summary.rst:469
 #: ../../source/drivers/raster/driver_summary.rst:475
 #: ../../source/drivers/raster/driver_summary.rst:481
 #: ../../source/drivers/raster/driver_summary.rst:487
 #: ../../source/drivers/raster/driver_summary.rst:493
-#: ../../source/drivers/raster/driver_summary.rst:494
-#: ../../source/drivers/raster/driver_summary.rst:505
-#: ../../source/drivers/raster/driver_summary.rst:513
-#: ../../source/drivers/raster/driver_summary.rst:517
+#: ../../source/drivers/raster/driver_summary.rst:499
+#: ../../source/drivers/raster/driver_summary.rst:500
+#: ../../source/drivers/raster/driver_summary.rst:511
 #: ../../source/drivers/raster/driver_summary.rst:519
 #: ../../source/drivers/raster/driver_summary.rst:523
-#: ../../source/drivers/raster/driver_summary.rst:524
+#: ../../source/drivers/raster/driver_summary.rst:525
+#: ../../source/drivers/raster/driver_summary.rst:529
 #: ../../source/drivers/raster/driver_summary.rst:530
-#: ../../source/drivers/raster/driver_summary.rst:535
-#: ../../source/drivers/raster/driver_summary.rst:547
-#: ../../source/drivers/raster/driver_summary.rst:548
+#: ../../source/drivers/raster/driver_summary.rst:536
+#: ../../source/drivers/raster/driver_summary.rst:541
 #: ../../source/drivers/raster/driver_summary.rst:553
 #: ../../source/drivers/raster/driver_summary.rst:554
-#: ../../source/drivers/raster/driver_summary.rst:589
-#: ../../source/drivers/raster/driver_summary.rst:590
+#: ../../source/drivers/raster/driver_summary.rst:559
+#: ../../source/drivers/raster/driver_summary.rst:560
 #: ../../source/drivers/raster/driver_summary.rst:595
 #: ../../source/drivers/raster/driver_summary.rst:596
 #: ../../source/drivers/raster/driver_summary.rst:601
 #: ../../source/drivers/raster/driver_summary.rst:602
 #: ../../source/drivers/raster/driver_summary.rst:607
 #: ../../source/drivers/raster/driver_summary.rst:608
-#: ../../source/drivers/raster/driver_summary.rst:619
-#: ../../source/drivers/raster/driver_summary.rst:620
+#: ../../source/drivers/raster/driver_summary.rst:613
+#: ../../source/drivers/raster/driver_summary.rst:614
 #: ../../source/drivers/raster/driver_summary.rst:625
 #: ../../source/drivers/raster/driver_summary.rst:626
-#: ../../source/drivers/raster/driver_summary.rst:637
-#: ../../source/drivers/raster/driver_summary.rst:638
+#: ../../source/drivers/raster/driver_summary.rst:631
+#: ../../source/drivers/raster/driver_summary.rst:632
 #: ../../source/drivers/raster/driver_summary.rst:643
 #: ../../source/drivers/raster/driver_summary.rst:644
-#: ../../source/drivers/raster/driver_summary.rst:667
-#: ../../source/drivers/raster/driver_summary.rst:668
+#: ../../source/drivers/raster/driver_summary.rst:649
+#: ../../source/drivers/raster/driver_summary.rst:650
 #: ../../source/drivers/raster/driver_summary.rst:673
 #: ../../source/drivers/raster/driver_summary.rst:674
 #: ../../source/drivers/raster/driver_summary.rst:679
 #: ../../source/drivers/raster/driver_summary.rst:680
 #: ../../source/drivers/raster/driver_summary.rst:685
 #: ../../source/drivers/raster/driver_summary.rst:686
-#: ../../source/drivers/raster/driver_summary.rst:693
-#: ../../source/drivers/raster/driver_summary.rst:709
+#: ../../source/drivers/raster/driver_summary.rst:691
+#: ../../source/drivers/raster/driver_summary.rst:692
+#: ../../source/drivers/raster/driver_summary.rst:699
 #: ../../source/drivers/raster/driver_summary.rst:715
-#: ../../source/drivers/raster/driver_summary.rst:716
-#: ../../source/drivers/raster/driver_summary.rst:727
-#: ../../source/drivers/raster/driver_summary.rst:728
+#: ../../source/drivers/raster/driver_summary.rst:721
+#: ../../source/drivers/raster/driver_summary.rst:722
 #: ../../source/drivers/raster/driver_summary.rst:733
-#: ../../source/drivers/raster/driver_summary.rst:741
-#: ../../source/drivers/raster/driver_summary.rst:745
+#: ../../source/drivers/raster/driver_summary.rst:734
+#: ../../source/drivers/raster/driver_summary.rst:739
+#: ../../source/drivers/raster/driver_summary.rst:747
 #: ../../source/drivers/raster/driver_summary.rst:751
-#: ../../source/drivers/raster/driver_summary.rst:752
-#: ../../source/drivers/raster/driver_summary.rst:753
 #: ../../source/drivers/raster/driver_summary.rst:757
+#: ../../source/drivers/raster/driver_summary.rst:758
 #: ../../source/drivers/raster/driver_summary.rst:759
 #: ../../source/drivers/raster/driver_summary.rst:763
+#: ../../source/drivers/raster/driver_summary.rst:765
 #: ../../source/drivers/raster/driver_summary.rst:769
 #: ../../source/drivers/raster/driver_summary.rst:775
-#: ../../source/drivers/raster/driver_summary.rst:776
 #: ../../source/drivers/raster/driver_summary.rst:781
 #: ../../source/drivers/raster/driver_summary.rst:782
-#: ../../source/drivers/raster/driver_summary.rst:799
-#: ../../source/drivers/raster/driver_summary.rst:800
-#: ../../source/drivers/raster/driver_summary.rst:811
-#: ../../source/drivers/raster/driver_summary.rst:812
+#: ../../source/drivers/raster/driver_summary.rst:787
+#: ../../source/drivers/raster/driver_summary.rst:788
+#: ../../source/drivers/raster/driver_summary.rst:805
+#: ../../source/drivers/raster/driver_summary.rst:806
 #: ../../source/drivers/raster/driver_summary.rst:817
 #: ../../source/drivers/raster/driver_summary.rst:818
 #: ../../source/drivers/raster/driver_summary.rst:823
@@ -230,43 +231,45 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:836
 #: ../../source/drivers/raster/driver_summary.rst:841
 #: ../../source/drivers/raster/driver_summary.rst:842
-#: ../../source/drivers/raster/driver_summary.rst:853
-#: ../../source/drivers/raster/driver_summary.rst:854
+#: ../../source/drivers/raster/driver_summary.rst:847
+#: ../../source/drivers/raster/driver_summary.rst:848
 #: ../../source/drivers/raster/driver_summary.rst:859
 #: ../../source/drivers/raster/driver_summary.rst:860
-#: ../../source/drivers/raster/driver_summary.rst:867
-#: ../../source/drivers/raster/driver_summary.rst:871
+#: ../../source/drivers/raster/driver_summary.rst:865
+#: ../../source/drivers/raster/driver_summary.rst:866
+#: ../../source/drivers/raster/driver_summary.rst:873
 #: ../../source/drivers/raster/driver_summary.rst:877
-#: ../../source/drivers/raster/driver_summary.rst:878
 #: ../../source/drivers/raster/driver_summary.rst:883
 #: ../../source/drivers/raster/driver_summary.rst:884
 #: ../../source/drivers/raster/driver_summary.rst:889
+#: ../../source/drivers/raster/driver_summary.rst:890
 #: ../../source/drivers/raster/driver_summary.rst:895
-#: ../../source/drivers/raster/driver_summary.rst:896
-#: ../../source/drivers/raster/driver_summary.rst:897
 #: ../../source/drivers/raster/driver_summary.rst:901
 #: ../../source/drivers/raster/driver_summary.rst:902
 #: ../../source/drivers/raster/driver_summary.rst:903
-#: ../../source/drivers/raster/driver_summary.rst:913
-#: ../../source/drivers/raster/driver_summary.rst:914
-#: ../../source/drivers/raster/driver_summary.rst:915
+#: ../../source/drivers/raster/driver_summary.rst:907
+#: ../../source/drivers/raster/driver_summary.rst:908
+#: ../../source/drivers/raster/driver_summary.rst:909
 #: ../../source/drivers/raster/driver_summary.rst:919
 #: ../../source/drivers/raster/driver_summary.rst:920
-#: ../../source/drivers/raster/driver_summary.rst:931
-#: ../../source/drivers/raster/driver_summary.rst:932
+#: ../../source/drivers/raster/driver_summary.rst:921
+#: ../../source/drivers/raster/driver_summary.rst:925
+#: ../../source/drivers/raster/driver_summary.rst:926
 #: ../../source/drivers/raster/driver_summary.rst:937
-#: ../../source/drivers/raster/driver_summary.rst:955
-#: ../../source/drivers/raster/driver_summary.rst:956
+#: ../../source/drivers/raster/driver_summary.rst:938
+#: ../../source/drivers/raster/driver_summary.rst:943
 #: ../../source/drivers/raster/driver_summary.rst:961
-#: ../../source/drivers/raster/driver_summary.rst:963
+#: ../../source/drivers/raster/driver_summary.rst:962
 #: ../../source/drivers/raster/driver_summary.rst:967
+#: ../../source/drivers/raster/driver_summary.rst:969
 #: ../../source/drivers/raster/driver_summary.rst:973
-#: ../../source/drivers/raster/driver_summary.rst:974
 #: ../../source/drivers/raster/driver_summary.rst:979
-#: ../../source/drivers/raster/driver_summary.rst:981
+#: ../../source/drivers/raster/driver_summary.rst:980
 #: ../../source/drivers/raster/driver_summary.rst:985
-#: ../../source/drivers/raster/driver_summary.rst:992
-#: ../../source/drivers/raster/driver_summary.rst:997
+#: ../../source/drivers/raster/driver_summary.rst:987
+#: ../../source/drivers/raster/driver_summary.rst:991
+#: ../../source/drivers/raster/driver_summary.rst:998
+#: ../../source/drivers/raster/driver_summary.rst:1003
 msgid "No"
 msgstr ""
 
@@ -277,50 +280,47 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:32
 #: ../../source/drivers/raster/driver_summary.rst:33
 #: ../../source/drivers/raster/driver_summary.rst:39
-#: ../../source/drivers/raster/driver_summary.rst:49
-#: ../../source/drivers/raster/driver_summary.rst:50
-#: ../../source/drivers/raster/driver_summary.rst:51
+#: ../../source/drivers/raster/driver_summary.rst:55
 #: ../../source/drivers/raster/driver_summary.rst:56
+#: ../../source/drivers/raster/driver_summary.rst:57
 #: ../../source/drivers/raster/driver_summary.rst:62
-#: ../../source/drivers/raster/driver_summary.rst:63
-#: ../../source/drivers/raster/driver_summary.rst:67
 #: ../../source/drivers/raster/driver_summary.rst:68
 #: ../../source/drivers/raster/driver_summary.rst:69
+#: ../../source/drivers/raster/driver_summary.rst:73
+#: ../../source/drivers/raster/driver_summary.rst:74
 #: ../../source/drivers/raster/driver_summary.rst:75
-#: ../../source/drivers/raster/driver_summary.rst:79
-#: ../../source/drivers/raster/driver_summary.rst:80
 #: ../../source/drivers/raster/driver_summary.rst:81
 #: ../../source/drivers/raster/driver_summary.rst:85
 #: ../../source/drivers/raster/driver_summary.rst:86
 #: ../../source/drivers/raster/driver_summary.rst:87
+#: ../../source/drivers/raster/driver_summary.rst:91
+#: ../../source/drivers/raster/driver_summary.rst:92
 #: ../../source/drivers/raster/driver_summary.rst:93
-#: ../../source/drivers/raster/driver_summary.rst:98
-#: ../../source/drivers/raster/driver_summary.rst:116
-#: ../../source/drivers/raster/driver_summary.rst:117
-#: ../../source/drivers/raster/driver_summary.rst:129
-#: ../../source/drivers/raster/driver_summary.rst:133
-#: ../../source/drivers/raster/driver_summary.rst:134
+#: ../../source/drivers/raster/driver_summary.rst:99
+#: ../../source/drivers/raster/driver_summary.rst:104
+#: ../../source/drivers/raster/driver_summary.rst:122
+#: ../../source/drivers/raster/driver_summary.rst:123
 #: ../../source/drivers/raster/driver_summary.rst:135
+#: ../../source/drivers/raster/driver_summary.rst:139
+#: ../../source/drivers/raster/driver_summary.rst:140
 #: ../../source/drivers/raster/driver_summary.rst:141
 #: ../../source/drivers/raster/driver_summary.rst:147
-#: ../../source/drivers/raster/driver_summary.rst:152
-#: ../../source/drivers/raster/driver_summary.rst:165
+#: ../../source/drivers/raster/driver_summary.rst:153
+#: ../../source/drivers/raster/driver_summary.rst:158
 #: ../../source/drivers/raster/driver_summary.rst:171
 #: ../../source/drivers/raster/driver_summary.rst:177
 #: ../../source/drivers/raster/driver_summary.rst:183
-#: ../../source/drivers/raster/driver_summary.rst:188
 #: ../../source/drivers/raster/driver_summary.rst:189
+#: ../../source/drivers/raster/driver_summary.rst:194
 #: ../../source/drivers/raster/driver_summary.rst:195
-#: ../../source/drivers/raster/driver_summary.rst:199
-#: ../../source/drivers/raster/driver_summary.rst:200
 #: ../../source/drivers/raster/driver_summary.rst:201
+#: ../../source/drivers/raster/driver_summary.rst:205
+#: ../../source/drivers/raster/driver_summary.rst:206
 #: ../../source/drivers/raster/driver_summary.rst:207
-#: ../../source/drivers/raster/driver_summary.rst:211
-#: ../../source/drivers/raster/driver_summary.rst:212
 #: ../../source/drivers/raster/driver_summary.rst:213
+#: ../../source/drivers/raster/driver_summary.rst:217
+#: ../../source/drivers/raster/driver_summary.rst:218
 #: ../../source/drivers/raster/driver_summary.rst:219
-#: ../../source/drivers/raster/driver_summary.rst:223
-#: ../../source/drivers/raster/driver_summary.rst:224
 #: ../../source/drivers/raster/driver_summary.rst:225
 #: ../../source/drivers/raster/driver_summary.rst:229
 #: ../../source/drivers/raster/driver_summary.rst:230
@@ -328,47 +328,47 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:235
 #: ../../source/drivers/raster/driver_summary.rst:236
 #: ../../source/drivers/raster/driver_summary.rst:237
-#: ../../source/drivers/raster/driver_summary.rst:249
-#: ../../source/drivers/raster/driver_summary.rst:253
-#: ../../source/drivers/raster/driver_summary.rst:254
+#: ../../source/drivers/raster/driver_summary.rst:241
+#: ../../source/drivers/raster/driver_summary.rst:242
+#: ../../source/drivers/raster/driver_summary.rst:243
 #: ../../source/drivers/raster/driver_summary.rst:255
+#: ../../source/drivers/raster/driver_summary.rst:259
+#: ../../source/drivers/raster/driver_summary.rst:260
 #: ../../source/drivers/raster/driver_summary.rst:261
-#: ../../source/drivers/raster/driver_summary.rst:266
 #: ../../source/drivers/raster/driver_summary.rst:267
-#: ../../source/drivers/raster/driver_summary.rst:271
 #: ../../source/drivers/raster/driver_summary.rst:272
 #: ../../source/drivers/raster/driver_summary.rst:273
-#: ../../source/drivers/raster/driver_summary.rst:283
-#: ../../source/drivers/raster/driver_summary.rst:284
-#: ../../source/drivers/raster/driver_summary.rst:285
-#: ../../source/drivers/raster/driver_summary.rst:296
-#: ../../source/drivers/raster/driver_summary.rst:301
+#: ../../source/drivers/raster/driver_summary.rst:277
+#: ../../source/drivers/raster/driver_summary.rst:278
+#: ../../source/drivers/raster/driver_summary.rst:279
+#: ../../source/drivers/raster/driver_summary.rst:289
+#: ../../source/drivers/raster/driver_summary.rst:290
+#: ../../source/drivers/raster/driver_summary.rst:291
 #: ../../source/drivers/raster/driver_summary.rst:302
-#: ../../source/drivers/raster/driver_summary.rst:303
-#: ../../source/drivers/raster/driver_summary.rst:315
-#: ../../source/drivers/raster/driver_summary.rst:320
+#: ../../source/drivers/raster/driver_summary.rst:307
+#: ../../source/drivers/raster/driver_summary.rst:308
+#: ../../source/drivers/raster/driver_summary.rst:309
 #: ../../source/drivers/raster/driver_summary.rst:321
-#: ../../source/drivers/raster/driver_summary.rst:325
 #: ../../source/drivers/raster/driver_summary.rst:326
 #: ../../source/drivers/raster/driver_summary.rst:327
+#: ../../source/drivers/raster/driver_summary.rst:331
 #: ../../source/drivers/raster/driver_summary.rst:332
 #: ../../source/drivers/raster/driver_summary.rst:333
-#: ../../source/drivers/raster/driver_summary.rst:337
 #: ../../source/drivers/raster/driver_summary.rst:338
 #: ../../source/drivers/raster/driver_summary.rst:339
-#: ../../source/drivers/raster/driver_summary.rst:350
-#: ../../source/drivers/raster/driver_summary.rst:351
-#: ../../source/drivers/raster/driver_summary.rst:361
-#: ../../source/drivers/raster/driver_summary.rst:362
-#: ../../source/drivers/raster/driver_summary.rst:363
+#: ../../source/drivers/raster/driver_summary.rst:343
+#: ../../source/drivers/raster/driver_summary.rst:344
+#: ../../source/drivers/raster/driver_summary.rst:345
+#: ../../source/drivers/raster/driver_summary.rst:356
+#: ../../source/drivers/raster/driver_summary.rst:357
+#: ../../source/drivers/raster/driver_summary.rst:367
+#: ../../source/drivers/raster/driver_summary.rst:368
 #: ../../source/drivers/raster/driver_summary.rst:369
-#: ../../source/drivers/raster/driver_summary.rst:373
-#: ../../source/drivers/raster/driver_summary.rst:374
 #: ../../source/drivers/raster/driver_summary.rst:375
+#: ../../source/drivers/raster/driver_summary.rst:379
+#: ../../source/drivers/raster/driver_summary.rst:380
 #: ../../source/drivers/raster/driver_summary.rst:381
-#: ../../source/drivers/raster/driver_summary.rst:392
-#: ../../source/drivers/raster/driver_summary.rst:393
-#: ../../source/drivers/raster/driver_summary.rst:397
+#: ../../source/drivers/raster/driver_summary.rst:387
 #: ../../source/drivers/raster/driver_summary.rst:398
 #: ../../source/drivers/raster/driver_summary.rst:399
 #: ../../source/drivers/raster/driver_summary.rst:403
@@ -377,21 +377,22 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:409
 #: ../../source/drivers/raster/driver_summary.rst:410
 #: ../../source/drivers/raster/driver_summary.rst:411
+#: ../../source/drivers/raster/driver_summary.rst:415
+#: ../../source/drivers/raster/driver_summary.rst:416
 #: ../../source/drivers/raster/driver_summary.rst:417
-#: ../../source/drivers/raster/driver_summary.rst:421
-#: ../../source/drivers/raster/driver_summary.rst:422
 #: ../../source/drivers/raster/driver_summary.rst:423
+#: ../../source/drivers/raster/driver_summary.rst:427
+#: ../../source/drivers/raster/driver_summary.rst:428
 #: ../../source/drivers/raster/driver_summary.rst:429
-#: ../../source/drivers/raster/driver_summary.rst:433
-#: ../../source/drivers/raster/driver_summary.rst:434
 #: ../../source/drivers/raster/driver_summary.rst:435
 #: ../../source/drivers/raster/driver_summary.rst:439
 #: ../../source/drivers/raster/driver_summary.rst:440
 #: ../../source/drivers/raster/driver_summary.rst:441
+#: ../../source/drivers/raster/driver_summary.rst:445
+#: ../../source/drivers/raster/driver_summary.rst:446
 #: ../../source/drivers/raster/driver_summary.rst:447
-#: ../../source/drivers/raster/driver_summary.rst:451
-#: ../../source/drivers/raster/driver_summary.rst:452
 #: ../../source/drivers/raster/driver_summary.rst:453
+#: ../../source/drivers/raster/driver_summary.rst:457
 #: ../../source/drivers/raster/driver_summary.rst:458
 #: ../../source/drivers/raster/driver_summary.rst:459
 #: ../../source/drivers/raster/driver_summary.rst:464
@@ -404,27 +405,26 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:483
 #: ../../source/drivers/raster/driver_summary.rst:488
 #: ../../source/drivers/raster/driver_summary.rst:489
+#: ../../source/drivers/raster/driver_summary.rst:494
 #: ../../source/drivers/raster/driver_summary.rst:495
-#: ../../source/drivers/raster/driver_summary.rst:499
-#: ../../source/drivers/raster/driver_summary.rst:500
 #: ../../source/drivers/raster/driver_summary.rst:501
+#: ../../source/drivers/raster/driver_summary.rst:505
 #: ../../source/drivers/raster/driver_summary.rst:506
 #: ../../source/drivers/raster/driver_summary.rst:507
-#: ../../source/drivers/raster/driver_summary.rst:511
 #: ../../source/drivers/raster/driver_summary.rst:512
+#: ../../source/drivers/raster/driver_summary.rst:513
+#: ../../source/drivers/raster/driver_summary.rst:517
 #: ../../source/drivers/raster/driver_summary.rst:518
-#: ../../source/drivers/raster/driver_summary.rst:525
-#: ../../source/drivers/raster/driver_summary.rst:529
+#: ../../source/drivers/raster/driver_summary.rst:524
 #: ../../source/drivers/raster/driver_summary.rst:531
-#: ../../source/drivers/raster/driver_summary.rst:536
+#: ../../source/drivers/raster/driver_summary.rst:535
 #: ../../source/drivers/raster/driver_summary.rst:537
-#: ../../source/drivers/raster/driver_summary.rst:541
 #: ../../source/drivers/raster/driver_summary.rst:542
 #: ../../source/drivers/raster/driver_summary.rst:543
+#: ../../source/drivers/raster/driver_summary.rst:547
+#: ../../source/drivers/raster/driver_summary.rst:548
 #: ../../source/drivers/raster/driver_summary.rst:549
 #: ../../source/drivers/raster/driver_summary.rst:555
-#: ../../source/drivers/raster/driver_summary.rst:559
-#: ../../source/drivers/raster/driver_summary.rst:560
 #: ../../source/drivers/raster/driver_summary.rst:561
 #: ../../source/drivers/raster/driver_summary.rst:565
 #: ../../source/drivers/raster/driver_summary.rst:566
@@ -438,22 +438,22 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:583
 #: ../../source/drivers/raster/driver_summary.rst:584
 #: ../../source/drivers/raster/driver_summary.rst:585
+#: ../../source/drivers/raster/driver_summary.rst:589
+#: ../../source/drivers/raster/driver_summary.rst:590
 #: ../../source/drivers/raster/driver_summary.rst:591
 #: ../../source/drivers/raster/driver_summary.rst:597
 #: ../../source/drivers/raster/driver_summary.rst:603
 #: ../../source/drivers/raster/driver_summary.rst:609
-#: ../../source/drivers/raster/driver_summary.rst:613
-#: ../../source/drivers/raster/driver_summary.rst:614
 #: ../../source/drivers/raster/driver_summary.rst:615
+#: ../../source/drivers/raster/driver_summary.rst:619
+#: ../../source/drivers/raster/driver_summary.rst:620
 #: ../../source/drivers/raster/driver_summary.rst:621
 #: ../../source/drivers/raster/driver_summary.rst:627
-#: ../../source/drivers/raster/driver_summary.rst:631
-#: ../../source/drivers/raster/driver_summary.rst:632
 #: ../../source/drivers/raster/driver_summary.rst:633
+#: ../../source/drivers/raster/driver_summary.rst:637
+#: ../../source/drivers/raster/driver_summary.rst:638
 #: ../../source/drivers/raster/driver_summary.rst:639
 #: ../../source/drivers/raster/driver_summary.rst:645
-#: ../../source/drivers/raster/driver_summary.rst:649
-#: ../../source/drivers/raster/driver_summary.rst:650
 #: ../../source/drivers/raster/driver_summary.rst:651
 #: ../../source/drivers/raster/driver_summary.rst:655
 #: ../../source/drivers/raster/driver_summary.rst:656
@@ -461,95 +461,98 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:661
 #: ../../source/drivers/raster/driver_summary.rst:662
 #: ../../source/drivers/raster/driver_summary.rst:663
+#: ../../source/drivers/raster/driver_summary.rst:667
+#: ../../source/drivers/raster/driver_summary.rst:668
 #: ../../source/drivers/raster/driver_summary.rst:669
 #: ../../source/drivers/raster/driver_summary.rst:675
 #: ../../source/drivers/raster/driver_summary.rst:681
 #: ../../source/drivers/raster/driver_summary.rst:687
-#: ../../source/drivers/raster/driver_summary.rst:691
-#: ../../source/drivers/raster/driver_summary.rst:692
+#: ../../source/drivers/raster/driver_summary.rst:693
 #: ../../source/drivers/raster/driver_summary.rst:697
 #: ../../source/drivers/raster/driver_summary.rst:698
-#: ../../source/drivers/raster/driver_summary.rst:699
 #: ../../source/drivers/raster/driver_summary.rst:703
 #: ../../source/drivers/raster/driver_summary.rst:704
 #: ../../source/drivers/raster/driver_summary.rst:705
+#: ../../source/drivers/raster/driver_summary.rst:709
 #: ../../source/drivers/raster/driver_summary.rst:710
 #: ../../source/drivers/raster/driver_summary.rst:711
+#: ../../source/drivers/raster/driver_summary.rst:716
 #: ../../source/drivers/raster/driver_summary.rst:717
-#: ../../source/drivers/raster/driver_summary.rst:721
-#: ../../source/drivers/raster/driver_summary.rst:722
 #: ../../source/drivers/raster/driver_summary.rst:723
+#: ../../source/drivers/raster/driver_summary.rst:727
+#: ../../source/drivers/raster/driver_summary.rst:728
 #: ../../source/drivers/raster/driver_summary.rst:729
-#: ../../source/drivers/raster/driver_summary.rst:734
 #: ../../source/drivers/raster/driver_summary.rst:735
-#: ../../source/drivers/raster/driver_summary.rst:739
 #: ../../source/drivers/raster/driver_summary.rst:740
+#: ../../source/drivers/raster/driver_summary.rst:741
+#: ../../source/drivers/raster/driver_summary.rst:745
 #: ../../source/drivers/raster/driver_summary.rst:746
-#: ../../source/drivers/raster/driver_summary.rst:747
-#: ../../source/drivers/raster/driver_summary.rst:758
+#: ../../source/drivers/raster/driver_summary.rst:752
+#: ../../source/drivers/raster/driver_summary.rst:753
 #: ../../source/drivers/raster/driver_summary.rst:764
-#: ../../source/drivers/raster/driver_summary.rst:765
 #: ../../source/drivers/raster/driver_summary.rst:770
 #: ../../source/drivers/raster/driver_summary.rst:771
+#: ../../source/drivers/raster/driver_summary.rst:776
 #: ../../source/drivers/raster/driver_summary.rst:777
 #: ../../source/drivers/raster/driver_summary.rst:783
-#: ../../source/drivers/raster/driver_summary.rst:787
-#: ../../source/drivers/raster/driver_summary.rst:788
 #: ../../source/drivers/raster/driver_summary.rst:789
 #: ../../source/drivers/raster/driver_summary.rst:793
 #: ../../source/drivers/raster/driver_summary.rst:794
 #: ../../source/drivers/raster/driver_summary.rst:795
+#: ../../source/drivers/raster/driver_summary.rst:799
+#: ../../source/drivers/raster/driver_summary.rst:800
 #: ../../source/drivers/raster/driver_summary.rst:801
-#: ../../source/drivers/raster/driver_summary.rst:805
-#: ../../source/drivers/raster/driver_summary.rst:806
 #: ../../source/drivers/raster/driver_summary.rst:807
+#: ../../source/drivers/raster/driver_summary.rst:811
+#: ../../source/drivers/raster/driver_summary.rst:812
 #: ../../source/drivers/raster/driver_summary.rst:813
 #: ../../source/drivers/raster/driver_summary.rst:819
 #: ../../source/drivers/raster/driver_summary.rst:825
 #: ../../source/drivers/raster/driver_summary.rst:831
 #: ../../source/drivers/raster/driver_summary.rst:837
 #: ../../source/drivers/raster/driver_summary.rst:843
-#: ../../source/drivers/raster/driver_summary.rst:847
-#: ../../source/drivers/raster/driver_summary.rst:848
 #: ../../source/drivers/raster/driver_summary.rst:849
+#: ../../source/drivers/raster/driver_summary.rst:853
+#: ../../source/drivers/raster/driver_summary.rst:854
 #: ../../source/drivers/raster/driver_summary.rst:855
 #: ../../source/drivers/raster/driver_summary.rst:861
-#: ../../source/drivers/raster/driver_summary.rst:865
-#: ../../source/drivers/raster/driver_summary.rst:866
+#: ../../source/drivers/raster/driver_summary.rst:867
+#: ../../source/drivers/raster/driver_summary.rst:871
 #: ../../source/drivers/raster/driver_summary.rst:872
-#: ../../source/drivers/raster/driver_summary.rst:873
+#: ../../source/drivers/raster/driver_summary.rst:878
 #: ../../source/drivers/raster/driver_summary.rst:879
 #: ../../source/drivers/raster/driver_summary.rst:885
-#: ../../source/drivers/raster/driver_summary.rst:890
 #: ../../source/drivers/raster/driver_summary.rst:891
-#: ../../source/drivers/raster/driver_summary.rst:907
-#: ../../source/drivers/raster/driver_summary.rst:908
-#: ../../source/drivers/raster/driver_summary.rst:909
-#: ../../source/drivers/raster/driver_summary.rst:921
-#: ../../source/drivers/raster/driver_summary.rst:925
-#: ../../source/drivers/raster/driver_summary.rst:926
+#: ../../source/drivers/raster/driver_summary.rst:896
+#: ../../source/drivers/raster/driver_summary.rst:897
+#: ../../source/drivers/raster/driver_summary.rst:913
+#: ../../source/drivers/raster/driver_summary.rst:914
+#: ../../source/drivers/raster/driver_summary.rst:915
 #: ../../source/drivers/raster/driver_summary.rst:927
+#: ../../source/drivers/raster/driver_summary.rst:931
+#: ../../source/drivers/raster/driver_summary.rst:932
 #: ../../source/drivers/raster/driver_summary.rst:933
-#: ../../source/drivers/raster/driver_summary.rst:938
 #: ../../source/drivers/raster/driver_summary.rst:939
-#: ../../source/drivers/raster/driver_summary.rst:943
 #: ../../source/drivers/raster/driver_summary.rst:944
 #: ../../source/drivers/raster/driver_summary.rst:945
 #: ../../source/drivers/raster/driver_summary.rst:949
 #: ../../source/drivers/raster/driver_summary.rst:950
 #: ../../source/drivers/raster/driver_summary.rst:951
+#: ../../source/drivers/raster/driver_summary.rst:955
+#: ../../source/drivers/raster/driver_summary.rst:956
 #: ../../source/drivers/raster/driver_summary.rst:957
-#: ../../source/drivers/raster/driver_summary.rst:962
+#: ../../source/drivers/raster/driver_summary.rst:963
 #: ../../source/drivers/raster/driver_summary.rst:968
-#: ../../source/drivers/raster/driver_summary.rst:969
+#: ../../source/drivers/raster/driver_summary.rst:974
 #: ../../source/drivers/raster/driver_summary.rst:975
-#: ../../source/drivers/raster/driver_summary.rst:980
+#: ../../source/drivers/raster/driver_summary.rst:981
 #: ../../source/drivers/raster/driver_summary.rst:986
-#: ../../source/drivers/raster/driver_summary.rst:987
-#: ../../source/drivers/raster/driver_summary.rst:991
+#: ../../source/drivers/raster/driver_summary.rst:992
 #: ../../source/drivers/raster/driver_summary.rst:993
-#: ../../source/drivers/raster/driver_summary.rst:998
+#: ../../source/drivers/raster/driver_summary.rst:997
 #: ../../source/drivers/raster/driver_summary.rst:999
+#: ../../source/drivers/raster/driver_summary.rst:1004
+#: ../../source/drivers/raster/driver_summary.rst:1005
 msgid "**Yes**"
 msgstr ""
 
@@ -558,12 +561,11 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:34
 #: ../../source/drivers/raster/driver_summary.rst:40
 #: ../../source/drivers/raster/driver_summary.rst:46
-#: ../../source/drivers/raster/driver_summary.rst:64
 #: ../../source/drivers/raster/driver_summary.rst:70
 #: ../../source/drivers/raster/driver_summary.rst:76
 #: ../../source/drivers/raster/driver_summary.rst:82
 #: ../../source/drivers/raster/driver_summary.rst:88
-#: ../../source/drivers/raster/driver_summary.rst:100
+#: ../../source/drivers/raster/driver_summary.rst:94
 #: ../../source/drivers/raster/driver_summary.rst:106
 #: ../../source/drivers/raster/driver_summary.rst:112
 #: ../../source/drivers/raster/driver_summary.rst:118
@@ -571,34 +573,34 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:130
 #: ../../source/drivers/raster/driver_summary.rst:136
 #: ../../source/drivers/raster/driver_summary.rst:142
-#: ../../source/drivers/raster/driver_summary.rst:160
+#: ../../source/drivers/raster/driver_summary.rst:148
 #: ../../source/drivers/raster/driver_summary.rst:166
 #: ../../source/drivers/raster/driver_summary.rst:172
 #: ../../source/drivers/raster/driver_summary.rst:178
 #: ../../source/drivers/raster/driver_summary.rst:184
 #: ../../source/drivers/raster/driver_summary.rst:190
 #: ../../source/drivers/raster/driver_summary.rst:196
-#: ../../source/drivers/raster/driver_summary.rst:214
+#: ../../source/drivers/raster/driver_summary.rst:202
 #: ../../source/drivers/raster/driver_summary.rst:220
 #: ../../source/drivers/raster/driver_summary.rst:226
 #: ../../source/drivers/raster/driver_summary.rst:232
 #: ../../source/drivers/raster/driver_summary.rst:238
 #: ../../source/drivers/raster/driver_summary.rst:244
 #: ../../source/drivers/raster/driver_summary.rst:250
-#: ../../source/drivers/raster/driver_summary.rst:262
+#: ../../source/drivers/raster/driver_summary.rst:256
 #: ../../source/drivers/raster/driver_summary.rst:268
-#: ../../source/drivers/raster/driver_summary.rst:280
-#: ../../source/drivers/raster/driver_summary.rst:292
-#: ../../source/drivers/raster/driver_summary.rst:316
+#: ../../source/drivers/raster/driver_summary.rst:274
+#: ../../source/drivers/raster/driver_summary.rst:286
+#: ../../source/drivers/raster/driver_summary.rst:298
 #: ../../source/drivers/raster/driver_summary.rst:322
 #: ../../source/drivers/raster/driver_summary.rst:328
 #: ../../source/drivers/raster/driver_summary.rst:334
 #: ../../source/drivers/raster/driver_summary.rst:340
 #: ../../source/drivers/raster/driver_summary.rst:346
-#: ../../source/drivers/raster/driver_summary.rst:358
+#: ../../source/drivers/raster/driver_summary.rst:352
 #: ../../source/drivers/raster/driver_summary.rst:364
 #: ../../source/drivers/raster/driver_summary.rst:370
-#: ../../source/drivers/raster/driver_summary.rst:394
+#: ../../source/drivers/raster/driver_summary.rst:376
 #: ../../source/drivers/raster/driver_summary.rst:400
 #: ../../source/drivers/raster/driver_summary.rst:406
 #: ../../source/drivers/raster/driver_summary.rst:412
@@ -608,44 +610,44 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:436
 #: ../../source/drivers/raster/driver_summary.rst:442
 #: ../../source/drivers/raster/driver_summary.rst:448
-#: ../../source/drivers/raster/driver_summary.rst:508
+#: ../../source/drivers/raster/driver_summary.rst:454
 #: ../../source/drivers/raster/driver_summary.rst:514
-#: ../../source/drivers/raster/driver_summary.rst:526
+#: ../../source/drivers/raster/driver_summary.rst:520
 #: ../../source/drivers/raster/driver_summary.rst:532
 #: ../../source/drivers/raster/driver_summary.rst:538
 #: ../../source/drivers/raster/driver_summary.rst:544
 #: ../../source/drivers/raster/driver_summary.rst:550
 #: ../../source/drivers/raster/driver_summary.rst:556
 #: ../../source/drivers/raster/driver_summary.rst:562
-#: ../../source/drivers/raster/driver_summary.rst:574
+#: ../../source/drivers/raster/driver_summary.rst:568
 #: ../../source/drivers/raster/driver_summary.rst:580
 #: ../../source/drivers/raster/driver_summary.rst:586
-#: ../../source/drivers/raster/driver_summary.rst:604
+#: ../../source/drivers/raster/driver_summary.rst:592
 #: ../../source/drivers/raster/driver_summary.rst:610
-#: ../../source/drivers/raster/driver_summary.rst:622
-#: ../../source/drivers/raster/driver_summary.rst:634
+#: ../../source/drivers/raster/driver_summary.rst:616
+#: ../../source/drivers/raster/driver_summary.rst:628
 #: ../../source/drivers/raster/driver_summary.rst:640
 #: ../../source/drivers/raster/driver_summary.rst:646
 #: ../../source/drivers/raster/driver_summary.rst:652
 #: ../../source/drivers/raster/driver_summary.rst:658
 #: ../../source/drivers/raster/driver_summary.rst:664
-#: ../../source/drivers/raster/driver_summary.rst:676
+#: ../../source/drivers/raster/driver_summary.rst:670
 #: ../../source/drivers/raster/driver_summary.rst:682
 #: ../../source/drivers/raster/driver_summary.rst:688
 #: ../../source/drivers/raster/driver_summary.rst:694
 #: ../../source/drivers/raster/driver_summary.rst:700
-#: ../../source/drivers/raster/driver_summary.rst:718
+#: ../../source/drivers/raster/driver_summary.rst:706
 #: ../../source/drivers/raster/driver_summary.rst:724
-#: ../../source/drivers/raster/driver_summary.rst:736
+#: ../../source/drivers/raster/driver_summary.rst:730
 #: ../../source/drivers/raster/driver_summary.rst:742
-#: ../../source/drivers/raster/driver_summary.rst:754
+#: ../../source/drivers/raster/driver_summary.rst:748
 #: ../../source/drivers/raster/driver_summary.rst:760
-#: ../../source/drivers/raster/driver_summary.rst:790
+#: ../../source/drivers/raster/driver_summary.rst:766
 #: ../../source/drivers/raster/driver_summary.rst:796
 #: ../../source/drivers/raster/driver_summary.rst:802
 #: ../../source/drivers/raster/driver_summary.rst:808
 #: ../../source/drivers/raster/driver_summary.rst:814
-#: ../../source/drivers/raster/driver_summary.rst:838
+#: ../../source/drivers/raster/driver_summary.rst:820
 #: ../../source/drivers/raster/driver_summary.rst:844
 #: ../../source/drivers/raster/driver_summary.rst:850
 #: ../../source/drivers/raster/driver_summary.rst:856
@@ -660,13 +662,14 @@ msgstr ""
 #: ../../source/drivers/raster/driver_summary.rst:910
 #: ../../source/drivers/raster/driver_summary.rst:916
 #: ../../source/drivers/raster/driver_summary.rst:922
-#: ../../source/drivers/raster/driver_summary.rst:934
+#: ../../source/drivers/raster/driver_summary.rst:928
 #: ../../source/drivers/raster/driver_summary.rst:940
 #: ../../source/drivers/raster/driver_summary.rst:946
 #: ../../source/drivers/raster/driver_summary.rst:952
-#: ../../source/drivers/raster/driver_summary.rst:982
+#: ../../source/drivers/raster/driver_summary.rst:958
 #: ../../source/drivers/raster/driver_summary.rst:988
-#: ../../source/drivers/raster/driver_summary.rst:1000
+#: ../../source/drivers/raster/driver_summary.rst:994
+#: ../../source/drivers/raster/driver_summary.rst:1006
 msgid "Built-in by default"
 msgstr ""
 
@@ -703,1428 +706,1440 @@ msgid "AIRSAR Polarimetric Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:47
-msgid ":ref:`BAG <raster.bag>`"
+msgid ":ref:`AVIF <raster.avif>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:48
-msgid "Bathymetry Attributed Grid"
+msgid "AV1 Image File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:52
-#: ../../source/drivers/raster/driver_summary.rst:382
-#: ../../source/drivers/raster/driver_summary.rst:820
-#: ../../source/drivers/raster/driver_summary.rst:826
-#: ../../source/drivers/raster/driver_summary.rst:832
-msgid "libhdf5"
+msgid "libavif"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:53
-msgid ":ref:`BASISU <raster.basisu>`"
+msgid ":ref:`BAG <raster.bag>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:54
+msgid "Bathymetry Attributed Grid"
+msgstr ""
+
 #: ../../source/drivers/raster/driver_summary.rst:58
-#: ../../source/drivers/raster/driver_summary.rst:520
-msgid "Basis Universal"
+#: ../../source/drivers/raster/driver_summary.rst:388
+#: ../../source/drivers/raster/driver_summary.rst:826
+#: ../../source/drivers/raster/driver_summary.rst:832
+#: ../../source/drivers/raster/driver_summary.rst:838
+msgid "libhdf5"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:59
-msgid ":ref:`BLX <raster.blx>`"
+msgid ":ref:`BASISU <raster.basisu>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:60
-msgid "Magellan BLX Topo File Format"
+#: ../../source/drivers/raster/driver_summary.rst:64
+#: ../../source/drivers/raster/driver_summary.rst:526
+msgid "Basis Universal"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:65
-msgid ":ref:`BMP <raster.bmp>`"
+msgid ":ref:`BLX <raster.blx>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:66
-msgid "Microsoft Windows Device Independent Bitmap"
+msgid "Magellan BLX Topo File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:71
-msgid ":ref:`BSB <raster.bsb>`"
+msgid ":ref:`BMP <raster.bmp>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:72
-msgid "Maptech/NOAA BSB Nautical Chart Format"
+msgid "Microsoft Windows Device Independent Bitmap"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:77
-msgid ":ref:`BT <raster.bt>`"
+msgid ":ref:`BSB <raster.bsb>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:78
-msgid "VTP .bt Binary Terrain Format"
+msgid "Maptech/NOAA BSB Nautical Chart Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:83
-msgid ":ref:`BYN <raster.byn>`"
+msgid ":ref:`BT <raster.bt>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:84
-msgid "Natural Resources Canada's Geoid file format (.byn)"
+msgid "VTP .bt Binary Terrain Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:89
-msgid ":ref:`CAD <raster.cad>`"
+msgid ":ref:`BYN <raster.byn>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:90
-msgid "AutoCAD DWG raster layer"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:94
-msgid "(internal libopencad provided)"
+msgid "Natural Resources Canada's Geoid file format (.byn)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:95
-msgid ":ref:`CALS <raster.cals>`"
+msgid ":ref:`CAD <raster.cad>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:96
-msgid "CALS Type 1"
+msgid "AutoCAD DWG raster layer"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:100
+msgid "(internal libopencad provided)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:101
-msgid ":ref:`CEOS <raster.ceos>`"
+msgid ":ref:`CALS <raster.cals>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:102
-msgid "CEOS Image"
+msgid "CALS Type 1"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:107
-msgid ":ref:`COASP <raster.coasp>`"
+msgid ":ref:`CEOS <raster.ceos>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:108
-msgid "DRDC COASP SAR Processor Raster"
+msgid "CEOS Image"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:113
-msgid ":ref:`COG <raster.cog>`"
+msgid ":ref:`COASP <raster.coasp>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:114
-msgid "Cloud Optimized GeoTIFF generator"
+msgid "DRDC COASP SAR Processor Raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:119
-msgid ":ref:`COSAR <raster.cosar>`"
+msgid ":ref:`COG <raster.cog>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:120
-msgid "TerraSAR-X Complex SAR Data Product"
+msgid "Cloud Optimized GeoTIFF generator"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:125
-msgid ":ref:`CPG <raster.cpg>`"
+msgid ":ref:`COSAR <raster.cosar>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:126
-msgid "Convair PolGASP data"
+msgid "TerraSAR-X Complex SAR Data Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:131
-msgid ":ref:`CTable2 <raster.ctable2>`"
+msgid ":ref:`CPG <raster.cpg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:132
-msgid "CTable2 Datum Grid Shift"
+msgid "Convair PolGASP data"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:137
-msgid ":ref:`CTG <raster.ctg>`"
+msgid ":ref:`CTable2 <raster.ctable2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:138
-msgid "USGS LULC Composite Theme Grid"
+msgid "CTable2 Datum Grid Shift"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:143
-msgid ":ref:`DAAS <raster.daas>`"
+msgid ":ref:`CTG <raster.ctg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:144
-msgid "DAAS (Airbus DS Intelligence Data As A Service driver)"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:148
-#: ../../source/drivers/raster/driver_summary.rst:208
-#: ../../source/drivers/raster/driver_summary.rst:628
-#: ../../source/drivers/raster/driver_summary.rst:670
-#: ../../source/drivers/raster/driver_summary.rst:730
-#: ../../source/drivers/raster/driver_summary.rst:958
-#: ../../source/drivers/raster/driver_summary.rst:970
-#: ../../source/drivers/raster/driver_summary.rst:976
-msgid "libcurl"
+msgid "USGS LULC Composite Theme Grid"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:149
-msgid ":ref:`DDS <raster.dds>`"
+msgid ":ref:`DAAS <raster.daas>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:150
-msgid "DirectDraw Surface"
+msgid "DAAS (Airbus DS Intelligence Data As A Service driver)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:154
-msgid "Crunch Lib"
+#: ../../source/drivers/raster/driver_summary.rst:214
+#: ../../source/drivers/raster/driver_summary.rst:634
+#: ../../source/drivers/raster/driver_summary.rst:676
+#: ../../source/drivers/raster/driver_summary.rst:736
+#: ../../source/drivers/raster/driver_summary.rst:964
+#: ../../source/drivers/raster/driver_summary.rst:976
+#: ../../source/drivers/raster/driver_summary.rst:982
+msgid "libcurl"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:155
-msgid ":ref:`DERIVED <raster.derived>`"
+msgid ":ref:`DDS <raster.dds>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:156
-msgid "Derived subdatasets driver"
+msgid "DirectDraw Surface"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:160
+msgid "Crunch Lib"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:161
-msgid ":ref:`DIMAP <raster.dimap>`"
+msgid ":ref:`DERIVED <raster.derived>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:162
-msgid "Spot DIMAP"
+msgid "Derived subdatasets driver"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:167
-msgid ":ref:`DIPEx <raster.dipex>`"
+msgid ":ref:`DIMAP <raster.dimap>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:168
-msgid "ELAS DIPEx"
+msgid "Spot DIMAP"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:173
-msgid ":ref:`DOQ1 <raster.doq1>`"
+msgid ":ref:`DIPEx <raster.dipex>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:174
-msgid "First Generation USGS DOQ"
+msgid "ELAS DIPEx"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:179
-msgid ":ref:`DOQ2 <raster.doq2>`"
+msgid ":ref:`DOQ1 <raster.doq1>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:180
-msgid "New Labelled USGS DOQ"
+msgid "First Generation USGS DOQ"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:185
-msgid ":ref:`DTED <raster.dted>`"
+msgid ":ref:`DOQ2 <raster.doq2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:186
-msgid "Military Elevation Data"
+msgid "New Labelled USGS DOQ"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:191
-msgid ":ref:`ECRGTOC <raster.ecrgtoc>`"
+msgid ":ref:`DTED <raster.dted>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:192
-msgid "ECRG Table Of Contents (TOC.xml)"
+msgid "Military Elevation Data"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:197
-msgid ":ref:`ECW <raster.ecw>`"
+msgid ":ref:`ECRGTOC <raster.ecrgtoc>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:198
-msgid "Enhanced Compressed Wavelets (.ecw)"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:202
-#: ../../source/drivers/raster/driver_summary.rst:454
-msgid "ECW SDK"
+msgid "ECRG Table Of Contents (TOC.xml)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:203
-msgid ":ref:`EEDAI <raster.eedai>`"
+msgid ":ref:`ECW <raster.ecw>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:204
-msgid "Google Earth Engine Data API Image"
+msgid "Enhanced Compressed Wavelets (.ecw)"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:208
+#: ../../source/drivers/raster/driver_summary.rst:460
+msgid "ECW SDK"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:209
-msgid ":ref:`EHdr <raster.ehdr>`"
+msgid ":ref:`EEDAI <raster.eedai>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:210
-msgid "ESRI .hdr Labelled"
+msgid "Google Earth Engine Data API Image"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:215
-msgid ":ref:`EIR <raster.eir>`"
+msgid ":ref:`EHdr <raster.ehdr>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:216
-msgid "Erdas Imagine Raw"
+msgid "ESRI .hdr Labelled"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:221
-msgid ":ref:`ELAS <raster.elas>`"
+msgid ":ref:`EIR <raster.eir>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:222
-msgid "Earth Resources Laboratory Applications Software"
+msgid "Erdas Imagine Raw"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:227
-msgid ":ref:`ENVI <raster.envi>`"
+msgid ":ref:`ELAS <raster.elas>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:228
-msgid "ENVI .hdr Labelled Raster"
+msgid "Earth Resources Laboratory Applications Software"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:233
-msgid ":ref:`ERS <raster.ers>`"
+msgid ":ref:`ENVI <raster.envi>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:234
-msgid "ERMapper .ERS"
+msgid "ENVI .hdr Labelled Raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:239
-msgid ":ref:`ESAT <raster.esat>`"
+msgid ":ref:`ERS <raster.ers>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:240
-msgid "Envisat Image Product"
+msgid "ERMapper .ERS"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:245
-msgid ":ref:`ESRIC <raster.esric>`"
+msgid ":ref:`ESAT <raster.esat>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:246
-msgid "Esri Compact Cache"
+msgid "Envisat Image Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:251
-msgid ":ref:`EXR <raster.exr>`"
+msgid ":ref:`ESRIC <raster.esric>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:252
-msgid "Extended Dynamic Range Image File Format"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:256
-msgid "libopenexr"
+msgid "Esri Compact Cache"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:257
-msgid ":ref:`FAST <raster.fast>`"
+msgid ":ref:`EXR <raster.exr>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:258
-msgid "EOSAT FAST Format"
+msgid "Extended Dynamic Range Image File Format"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:262
+msgid "libopenexr"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:263
-msgid ":ref:`FIT <raster.fit>`"
+msgid ":ref:`FAST <raster.fast>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:264
-msgid "FIT"
+msgid "EOSAT FAST Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:269
-msgid ":ref:`FITS <raster.fits>`"
+msgid ":ref:`FIT <raster.fit>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:270
-msgid "Flexible Image Transport System"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:274
-msgid "libcfitsio"
+msgid "FIT"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:275
-msgid ":ref:`GenBin <raster.genbin>`"
+msgid ":ref:`FITS <raster.fits>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:276
-msgid "Generic Binary (.hdr labelled)"
+msgid "Flexible Image Transport System"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:280
+msgid "libcfitsio"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:281
-msgid ":ref:`GeoRaster <raster.georaster>`"
+msgid ":ref:`GenBin <raster.genbin>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:282
-msgid "Oracle Spatial GeoRaster"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:286
-msgid "Oracle client libraries"
+msgid "Generic Binary (.hdr labelled)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:287
-msgid ":ref:`GFF <raster.gff>`"
+msgid ":ref:`GeoRaster <raster.georaster>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:288
-msgid "Sandia National Laboratories GSAT File Format"
+msgid "Oracle Spatial GeoRaster"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:292
+msgid "Oracle client libraries"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:293
-msgid ":ref:`GIF <raster.gif>`"
+msgid ":ref:`GFF <raster.gff>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:294
-msgid "Graphics Interchange Format"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:298
-msgid "(internal GIF library provided)"
+msgid "Sandia National Laboratories GSAT File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:299
-msgid ":ref:`GPKG <raster.gpkg>`"
+msgid ":ref:`GIF <raster.gif>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:300
-msgid "GeoPackage raster"
+msgid "Graphics Interchange Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:304
-msgid "libsqlite3 (and any or all of PNG, JPEG, WEBP drivers)"
+msgid "(internal GIF library provided)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:305
-msgid ":ref:`GRASS <raster.grass>`"
+msgid ":ref:`GPKG <raster.gpkg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:306
-msgid "GRASS Raster Format"
+msgid "GeoPackage raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:310
-msgid "gdal-grass-driver"
+msgid "libsqlite3 (and any or all of PNG, JPEG, WEBP drivers)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:311
-msgid ":ref:`GRASSASCIIGrid <raster.grassasciigrid>`"
+msgid ":ref:`GRASS <raster.grass>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:312
-msgid "GRASS ASCII Grid"
+msgid "GRASS Raster Format"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:316
+msgid "gdal-grass-driver"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:317
-msgid ":ref:`GRIB <raster.grib>`"
+msgid ":ref:`GRASSASCIIGrid <raster.grassasciigrid>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:318
-msgid "WMO General Regularly-distributed Information in Binary form"
+msgid "GRASS ASCII Grid"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:323
-msgid ":ref:`GS7BG <raster.gs7bg>`"
+msgid ":ref:`GRIB <raster.grib>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:324
-msgid "Golden Software Surfer 7 Binary Grid File Format"
+msgid "WMO General Regularly-distributed Information in Binary form"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:329
-msgid ":ref:`GSAG <raster.gsag>`"
+msgid ":ref:`GS7BG <raster.gs7bg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:330
-msgid "Golden Software ASCII Grid File Format"
+msgid "Golden Software Surfer 7 Binary Grid File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:335
-msgid ":ref:`GSBG <raster.gsbg>`"
+msgid ":ref:`GSAG <raster.gsag>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:336
-msgid "Golden Software Binary Grid File Format"
+msgid "Golden Software ASCII Grid File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:341
-msgid ":ref:`GSC <raster.gsc>`"
+msgid ":ref:`GSBG <raster.gsbg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:342
-msgid "GSC Geogrid"
+msgid "Golden Software Binary Grid File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:347
-msgid ":ref:`GTA <raster.gta>`"
+msgid ":ref:`GSC <raster.gsc>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:348
-msgid "Generic Tagged Arrays"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:352
-msgid "libgta"
+msgid "GSC Geogrid"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:353
-msgid ":ref:`GTI <raster.gti>`"
+msgid ":ref:`GTA <raster.gta>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:354
-msgid "GDAL Raster Tile Index"
+msgid "Generic Tagged Arrays"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:358
+msgid "libgta"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:359
-msgid ":ref:`GTiff <raster.gtiff>`"
+msgid ":ref:`GTI <raster.gti>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:360
-msgid "GeoTIFF File Format"
+msgid "GDAL Raster Tile Index"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:365
-msgid ":ref:`GXF <raster.gxf>`"
+msgid ":ref:`GTiff <raster.gtiff>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:366
-msgid "Grid eXchange File"
+msgid "GeoTIFF File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:371
-msgid ":ref:`HDF4 <raster.hdf4>`"
+msgid ":ref:`GXF <raster.gxf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:372
-msgid "Hierarchical Data Format Release 4 (HDF4)"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:376
-msgid "libdf"
+msgid "Grid eXchange File"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:377
-msgid ":ref:`HDF5 <raster.hdf5>`"
+msgid ":ref:`HDF4 <raster.hdf4>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:378
-msgid "Hierarchical Data Format Release 5 (HDF5)"
+msgid "Hierarchical Data Format Release 4 (HDF4)"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:382
+msgid "libdf"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:383
-msgid ":ref:`HEIF <raster.heif>`"
+msgid ":ref:`HDF5 <raster.hdf5>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:384
-msgid "ISO/IEC 23008-12:2017 High Efficiency Image File Format"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:388
-msgid "libheif (>= 1.1), built against libde265"
+msgid "Hierarchical Data Format Release 5 (HDF5)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:389
-msgid ":ref:`HF2 <raster.hf2>`"
+msgid ":ref:`HEIF <raster.heif>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:390
-msgid "HF2/HFZ heightfield raster"
+msgid "ISO/IEC 23008-12:2017 High Efficiency Image File Format"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:394
+msgid "libheif (>= 1.1), built against libde265"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:395
-msgid ":ref:`HFA <raster.hfa>`"
+msgid ":ref:`HF2 <raster.hf2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:396
-msgid "Erdas Imagine .img"
+msgid "HF2/HFZ heightfield raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:401
-msgid ":ref:`RST <raster.Idrisi>`"
+msgid ":ref:`HFA <raster.hfa>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:402
-msgid "Idrisi Raster Format"
+msgid "Erdas Imagine .img"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:407
-msgid ":ref:`ILWIS <raster.ilwis>`"
+msgid ":ref:`RST <raster.Idrisi>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:408
-msgid "Raster Map"
+msgid "Idrisi Raster Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:413
-msgid ":ref:`IRIS <raster.iris>`"
+msgid ":ref:`ILWIS <raster.ilwis>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:414
-msgid "Vaisala's weather radar software format"
+msgid "Raster Map"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:419
-msgid ":ref:`ISCE <raster.isce>`"
+msgid ":ref:`IRIS <raster.iris>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:420
-msgid "ISCE"
+msgid "Vaisala's weather radar software format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:425
-msgid ":ref:`ISG <raster.isg>`"
+msgid ":ref:`ISCE <raster.isce>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:426
-msgid "International Service for the Geoid"
+msgid "ISCE"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:431
-msgid ":ref:`ISIS2 <raster.isis2>`"
+msgid ":ref:`ISG <raster.isg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:432
-msgid "USGS Astrogeology ISIS Cube (Version 2)"
+msgid "International Service for the Geoid"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:437
-msgid ":ref:`ISIS3 <raster.isis3>`"
+msgid ":ref:`ISIS2 <raster.isis2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:438
-msgid "USGS Astrogeology ISIS Cube (Version 3)"
+msgid "USGS Astrogeology ISIS Cube (Version 2)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:443
-msgid ":ref:`JDEM <raster.jdem>`"
+msgid ":ref:`ISIS3 <raster.isis3>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:444
-msgid "Japanese DEM (.mem)"
+msgid "USGS Astrogeology ISIS Cube (Version 3)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:449
-msgid ":ref:`JP2ECW <raster.jp2ecw>`"
+msgid ":ref:`JDEM <raster.jdem>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:450
-msgid "ERDAS JPEG2000 (.jp2)"
+msgid "Japanese DEM (.mem)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:455
-msgid ":ref:`JP2KAK <raster.jp2kak>`"
+msgid ":ref:`JP2ECW <raster.jp2ecw>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:456
-msgid "JPEG 2000 (based on Kakadu SDK)"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:460
-msgid "Kakadu SDK"
+msgid "ERDAS JPEG2000 (.jp2)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:461
-msgid ":ref:`JP2LURA <raster.jp2lura>`"
+msgid ":ref:`JP2KAK <raster.jp2kak>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:462
-msgid "JPEG2000 driver based on Lurawave library"
+msgid "JPEG 2000 (based on Kakadu SDK)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:466
-msgid "Lurawave library"
+msgid "Kakadu SDK"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:467
-msgid ":ref:`JP2MrSID <raster.jp2mrsid>`"
+msgid ":ref:`JP2LURA <raster.jp2lura>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:468
-msgid "JPEG2000 via MrSID SDK"
+msgid "JPEG2000 driver based on Lurawave library"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:472
-#: ../../source/drivers/raster/driver_summary.rst:592
-msgid "MrSID SDK"
+msgid "Lurawave library"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:473
-msgid ":ref:`JP2OpenJPEG <raster.jp2openjpeg>`"
+msgid ":ref:`JP2MrSID <raster.jp2mrsid>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:474
-msgid "JPEG2000 driver based on OpenJPEG library"
+msgid "JPEG2000 via MrSID SDK"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:478
-msgid "openjpeg >= 2.1"
+#: ../../source/drivers/raster/driver_summary.rst:598
+msgid "MrSID SDK"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:479
-msgid ":ref:`JPEG <raster.jpeg>`"
+msgid ":ref:`JP2OpenJPEG <raster.jp2openjpeg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:480
-msgid "JPEG JFIF File Format"
+msgid "JPEG2000 driver based on OpenJPEG library"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:484
-msgid "(internal libjpeg provided)"
+msgid "openjpeg >= 2.1"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:485
-msgid ":ref:`JPEGXL <raster.jpegxl>`"
+msgid ":ref:`JPEG <raster.jpeg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:486
-msgid "JPEG-XL File Format"
+msgid "JPEG JFIF File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:490
-msgid "libjxl"
+msgid "(internal libjpeg provided)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:491
-msgid ":ref:`JPIPKAK <raster.jpipkak>`"
+msgid ":ref:`JPEGXL <raster.jpegxl>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:492
-msgid "JPIP Streaming"
+msgid "JPEG-XL File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:496
-msgid "Kakadu library"
+msgid "libjxl"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:497
-msgid ":ref:`KEA <raster.kea>`"
+msgid ":ref:`JPIPKAK <raster.jpipkak>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:498
-msgid "KEA"
+msgid "JPIP Streaming"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:502
-msgid "libkea and libhdf5 libraries"
+msgid "Kakadu library"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:503
-msgid ":ref:`KMLSuperoverlay <raster.kmlsuperoverlay>`"
+msgid ":ref:`KEA <raster.kea>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:504
-msgid "KMLSuperoverlay"
+msgid "KEA"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:508
+msgid "libkea and libhdf5 libraries"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:509
-msgid ":ref:`KRO <raster.kro>`"
+msgid ":ref:`KMLSuperoverlay <raster.kmlsuperoverlay>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:510
-msgid "KOLOR Raw format"
+msgid "KMLSuperoverlay"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:515
-msgid ":ref:`KTX2 <raster.ktx2>`"
+msgid ":ref:`KRO <raster.kro>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:516
-msgid "KTX2"
+msgid "KOLOR Raw format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:521
-msgid ":ref:`L1B <raster.l1b>`"
+msgid ":ref:`KTX2 <raster.ktx2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:522
-msgid "NOAA Polar Orbiter Level 1b Data Set (AVHRR)"
+msgid "KTX2"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:527
-msgid ":ref:`LAN <raster.lan>`"
+msgid ":ref:`L1B <raster.l1b>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:528
-msgid "Erdas 7.x .LAN and .GIS"
+msgid "NOAA Polar Orbiter Level 1b Data Set (AVHRR)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:533
-msgid ":ref:`LCP <raster.lcp>`"
+msgid ":ref:`LAN <raster.lan>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:534
-msgid "FARSITE v.4 LCP Format"
+msgid "Erdas 7.x .LAN and .GIS"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:539
-msgid ":ref:`Leveller <raster.leveller>`"
+msgid ":ref:`LCP <raster.lcp>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:540
-msgid "Daylon Leveller Heightfield"
+msgid "FARSITE v.4 LCP Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:545
-msgid ":ref:`LOSLAS <raster.loslas>`"
+msgid ":ref:`Leveller <raster.leveller>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:546
-msgid "NADCON .los/.las Datum Grid Shift"
+msgid "Daylon Leveller Heightfield"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:551
-msgid ":ref:`MAP <raster.map>`"
+msgid ":ref:`LOSLAS <raster.loslas>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:552
-msgid "OziExplorer .MAP"
+msgid "NADCON .los/.las Datum Grid Shift"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:557
-msgid ":ref:`MRF <raster.marfa>`"
+msgid ":ref:`MAP <raster.map>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:558
-msgid "Meta Raster Format"
+msgid "OziExplorer .MAP"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:563
-msgid ":ref:`MBTiles <raster.mbtiles>`"
+msgid ":ref:`MRF <raster.marfa>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:564
-msgid "MBTiles"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:568
-#: ../../source/drivers/raster/driver_summary.rst:766
-msgid "libsqlite3"
+msgid "Meta Raster Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:569
-msgid ":ref:`MEM <raster.mem>`"
+msgid ":ref:`MBTiles <raster.mbtiles>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:570
-msgid "In Memory Raster"
+msgid "MBTiles"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:574
+#: ../../source/drivers/raster/driver_summary.rst:772
+msgid "libsqlite3"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:575
-msgid ":ref:`MFF <raster.mff>`"
+msgid ":ref:`MEM <raster.mem>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:576
-msgid "Vexcel MFF Raster"
+msgid "In Memory Raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:581
-msgid ":ref:`MFF2 <raster.mff2>`"
+msgid ":ref:`MFF <raster.mff>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:582
-msgid "Vexcel MFF2 Image"
+msgid "Vexcel MFF Raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:587
-msgid ":ref:`MrSID <raster.mrsid>`"
+msgid ":ref:`MFF2 <raster.mff2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:588
-msgid "Multi-resolution Seamless Image Database"
+msgid "Vexcel MFF2 Image"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:593
-msgid ":ref:`MSG <raster.msg>`"
+msgid ":ref:`MrSID <raster.mrsid>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:594
-msgid "Meteosat Second Generation"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:598
-msgid "msg library"
+msgid "Multi-resolution Seamless Image Database"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:599
-msgid ":ref:`MSGN <raster.msgn>`"
+msgid ":ref:`MSG <raster.msg>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:600
-msgid "Meteosat Second Generation (MSG) Native Archive Format (.nat)"
+msgid "Meteosat Second Generation"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:604
+msgid "msg library"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:605
-msgid ":ref:`NDF <raster.ndf>`"
+msgid ":ref:`MSGN <raster.msgn>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:606
-msgid "NLAPS Data Format"
+msgid "Meteosat Second Generation (MSG) Native Archive Format (.nat)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:611
-msgid ":ref:`netCDF <raster.netcdf>`"
+msgid ":ref:`NDF <raster.ndf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:612
-msgid "NetCDF: Network Common Data Form"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:616
-msgid "libnetcdf"
+msgid "NLAPS Data Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:617
-msgid ":ref:`NGSGEOID <raster.ngsgeoid>`"
+msgid ":ref:`netCDF <raster.netcdf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:618
-msgid "NOAA NGS Geoid Height Grids"
+msgid "NetCDF: Network Common Data Form"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:622
+msgid "libnetcdf"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:623
-msgid ":ref:`NGW <raster.ngw>`"
+msgid ":ref:`NGSGEOID <raster.ngsgeoid>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:624
-msgid "NextGIS Web"
+msgid "NOAA NGS Geoid Height Grids"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:629
-msgid ":ref:`NITF <raster.nitf>`"
+msgid ":ref:`NGW <raster.ngw>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:630
-msgid "National Imagery Transmission Format"
+msgid "NextGIS Web"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:635
-msgid ":ref:`NOAA_B <raster.noaa_b>`"
+msgid ":ref:`NITF <raster.nitf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:636
-msgid "NOAA GEOCON/NADCON5 .b format"
+msgid "National Imagery Transmission Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:641
-msgid ":ref:`NSIDCbin <raster.nsidcbin>`"
+msgid ":ref:`NOAA_B <raster.noaa_b>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:642
-msgid "National Snow and Ice Data Centre Sea Ice Concentrations"
+msgid "NOAA GEOCON/NADCON5 .b format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:647
-msgid ":ref:`NTv2 <raster.ntv2>`"
+msgid ":ref:`NSIDCbin <raster.nsidcbin>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:648
-msgid "NTv2 Datum Grid Shift"
+msgid "National Snow and Ice Data Centre Sea Ice Concentrations"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:653
-msgid ":ref:`NWT_GRD <raster.nwtgrd>`"
+msgid ":ref:`NTv2 <raster.ntv2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:654
-#: ../../source/drivers/raster/driver_summary.rst:660
-msgid "Northwood/Vertical Mapper File Format"
+msgid "NTv2 Datum Grid Shift"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:659
-msgid ":ref:`NWT_GRC <raster.nwtgrd>`"
+msgid ":ref:`NWT_GRD <raster.nwtgrd>`"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:660
+#: ../../source/drivers/raster/driver_summary.rst:666
+msgid "Northwood/Vertical Mapper File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:665
-msgid ":ref:`OGCAPI <raster.ogcapi>`"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:666
-msgid "OGC API Tiles / Maps / Coverage"
+msgid ":ref:`NWT_GRC <raster.nwtgrd>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:671
-msgid ":ref:`OpenFileGDB <raster.openfilegdb>`"
+msgid ":ref:`OGCAPI <raster.ogcapi>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:672
-msgid "ESRI File Geodatabase raster (OpenFileGDB)"
+msgid "OGC API Tiles / Maps / Coverage"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:677
-msgid ":ref:`OZI <raster.ozi>`"
+msgid ":ref:`OpenFileGDB <raster.openfilegdb>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:678
-msgid "OZF2/OZFX3 raster"
+msgid "ESRI File Geodatabase raster (OpenFileGDB)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:683
-msgid ":ref:`JAXAPALSAR <raster.palsar>`"
+msgid ":ref:`OZI <raster.ozi>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:684
-msgid "JAXA PALSAR Processed Products"
+msgid "OZF2/OZFX3 raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:689
-msgid ":ref:`PAux <raster.paux>`"
+msgid ":ref:`JAXAPALSAR <raster.palsar>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:690
-msgid "PCI .aux Labelled Raw Format"
+msgid "JAXA PALSAR Processed Products"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:695
-msgid ":ref:`PCIDSK <raster.pcidsk>`"
+msgid ":ref:`PAux <raster.paux>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:696
-msgid "PCI Geomatics Database File"
+msgid "PCI .aux Labelled Raw Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:701
-msgid ":ref:`PCRaster <raster.pcraster>`"
+msgid ":ref:`PCIDSK <raster.pcidsk>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:702
-msgid "PCRaster raster file format"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:706
-msgid "(internal libcf provided)"
+msgid "PCI Geomatics Database File"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:707
-msgid ":ref:`PDF <raster.pdf>`"
+msgid ":ref:`PCRaster <raster.pcraster>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:708
-msgid "Geospatial PDF"
+msgid "PCRaster raster file format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:712
-msgid "none for write support, Poppler/PoDoFo/PDFium for read support"
+msgid "(internal libcf provided)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:713
-msgid ":ref:`PDS <raster.pds>`"
+msgid ":ref:`PDF <raster.pdf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:714
-msgid "Planetary Data System v3"
+msgid "Geospatial PDF"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:718
+msgid "none for write support, Poppler/PoDoFo/PDFium for read support"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:719
-msgid ":ref:`PDS4 <raster.pds4>`"
+msgid ":ref:`PDS <raster.pds>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:720
-msgid "NASA Planetary Data System (Version 4)"
+msgid "Planetary Data System v3"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:725
-msgid ":ref:`PLMosaic <raster.plmosaic>`"
+msgid ":ref:`PDS4 <raster.pds4>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:726
-msgid "PLMosaic (Planet Labs Mosaics API)"
+msgid "NASA Planetary Data System (Version 4)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:731
-msgid ":ref:`PNG <raster.png>`"
+msgid ":ref:`PLMosaic <raster.plmosaic>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:732
-msgid "Portable Network Graphics"
+msgid "PLMosaic (Planet Labs Mosaics API)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:737
-msgid ":ref:`PNM <raster.pnm>`"
+msgid ":ref:`PNG <raster.png>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:738
-msgid "Netpbm (.pgm, .ppm)"
+msgid "Portable Network Graphics"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:743
-msgid ":ref:`PostGISRaster <raster.postgisraster>`"
+msgid ":ref:`PNM <raster.pnm>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:744
-msgid "PostGIS Raster driver"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:748
-msgid "PostgreSQL library"
+msgid "Netpbm (.pgm, .ppm)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:749
-msgid ":ref:`PRF <raster.prf>`"
+msgid ":ref:`PostGISRaster <raster.postgisraster>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:750
-msgid "PHOTOMOD Raster File"
+msgid "PostGIS Raster driver"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:754
+msgid "PostgreSQL library"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:755
-msgid ":ref:`R <raster.r>`"
+msgid ":ref:`PRF <raster.prf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:756
-msgid "R Object Data Store"
+msgid "PHOTOMOD Raster File"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:761
-msgid ":ref:`Rasterlite <raster.rasterlite>`"
+msgid ":ref:`R <raster.r>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:762
-#: ../../source/drivers/raster/driver_summary.rst:768
-msgid "Rasters in SQLite DB"
+msgid "R Object Data Store"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:767
-msgid ":ref:`SQLite <raster.rasterlite2>`"
+msgid ":ref:`Rasterlite <raster.rasterlite>`"
 msgstr ""
 
-#: ../../source/drivers/raster/driver_summary.rst:772
-msgid "libsqlite3, librasterlite2, libspatialite"
+#: ../../source/drivers/raster/driver_summary.rst:768
+#: ../../source/drivers/raster/driver_summary.rst:774
+msgid "Rasters in SQLite DB"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:773
-msgid ":ref:`RDB <raster.rdb>`"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:774
-msgid "*RIEGL* Database"
+msgid ":ref:`SQLite <raster.rasterlite2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:778
-msgid "rdblib >= 2.2.0."
+msgid "libsqlite3, librasterlite2, libspatialite"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:779
-msgid ":ref:`RIK <raster.rik>`"
+msgid ":ref:`RDB <raster.rdb>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:780
-msgid "Swedish Grid Maps"
+msgid "*RIEGL* Database"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:784
-msgid "(internal zlib is used if necessary)"
+msgid "rdblib >= 2.2.0."
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:785
-msgid ":ref:`RMF <raster.rmf>`"
+msgid ":ref:`RIK <raster.rik>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:786
-msgid "Raster Matrix Format"
+msgid "Swedish Grid Maps"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:790
+msgid "(internal zlib is used if necessary)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:791
-msgid ":ref:`ROI_PAC <raster.roi_pac>`"
+msgid ":ref:`RMF <raster.rmf>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:792
-msgid "ROI_PAC"
+msgid "Raster Matrix Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:797
-msgid ":ref:`RPFTOC <raster.rpftoc>`"
+msgid ":ref:`ROI_PAC <raster.roi_pac>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:798
-msgid "Raster Product Format/RPF (a.toc)"
+msgid "ROI_PAC"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:803
-msgid ":ref:`RRASTER <raster.rraster>`"
+msgid ":ref:`RPFTOC <raster.rpftoc>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:804
-msgid "R Raster"
+msgid "Raster Product Format/RPF (a.toc)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:809
-msgid ":ref:`RS2 <raster.rs2>`"
+msgid ":ref:`RRASTER <raster.rraster>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:810
-msgid "RadarSat 2 XML Product"
+msgid "R Raster"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:815
-msgid ":ref:`S102 <raster.s102>`"
+msgid ":ref:`RS2 <raster.rs2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:816
-msgid "S-102 Bathymetric Surface Product"
+msgid "RadarSat 2 XML Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:821
-msgid ":ref:`S104 <raster.s104>`"
+msgid ":ref:`S102 <raster.s102>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:822
-msgid "S-104 Water Level Information for Surface Navigation Product"
+msgid "S-102 Bathymetric Surface Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:827
-msgid ":ref:`S111 <raster.s111>`"
+msgid ":ref:`S104 <raster.s104>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:828
-msgid "S-111 Surface Currents Product"
+msgid "S-104 Water Level Information for Surface Navigation Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:833
-msgid ":ref:`SAFE <raster.safe>`"
+msgid ":ref:`S111 <raster.s111>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:834
-msgid "Sentinel-1 SAFE XML Product"
+msgid "S-111 Surface Currents Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:839
-msgid ":ref:`SAR_CEOS <raster.sar_ceos>`"
+msgid ":ref:`SAFE <raster.safe>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:840
-msgid "CEOS SAR Image"
+msgid "Sentinel-1 SAFE XML Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:845
-msgid ":ref:`SAGA <raster.sdat>`"
+msgid ":ref:`SAR_CEOS <raster.sar_ceos>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:846
-msgid "SAGA GIS Binary Grid File Format"
+msgid "CEOS SAR Image"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:851
-msgid ":ref:`SDTS <raster.sdts>`"
+msgid ":ref:`SAGA <raster.sdat>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:852
-msgid "USGS SDTS DEM"
+msgid "SAGA GIS Binary Grid File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:857
-msgid ":ref:`SENTINEL2 <raster.sentinel2>`"
+msgid ":ref:`SDTS <raster.sdts>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:858
-msgid "Sentinel-2 Products"
+msgid "USGS SDTS DEM"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:863
-msgid ":ref:`SGI <raster.sgi>`"
+msgid ":ref:`SENTINEL2 <raster.sentinel2>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:864
-msgid "SGI Image Format"
+msgid "Sentinel-2 Products"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:869
-msgid ":ref:`SIGDEM <raster.sigdem>`"
+msgid ":ref:`SGI <raster.sgi>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:870
-msgid "Scaled Integer Gridded DEM"
+msgid "SGI Image Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:875
-msgid ":ref:`SNODAS <raster.snodas>`"
+msgid ":ref:`SIGDEM <raster.sigdem>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:876
-msgid "Snow Data Assimilation System"
+msgid "Scaled Integer Gridded DEM"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:881
-msgid ":ref:`SRP <raster.srp>`"
+msgid ":ref:`SNODAS <raster.snodas>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:882
-msgid "Standard Product Format (ASRP/USRP) (.gen)"
+msgid "Snow Data Assimilation System"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:887
-msgid ":ref:`SRTMHGT <raster.srtmhgt>`"
+msgid ":ref:`SRP <raster.srp>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:888
-msgid "SRTM HGT Format"
+msgid "Standard Product Format (ASRP/USRP) (.gen)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:893
-msgid ":ref:`STACIT <raster.stacit>`"
+msgid ":ref:`SRTMHGT <raster.srtmhgt>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:894
-msgid "Spatio-Temporal Asset Catalog Items"
+msgid "SRTM HGT Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:899
-msgid ":ref:`STACTA <raster.stacta>`"
+msgid ":ref:`STACIT <raster.stacit>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:900
-msgid "Spatio-Temporal Asset Catalog Tiled Assets"
+msgid "Spatio-Temporal Asset Catalog Items"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:905
-msgid ":ref:`Terragen <raster.terragen>`"
+msgid ":ref:`STACTA <raster.stacta>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:906
-msgid "Terragen™ Terrain File"
+msgid "Spatio-Temporal Asset Catalog Tiled Assets"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:911
-msgid ":ref:`TGA <raster.tga>`"
+msgid ":ref:`Terragen <raster.terragen>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:912
-msgid "TARGA Image File Format"
+msgid "Terragen™ Terrain File"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:917
-msgid ":ref:`TIL <raster.til>`"
+msgid ":ref:`TGA <raster.tga>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:918
-msgid "EarthWatch/DigitalGlobe .TIL"
+msgid "TARGA Image File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:923
-msgid ":ref:`TileDB <raster.tiledb>`"
+msgid ":ref:`TIL <raster.til>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:924
-msgid "TileDB raster"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:928
-msgid "TileDB (>= 2.7 starting with GDAL 3.7)"
+msgid "EarthWatch/DigitalGlobe .TIL"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:929
-msgid ":ref:`TSX <raster.tsx>`"
+msgid ":ref:`TileDB <raster.tiledb>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:930
-msgid "TerraSAR-X Product"
+msgid "TileDB raster"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:934
+msgid "TileDB (>= 2.7 starting with GDAL 3.7)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:935
-msgid ":ref:`USGSDEM <raster.usgsdem>`"
+msgid ":ref:`TSX <raster.tsx>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:936
-msgid "USGS ASCII DEM (and CDED)"
+msgid "TerraSAR-X Product"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:941
-msgid ":ref:`VICAR <raster.vicar>`"
+msgid ":ref:`USGSDEM <raster.usgsdem>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:942
-msgid "VICAR"
+msgid "USGS ASCII DEM (and CDED)"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:947
-msgid ":ref:`VRT <raster.vrt>`"
+msgid ":ref:`VICAR <raster.vicar>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:948
-msgid "GDAL Virtual Format"
+msgid "VICAR"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:953
-msgid ":ref:`WCS <raster.wcs>`"
+msgid ":ref:`VRT <raster.vrt>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:954
-msgid "OGC Web Coverage Service"
+msgid "GDAL Virtual Format"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:959
-msgid ":ref:`WEBP <raster.webp>`"
+msgid ":ref:`WCS <raster.wcs>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:960
-msgid "WEBP"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:964
-msgid "libwebp"
+msgid "OGC Web Coverage Service"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:965
-msgid ":ref:`WMS <raster.wms>`"
+msgid ":ref:`WEBP <raster.webp>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:966
-msgid "Web Map Services"
+msgid "WEBP"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:970
+msgid "libwebp"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:971
-msgid ":ref:`WMTS <raster.wmts>`"
+msgid ":ref:`WMS <raster.wms>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:972
-msgid "OGC Web Map Tile Service"
+msgid "Web Map Services"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:977
-msgid ":ref:`XPM <raster.xpm>`"
+msgid ":ref:`WMTS <raster.wmts>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:978
-msgid "X11 Pixmap"
+msgid "OGC Web Map Tile Service"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:983
-msgid ":ref:`XYZ <raster.xyz>`"
+msgid ":ref:`XPM <raster.xpm>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:984
-msgid "ASCII Gridded XYZ"
+msgid "X11 Pixmap"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:989
-msgid ":ref:`Zarr <raster.zarr>`"
+msgid ":ref:`XYZ <raster.xyz>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:990
-msgid "Zarr"
-msgstr ""
-
-#: ../../source/drivers/raster/driver_summary.rst:994
-msgid "Built-in by default, but liblz4, libxz (lzma), libzstd and libblosc"
+msgid "ASCII Gridded XYZ"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:995
-msgid ":ref:`ZMAP <raster.zmap>`"
+msgid ":ref:`Zarr <raster.zarr>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:996
-msgid "ZMap Plus Grid"
+msgid "Zarr"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:1000
+msgid "Built-in by default, but liblz4, libxz (lzma), libzstd and libblosc"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:1001
+msgid ":ref:`ZMAP <raster.zmap>`"
 msgstr ""
 
 #: ../../source/drivers/raster/driver_summary.rst:1002
+msgid "ZMap Plus Grid"
+msgstr ""
+
+#: ../../source/drivers/raster/driver_summary.rst:1008
 msgid "(1): Creation refers to implementing :cpp:func:`GDALCreate`."
 msgstr ""
 
-#: ../../source/drivers/raster/driver_summary.rst:1003
+#: ../../source/drivers/raster/driver_summary.rst:1009
 msgid "(2): Copy refers to implementing :cpp:func:`GDALCreateCopy`."
 msgstr ""
 

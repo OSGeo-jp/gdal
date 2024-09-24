@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_merge.rst:9
 msgid "Mosaics a set of images."
-msgstr ""
+msgstr "イメージセットをモザイクします."
 
 #: ../../source/programs/gdal_merge.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_merge.rst:26
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_merge.rst:28
 msgid ""
@@ -46,28 +46,36 @@ msgid ""
 "nodata/transparent value on all bands for the target pixel in the "
 "resulting raster nor will it overwrite a valid pixel value."
 msgstr ""
+"このユーティリティは,イメージセットを自動的にモザイクします."
+"すべてのイメージは同じ座標系にあり,一致するバンド数を持っている必要がありますが,重なり合っていて異なる解像度であっても構いません."
+"重なり合う領域では,最後のイメージが以前のものにコピーされます."
+"ノーデータ/透過値はバンドごとに考慮されます.つまり,ソースバンドのノーデータ/透過ピクセルは,結果のラスターの対象ピクセルのすべてのバンドにノーデータ/透過値を設定するわけではありません."
+"また,有効なピクセル値を上書きすることもありません."
 
 #: ../../source/programs/gdal_merge.rst:38
 msgid ""
 "gdal_merge is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal_merge は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_merge.rst:46
 msgid ""
 "The name of the output file, which will be created if it does not already"
 " exist (defaults to \"out.tif\")."
 msgstr ""
+"出力ファイルの名前です.存在しない場合は作成されます(デフォルトは \"out.tif\")."
 
 #: ../../source/programs/options/of.rst:3
 msgid ""
@@ -75,6 +83,7 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は GTiff でした).短いフォーマット名を使用します."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -83,6 +92,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の情報を制御するために使用できる 1 つ以上のオプションがあります."
+"たとえば,GeoTIFF ドライバは,圧縮を制御する作成オプションやファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -94,6 +105,9 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,一部のシンプルなフォーマットには作成オプションが全くありません."
+"フォーマットでサポートされているオプションのリストは,コマンドラインオプション :ref:`--formats <raster_common_options_formats>` でリストできますが,"
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです."
 
 #: ../../source/programs/options/ot.rst:3
 msgid ""
@@ -103,12 +117,16 @@ msgid ""
 "``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` or "
 "``CFloat64``."
 msgstr ""
+"出力画像バンドをドライバでサポートされている特定のデータ型に強制します.これは次のいずれかである可能性があります:"
+"``Byte``, ``Int8``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, ``Float32``, ``Float64``, "
+"``CInt16``, ``CInt32``, ``CFloat32`` または ``CFloat64``."
 
 #: ../../source/programs/gdal_merge.rst:57
 msgid ""
 "Pixel size to be used for the output file.  If not specified the "
 "resolution of the first input file will be used."
 msgstr ""
+"出力ファイルに使用するピクセルサイズです.指定されていない場合,最初の入力ファイルの解像度が使用されます."
 
 #: ../../source/programs/gdal_merge.rst:63
 msgid ""
@@ -117,24 +135,27 @@ msgid ""
 " minimum extent. Alignment means that xmin / resx, ymin / resy, xmax / "
 "resx and ymax / resy are integer values."
 msgstr ""
+"(ターゲットアラインドピクセル)出力ファイルの範囲の座標を -tr の値に整列させることで,整列された範囲が最小範囲を含むようにします."
+"整列とは,xmin / resx, ymin / resy, xmax / resx および ymax / resy が整数値であることを意味します."
 
 #: ../../source/programs/gdal_merge.rst:70
 msgid ""
 "The extents of the output file. If not specified the aggregate extents of"
 " all input files will be used."
 msgstr ""
+"出力ファイルの範囲です.指定されていない場合,すべての入力ファイルの集計範囲が使用されます."
 
 #: ../../source/programs/gdal_merge.rst:76
 msgid "Suppress progress messages."
-msgstr ""
+msgstr "進行メッセージを抑制します."
 
 #: ../../source/programs/gdal_merge.rst:80
 msgid "Generate verbose output of mosaicing operations as they are done."
-msgstr ""
+msgstr "モザイク操作が行われるときの操作の詳細な出力を生成します."
 
 #: ../../source/programs/gdal_merge.rst:84
 msgid "Place each input file into a separate band."
-msgstr ""
+msgstr "各入力ファイルを別々のバンドに配置します."
 
 #: ../../source/programs/gdal_merge.rst:88
 msgid ""
@@ -142,14 +163,16 @@ msgid ""
 "output. Merging pseudo-colored images this way assumes that all input "
 "files use the same color table."
 msgstr ""
+"最初の入力イメージから疑似カラーテーブルを取得し,出力に使用します."
+"この方法で疑似カラーイメージをマージすると,すべての入力ファイルが同じカラーテーブルを使用していると仮定されます."
 
 #: ../../source/programs/gdal_merge.rst:94
 msgid "Ignore pixels from files being merged in with this pixel value."
-msgstr ""
+msgstr "マージされるファイルからのピクセルをこのピクセル値で無視します."
 
 #: ../../source/programs/gdal_merge.rst:98
 msgid "Assign a specified nodata value to output bands."
-msgstr ""
+msgstr "指定されたノーデータ値を出力バンドに割り当てます."
 
 #: ../../source/programs/gdal_merge.rst:102
 msgid ""
@@ -157,70 +180,79 @@ msgid ""
 "not marked as the nodata value in the output file.  If only one value is "
 "given, the same value is used in all the bands."
 msgstr ""
+"これらの値で出力画像バンドを事前初期化します.ただし,出力ファイルではノーデータ値としてマークされていません."
+"1 つの値のみが与えられた場合,すべてのバンドで同じ値が使用されます."
 
 #: ../../source/programs/gdal_merge.rst:108
 msgid ""
 "The output file is created (and potentially pre-initialized) but no input"
 " image data is copied into it."
 msgstr ""
+"出力ファイルが作成され(おそらく事前初期化されます)が,入力イメージデータはコピーされません."
 
 #: ../../source/programs/gdal_merge.rst:113
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_merge.rst:116
 msgid "Creating an image with the pixels in all bands initialized to 255"
-msgstr ""
+msgstr "すべてのバンドのピクセルを 255 で初期化したイメージを作成します"
 
 #: ../../source/programs/gdal_merge.rst:124
 msgid "Creating an RGB image that shows blue in pixels with no data"
-msgstr ""
+msgstr "ノーデータのピクセルに青を表示する RGB イメージを作成します"
 
 #: ../../source/programs/gdal_merge.rst:126
 msgid ""
 "The first two bands will be initialized to 0 and the third band will be "
 "initialized to 255."
 msgstr ""
+"最初の 2 つのバンドは 0 で初期化され,3 番目のバンドは 255 で初期化されます."
 
 #: ../../source/programs/gdal_merge.rst:135
 msgid "Passing a large list of files to :program:`gdal_merge`"
-msgstr ""
+msgstr ":program:`gdal_merge` に大量のファイルを渡します"
 
 #: ../../source/programs/gdal_merge.rst:137
 msgid ""
 "A large list of files can be passed to :program:`gdal_merge` by listing "
 "them in a text file using:"
 msgstr ""
+"大量のファイルを :program:`gdal_merge` に渡すには,テキストファイルにリストして次のようにします:"
 
 #: ../../source/programs/gdal_merge.rst:144
 msgid "on Linux, or"
-msgstr ""
+msgstr "Linux では,または"
 
 #: ../../source/programs/gdal_merge.rst:150
 msgid ""
 "on Windows. The text file can then be passed to :program:`gdal_merge` "
 "using `--optfile`:"
 msgstr ""
+"Windows では.テキストファイルは `--optfile` を使用して :program:`gdal_merge` に渡すことができます:"
 
 #: ../../source/programs/gdal_merge.rst:158
 msgid "Creating an RGB image by merging 3 different greyscale bands"
-msgstr ""
+msgstr "3 つの異なるグレースケールバンドをマージして RGB イメージを作成します"
 
 #: ../../source/programs/gdal_merge.rst:160
 msgid ""
 "Conduct \"merging by stacking\" with the :option:`-separate` flag. Given "
 "three greyscale files that cover the same area, you can run:"
 msgstr ""
+":option:`-separate` フラグを使用して \"スタックによるマージ\" を実行します."
+"同じ領域をカバーする 3 つのグレースケールファイルがある場合,次のように実行できます:"
 
 #: ../../source/programs/gdal_merge.rst:167
 msgid ""
 "This maps :file:`1.tif` to red, :file:`2.tif` to green and :file:`3.tif` "
 "to blue."
 msgstr ""
+"これにより, :file:`1.tif` が赤に, :file:`2.tif` が緑に, :file:`3.tif` が青にマッピングされます."
 
 #: ../../source/programs/gdal_merge.rst:170
 msgid "Specifying overlap precedence"
-msgstr ""
+msgstr "重なり合う優先順位を指定します"
 
 #: ../../source/programs/gdal_merge.rst:172
 msgid ""
@@ -229,4 +261,6 @@ msgid ""
 " not be copied into the destination image if it is not already defined as"
 " nodata."
 msgstr ""
+"入力行の最後のイメージが完成したイメージスタックの上に出てきます."
+"また,既にノーデータとして定義されていない場合,宛先イメージにコピーされるべきでない値を指定するために :option:`-n` を使用する必要があります."
 

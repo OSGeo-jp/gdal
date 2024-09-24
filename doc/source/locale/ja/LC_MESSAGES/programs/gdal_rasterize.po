@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-11 11:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_rasterize.rst:9
 msgid "Burns vector geometries into a raster"
-msgstr ""
+msgstr "ベクタージオメトリをラスターに焼き付けます"
 
 #: ../../source/programs/gdal_rasterize.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_rasterize.rst:31
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_rasterize.rst:33
 msgid ""
@@ -42,22 +42,27 @@ msgid ""
 "supported vector formats. If the output raster already exists, the "
 "affected pixels are updated in-place."
 msgstr ""
+"このプログラムは,ベクタージオメトリ(点,線,ポリゴン)をラスター画像のラスターバンドに焼き付けます."
+"ベクターは OGR サポートされたベクターフォーマットから読み込まれます."
+"出力ラスターが既に存在する場合,影響を受けるピクセルはその場で更新されます."
 
 #: ../../source/programs/gdal_rasterize.rst:38
 msgid ""
 "Note that on the fly reprojection of vector data to the coordinate system"
 " of the raster data is only supported since GDAL 2.1.0."
 msgstr ""
+"ベクターデータをラスターデータの座標系にオンザフライで再投影する機能は, GDAL 2.1.0 以降でのみサポートされていることに注意してください."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_rasterize.rst:47
 msgid ""
@@ -65,6 +70,8 @@ msgid ""
 "burn into a list of bands.  The default is to burn into band 1.  Not used"
 " when creating a new raster."
 msgstr ""
+"値を焼き付けるバンドです. 複数の -b 引数を使用してバンドのリストに焼き付けることができます."
+"デフォルトはバンド 1 に焼き付けます. 新しいラスターを作成する場合は使用しません."
 
 #: ../../source/programs/gdal_rasterize.rst:53
 msgid ""
@@ -72,6 +79,7 @@ msgid ""
 "associated with the first feature into all parts of the image *not* "
 "inside the provided polygon."
 msgstr ""
+"ラスタライズを反転します. 固定焼き付け値または最初のフィーチャに関連付けられた焼き付け値を,提供されたポリゴンの内部でない画像のすべての部分に焼き付けます."
 
 #: ../../source/programs/gdal_rasterize.rst:59
 msgid ""
@@ -79,6 +87,7 @@ msgid ""
 "(like an island in a lake), GDAL must be built against GEOS to get "
 "correct results."
 msgstr ""
+"ベクターフィーチャに他のポリゴンにネストされたポリゴン(湖の中の島のような)が含まれている場合,正しい結果を得るためには GEOS に対して GDAL をビルドする必要があります."
 
 #: ../../source/programs/gdal_rasterize.rst:65
 msgid ""
@@ -88,6 +97,9 @@ msgid ""
 "unspecified when the polygon is just touching the pixel center). Defaults"
 " to disabled for normal rendering rules."
 msgstr ""
+"ALL_TOUCHED ラスタライズオプションを有効にして,線またはポリゴンによって触れられたすべてのピクセルが更新されるようにします."
+"通常のレンダリングルールでは,ラインレンダリングパス上のピクセルまたは中心点がポリゴン内にあるピクセルのみが更新されます(ポリゴンがピクセル中心にちょうど触れている場合の動作は未指定です)."
+"通常のレンダリングルールでは無効になっています."
 
 #: ../../source/programs/gdal_rasterize.rst:73
 msgid ""
@@ -97,18 +109,23 @@ msgid ""
 "edge. You may wish to use the :option:`-sql` option to reorder the "
 "features (ORDER BY) to achieve a more predictable result."
 msgstr ""
+"このオプションが有効になっている場合,入力地物(線またはポリゴン)の順序が結果に影響を与える可能性があります."
+"2つの地物が互いに接触すると,最後の地物(つまり最上位の地物)がエッジの焼き付けピクセル値を決定します."
+"より予測可能な結果を得るために,地物を再配置するために :option:`-sql` オプションを使用することができます(ORDER BY)."
 
 #: ../../source/programs/gdal_rasterize.rst:81
 msgid ""
 "A fixed value to burn into a band for all objects.  A list of "
 ":option:`-burn` options can be supplied, one per band being written to."
 msgstr ""
+"すべてのオブジェクトに焼き付けるための固定値です. 書き込まれる各バンドにつき, :option:`-burn` オプションのリストを提供できます."
 
 #: ../../source/programs/gdal_rasterize.rst:86
 msgid ""
 "Identifies an attribute field on the features to be used for a burn-in "
 "value. The value will be burned into all output bands."
 msgstr ""
+"焼き付け値に使用する地物の属性フィールドを識別します. その値はすべての出力バンドに焼き付けられます."
 
 #: ../../source/programs/gdal_rasterize.rst:91
 msgid ""
@@ -117,12 +134,15 @@ msgid ""
 " segment). For polygons, works properly only if the are flat (same Z "
 "value for all vertices)."
 msgstr ""
+"焼き付け値を地物の \"Z\" 値から抽出することを示します. 点と線(各セグメントに沿った線形補間)で機能します."
+"ポリゴンの場合,フラットである場合のみ正しく機能します(すべての頂点の Z 値が同じ)."
 
 #: ../../source/programs/gdal_rasterize.rst:98
 msgid ""
 "Instead of burning a new value, this adds the new value to the existing "
 "raster. Suitable for heatmaps for instance."
 msgstr ""
+"新しい値を焼き付ける代わりに,既存のラスターに新しい値を追加します. たとえばヒートマップに適しています."
 
 #: ../../source/programs/gdal_rasterize.rst:103
 msgid ""
@@ -130,12 +150,15 @@ msgid ""
 "features.  May be specified multiple times, but at least one layer name "
 "or a :option:`-sql` option must be specified (not both)."
 msgstr ""
+"入力地物に使用されるデータソースからのレイヤーを示します. 複数回指定できますが,"
+"少なくとも1つのレイヤー名または :option:`-sql` オプションを指定する必要があります(両方ではありません)."
 
 #: ../../source/programs/gdal_rasterize.rst:109
 msgid ""
 "An optional SQL WHERE style query expression to be applied to select "
 "features to burn in from the input layer(s)."
 msgstr ""
+"入力レイヤーから焼き付ける地物を選択するために適用されるオプションの SQL WHERE スタイルのクエリ式です."
 
 #: ../../source/programs/gdal_rasterize.rst:114
 msgid ""
@@ -144,12 +167,15 @@ msgid ""
 "``@filename`` syntax can be used to indicate that the content is in the "
 "pointed filename."
 msgstr ""
+"焼き付ける地物の仮想レイヤーを生成するためにデータソースに対して評価される SQL 文です."
+"GDAL 3.7 以降, ``@filename`` 構文を使用して,内容が指定されたファイル名にあることを示すことができます."
 
 #: ../../source/programs/gdal_rasterize.rst:121
 msgid ""
 "This option will be ignored if the :option:`-l` option has been set as "
 "well."
 msgstr ""
+"このオプションは, :option:`-l` オプションが設定されている場合は無視されます."
 
 #: ../../source/programs/gdal_rasterize.rst:125
 msgid ""
@@ -157,6 +183,8 @@ msgid ""
 "instead of the native SQL of an RDBMS by passing OGRSQL. The \"SQLITE\" "
 "dialect can also be used with any datasource."
 msgstr ""
+"SQL 方言です. いくつかの場合, OGR SQL をネイティブ SQL の代わりに使用するために OGRSQL を渡すことができます(最適化されていない場合があります)."
+"\"SQLITE\" 方言は,任意のデータソースで使用することもできます."
 
 #: ../../source/programs/options/of.rst:3
 msgid ""
@@ -164,10 +192,12 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は GTiff でした)."
+"短いフォーマット名を使用します."
 
 #: ../../source/programs/gdal_rasterize.rst:135
 msgid "Assign a specified nodata value to output bands."
-msgstr ""
+msgstr "指定されたノーデータ値を出力バンドに割り当てます."
 
 #: ../../source/programs/gdal_rasterize.rst:139
 msgid ""
@@ -175,6 +205,8 @@ msgid ""
 "not marked as the nodata value in the output file.  If only one value is "
 "given, the same value is used in all the bands."
 msgstr ""
+"これらの値で出力画像バンドを事前初期化します. ただし,出力ファイルではノーデータ値としてマークされていません."
+"1つの値のみが指定されている場合,すべてのバンドで同じ値が使用されます."
 
 #: ../../source/programs/gdal_rasterize.rst:145
 msgid ""
@@ -186,6 +218,10 @@ msgid ""
 "GDAL/OGR forms, complete WKT, PROJ.4, EPSG:n or a file containing the "
 "WKT."
 msgstr ""
+"出力ファイルの投影を上書きします. 指定されていない場合,入力ベクターファイルの投影が利用可能な場合に使用されます."
+"このオプションを使用すると,入力ベクターの SRS から出力ラスターの指定された SRS への地物の再投影は行われないため,"
+"無効なソース SRS を修正するためにこのオプションのみを使用してください."
+"<srs_def> は通常の GDAL/OGR 形式,完全な WKT,PROJ.4,EPSG:n または WKT を含むファイルのいずれかである可能性があります."
 
 #: ../../source/programs/gdal_rasterize.rst:154
 msgid ""
@@ -194,6 +230,9 @@ msgid ""
 "converting geometries coordinates to target raster pixel space. For "
 "example this can be used to specify RPC related transformer options."
 msgstr ""
+":cpp:func:`GDALCreateGenImgProjTransformer2` に渡す適切なトランスフォーマーオプションを設定します."
+"これは,ジオメトリ座標をターゲットラスターピクセル空間に変換するときに使用されます."
+"たとえば,これは RPC 関連のトランスフォーマーオプションを指定するために使用できます."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -202,6 +241,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の情報を制御するために使用できる1つ以上のオプションがあります."
+"たとえば,GeoTIFF ドライバは,圧縮を制御する作成オプションやファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -213,6 +254,9 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,一部のシンプルなフォーマットには作成オプションが全くありません."
+"フォーマットでサポートされているオプションのリストは,コマンドラインオプション :ref:`--formats <raster_common_options_formats>` でリストできますが,"
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです."
 
 #: ../../source/programs/gdal_rasterize.rst:165
 msgid ""
@@ -220,12 +264,15 @@ msgid ""
 "units. If not specified, the extent of the output file will be the extent"
 " of the vector layers."
 msgstr ""
+"ジオリファレンスされた範囲を設定します. 値はジオリファレンスされた単位で表される必要があります."
+"指定されていない場合,出力ファイルの範囲はベクターレイヤーの範囲になります."
 
 #: ../../source/programs/gdal_rasterize.rst:171
 msgid ""
 "Set target resolution. The values must be expressed in georeferenced "
 "units. Both must be positive values."
 msgstr ""
+"ターゲット解像度を設定します.値はジオリファレンスされた単位で表される必要があります.両方とも正の値である必要があります."
 
 #: ../../source/programs/gdal_rasterize.rst:176
 msgid ""
@@ -234,12 +281,15 @@ msgid ""
 "includes the minimum extent. Alignment means that xmin / resx, ymin / "
 "resy, xmax / resx and ymax / resy are integer values."
 msgstr ""
+"(ターゲットアラインドピクセル) 出力ファイルの範囲の座標を :option:`-tr` の値に整列させることで,整列された範囲に最小範囲が含まれるようにします."
+"整列とは, xmin / resx, ymin / resy, xmax / resx および ymax / resy が整数値であることを意味します."
 
 #: ../../source/programs/gdal_rasterize.rst:183
 msgid ""
 "Set output file size in pixels and lines. Note that :option:`-ts` cannot "
 "be used with :option:`-tr`"
 msgstr ""
+"ピクセルと行で出力ファイルのサイズを設定します. :option:`-ts` は :option:`-tr` とは使用できないことに注意してください"
 
 #: ../../source/programs/gdal_rasterize.rst:188
 msgid ""
@@ -248,6 +298,8 @@ msgid ""
 "which case ``Int64`` is used for the output raster data type if the "
 "output driver supports it."
 msgstr ""
+"出力バンドを指定されたデータ型にするように強制します. デフォルトは ``Float64`` ですが,焼き付ける属性フィールドが ``Int64`` 型の場合,"
+"出力ドライバがサポートしている場合は出力ラスターデータ型として ``Int64`` が使用されます."
 
 #: ../../source/programs/gdal_rasterize.rst:194
 msgid ""
@@ -258,18 +310,21 @@ msgid ""
 "mode (the default) will chose the algorithm based on input and output "
 "properties."
 msgstr ""
+"使用されるアルゴリズムを強制します(結果は同一です). ラスターモードはほとんどの場合に使用され,読み書き操作を最適化します."
+"ベクターモードは,適切な量の入力地物と CPU 使用を最適化するのに役立ちます. そのモードは効率的にするためにタイル化された画像で使用する必要があります."
+"自動モード(デフォルト)は,入力と出力のプロパティに基づいてアルゴリズムを選択します."
 
 #: ../../source/programs/gdal_rasterize.rst:206
 msgid "Source dataset open option (format specific)"
-msgstr ""
+msgstr "ソースデータセットオープンオプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_rasterize.rst:210
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターおよびその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/gdal_rasterize.rst:214
 msgid "Any OGR supported readable datasource."
-msgstr ""
+msgstr "OGR がサポートする読み込み可能なデータソース."
 
 #: ../../source/programs/gdal_rasterize.rst:218
 msgid ""
@@ -277,6 +332,8 @@ msgid ""
 "file will be created if it does not already exist If the output raster "
 "already exists, the affected pixels are updated in-place."
 msgstr ""
+"GDAL がサポートする出力ファイルです. 更新モードアクセスをサポートする必要があります."
+"このファイルは存在しない場合に作成されます.出力ラスターが既に存在する場合,影響を受けるピクセルはその場で更新されます."
 
 #: ../../source/programs/gdal_rasterize.rst:222
 msgid ""
@@ -288,6 +345,10 @@ msgid ""
 " new rasters.  The target raster will be overwritten if it already exists"
 " and any of these creation-related options are used."
 msgstr ""
+"プログラムは, :option:`-of`, :option:`-a_nodata`, :option:`-init`, :option:`-a_srs`, :option:`-co`, :option:`-te`, :option:`-tr`, :option:`-tap`,"
+" :option:`-ts`, または :option:`-ot` オプションのいずれかが使用されると,新しいターゲットラスター画像が作成されます."
+"新しいラスターの解像度またはサイズは,すべての新しいラスターに対して :option:`-tr` または :option:`-ts` オプションを使用して指定する必要があります."
+"ターゲットラスターが既に存在し,これらの作成関連オプションのいずれかが使用される場合,ターゲットラスターは上書きされます."
 
 #: ../../source/programs/gdal_rasterize.rst:230
 msgid "C API"
@@ -295,23 +356,26 @@ msgstr ""
 
 #: ../../source/programs/gdal_rasterize.rst:232
 msgid "This utility is also callable from C with :cpp:func:`GDALRasterize`."
-msgstr ""
+msgstr "このユーティリティは, :cpp:func:`GDALRasterize` から C で呼び出すこともできます."
 
 #: ../../source/programs/gdal_rasterize.rst:237
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_rasterize.rst:239
 msgid ""
 "The following would burn all polygons from mask.shp into the RGB TIFF "
 "file work.tif with the color red (RGB = 255,0,0)."
 msgstr ""
+"次の例では,mask.shp からすべてのポリゴンを RGB TIFF ファイル work.tif に焼き付けます."
+"色は赤(RGB = 255,0,0)です."
 
 #: ../../source/programs/gdal_rasterize.rst:247
 msgid ""
 "The following would burn all \"class A\" buildings into the output "
 "elevation file, pulling the top elevation from the ROOF_H attribute."
 msgstr ""
+"次の例では,\"class A\" 建物を出力標高ファイルに焼き付けます. ROOF_H 属性から最上部の標高を取得します."
 
 #: ../../source/programs/gdal_rasterize.rst:254
 msgid ""
@@ -320,6 +384,8 @@ msgid ""
 " the order of the :option:`-burn` options determines the bands of the "
 "output raster."
 msgstr ""
+"次の例では,footprint.shp からすべてのポリゴンを新しい 1000x1000 RGB TIFF に赤色で焼き付けます."
+" :option:`-b` は使用されていないことに注意してください; :option:`-burn` オプションの順序が出力ラスターのバンドを決定します."
 
 #~ msgid ""
 #~ "Force the output bands to be of"

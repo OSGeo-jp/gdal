@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_grid.rst:9
 msgid "Creates regular grid from the scattered data."
-msgstr ""
+msgstr "散在データから正規グリッドを作成します."
 
 #: ../../source/programs/gdal_grid.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_grid.rst:34
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_grid.rst:36
 msgid ""
@@ -41,6 +41,8 @@ msgid ""
 " from the OGR datasource. Input data will be interpolated to fill grid "
 "nodes with values, you can choose from various interpolation methods."
 msgstr ""
+"このプログラムは,OGR データソースから読み取られた散在データから正規グリッド(ラスター)を作成します."
+"入力データは,値を持つグリッドノードを補間するために補間されます.さまざまな補間方法から選択できます."
 
 #: ../../source/programs/gdal_grid.rst:40
 msgid ""
@@ -49,16 +51,19 @@ msgid ""
 "worker threads, or ``ALL_CPUS`` to use all the cores/CPUs of the "
 "computer."
 msgstr ""
+"処理を並列化するために :config:`GDAL_NUM_THREADS` 設定オプションを設定することができます."
+"指定する値はワーカースレッドの数,または ``ALL_CPUS`` でコンピュータのすべてのコア/CPU を使用します."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/options/ot.rst:3
 msgid ""
@@ -68,12 +73,16 @@ msgid ""
 "``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` or "
 "``CFloat64``."
 msgstr ""
+"出力画像バンドをドライバでサポートされている特定のデータ型に強制します.これは次のいずれかである可能性があります:"
+"``Byte``, ``Int8``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, ``Float32``, ``Float64``, "
+"``CInt16``, ``CInt32``, ``CFloat32`` または ``CFloat64``."
 
 #: ../../source/programs/gdal_grid.rst:51
 msgid ""
 "If not set then a default type is used, which might not be supported by "
 "the relevant driver, causing a error."
 msgstr ""
+"設定されていない場合,関連するドライバでサポートされていないデフォルトのタイプが使用される可能性があり,エラーが発生します."
 
 #: ../../source/programs/options/of.rst:3
 msgid ""
@@ -81,14 +90,15 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は GTiff でした).短いフォーマット名を使用します."
 
 #: ../../source/programs/gdal_grid.rst:58
 msgid "Set georeferenced X extents of output file to be created."
-msgstr ""
+msgstr "作成される出力ファイルのジオリファレンス X 範囲を設定します."
 
 #: ../../source/programs/gdal_grid.rst:62
 msgid "Set georeferenced Y extents of output file to be created."
-msgstr ""
+msgstr "作成される出力ファイルのジオリファレンス Y 範囲を設定します."
 
 #: ../../source/programs/gdal_grid.rst:66
 msgid ""
@@ -96,12 +106,15 @@ msgid ""
 ":option:`-tr` just works in combination with a valid input from "
 ":option:`-txe` and :option:`-tye`"
 msgstr ""
+"出力ファイルの解像度を設定します(ターゲットのジオリファレンス単位で). :option:`-tr` "
+"は :option:`-txe` と :option:`-tye` からの有効な入力と組み合わせてのみ機能します"
 
 #: ../../source/programs/gdal_grid.rst:73
 msgid ""
 "Set the size of the output file in pixels and lines. Note that "
 ":option:`-outsize` cannot be used with :option:`-tr`"
 msgstr ""
+"出力ファイルのサイズをピクセルと行で設定します. :option:`-outsize` は :option:`-tr` とは使用できません"
 
 #: ../../source/programs/gdal_grid.rst:78
 msgid ""
@@ -109,6 +122,8 @@ msgid ""
 " the usual GDAL/OGR forms, complete WKT, PROJ.4, EPSG:n or a file "
 "containing the WKT. No reprojection is done."
 msgstr ""
+"出力ファイルの投影を上書きします. *srs_def* は通常の GDAL/OGR 形式,完全な WKT,PROJ.4,EPSG:n または WKT を含むファイルのいずれかである可能性があります."
+"再投影は行われません."
 
 #: ../../source/programs/gdal_grid.rst:85
 msgid ""
@@ -117,6 +132,8 @@ msgid ""
 "record (naturally, if you have a Z value in the geometry, otherwise you "
 "have no choice and should specify a field name containing a Z value)."
 msgstr ""
+"Z 値を取得するために使用される地物の属性フィールドを識別します.この値は地物ジオメトリから読み取られた Z 値を上書きします"
+"(もちろん,ジオメトリに Z 値がある場合は,それ以外の場合は選択肢がなく,Z 値を含むフィールド名を指定する必要があります)."
 
 #: ../../source/programs/gdal_grid.rst:93
 msgid ""
@@ -124,6 +141,8 @@ msgid ""
 "value from. The addition should be the same unit as the Z value. The "
 "result value will be Z value + Z increase value. The default value is 0."
 msgstr ""
+"Z 値を取得するために使用される地物の属性フィールドに追加します.追加は Z 値と同じ単位である必要があります."
+"結果値は Z 値 + Z 増加値 になります.デフォルト値は 0 です."
 
 #: ../../source/programs/gdal_grid.rst:99
 msgid ""
@@ -132,6 +151,8 @@ msgid ""
 "value will be (Z value + Z increase value) * Z multiply value. The "
 "default value is 1."
 msgstr ""
+"Z フィールドの乗算比率です.これは,例えばフィートからメートルへのシフトや標高から深さへの変換に使用できます."
+"結果値は (Z 値 + Z 増加値) * Z 乗算値 になります.デフォルト値は 1 です."
 
 #: ../../source/programs/gdal_grid.rst:106
 msgid ""
@@ -139,12 +160,15 @@ msgid ""
 "parameters. See the `Interpolation algorithms`_ and `Data metrics`_ "
 "sections for further discussion of available options."
 msgstr ""
+"補間アルゴリズムまたはデータメトリック名と(オプションで)そのパラメータを設定します."
+"使用可能なオプションの詳細については, `Interpolation algorithms`_  および `Data metrics`_ セクションを参照してください."
 
 #: ../../source/programs/gdal_grid.rst:112
 msgid ""
 "Adds a spatial filter to select only features contained within the "
 "bounding box described by (xmin, ymin) - (xmax, ymax)."
 msgstr ""
+"(xmin, ymin) - (xmax, ymax) で記述されるバウンディングボックスに含まれる地物のみを選択するための空間フィルタを追加します."
 
 #: ../../source/programs/gdal_grid.rst:118
 msgid ""
@@ -156,18 +180,21 @@ msgid ""
 " with the :option:`-clipsrclayer`, :option:`-clipsrcwhere` or "
 ":option:`-clipsrcsql` options."
 msgstr ""
+"指定されたバウンディングボックス(ソース SRS で表現される)または WKT ジオメトリ(POLYGON または MULTIPOLYGON)に含まれる地物のみを選択するための空間フィルタを追加します."
+" ``spat_extent`` キーワードを使用すると,データソースまたは :option:`-spat` オプションの空間範囲に対して使用できます."
+"データソースを指定する場合,通常は :option:`-clipsrclayer`, :option:`-clipsrcwhere` または :option:`-clipsrcsql` オプションと組み合わせて使用することになります."
 
 #: ../../source/programs/gdal_grid.rst:128
 msgid "Select desired geometries using an SQL query instead."
-msgstr ""
+msgstr "SQL クエリを使用して必要なジオメトリを選択します."
 
 #: ../../source/programs/gdal_grid.rst:132
 msgid "Select the named layer from the source clip datasource."
-msgstr ""
+msgstr "ソースクリップデータソースから指定されたレイヤを選択します."
 
 #: ../../source/programs/gdal_grid.rst:136
 msgid "Restrict desired geometries based on an attribute query."
-msgstr ""
+msgstr "属性クエリに基づいて必要なジオメトリを制限します."
 
 #: ../../source/programs/gdal_grid.rst:140
 msgid ""
@@ -175,22 +202,26 @@ msgid ""
 "features.  May be specified multiple times, but at least one layer name "
 "or a :option:`-sql` option must be specified."
 msgstr ""
+"入力地物に使用されるデータソースからのレイヤを示します.複数回指定できますが,少なくとも "
+"1 つのレイヤ名または :option:`-sql` オプションを指定する必要があります."
 
 #: ../../source/programs/gdal_grid.rst:147
 msgid ""
 "An optional SQL WHERE style query expression to be applied to select "
 "features to process from the input layer(s)."
 msgstr ""
+"入力レイヤから処理する地物を選択するために適用されるオプションの SQL WHERE スタイルのクエリ式."
 
 #: ../../source/programs/gdal_grid.rst:152
 msgid ""
 "An SQL statement to be evaluated against the datasource to produce a "
 "virtual layer of features to be processed."
 msgstr ""
+"データソースに対して評価される SQL ステートメントで,処理される地物の仮想レイヤを生成します."
 
 #: ../../source/programs/gdal_grid.rst:159
 msgid "Source dataset open option (format specific)"
-msgstr ""
+msgstr "ソースデータセットのオープンオプション(フォーマット固有)"
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -199,6 +230,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の情報を制御するために使用できる1つ以上のオプションがあります."
+"たとえば,GeoTIFF ドライバは,圧縮を制御する作成オプションやファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -210,50 +243,55 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,一部のシンプルなフォーマットには作成オプションが全くありません."
+"フォーマットでサポートされているオプションのリストは,コマンドラインオプション :ref:`--formats <raster_common_options_formats>` でリストできますが,"
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです."
+"各フォーマットの有効な作成オプションについては, :ref:`raster_drivers` フォーマット固有のドキュメントを参照してください."
 
 #: ../../source/programs/gdal_grid.rst:165
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターとその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/gdal_grid.rst:169
 msgid "Any OGR supported readable datasource."
-msgstr ""
+msgstr "OGR でサポートされている読み取り可能なデータソース."
 
 #: ../../source/programs/gdal_grid.rst:173
 msgid "The GDAL supported output file."
-msgstr ""
+msgstr "GDAL でサポートされている出力ファイル."
 
 #: ../../source/programs/gdal_grid.rst:177
 msgid "Interpolation algorithms"
-msgstr ""
+msgstr "補間アルゴリズム"
 
 #: ../../source/programs/gdal_grid.rst:179
 msgid "There are a number of interpolation algorithms to choose from."
-msgstr ""
+msgstr "選択できる補間アルゴリズムがいくつかあります."
 
 #: ../../source/programs/gdal_grid.rst:181
 msgid "More details about them can also be found in :ref:`gdal_grid_tut`"
-msgstr ""
+msgstr "これについての詳細は :ref:`gdal_grid_tut` にも記載されています"
 
 #: ../../source/programs/gdal_grid.rst:186
 msgid "invdist"
-msgstr ""
+msgstr "不一致"
 
 #: ../../source/programs/gdal_grid.rst:188
 msgid ""
 "Inverse distance to a power. This is the default algorithm. It has the "
 "following parameters:"
 msgstr ""
+"べき乗の逆距離.これがデフォルトのアルゴリズムです.次のパラメータがあります:"
 
 #: ../../source/programs/gdal_grid.rst:191
 #: ../../source/programs/gdal_grid.rst:228
 msgid "``power``: Weighting power (default 2.0)."
-msgstr ""
+msgstr "``power``: 重み付け係数 (デフォルト 2.0)."
 
 #: ../../source/programs/gdal_grid.rst:192
 #: ../../source/programs/gdal_grid.rst:229
 msgid "``smoothing``: Smoothing parameter (default 0.0)."
-msgstr ""
+msgstr "``smoothing``: スムージングパラメータ (デフォルト 0.0)."
 
 #: ../../source/programs/gdal_grid.rst:193
 msgid ""
@@ -261,6 +299,7 @@ msgid ""
 "search ellipse. Set this parameter to zero to use the whole point array. "
 "Default is 0.0."
 msgstr ""
+"``radius1``: 検索楕円の最初の半径(X 軸,回転角が 0 の場合).このパラメータをゼロに設定して,全点配列を使用します.デフォルトは 0.0 です."
 
 #: ../../source/programs/gdal_grid.rst:196
 msgid ""
@@ -268,6 +307,7 @@ msgid ""
 "search ellipse. Set this parameter to zero to use the whole point array. "
 "Default is 0.0."
 msgstr ""
+"``radius2``: 検索楕円の 2 番目の半径(Y 軸,回転角が 0 の場合).このパラメータをゼロに設定して,全点配列を使用します.デフォルトは 0.0 です."
 
 #: ../../source/programs/gdal_grid.rst:199
 #: ../../source/programs/gdal_grid.rst:273
@@ -277,6 +317,7 @@ msgid ""
 "``radius``: Set first and second radius (mutually exclusive with radius1 "
 "and radius2). Default is 0.0. Added in GDAL 3.6"
 msgstr ""
+"``radius``: 最初の半径と 2 番目の半径を設定します(radius1 と radius2 とは相互排他です).デフォルトは 0.0 です. GDAL 3.6 で追加されました"
 
 #: ../../source/programs/gdal_grid.rst:201
 #: ../../source/programs/gdal_grid.rst:275
@@ -286,6 +327,7 @@ msgid ""
 "``angle``: Angle of search ellipse rotation in degrees (counter "
 "clockwise, default 0.0)."
 msgstr ""
+"``angle``: 検索楕円の回転角度(度単位,反時計回り,デフォルト 0.0)."
 
 #: ../../source/programs/gdal_grid.rst:203
 msgid ""
@@ -294,6 +336,8 @@ msgid ""
 "set (both radii are non-zero). Zero means that all found points should be"
 " used. Default is 0."
 msgstr ""
+"``max_points``: 使用するデータポイントの最大数.この数より多くのポイントを検索しないでください."
+"これは検索楕円が設定されている場合のみ使用されます(両方の半径がゼロでない).ゼロは,見つかったすべてのポイントを使用することを意味します.デフォルトは 0 です."
 
 #: ../../source/programs/gdal_grid.rst:207
 #: ../../source/programs/gdal_grid.rst:390
@@ -303,6 +347,8 @@ msgid ""
 "NODATA marker. This is only used if search ellipse is set (both radii are"
 " non-zero). Default is 0."
 msgstr ""
+"``min_points``: 使用するデータポイントの最小数.見つかったポイントの数が少ない場合,グリッドノードは空と見なされ, NODATA マーカーで埋められます."
+"これは検索楕円が設定されている場合のみ使用されます(両方の半径がゼロでない).デフォルトは 0 です."
 
 #: ../../source/programs/gdal_grid.rst:211
 msgid ""
@@ -310,6 +356,8 @@ msgid ""
 "quadrant. Default is 0. Added in GDAL 3.6. When specified, this actually "
 "uses invdistnn implementation."
 msgstr ""
+"``max_points_per_quadrant``: クォードラントごとに使用するデータポイントの最大数.デフォルトは 0 です. GDAL 3.6 で追加されました."
+"指定された場合,これは実際には invdistnn 実装を使用します."
 
 #: ../../source/programs/gdal_grid.rst:214
 msgid ""
@@ -317,6 +365,8 @@ msgid ""
 "quadrant. Default is 0. Added in GDAL 3.6. When specified, this actually "
 "uses invdistnn implementation."
 msgstr ""
+"``min_points_per_quadrant``: クォードラントごとに使用するデータポイントの最小数.デフォルトは 0 です. GDAL 3.6 で追加されました."
+"指定された場合,これは実際には invdistnn 実装を使用します."
 
 #: ../../source/programs/gdal_grid.rst:217
 #: ../../source/programs/gdal_grid.rst:250
@@ -325,23 +375,25 @@ msgstr ""
 #: ../../source/programs/gdal_grid.rst:350
 #: ../../source/programs/gdal_grid.rst:406
 msgid "``nodata``: NODATA marker to fill empty points (default 0.0)."
-msgstr ""
+msgstr "``nodata``: 空のポイントを埋めるための NODATA マーカー(デフォルト 0.0)."
 
 #: ../../source/programs/gdal_grid.rst:221
 msgid "invdistnn"
-msgstr ""
+msgstr "invdistnn"
 
 #: ../../source/programs/gdal_grid.rst:225
 msgid ""
 "Inverse distance to a power with nearest neighbor searching, ideal when "
 "max_points is used. It has following parameters:"
 msgstr ""
+"最近傍探索を伴うべき乗の逆距離, max_points が使用されている場合に理想的です.次のパラメータがあります:"
 
 #: ../../source/programs/gdal_grid.rst:230
 msgid ""
 "``radius``: The radius of the search circle, which should be non-zero. "
 "Default is 1.0."
 msgstr ""
+"``radius``: 検索円の半径,ゼロでない必要があります.デフォルトは 1.0 です."
 
 #: ../../source/programs/gdal_grid.rst:232
 msgid ""
@@ -349,6 +401,8 @@ msgid ""
 "more points than this number. Found points will be ranked from nearest to"
 " furthest distance when weighting. Default is 12."
 msgstr ""
+"``max_points``: 使用するデータポイントの最大数.この数より多くのポイントを検索しないでください."
+"重み付け時に,見つかったポイントは最も近い距離から最も遠い距離までランク付けされます.デフォルトは 12 です."
 
 #: ../../source/programs/gdal_grid.rst:235
 msgid ""
@@ -356,6 +410,8 @@ msgid ""
 "points found the grid node is considered empty and will be filled with "
 "NODATA marker. Default is 0."
 msgstr ""
+"``min_points``: 使用するデータポイントの最小数.見つかったポイントの数が少ない場合,グリッドノードは空と見なされ, NODATA マーカーで埋められます."
+"デフォルトは 0 です."
 
 #: ../../source/programs/gdal_grid.rst:238
 #: ../../source/programs/gdal_grid.rst:285
@@ -367,6 +423,8 @@ msgid ""
 " of the right-top, left-top, right-bottom and right-top quadrant relative"
 " to the point being interpolated."
 msgstr ""
+"``max_points_per_quadrant``: クォードラントごとに使用するデータポイントの最大数.デフォルトは 0 です. GDAL 3.6 で追加されました."
+"指定された場合,アルゴリズムは補間されるポイントに対して右上,左上,右下,右上の各クォードラントごとに最大 max_points_per_quadrant ポイントまでしか考慮しません."
 
 #: ../../source/programs/gdal_grid.rst:243
 #: ../../source/programs/gdal_grid.rst:290
@@ -379,6 +437,9 @@ msgid ""
 "points for each of the right-top, left-top, right-bottom and right-top "
 "quadrant relative to the point being interpolated."
 msgstr ""
+"``min_points_per_quadrant``: クォードラントごとに使用するデータポイントの最小数.デフォルトは 0 です. GDAL 3.6 で追加されました."
+"その数に達しない場合,補間されるポイントは NODATA マーカーで設定されます.指定された場合,アルゴリズムは補間されるポイントに対して"
+"右上,左上,右下,右上の各クォードラントごとに少なくとも min_points_per_quadrant ポイントを収集します."
 
 #: ../../source/programs/gdal_grid.rst:253
 #: ../../source/programs/gdal_grid.rst:303
@@ -392,14 +453,17 @@ msgid ""
 "quadrant, etc. until ``max_points`` and/or ``max_points_per_quadrant`` "
 "thresholds are reached."
 msgstr ""
+"``min_points_per_quadrant`` または ``max_points_per_quadrant`` が指定された場合,検索は補間されるポイントに最も近いポイントから始まり,"
+"最初のクォードラントから補間されるポイントに最も近いポイント,2 番目のクォードラントから補間されるポイントに最も近いポイントなど,4 番目のクォードラントまで続き,"
+"最初のクォードラントの次に最も近いポイントなど,``max_points`` および/または ``max_points_per_quadrant`` のしきい値に達するまで続きます."
 
 #: ../../source/programs/gdal_grid.rst:263
 msgid "average"
-msgstr ""
+msgstr "平均"
 
 #: ../../source/programs/gdal_grid.rst:265
 msgid "Moving average algorithm. It has following parameters:"
-msgstr ""
+msgstr "移動平均アルゴリズム.次のパラメータがあります:"
 
 #: ../../source/programs/gdal_grid.rst:267
 #: ../../source/programs/gdal_grid.rst:317
@@ -409,6 +473,7 @@ msgid ""
 "ellipse. Set this parameter to zero to use whole point array. Default is "
 "0.0."
 msgstr ""
+"``radius1``: 検索楕円の最初の半径(X 軸,回転角が 0 の場合).このパラメータをゼロに設定して,全点配列を使用します.デフォルトは 0.0 です."
 
 #: ../../source/programs/gdal_grid.rst:270
 #: ../../source/programs/gdal_grid.rst:320
@@ -418,6 +483,7 @@ msgid ""
 "ellipse. Set this parameter to zero to use whole point array. Default is "
 "0.0."
 msgstr ""
+"``radius2``: 検索楕円の 2 番目の半径(Y 軸,回転角が 0 の場合).このパラメータをゼロに設定して,全点配列を使用します.デフォルトは 0.0 です."
 
 #: ../../source/programs/gdal_grid.rst:277
 msgid ""
@@ -427,6 +493,9 @@ msgid ""
 "taken into account if one or both of ``min_points_per_quadrant`` or "
 "``max_points_per_quadrant`` is specified"
 msgstr ""
+"``max_points``: 使用するデータポイントの最大数.この数より多くのポイントを検索しないでください."
+"重み付け時に,見つかったポイントは最も近い距離から最も遠い距離までランク付けされます.デフォルトは 0 です. GDAL 3.6 で追加されました."
+" ``min_points_per_quadrant`` または ``max_points_per_quadrant`` のいずれかまたは両方が指定されている場合のみ考慮されます"
 
 #: ../../source/programs/gdal_grid.rst:282
 msgid ""
@@ -434,6 +503,8 @@ msgid ""
 "points found the grid node considered empty and will be filled with "
 "NODATA marker. Default is 0."
 msgstr ""
+"``min_points``: 使用するデータポイントの最小数.見つかったポイントの数が少ない場合,グリッドノードは空と見なされ, NODATA マーカーで埋められます."
+"デフォルトは 0 です."
 
 #: ../../source/programs/gdal_grid.rst:300
 msgid ""
@@ -441,22 +512,23 @@ msgid ""
 "method. It is a window that will be averaged when computing grid nodes "
 "values."
 msgstr ""
+"移動平均法には検索楕円を設定することが重要です.これは,グリッドノードの値を計算する際に平均化されるウィンドウです."
 
 #: ../../source/programs/gdal_grid.rst:313
 msgid "nearest"
-msgstr ""
+msgstr "最近傍"
 
 #: ../../source/programs/gdal_grid.rst:315
 msgid "Nearest neighbor algorithm. It has following parameters:"
-msgstr ""
+msgstr "最近傍アルゴリズム.次のパラメータがあります:"
 
 #: ../../source/programs/gdal_grid.rst:331
 msgid "linear"
-msgstr ""
+msgstr "線形"
 
 #: ../../source/programs/gdal_grid.rst:335
 msgid "Linear interpolation algorithm."
-msgstr ""
+msgstr "線形補間アルゴリズム."
 
 #: ../../source/programs/gdal_grid.rst:337
 msgid ""
@@ -467,10 +539,12 @@ msgid ""
 "triangle, depending on the radius, the algorithm will use the value of "
 "the nearest point or the nodata value."
 msgstr ""
+"線形法は,点群のデラニ三角形分割を計算し,点が三角形のどこにあるかを見つけ,三角形内のバリセントリック座標から線形補間を行うことで線形補間を実行します."
+"点がどの三角形にも含まれていない場合,半径に応じて,アルゴリズムは最も近い点の値または nodata 値を使用します."
 
 #: ../../source/programs/gdal_grid.rst:344
 msgid "It has following parameters:"
-msgstr ""
+msgstr "次のパラメータがあります:"
 
 #: ../../source/programs/gdal_grid.rst:346
 msgid ""
@@ -480,10 +554,12 @@ msgid ""
 "search distance is infinite. If set to 0, nodata value will be always "
 "used. Default is -1."
 msgstr ""
+"``radius``: 補間される点がデラニ三角形分割の三角形に適合しない場合,最大距離を使用して最近傍を検索するか,それ以外の場合は nodata を使用します."
+"-1 に設定すると,検索距離は無限です.0 に設定すると,常に nodata 値が使用されます.デフォルトは -1 です."
 
 #: ../../source/programs/gdal_grid.rst:354
 msgid "Data metrics"
-msgstr ""
+msgstr "データメトリクス"
 
 #: ../../source/programs/gdal_grid.rst:356
 msgid ""
@@ -491,24 +567,27 @@ msgid ""
 "to compute some data metrics using the specified window and output grid "
 "geometry. These metrics are:"
 msgstr ""
+"補間機能に加えて,指定されたウィンドウと出力グリッドジオメトリを使用して,いくつかのデータメトリクスを計算するために :program:`gdal_grid` を使用できます."
+"これらのメトリクスは次のとおりです:"
 
 #: ../../source/programs/gdal_grid.rst:360
 msgid "``minimum``: Minimum value found in grid node search ellipse."
-msgstr ""
+msgstr "``minimum``: 検索楕円グリッドノード内の最小値."
 
 #: ../../source/programs/gdal_grid.rst:362
 msgid "``maximum``: Maximum value found in grid node search ellipse."
-msgstr ""
+msgstr "``maximum``: 検索楕円グリッドノード内の最大値."
 
 #: ../../source/programs/gdal_grid.rst:364
 msgid ""
 "``range``: A difference between the minimum and maximum values found in "
 "grid node search ellipse."
 msgstr ""
+"``range``: 検索楕円グリッドノード内で見つかった最小値と最大値の差."
 
 #: ../../source/programs/gdal_grid.rst:367
 msgid "``count``:  A number of data points found in grid node search ellipse."
-msgstr ""
+msgstr "``count``: 検索楕円グリッドノード内で見つかったデータポイントの数."
 
 #: ../../source/programs/gdal_grid.rst:369
 msgid ""
@@ -516,6 +595,7 @@ msgid ""
 "of the search ellipse) and all of the data points found in grid node "
 "search ellipse."
 msgstr ""
+"``average_distance``: グリッドノード(検索楕円の中心)と検索楕円グリッドノード内で見つかったすべてのデータポイントとの平均距離."
 
 #: ../../source/programs/gdal_grid.rst:373
 msgid ""
@@ -524,14 +604,16 @@ msgid ""
 "points within ellipse is calculated and average of all distances is set "
 "as a grid node value."
 msgstr ""
+"``average_distance_pts``: 検索楕円グリッドノード内で見つかったデータポイント間の平均距離.楕円内の各ペアのポイント間の距離が計算され,"
+"すべての距離の平均がグリッドノード値として設定されます."
 
 #: ../../source/programs/gdal_grid.rst:378
 msgid "All the metrics have the same set of options:"
-msgstr ""
+msgstr "すべてのメトリクスには同じオプションセットがあります:"
 
 #: ../../source/programs/gdal_grid.rst:417
 msgid "Reading comma separated values"
-msgstr ""
+msgstr "カンマ区切り値の読み取り"
 
 #: ../../source/programs/gdal_grid.rst:419
 msgid ""
@@ -542,18 +624,23 @@ msgid ""
 "for :program:`gdal_grid`. You can find details on the VRT format on the "
 ":ref:`vector.vrt` description page."
 msgstr ""
+"しばしば,作業するためのカンマ区切り XYZ 値のリストを含むテキストファイル(いわゆる CSV ファイル)があります."
+" :program:`gdal_grid` でその種類のデータソースを簡単に使用できます.必要なのは,CSV ファイルの仮想データセットヘッダ(VRT)を作成し,"
+" :program:`gdal_grid` の入力データソースとして使用するだけです. VRT フォーマットの詳細については, :ref:`vector.vrt` 説明ページを参照してください."
 
 #: ../../source/programs/gdal_grid.rst:425
 msgid ""
 "Here is a small example. Let's say we have a CSV file called *dem.csv* "
 "containing"
 msgstr ""
+"以下に小さな例を示します. *dem.csv* という CSV ファイルが含まれているとします."
 
 #: ../../source/programs/gdal_grid.rst:437
 msgid ""
 "For the above data we will create a *dem.vrt* header with the following "
 "content:"
 msgstr ""
+"上記のデータに対して,以下の内容の *dem.vrt* ヘッダを作成します:"
 
 #: ../../source/programs/gdal_grid.rst:450
 msgid ""
@@ -566,26 +653,32 @@ msgid ""
 "files  with  more  than  three columns, switch columns, etc. OK, now the "
 "final step:"
 msgstr ""
+"この記述は,3 つの座標 X, Y, Z を持ついわゆる 2.5D ジオメトリを指定します. Z 値が補間に使用されます."
+"これで *dem.vrt* をすべての OGR プログラムで使用できます(:ref:`ogrinfo` から始めて,すべてが正常に動作するかどうかをテストしてください)."
+"データソースには,CSV ファイルの値から構築されたポイントフィーチャで構成された *\"dem\"* という名前の単一レイヤが含まれます."
+"このテクニックを使用すると,3 列以上の CSV ファイルを処理したり,列を切り替えたりすることができます.では,最後のステップです:"
 
 #: ../../source/programs/gdal_grid.rst:462
 msgid "Or, if we do not wish to use a VRT file:"
-msgstr ""
+msgstr "または,VRT ファイルを使用したくない場合:"
 
 #: ../../source/programs/gdal_grid.rst:469
 msgid ""
 "If your CSV file does not contain column headers then it can be handled "
 "in the VRT file in the following way:"
 msgstr ""
+"CSV ファイルに列ヘッダが含まれていない場合,以下の方法で VRT ファイルで処理できます:"
 
 #: ../../source/programs/gdal_grid.rst:476
 msgid ""
 "The :ref:`vector.csv` description page contains details on CSV format "
 "supported by GDAL/OGR."
 msgstr ""
+":ref:`vector.csv` 説明ページには,GDAL/OGR でサポートされている CSV フォーマットの詳細が記載されています."
 
 #: ../../source/programs/gdal_grid.rst:480
 msgid "Creating multiband files"
-msgstr ""
+msgstr "マルチバンドファイルの作成"
 
 #: ../../source/programs/gdal_grid.rst:482
 msgid ""
@@ -593,12 +686,15 @@ msgid ""
 "might use gdal_grid multiple times to create one band per file, and then "
 "use :ref:`gdalbuildvrt` -separate and then :ref:`gdal_translate`:"
 msgstr ""
+"gdal_grid で直接マルチバンドファイルを作成することはできません.1 つのファイルあたり 1 バンドを作成するために複数回 gdal_grid を使用し,"
+"次に :ref:`gdalbuildvrt` -separate を使用してから :ref:`gdal_translate` を使用することができます:"
 
 #: ../../source/programs/gdal_grid.rst:492
 msgid ""
 "Or just use :ref:`gdal_merge`, to combine the one-band files into a "
 "single one:"
 msgstr ""
+"または,1 バンドファイルを 1 つのファイルに結合するために :ref:`gdal_merge` を使用することもできます:"
 
 #: ../../source/programs/gdal_grid.rst:501
 msgid "C API"
@@ -606,11 +702,11 @@ msgstr ""
 
 #: ../../source/programs/gdal_grid.rst:503
 msgid "This utility is also callable from C with :cpp:func:`GDALGrid`."
-msgstr ""
+msgstr "このユーティリティは, :cpp:func:`GDALGrid` を使用して C からも呼び出すことができます."
 
 #: ../../source/programs/gdal_grid.rst:506
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_grid.rst:508
 msgid ""
@@ -619,6 +715,8 @@ msgid ""
 "to a power method. Values to interpolate will be read from Z value of "
 "geometry record."
 msgstr ""
+"次のコマンドは,逆距離べき乗法を使用して, `Reading comma separated values`_ セクションで説明されている VRT データソースからラスター TIFF ファイルを作成します."
+"補間する値は,ジオメトリレコードの Z 値から読み取られます."
 
 #: ../../source/programs/gdal_grid.rst:517
 msgid ""
@@ -629,4 +727,8 @@ msgid ""
 "*\"Elevation\"* field. The :config:`GDAL_NUM_THREADS` is also set to "
 "parallelize the computation."
 msgstr ""
+"次のコマンドは,前のコマンドと同じことを行いますが,**-zfield** オプションで指定された属性フィールドから補間する値を読み取ります."
+"この場合, X と Y 座標はジオメトリから取得され,Z は *\"Elevation\"* フィールドから取得されます."
+"計算を並列化するために :config:`GDAL_NUM_THREADS` も設定されています."
+
 

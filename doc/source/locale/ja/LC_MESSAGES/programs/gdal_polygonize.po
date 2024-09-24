@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_polygonize.rst:9
 msgid "Produces a polygon feature layer from a raster."
-msgstr ""
+msgstr "ラスターからポリゴン地物レイヤーを生成します."
 
 #: ../../source/programs/gdal_polygonize.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_polygonize.rst:25
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_polygonize.rst:26
 msgid ""
@@ -43,44 +43,51 @@ msgid ""
 "may also be provided to determine which pixels are eligible for "
 "processing."
 msgstr ""
+"このユーティリティは,共通のピクセル値を共有するラスターのすべての連結領域に対してベクトルポリゴンを作成します."
+"各ポリゴンは,そのポリゴンのピクセル値を示す属性で作成されます.処理対象のピクセルを決定するために,ラスターマスクも提供できます."
 
 #: ../../source/programs/gdal_polygonize.rst:31
 msgid ""
 "The utility will create the output vector datasource if it does not "
 "already exist, otherwise it will try to append to an existing one."
 msgstr ""
+"ユーティリティは,出力ベクトルデータソースを作成します.既に存在する場合は,既存のデータソースに追加しようとします."
 
 #: ../../source/programs/gdal_polygonize.rst:34
 msgid ""
 "The utility is based on the ::cpp:func:`GDALPolygonize` function which "
 "has additional details on the algorithm."
 msgstr ""
+"このユーティリティは,アルゴリズムに関する詳細を持つ ::cpp:func:`GDALPolygonize` 関数に基づいています."
 
 #: ../../source/programs/gdal_polygonize.rst:39
 msgid ""
 "gdal_polygonize is a Python utility, and is only available if GDAL Python"
 " bindings are available."
 msgstr ""
+"gdal_polygonize は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_polygonize.rst:47
 msgid "Use 8 connectedness. Default is 4 connectedness."
-msgstr ""
+msgstr "8 接続性を使用します.デフォルトは 4 接続性です."
 
 #: ../../source/programs/gdal_polygonize.rst:51
 msgid ""
 "Do not use the default validity mask for the input band (such as nodata, "
 "or alpha masks)."
 msgstr ""
+"入力バンドのデフォルトの有効性マスク(ノーデータやアルファマスクなど)を使用しない."
 
 #: ../../source/programs/gdal_polygonize.rst:56
 msgid ""
@@ -89,10 +96,12 @@ msgid ""
 "for the input band (such as nodata, or alpha masks) will be used (unless "
 "-nomask is specified)"
 msgstr ""
+"指定されたファイルの最初のバンドを有効性マスクとして使用します(ゼロは無効,ゼロ以外は有効).指定されていない場合,"
+"入力バンドのデフォルトの有効性マスク(ノーデータやアルファマスクなど)が使用されます(-nomask が指定されていない限り)"
 
 #: ../../source/programs/gdal_polygonize.rst:62
 msgid "The source raster file from which polygons are derived."
-msgstr ""
+msgstr "ポリゴンが派生するソースラスターファイルです."
 
 #: ../../source/programs/gdal_polygonize.rst:66
 msgid ""
@@ -101,6 +110,8 @@ msgid ""
 "band of the first band must be used (or \"mask,band_number\" for the mask"
 " of a specified band)"
 msgstr ""
+"ポリゴンを構築する <raster_file> のバンドです. GDAL 2.2 以降,値を \"mask\" に設定して,最初のバンドのマスクバンドを使用することを示すこともできます"
+"(または指定されたバンドのマスクの場合は \"mask,band_number\")"
 
 #: ../../source/programs/gdal_polygonize.rst:73
 msgid ""
@@ -108,34 +119,37 @@ msgid ""
 "format is guessed from the extension (previously was GML). Use the short "
 "format name"
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は GML でした)."
+"短いフォーマット名を使用します"
 
 #: ../../source/programs/gdal_polygonize.rst:81
 msgid "Polygonize option. See ::cpp:func:`GDALPolygonize` documentation."
-msgstr ""
+msgstr "ポリゴン化オプションです. ::cpp:func:`GDALPolygonize` ドキュメントを参照してください."
 
 #: ../../source/programs/gdal_polygonize.rst:87
 msgid "Layer creation option (format specific)"
-msgstr ""
+msgstr "レイヤー作成オプション(フォーマット固有)"
 
 #: ../../source/programs/gdal_polygonize.rst:93
 msgid "Overwrite the output layer if it already exists."
-msgstr ""
+msgstr "出力レイヤーが既に存在する場合は上書きします."
 
 #: ../../source/programs/gdal_polygonize.rst:97
 msgid "The destination vector file to which the polygons will be written."
-msgstr ""
+msgstr "ポリゴンが書き込まれる宛先ベクトルファイルです."
 
 #: ../../source/programs/gdal_polygonize.rst:101
 msgid "The name of the layer created to hold the polygon features."
-msgstr ""
+msgstr "ポリゴン地物を保持するために作成されたレイヤーの名前です."
 
 #: ../../source/programs/gdal_polygonize.rst:105
 msgid "The name of the field to create (defaults to \"DN\")."
-msgstr ""
+msgstr "作成するフィールドの名前です(デフォルトは \"DN\" です)."
 
 #: ../../source/programs/gdal_polygonize.rst:109
 msgid ""
 "The script runs in quiet mode.  The progress monitor is suppressed and "
 "routine messages are not displayed."
 msgstr ""
+"スクリプトはクワイエットモードで実行されます.進行状況モニターは抑制され,通常のメッセージは表示されません."
 

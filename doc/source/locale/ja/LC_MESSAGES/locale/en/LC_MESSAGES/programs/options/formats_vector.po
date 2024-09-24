@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-20 09:05+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:3
+msgid ""
+"List all vector formats supported by this GDAL build (read-only and read-"
+"write) and exit. The format support is indicated as follows:"
+msgstr ""
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:6
+msgid "``ro`` is read-only driver"
+msgstr ""
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:7
+msgid "``rw`` is read or write (i.e. supports :cpp:func:`GDALDriver::CreateCopy`)"
+msgstr ""
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:8
+msgid ""
+"``rw+`` is read, write and update (i.e. supports "
+":cpp:func:`GDALDriver::Create`)"
+msgstr ""
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:9
+msgid ""
+"A ``v`` is appended for formats supporting virtual IO (``/vsimem``, "
+"``/vsigzip``, ``/vsizip``, etc)."
+msgstr ""
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:10
+msgid "A ``s`` is appended for formats supporting subdatasets."
+msgstr ""
+
+#: ../../source/locale/en/LC_MESSAGES/programs/options/formats_vector.rst:12
+msgid ""
+"The order in which drivers are listed is the one in which they are "
+"registered, which determines the order in which they are successively "
+"probed when opening a dataset. Most of the time, this order does not "
+"matter, but in some situations, several drivers may recognize the same "
+"file. The ``-if`` option of some utilities can be specified to restrict "
+"opening the dataset with a subset of drivers (generally one). Note that "
+"it does not force those drivers to open the dataset. In particular, some "
+"drivers have requirements on file extensions. Alternatively, the "
+":config:`GDAL_SKIP` configuration option can also be used to exclude one "
+"or several drivers."
+msgstr ""
+

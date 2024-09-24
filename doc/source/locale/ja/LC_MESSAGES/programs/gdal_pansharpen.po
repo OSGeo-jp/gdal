@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../source/programs/gdal_pansharpen.rst:9
 msgid "Perform a pansharpen operation."
-msgstr ""
+msgstr "パンシャープン操作を実行します."
 
 #: ../../source/programs/gdal_pansharpen.rst:11
 msgid "(Since GDAL 2.1)"
@@ -33,11 +33,11 @@ msgstr ""
 
 #: ../../source/programs/gdal_pansharpen.rst:16
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_pansharpen.rst:31
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_pansharpen.rst:33
 msgid ""
@@ -45,26 +45,30 @@ msgid ""
 "create a \"classic\" output dataset (such as GeoTIFF), or a VRT dataset "
 "describing the pan-sharpening operation."
 msgstr ""
+":program:`gdal_pansharpen` はパンシャープン操作を実行します."
+"\"classic\" 出力データセット(例: GeoTIFF)またはパンシャープン操作を記述する VRT データセットを作成できます."
 
 #: ../../source/programs/gdal_pansharpen.rst:37
 msgid "More details can be found in the :ref:`gdal_vrttut_pansharpen` section."
-msgstr ""
+msgstr "さらに詳細は, :ref:`gdal_vrttut_pansharpen` セクションを参照してください."
 
 #: ../../source/programs/gdal_pansharpen.rst:41
 msgid ""
 "gdal_pansharpen is a Python utility, and is only available if GDAL Python"
 " bindings are available."
 msgstr ""
+"gdal_pansharpen は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_pansharpen.rst:47
 msgid ""
@@ -72,6 +76,8 @@ msgid ""
 "format is guessed from the extension (previously was ``GTiff``). Use the "
 "short format name. ``VRT`` can also be used."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は ``GTiff`` でした)."
+"短いフォーマット名を使用します. ``VRT`` も使用できます."
 
 #: ../../source/programs/gdal_pansharpen.rst:53
 msgid ""
@@ -80,22 +86,26 @@ msgid ""
 "**-b** switches may be used. When no -b switch is used, all input "
 "spectral bands are set for output."
 msgstr ""
+"出力のための入力スペクトルバンドからバンド *band* を選択します. バンドは,スペクトルバンドが指定された順序で1から番号付けされます."
+"複数の **-b** スイッチを使用できます. **-b** スイッチを使用しない場合,すべての入力スペクトルバンドが出力に設定されます."
 
 #: ../../source/programs/gdal_pansharpen.rst:60
 msgid ""
 "Specify a weight for the computation of the pseudo panchromatic value. "
 "There must be as many -w switches as input spectral bands."
 msgstr ""
+"疑似パンクロマチック値の計算のための重みを指定します. 入力スペクトルバンドの数だけ -w スイッチが必要です."
 
 #: ../../source/programs/gdal_pansharpen.rst:65
 msgid "Select a resampling algorithm. ``cubic`` is the default."
-msgstr ""
+msgstr "リサンプリングアルゴリズムを選択します. ``cubic`` がデフォルトです."
 
 #: ../../source/programs/gdal_pansharpen.rst:69
 msgid ""
 "Specify number of threads to use to do the resampling and pan-sharpening "
 "itself. Can be an integer number or ``ALL_CPUS``."
 msgstr ""
+"リサンプリングとパンシャープン自体を行うために使用するスレッド数を指定します. 整数値または ``ALL_CPUS`` にすることができます."
 
 #: ../../source/programs/gdal_pansharpen.rst:74
 msgid ""
@@ -103,6 +113,8 @@ msgid ""
 "If not specified, the NBITS metadata item from the panchromatic band will"
 " be used if it exists."
 msgstr ""
+"パンクロマチックおよびスペクトルバンドのビット深度を指定します(例: 12). 指定されて"
+"いない場合,パンクロマチックバンドの NBITS メタデータ項目が存在する場合は使用されます."
 
 #: ../../source/programs/gdal_pansharpen.rst:80
 msgid ""
@@ -110,6 +122,8 @@ msgid ""
 "sharpening computation itself. If not set, deduced from the input bands, "
 "provided they have a consistent setting."
 msgstr ""
+"バンドの nodata 値を指定します. リサンプリングおよびパンシャープン計算自体に使用されます."
+"設定されていない場合,入力バンドから推測されます.一貫した設定がある場合に提供されます."
 
 #: ../../source/programs/gdal_pansharpen.rst:86
 msgid ""
@@ -117,6 +131,8 @@ msgid ""
 "*SpatialExtentAdjustment* documentation in :ref:`gdal_vrttut_pansharpen` "
 "``union`` is the default."
 msgstr ""
+"バンドの範囲が同じでない場合の動作を選択します. :ref:`gdal_vrttut_pansharpen` の *SpatialExtentAdjustment* ドキュメントを参照してください."
+"``union`` がデフォルトです."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -125,6 +141,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の情報を制御するために使用できる1つ以上のオプションがあります."
+"たとえば,GeoTIFF ドライバは,圧縮を制御する作成オプションやファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -136,14 +154,18 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,一部のシンプルなフォーマットには作成オプションが全くありません."
+"フォーマットでサポートされているオプションのリストは,コマンドラインオプション :ref:`--formats <raster_common_options_formats>` でリストできますが,"
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです."
+"各フォーマットの有効な作成オプションについては, :ref:`raster_drivers` フォーマット固有のドキュメントを参照してください."
 
 #: ../../source/programs/gdal_pansharpen.rst:94
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターとその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/gdal_pansharpen.rst:98
 msgid "Dataset with panchromatic band (first band will be used)."
-msgstr ""
+msgstr "パンクロマティックバンドを持つデータセット(最初のバンドが使用されます)."
 
 #: ../../source/programs/gdal_pansharpen.rst:102
 msgid ""
@@ -152,38 +174,41 @@ msgid ""
 "only the specified (num)th band. The same dataset can be repeated several"
 " times."
 msgstr ""
+"1つまたは複数のスペクトルバンドを持つデータセット. バンドオプションが指定されていない場合,データセットのすべてのバンドが考慮されます."
+"それ以外の場合,指定された (num) 番目のバンドのみが考慮されます. 同じデータセットを複数回繰り返すことができます."
 
 #: ../../source/programs/gdal_pansharpen.rst:109
 msgid "Output dataset"
-msgstr ""
+msgstr "出力データセット"
 
 #: ../../source/programs/gdal_pansharpen.rst:111
 msgid "Bands should be in the same projection."
-msgstr ""
+msgstr "バンドは同じ投影法である必要があります."
 
 #: ../../source/programs/gdal_pansharpen.rst:114
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal_pansharpen.rst:116
 msgid "With spectral bands in a single dataset :"
-msgstr ""
+msgstr "シングルデータセット内のスペクトルバンドを利用 :"
 
 #: ../../source/programs/gdal_pansharpen.rst:122
 msgid "With a few spectral bands from a single dataset, reordered :"
-msgstr ""
+msgstr "シングルデータセット内の並べなおしたいくつかのスペクトルバンドを利用 :"
 
 #: ../../source/programs/gdal_pansharpen.rst:128
 msgid "With spectral bands in several datasets :"
-msgstr ""
+msgstr "複数のデータセット内のスペクトルバンドを利用 :"
 
 #: ../../source/programs/gdal_pansharpen.rst:134
 msgid "Specify weights:"
-msgstr ""
+msgstr "重みを指定します:"
 
 #: ../../source/programs/gdal_pansharpen.rst:140
 msgid ""
 "Specify RGB bands from a RGBNir multispectral dataset while computing the"
 " pseudo panchromatic intensity on the 4 RGBNir bands:"
 msgstr ""
+"RGBNir マルチスペクトルデータセットから RGB バンドを指定し,4つの RGBNir バンドで疑似パンクロマチック強度を計算します:"
 

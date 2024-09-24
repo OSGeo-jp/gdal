@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_proximity.rst:9
 msgid "Produces a raster proximity map."
-msgstr ""
+msgstr "ラスター近接マップを生成します."
 
 #: ../../source/programs/gdal_proximity.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_proximity.rst:27
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_proximity.rst:29
 msgid ""
@@ -43,26 +43,30 @@ msgid ""
 "source raster for which the raster pixel value is in the set of target "
 "pixel values."
 msgstr ""
+":program:`gdal_proximity` は,各ピクセルの中心から最も近いターゲットピクセルの中心までの距離を示すラスター近接マップを生成します."
+"ターゲットピクセルは,ラスターピクセル値がターゲットピクセル値のセットにあるソースラスター内のピクセルです."
 
 #: ../../source/programs/gdal_proximity.rst:36
 msgid ""
 "gdal_proximity is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal_proximity は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal_proximity.rst:44
 msgid "The source raster file used to identify target pixels."
-msgstr ""
+msgstr "ターゲットピクセルを識別するために使用されるソースラスターファイル."
 
 #: ../../source/programs/gdal_proximity.rst:48
 msgid ""
@@ -70,14 +74,16 @@ msgid ""
 "It may be a pre-existing file of the same size as srcfile. If it does not"
 " exist it will be created."
 msgstr ""
+"近接マップが書き込まれる宛先ラスターファイルです."
+"srcfile と同じサイズの事前に存在するファイルである場合があります.存在しない場合は作成されます."
 
 #: ../../source/programs/gdal_proximity.rst:54
 msgid "Identifies the band in the source file to use (default is 1)."
-msgstr ""
+msgstr "使用するソースファイル内のバンドを識別します(デフォルトは 1)."
 
 #: ../../source/programs/gdal_proximity.rst:58
 msgid "Identifies the band in the destination file to use (default is 1)."
-msgstr ""
+msgstr "使用する宛先ファイル内のバンドを識別します(デフォルトは 1)."
 
 #: ../../source/programs/options/of.rst:3
 msgid ""
@@ -85,6 +91,8 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは拡張子から推測されます(以前は GTiff でした)."
+"短いフォーマット名を使用します."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -93,6 +101,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の情報を制御するために使用できる1つ以上のオプションがあります."
+"たとえば,GeoTIFF ドライバは,圧縮を制御する作成オプションやファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -104,6 +114,10 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,一部のシンプルなフォーマットには作成オプションが全くありません."
+"フォーマットでサポートされているオプションのリストは,コマンドラインオプション :ref:`--formats <raster_common_options_formats>` でリストできますが,"
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです."
+"各フォーマットの有効な作成オプションについては, :ref:`raster_drivers` フォーマット固有のドキュメントを参照してください."
 
 #: ../../source/programs/gdal_proximity.rst:66
 msgid ""
@@ -111,6 +125,8 @@ msgid ""
 "following: ``Byte``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, "
 "``Float32`` (default), or ``Float64``."
 msgstr ""
+"ドライバでサポートされているデータ型を指定します.次のいずれかである場合があります: ``Byte``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, "
+"``Float32`` (デフォルト), または ``Float64``."
 
 #: ../../source/programs/gdal_proximity.rst:72
 msgid ""
@@ -118,12 +134,15 @@ msgid ""
 " pixels. If not specified, all non-zero pixels will be considered target "
 "pixels."
 msgstr ""
+"ターゲットピクセルとして考慮されるソース画像内のターゲットピクセル値のリストです."
+"指定されていない場合,すべてのゼロ以外のピクセルがターゲットピクセルと見なされます."
 
 #: ../../source/programs/gdal_proximity.rst:77
 msgid ""
 "Indicate whether distances generated should be in pixel or georeferenced "
 "coordinates (default PIXEL)."
 msgstr ""
+"生成された距離がピクセルまたはジオリファレンス座標であるかを示します(デフォルトは PIXEL)."
 
 #: ../../source/programs/gdal_proximity.rst:82
 msgid ""
@@ -133,16 +152,21 @@ msgid ""
 " not have a nodata value, then the value 65535 will be used. Distance is "
 "interpreted in pixels unless -distunits GEO is specified."
 msgstr ""
+"生成される最大距離です.この距離を超えたピクセルにはノーデータ値が使用されます."
+"ノーデータ値が提供されていない場合,出力バンドはそのノーデータ値に対してクエリされます."
+"出力バンドにノーデータ値がない場合,値 65535 が使用されます."
+"距離は, -distunits GEO が指定されていない限り,ピクセルで解釈されます."
 
 #: ../../source/programs/gdal_proximity.rst:90
 msgid "Specify a nodata value to use for the destination proximity raster."
-msgstr ""
+msgstr "宛先近接ラスターに使用するノーデータ値を指定します."
 
 #: ../../source/programs/gdal_proximity.rst:94
 msgid ""
 "Indicate whether nodata pixels in the input raster should be nodata in "
 "the output raster (default NO)."
 msgstr ""
+"入力ラスターのノーデータピクセルが出力ラスターのノーデータであるかを示します(デフォルトは NO)."
 
 #: ../../source/programs/gdal_proximity.rst:98
 msgid ""
@@ -150,4 +174,5 @@ msgid ""
 "of target pixels (including the target pixels) instead of a distance "
 "value."
 msgstr ""
+"ターゲットピクセルの -maxdist 内(ターゲットピクセルを含む)のすべてのピクセルに適用される値を指定します."
 
