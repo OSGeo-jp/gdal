@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal2tiles.rst:9
 msgid "Generates directory with TMS tiles, KMLs and simple web viewers."
-msgstr "TMSタイルが格納されたディレクトリ、KML、簡易ウェブビューアを生成します。"
+msgstr "TMSタイルが格納されたディレクトリ,KML,簡易ウェブビューアを生成します."
 
 #: ../../source/programs/gdal2tiles.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal2tiles.rst:31
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal2tiles.rst:33
 msgid ""
@@ -45,12 +45,12 @@ msgid ""
 "and the map displays very fast in the web browser. You only need to "
 "upload the generated directory onto a web server."
 msgstr ""
-"このユーティリティは、小さなタイルとメタデータを含むディレクトリを生成し、"
-"OSGeoタイルマップサービス仕様に従います。Google Maps、OpenLayers、"
-"Leafletをベースにした簡単なウェブページとビューアも生成されるため、"
-"誰でも快適にオンラインで地図を探索でき、特別なソフトウェア(例えばMapServer)を"
-"インストールしたり設定したりする必要がなく、ウェブブラウザで地図が非常に速く表示されます。"
-"生成されたディレクトリをウェブサーバーにアップロードするだけです。"
+"このユーティリティは,小さなタイルとメタデータを含むディレクトリを生成し,"
+"OSGeoタイルマップサービス仕様に従います.Google Maps,OpenLayers,"
+"Leafletをベースにした簡単なウェブページとビューアも生成されるため,"
+"誰でも快適にオンラインで地図を探索でき,特別なソフトウェア(例えばMapServer)を"
+"インストールしたり設定したりする必要がなく,ウェブブラウザで地図が非常に速く表示されます."
+"生成されたディレクトリをウェブサーバーにアップロードするだけです."
 
 
 #: ../../source/programs/gdal2tiles.rst:40
@@ -58,8 +58,8 @@ msgid ""
 "GDAL2Tiles also creates the necessary metadata for Google Earth (KML "
 "SuperOverlay), in case the supplied map uses EPSG:4326 projection."
 msgstr ""
-"GDAL2Tilesは、提供された地図がEPSG:4326投影法を使用している場合、"
-"Google Earth用の必要なメタデータ(KML SuperOverlay)も作成します。"
+"GDAL2Tilesは,提供された地図がEPSG:4326投影法を使用している場合、"
+"Google Earth用の必要なメタデータ(KML SuperOverlay)も作成します."
 
 
 #: ../../source/programs/gdal2tiles.rst:43
@@ -67,6 +67,8 @@ msgid ""
 "World files and embedded georeferencing is used during tile generation, "
 "but you can publish a picture without proper georeferencing too."
 msgstr ""
+"タイル生成中にワールドファイルと埋め込みジオリファレンスが使用されますが,"
+"適切なジオリファレンスがない画像を公開することもできます."
 
 #: ../../source/programs/gdal2tiles.rst:48
 msgid ""
@@ -75,6 +77,8 @@ msgid ""
 "it is necessary to rescale input to the ``Byte`` data type using "
 "`gdal_translate` utility."
 msgstr ""
+"非バイトデータ型(つまり ``Int16``, ``UInt16``,...)の入力は ``Byte`` データ型にクランプされ,"
+"誤った結果を引き起こします. これを避けるためには, ``gdal_translate`` ユーティリティを使用して入力を ``Byte`` データ型にスケーリングする必要があります."
 
 #: ../../source/programs/gdal2tiles.rst:54
 msgid ""
@@ -82,28 +86,33 @@ msgid ""
 "gdal2tiles. An example driver config option is GDAL_PDF_DPI, which can be"
 " found at :ref:`configoptions`"
 msgstr ""
+"入力ドライバの設定オプションは, gdal2tilesの出力に影響を与える可能性があります."
+"ドライバの設定オプションの例は, GDAL_PDF_DPI であり, :ref:`configoptions` で見つけることができます."
 
 #: ../../source/programs/gdal2tiles.rst:58
 msgid ""
 "gdal2tiles is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal2tiles は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdal2tiles.rst:67
 msgid ""
 "Tile cutting profile (mercator, geodetic, raster) - default 'mercator' "
 "(Google Maps compatible)."
 msgstr ""
+"タイルカットプロファイル(mercator, geodetic, raster) - デフォルトは 'mercator' (Google Maps 互換)."
 
 #: ../../source/programs/gdal2tiles.rst:69
 msgid ""
@@ -112,16 +121,19 @@ msgid ""
 "levels use same origin, tile dimensions, and resolution between "
 "consecutive zoom levels vary by a factor of two)."
 msgstr ""
+"GDAL 3.2 以降, GDALデータディレクトリに配置された tms_XXXX.json ファイルから追加のプロファイルが利用可能です"
+"(すべてのズームレベルが同じ原点,タイルサイズ,および連続するズームレベル間の解像度が2倍の因子で変化することが前提です)."
 
 #: ../../source/programs/gdal2tiles.rst:75
 msgid ""
 "Resampling method (average, near, bilinear, cubic, cubicspline, lanczos, "
 "antialias, mode, max, min, med, q1, q3) - default 'average'."
 msgstr ""
+"リサンプリング方法(average, near, bilinear, cubic, cubicspline, lanczos, antialias, mode, max, min, med, q1, q3) - デフォルトは 'average'."
 
 #: ../../source/programs/gdal2tiles.rst:79
 msgid "The spatial reference system used for the source input data."
-msgstr ""
+msgstr "ソース入力データに使用される空間参照システムです."
 
 #: ../../source/programs/gdal2tiles.rst:83
 msgid ""
@@ -130,20 +142,23 @@ msgid ""
 "XYZ mode (used by OGC WMTS too), tiles at y=0 are the northern-most "
 "tiles."
 msgstr ""
+"TMSの代わりにXYZタイル(OSM Slippy Map標準)を生成します. デフォルトモード(TMS)では, y=0 のタイルは最南端のタイルですが,"
+"XYZモード(OGC WMTSも使用)では, y=0 のタイルは最北端のタイルです."
 
 #: ../../source/programs/gdal2tiles.rst:91
 msgid ""
 "When using the geodetic profile, specifies the base resolution as "
 "0.703125 or 2 tiles at zoom level 0."
 msgstr ""
+"geodeticプロファイルを使用する場合,基本解像度を0.703125またはズームレベル0の2タイルとして指定します."
 
 #: ../../source/programs/gdal2tiles.rst:96
 msgid "Zoom levels to render (format:'2-5', '10-' or '10')."
-msgstr ""
+msgstr "レンダリングするズームレベル(フォーマット:'2-5', '10-' または '10')."
 
 #: ../../source/programs/gdal2tiles.rst:100
 msgid "Resume mode. Generate only missing files."
-msgstr ""
+msgstr "再開モード. 不足しているファイルのみを生成します."
 
 #: ../../source/programs/gdal2tiles.rst:104
 msgid ""
@@ -151,30 +166,33 @@ msgid ""
 "dataset had already an associate nodata value, it is overridden by the "
 "specified value."
 msgstr ""
+"入力データセットで透明と見なされる値です. 入力データセットにすでに関連付けられたノーデータ値がある場合,指定された値で上書きされます."
 
 #: ../../source/programs/gdal2tiles.rst:109
 msgid "Generate verbose output of tile generation."
-msgstr ""
+msgstr "タイル生成の詳細な出力を生成します."
 
 #: ../../source/programs/gdal2tiles.rst:111
 msgid ""
 "Starting with GDAL 3.7, that verbose output is emitted through the "
 "``logging.getLogger(\"gdal2tiles\")`` object."
 msgstr ""
+"GDAL 3.7 以降,その詳細な出力は ``logging.getLogger(\"gdal2tiles\")`` オブジェクトを介して出力されます."
 
 #: ../../source/programs/gdal2tiles.rst:116
 msgid "Exclude transparent tiles from result tileset."
-msgstr ""
+msgstr "透明タイルを結果のタイルセットから除外します."
 
 #: ../../source/programs/gdal2tiles.rst:120
 msgid "Disable messages and status to stdout"
-msgstr ""
+msgstr "メッセージとステータスを標準出力に無効にします"
 
 #: ../../source/programs/gdal2tiles.rst:126
 msgid ""
 "Number of parallel processes to use for tiling, to speed-up the "
 "computation."
 msgstr ""
+"計算を高速化するためにタイリングに使用する並列プロセスの数です."
 
 #: ../../source/programs/gdal2tiles.rst:132
 msgid ""
@@ -184,10 +202,13 @@ msgid ""
 "size per process based on memory per node and the number of processes "
 "launched per node."
 msgstr ""
+"mpiexecによって起動されたと仮定し, MPI並列処理を有効にして --processes を無視します."
+"動作するMPI環境とMPI for Python(mpi4py)パッケージが必要です. ユーザーは,ノードあたりの"
+"メモリとノードあたりに起動されたプロセスの数に基づいて適切なキャッシュサイズを設定する必要があります."
 
 #: ../../source/programs/gdal2tiles.rst:141
 msgid "Width and height in pixel of a tile. Default is 256."
-msgstr ""
+msgstr "タイルの幅と高さ(ピクセル)です. デフォルトは 256 です."
 
 #: ../../source/programs/gdal2tiles.rst:147
 msgid ""
@@ -196,6 +217,8 @@ msgid ""
 "supported. Default is PNG. Additional configuration for the WEBP and JPEG"
 " drivers are documented below."
 msgstr ""
+"タイルの出力ドライバを指定し,タイルのファイル形式を決定します. 現在, PNG, WEBP, JPEG(JPEGはGDAL 3.9で追加)がサポートされています."
+"デフォルトは PNG です. WEBPおよびJPEGドライバの追加構成は以下に記載されています."
 
 #: ../../source/programs/gdal2tiles.rst:155
 msgid ""
@@ -209,6 +232,11 @@ msgid ""
 "still considered as valid, when determining the target pixel "
 "validity/density."
 msgstr ""
+"リサンプリング中に寄与するソース * ピクセルとして無視される値のカンマ区切りのタプル(通常は \"R,G,B\")です."
+"タプル内の値の数は,アルファバンドを除いたバンドの数と同じである必要があります."
+"複数の除外値タプルを \"(R1,G1,B2),(R2,G2,B2)\" 構文を使用して指定できます."
+"現在は平均のみが考慮されます. この概念はノーデータ/アルファに少し似ていますが,主な違いは,"
+"除外値タプルのいずれかに一致するピクセルは,ターゲットピクセルの有効性/密度を決定する際に有効として考慮される点です."
 
 #: ../../source/programs/gdal2tiles.rst:168
 msgid ""
@@ -217,6 +245,8 @@ msgid ""
 "source pixels, to be used as the target pixel value. Default value is "
 "50(%)"
 msgstr ""
+"除外値の一つで設定されているソースピクセルの最小パーセンテージは,ソースピクセルの多数派である除外値をターゲットピクセル値として使用するために必要です."
+"デフォルト値は 50(%) です."
 
 #: ../../source/programs/gdal2tiles.rst:175
 msgid ""
@@ -226,22 +256,25 @@ msgid ""
 "target pixel is transparent only if all contributing source pixels are "
 "transparent. Only taken into account for average resampling."
 msgstr ""
+"ターゲットピクセル値を透明にするために,ノーデータ(またはアルファ=0または透明ピクセルを表現する他の方法)に設定されているソースピクセルの最小パーセンテージは,"
+"100(%) です. これは,すべての寄与ソースピクセルが透明である場合にのみ,ターゲットピクセルが透明になることを意味します."
+"平均リサンプリングのみが考慮されます."
 
 #: ../../source/programs/gdal2tiles.rst:185
 msgid "Show help message and exit."
-msgstr ""
+msgstr "ヘルプメッセージを表示して終了します."
 
 #: ../../source/programs/gdal2tiles.rst:189
 msgid "Show program's version number and exit."
-msgstr ""
+msgstr "プログラムのバージョン番号を表示して終了します."
 
 #: ../../source/programs/gdal2tiles.rst:193
 msgid "KML (Google Earth) options"
-msgstr ""
+msgstr "KMl(Google Earth)オプション"
 
 #: ../../source/programs/gdal2tiles.rst:195
 msgid "Options for generated Google Earth SuperOverlay metadata"
-msgstr ""
+msgstr "生成されたGoogle Earth SuperOverlayメタデータのオプション"
 
 #: ../../source/programs/gdal2tiles.rst:199
 msgid ""
@@ -249,78 +282,83 @@ msgid ""
 "'raster' in EPSG:4326. For a dataset with different projection use with "
 "caution!"
 msgstr ""
+"Google Earth用のKMLを生成します - 'geodetic'プロファイルとEPSG:4326の'raster'のデフォルトです."
+"異なる投影法のデータセットの場合は注意して使用してください!"
 
 #: ../../source/programs/gdal2tiles.rst:203
 msgid "Avoid automatic generation of KML files for EPSG:4326."
-msgstr ""
+msgstr "EPSG:4326のKMLファイルの自動生成を回避します."
 
 #: ../../source/programs/gdal2tiles.rst:207
 msgid "URL address where the generated tiles are going to be published."
-msgstr ""
+msgstr "生成されたタイルが公開されるURLアドレスです."
 
 #: ../../source/programs/gdal2tiles.rst:211
 msgid "Web viewer options"
-msgstr ""
+msgstr "ウェブビューアオプション"
 
 #: ../../source/programs/gdal2tiles.rst:213
 msgid "Options for generated HTML viewers a la Google Maps"
-msgstr ""
+msgstr "Google Maps風の生成されたHTMLビューアのオプション"
 
 #: ../../source/programs/gdal2tiles.rst:217
 msgid ""
 "Web viewer to generate (all, google, openlayers, leaflet, mapml, none) - "
 "default 'all'."
 msgstr ""
+"生成するウェブビューア(all, google, openlayers, leaflet, mapml, none) - デフォルトは 'all'."
 
 #: ../../source/programs/gdal2tiles.rst:221
 msgid "Title of the map."
-msgstr ""
+msgstr "地図のタイトルです."
 
 #: ../../source/programs/gdal2tiles.rst:225
 msgid "Copyright for the map."
-msgstr ""
+msgstr "地図の著作権です."
 
 #: ../../source/programs/gdal2tiles.rst:229
 msgid "Google Maps API key from http://code.google.com/apis/maps/signup.html."
-msgstr ""
+msgstr "http://code.google.com/apis/maps/signup.html からのGoogle Maps APIキーです."
 
 #: ../../source/programs/gdal2tiles.rst:233
 msgid "Bing Maps API key from https://www.bingmapsportal.com/"
-msgstr ""
+msgstr "https://www.bingmapsportal.com/ からのBing Maps APIキーです."
 
 #: ../../source/programs/gdal2tiles.rst:237
 msgid "MapML options"
-msgstr ""
+msgstr "MapMLオプション"
 
 #: ../../source/programs/gdal2tiles.rst:239
 msgid ""
 "MapML support is new to GDAL 3.2. When --webviewer=mapml is specified, "
 "--xyz is implied, as well as --tmscompatible if --profile=geodetic."
 msgstr ""
+"MapMLサポートはGDAL 3.2で新しくなりました. --webviewer=mapml が指定されている場合, --xyz が暗黙的に指定されます."
+"--profile=geodetic の場合, --tmscompatible も暗黙的に指定されます."
 
 #: ../../source/programs/gdal2tiles.rst:242
 msgid "The following profiles are supported:"
-msgstr ""
+msgstr "以下のプロファイルがサポートされています:"
 
 #: ../../source/programs/gdal2tiles.rst:244
 msgid "mercator: mapped to OSMTILE MapML tiling scheme"
-msgstr ""
+msgstr "mercator: OSMTILE MapMLタイリングスキームにマッピングされます"
 
 #: ../../source/programs/gdal2tiles.rst:245
 msgid "geodetic: mapped to WGS84 MapML tiling scheme"
-msgstr ""
+msgstr "geodetic: WGS84 MapMLタイリングスキームにマッピングされます"
 
 #: ../../source/programs/gdal2tiles.rst:246
 msgid "APSTILE: from the tms_MapML_APSTILE.json data file"
-msgstr ""
+msgstr "APSTILE: tms_MapML_APSTILE.json データファイルから"
 
 #: ../../source/programs/gdal2tiles.rst:248
 msgid "The generated MapML file in the output directory is ``mapml.mapl``"
-msgstr ""
+msgstr "出力ディレクトリに生成されるMapMLファイルは ``mapml.mapl`` です"
 
 #: ../../source/programs/gdal2tiles.rst:250
 msgid "Available options are:"
-msgstr ""
+msgstr "利用可能なオプションは:"
 
 #: ../../source/programs/gdal2tiles.rst:254
 msgid ""
@@ -328,77 +366,84 @@ msgid ""
 " not specified, the generic template_tiles.mapml file from GDAL data "
 "resources will be used"
 msgstr ""
+"変数が置換されるテンプレートmapmlファイルのファイル名です. 指定されていない場合, GDALデータリソースからの一般的なテンプレート_tiles.mapmlファイルが使用されます"
 
 #: ../../source/programs/gdal2tiles.rst:259
 msgid ""
 "The --url option is also used to substitute ``${URL}`` in the template "
 "MapML file."
 msgstr ""
+"--url オプションは,テンプレートMapMLファイル内の ``${URL}`` を置換するためにも使用されます."
 
 #: ../../source/programs/gdal2tiles.rst:262
 msgid "WEBP options"
-msgstr ""
+msgstr "WEBPオプション"
 
 #: ../../source/programs/gdal2tiles.rst:264
 msgid ""
 "WEBP tiledriver support is new to GDAL 3.6. It is enabled by using "
 "--tiledriver=WEBP."
 msgstr ""
+"WEBPタイルドライバサポートはGDAL 3.6で新しくなりました. --tiledriver=WEBP を使用して有効になります."
 
 #: ../../source/programs/gdal2tiles.rst:267
 msgid ""
 "The following configuration options are available to further customize "
 "the WebP output:"
 msgstr ""
+"WebP出力をさらにカスタマイズするための以下の構成オプションが利用可能です:"
 
 #: ../../source/programs/gdal2tiles.rst:271
 #: ../../source/programs/gdal2tiles.rst:295
 msgid "QUALITY is a integer between 1-100. Default is 75."
-msgstr ""
+msgstr "QUALITY は 1-100 の整数です. デフォルトは 75 です."
 
 #: ../../source/programs/gdal2tiles.rst:275
 msgid "Use WEBP lossless compression, default is lossy"
-msgstr ""
+msgstr "WEBPロスレス圧縮を使用します. デフォルトはロスレスではありません"
 
 #: ../../source/programs/gdal2tiles.rst:280
 msgid "GDAL :ref:`WEBP driver <raster.webp>` documentation can be consulted"
-msgstr ""
+msgstr "GDAL :ref:`WEBPドライバ <raster.webp>` ドキュメントを参照できます"
 
 #: ../../source/programs/gdal2tiles.rst:284
 msgid "JPEG options"
-msgstr ""
+msgstr "JPEGオプション"
 
 #: ../../source/programs/gdal2tiles.rst:286
 msgid ""
 "JPEG tiledriver support is new to GDAL 3.9. It is enabled by using "
 "--tiledriver=JPEG."
 msgstr ""
+"JPEGタイルドライバサポートはGDAL 3.9で新しくなりました. --tiledriver=JPEG を使用して有効になります."
 
 #: ../../source/programs/gdal2tiles.rst:288
 msgid ""
 "Note that JPEG does not support transparency, hence edge tiles will "
 "display black pixels in areas not covered by the source raster."
 msgstr ""
+"JPEGは透過をサポートしていないため,エッジタイルはソースラスターでカバーされていない領域に黒いピクセルが表示されます."
 
 #: ../../source/programs/gdal2tiles.rst:291
 msgid ""
 "The following configuration options are available to further customize "
 "the JPEG output:"
 msgstr ""
+"JPEG出力をさらにカスタマイズするための以下の構成オプションが利用可能です:"
 
 #: ../../source/programs/gdal2tiles.rst:299
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdal2tiles.rst:301
 msgid "Basic example:"
-msgstr ""
+msgstr "基本的な例:"
 
 #: ../../source/programs/gdal2tiles.rst:308
 msgid "MapML generation:"
-msgstr ""
+msgstr "MapML生成:"
 
 #: ../../source/programs/gdal2tiles.rst:315
 msgid "MPI example:"
-msgstr ""
+msgstr "MPIの例:"
 

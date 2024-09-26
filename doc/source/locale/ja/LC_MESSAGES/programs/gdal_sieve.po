@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-01 04:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdal_sieve.rst:9
 msgid "Removes small raster polygons."
-msgstr ""
+msgstr "小さいラスターポリゴンを削除します."
 
 #: ../../source/programs/gdal_sieve.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdal_sieve.rst:23
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdal_sieve.rst:25
 msgid ""
@@ -42,6 +42,8 @@ msgid ""
 "largest neighbour polygon. The result can be written back to the existing"
 " raster band, or copied into a new file."
 msgstr ""
+":program:`gdal_sieve` は,指定されたしきい値サイズ(ピクセル単位)より小さいラスターポリゴンを削除し,最大の隣接ポリゴンのピクセル値で置き換えます."
+"結果は既存のラスターバンドに書き戻すか,新しいファイルにコピーできます."
 
 #: ../../source/programs/gdal_sieve.rst:30
 msgid ""
@@ -49,16 +51,20 @@ msgid ""
 " values are rounded to integers. Re-scaling source data may be necessary "
 "in some cases (e.g. 32-bit floating point data with min=0 and max=1)."
 msgstr ""
+"入力データセットは整数データとして読み込まれるため,浮動小数点値は整数に丸められます."
+"ソースデータの再スケーリングが必要な場合があります(例: min=0 および max=1 の 32 ビット浮動小数点データ)."
 
 #: ../../source/programs/gdal_sieve.rst:34
 msgid ""
 "Additional details on the algorithm are available in the "
 ":cpp:func:`GDALSieveFilter` docs."
 msgstr ""
+"アルゴリズムの詳細については, :cpp:func:`GDALSieveFilter` ドキュメントを参照してください."
 
 #: ../../source/programs/gdal_sieve.rst:39
 msgid ""
 "gdal_retile is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdal_sieve は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用できます."
 
