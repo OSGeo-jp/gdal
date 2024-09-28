@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdaladdo.rst:9
 msgid "Builds or rebuilds overview images."
-msgstr ""
+msgstr "オーバービュー画像を構築または再構築します."
 
 #: ../../source/programs/gdaladdo.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdaladdo.rst:27
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdaladdo.rst:29
 msgid ""
@@ -41,22 +41,26 @@ msgid ""
 "images for most supported file formats with one of several downsampling "
 "algorithms."
 msgstr ""
+":program:`gdaladdo` ユーティリティは,いくつかのダウンサンプリングアルゴリズムの"
+"1つを使用して,ほとんどのサポートされているファイル形式のオーバービュー画像を構築または再構築するために使用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的なGDALコマンドラインオプションの簡単な使用メッセージを表示して終了します."
 
 #: ../../source/programs/gdaladdo.rst:38
 msgid ""
 "Select a resampling algorithm. The default is ``nearest``, which is "
 "generally not appropriate if sub-pixel accuracy is desired."
 msgstr ""
+"リサンプリングアルゴリズムを選択します.デフォルトは ``nearest`` で,これは一般的にサブピクセルの精度が必要な場合に適していません."
 
 #: ../../source/programs/gdaladdo.rst:41
 msgid ""
@@ -64,14 +68,15 @@ msgid ""
 "previously used method, as noted in the RESAMPLING metadata item of the "
 "overview, will be used if :option:`-r` is not specified."
 msgstr ""
+"GDAL 3.9以降,既存のTIFFオーバービューを更新する場合,オプション :option:`-r` が指定されていない場合,オーバービューの RESAMPLING メタデータ項目に記載されている以前に使用されたメソッドが使用されます."
 
 #: ../../source/programs/gdaladdo.rst:45
 msgid "The available methods are:"
-msgstr ""
+msgstr "利用可能なメソッドは次のとおりです:"
 
 #: ../../source/programs/gdaladdo.rst:47
 msgid "``nearest`` applies a nearest neighbour (simple sampling) resampler."
-msgstr ""
+msgstr "``nearest`` は最近傍（単純サンプリング）リサンプラを適用します."
 
 #: ../../source/programs/gdaladdo.rst:49
 msgid ""
@@ -80,16 +85,19 @@ msgid ""
 "properly the weight of source pixels not contributing fully to the target"
 " pixel."
 msgstr ""
+"``average`` はすべての非-NODATA寄与ピクセルの平均を計算します. GDAL 3.1以降,"
+"これは,ターゲットピクセルに完全に寄与していないソースピクセルの重みを適切に考慮した重み付き平均です."
 
 #: ../../source/programs/gdaladdo.rst:51
 msgid ""
 "``rms`` computes the root mean squared / quadratic mean of all non-NODATA"
 " contributing pixels (GDAL >= 3.3)"
 msgstr ""
+"``rms`` はすべての非-NODATA寄与ピクセルの平均二乗平方根/二乗平均を計算します(GDAL >= 3.3)"
 
 #: ../../source/programs/gdaladdo.rst:53
 msgid "``bilinear`` applies a bilinear convolution kernel."
-msgstr ""
+msgstr "``bilinear`` はバイリニア畳み込みカーネルを適用します."
 
 #: ../../source/programs/gdaladdo.rst:55
 msgid ""
@@ -99,28 +107,33 @@ msgid ""
 "should be 2, 4, 8, ... so that a 3x3 resampling Gaussian kernel is "
 "selected."
 msgstr ""
+"``gauss`` は,オーバービューを計算する前にガウスカーネルを適用します. "
+"これは,例えば鮮明なエッジや高コントラストまたはノイズの多いパターンの場合に,"
+"単純な平均よりも良い結果をもたらすことがあります. 推奨されるレベル値は2, 4, 8, ..."
+" であるべきです. これにより,3x3リサンプリングガウスカーネルが選択されます."
 
 #: ../../source/programs/gdaladdo.rst:60
 msgid "``cubic`` applies a cubic convolution kernel."
-msgstr ""
+msgstr "``cubic`` は立方体畳み込みカーネルを適用します."
 
 #: ../../source/programs/gdaladdo.rst:62
 msgid "``cubicspline`` applies a B-Spline convolution kernel."
-msgstr ""
+msgstr "``cubicspline`` はB-Spline畳み込みカーネルを適用します."
 
 #: ../../source/programs/gdaladdo.rst:64
 msgid "``lanczos`` applies a Lanczos windowed sinc convolution kernel."
-msgstr ""
+msgstr "``lanczos`` はランチョス窓付きシンク畳み込みカーネルを適用します."
 
 #: ../../source/programs/gdaladdo.rst:66
 msgid "``average_magphase`` averages complex data in mag/phase space."
-msgstr ""
+msgstr "``average_magphase`` は複素データを mag/phase 空間で平均化します."
 
 #: ../../source/programs/gdaladdo.rst:68
 msgid ""
 "``mode`` selects the value which appears most often of all the sampled "
 "points."
 msgstr ""
+"``mode`` はサンプリングされたすべての点の中で最も頻繁に現れる値を選択します."
 
 #: ../../source/programs/gdaladdo.rst:72
 msgid ""
@@ -128,26 +141,30 @@ msgid ""
 "starts from 1. Multiple :option:`-b` switches may be used to select a set"
 " of input bands to generate overviews."
 msgstr ""
+"オーバービューの生成のための入力バンド **band** を選択します. バンド番号は1から始まります. "
+"オーバービューを生成するために複数の :option:`-b` スイッチを使用できます."
 
 #: ../../source/programs/gdaladdo.rst:78
 msgid ""
 "open the dataset in read-only mode, in order to generate external "
 "overview (for GeoTIFF especially)."
 msgstr ""
+"外部オーバービューを生成するためにデータセットを読み取り専用モードで開きます(特にGeoTIFFの場合)."
 
 #: ../../source/programs/gdaladdo.rst:83
 msgid "remove all overviews."
-msgstr ""
+msgstr "すべてのオーバービューを削除します."
 
 #: ../../source/programs/gdaladdo.rst:87
 msgid "Dataset open option (format specific)"
-msgstr ""
+msgstr "データセットオープンオプション（フォーマット固有）"
 
 #: ../../source/programs/gdaladdo.rst:91
 msgid ""
 "Maximum width or height of the smallest overview level. Only taken into "
 "account if explicit levels are not specified. Defaults to 256."
 msgstr ""
+"最小のオーバービューレベルの最大幅または高さ. 明示的なレベルが指定されていない場合にのみ考慮されます. デフォルトは256です."
 
 #: ../../source/programs/gdaladdo.rst:100
 msgid ""
@@ -158,6 +175,9 @@ msgid ""
 "recent than the external overview of the VRT. By default all existing "
 "overview levels will be refreshed, unless explicit levels are specified."
 msgstr ""
+"このオプションは,外部オーバービューを持つVRTファイルの既存のオーバービューの部分的な更新を行います. "
+"VRTのすべてのソースの変更タイムスタンプをチェックし,VRTの外部オーバービューよりも新しいタイムスタンプのソースに対応する領域のオーバービューを再生成します. "
+"デフォルトでは,明示的なレベルが指定されていない限り,すべての既存のオーバービューレベルが更新されます."
 
 #: ../../source/programs/gdaladdo.rst:112
 msgid ""
@@ -168,6 +188,9 @@ msgid ""
 "the Y value of the lower right corner. By default all existing overview "
 "levels will be refreshed, unless explicit levels are specified."
 msgstr ""
+"このオプションは,ジオリファレンス座標で指定された関心領域で既存のオーバービューの部分的な更新を行います. "
+"<ulx> は左上隅のX値, <uly> は左上隅のY値, <lrx> は右下隅のX値, <lry> は右下隅のY値です. "
+"デフォルトでは,明示的なレベルが指定されていない限り,すべての既存のオーバービューレベルが更新されます."
 
 #: ../../source/programs/gdaladdo.rst:124
 msgid ""
@@ -178,16 +201,20 @@ msgid ""
 "of the main dataset. By default all existing overview levels will be "
 "refreshed, unless explicit levels are specified."
 msgstr ""
+"このオプションは,1つまたは複数のファイル名（カンマで区切られた名前）で指定された関心領域で既存のオーバービューの部分的な更新を行います. "
+"ファイル名は,更新する関心領域を決定するためにのみ使用されることに注意してください. 参照ソースピクセルはメインデータセットのものです. "
+"デフォルトでは,明示的なレベルが指定されていない限り,すべての既存のオーバービューレベルが更新されます."
 
 #: ../../source/programs/gdaladdo.rst:133
 msgid "The file to build overviews for (or whose overviews must be removed)."
-msgstr ""
+msgstr "オーバービューを構築するファイル（またはオーバービューを削除する必要があるファイル）です."
 
 #: ../../source/programs/gdaladdo.rst:137
 msgid ""
 "A list of integral overview levels to build. Ignored with "
 ":option:`-clean` option."
 msgstr ""
+"構築する整数のオーバービューレベルのリストです. :option:`-clean` オプションとは無視されます."
 
 #: ../../source/programs/gdaladdo.rst:141
 msgid ""
@@ -195,6 +222,8 @@ msgid ""
 "appropriate overview power-of-two factors will be selected until the "
 "smallest overview is smaller than the value of the -minsize switch."
 msgstr ""
+"オーバービューを構築するためにレベルはもはや必要ありません. この場合,適切な"
+"オーバービューの2の累乗の要素が選択され,最小のオーバービューが -minsize スイッチの値より小さくなるまで続きます."
 
 #: ../../source/programs/gdaladdo.rst:145
 msgid ""
@@ -202,6 +231,7 @@ msgid ""
 "corresponding levels will be used to refresh them if no explicit levels "
 "are specified."
 msgstr ""
+"GDAL 3.9以降,既存のオーバービューがすでにある場合,明示的なレベルが指定されていない場合,それらを更新するために対応するレベルが使用されます."
 
 #: ../../source/programs/gdaladdo.rst:150
 msgid ""
@@ -210,6 +240,8 @@ msgid ""
 "be considered as the nodata value and not each value of the triplet "
 "independently per band."
 msgstr ""
+"gdaladdo は,特別なデータセットメタデータである NODATA_VALUES タプルを適切に尊重します. "
+"そのため,RGB画像の場合,特定のRGB三重組だけがノーデータ値として考慮され,各バンドごとに三重組の値が独立して考慮されません."
 
 #: ../../source/programs/gdaladdo.rst:154
 msgid ""
@@ -218,6 +250,8 @@ msgid ""
 "the file has existing overview levels at a level selected, those levels "
 "will be recomputed and rewritten in place."
 msgstr ""
+"``2`` のようなレベル値を選択すると,基本レイヤーの解像度の1/2(各次元で)のオーバービューレベルが計算されます. "
+"ファイルに選択されたレベルの既存のオーバービューレベルがある場合,それらのレベルが再計算されてその場で書き換えられます."
 
 #: ../../source/programs/gdaladdo.rst:159
 msgid ""
@@ -228,6 +262,9 @@ msgid ""
 " the resampling method on a file that already has overviews computed, you"
 " don't need to clean the existing overviews."
 msgstr ""
+"内部GeoTIFFオーバービュー(またはGeoTIFF形式の外部オーバービュー)の場合, -clean はファイルを縮小しません. "
+"後でオーバービューレベルを持つgdaladdoの実行は,以前に削除されたオーバービューのスペースを再利用するのではなく,ファイルを拡張します. "
+"既に計算されたオーバービューを持つファイルのリサンプリング方法を変更したい場合,既存のオーバービューをクリーンアップする必要はありません."
 
 #: ../../source/programs/gdaladdo.rst:165
 msgid ""
@@ -237,6 +274,10 @@ msgid ""
 " internally to the file operated on (if it is writable), unless the -ro "
 "flag is specified."
 msgstr ""
+"一部のフォーマットドライバはオーバービューを全くサポートしていません. 多くの"
+"フォーマットドライバは,実際にはTIFF形式である拡張子 .ovr を持つセカンダリファイルにオーバービューを格納します. "
+"デフォルトでは,GeoTIFFドライバは,書き込み可能な場合には,操作されたファイルにオーバービューを内部的に格納します. "
+"ただし, -ro フラグが指定されていない限り."
 
 #: ../../source/programs/gdaladdo.rst:170
 msgid ""
@@ -246,10 +287,13 @@ msgid ""
 ".aux file suitable for direct use with Imagine or ArcGIS as well as GDAL "
 "applications.  (e.g. --config USE_RRD YES)"
 msgstr ""
+"ほとんどのドライバは,Erdas Imagine形式を使用した代替オーバービューフォーマットもサポートしています. "
+"これをトリガーするには, :config:`USE_RRD=YES` 構成オプションを使用します. これにより,ImagineやArcGISとGDALアプリケーションの両方で直接使用できる関連する .aux ファイルにオーバービューが配置されます. "
+"(例: --config USE_RRD YES)"
 
 #: ../../source/programs/gdaladdo.rst:176
 msgid "External overviews in GeoTIFF format"
-msgstr ""
+msgstr "GeoTIFF形式の外部オーバービュー"
 
 #: ../../source/programs/gdaladdo.rst:178
 msgid ""
@@ -261,6 +305,10 @@ msgid ""
 "configuration option, and the interleaving with the "
 ":config:`INTERLEAVE_OVERVIEW` =PIXEL/BAND configuration option."
 msgstr ""
+"TIFF形式で作成された外部オーバービューは, :config:`COMPRESS_OVERVIEW` 構成オプションを使用して圧縮できます. "
+"GeoTIFFドライバでサポートされているすべての圧縮方法がここで利用可能です. (例: ``--config COMPRESS_OVERVIEW DEFLATE``). "
+"フォトメトリックインタープリテーションは, :config:`PHOTOMETRIC_OVERVIEW` =RGB/YCBCR/... 構成オプションで設定できます. "
+"また,インターリーブは, :config:`INTERLEAVE_OVERVIEW` =PIXEL/BAND 構成オプションで設定できます."
 
 #: ../../source/programs/gdaladdo.rst:185
 msgid ""
@@ -268,12 +316,15 @@ msgid ""
 ":config:`INTERLEAVE_OVERVIEW` are honoured when creating internal "
 "overviews of TIFF files."
 msgstr ""
+"GDAL 3.6以降, :config:`COMPRESS_OVERVIEW` と :config:`INTERLEAVE_OVERVIEW` は, "
+"TIFFファイルの内部オーバービューを作成する際に尊重されます."
 
 #: ../../source/programs/gdaladdo.rst:188
 msgid ""
 "For JPEG compressed external and internal overviews, the JPEG quality can"
 " be set with ``--config JPEG_QUALITY_OVERVIEW value``."
 msgstr ""
+"JPEG圧縮された外部および内部オーバービューの場合, JPEG品質は ``--config JPEG_QUALITY_OVERVIEW value`` で設定できます."
 
 #: ../../source/programs/gdaladdo.rst:191
 msgid ""
@@ -281,6 +332,8 @@ msgid ""
 "level can be set with ``--config WEBP_LEVEL_OVERVIEW value``. If not set,"
 " will default to 75."
 msgstr ""
+"WEBP圧縮された外部および内部オーバービューの場合, WEBP品質レベルは ``--config WEBP_LEVEL_OVERVIEW value`` で設定できます. "
+"設定されていない場合,デフォルトは75になります."
 
 #: ../../source/programs/gdaladdo.rst:194
 msgid ""
@@ -288,6 +341,8 @@ msgid ""
 "lossless/lossy switch can be set with ``--config WEBP_LOSSLESS_OVERVIEW "
 "value``. If not set, will default to NO (lossy). Added in GDAL 3.6.0"
 msgstr ""
+"WEBP圧縮された外部および内部オーバービューの場合, WEBPロスレス/ロシー切り替えは ``--config WEBP_LOSSLESS_OVERVIEW value`` で設定できます. "
+"設定されていない場合,デフォルトはNO(ロスレス)になります. GDAL 3.6.0で追加されました."
 
 #: ../../source/programs/gdaladdo.rst:197
 msgid ""
@@ -295,6 +350,8 @@ msgid ""
 "threshold can be set with ``--config MAX_Z_ERROR_OVERVIEW value``. If not"
 " set, will default to 0 (lossless). Added in GDAL 3.4.1"
 msgstr ""
+"LERC圧縮された外部および内部オーバービューの場合,最大誤差しきい値は ``--config MAX_Z_ERROR_OVERVIEW value`` で設定できます. "
+"設定されていない場合,デフォルトは0(ロスレス)になります. GDAL 3.4.1で追加されました."
 
 #: ../../source/programs/gdaladdo.rst:200
 msgid ""
@@ -302,6 +359,8 @@ msgid ""
 "the compression level can be set with ``--config ZLEVEL_OVERVIEW value``."
 " If not set, will default to 6. Added in GDAL 3.4.1"
 msgstr ""
+"DEFLATEまたはLERC_DEFLATE圧縮された外部および内部オーバービューの場合,圧縮レベルは ``--config ZLEVEL_OVERVIEW value`` で設定できます. "
+"設定されていない場合,デフォルトは6になります. GDAL 3.4.1で追加されました."
 
 #: ../../source/programs/gdaladdo.rst:203
 msgid ""
@@ -309,24 +368,29 @@ msgid ""
 "compression level can be set with ``--config ZSTD_LEVEL_OVERVIEW value``."
 " If not set, will default to 9. Added in GDAL 3.4.1"
 msgstr ""
+"ZSTDまたはLERC_ZSTD圧縮された外部および内部オーバービューの場合,圧縮レベルは ``--config ZSTD_LEVEL_OVERVIEW value`` で設定できます. "
+"設定されていない場合,デフォルトは9になります. GDAL 3.4.1で追加されました."
 
 #: ../../source/programs/gdaladdo.rst:206
 msgid ""
 "For JPEG-XL compressed external and internal overviews, the following "
 "settings can be set since GDAL 3.9.0:"
 msgstr ""
+"JPEG-XL圧縮された外部および内部オーバービューの場合,以下の設定がGDAL 3.9.0以降で設定できます:"
 
 #: ../../source/programs/gdaladdo.rst:208
 msgid ""
 "Whether compression should be lossless with ``--config "
 "JXL_LOSSLESS_OVERVIEW YES|NO``. Default is YES"
 msgstr ""
+"圧縮がロスレスであるかどうかは ``--config JXL_LOSSLESS_OVERVIEW YES|NO`` で設定できます. デフォルトはYESです"
 
 #: ../../source/programs/gdaladdo.rst:210
 msgid ""
 "Level of effort with ``--config JXL_EFFORT_OVERVIEW value``, with value "
 "between 1(fast) and 9(flow). Default is 5"
 msgstr ""
+"努力レベルは ``--config JXL_EFFORT_OVERVIEW value`` で設定できます. 値は1(高速)から9(高品質)の間です. デフォルトは5です"
 
 #: ../../source/programs/gdaladdo.rst:212
 msgid ""
@@ -335,6 +399,8 @@ msgid ""
 "1.0=visually lossless, usual range [0.5,3]. Default is 1.0. Ignored if "
 "JXL_LOSSLESS_OVERVIEW is YES"
 msgstr ""
+"損失圧縮のための距離レベルは ``--config JXL_DISTANCE_OVERVIEW value`` で設定できます. "
+"値は: 0=数学的にロスレス, 1.0=視覚的にロスレス, 通常の範囲[0.5,3]. デフォルトは1.0です. JXL_LOSSLESS_OVERVIEW がYESの場合は無視されます"
 
 #: ../../source/programs/gdaladdo.rst:214
 msgid ""
@@ -343,16 +409,20 @@ msgid ""
 "lossless, 1.0=visually lossless, usual range [0.5,3]. Default is the same"
 " value as JXL_DISTANCE_OVERVIEW. Ignored if JXL_LOSSLESS_OVERVIEW is YES"
 msgstr ""
+"アルファチャンネルの損失圧縮のための距離レベルは ``--config JXL_ALPHA_DISTANCE_OVERVIEW value`` で設定できます. "
+"値は: 0=数学的にロスレス, 1.0=視覚的にロスレス, 通常の範囲[0.5,3]. デフォルトは"
+"JXL_DISTANCE_OVERVIEWと同じ値です. JXL_LOSSLESS_OVERVIEW がYESの場合は無視されます"
 
 #: ../../source/programs/gdaladdo.rst:217
 msgid ""
 "For LZW, ZSTD or DEFLATE compressed external overviews, the predictor "
 "value can be set with ``--config PREDICTOR_OVERVIEW 1|2|3``."
 msgstr ""
+"LZW, ZSTDまたはDEFLATE圧縮された外部オーバービューの場合,予測子値は ``--config PREDICTOR_OVERVIEW 1|2|3`` で設定できます."
 
 #: ../../source/programs/gdaladdo.rst:220
 msgid "To produce the smallest possible JPEG-In-TIFF overviews, you should use:"
-msgstr ""
+msgstr "可能な限り小さなJPEG-In-TIFFオーバービューを生成するには,次のようにします:"
 
 #: ../../source/programs/gdaladdo.rst:226
 msgid ""
@@ -360,6 +430,8 @@ msgid ""
 ":config:`BIGTIFF_OVERVIEW` configuration option: ``--config "
 "BIGTIFF_OVERVIEW {IF_NEEDED|IF_SAFER|YES|NO}``."
 msgstr ""
+"外部オーバービューは, :config:`BIGTIFF_OVERVIEW` 構成オプションを使用してBigTIFF形式で作成で"
+"きます: ``--config BIGTIFF_OVERVIEW {IF_NEEDED|IF_SAFER|YES|NO}``."
 
 #: ../../source/programs/gdaladdo.rst:230
 msgid ""
@@ -367,24 +439,27 @@ msgid ""
 "IF_NEEDED). The behavior of this option is exactly the same as the "
 "BIGTIFF creation option documented in the GeoTIFF driver documentation."
 msgstr ""
+"デフォルト値はGDAL 2.3.0以降はIF_SAFERです(以前はIF_NEEDEDでした). "
+"このオプションの動作は,GeoTIFFドライバのドキュメントに記載されているBIGTIFF作成オプションとまったく同じです."
 
 #: ../../source/programs/gdaladdo.rst:234
 msgid "YES forces BigTIFF."
-msgstr ""
+msgstr "YES はBigTIFFを強制します."
 
 #: ../../source/programs/gdaladdo.rst:235
 msgid "NO forces classic TIFF."
-msgstr ""
+msgstr "NO はクラシックTIFFを強制します."
 
 #: ../../source/programs/gdaladdo.rst:236
 msgid ""
 "IF_NEEDED will only create a BigTIFF if it is clearly needed "
 "(uncompressed, and overviews larger than 4GB)."
 msgstr ""
+"IF_NEEDED は,明らかに必要な場合のみBigTIFFを作成します(非圧縮であり,オーバービューが4GBを超える場合)."
 
 #: ../../source/programs/gdaladdo.rst:238
 msgid "IF_SAFER will create BigTIFF if the resulting file *might* exceed 4GB."
-msgstr ""
+msgstr "IF_SAFER は,結果のファイルが4GBを超える可能性がある場合にBigTIFFを作成します."
 
 #: ../../source/programs/gdaladdo.rst:240
 msgid ""
@@ -393,16 +468,19 @@ msgid ""
 "otherwise) can be obtained with ``--config SPARSE_OK_OVERVIEW ON``. Added"
 " in GDAL 3.4.1"
 msgstr ""
+"疎なGeoTIFFオーバービューファイル(つまり,すべてのピクセルがノーデータ値である場合に省略されるタイル,ノーデータ値がある場合,または0である場合)は, ``--config SPARSE_OK_OVERVIEW ON`` で取得できます. "
+"GDAL 3.4.1で追加されました"
 
 #: ../../source/programs/gdaladdo.rst:244
 msgid ""
 "See the documentation of the :ref:`raster.gtiff` driver for further "
 "explanations on all those options."
 msgstr ""
+"これらのオプションの詳細については, :ref:`raster.gtiff` ドライバのドキュメントを参照してください."
 
 #: ../../source/programs/gdaladdo.rst:247
 msgid "Setting blocksize in Geotiff overviews"
-msgstr ""
+msgstr "Geotiffオーバービューでのブロックサイズの設定"
 
 #: ../../source/programs/gdaladdo.rst:249
 msgid "``--config GDAL_TIFF_OVR_BLOCKSIZE <size>``"
@@ -410,7 +488,7 @@ msgstr ""
 
 #: ../../source/programs/gdaladdo.rst:251
 msgid "Example: ``--config GDAL_TIFF_OVR_BLOCKSIZE 256``"
-msgstr ""
+msgstr "例: ``--config GDAL_TIFF_OVR_BLOCKSIZE 256``"
 
 #: ../../source/programs/gdaladdo.rst:253
 msgid ""
@@ -420,10 +498,13 @@ msgid ""
 "blocksize different from overviews blocksize.(e.g. full resolution image "
 "at blocksize 256, overviews at blocksize 128)"
 msgstr ""
+"デフォルト値は128です. またはGDAL 3.1以降,タイルGeoTIFFファイルでオーバービューを作成する場合,フル解像度画像のタイルサイズです. "
+"注意:この設定がない場合,ファイルはオーバービューブロックサイズと異なるブロックサイズでフル解像度画像を持つことがあります. "
+"(例: ブロックサイズ256のフル解像度画像,ブロックサイズ128のオーバービュー)"
 
 #: ../../source/programs/gdaladdo.rst:258
 msgid "Nodata / source validity mask handling during resampling"
-msgstr ""
+msgstr "リサンプリング中のノーデータ/ソース有効マスクの処理"
 
 #: ../../source/programs/gdaladdo.rst:260
 msgid ""
@@ -431,12 +512,14 @@ msgid ""
 " metadata set on the source band, a mask band, an alpha band will not be "
 "used during resampling."
 msgstr ""
+"ソースピクセルの無効な値は,ソースバンドに設定されたノーデータ値メタデータ,マスクバンド,アルファバンドを通じて識別された場合,リサンプリング中に使用されません."
 
 #: ../../source/programs/nodata_handling_gdaladdo_gdal_translate.rst:1
 msgid ""
 "The details of how it is taken into account depends on the resampling "
 "kernel:"
 msgstr ""
+"それがどのように考慮されるかの詳細は,リサンプリングカーネルに依存します:"
 
 #: ../../source/programs/nodata_handling_gdaladdo_gdal_translate.rst:3
 msgid ""
@@ -444,6 +527,8 @@ msgid ""
 "contributing source pixels is selected (in an implementation specific "
 "way). Its value is used as it, be it valid or invalid."
 msgstr ""
+"最近傍リサンプリングの場合,各ターゲットピクセルに対して,潜在的な寄与ソースピクセルの1つが選択されます(実装固有の方法で). "
+"その値は,有効であろうと無効であろうとそのまま使用されます."
 
 #: ../../source/programs/nodata_handling_gdaladdo_gdal_translate.rst:7
 msgid ""
@@ -457,6 +542,9 @@ msgid ""
 " is less than the radius of the resampling kernel, the target pixel is "
 "considered as nodata."
 msgstr ""
+"バイリニア,キュービック,キュービックスプラインおよびランチョスの場合,各ターゲットピクセルに対して,マスクされた場合に無視するために寄与ソースピクセルの重みがゼロに設定されます. "
+"キュービックの場合,カーネル内の一部の重みが負であるため,有効なピクセルと無効なピクセルの交互がある場合,強いオーバーシュート/アンダーシュートにつながる可能性があります. "
+"そのため,水平または垂直方向のいずれかで,各次元のリサンプリングカーネルの半径よりも有効なソースピクセルの最大数が少ない場合,ターゲットピクセルはノーデータと見なされます."
 
 #: ../../source/programs/nodata_handling_gdaladdo_gdal_translate.rst:16
 msgid ""
@@ -464,10 +552,12 @@ msgid ""
 "target pixel are ignored if masked. Only the valid ones are taken into "
 "account. If there are none, the target pixel is considered as nodata."
 msgstr ""
+"その他のリサンプリング方法の場合,マスクされた場合に寄与するソースピクセルは"
+"無視されます. 有効なものだけが考慮されます. それがない場合,ターゲットピクセルはノーデータと見なされます."
 
 #: ../../source/programs/gdaladdo.rst:267
 msgid "Multithreading"
-msgstr ""
+msgstr "マルチスレッディング"
 
 #: ../../source/programs/gdaladdo.rst:271
 msgid ""
@@ -475,36 +565,40 @@ msgid ""
 "``ALL_CPUS`` or a integer value to specify the number of threads to use "
 "for overview computation."
 msgstr ""
+":config:`GDAL_NUM_THREADS` 構成オプションは,オーバービュー計算に使用するスレッド数を指定するために ``ALL_CPUS`` または整数値に設定できます."
 
 #: ../../source/programs/gdaladdo.rst:276
 msgid "C API"
-msgstr ""
+msgstr "C言語API"
 
 #: ../../source/programs/gdaladdo.rst:278
 msgid ""
 "Functionality of this utility can be done from C with "
 ":cpp:func:`GDALBuildOverviews`."
 msgstr ""
+"このユーティリティの機能は,C言語で :cpp:func:`GDALBuildOverviews` で行うことができます."
 
 #: ../../source/programs/gdaladdo.rst:281
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdaladdo.rst:283
 msgid ""
 "Create overviews, embedded in the supplied TIFF file, with automatic "
 "computation of levels (GDAL 2.3 or later)"
 msgstr ""
+"オーバービューを作成し,レベルの自動計算を行いTIFFファイルに埋め込みます. (GDAL 2.3以降）"
 
 #: ../../source/programs/gdaladdo.rst:290
 msgid "Create overviews, embedded in the supplied TIFF file:"
-msgstr ""
+msgstr "TIFFファイルに埋め込まれたオーバービューを作成します:"
 
 #: ../../source/programs/gdaladdo.rst:296
 msgid ""
 "Create an external compressed GeoTIFF overview file from the ERDAS .IMG "
 "file:"
 msgstr ""
+"ERDAS .IMG ファイルから外部圧縮されたGeoTIFFオーバービューファイルを作成します:"
 
 #: ../../source/programs/gdaladdo.rst:302
 msgid ""
@@ -512,10 +606,12 @@ msgid ""
 "RGB dataset (if the dataset is a writable GeoTIFF, you also need to add "
 "the -ro option to force the generation of external overview):"
 msgstr ""
+"3バンドRGBデータセットから外部JPEG圧縮GeoTIFFオーバービューファイルを作成します"
+"(データセットが書き込み可能なGeoTIFFの場合,外部オーバービューの生成を強制するために -ro オプションを追加する必要があります):"
 
 #: ../../source/programs/gdaladdo.rst:311
 msgid "Create an Erdas Imagine format overviews for the indicated JPEG file:"
-msgstr ""
+msgstr "指定されたJPEGファイルのErdas Imagine形式のオーバービューを作成します:"
 
 #: ../../source/programs/gdaladdo.rst:317
 msgid ""
@@ -524,14 +620,17 @@ msgid ""
 "parameter must be driver prefix, filename and subdataset name, like e.g. "
 "shown by gdalinfo):"
 msgstr ""
+"GeoPackage内の複数のラスタレイヤーの1つのような特定のサブデータセットのオーバービューを作成します"
+"(\"filename\" パラメータは,ドライバプレフィックス,ファイル名,サブデータセット名のように,gdalinfoで表示されるようになります):"
 
 #: ../../source/programs/gdaladdo.rst:324
 msgid ""
 "Refresh overviews of a VRT file, for sources that have been modified "
 "after the .vrt.ovr generation:"
 msgstr ""
+".vrt.ovr 生成後に変更されたソースのVRTファイルのオーバービューを更新します:"
 
 #: ../../source/programs/gdaladdo.rst:335
 msgid "Refresh overviews of a TIFF file:"
-msgstr ""
+msgstr "TIFFファイルのオーバービューを更新します:"
 
