@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdallocationinfo.rst:9
 msgid "Raster query tool"
-msgstr ""
+msgstr "ラスタークエリツール"
 
 #: ../../source/programs/gdallocationinfo.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdallocationinfo.rst:28
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdallocationinfo.rst:30
 msgid ""
@@ -41,26 +41,32 @@ msgid ""
 "information about a pixel given its location in one of a variety of "
 "coordinate systems.  Several reporting options are provided."
 msgstr ""
+":program:`gdallocationinfo` ユーティリティは,さまざまな座標系の中での位置を指定"
+"することで,ピクセルに関する情報を問い合わせるメカニズムを提供します. いくつか"
+"のレポートオプションが提供されます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdallocationinfo.rst:40
 msgid "The output report will be XML formatted for convenient post processing."
-msgstr ""
+msgstr "便利な後処理のためのXML 形式で出力レポートが作成されます."
 
 #: ../../source/programs/gdallocationinfo.rst:44
 msgid ""
 "The only output is filenames production from the LocationInfo request "
 "against the database (i.e. for identifying impacted file from VRT)."
 msgstr ""
+"出力は,データベースに対する LocationInfo リクエストから生成されたファイル名"
+"のみです (すなわち, VRT から影響を受けるファイルを識別するため)."
 
 #: ../../source/programs/gdallocationinfo.rst:49
 msgid ""
@@ -68,36 +74,41 @@ msgid ""
 "selected bands. By default, the value of each band is output on a "
 "separate line, unless :option:`-field_sep` is specified."
 msgstr ""
+"選択されたピクセルの各選択されたバンドのピクセル値のみが出力されます. デフォル"
+"トでは,各バンドの値は別々の行に出力されますが, :option:`-field_sep` が指定されて"
+"いる場合は別のフィールドに出力されます."
 
 #: ../../source/programs/gdallocationinfo.rst:55
 msgid ""
 "Selects a band to query.  Multiple bands can be listed.  By default all "
 "bands are queried."
 msgstr ""
+"クエリするバンドを選択します. 複数のバンドをリストアップすることができます. デ"
+"フォルトではすべてのバンドがクエリされます."
 
 #: ../../source/programs/gdallocationinfo.rst:62
 msgid "Select a sampling algorithm. The default is ``nearest``."
-msgstr ""
+msgstr "サンプリングアルゴリズムを選択します. デフォルトは ``nearest`` です."
 
 #: ../../source/programs/gdallocationinfo.rst:64
 msgid "The available methods are:"
-msgstr ""
+msgstr "利用可能なメソッドは次のとおりです:"
 
 #: ../../source/programs/gdallocationinfo.rst:66
 msgid "``nearest`` applies a nearest neighbour."
-msgstr ""
+msgstr "``nearest`` で最近傍を利用できます."
 
 #: ../../source/programs/gdallocationinfo.rst:68
 msgid "``bilinear`` applies a bilinear convolution kernel."
-msgstr ""
+msgstr "``bilinear`` でバイリニア畳み込みカーネルを利用できます."
 
 #: ../../source/programs/gdallocationinfo.rst:70
 msgid "``cubic`` applies a cubic convolution kernel."
-msgstr ""
+msgstr "``cubic`` キュービック畳み込みカーネルを利用できます."
 
 #: ../../source/programs/gdallocationinfo.rst:72
 msgid "``cubicspline`` applies a B-Spline convolution kernel."
-msgstr ""
+msgstr "``cubicspline`` B-Spline畳み込みカーネルを利用できます."
 
 #: ../../source/programs/gdallocationinfo.rst:76
 msgid ""
@@ -106,22 +117,25 @@ msgid ""
 "coordinate system is pixel/line) must still be given with respect to the "
 "base band."
 msgstr ""
+"基本バンドの代わりに (overview_level) 番目のオーバービュー (overview_level=1 は"
+"最初のオーバービュー) をクエリします. x,y 位置 (座標系がピクセル/ラインの場合) は"
+"基本バンドに対して引き続き指定する必要があります."
 
 #: ../../source/programs/gdallocationinfo.rst:82
 msgid "The coordinate system of the input x, y location."
-msgstr ""
+msgstr "入力 x, y 位置の座標系です."
 
 #: ../../source/programs/gdallocationinfo.rst:86
 msgid "Indicates input x,y points are in the georeferencing system of the image."
-msgstr ""
+msgstr "入力 x, y ポイントが画像のジオリファレンスシステムにあることを示します."
 
 #: ../../source/programs/gdallocationinfo.rst:90
 msgid "Indicates input x,y points are WGS84 long, lat."
-msgstr ""
+msgstr "入力 x, y ポイントが WGS84 経度, 緯度であることを示します."
 
 #: ../../source/programs/gdallocationinfo.rst:94
 msgid "Dataset open option (format specific)"
-msgstr ""
+msgstr "データセットオープンオプション (フォーマット固有)"
 
 #: ../../source/programs/gdallocationinfo.rst:100
 msgid ""
@@ -130,12 +144,18 @@ msgid ""
 ":option:`-field_sep` to be also defined), or as a dedicated field in "
 "default or :option:`-xml` modes."
 msgstr ""
+"入力行の末尾に追加される余分な非数値コンテンツを出力行に追加しないようにする"
+"には,このフラグを設定します (:option:`-field_sep` も定義されている必要があります)"
+". または,デフォルトまたは :option:`-xml` モードで専用のフィールドとして使用できま"
+"す."
 
 #: ../../source/programs/gdallocationinfo.rst:108
 msgid ""
 "Enable Echo mode, where input coordinates are prepended to the output "
 "lines in :option:`-valonly` mode."
 msgstr ""
+"入力座標が :option:`-valonly` モードで出力行に先行して表示されるエコーモードを有効"
+"にします."
 
 #: ../../source/programs/gdallocationinfo.rst:115
 msgid ""
@@ -146,32 +166,43 @@ msgid ""
 "belongs to which set of input x,y points when several ones are provided. "
 "Defining the field separator is also needed"
 msgstr ""
+"異なる値を区切るために :option:`-valonly` モードで使用されるフィールドセパレータを"
+"定義します. これはデフォルトで新しい行文字に設定されており, 複数のバンドを持つラスタ"
+"をクエリすると, 出力には1行に1つの値が含まれるため, 複数の入力 x, y ポイントが提供"
+"された場合, どの値がどの入力 x, y ポイントのセットに属するかを認識するのが難しいか"
+"もしれません. フィールドセパレータを定義することも必要です."
 
 #: ../../source/programs/gdallocationinfo.rst:124
 msgid "The source GDAL raster datasource name."
-msgstr ""
+msgstr "ソース GDAL ラスターデータソース名です."
 
 #: ../../source/programs/gdallocationinfo.rst:128
 msgid ""
 "X location of target pixel.  By default the coordinate system is "
 "pixel/line unless -l_srs, -wgs84 or -geoloc supplied."
 msgstr ""
+"ターゲットピクセルの X 位置です. デフォルトでは,座標系は -l_srs, -wgs84 または -"
+"geoloc が指定されていない限り,ピクセル/ラインです."
 
 #: ../../source/programs/gdallocationinfo.rst:133
 msgid ""
 "Y location of target pixel.  By default the coordinate system is "
 "pixel/line unless -l_srs, -wgs84 or -geoloc supplied."
 msgstr ""
+"ターゲットピクセルの Y 位置です. デフォルトでは,座標系は -l_srs, -wgs84 または -"
+"geoloc が指定されていない限り,ピクセル/ラインです."
 
 #: ../../source/programs/gdallocationinfo.rst:137
 msgid ""
 "This utility is intended to provide a variety of information about a "
 "pixel.  Currently it reports:"
 msgstr ""
+"このユーティリティは,ピクセルに関するさまざまな情報を提供することを意図していま"
+"す. 現在,次の情報を報告します:"
 
 #: ../../source/programs/gdallocationinfo.rst:140
 msgid "The location of the pixel in pixel/line space."
-msgstr ""
+msgstr "ピクセルの位置をピクセル/ライン空間で指定します."
 
 #: ../../source/programs/gdallocationinfo.rst:141
 msgid ""
@@ -179,14 +210,17 @@ msgid ""
 "is implemented for VRT files which will report the file(s) used to "
 "satisfy requests for that pixel, and by the :ref:`raster.mbtiles` driver."
 msgstr ""
+"データソースに対する LocationInfo メタデータクエリの結果です. これは,そのピクセル"
+"に対するリクエストを満たすために使用されるファイルを報告する VRT ファイルと, :ref:"
+"`raster.mbtiles` ドライバに実装されています."
 
 #: ../../source/programs/gdallocationinfo.rst:145
 msgid "The raster pixel value of that pixel for all or a subset of the bands."
-msgstr ""
+msgstr "すべてまたは一部のバンドのそのピクセルのラスタピクセル値です."
 
 #: ../../source/programs/gdallocationinfo.rst:146
 msgid "The unscaled pixel value if a Scale and/or Offset apply to the band."
-msgstr ""
+msgstr "バンドにスケールと/またはオフセットが適用されている場合のスケーリングされていないピクセル値です."
 
 #: ../../source/programs/gdallocationinfo.rst:148
 msgid ""
@@ -197,12 +231,19 @@ msgid ""
 ":option:`-wgs84`, or :option:`-l_srs` switches it is possible to specify "
 "the location in other coordinate systems."
 msgstr ""
+"選択されたピクセルは,コマンドラインで x/y 座標でリクエストされるか, stdin から読"
+"み取られます. stdin から座標を読み取る場合, 複数の座標ペアを提供することができま"
+"す. デフォルトでは,整数ピクセル/ライン座標が想定されています. ただし, :option:`-"
+"geoloc`, :option:`-wgs84`, または :option:`-l_srs` スイッチを使用すると, 他の座標"
+"系で位置を指定することができます."
 
 #: ../../source/programs/gdallocationinfo.rst:154
 msgid ""
 "The default report is in a human readable text format.  It is possible to"
 " instead request xml output with the -xml switch."
 msgstr ""
+"デフォルトのレポートは人間が読めるテキスト形式です. 代わりに -xml スイッチで xml"
+"出力をリクエストすることも可能です."
 
 #: ../../source/programs/gdallocationinfo.rst:157
 msgid ""
@@ -210,28 +251,33 @@ msgid ""
 "to restrict output to the actual pixel values, or the LocationInfo files "
 "identified for the pixel."
 msgstr ""
+"スクリプト目的のために, -valonly と -lifonly スイッチが提供されており, 実際のピク"
+"セル値またはピクセルに識別された LocationInfo ファイルに出力を制限することがで"
+"きます."
 
 #: ../../source/programs/gdallocationinfo.rst:161
 msgid ""
 "It is anticipated that additional reporting capabilities will be added to"
 " gdallocationinfo in the future."
 msgstr ""
+"将来, gdallocationinfo に追加のレポート機能が追加されることが予想されています."
 
 #: ../../source/programs/gdallocationinfo.rst:165
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdallocationinfo.rst:167
 msgid "Simple example reporting on pixel (256,256) on the file utm.tif."
-msgstr ""
+msgstr "ファイル utm.tif のピクセル (256,256) について報告する単純な例です."
 
 #: ../../source/programs/gdallocationinfo.rst:177
 msgid ""
 "Query a VRT file providing the location in WGS84, and getting the result "
 "in xml."
 msgstr ""
+"WGS84 で位置を提供し, 結果を xml で取得する VRT ファイルをクエリします."
 
 #: ../../source/programs/gdallocationinfo.rst:191
 msgid "Reading location from stdin."
-msgstr ""
+msgstr "stdin から位置を読み取ります."
 

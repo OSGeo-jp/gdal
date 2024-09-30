@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdalcompare.rst:9
 msgid "Compare two images."
-msgstr ""
+msgstr "2 つの画像を比較します."
 
 #: ../../source/programs/gdalcompare.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalcompare.rst:26
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalcompare.rst:28
 msgid ""
@@ -42,6 +42,9 @@ msgid ""
 "output the script will also return the difference count in its exit "
 "value."
 msgstr ""
+":program:`gdalcompare` は 2 つの GDAL サポートされたデータセットを比較し, "
+"差異を報告します. 標準出力に差異を報告するだけでなく, スクリプトは終了値に"
+"差異カウントを返します."
 
 #: ../../source/programs/gdalcompare.rst:33
 msgid ""
@@ -50,72 +53,84 @@ msgid ""
 " important that the GDAL visible data is identical a difference count of "
 "1 (the binary difference) should be considered acceptable."
 msgstr ""
+"画像のピクセルとさまざまなメタデータがチェックされます. また, 1 つの差異と"
+"してカウントされるバイトごとの比較も行われます. したがって, GDAL の可視データ"
+"が同一であることが重要な場合, 差異カウント 1 (バイナリの差異) は許容されると"
+"考えられます."
 
 #: ../../source/programs/gdalcompare.rst:40
 msgid ""
 "gdalcompare is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdalcompare は Python ユーティリティであり, GDAL Python バインディングが利用"
+"可能な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdalcompare.rst:50
 msgid ""
 "Whether to output the difference in pixel content in a TIFF file in the "
 "current directory."
 msgstr ""
+"現在のディレクトリにある TIFF ファイルにピクセルコンテンツの差異を出力する"
+"かどうか."
 
 #: ../../source/programs/gdalcompare.rst:57
 msgid "Whether to skip exact comparison of binary content."
-msgstr ""
+msgstr "バイナリーコンテンツの正確な比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:63
 msgid "Whether to skip comparison of overviews."
-msgstr ""
+msgstr "オーバービューの比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:69
 msgid "Whether to skip comparison of GEOLOCATION metadata domain."
-msgstr ""
+msgstr "GEOLOCATION メタデータドメインの比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:75
 msgid "Whether to skip comparison of geotransform matrix."
-msgstr ""
+msgstr "ジオトランスフォーム行列の比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:81
 msgid "Whether to skip comparison of metadata"
-msgstr ""
+msgstr "メタデータの比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:87
 msgid ""
 "Whether to skip comparison of Rational Polynomial Coefficients (RPC) "
 "metadata domain."
 msgstr ""
+"有理多項式係数 (RPC) メタデータドメインの比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:93
 msgid "Whether to skip comparison of spatial reference systems (SRS)."
-msgstr ""
+msgstr "空間参照システム (SRS) の比較をスキップするかどうか."
 
 #: ../../source/programs/gdalcompare.rst:97
 msgid ""
 "If this flag is passed the script will compare all subdatasets that are "
 "part of the dataset, otherwise subdatasets are ignored."
 msgstr ""
+"このフラグが渡されると, データセットの一部であるすべてのサブデータセットを比較"
+"します. それ以外の場合, サブデータセットは無視されます."
 
 #: ../../source/programs/gdalcompare.rst:102
 msgid "The file that is considered correct, referred to as the golden file."
-msgstr ""
+msgstr "golden ファイルとして考慮されるファイル."
 
 #: ../../source/programs/gdalcompare.rst:106
 msgid "The file being compared to the golden file, referred to as the new file."
-msgstr ""
+msgstr "golden ファイルと比較されるファイル."
 
 #: ../../source/programs/gdalcompare.rst:109
 msgid ""
@@ -127,8 +142,14 @@ msgid ""
 " binary comparison). The `gdalcompare.compare_sds()` entry point can be "
 "used to compare subdatasets."
 msgstr ""
+":program:`gdalcompare` スクリプト (他のすべてのスクリプトと同様) は, Python "
+"コードからライブラリとしても呼び出すことができます: `from osgeo_utils "
+"import gdalcompare`. 主要なエントリポイントは `gdalcompare.compare_db()` で, " 
+"golden `gdal.Dataset` と新しい `gdal.Dataset` を引数に取り, 差異カウント"
+"(バイナリの比較を除く) を返します. `gdalcompare.compare_sds()` エントリポイント"
+"は, サブデータセットを比較するために使用できます."
 
 #: ../../source/programs/gdalcompare.rst:118
 msgid "Examples"
-msgstr ""
+msgstr "例"
 

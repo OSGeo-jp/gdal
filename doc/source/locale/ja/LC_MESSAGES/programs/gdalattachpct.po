@@ -25,37 +25,42 @@ msgstr ""
 
 #: ../../source/programs/gdalattachpct.rst:9
 msgid "Attach a color table from one file to another file."
-msgstr ""
+msgstr "あるファイルのカラーテーブルを別のファイルに付加します."
 
 #: ../../source/programs/gdalattachpct.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalattachpct.rst:22
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalattachpct.rst:24
 msgid ""
 "This utility will attach a color table file from an input raster file or "
 "a color table file to another raster."
 msgstr ""
+"このユーティリティは,入力ラスタファイルまたはカラーテーブルファイルからカラー"
+"テーブルファイルを別のラスタに付加します."
 
 #: ../../source/programs/gdalattachpct.rst:28
 msgid ""
 "gdalattachpct is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdalattachpct は Python ユーティリティであり, GDAL Python バインディングが利用"
+"可能な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdalattachpct.rst:36
 msgid ""
@@ -63,6 +68,8 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは"
+"拡張子から推測されます (以前は GTiff でした). 短いフォーマット名を使用してください."
 
 #: ../../source/programs/gdalattachpct.rst:42
 msgid ""
@@ -70,12 +77,15 @@ msgid ""
 "either a raster file in a GDAL supported format with a palette or a color"
 " file in a supported format (txt, qml, qlr)."
 msgstr ""
+"<palette_file> からカラーテーブルを抽出します. <palette_file> は,パレットを持つ"
+"GDAL サポートフォーマットのラスタファイルまたはサポートされているフォーマット"
+"(txt, qml, qlr)のカラーファイルである必要があります."
 
 #: ../../source/programs/gdalattachpct.rst:48
 msgid "The input file."
-msgstr ""
+msgstr "入力ファイル."
 
 #: ../../source/programs/gdalattachpct.rst:52
 msgid "The output RGB file that will be created."
-msgstr ""
+msgstr "作成される出力 RGB ファイル."
 

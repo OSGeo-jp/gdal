@@ -25,49 +25,50 @@ msgstr ""
 
 #: ../../source/programs/gdaldem.rst:9
 msgid "Tools to analyze and visualize DEMs."
-msgstr ""
+msgstr "DEM を分析および可視化するツール."
 
 #: ../../source/programs/gdaldem.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdaldem.rst:20
 msgid "From any GDAL-supported elevation raster:"
-msgstr ""
+msgstr "GDAL でサポートされる任意の標高ラスタから:"
 
 #: ../../source/programs/gdaldem.rst:22
 msgid "Generate a shaded relief map:"
-msgstr ""
+msgstr "陰影図を生成します:"
 
 #: ../../source/programs/gdaldem.rst:32
 msgid "Generate a slope map:"
-msgstr ""
+msgstr "傾斜図を生成します:"
 
 #: ../../source/programs/gdaldem.rst:41
 msgid ""
 "Generate an aspect map, outputs a 32-bit float raster with pixel values "
 "from 0-360 indicating azimuth:"
 msgstr ""
+"32ビットフロートラスターのアスペクトマップを生成し, 方位を示す0 から 360 のピクセル値を出力します:"
 
 #: ../../source/programs/gdaldem.rst:51
 msgid "Generate a color relief map:"
-msgstr ""
+msgstr "カラーレリーフマップを生成します:"
 
 #: ../../source/programs/gdaldem.rst:61
 msgid "Generate a Terrain Ruggedness Index (TRI) map:"
-msgstr ""
+msgstr "起伏指標 (TRI) マップを生成します:"
 
 #: ../../source/programs/gdaldem.rst:69
 msgid "Generate a Topographic Position Index (TPI) map:"
-msgstr ""
+msgstr "地形位置指標 (TPI) マップを生成します:"
 
 #: ../../source/programs/gdaldem.rst:76
 msgid "Generate a roughness map:"
-msgstr ""
+msgstr "粗さマップを生成します:"
 
 #: ../../source/programs/gdaldem.rst:84
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdaldem.rst:86
 msgid ""
@@ -81,10 +82,17 @@ msgid ""
 "in meters).  For locations not near the equator, it would be best to "
 "reproject your grid using gdalwarp before using gdaldem."
 msgstr ""
+":program:`gdaldem` は一般的に x, y, z の単位が同一であると仮定します. "
+"x (東西) と y (南北) の単位が同一であるが, z (標高) の単位が異なる場合, "
+"scale (-s) オプションを使用して, 垂直単位と水平単位の比率を設定することができます. "
+"赤道付近の緯度と経度の単位が類似している LatLong 投影の場合, 緯度の単位と経度の単位が"
+"類似している場合, 標高 (z) の単位を互換性のあるものに変換するために, scale=370400 "
+"(標高がフィートの場合) または scale=111120 (標高がメートルの場合) を使用することができます. "
+"赤道から遠い場所の場合, gdaldem を使用する前に gdalwarp を使用してグリッドを再投影することが最善です."
 
 #: ../../source/programs/gdaldem.rst:98
 msgid "Where <mode> is one of the seven available modes:"
-msgstr ""
+msgstr "<mode> は 7 つの利用可能なモードのいずれかです:"
 
 #: ../../source/programs/gdaldem.rst:100
 msgid "``hillshade``"
@@ -92,7 +100,7 @@ msgstr ""
 
 #: ../../source/programs/gdaldem.rst:102
 msgid "Generate a shaded relief map from any GDAL-supported elevation raster."
-msgstr ""
+msgstr "GDAL でサポートされる任意の標高ラスタから陰影図を生成します."
 
 #: ../../source/programs/gdaldem.rst:104
 msgid "``slope``"
@@ -100,7 +108,7 @@ msgstr ""
 
 #: ../../source/programs/gdaldem.rst:106
 msgid "Generate a slope map from any GDAL-supported elevation raster."
-msgstr ""
+msgstr "GDAL でサポートされる任意の標高ラスタから傾斜図を生成します."
 
 #: ../../source/programs/gdaldem.rst:108
 msgid "``aspect``"
@@ -108,7 +116,7 @@ msgstr ""
 
 #: ../../source/programs/gdaldem.rst:110
 msgid "Generate an aspect map from any GDAL-supported elevation raster."
-msgstr ""
+msgstr "GDAL でサポートされる任意の標高ラスタからアスペクトマップを生成します."
 
 #: ../../source/programs/gdaldem.rst:112
 msgid "``color-relief``"
@@ -116,7 +124,7 @@ msgstr ""
 
 #: ../../source/programs/gdaldem.rst:114
 msgid "Generate a color relief map from any GDAL-supported elevation raster."
-msgstr ""
+msgstr "GDAL でサポートされる任意の標高ラスタからカラーレリーフマップを生成します."
 
 #: ../../source/programs/gdaldem.rst:116
 msgid "``TRI``"
@@ -127,6 +135,7 @@ msgid ""
 "Generate a map of Terrain Ruggedness Index from any GDAL-supported "
 "elevation raster."
 msgstr ""
+"GDAL でサポートされる任意の標高ラスタから地形起伏指数マップを生成します."
 
 #: ../../source/programs/gdaldem.rst:120
 msgid "``TPI``"
@@ -137,6 +146,7 @@ msgid ""
 "Generate a map of Topographic Position Index from any GDAL-supported "
 "elevation raster."
 msgstr ""
+"GDAL でサポートされる任意の標高ラスタから地形位置指数マップを生成します."
 
 #: ../../source/programs/gdaldem.rst:124
 msgid "``roughness``"
@@ -144,47 +154,49 @@ msgstr ""
 
 #: ../../source/programs/gdaldem.rst:126
 msgid "Generate a map of roughness from any GDAL-supported elevation raster."
-msgstr ""
+msgstr "GDAL でサポートされる任意の標高ラスタから粗さマップを生成します."
 
 #: ../../source/programs/gdaldem.rst:128
 msgid "The following general options are available:"
-msgstr ""
+msgstr "次の一般オプションが利用可能です:"
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdaldem.rst:134
 msgid "The input DEM raster to be processed"
-msgstr ""
+msgstr "入力 DEM ラスタを加工します"
 
 #: ../../source/programs/gdaldem.rst:138
 msgid "The output raster produced"
-msgstr ""
+msgstr "生成された出力ラスタ"
 
 #: ../../source/programs/gdaldem.rst:142
 msgid "Select the output format."
-msgstr ""
+msgstr "出力フォーマットを選択します."
 
 #: ../../source/programs/gdaldem.rst:146
 msgid ""
 "If not specified, the format is guessed from the extension (previously "
 "was :ref:`raster.gtiff`). Use the short format name."
 msgstr ""
+"指定されていない場合,フォーマットは拡張子から推測されます (以前は :ref:`raster.gtiff`). "
 
 #: ../../source/programs/gdaldem.rst:151
 msgid "Do the computation at raster edges and near nodata values"
-msgstr ""
+msgstr "ラスタの端とノーデータ値の近くで計算を行います"
 
 #: ../../source/programs/gdaldem.rst:155
 msgid "Select an input band to be processed. Bands are numbered from 1."
-msgstr ""
+msgstr "処理する入力バンドを選択します. バンドは 1 から番号付けされます."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -193,6 +205,9 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
+"多くのフォーマットには,作成されたファイルに関する特定の点を制御するために使用できる "
+"1 つ以上のオプションがあります. たとえば, GeoTIFF ドライバは圧縮を制御する作成オプションや, "
+"ファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -204,10 +219,15 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり,いくつかのシンプルなフォーマットには "
+"全く作成オプションがありません. フォーマットでサポートされているオプションのリストは, "
+":ref:`--formats <raster_common_options_formats>` コマンドラインオプションでリストアップできますが, "
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです. "
+"各フォーマットの法的な作成オプションについては, :ref:`raster_drivers` フォーマット固有のドキュメントを参照してください."
 
 #: ../../source/programs/gdaldem.rst:161
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターおよびその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/gdaldem.rst:163
 msgid ""
@@ -217,6 +237,9 @@ msgid ""
 "consequence is that there will be a 1-pixel border around each image set "
 "with nodata value."
 msgstr ""
+"カラーレリーフを除くすべてのアルゴリズムでは,ターゲットデータセットのノーデータ値が "
+"3x3 ウィンドウの中心にある各ソースピクセルの周りに少なくとも 1 つのピクセルがノーデータ値に設定されている場合, "
+"ノーデータ値が出力されます. その結果,各画像の周りにノーデータ値が設定された 1 ピクセルの境界があります."
 
 #: ../../source/programs/gdaldem.rst:168
 msgid ""
@@ -224,10 +247,12 @@ msgid ""
 "image edges or if a nodata value is found in the 3x3 window, by "
 "interpolating missing values."
 msgstr ""
+":option:`-compute_edges` が指定されている場合, gdaldem は画像の端または 3x3 ウィンドウでノーデータ値が見つかった場合, "
+"欠落している値を補間して値を計算します."
 
 #: ../../source/programs/gdaldem.rst:173
 msgid "Modes"
-msgstr ""
+msgstr "モード"
 
 #: ../../source/programs/gdaldem.rst:176
 msgid "hillshade"
@@ -241,14 +266,16 @@ msgid ""
 "factor and a scaling factor to account for differences between vertical "
 "and horizontal units."
 msgstr ""
+"このコマンドは,素敵な陰影効果を持つ 8 ビットラスターを出力します. 地形を視覚化するのに非常に便利です. "
+"光源の方位と高度,垂直の誇張係数,水平単位と垂直単位の違いを考慮するためのスケーリング係数をオプションで指定できます."
 
 #: ../../source/programs/gdaldem.rst:180
 msgid "The value 0 is used as the output nodata value."
-msgstr ""
+msgstr "出力ノーデータ値として値 0 が使用されます."
 
 #: ../../source/programs/gdaldem.rst:182 ../../source/programs/gdaldem.rst:231
 msgid "The following specific options are available :"
-msgstr ""
+msgstr "次の特定のオプションが利用可能です:"
 
 #: ../../source/programs/gdaldem.rst:186 ../../source/programs/gdaldem.rst:235
 #: ../../source/programs/gdaldem.rst:254
@@ -256,10 +283,12 @@ msgid ""
 "The literature suggests Zevenbergen & Thorne to be more suited to smooth "
 "landscapes, whereas Horn's formula to perform better on rougher terrain."
 msgstr ""
+"文献によれば, Zevenbergen & Thorne は平坦な地形に適しているとされていますが, "
+"Horn の式はより荒れた地形でより良いパフォーマンスを発揮するとされています."
 
 #: ../../source/programs/gdaldem.rst:190
 msgid "Vertical exaggeration used to pre-multiply the elevations"
-msgstr ""
+msgstr "標高を事前に乗算するために使用される垂直誇張"
 
 #: ../../source/programs/gdaldem.rst:194
 msgid ""
@@ -268,6 +297,8 @@ msgid ""
 "scale=111120 if the vertical units are meters (or scale=370400 if they "
 "are in feet)"
 msgstr ""
+"垂直単位と水平単位の比率. ソース DEM の水平単位が度 (たとえば Lat/Long WGS84 投影) の場合, "
+"垂直単位がメートルの場合は scale=111120 を使用できます (またはフィートの場合は scale=370400 を使用できます)."
 
 #: ../../source/programs/gdaldem.rst:198
 msgid ""
@@ -275,40 +306,47 @@ msgid ""
 "raster, 90 from the east, ... The default value, 315, should rarely be "
 "changed as it is the value generally used to generate shaded maps."
 msgstr ""
+"光の方位,度. ラスタの上部から来る場合は 0, 東から 90, ... デフォルト値の 315 は, 一般的に陰影図を生成するために使用される値であるため, "
+"ほとんど変更する必要はありません."
 
 #: ../../source/programs/gdaldem.rst:202
 msgid ""
 "Altitude of the light, in degrees. 90 if the light comes from above the "
 "DEM, 0 if it is raking light."
 msgstr ""
+"光の高度,度. DEM の上から来る場合は 90, ライティングが行われる場合は 0."
 
 #: ../../source/programs/gdaldem.rst:206
 msgid "combined shading, a combination of slope and oblique shading."
-msgstr ""
+msgstr "傾斜と斜面の組み合わせを利用した組み合わせシェーディング."
 
 #: ../../source/programs/gdaldem.rst:210
 msgid ""
 "multidirectional shading, a combination of hillshading illuminated from "
 "225 deg, 270 deg, 315 deg, and 360 deg azimuth."
 msgstr ""
+"多方向シェーディング, 225 度, 270 度, 315 度, 360 度の方位から照らされた陰影の組み合わせ."
 
 #: ../../source/programs/gdaldem.rst:216
 msgid ""
 "shading which tries to minimize effects on other map features beneath. "
 "Can't be used with -alt option."
 msgstr ""
+"他のマップ機能に影響を与えることを最小限に抑えるように設計されたシェーディング. -alt オプションとは使用できません."
 
 #: ../../source/programs/gdaldem.rst:220
 msgid ""
 "Multidirectional hillshading applies the formula of "
 "http://pubs.usgs.gov/of/1992/of92-422/of92-422.pdf."
 msgstr ""
+"多方向陰影は, http://pubs.usgs.gov/of/1992/of92-422/of92-422.pdf の式を適用します."
 
 #: ../../source/programs/gdaldem.rst:222
 msgid ""
 "Igor's hillshading uses formula from Maperitive "
 "http://maperitive.net/docs/Commands/GenerateReliefImageIgor.html."
 msgstr ""
+"Igor の陰影は, Maperitive の式を使用します. http://maperitive.net/docs/Commands/GenerateReliefImageIgor.html."
 
 #: ../../source/programs/gdaldem.rst:225
 msgid "slope"
@@ -321,16 +359,20 @@ msgid ""
 "you want: degrees or percent slope. In cases where the horizontal units "
 "differ from the vertical units, you can also supply a scaling factor."
 msgstr ""
+"このコマンドは DEM ラスタを取り, 傾斜値を持つ 32 ビットフロートラスタを出力します. "
+"傾斜値のタイプを指定するオプションがあります: 度またはパーセント傾斜. 水平単位が垂直単位と異なる場合, "
+"スケーリング係数を指定することもできます."
 
 #: ../../source/programs/gdaldem.rst:229
 msgid "The value `-9999` is used as the output nodata value."
-msgstr ""
+msgstr "出力ノーデータ値として値 `-9999` が使用されます."
 
 #: ../../source/programs/gdaldem.rst:239
 msgid ""
 "If specified, the slope will be expressed as percent slope. Otherwise, it"
 " is expressed as degrees"
 msgstr ""
+"指定されている場合,傾斜はパーセント傾斜として表されます. それ以外の場合,度で表されます."
 
 #: ../../source/programs/gdaldem.rst:241
 msgid ":option:`-s`"
@@ -343,6 +385,8 @@ msgid ""
 "scale=111120 if the vertical units are meters (or scale=370400 if they "
 "are in feet)."
 msgstr ""
+"垂直単位と水平単位の比率. ソース DEM の水平単位が度 (たとえば Lat/Long WGS84 投影) の場合, "
+"垂直単位がメートルの場合は scale=111120 を使用できます (またはフィートの場合は scale=370400 を使用できます)."
 
 #: ../../source/programs/gdaldem.rst:246
 msgid "aspect"
@@ -358,20 +402,25 @@ msgid ""
 " The aspect value -9999 is used as the nodata value to indicate undefined"
 " aspect in flat areas with slope=0."
 msgstr ""
+"このコマンドは,傾斜が向いている方位を表す 0° から 360° の値を持つ 32 ビットフロートラスタを出力します. "
+"方位の定義は次のとおりです: 0° は傾斜が北を向いていることを意味し, 90° は東を向いていることを意味し, "
+"180° は南を向いていることを意味し, 270° は西を向いていることを意味します (入力ラスタの上部が北向きであることが前提です). "
+"アスペクト値 -9999 は,傾斜が 0 の平坦な領域で未定義のアスペクトを示すためのノーデータ値として使用されます."
 
 #: ../../source/programs/gdaldem.rst:250 ../../source/programs/gdaldem.rst:273
 msgid "The following specifics options are available :"
-msgstr ""
+msgstr "次の特定のオプションが利用可能です:"
 
 #: ../../source/programs/gdaldem.rst:258
 msgid ""
 "Return trigonometric angle instead of azimuth. Thus 0° means East, 90° "
 "North, 180° West, 270° South."
 msgstr ""
+"方位の代わりに三角関数の角度を返します. したがって, 0° は東を意味し, 90° は北を意味し, 180° は西を意味し, 270° は南を意味します."
 
 #: ../../source/programs/gdaldem.rst:262
 msgid "Return 0 for flat areas with slope=0, instead of -9999."
-msgstr ""
+msgstr "傾斜が 0 の平坦な領域に対して -9999 の代わりに 0 を返します."
 
 #: ../../source/programs/gdaldem.rst:264
 msgid ""
@@ -379,6 +428,8 @@ msgid ""
 " identical to the one of GRASS r.slope.aspect. Otherwise, it's identical "
 "to the one of Matthew Perry's :file:`aspect.cpp` utility."
 msgstr ""
+"これらの 2 つのオプションを使用することで, gdaldem aspect によって返されるアスペクトは, "
+"GRASS r.slope.aspect のものと同一であるはずです. それ以外の場合, Matthew Perry の :file:`aspect.cpp` ユーティリティのものと同一です."
 
 #: ../../source/programs/gdaldem.rst:269
 msgid "color-relief"
@@ -395,14 +446,17 @@ msgid ""
 "to avoid that linear interpolation for values that don't match an index "
 "of the color configuration file."
 msgstr ""
+"このコマンドは,標高とテキストベースのカラー設定ファイルとの間の関連付けを含む, 3 バンド (RGB) または 4 バンド (RGBA) ラスタを出力します. "
+"デフォルトでは,指定された標高値の間の色が滑らかに混合され, 結果は素敵なカラー化された DEM になります. "
+"-exact_color_entry または -nearest_color_entry オプションを使用して, カラー設定ファイルのインデックスに一致しない値のための線形補間を回避することができます."
 
 #: ../../source/programs/gdaldem.rst:277
 msgid "Text-based color configuration file"
-msgstr ""
+msgstr "テキストベースのカラー設定ファイル"
 
 #: ../../source/programs/gdaldem.rst:281
 msgid "Add an alpha channel to the output raster"
-msgstr ""
+msgstr "出力ラスタにアルファチャンネルを追加します"
 
 #: ../../source/programs/gdaldem.rst:285
 msgid ""
@@ -410,12 +464,15 @@ msgid ""
 "none matching color entry is found, the \"0,0,0,0\" RGBA quadruplet will "
 "be used"
 msgstr ""
+"カラー設定ファイルを検索する際に厳密な一致を使用します. 一致するカラーエントリが見つからない場合, "
+"\"0,0,0,0\" RGBA クアドルプレットが使用されます"
 
 #: ../../source/programs/gdaldem.rst:290
 msgid ""
 "Use the RGBA quadruplet corresponding to the closest entry in the color "
 "configuration file."
 msgstr ""
+"カラー設定ファイルの最も近いエントリに対応する RGBA クアドルプレットを使用します."
 
 #: ../../source/programs/gdaldem.rst:292
 msgid ""
@@ -426,6 +483,9 @@ msgid ""
 "when the statistics of the source raster differ from the one that was "
 "used when building the VRT."
 msgstr ""
+"カラーレリーフモードは,出力フォーマットとして VRT をサポートする唯一のモードです. その場合, "
+"カラー設定ファイルを適切な LUT 要素に変換します. パーセンテージで指定された標高は, "
+"VRT を構築する際に使用された統計情報と異なる場合があるため, 絶対値として変換されることに注意してください."
 
 #: ../../source/programs/gdaldem.rst:298
 msgid ""
@@ -436,16 +496,20 @@ msgid ""
 "also be expressed as a percentage: 0% being the minimum value found in "
 "the raster, 100% the maximum value."
 msgstr ""
+"テキストベースのカラー設定ファイルには通常, 1 行あたり 4 列が含まれます: 標高値と対応する赤, 緑, 青の成分 (0 から 255 の間). "
+"標高値は任意の浮動小数点値またはノーデータ値の nv キーワードであることができます. 標高はパーセンテージとしても表現できます: "
+"0% がラスタで見つかった最小値で, 100% が最大値です."
 
 #: ../../source/programs/gdaldem.rst:305
 msgid ""
 "An extra column can be optionally added for the alpha component. If it is"
 " not specified, full opacity (255) is assumed."
 msgstr ""
+"オプションでアルファ成分のための追加の列を追加できます. 指定されていない場合, 完全な不透明度 (255) が想定されます."
 
 #: ../../source/programs/gdaldem.rst:308
 msgid "Various field separators are accepted: comma, tabulation, spaces, ':'."
-msgstr ""
+msgstr "さまざまなフィールドセパレータが受け入れられます: カンマ, タブ, スペース, ':'."
 
 #: ../../source/programs/gdaldem.rst:310
 msgid ""
@@ -454,12 +518,15 @@ msgid ""
 "green, blue, yellow, magenta, cyan, aqua, grey/gray, orange, brown, "
 "purple/violet and indigo."
 msgstr ""
+"RGB トリプレットの代わりに名前を使用して指定することで, GRASS で使用される一般的な色も指定できます. "
+"サポートされているリストは次のとおりです: white, black, red, green, blue, yellow, magenta, cyan, aqua, grey/gray, orange, brown, purple/violet, indigo."
 
 #: ../../source/programs/gdaldem.rst:315
 msgid ""
 "GMT :file:`.cpt` palette files are also supported (COLOR_MODEL = RGB "
 "only)."
 msgstr ""
+"GMT :file:`.cpt` パレットファイルもサポートされています (COLOR_MODEL = RGB のみ)."
 
 #: ../../source/programs/gdaldem.rst:317
 msgid ""
@@ -468,10 +535,12 @@ msgid ""
 "also match that syntax. The alpha component and the support of tab and "
 "comma as separators are GDAL specific extensions."
 msgstr ""
+"注: カラー設定ファイルの構文は, GRASS r.colors ユーティリティでサポートされている構文から派生しています. "
+"ESRI HDR カラーテーブルファイル (.clr) もその構文に一致します. アルファ成分とタブおよびカンマをセパレータとしてサポートするのは GDAL 固有の拡張です."
 
 #: ../../source/programs/gdaldem.rst:322
 msgid "For example:"
-msgstr ""
+msgstr "例:"
 
 #: ../../source/programs/gdaldem.rst:334
 msgid ""
@@ -479,6 +548,8 @@ msgid ""
 " be duplicate with a new value being slightly above the threshold. For "
 "example to have red in [0,10], green in ]10,20] and blue in ]20,30]:"
 msgstr ""
+"\"床値に丸める\" モードを実装するために, 標高値は新しい値がしきい値よりわずかに上になるように複製できます. "
+"たとえば, [0,10] で赤, ]10,20] で緑, ]20,30] で青を持つようにするには:"
 
 #: ../../source/programs/gdaldem.rst:348
 msgid "TRI"
@@ -490,15 +561,17 @@ msgid ""
 "elevation. `TRI` stands for Terrain Ruggedness Index, which measures the "
 "difference between a central pixel and its surrounding cells."
 msgstr ""
+"このコマンドは,標高から計算された値を持つ単一バンドラスタを出力します. `TRI` は地形起伏指数を表し, "
+"中央ピクセルとその周囲のセルとの差を測定します."
 
 #: ../../source/programs/gdaldem.rst:354 ../../source/programs/gdaldem.rst:379
 #: ../../source/programs/gdaldem.rst:390
 msgid "The value -9999 is used as the output nodata value."
-msgstr ""
+msgstr "出力ノーデータ値として値 -9999 が使用されます."
 
 #: ../../source/programs/gdaldem.rst:356
 msgid "The following option is available:"
-msgstr ""
+msgstr "次のオプションが利用可能です:"
 
 #: ../../source/programs/gdaldem.rst:360
 msgid ""
@@ -510,6 +583,9 @@ msgid ""
 " pixel and its surrounding cells. This is recommended for terrestrial use"
 " cases."
 msgstr ""
+"GDAL 3.3 以降, Riley アルゴリズム (Riley, S.J., De Gloria, S.D., Elliot, R. (1999): A Terrain Ruggedness that Quantifies Topographic Heterogeneity. "
+"Intermountain Journal of Science, Vol.5, No.1-4, pp.23-27) が利用可能であり, 新しいデフォルト値です. "
+"このアルゴリズムは,中央ピクセルとその周囲のセルとの差の二乗の和の平方根を使用します. これは陸上の使用ケースにお勧めです."
 
 #: ../../source/programs/gdaldem.rst:367
 msgid ""
@@ -517,6 +593,8 @@ msgid ""
 " the mean difference between a central pixel and its surrounding cells. "
 "This is recommended for bathymetric use cases."
 msgstr ""
+"Wilson アルゴリズム (Wilson et al 2007, Marine Geodesy 30:3-35) は,中央ピクセルとその周囲のセルとの平均差を使用します. "
+"これは水深測量の使用ケースにお勧めです."
 
 #: ../../source/programs/gdaldem.rst:372
 msgid "TPI"
@@ -529,10 +607,12 @@ msgid ""
 "as the difference between a central pixel and the mean of its surrounding"
 " cells (see Wilson et al 2007, Marine Geodesy 30:3-35)."
 msgstr ""
+"このコマンドは,標高から計算された値を持つ単一バンドラスタを出力します. `TPI` は地形位置指数を表し, "
+"中央ピクセルとその周囲のセルの平均との差を定義します (Wilson et al 2007, Marine Geodesy 30:3-35 参照)."
 
 #: ../../source/programs/gdaldem.rst:381 ../../source/programs/gdaldem.rst:392
 msgid "There are no specific options."
-msgstr ""
+msgstr "特定のオプションはありません."
 
 #: ../../source/programs/gdaldem.rst:384
 msgid "roughness"
@@ -545,18 +625,20 @@ msgid ""
 "pixel and its surrounding cell, as defined in Wilson et al (2007, Marine "
 "Geodesy 30:3-35)."
 msgstr ""
+"このコマンドは,標高から計算された値を持つ単一バンドラスタを出力します. 粗さは,中央ピクセルとその周囲のセルとの最大のセル間差を表します. "
+"これは Wilson et al (2007, Marine Geodesy 30:3-35) で定義されています."
 
 #: ../../source/programs/gdaldem.rst:395
 msgid "C API"
-msgstr ""
+msgstr "C言語API"
 
 #: ../../source/programs/gdaldem.rst:397
 msgid "This utility is also callable from C with :cpp:func:`GDALDEMProcessing`."
-msgstr ""
+msgstr "このユーティリティは, :cpp:func:`GDALDEMProcessing` を使用して C からも呼び出すことができます."
 
 #: ../../source/programs/gdaldem.rst:402
 msgid "Authors"
-msgstr ""
+msgstr "著者"
 
 #: ../../source/programs/gdaldem.rst:404
 msgid ""
@@ -572,14 +654,16 @@ msgid ""
 "Army Corps of Engineers, Construction Engineering Research Laboratories, "
 "Champaign, Illinois, 1-425."
 msgstr ""
+"Michael Shapiro, Olga Waupotitsch, Marjorie Larson, Jim Westervelt によるコードから派生しました: U.S. Army CERL, 1993. "
+"GRASS 4.1 リファレンスマニュアル. U.S. Army Corps of Engineers, Construction Engineering Research Laboratories, Champaign, Illinois, 1-425."
 
 #: ../../source/programs/gdaldem.rst:412
 msgid "See also"
-msgstr ""
+msgstr "さらに参照"
 
 #: ../../source/programs/gdaldem.rst:414
 msgid "Documentation of related GRASS utilities:"
-msgstr ""
+msgstr "GRASS ユーティリティ関連ドキュメント:"
 
 #: ../../source/programs/gdaldem.rst:416
 msgid "https://grass.osgeo.org/grass79/manuals/r.slope.aspect.html"

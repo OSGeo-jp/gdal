@@ -119,19 +119,21 @@ msgstr "カラーテーブルの出力を抑制します。"
 
 #: ../../source/programs/gdalinfo.rst:90
 msgid "Suppress nodata printing. Implies :option:`-nomask`."
-msgstr ""
+msgstr "NODATAの出力を抑制します。:option:`-nomask` を含みます。"
 
 #: ../../source/programs/gdalinfo.rst:92
 msgid ""
 "Can be useful for example when querying a remove GRIB2 dataset that has "
 "an index .idx side-car file, together with :option:`-nomd`"
 msgstr ""
+"たとえば .idx サイドカーファイルを持つリモートGRIB2データセットを問い合わせる場合に便利です。:option:`-nomd` と一緒に利用します。"
 
 #: ../../source/programs/gdalinfo.rst:99
 msgid ""
 "Suppress band mask printing. Is implied if :option:`-nonodata` is "
 "specified."
 msgstr ""
+"バンドマスクの出力を抑制します。:option:`-nonodata` が指定された場合に含まれます。"
 
 #: ../../source/programs/gdalinfo.rst:103
 msgid "Force computation of the checksum for each band in the dataset."
@@ -167,7 +169,7 @@ msgstr ""
 
 #: ../../source/programs/gdalinfo.rst:128
 msgid "``WKT2`` (latest WKT version, currently *WKT2_2019*)"
-msgstr ""
+msgstr "``WKT2`` (WKT の最新バージョン, 現在 *WKT2_2019*)"
 
 #: ../../source/programs/gdalinfo.rst:130
 msgid "``WKT2_2015``"
@@ -175,7 +177,7 @@ msgstr ""
 
 #: ../../source/programs/gdalinfo.rst:132
 msgid "``WKT2_2018`` (deprecated)"
-msgstr ""
+msgstr "``WKT2_2018`` (非推奨)"
 
 #: ../../source/programs/gdalinfo.rst:134
 msgid "``WKT2_2019``"
