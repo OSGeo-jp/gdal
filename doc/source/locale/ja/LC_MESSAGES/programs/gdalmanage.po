@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdalmanage.rst:9
 msgid "Identify, delete, rename and copy raster data files."
-msgstr ""
+msgstr "ラスターデータファイルを識別し, 削除し, 名前を変更し, コピーします."
 
 #: ../../source/programs/gdalmanage.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalmanage.rst:23
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalmanage.rst:25
 msgid ""
@@ -42,18 +42,21 @@ msgid ""
 "identifying raster data types and deleting, renaming or copying the "
 "files."
 msgstr ""
+":program:`gdalmanage` プログラムは, 選択した *mode* に応じてラスタデータファイル"
+"にさまざまな操作を実行できます. これには, ラスタデータの種類を識別し, ファイルを"
+"削除したり, 名前を変更したり, コピーしたりすることが含まれます."
 
 #: ../../source/programs/gdalmanage.rst:31
 msgid "Mode of operation"
-msgstr ""
+msgstr "操作モード"
 
 #: ../../source/programs/gdalmanage.rst:33
 msgid "**identify** *<datasetname>*:"
-msgstr ""
+msgstr "**identify** *<datasetname>*:"
 
 #: ../../source/programs/gdalmanage.rst:34
 msgid "List data format of file(s)."
-msgstr ""
+msgstr "ファイルのデータ形式をリストします."
 
 #: ../../source/programs/gdalmanage.rst:35
 msgid "**copy** *<datasetname>* *<newdatasetname>*:"
@@ -61,7 +64,7 @@ msgstr ""
 
 #: ../../source/programs/gdalmanage.rst:36
 msgid "Create a copy of the raster file with a new name."
-msgstr ""
+msgstr "ラスターファイルのコピーを新しい名前で作成します."
 
 #: ../../source/programs/gdalmanage.rst:37
 msgid "**rename** *<datasetname>* *<newdatasetname>*:"
@@ -69,7 +72,7 @@ msgstr ""
 
 #: ../../source/programs/gdalmanage.rst:38
 msgid "Change the name of the raster file."
-msgstr ""
+msgstr "ラスターファイルの名前を変更します."
 
 #: ../../source/programs/gdalmanage.rst:39
 msgid "**delete** *<datasetname>*:"
@@ -77,79 +80,84 @@ msgstr ""
 
 #: ../../source/programs/gdalmanage.rst:40
 msgid "Delete raster file(s)."
-msgstr ""
+msgstr "ラスターファイルを削除します."
 
 #: ../../source/programs/gdalmanage.rst:44
 msgid "Recursively scan files/folders for raster files."
-msgstr ""
+msgstr "ラスターファイルを再帰的にスキャンします."
 
 #: ../../source/programs/gdalmanage.rst:48
 msgid ""
 "Recursively scan folders for raster files, forcing recursion in folders "
 "recognized as valid formats."
 msgstr ""
+"ラスターファイルを再帰的にスキャンし,有効なフォーマットとして認識されたフォルダーで再帰を強制します。"
 
 #: ../../source/programs/gdalmanage.rst:52
 msgid "Report failures if file type is unidentified."
-msgstr ""
+msgstr "ファイルタイプが未識別の場合に失敗を報告します。"
 
 #: ../../source/programs/gdalmanage.rst:56
 msgid ""
 "Specify format of raster file if unknown by the application. Uses short "
 "data format name (e.g. *GTiff*)."
 msgstr ""
+"アプリケーションによって未知のラスターファイルの形式を指定します。短いデータ形式名を使用します (例: *GTiff*)。"
 
 #: ../../source/programs/gdalmanage.rst:61
 msgid ""
 "Raster file to operate on. With **identify** may be repeated for multiple"
 " files."
 msgstr ""
+"操作対象ラスターファイル. **identify** では複数のファイルに対して繰り返すことができます."
 
 #: ../../source/programs/gdalmanage.rst:65
 msgid ""
 "For copy and rename modes, you provide a *source* filename and a *target*"
 " filename, just like copy and move commands in an operating system."
 msgstr ""
+"コピーおよび名前変更モードの場合, ソースファイル名とターゲットファイル名を指定します。これは, オペレーティングシステムのコピーおよび移動コマンドと同じです。"
 
 #: ../../source/programs/gdalmanage.rst:70
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdalmanage.rst:73
 msgid "Using identify mode"
-msgstr ""
+msgstr "識別モードを使用する"
 
 #: ../../source/programs/gdalmanage.rst:75
 msgid ""
 "Report the data format of the raster file by using the *identify* mode "
 "and specifying a data file name:"
 msgstr ""
+"データファイル名を指定して *identify* モードを使用してラスターファイルのデータ形式を報告します:"
 
 #: ../../source/programs/gdalmanage.rst:84
 msgid "Recursive mode will scan subfolders and report the data format:"
-msgstr ""
+msgstr "再帰モードではサブフォルダをスキャンしてデータ形式を報告します:"
 
 #: ../../source/programs/gdalmanage.rst:101
 msgid "Using copy mode"
-msgstr ""
+msgstr "コピーモードを使用する"
 
 #: ../../source/programs/gdalmanage.rst:103
 msgid "Copy the raster data:"
-msgstr ""
+msgstr "ラスターデータをコピーします:"
 
 #: ../../source/programs/gdalmanage.rst:110
 msgid "Using rename mode"
-msgstr ""
+msgstr "改名モードを使用する"
 
 #: ../../source/programs/gdalmanage.rst:112
 msgid "Rename raster data:"
-msgstr ""
+msgstr "ラスターデータの名前を変更します:"
 
 #: ../../source/programs/gdalmanage.rst:119
 msgid "Using delete mode"
-msgstr ""
+msgstr "削除モードを使用する"
 
 #: ../../source/programs/gdalmanage.rst:121
 msgid "Delete the raster data:"
-msgstr ""
+msgstr "ラスターデータを削除します:"
 

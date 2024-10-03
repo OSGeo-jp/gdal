@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdalmove.rst:9
 msgid "Transform georeferencing of raster file in place."
-msgstr ""
+msgstr "その場でラスタファイルのジオリファレンスを変換します."
 
 #: ../../source/programs/gdalmove.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalmove.rst:23
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalmove.rst:25
 msgid ""
@@ -45,6 +45,12 @@ msgid ""
 " is generally only suitable for transformations that are effectively "
 "linear in the area of the file."
 msgstr ""
+":program:`gdalmove` スクリプトは, ラスタファイルの境界を 1 つの座標系から別の"
+"座標系に変換し, その後ファイルの座標系とジオトランスフォームを更新します. これ"
+"はピクセル値を一切変更せずに行われます. これは, 画像を変換するために gdalwarp"
+" を使用するのと緩やかに似ていますが, 画像の損傷を避けるためにリサンプリングステッ"
+"プを回避します. 一般的には, ファイルの領域内で効果的に線形である変換にのみ適し"
+"ています."
 
 #: ../../source/programs/gdalmove.rst:32
 msgid ""
@@ -54,6 +60,10 @@ msgid ""
 "apparent error being introduced is less than the indicate threshold (in "
 "pixels)."
 msgstr ""
+"エラー閾値値 (:option:`-et`) が提供されていない場合, ファイルは実際に更新され"
+"ませんが, 発生するエラーが報告されます. :option:`-et` が提供されている場合, ファ"
+"イルは, 導入される明らかなエラーが指定された閾値 (ピクセル単位) よりも小さい場合"
+"のみ変更されます."
 
 #: ../../source/programs/gdalmove.rst:37
 msgid ""
@@ -62,22 +72,28 @@ msgid ""
 "reduced overall error could be produced using a least squares fit of at "
 "least all four corner points."
 msgstr ""
+"現在, 変換されたジオトランスフォームは, 左上, 右上, 左下の角の変換に基づいて"
+"計算されます. 少なくとも 4 つの角点の最小二乗フィットを使用すると, 総合的なエラー"
+"が減少する可能性があります."
 
 #: ../../source/programs/gdalmove.rst:43
 msgid ""
 "gdalmove is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"gdalmove は Python ユーティリティであり, GDAL Python バインディングが利用可能"
+"な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdalmove.rst:49
 msgid ""
@@ -85,12 +101,15 @@ msgid ""
 "system definition. Optional. If not provided the source coordinate system"
 " is read from the source file."
 msgstr ""
+"ファイルの座標系を指定された座標系定義で上書きします. オプションです. 指定され"
+"ていない場合, ソース座標系はソースファイルから読み取られます."
 
 #: ../../source/programs/gdalmove.rst:55
 msgid ""
 "Defines the target coordinate system. This coordinate system will be "
 "written to the file after an update."
 msgstr ""
+"ターゲット座標系を定義します. この座標系は, 更新後にファイルに書き込まれます."
 
 #: ../../source/programs/gdalmove.rst:60
 msgid ""
@@ -98,6 +117,8 @@ msgid ""
 "updated. If not provided no update will be applied to the file, but "
 "errors will be reported."
 msgstr ""
+"ファイルが更新されないエラー閾値 (ピクセル単位). 提供されていない場合, ファイル"
+"に更新は適用されませんが, エラーが報告されます."
 
 #: ../../source/programs/gdalmove.rst:64
 msgid "<target_file>"
@@ -108,4 +129,5 @@ msgid ""
 "The file to be operated on. To update this must be a file format that "
 "supports in place updates of the geotransform and SRS."
 msgstr ""
-
+"操作対象のファイル. これを更新するには, ジオトランスフォームと SRS のインプレ"
+"ース更新をサポートするファイル形式である必要があります."

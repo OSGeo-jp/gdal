@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdaltindex.rst:9
 msgid "Creates an OGR-supported dataset as a raster tileindex."
-msgstr ""
+msgstr "ラスタータイルインデックスとして OGR でサポートされたデータセットを作成します."
 
 #: ../../source/programs/gdaltindex.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdaltindex.rst:34
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdaltindex.rst:36
 msgid ""
@@ -43,20 +43,25 @@ msgid ""
 "`MapServer <http://mapserver.org/>`__ as a raster tileindex, or as input "
 "for the :ref:`GTI <raster.gti>` driver."
 msgstr ""
+"このプログラムは, 各入力ラスタファイルに対するレコードを持ち, ファイル名を含む属性と, "
+"ラスタを囲むポリゴンジオメトリを持つ OGR でサポートされたデータセットを作成します. "
+"この出力は, ラスタータイルインデックスとして `MapServer <http://mapserver.org/>`__ で"
+"使用するために適しています, または :ref:`GTI <raster.gti>` ドライバの入力として使用できます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの簡単な使用メッセージを表示して終了します."
 
 #: ../../source/programs/gdaltindex.rst:49
 msgid "Overwrite the tile index if it already exists."
-msgstr ""
+msgstr "タイルインデックスが既に存在する場合は上書きします."
 
 #: ../../source/programs/gdaltindex.rst:55
 msgid ""
@@ -72,10 +77,13 @@ msgid ""
 "that matches a single character. Comparisons are done in a case "
 "insensitive way. Several filters may be specified."
 msgstr ""
+"ディレクトリに含まれるファイル名が従うべきパターンです. '*' は, 0 個以上の任意の文字を"
+"含む任意の数の文字に一致するワイルドカード文字です. '?' は, 1 文字に一致するワイルドカード"
+"文字です. 比較は大文字小文字を区別せずに行われます. 複数のフィルタを指定できます."
 
 #: ../../source/programs/gdaltindex.rst:68
 msgid "For example :``-filename_filter \"*.tif\" -filename_filter \"*.tiff\"``"
-msgstr ""
+msgstr "例: ``-filename_filter \"*.tif\" -filename_filter \"*.tiff\"``"
 
 #: ../../source/programs/gdaltindex.rst:74
 msgid ""
@@ -84,6 +92,8 @@ msgid ""
 "after reprojection of its extent to the target SRS defined by "
 ":option:`-t_srs`."
 msgstr ""
+"ラスタが選択されるために持っているべきピクセルサイズの最小値 (解像度) です. ピクセルサイズ"
+"は, その範囲を :option:`-t_srs` で定義されたターゲット SRS に再投影した後に評価されます."
 
 #: ../../source/programs/gdaltindex.rst:83
 msgid ""
@@ -92,6 +102,8 @@ msgid ""
 "after reprojection of its extent to the target SRS defined by "
 ":option:`-t_srs`."
 msgstr ""
+"ラスタが選択されるために持っているべきピクセルサイズの最大値 (解像度) です. ピクセルサイズ"
+"は, その範囲を :option:`-t_srs` で定義されたターゲット SRS に再投影した後に評価されます."
 
 #: ../../source/programs/gdaltindex.rst:90
 msgid ""
@@ -99,12 +111,16 @@ msgid ""
 "not specified, the format is guessed from the extension (previously was "
 "ESRI Shapefile)."
 msgstr ""
+"出力タイルインデックスファイルの OGR フォーマットです. GDAL 2.3 以降, 指定されていない場合, "
+"フォーマットは拡張子から推測されます (以前は ESRI Shapefile でした)."
 
 #: ../../source/programs/gdaltindex.rst:96
 msgid ""
 "The output field name to hold the file path/location to the indexed "
 "rasters. The default tile index field name is ``location``."
 msgstr ""
+"インデックスされたラスタのファイルパス/位置を保持するための出力フィールド名です. デフォルトの"
+"タイルインデックスフィールド名は ``location`` です."
 
 #: ../../source/programs/gdaltindex.rst:101
 msgid ""
@@ -112,6 +128,8 @@ msgid ""
 "By default the raster filenames will be put in the file exactly as they "
 "are specified on the command line."
 msgstr ""
+"ラスタファイルの絶対パスがタイルインデックスファイルに格納されます. デフォルトでは, ラスタ"
+"ファイル名はコマンドラインで指定されたとおりにファイルに配置されます."
 
 #: ../../source/programs/gdaltindex.rst:107
 msgid ""
@@ -119,6 +137,8 @@ msgid ""
 "tileindex will be inserted (unless :option:`-t_srs` is specified). "
 "Default does not check projection and accepts all inputs."
 msgstr ""
+"タイルインデックスに挿入されたファイルと同じ投影法を持つファイルのみが挿入されます "
+"(:option:`-t_srs` が指定されていない限り). デフォルトでは投影法をチェックせず, すべての入力を受け入れます."
 
 #: ../../source/programs/gdaltindex.rst:113
 msgid ""
@@ -126,12 +146,15 @@ msgid ""
 "coordinate reference system. Default creates simple rectangular polygons "
 "in the same coordinate reference system as the input rasters."
 msgstr ""
+"入力ファイルのジオメトリは, 目的のターゲット座標参照系に変換されます. デフォルトでは, 入力ラスタと"
+"同じ座標参照系で単純な矩形ポリゴンが作成されます."
 
 #: ../../source/programs/gdaltindex.rst:120
 msgid ""
 "The name of the field to store the SRS of each tile. This field name can "
 "be used as the value of the TILESRS keyword in MapServer"
 msgstr ""
+"各タイルの SRS を格納するフィールドの名前です. このフィールド名は, MapServer の TILESRS キーワードの値として使用できます."
 
 #: ../../source/programs/gdaltindex.rst:125
 msgid ""
@@ -139,14 +162,16 @@ msgid ""
 "``AUTO``, ``WKT``, ``EPSG``, ``PROJ``. This option should be used "
 "together with :option:`-src_srs_format`."
 msgstr ""
+"各タイルの SRS を書き込む形式です. タイプは ``AUTO``, ``WKT``, ``EPSG``, ``PROJ`` になります. "
+"このオプションは, :option:`-src_srs_format` と一緒に使用する必要があります."
 
 #: ../../source/programs/gdaltindex.rst:131
 msgid "Layer name to create/append to in the output tile index file."
-msgstr ""
+msgstr "出力タイルインデックスファイルに作成/追加するレイヤ名です."
 
 #: ../../source/programs/gdaltindex.rst:137
 msgid "Layer creation option (format specific)"
-msgstr ""
+msgstr "レイヤ作成オプション (フォーマット固有)"
 
 #: ../../source/programs/gdaltindex.rst:141
 msgid ""
@@ -154,6 +179,8 @@ msgid ""
 " be created if it doesn't already exist, otherwise it will append to the "
 "existing dataset."
 msgstr ""
+"作成/追加する出力ファイルの名前です. デフォルトのデータセットは存在しない場合に作成されますが, "
+"既に存在する場合は既存のデータセットに追加されます."
 
 #: ../../source/programs/gdaltindex.rst:147
 msgid ""
@@ -162,34 +189,43 @@ msgid ""
 "as specified here, unless :option:`-write_absolute_path` option is also "
 "used."
 msgstr ""
+"入力 GDAL ラスタファイルです. 複数のファイルをスペースで区切って指定できます. ワイルドカードも"
+"使用できます. :option:`-write_absolute_path` オプションが使用されていない限り, ここで指定された"
+"スタイルでファイルの場所が格納されます."
 
 #: ../../source/programs/gdaltindex.rst:151
 msgid ""
 "Starting with GDAL 3.9, this can also be a directory name. "
 ":option:`-recursive` can also be used to recurse down to sub-directories."
 msgstr ""
+"GDAL 3.9 以降, これはディレクトリ名にすることもできます. "
+":option:`-recursive` オプションを使用してサブディレクトリに再帰することもできます."
 
 #: ../../source/programs/gdaltindex.rst:154
 msgid ""
 "It is also possible to use the generic option ``--optfile filelist.txt`` "
 "to specify a list of source files."
 msgstr ""
+"ソースファイルのリストを指定するために一般的なオプション ``--optfile filelist.txt`` を使用することもできます."
 
 #: ../../source/programs/gdaltindex.rst:159
 msgid "Options specific to use by the GDAL GTI driver"
-msgstr ""
+msgstr "GDAL GTI ドライバで使用するためのオプション"
 
 #: ../../source/programs/gdaltindex.rst:161
 msgid ""
 "gdaltindex can be used to generate a tile index suitable for use by the "
 ":ref:`GTI <raster.gti>` driver. There are two possibilities:"
 msgstr ""
+"gdaltindex は, :ref:`GTI <raster.gti>` ドライバで使用するために適したタイルインデックスを生成するために"
+"使用できます. 2 つの可能性があります:"
 
 #: ../../source/programs/gdaltindex.rst:164
 msgid ""
 "either use directly a vector tile index generated by gdaltindex as the "
 "input of the GTI driver"
 msgstr ""
+"gdaltindex によって生成されたベクトルタイルインデックスを GTI ドライバの入力として直接使用する"
 
 #: ../../source/programs/gdaltindex.rst:167
 msgid ""
@@ -197,12 +233,16 @@ msgid ""
 "based formats such as databases, or for vector formats that do not "
 "support setting layer metadata items."
 msgstr ""
+"または, データベースなどのファイルベースでないフォーマットや, レイヤメタデータ項目の設定をサポートしていない"
+"ベクトルフォーマットでの使用を容易にするための小さな XML .gti ラッパーファイルを生成します."
 
 #: ../../source/programs/gdaltindex.rst:171
 msgid ""
 "Formats that support layer metadata are for example GeoPackage (``-f "
 "GPKG``), FlatGeoBuf (``-f FlatGeoBuf``) or PostGIS (``-f PG``)"
 msgstr ""
+"レイヤメタデータをサポートするフォーマットは, 例えば GeoPackage (``-f GPKG``), FlatGeoBuf (``-f FlatGeoBuf``) "
+"または PostGIS (``-f PG``) です"
 
 #: ../../source/programs/gdaltindex.rst:174
 msgid ""
@@ -211,6 +251,9 @@ msgid ""
 "the tiles have nodata or mask band,  :option:`-nodata` and "
 ":option:`-mask` should also be set."
 msgstr ""
+"GTI ドライバがインデックス内の最初のタイルを開いてそれらを推測することを避けるために, "
+":option:`-tr` と :option:`-ot` の設定が推奨されます. タイルに nodata またはマスクバンドがある場合, "
+":option:`-nodata` と :option:`-mask` も設定する必要があります."
 
 #: ../../source/programs/gdaltindex.rst:179
 msgid ""
@@ -219,6 +262,8 @@ msgid ""
 "different SRS, either :option:`-t_srs` or "
 ":option:`-skip_different_projection` should be specified."
 msgstr ""
+"GTI のコンテキストでは, タイルインデックスで参照されるすべてのタイルの範囲は単一の SRS で表現する必要があります. "
+"したがって, 入力タイルが異なる SRS を持つ可能性がある場合, :option:`-t_srs` または :option:`-skip_different_projection` を指定する必要があります."
 
 #: ../../source/programs/gdaltindex.rst:189
 msgid ""
@@ -227,10 +272,12 @@ msgid ""
 "can be useful when writing the tile index in a vector format that does "
 "not support writing layer metadata items."
 msgstr ""
+"GDAL GTI / バーチャルラスタタイルインデックスドライバの入力として使用できる XML バーチャルタイルインデックスファイルの"
+"ファイル名です. レイヤメタデータ項目の書き込みをサポートしていないベクトルフォーマットにタイルインデックスを書き込む場合に便利です."
 
 #: ../../source/programs/gdaltindex.rst:198
 msgid "Target resolution in SRS unit per pixel."
-msgstr ""
+msgstr "SRS 単位あたりのピクセルのターゲット解像度です."
 
 #: ../../source/programs/gdaltindex.rst:200
 msgid ""
@@ -238,10 +285,12 @@ msgid ""
 "specified, or as ``RESX`` and ``RESY`` layer metadata items for formats "
 "that support layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``RESX`` と ``RESY`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:208
 msgid "Target extent in SRS unit."
-msgstr ""
+msgstr "SRS 単位のターゲット範囲です."
 
 #: ../../source/programs/gdaltindex.rst:210
 msgid ""
@@ -249,6 +298,8 @@ msgid ""
 "specified, or as ``MINX``, ``MINY``, ``MAXX`` and ``MAXY`` layer metadata"
 " items for formats that support layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``MINX``, ``MINY``, ``MAXX`` および ``MAXY`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:218
 msgid ""
@@ -256,6 +307,8 @@ msgid ""
 " ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, ``Float32``, "
 "``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` or ``CFloat64``"
 msgstr ""
+"タイルインデックスのタイルのデータ型: ``Byte``, ``Int8``, ``UInt16``, ``Int16``, ``UInt32``, "
+"``Int32``, ``UInt64``, ``Int64``, ``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` または ``CFloat64``"
 
 #: ../../source/programs/gdaltindex.rst:222
 msgid ""
@@ -263,10 +316,12 @@ msgid ""
 "specified, or as ``DATA_TYPE`` layer metadata item for formats that "
 "support layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``DATA_TYPE`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:230
 msgid "Number of bands of the tiles of the tile index."
-msgstr ""
+msgstr "タイルインデックスのタイルのバンド数です."
 
 #: ../../source/programs/gdaltindex.rst:232
 msgid ""
@@ -274,6 +329,8 @@ msgid ""
 "specified, or as ``BAND_COUNT`` layer metadata item for formats that "
 "support layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``BAND_COUNT`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:236
 msgid ""
@@ -281,16 +338,19 @@ msgid ""
 "interpretation of the (N+1)th band is alpha. The N+1 value must be "
 "written as the band count in that situation."
 msgstr ""
+"N と N+1 バンドのタイルの組み合わせは許可されており, (N+1) 番目のバンドの色の解釈がアルファである場合, "
+"許可されます. その場合, N+1 の値をバンド数として書き込む必要があります."
 
 #: ../../source/programs/gdaltindex.rst:240
 msgid ""
 "If :option:`-nodata` or :option:`-colorinterp` are specified and have "
 "multiple values, the band count is also inferred from that number."
 msgstr ""
+":option:`-nodata` または :option:`-colorinterp` が指定されていて複数の値を持つ場合, バンド数もその数から推測されます."
 
 #: ../../source/programs/gdaltindex.rst:247
 msgid "Nodata value of the tiles of the tile index."
-msgstr ""
+msgstr "タイルインデックスのタイルの nodata 値です."
 
 #: ../../source/programs/gdaltindex.rst:249
 msgid ""
@@ -298,12 +358,15 @@ msgid ""
 "specified, or as ``NODATA`` layer metadata item for formats that support "
 "layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``NODATA`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:257
 msgid ""
 "Color interpretation of of the tiles of the tile index: ``red``, "
 "``green``, ``blue``, ``alpha``, ``gray``, ``undefined``."
 msgstr ""
+"タイルインデックスのタイルの色の解釈: ``red``, ``green``, ``blue``, ``alpha``, ``gray``, ``undefined``."
 
 #: ../../source/programs/gdaltindex.rst:260
 msgid ""
@@ -311,10 +374,12 @@ msgid ""
 "specified, or as ``COLOR_INTERPRETATION`` layer metadata item for formats"
 " that support layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``COLOR_INTERPRETATION`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:268
 msgid "Whether tiles in the tile index have a mask band."
-msgstr ""
+msgstr "タイルインデックスのタイルにマスクバンドがあるかどうかです."
 
 #: ../../source/programs/gdaltindex.rst:270
 msgid ""
@@ -322,22 +387,26 @@ msgid ""
 "specified, or as ``MASK_BAND`` layer metadata item for formats that "
 "support layer metadata."
 msgstr ""
+":option:`-gti_filename` が指定されている場合, またはレイヤメタデータをサポートするフォーマットの場合, "
+"XML バーチャルタイルインデックスに書き込まれます. ``MASK_BAND`` レイヤメタデータ項目として書き込まれます."
 
 #: ../../source/programs/gdaltindex.rst:278
 msgid ""
 "Write an arbitrary layer metadata item, for formats that support layer "
 "metadata. This option may be repeated."
 msgstr ""
+"レイヤメタデータをサポートするフォーマットのための任意のレイヤメタデータ項目を書き込みます. このオプションは繰り返すことができます."
 
 #: ../../source/programs/gdaltindex.rst:282
 msgid "This option cannot be used together :option:`-gti_filename`"
-msgstr ""
+msgstr "このオプションは :option:`-gti_filename` と一緒に使用できません"
 
 #: ../../source/programs/gdaltindex.rst:288
 msgid ""
 "Fetch a metadata item from the raster tile and write it as a field in the"
 " tile index."
 msgstr ""
+"ラスタタイルからメタデータ項目を取得し, タイルインデックスのフィールドとして書き込みます."
 
 #: ../../source/programs/gdaltindex.rst:291
 msgid ""
@@ -345,28 +414,30 @@ msgid ""
 "``{PIXEL_SIZE}`` may be used as a special name to indicate the pixel "
 "size."
 msgstr ""
+"<gdal_md_name> はラスタメタデータ項目の名前である必要があります. ``{PIXEL_SIZE}`` は, ピクセルサイズを示す特別な名前として使用できます."
 
 #: ../../source/programs/gdaltindex.rst:294
 msgid "<fld_name> should be the name of the field to create in the tile index."
-msgstr ""
+msgstr "<fld_name> はタイルインデックスに作成するフィールドの名前である必要があります."
 
 #: ../../source/programs/gdaltindex.rst:296
 msgid ""
 "<fld_type> should be the name of the type to create. One of ``String``, "
 "``Integer``, ``Integer64``, ``Real``, ``Date``, ``DateTime``"
 msgstr ""
+"<fld_type> は作成するタイプの名前である必要があります. ``String``, ``Integer``, ``Integer64``, ``Real``, ``Date``, ``DateTime`` のいずれか"
 
 #: ../../source/programs/gdaltindex.rst:299
 msgid "This option may be repeated."
-msgstr ""
+msgstr "このオプションは繰り返すことができます."
 
 #: ../../source/programs/gdaltindex.rst:301
 msgid "For example: ``-fetch_md TIFFTAG_DATETIME creation_date DateTime``"
-msgstr ""
+msgstr "例: ``-fetch_md TIFFTAG_DATETIME creation_date DateTime``"
 
 #: ../../source/programs/gdaltindex.rst:304
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdaltindex.rst:306
 msgid ""
@@ -375,36 +446,41 @@ msgid ""
 "information that points to the location of the image and also a bounding "
 "rectangle shape showing the bounds of the image:"
 msgstr ""
+"ユーティリティが ``doq`` フォルダで見つけた画像ごとにレコードを持つ shapefile (``doq_index.shp``) を生成します. "
+"各レコードには, 画像の場所を指す情報と, 画像の境界を示す境界矩形シェイプが含まれます:"
 
 #: ../../source/programs/gdaltindex.rst:315
 msgid ""
 "Perform the same command as before, but now we create a GeoPackage "
 "instead of a Shapefile."
 msgstr ""
+"前と同じコマンドを実行しますが, 今回は Shapefile の代わりに GeoPackage を作成します."
 
 #: ../../source/programs/gdaltindex.rst:321
 msgid ""
 "The :option:`-t_srs` option can also be used to transform all input "
 "rasters into the same output projection:"
 msgstr ""
+":option:`-t_srs` オプションを使用して, すべての入力ラスタを同じ出力投影に変換することもできます:"
 
 #: ../../source/programs/gdaltindex.rst:328
 msgid ""
 "Make a tile index from files listed in a text file, with metadata "
 "suitable for use by the GDAL GTI / Virtual Raster Tile Index driver."
 msgstr ""
+"テキストファイルにリストされたファイルからタイルインデックスを作成し, GDAL GTI / バーチャルラスタタイルインデックスドライバで使用するためのメタデータを作成します."
 
 #: ../../source/programs/gdaltindex.rst:336
 msgid "C API"
-msgstr ""
+msgstr "C API"
 
 #: ../../source/programs/gdaltindex.rst:338
 msgid "This utility is also callable from C with :cpp:func:`GDALTileIndex`."
-msgstr ""
+msgstr "このユーティリティは, :cpp:func:`GDALTileIndex` から C で呼び出すこともできます."
 
 #: ../../source/programs/gdaltindex.rst:341
 msgid "See also"
-msgstr ""
+msgstr "関連項目"
 
 #: ../../source/programs/gdaltindex.rst:343
 msgid ""
@@ -412,4 +488,6 @@ msgid ""
 "particular the :ref:`--optfile <raster_common_options_optfile>` switch "
 "that can be used to specify a list of input datasets."
 msgstr ""
+" :ref:`raster_common_options` の他のコマンドラインオプションについては, 特に入力データセットのリストを指定するために使用できる "
+" :ref:`--optfile <raster_common_options_optfile>` スイッチを参照してください."
 

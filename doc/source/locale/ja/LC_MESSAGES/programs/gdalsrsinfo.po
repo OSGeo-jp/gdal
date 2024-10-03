@@ -25,103 +25,108 @@ msgstr ""
 
 #: ../../source/programs/gdalsrsinfo.rst:9
 msgid "Lists info about a given SRS in number of formats (WKT, PROJ.4, etc.)"
-msgstr ""
+msgstr "指定された SRS に関する情報をいくつかの形式 (WKT, PROJ.4 など) でリストします"
 
 #: ../../source/programs/gdalsrsinfo.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalsrsinfo.rst:22
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalsrsinfo.rst:24
 msgid ""
 "The :program:`gdalsrsinfo` utility reports information about a given SRS "
 "from one of the following:"
 msgstr ""
+":program:`gdalsrsinfo` ユーティリティは, 次のいずれかから指定された SRS に関する情報を"
+"報告します:"
 
 #: ../../source/programs/gdalsrsinfo.rst:26
 msgid ""
 "The filename of a dataset supported by GDAL/OGR which contains SRS "
 "information"
 msgstr ""
+"GDAL/OGR でサポートされているデータセットのファイル名で, SRS 情報を含みます"
 
 #: ../../source/programs/gdalsrsinfo.rst:27
 msgid ""
 "Any of the usual GDAL/OGR forms (complete WKT, PROJ.4, EPSG:n or a file "
 "containing the SRS)"
 msgstr ""
+"通常の GDAL/OGR 形式のいずれか (完全な WKT, PROJ.4, EPSG:n または SRS を含むファイル)"
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdalsrsinfo.rst:36
 msgid "Print WKT on single line"
-msgstr ""
+msgstr "1 行で WKT を表示します"
 
 #: ../../source/programs/gdalsrsinfo.rst:40
 msgid "Validate SRS"
-msgstr ""
+msgstr "SRS を検証します"
 
 #: ../../source/programs/gdalsrsinfo.rst:44
 msgid "Search for EPSG number(s) corresponding to SRS"
-msgstr ""
+msgstr "SRS に対応する EPSG 番号を検索します"
 
 #: ../../source/programs/gdalsrsinfo.rst:48
 msgid "Output types:"
-msgstr ""
+msgstr "出力タイプ:"
 
 #: ../../source/programs/gdalsrsinfo.rst:50
 msgid "``default``: proj4 and wkt (default option)"
-msgstr ""
+msgstr "``default``: proj4 と wkt (デフォルトオプション)"
 
 #: ../../source/programs/gdalsrsinfo.rst:51
 msgid "``all``: all options available"
-msgstr ""
+msgstr "``all``: 利用可能なすべてのオプション"
 
 #: ../../source/programs/gdalsrsinfo.rst:52
 msgid "``wkt_all``: all wkt options available"
-msgstr ""
+msgstr "``wkt_all``: 利用可能なすべてのwktオプション"
 
 #: ../../source/programs/gdalsrsinfo.rst:53
 msgid "``PROJJSON``: PROJJSON string (GDAL >= 3.1 and PROJ >= 6.2)"
-msgstr ""
+msgstr "``PROJJSON``: PROJJSON 文字列 (GDAL >= 3.1 と PROJ >= 6.2)"
 
 #: ../../source/programs/gdalsrsinfo.rst:54
 msgid "``proj4``: PROJ.4 string"
-msgstr ""
+msgstr "``proj4``: PROJ.4 文字列"
 
 #: ../../source/programs/gdalsrsinfo.rst:55
 msgid "``wkt1``: OGC WKT format (full)"
-msgstr ""
+msgstr "``wkt1``: OGC WKT 形式 (フル)"
 
 #: ../../source/programs/gdalsrsinfo.rst:56
 msgid "``wkt_simple``: OGC WKT 1 (simplified)"
-msgstr ""
+msgstr "``wkt_simple``: OGC WKT 1 (簡略化)"
 
 #: ../../source/programs/gdalsrsinfo.rst:57
 msgid "``wkt_noct``: OGC WKT 1 (without OGC CT params)"
-msgstr ""
+msgstr "``wkt_noct``: OGC WKT 1 (OGC CT パラメータ無し)"
 
 #: ../../source/programs/gdalsrsinfo.rst:58
 msgid "``wkt_esri``: ESRI WKT format"
-msgstr ""
+msgstr "``wkt_esri``: ESRI WKT 形式"
 
 #: ../../source/programs/gdalsrsinfo.rst:59
 msgid "``wkt``: Latest WKT version supported, currently wkt2_2019"
-msgstr ""
+msgstr "``wkt``: WKTでサポートされている最新版, 現在 wkt2_2019"
 
 #: ../../source/programs/gdalsrsinfo.rst:60
 msgid "``wkt2``: Latest WKT2 version supported, currently wkt2_2019"
-msgstr ""
+msgstr "``wkt2``: WKT2でサポートされている最新版, 現在 wkt2_2019"
 
 #: ../../source/programs/gdalsrsinfo.rst:61
 msgid "``wkt2_2015``: OGC WKT2:2015"
@@ -129,15 +134,15 @@ msgstr ""
 
 #: ../../source/programs/gdalsrsinfo.rst:62
 msgid "``wkt2_2019``: OGC WKT2:2019 (for GDAL < 3.6, use ``wkt2_2018``)"
-msgstr ""
+msgstr "``wkt2_2019``: OGC WKT2:2019 (for GDAL < 3.6 では ``wkt2_2018`` を使用してください)"
 
 #: ../../source/programs/gdalsrsinfo.rst:63
 msgid "``mapinfo``: Mapinfo style CoordSys format"
-msgstr ""
+msgstr "``mapinfo``: Mapinfo スタイル CoordSys 形式"
 
 #: ../../source/programs/gdalsrsinfo.rst:64
 msgid "``xml``: XML format (GML based)"
-msgstr ""
+msgstr "``xml``: XML 形式 (GML ベース)"
 
 #: ../../source/programs/gdalsrsinfo.rst:68
 msgid ""
@@ -145,8 +150,11 @@ msgid ""
 "extract SRS information OR any of the usual GDAL/OGR forms (complete WKT,"
 " PROJ.4, EPSG:n or a file containing the SRS)"
 msgstr ""
+"GDAL/OGR でサポートされているデータセットから SRS 情報を抽出するためのファイル名である"
+"か, 通常の GDAL/OGR 形式のいずれか (完全な WKT, PROJ.4, EPSG:n または SRS を含むファイル)"
+"です"
 
 #: ../../source/programs/gdalsrsinfo.rst:72
 msgid "Example"
-msgstr ""
+msgstr "例"
 

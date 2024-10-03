@@ -25,31 +25,34 @@ msgstr ""
 
 #: ../../source/programs/gdaltransform.rst:9
 msgid "Transforms coordinates"
-msgstr ""
+msgstr "座標を変換します"
 
 #: ../../source/programs/gdaltransform.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdaltransform.rst:28
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdaltransform.rst:30
 msgid ""
 "The gdaltransform utility reprojects a list of coordinates into any "
 "supported projection,including GCP-based transformations."
 msgstr ""
+"gdaltransform ユーティリティは, GCP ベースの変換を含む, 任意のサポートされている"
+"投影法に座標のリストを再投影します."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdaltransform.rst:39
 msgid ""
@@ -59,6 +62,10 @@ msgid ""
 "declarations (as above), or the name of a .prj file containing well known"
 " text."
 msgstr ""
+"ソース空間参照を設定します. 渡すことができる座標系は, OGRSpatialReference."
+"SetFromUserInput() 呼び出しでサポートされているもので, これには EPSG PCS および"
+"GCS (例: EPSG:4296), PROJ.4 宣言 (上記のように), またはよく知られたテキストを含む"
+".prj ファイルの名前が含まれます."
 
 #: ../../source/programs/gdaltransform.rst:49
 msgid ""
@@ -66,6 +73,8 @@ msgid ""
 "source SRS is a dynamic CRS. Only taken into account if :option:`-s_srs` "
 "is used."
 msgstr ""
+"ソース SRS にリンクされた座標エポックを割り当てます. ソース SRS が動的 CRS の"
+"場合に便利です. :option:`-s_srs` が使用されている場合のみ考慮されます."
 
 #: ../../source/programs/gdaltransform.rst:53
 #: ../../source/programs/gdaltransform.rst:72
@@ -74,6 +83,8 @@ msgid ""
 "were mutually exclusive, due to lack of support for transformations "
 "between two dynamic CRS."
 msgstr ""
+"PROJ 9.4 以前, :option:`-s_coord_epoch` と :option:`-t_coord_epoch` は, 2 つの"
+"動的 CRS 間の変換のサポートがないため, 相互に排他的でした."
 
 #: ../../source/programs/gdaltransform.rst:58
 msgid ""
@@ -83,6 +94,10 @@ msgid ""
 "declarations (as above), or the name of a .prj file containing well known"
 " text."
 msgstr ""
+"ターゲット空間参照を設定します. 渡すことができる座標系は, OGRSpatialReference."
+"SetFromUserInput() 呼び出しでサポートされているもので, これには EPSG PCS および"
+"GCS (例: EPSG:4296), PROJ.4 宣言 (上記のように), またはよく知られたテキストを含む"
+".prj ファイルの名前が含まれます."
 
 #: ../../source/programs/gdaltransform.rst:68
 msgid ""
@@ -90,6 +105,8 @@ msgid ""
 "output SRS is a dynamic CRS. Only taken into account if :option:`-t_srs` "
 "is used."
 msgstr ""
+"出力 SRS が動的 CRS の場合に便利な座標エポックを割り当てます. :option:`-t_srs` が"
+"使用されている場合のみ考慮されます."
 
 #: ../../source/programs/gdaltransform.rst:77
 msgid ""
@@ -99,62 +116,74 @@ msgid ""
 "transformation from the source to the target CRS. It must take into "
 "account the axis order of the source and target CRS."
 msgstr ""
+"ソースからターゲット CRS へのデフォルトの変換を上書きする urn:ogc:def:"
+"coordinateOperation:EPSG::XXXX URN, +proj=pipeline で始まる単一ステップ操作"
+"または複数ステップ文字列の PROJ 文字列, CoordinateOperation を記述する WKT2 文字列"
+"を指定します. ソースとターゲット CRS の軸順を考慮する必要があります."
 
 #: ../../source/programs/gdaltransform.rst:87
 msgid ""
 "set a transformer option suitable to pass to "
 ":cpp:func:`GDALCreateGenImgProjTransformer2`."
 msgstr ""
+":cpp:func:`GDALCreateGenImgProjTransformer2` に渡すのに適したトランスフォーマ"
+"ーオプションを設定します."
 
 #: ../../source/programs/gdaltransform.rst:91
 msgid ""
 "order of polynomial used for warping (1 to 3). The default is to select a"
 " polynomial order based on the number of GCPs."
 msgstr ""
+"変形に使用される多項式の順序 (1 から 3). デフォルトは, GCP の数に基づいて多項式"
+"の順序を選択します."
 
 #: ../../source/programs/gdaltransform.rst:96
 msgid "Force use of thin plate spline transformer based on available GCPs."
-msgstr ""
+msgstr "利用可能な GCP に基づいてシンプレートスプライントランスフォーマーの使用を強制します."
 
 #: ../../source/programs/gdaltransform.rst:100
 msgid "Force use of RPCs."
-msgstr ""
+msgstr "RPC の使用を強制します."
 
 #: ../../source/programs/gdaltransform.rst:104
 msgid "Force use of Geolocation Arrays."
-msgstr ""
+msgstr "ジオロケーション配列の使用を強制します."
 
 #: ../../source/programs/gdaltransform.rst:108
 msgid "Inverse transformation: from destination to source."
-msgstr ""
+msgstr "逆変換: ターゲットからソースへ."
 
 #: ../../source/programs/gdaltransform.rst:112
 msgid ""
 "Provide a GCP to be used for transformation (generally three or more are "
 "required). Pixel and line need not be integers."
 msgstr ""
+"変換に使用する GCP を提供します (通常, 3 つ以上が必要です). ピクセルとラインは整数である必要はありません."
 
 #: ../../source/programs/gdaltransform.rst:116
 msgid "Restrict output to \"x y\" instead of \"x y z\""
-msgstr ""
+msgstr "\"x y z\" の代わりに \"x y\" に出力を制限します"
 
 #: ../../source/programs/gdaltransform.rst:122
 msgid ""
 "Set this flag to avoid extra non-numeric content at end of input lines to"
 " be appended to the output lines."
 msgstr ""
+"入力行の末尾に追加される追加の非数値コンテンツを避けるためにこのフラグを設定します."
 
 #: ../../source/programs/gdaltransform.rst:129
 msgid ""
 "Enable Echo mode, where input coordinates are prepended to the output "
 "lines."
 msgstr ""
+"入力座標が出力行に先行して追加されるエコーモードを有効にします."
 
 #: ../../source/programs/gdaltransform.rst:135
 msgid ""
 "Defines the field separator, to separate different values. It defaults to"
 " the space character."
 msgstr ""
+"異なる値を区切るためのフィールドセパレータを定義します. デフォルトはスペース文字です."
 
 #: ../../source/programs/gdaltransform.rst:140
 msgid ""
@@ -162,16 +191,19 @@ msgid ""
 "source projection/GCPs are read from the command-line :option:`-s_srs` or"
 " :option:`-gcp` parameters."
 msgstr ""
+"ソース投影定義または GCP を持つラスタデータセット. 指定されていない場合, ソース投影/"
+"GCP はコマンドライン :option:`-s_srs` または :option:`-gcp` パラメータから読み込まれます."
 
 #: ../../source/programs/gdaltransform.rst:144
 msgid ""
 "Note that only the SRS and/or GCPs of this input file is taken into "
 "account, and not its pixel content."
 msgstr ""
+"この入力ファイルの SRS および/または GCP のみが考慮され, ピクセルコンテンツは考慮されません."
 
 #: ../../source/programs/gdaltransform.rst:148
 msgid "Raster dataset with destination projection definition."
-msgstr ""
+msgstr "ターゲット投影定義を持つラスタデータセット."
 
 #: ../../source/programs/gdaltransform.rst:150
 msgid ""
@@ -181,6 +213,9 @@ msgid ""
 "transformations offered by gdalwarp are handled, including gcp-based "
 "ones."
 msgstr ""
+"座標は, 標準入力から行ごとにペア, 3 つ組 (3D の場合,) または (GDAL 3.0.0 以降,) "
+"4 つ組 (X,Y,Z,time) の数値, 変換され, 同じ方法で標準出力に書き出されます. gdalwarp"
+" で提供されるGCPベースのものを含むすべての変換が処理されます."
 
 #: ../../source/programs/gdaltransform.rst:155
 msgid ""
@@ -188,12 +223,15 @@ msgid ""
 "name) at the end of an input line will also be appended to the output "
 "line, unless the :option:`-ignore_extra_input` is added."
 msgstr ""
+"GDAL 3.9 以降, 入力行の末尾に追加の非数値コンテンツ (通常はポイント名) がある場合, "
+":option:`-ignore_extra_input` が追加されていない限り, それも出力行に追加されます."
 
 #: ../../source/programs/gdaltransform.rst:159
 msgid ""
 "Note that input and output must always be in decimal form.  There is "
 "currently no support for DMS input or output."
 msgstr ""
+"入力と出力は常に10進形式である必要があります. 現在, DMS 入力または出力はサポートされていません."
 
 #: ../../source/programs/gdaltransform.rst:162
 msgid ""
@@ -201,28 +239,31 @@ msgid ""
 " that image.  If an output file is provided, output is in pixel/line "
 "coordinates on that image."
 msgstr ""
+"入力画像ファイルが提供された場合, 入力はその画像のピクセル/ライン座標です. 出力ファイルが"
+"提供された場合, 出力はその画像のピクセル/ライン座標です."
 
 #: ../../source/programs/gdaltransform.rst:167
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdaltransform.rst:170
 msgid "Reprojection Example"
-msgstr ""
+msgstr "再投影の例"
 
 #: ../../source/programs/gdaltransform.rst:172
 msgid "Simple reprojection from one projected coordinate system to another:"
-msgstr ""
+msgstr "単純な再投影, 1 つの投影座標系から別の投影座標系へ:"
 
 #: ../../source/programs/gdaltransform.rst:179
 msgid ""
 "Produces the following output in meters in the \"Belge 1972 / Belgian "
 "Lambert 72\" projection:"
 msgstr ""
+"\"Belge 1972 / Belgian Lambert 72\" 投影でメートル単位で次の出力を生成します:"
 
 #: ../../source/programs/gdaltransform.rst:187
 msgid "Image RPC Example"
-msgstr ""
+msgstr "画像 RPC の例"
 
 #: ../../source/programs/gdaltransform.rst:189
 msgid ""
@@ -231,30 +272,35 @@ msgid ""
 "used, the transformation is from output georeferenced (WGS84) coordinates"
 " back to image coordinates."
 msgstr ""
+"次のコマンドは, 名前付きファイルに関連付けられた RPC モデルを使用した RPC ベースの変換を"
+"要求します. -i (逆) フラグが使用されているため, 変換は出力ジオリファレンス (WGS84) 座標"
+"から画像座標に戻ります."
 
 #: ../../source/programs/gdaltransform.rst:200
 msgid "Produces this output measured in pixels and lines on the image:"
-msgstr ""
+msgstr "画像上のピクセルとラインで測定された次の出力を生成します:"
 
 #: ../../source/programs/gdaltransform.rst:207
 msgid "X,Y,Z,time transform"
-msgstr ""
+msgstr "X,Y,Z,time 変換"
 
 #: ../../source/programs/gdaltransform.rst:209
 msgid ""
 "15-term time-dependent Helmert coordinate transformation from ITRF2000 to"
 " ITRF93 for a coordinate at epoch 2000.0"
 msgstr ""
+"2000.0 エポックの ITRF2000 から ITRF93 への 15 項目の時間依存ヘルムート座標変換"
 
 #: ../../source/programs/gdaltransform.rst:222
 msgid ""
 "Produces this output measured in longitude degrees, latitude degrees and "
 "ellipsoid height in meters:"
 msgstr ""
+"経度度, 緯度度, 楕円体高さ (メートル) で測定された次の出力を生成します:"
 
 #: ../../source/programs/gdaltransform.rst:229
 msgid "Ground control points"
-msgstr ""
+msgstr "地上制御点"
 
 #: ../../source/programs/gdaltransform.rst:231
 msgid ""
@@ -263,18 +309,22 @@ msgid ""
 "control points at road intersections. We'll use :ref:`--optfile "
 "<raster_common_options_optfile>` for easy reuse of our GCPs."
 msgstr ""
+"タスク: 1 つの住所を見つけて別の住所を割り当てます. 道路名がグリッド値であるソルトレイク"
+"シティを選択します. 最初に, 道路の交差点にいくつかの地上制御点を設定します. GCP を簡単に"
+"再利用するために :ref:`--optfile <raster_common_options_optfile>` を使用します."
 
 #: ../../source/programs/gdaltransform.rst:243
 msgid "Where is the address \"370 S. 300 E.\"?"
-msgstr ""
+msgstr "住所 \"370 S. 300 E.\" はどこですか?"
 
 #: ../../source/programs/gdaltransform.rst:250
 msgid ""
 "Nearby, a newly constructed building needs an address assigned. We use "
 ":option:`-i`:"
 msgstr ""
+"近くに, 新しく建設された建物に住所を割り当てる必要があります. :option:`-i` を使用します:"
 
 #: ../../source/programs/gdaltransform.rst:257
 msgid "(i.e., 143 E. 200 S. Or 144 if across the street.)"
-msgstr ""
+msgstr "(例: 143 E. 200 S. または通りを渡った場合は 144.)"
 
