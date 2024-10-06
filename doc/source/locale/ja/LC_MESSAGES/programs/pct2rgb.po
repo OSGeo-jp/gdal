@@ -25,37 +25,40 @@ msgstr ""
 
 #: ../../source/programs/pct2rgb.rst:9
 msgid "Convert an 8bit paletted image to 24bit RGB."
-msgstr ""
+msgstr "8 ビットのパレット画像を 24 ビット RGB に変換します."
 
 #: ../../source/programs/pct2rgb.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/pct2rgb.rst:22
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/pct2rgb.rst:24
 msgid ""
 "This utility will convert a pseudo-color band on the input file into an "
 "output RGB file of the desired format."
 msgstr ""
+"このユーティリティは, 入力ファイルの疑似カラーバンドを, 望ましい形式の出力 RGB ファイルに変換します."
 
 #: ../../source/programs/pct2rgb.rst:29
 msgid ""
 "pct2rgb is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"pct2rgb は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの簡単な使用方法を表示して終了します."
 
 #: ../../source/programs/pct2rgb.rst:37
 msgid ""
@@ -63,14 +66,16 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
+"出力形式を選択します. GDAL 2.3 以降, 指定されていない場合, 形式は拡張子から推測されます "
+"(以前は GTiff でした). 短い形式名を使用します."
 
 #: ../../source/programs/pct2rgb.rst:43
 msgid "Band to convert to RGB, defaults to 1."
-msgstr ""
+msgstr "RGB に変換するバンド, デフォルトは 1 です."
 
 #: ../../source/programs/pct2rgb.rst:47
 msgid "Generate a RGBA file (instead of a RGB file by default)."
-msgstr ""
+msgstr "RGBA ファイルを生成します (デフォルトでは RGB ファイル)."
 
 #: ../../source/programs/pct2rgb.rst:51
 msgid ""
@@ -80,18 +85,23 @@ msgid ""
 "supported format with a palette or a color file in a supported format "
 "(txt, qml, qlr)."
 msgstr ""
+"<source_file> からではなく, <palette_file> からカラーテーブルを抽出します. 複数のファイルに"
+"一貫したカラーテーブルを持つために使用できます. <palette_file> は, パレットを持つ GDAL "
+"サポートフォーマットのラスタファイルまたはサポートされているフォーマット (txt, qml, qlr) の"
+"カラーファイルである必要があります."
 
 #: ../../source/programs/pct2rgb.rst:58
 msgid "The input file."
-msgstr ""
+msgstr "入力ファイル."
 
 #: ../../source/programs/pct2rgb.rst:62
 msgid "The output RGB file that will be created."
-msgstr ""
+msgstr "作成される出力 RGB ファイル."
 
 #: ../../source/programs/pct2rgb.rst:64
 msgid ""
 "The '-expand rgb|rgba' option of :ref:`gdal_translate` obsoletes that "
 "utility."
 msgstr ""
+":ref:`gdal_translate` の '-expand rgb|rgba' オプションがこのユーティリティを廃止しました."
 

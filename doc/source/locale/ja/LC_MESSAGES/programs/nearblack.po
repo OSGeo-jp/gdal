@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/nearblack.rst:9
 msgid "Convert nearly black/white borders to black."
-msgstr ""
+msgstr "黒/白に近い境界色部分を黒に変換します."
 
 #: ../../source/programs/nearblack.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/nearblack.rst:25
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/nearblack.rst:27
 msgid ""
@@ -44,20 +44,26 @@ msgid ""
 " The output format must use lossless compression if either alpha band or "
 "mask band is not set."
 msgstr ""
+"このユーティリティは画像をスキャンし, ほぼ黒または完全に黒, 白またはカラー"
+"カラーの周りの 1 つ以上のカスタムカラーのすべてのピクセルを黒または白に設定"
+"しようとします. これは, 圧縮されたエア写真を \"修正\" してモザイク処理時にカラー"
+"ピクセルを透明として扱うためによく使用されます. 出力形式は, アルファバンドまたは"
+"マスクバンドのいずれかが設定されていない場合, 損失のない圧縮を使用する必要があります."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの簡単な使用メッセージを表示して終了します."
 
 #: ../../source/programs/nearblack.rst:39
 msgid "The name of the output file to be created."
-msgstr ""
+msgstr "作成される出力ファイルの名前です."
 
 #: ../../source/programs/nearblack.rst:43
 msgid ""
@@ -65,6 +71,9 @@ msgid ""
 "format is guessed from the extension (previously was ERDAS Imagine .img)."
 " Use the short format name (GTiff for GeoTIFF for example)."
 msgstr ""
+"出力フォーマットを選択します. GDAL 2.3 以降,指定されていない場合,フォーマットは"
+"拡張子から推測されます (以前は ERDAS Imagine .img でした). 短いフォーマット名を"
+"使用してください (例: GeoTIFF の場合は GTiff)."
 
 #: ../../source/programs/nearblack.rst:50
 msgid ""
@@ -72,14 +81,17 @@ msgid ""
 ":option:`-co` options may be listed. See :ref:`raster_drivers` format "
 "specific documentation for legal creation options for each format."
 msgstr ""
+"出力フォーマットドライバに作成オプションを渡します. 複数の :option:`-co` オプション"
+"をリストアップできます. 各フォーマットの法的な作成オプションについては, :ref:`raster_drivers` "
+"形式固有のドキュメントを参照してください."
 
 #: ../../source/programs/nearblack.rst:54
 msgid "Only valid when creating a new file"
-msgstr ""
+msgstr "新しいファイルを作成する場合のみ有効です"
 
 #: ../../source/programs/nearblack.rst:58
 msgid "Search for nearly white (255) pixels instead of nearly black pixels."
-msgstr ""
+msgstr "ほぼ白 (255) のピクセルを検索します."
 
 #: ../../source/programs/nearblack.rst:62
 msgid ""
@@ -87,18 +99,23 @@ msgid ""
 "times. When -color is specified, the pixels that are considered as the "
 "collar are set to 0."
 msgstr ""
+"指定されたカラーに近いピクセルを検索します. 複数回指定できます. -color が指定され"
+"ている場合, カラーとして考慮されるピクセルは 0 に設定されます."
 
 #: ../../source/programs/nearblack.rst:67
 msgid ""
 "Select how far from black, white or custom colors the pixel values can be"
 " and still considered near black, white or custom color.  Defaults to 15."
 msgstr ""
+"ピクセル値が黒, 白またはカスタムカラーからどれだけ離れていても, まだ黒, 白また"
+"はカスタムカラーに近いと見なされるかを選択します. デフォルトは 15 です."
 
 #: ../../source/programs/nearblack.rst:72
 msgid ""
 "number of consecutive non-black pixels that can be encountered before the"
 " giving up search inwards. Defaults to 2."
 msgstr ""
+"内側の検索を諦める前に遭遇できる連続した非黒ピクセルの数. デフォルトは 2 です."
 
 #: ../../source/programs/nearblack.rst:77
 msgid ""
@@ -108,6 +125,11 @@ msgid ""
 "if it has 4 bands and no output file is specified. The alpha band is set "
 "to 0 in the image collar and to 255 elsewhere."
 msgstr ""
+"出力ファイルが指定されており,入力ファイルが 3 バンドの場合,アルファバンドを追加し"
+"ます. または,出力ファイルが指定されており,入力ファイルが 4 バンドの場合,アルファバ"
+"ンドを設定します. または,入力ファイルが 4 バンドで出力ファイルが指定されていない場"
+"合,入力ファイルのアルファバンドを設定します. アルファバンドは画像のカラー部分に 0 を"
+"設定し,それ以外は 255 に設定されます."
 
 #: ../../source/programs/nearblack.rst:84
 msgid ""
@@ -115,10 +137,13 @@ msgid ""
 "file if it does not already have one and no output file is specified. The"
 " mask band is set to 0 in the image collar and to 255 elsewhere."
 msgstr ""
+"出力ファイルにマスクバンドを追加します.または,入力ファイルにマスクバンドを追加し"
+"ます. または,入力ファイルにマスクバンドを追加します. マスクバンドは画像のカラー部"
+"分に 0 を設定し,それ以外は 255 に設定されます."
 
 #: ../../source/programs/nearblack.rst:92
 msgid "Selects the algorithm to apply."
-msgstr ""
+msgstr "適用するアルゴリズムを選択します."
 
 #: ../../source/programs/nearblack.rst:94
 msgid ""
@@ -133,6 +158,13 @@ msgid ""
 "bottom and from bottom to top to identify indentations in the top or "
 "bottom."
 msgstr ""
+"``twopasses`` は上から下へのパスに続いて下から上へのパスを使用します. これは, "
+"GDAL 3.8 以前に実装された唯一のアルゴリズムです. 凹凸部分でミスする可能性があり"
+"ます. このアルゴリズムは画像を 1 スキャンラインずつ処理します. 両端からのスキャン"
+" \"in\" は, \"non_black_pixels\" ピクセルが黒, 白またはカスタムカラーから \"dist\" "
+"グレーレベル以上離れていることが確認されるまで, ピクセルを黒または白に設定します."
+" ほぼ黒, 白またはカスタムカラーピクセルは黒または白に設定されます. このアルゴリズム"
+"はまた, 上から下へ,下から上へのスキャンを行い, 上部または下部の凹凸を識別します."
 
 #: ../../source/programs/nearblack.rst:104
 msgid ""
@@ -143,26 +175,34 @@ msgid ""
 " is used, ``twopasses`` is actually called as an initial step of "
 "``floodfill``."
 msgstr ""
+"``floodfill`` (GDAL 3.8 で追加) は `Flood Fill "
+"<https://en.wikipedia.org/wiki/Flood_fill#Span_filling>`_ アルゴリズムを使用し, "
+"凹凸部分でも機能します. 一時データセットの作成が必要であり, ``twopasses`` よりも"
+"遅くなります. :option:`-nb` に 0 以外の値を使用すると, ``floodfill`` の初期ステップ"
+"として実際に ``twopasses`` が呼び出されます."
 
 #: ../../source/programs/nearblack.rst:111
 msgid "Suppress progress monitor and other non-error output."
-msgstr ""
+msgstr "進行状況モニターおよびその他のエラー以外の出力を抑制します."
 
 #: ../../source/programs/nearblack.rst:115
 msgid ""
 "The input file.  Any GDAL supported format, any number of bands, normally"
 " 8bit Byte bands."
 msgstr ""
+"入力ファイルです. 任意の GDAL サポートされた形式, 任意のバンド数, 通常 8 ビットバンドです."
 
 #: ../../source/programs/nearblack.rst:119
 msgid "The processing is all done in 8bit (Bytes)."
-msgstr ""
+msgstr "処理はすべて 8 ビット (バイト) で行われます."
 
 #: ../../source/programs/nearblack.rst:121
 msgid ""
 "If the output file is omitted, the processed results will be written back"
 " to the input file - which must support update."
 msgstr ""
+"出力ファイルが省略された場合,処理された結果は入力ファイルに書き戻されます. 入力ファ"
+"イルは更新をサポートする必要があります."
 
 #: ../../source/programs/nearblack.rst:125
 msgid "C API"
@@ -170,5 +210,5 @@ msgstr ""
 
 #: ../../source/programs/nearblack.rst:127
 msgid "This utility is also callable from C with :cpp:func:`GDALNearblack`."
-msgstr ""
+msgstr "このユーティリティは :cpp:func:`GDALNearblack` から C で呼び出すこともできます."
 

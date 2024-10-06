@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/rgb2pct.rst:9
 msgid "Convert a 24bit RGB image to 8bit paletted."
-msgstr ""
+msgstr "24 ビット RGB 画像を 8 ビットのパレット画像に変換します."
 
 #: ../../source/programs/rgb2pct.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/rgb2pct.rst:22
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/rgb2pct.rst:24
 msgid ""
@@ -43,28 +43,35 @@ msgid ""
 " This conversion utilizes Floyd-Steinberg dithering (error diffusion) to "
 "maximize output image visual quality."
 msgstr ""
+"このユーティリティは, ダウンサンプリングされた RGB ヒストグラム上のメディアンカット"
+"アルゴリズムを使用して, 指定された RGB 画像に最適な疑似カラーテーブルを計算します."
+" その後, 画像をカラーテーブルを使用して疑似カラー画像に変換します. この変換は, 出力"
+"画像の視覚品質を最大化するために Floyd-Steinberg ディザリング (誤差拡散) を利用します."
 
 #: ../../source/programs/rgb2pct.rst:32
 msgid ""
 "rgb2pct is a Python utility, and is only available if GDAL Python "
 "bindings are available."
 msgstr ""
+"rgb2pct は Python ユーティリティであり, GDAL Python バインディングが利用可能な場合のみ利用可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの簡単な使用方法を表示して終了します."
 
 #: ../../source/programs/rgb2pct.rst:40
 msgid ""
 "Select the number of colors in the generated color table.  Defaults to "
 "256.  Must be between 2 and 256."
 msgstr ""
+"生成されるカラーテーブルの色数を選択します. デフォルトは 256 です. 2 から 256 の間である必要があります."
 
 #: ../../source/programs/rgb2pct.rst:45
 msgid ""
@@ -73,6 +80,10 @@ msgid ""
 "<palette_file> must be either a raster file in a GDAL supported format "
 "with a palette or a color file in a supported format (txt, qml, qlr)."
 msgstr ""
+"計算する代わりに <palette_file> からカラーテーブルを抽出します. 複数のファイルで一貫した"
+"カラーテーブルを持つために使用できます. <palette_file> は, パレットを持つ GDAL サポート"
+"フォーマットのラスタファイルまたはサポートされているフォーマット (txt, qml, qlr) のカラー"
+"ファイルである必要があります."
 
 #: ../../source/programs/rgb2pct.rst:52
 msgid ""
@@ -81,18 +92,20 @@ msgid ""
 "short format name. Only output formats supporting pseudo-color tables "
 "should be used."
 msgstr ""
+"出力形式を選択します. GDAL 2.3 以降, 指定されていない場合, 形式は拡張子から推測されます "
+"(以前は GTiff でした). 短い形式名を使用します. 疑似カラーテーブルをサポートする出力形式のみを使用してください."
 
 #: ../../source/programs/rgb2pct.rst:59
 msgid "The input RGB file."
-msgstr ""
+msgstr "入力 RGB ファイル."
 
 #: ../../source/programs/rgb2pct.rst:63
 msgid "The output pseudo-colored file that will be created."
-msgstr ""
+msgstr "作成される出力疑似カラーファイル."
 
 #: ../../source/programs/rgb2pct.rst:66
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/rgb2pct.rst:68
 msgid ""
@@ -102,4 +115,7 @@ msgid ""
 "colors 238/238/238/255, 237/237/237/255, 236/236/236/255 and "
 "229/229/229/255."
 msgstr ""
+"パレットを手作成する場合, おそらく最も簡単なテキスト形式は GDAL VRT 形式です. 次の例では, "
+"RGBA カラー 238/238/238/255, 237/237/237/255, 236/236/236/255 および 229/229/229/255 を持つ"
+"小さな 4 色パレットを持つ VRT がテキストエディタで作成されました."
 
