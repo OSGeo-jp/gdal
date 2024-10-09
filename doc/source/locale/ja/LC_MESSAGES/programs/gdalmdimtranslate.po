@@ -28,14 +28,15 @@ msgid ""
 "Converts multidimensional data between different formats, and perform "
 "subsetting."
 msgstr ""
+"異なる形式間で多次元データを変換し, サブセットを実行します."
 
 #: ../../source/programs/gdalmdimtranslate.rst:16
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalmdimtranslate.rst:34
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalmdimtranslate.rst:36
 msgid ""
@@ -43,20 +44,24 @@ msgid ""
 "between different formats, and/or can perform selective conversion of "
 "specific arrays and groups, and/or subsetting operations."
 msgstr ""
+":program:`gdalmdimtranslate` プログラムは, 異なる形式間で多次元ラスターを変換し, "
+"特定の配列やグループの選択的な変換, および/またはサブセット操作を実行できます."
+
 
 #: ../../source/programs/gdalmdimtranslate.rst:40
 msgid "The following command line parameters can appear in any order."
-msgstr ""
+msgstr "以下のコマンドラインパラメータは任意の順序で現れることができます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法の簡単なメッセージを表示して終了します."
 
 #: ../../source/programs/options/if.rst:3
 msgid ""
@@ -68,6 +73,11 @@ msgid ""
 "dataset. In particular, some drivers have requirements on file "
 "extensions."
 msgstr ""
+"入力ファイルを開こうとするフォーマット/ドライバ名です. 通常は指定する必要はありませんが, "
+"適切なドライバを選択できない場合に自動ドライバ検出をスキップするために使用できます. "
+"このオプションは複数回繰り返すことができ, 複数の候補ドライバを指定することができます. "
+"これらのドライバにデータセットを開かせるわけではないことに注意してください. "
+"特に, 一部のドライバはファイル拡張子に要件を持っています."
 
 #: ../../source/programs/gdalmdimtranslate.rst:50
 msgid ""
@@ -78,12 +88,18 @@ msgid ""
 "When this option is not specified, the format is guessed when possible "
 "from the extension of the destination filename."
 msgstr ""
+"出力形式を選択します. これは多次元出力をサポートする形式 (:ref:`raster.netcdf`, "
+":ref:`vrt_multidimensional`) であるか, 他の指定された変換操作の結果が 1 つの 2D 配列のみの場合は "
+"\"クラシック\" 2D 形式であるかのいずれかです. このオプションが指定されていない場合, "
+"可能な場合は出力ファイル名の拡張子から形式が推測されます."
 
 #: ../../source/programs/gdalmdimtranslate.rst:58
 msgid ""
 "Many formats have one or more optional creation options that can be used "
 "to control particulars about the file created."
 msgstr ""
+"多くの形式には, 作成されるファイルについての詳細を制御するために使用できる 1 つ以上の "
+"オプションがあります."
 
 #: ../../source/programs/gdalmdimtranslate.rst:61
 msgid ""
@@ -95,6 +111,11 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
+"利用可能な作成オプションはフォーマットドライバによって異なり, 一部のシンプルな形式には "
+"全く作成オプションがありません. フォーマットでサポートされているオプションのリストは "
+":ref:`--formats <raster_common_options_formats>` コマンドラインオプションでリストアップできますが, "
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです. "
+"各フォーマットの法的な作成オプションについては, :ref:`raster_drivers` フォーマット固有のドキュメントを参照してください."
 
 #: ../../source/programs/gdalmdimtranslate.rst:70
 msgid ""
@@ -102,6 +123,8 @@ msgid ""
 "``ARRAY:``. See :cpp:func:`GDALGroup::CopyFrom` for further details "
 "regarding such options."
 msgstr ""
+"配列レベルの作成オプションは ``ARRAY:`` で接頭辞を付けて渡すことができます. "
+"このようなオプションに関する詳細については, :cpp:func:`GDALGroup::CopyFrom` を参照してください."
 
 #: ../../source/programs/gdalmdimtranslate.rst:75
 msgid ""
@@ -109,6 +132,8 @@ msgid ""
 "perform operations on it. This option can be specified several times to "
 "operate on different arrays."
 msgstr ""
+"データセット全体を変換する代わりに, 1 つの配列を選択し, おそらくそれに操作を行います. "
+"このオプションは異なる配列に対して操作を行うために複数回指定できます."
 
 #: ../../source/programs/gdalmdimtranslate.rst:79
 msgid ""
@@ -117,32 +142,38 @@ msgid ""
 " of options with the syntax: "
 "name={src_array_name}[,dstname={dst_array_name}][,resample=yes][,transpose=[{axis1},{axis2},...][,view={view_expr}]"
 msgstr ""
+"<array_spec> は単に配列名であるかもしれず, 完全修飾構文 (/group/subgroup/array_name) を使用するかもしれません. "
+"または, 次の構文を使用してオプションの組み合わせにすることができます: "
+"name={src_array_name}[,dstname={dst_array_name}][,resample=yes][,transpose=[{axis1},{axis2},...][,view={view_expr}]"
 
 #: ../../source/programs/gdalmdimtranslate.rst:84
 msgid "The following options are processed in that order:"
-msgstr ""
+msgstr "以下のオプションはその順序で処理されます:"
 
 #: ../../source/programs/gdalmdimtranslate.rst:86
 msgid ""
 "``resample=yes`` asks for the array to run through "
 ":cpp:func:`GDALMDArray::GetResampled`."
 msgstr ""
+"``resample=yes`` は配列が :cpp:func:`GDALMDArray::GetResampled` を通過するように要求します."
 
 #: ../../source/programs/gdalmdimtranslate.rst:89
 msgid ""
 "[{axis1},{axis2},...] is the argument of  "
 ":cpp:func:`GDALMDArray::Transpose`."
 msgstr ""
+"[{axis1},{axis2},...] は :cpp:func:`GDALMDArray::Transpose` の引数です."
 
 #: ../../source/programs/gdalmdimtranslate.rst:89
 msgid "For example, transpose=[1,0] switches the axis order of a 2D array."
-msgstr ""
+msgstr "たとえば, transpose=[1,0] は 2D 配列の軸の順序を切り替えます."
 
 #: ../../source/programs/gdalmdimtranslate.rst:91
 msgid ""
 "{view_expr} is the value of the *viewExpr* argument of "
 ":cpp:func:`GDALMDArray::GetView`"
 msgstr ""
+"{view_expr} は :cpp:func:`GDALMDArray::GetView` の *viewExpr* 引数の値です."
 
 #: ../../source/programs/gdalmdimtranslate.rst:93
 msgid ""
@@ -150,6 +181,7 @@ msgid ""
 "dimension, the equivalent operation will be applied to the corresponding "
 "indexing variable."
 msgstr ""
+"次元にスライスまたはサブセットを実行する view_expr を指定すると, 対応するインデックス変数に等価な操作が適用されます."
 
 #: ../../source/programs/gdalmdimtranslate.rst:100
 msgid ""
@@ -157,6 +189,8 @@ msgid ""
 "reported arrays. Such option is format specific. Consult driver "
 "documentation. This option may be used several times."
 msgstr ""
+"報告される配列をフィルタリングするために :cpp:func:`GDALGroup::GetMDArrayNames` に渡されるオプション. "
+"このようなオプションはフォーマット固有です. ドライバのドキュメントを参照してください. このオプションは複数回使用できます."
 
 #: ../../source/programs/gdalmdimtranslate.rst:106
 msgid ""
@@ -166,6 +200,9 @@ msgid ""
 "will be copied directly to the target root group. If several ones are "
 "specified, they are copied under the target root group"
 msgstr ""
+"データセット全体を変換する代わりに, 1 つのグループを選択し, おそらくそれに操作を行います. "
+"このオプションは異なるグループに対して操作を行うために複数回指定できます. 1 つのグループのみが指定された場合, "
+"その内容はターゲットルートグループに直接コピーされます. 複数の場合は, ターゲットルートグループの下にコピーされます"
 
 #: ../../source/programs/gdalmdimtranslate.rst:112
 msgid ""
@@ -174,6 +211,9 @@ msgid ""
 "combination of options with the syntax: "
 "name={src_group_name}[,dstname={dst_group_name}][,recursive=no]"
 msgstr ""
+"<group_spec> は単にグループ名であるかもしれず, 完全修飾構文 (/group/subgroup/subsubgroup_name) を使用するかもしれません. "
+"または, 次の構文を使用してオプションの組み合わせにすることができます: "
+"name={src_group_name}[,dstname={dst_group_name}][,recursive=no]"
 
 #: ../../source/programs/gdalmdimtranslate.rst:119
 msgid ""
@@ -183,6 +223,9 @@ msgid ""
 "exactly the `OGC WCS 2.0 KVP encoding "
 "<https://portal.opengeospatial.org/files/09-147r3>`__ for subsetting."
 msgstr ""
+"次元に沿ったサブセット (トリミングまたはスライス) 操作を実行します. これは, 数値または文字列データ型の 1D 変数でインデックス付けされ, "
+"その値が単調にソートされている場合に提供されます. <subset_spec> は, サブセットのための `OGC WCS 2.0 KVP エンコーディング "
+"<https://portal.opengeospatial.org/files/09-147r3>`__ に厳密に従います."
 
 #: ../../source/programs/gdalmdimtranslate.rst:125
 msgid ""
@@ -192,16 +235,19 @@ msgid ""
 "dim_name to value sliced_val (and this dimension will be removed from the"
 " arrays that reference to it)"
 msgstr ""
+"これは dim_name(min_val,max_val) または dim_name(sliced_val) です. 最初の構文は, 次元 dim_name を [min_val,max_val] の範囲の値にサブセットします. "
+"2 番目の構文は, 次元 dim_name を値 sliced_val にスライスします (およびこれに参照する配列からこの次元が削除されます)"
 
 #: ../../source/programs/gdalmdimtranslate.rst:131
 msgid "Using -subset is incompatible of specifying a *view* option in -array."
-msgstr ""
+msgstr "-subset を使用すると, -array で *view* オプションを指定することはできません."
 
 #: ../../source/programs/gdalmdimtranslate.rst:135
 msgid ""
 "Applies a integral scale factor to one or several dimensions, that is "
 "extract 1 value every N values (without resampling)."
 msgstr ""
+"1 つまたは複数の次元に整数スケールファクタを適用し, N 値ごとに 1 つの値を抽出します (リサンプリングなし)."
 
 #: ../../source/programs/gdalmdimtranslate.rst:138
 msgid ""
@@ -210,14 +256,16 @@ msgid ""
 "<https://portal.opengeospatial.org/files/12-039>`__, but limited to "
 "integer scale factors."
 msgstr ""
+"<scaleaxes_spec> は, `OGC WCS 2.0 Scaling Extension の SCALEAXES パラメータの KVP エンコーディング "
+"<https://portal.opengeospatial.org/files/12-039>`__ の構文に厳密に従いますが, 整数スケールファクタに制限されています."
 
 #: ../../source/programs/gdalmdimtranslate.rst:143
 msgid "That is <dim1_name>(<scale_factor>)[,<dim2_name>(<scale_factor>)]..."
-msgstr ""
+msgstr "つまり <dim1_name>(<scale_factor>)[,<dim2_name>(<scale_factor>)]..."
 
 #: ../../source/programs/gdalmdimtranslate.rst:145
 msgid "Using -scaleaxes is incompatible of specifying a *view* option in -array."
-msgstr ""
+msgstr "-scaleaxes を使用すると, -array で *view* オプションを指定することはできません."
 
 #: ../../source/programs/gdalmdimtranslate.rst:149
 msgid ""
@@ -225,18 +273,20 @@ msgid ""
 "not being able to write group attributes. When setting this option, such "
 "failures will cause the process to fail."
 msgstr ""
+"デフォルトでは, 変換中のいくつかの失敗 (グループ属性の書き込みができないなど) が許容されます. "
+"このオプションを設定すると, そのような失敗がプロセスの失敗を引き起こします."
 
 #: ../../source/programs/gdalmdimtranslate.rst:157
 msgid "Source dataset open option (format specific)"
-msgstr ""
+msgstr "ソースデータセットオープンオプション (フォーマット固有)"
 
 #: ../../source/programs/gdalmdimtranslate.rst:161
 msgid "The source dataset name."
-msgstr ""
+msgstr "ソースデータセット名."
 
 #: ../../source/programs/gdalmdimtranslate.rst:165
 msgid "The destination file name."
-msgstr ""
+msgstr "宛先ファイル名."
 
 #: ../../source/programs/gdalmdimtranslate.rst:168
 msgid "C API"
@@ -247,32 +297,34 @@ msgid ""
 "This utility is also callable from C with "
 ":cpp:func:`GDALMultiDimTranslate`."
 msgstr ""
+"このユーティリティは :cpp:func:`GDALMultiDimTranslate` を使用して C からも呼び出すことができます."
 
 #: ../../source/programs/gdalmdimtranslate.rst:173
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdalmdimtranslate.rst:175
 msgid "Convert a netCDF file to a multidimensional VRT file"
-msgstr ""
+msgstr "netCDF ファイルを多次元 VRT ファイルに変換します"
 
 #: ../../source/programs/gdalmdimtranslate.rst:181
 msgid "Extract a 2D slice of a time,Y,X array"
-msgstr ""
+msgstr "time,Y,X 配列の 2D スライスを抽出します"
 
 #: ../../source/programs/gdalmdimtranslate.rst:187
 msgid "Subsample along X and Y axis"
-msgstr ""
+msgstr "X 軸と Y 軸に沿ってサブサンプリングします"
 
 #: ../../source/programs/gdalmdimtranslate.rst:193
 msgid ""
 "Reorder the values of a time,Y,X array along the Y axis from top-to-"
 "bottom to bottom-to-top (or the reverse)"
 msgstr ""
+"Y 軸を上から下に並べ替えて下から上に並べ替える (またはその逆) time,Y,X 配列の値を並べ替えます"
 
 #: ../../source/programs/gdalmdimtranslate.rst:200
 msgid "Transpose an array that has X,Y,time dimension order to time,Y,X"
-msgstr ""
+msgstr "X,Y,time 次元順序を time,Y,X に変換する配列を転置します"
 
 #~ msgid ""
 #~ "Performs a subsetting (trimming or "

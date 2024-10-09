@@ -28,14 +28,15 @@ msgid ""
 "Lists information about an OGR-supported data source. With SQL statements"
 " it is also possible to edit data."
 msgstr ""
+"OGR がサポートするデータソースに関する情報をリストします. SQL ステートメントを使用してデータを編集することも可能です."
 
 #: ../../source/programs/ogrinfo.rst:15
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/ogrinfo.rst:32
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/ogrinfo.rst:34
 msgid ""
@@ -43,16 +44,19 @@ msgid ""
 "supported data source to stdout (the terminal). By executing SQL "
 "statements it is also possible to edit data."
 msgstr ""
+":program:`ogrinfo` プログラムは, OGR がサポートするデータソースに関する"
+"さまざまな情報を標準出力 (端末) にリストします. SQL ステートメントを実行することでデータを編集することも可能です."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法についての簡単なメッセージを表示して終了します."
 
 #: ../../source/programs/options/if.rst:3
 msgid ""
@@ -64,6 +68,11 @@ msgid ""
 "dataset. In particular, some drivers have requirements on file "
 "extensions."
 msgstr ""
+"入力ファイルを開こうとするフォーマット/ドライバ名です. 通常は指定する必要は"
+"ありませんが, 適切なドライバを選択できない場合に自動ドライバ検出をスキップ"
+"するために使用できます. このオプションは複数回繰り返して複数の候補ドライバを"
+"指定することができます. これらのドライバにデータセットを開かせることは強制"
+"されません. 特に, 一部のドライバはファイル拡張子に要件を持っています."
 
 #: ../../source/programs/ogrinfo.rst:46
 msgid ""
@@ -72,10 +81,13 @@ msgid ""
 "<https://github.com/OSGeo/gdal/blob/master/apps/data/ogrinfo_output.schema.json>`__"
 " schema."
 msgstr ""
+"出力を JSON 形式で表示し, `ogrinfo_output.schema.json "
+"<https://github.com/OSGeo/gdal/blob/master/apps/data/ogrinfo_output.schema.json>`__ "
+" スキーマに準拠します."
 
 #: ../../source/programs/ogrinfo.rst:54
 msgid "Open the data source in read-only mode."
-msgstr ""
+msgstr "データソースを読み取り専用モードで開きます."
 
 #: ../../source/programs/ogrinfo.rst:58
 msgid ""
@@ -85,6 +97,10 @@ msgid ""
 "is implicit, but listing of features must be explicitly enabled with "
 ":option:`-features`."
 msgstr ""
+"すべてのレイヤーをリストします (引数としてレイヤー名を指定する代わりに使用されます). "
+"デフォルトのテキスト出力では, これによりすべての地物がリストされるため, "
+" :option:`-so` で無効にできます. JSON 出力では, -al は暗黙的になりますが, "
+"フィーチャのリストは :option:`-features` で明示的に有効にする必要があります."
 
 #: ../../source/programs/ogrinfo.rst:67
 msgid ""
@@ -93,6 +109,9 @@ msgid ""
 "significantly faster for some formats (for example OSM, GMLAS). -rl "
 "cannot be used with -sql."
 msgstr ""
+"ランダムレイヤー読み取りモードを有効にします. つまり, データセットで見つかった順に "
+"地物を反復処理し, レイヤーごとにではなくなります. これは一部のフォーマット "
+"(たとえば OSM, GMLAS) でかなり高速になります. -rl は -sql と一緒に使用できません."
 
 #: ../../source/programs/ogrinfo.rst:77
 msgid ""
@@ -101,10 +120,13 @@ msgid ""
 "In JSON output, -so is implicit and listing of features can be enabled "
 "with :option:`-features`."
 msgstr ""
+"サマリーのみ: 個々のフィーチャのリストを抑制し, 投影, スキーマ, フィーチャ数, "
+"範囲などのサマリー情報のみを表示します. JSON 出力では, -so は暗黙的であり, "
+"地物のリストは :option:`-features` で有効にできます."
 
 #: ../../source/programs/ogrinfo.rst:84
 msgid "Enable listing of features. This has the opposite effect of :option:`-so`."
-msgstr ""
+msgstr "地物のリストを有効にします. これは :option:`-so` の逆の効果があります."
 
 #: ../../source/programs/ogrinfo.rst:86
 msgid ""
@@ -113,16 +135,20 @@ msgid ""
 " ogrinfo will be built in memory. Consequently, when used on a large "
 "collection of features, RAM may be exhausted."
 msgstr ""
+"ライブラリ関数 :cpp:func:`GDALVectorInfo` および/または :option:`-json` を使用する場合は, "
+"ogrinfo の全出力がメモリに構築されるため, このオプションは注意して使用する必要があります. "
+"その結果, 大量の地物に使用すると, RAM が枯渇する可能性があります."
 
 #: ../../source/programs/ogrinfo.rst:97
 msgid "Limit the number of features per layer."
-msgstr ""
+msgstr "レイヤーごとの地物数を制限します."
 
 #: ../../source/programs/ogrinfo.rst:101
 msgid ""
 "Quiet verbose reporting of various information, including coordinate "
 "system, layer schema, extents, and feature count."
 msgstr ""
+"座標系, レイヤースキーマ, 範囲, 地物数などのさまざまな情報の静かな冗長な報告."
 
 #: ../../source/programs/ogrinfo.rst:106
 msgid ""
@@ -131,10 +157,13 @@ msgid ""
 "reported. Starting with GDAL 2.1, the ``@<filename>`` syntax can be used "
 "to indicate that the content is in the pointed filename."
 msgstr ""
+"SQL の `WHERE` ステートメントで使用されるクエリの制限された形式の属性クエリ. "
+"属性クエリに一致する地物のみが報告されます. GDAL 2.1 以降, ``@<filename>`` "
+"構文を使用して, コンテンツが指定されたファイル名にあることを示すことができます."
 
 #: ../../source/programs/ogrinfo.rst:111
 msgid "Example of ``-where`` and quoting:"
-msgstr ""
+msgstr "``-where`` と引用符の例:"
 
 #: ../../source/programs/ogrinfo.rst:120
 msgid ""
@@ -146,6 +175,11 @@ msgid ""
 "Editing capabilities depend on the selected dialect with "
 ":option:`-dialect`."
 msgstr ""
+"指定された SQL ステートメントを実行して結果を返します. GDAL 2.1 以降, ``@<filename>`` "
+"構文を使用して, コンテンツが指定されたファイル名にあることを示すことができます "
+"(たとえば, ``@my_select.txt`` で my_select.txt が現在のディレクトリにあるファイルです). "
+"データは SQL INSERT, UPDATE, DELETE, DROP TABLE, ALTER TABLE などで編集することもできます. "
+"編集機能は, :option:`-dialect` で選択された方言に依存します."
 
 #: ../../source/programs/ogrinfo.rst:130
 msgid ""
@@ -155,14 +189,18 @@ msgid ""
 "selected with the ``SQLITE`` and ``INDIRECT_SQLITE`` dialect values, and "
 "this can be used with any datasource."
 msgstr ""
+"SQL 方言. 一部の場合には, ネイティブ SQL ではなく (最適化されていない) "
+":ref:`ogr_sql_dialect` を使用するために, ``OGRSQL`` 方言値を渡すことができます. "
+":ref:`sql_sqlite_dialect` は ``SQLITE`` および ``INDIRECT_SQLITE`` 方言値で選択でき, "
+"これは任意のデータソースで使用できます."
 
 #: ../../source/programs/ogrinfo.rst:137
 msgid "The area of interest. Only features within the rectangle will be reported."
-msgstr ""
+msgstr "興味のある領域. 長方形内の地物のみが報告されます."
 
 #: ../../source/programs/ogrinfo.rst:141
 msgid "Name of the geometry field on which the spatial filter operates."
-msgstr ""
+msgstr "空間フィルタが作用するジオメトリフィールドの名前."
 
 #: ../../source/programs/ogrinfo.rst:145
 msgid ""
@@ -172,16 +210,20 @@ msgid ""
 "the fact the 'fid' is a special field recognized by OGR SQL. So, `-where "
 "\"fid in (1,3,5)\"` would select features 1, 3 and 5."
 msgstr ""
+"指定された場合, このフィーチャ ID のフィーチャのみが報告されます. 空間または属性クエリと排他的に作用します. "
+"注: フィーチャ ID に基づいて複数のフィーチャを選択したい場合は, OGR SQL によって認識される特別なフィールドである "
+"'fid' があることを利用することもできます. したがって, `-where \"fid in (1,3,5)\"` はフィーチャ 1, 3, 5 を選択します."
 
 #: ../../source/programs/ogrinfo.rst:153
 msgid ""
 "If set to ``NO``, the feature dump will not display field values. Default"
 " value is ``YES``."
 msgstr ""
+"``NO`` に設定されている場合, フィーチャダンプはフィールド値を表示しません. デフォルト値は ``YES`` です."
 
 #: ../../source/programs/ogrinfo.rst:160
 msgid "Display details about a field domain."
-msgstr ""
+msgstr "フィールドドメインに関する詳細を表示します."
 
 #: ../../source/programs/ogrinfo.rst:164
 msgid ""
@@ -192,34 +234,40 @@ msgid ""
 "``WKT``. Default value is ``YES``. (WKT and ``ISO_WKT`` are available "
 "starting with GDAL 2.1, which also changes the default to ISO_WKT)"
 msgstr ""
+"``NO`` に設定されている場合, フィーチャダンプはジオメトリを表示しません. ``SUMMARY`` に設定されている場合, "
+"ジオメトリのサマリーのみが表示されます. ``YES`` または ``ISO_WKT`` に設定されている場合, ジオメトリは完全な OGC WKT "
+"形式で報告されます. ``WKT`` に設定されている場合, ジオメトリはレガシー ``WKT`` で報告されます. デフォルト値は ``YES`` です. "
+"(WKT および ``ISO_WKT`` は GDAL 2.1 から利用可能であり, デフォルトも ISO_WKT に変更されます)"
 
 #: ../../source/programs/ogrinfo.rst:173
 msgid "Dataset open option (format-specific)"
-msgstr ""
+msgstr "データセットオープンオプション (フォーマット固有)"
 
 #: ../../source/programs/ogrinfo.rst:177
 msgid ""
 "Suppress metadata printing. Some datasets may contain a lot of metadata "
 "strings."
 msgstr ""
+"メタデータの印刷を抑制します. 一部のデータセットには多くのメタデータ文字列が含まれている場合があります."
 
 #: ../../source/programs/ogrinfo.rst:182
 msgid "List all metadata domains available for the dataset."
-msgstr ""
+msgstr "データセットで利用可能なすべてのメタデータドメインをリストします."
 
 #: ../../source/programs/ogrinfo.rst:186
 msgid ""
 "Report metadata for the specified domain. ``all`` can be used to report "
 "metadata in all domains."
 msgstr ""
+"指定されたドメインのメタデータを報告します. ``all`` を使用してすべてのドメインのメタデータを報告できます."
 
 #: ../../source/programs/ogrinfo.rst:191
 msgid "Suppress feature count printing."
-msgstr ""
+msgstr "地物数の出力を抑制します."
 
 #: ../../source/programs/ogrinfo.rst:195
 msgid "Suppress spatial extent printing."
-msgstr ""
+msgstr "空間範囲の出力を抑制します."
 
 #: ../../source/programs/ogrinfo.rst:201
 msgid ""
@@ -227,40 +275,44 @@ msgid ""
 "this operation might be slower than requesting the 2D extent, depending "
 "on format and driver capabilities."
 msgstr ""
+"報告される 3D 範囲をリクエストします (デフォルトは 2D のみ). フォーマットとドライバの機能によっては, "
+"この操作が 2D 範囲をリクエストするよりも遅くなる可能性があります."
 
 #: ../../source/programs/ogrinfo.rst:207
 msgid "Suppress layer geometry type printing."
-msgstr ""
+msgstr "レイヤーのジオメトリタイプの出力を抑制します."
 
 #: ../../source/programs/options/formats_vector.rst:3
 msgid ""
 "List all vector formats supported by this GDAL build (read-only and read-"
 "write) and exit. The format support is indicated as follows:"
 msgstr ""
+"この GDAL ビルドでサポートされているすべてのベクトルフォーマット (読み取り専用および読み書き) をリストして終了します. "
+"フォーマットサポートは次のように示されます:"
 
 #: ../../source/programs/options/formats_vector.rst:6
 msgid "``ro`` is read-only driver"
-msgstr ""
+msgstr "``ro`` は読み取り専用ドライバです"
 
 #: ../../source/programs/options/formats_vector.rst:7
 msgid "``rw`` is read or write (i.e. supports :cpp:func:`GDALDriver::CreateCopy`)"
-msgstr ""
+msgstr "``rw`` は読み取りまたは書き込み (つまり, :cpp:func:`GDALDriver::CreateCopy` をサポート)"
 
 #: ../../source/programs/options/formats_vector.rst:8
 msgid ""
 "``rw+`` is read, write and update (i.e. supports "
 ":cpp:func:`GDALDriver::Create`)"
-msgstr ""
+msgstr "``rw+`` は読み取り, 書き込み, 更新 (つまり, :cpp:func:`GDALDriver::Create` をサポート)"
 
 #: ../../source/programs/options/formats_vector.rst:9
 msgid ""
 "A ``v`` is appended for formats supporting virtual IO (``/vsimem``, "
 "``/vsigzip``, ``/vsizip``, etc)."
-msgstr ""
+msgstr "A ``v`` は仮想 IO (``/vsimem``, ``/vsigzip``, ``/vsizip`` など) をサポートするフォーマットに追加されます."
 
 #: ../../source/programs/options/formats_vector.rst:10
 msgid "A ``s`` is appended for formats supporting subdatasets."
-msgstr ""
+msgstr "A ``s`` はサブデータセットをサポートするフォーマットに追加されます."
 
 #: ../../source/programs/options/formats_vector.rst:12
 msgid ""
@@ -275,12 +327,18 @@ msgid ""
 ":config:`GDAL_SKIP` configuration option can also be used to exclude one "
 "or several drivers."
 msgstr ""
+"ドライバがリストされる順序は, データセットを開くときに連続的に調査される順序を決定する登録された順序です. "
+"ほとんどの場合, この順序は重要ではありませんが, いくつかの状況では, 複数のドライバが同じファイルを認識することがあります. "
+"一部のユーティリティの ``-if`` オプションを使用して, データセットをドライバのサブセット (通常は 1 つ) で開くように制限できます. "
+"これらのドライバにデータセットを開かせることは強制されません. 特に, 一部のドライバはファイル拡張子に要件を持っています. "
+"代わりに, :config:`GDAL_SKIP` 構成オプションを使用して, 1 つまたは複数のドライバを除外することもできます."
 
 #: ../../source/programs/ogrinfo.rst:215
 msgid ""
 "The WKT format used to display the SRS. Currently supported values for "
 "the ``format`` are:"
 msgstr ""
+"SRS を表示するために使用される WKT 形式. 現在サポートされている ``format`` の値は次のとおりです:"
 
 #: ../../source/programs/ogrinfo.rst:218
 msgid "``WKT1``"
@@ -289,6 +347,7 @@ msgstr ""
 #: ../../source/programs/ogrinfo.rst:220
 msgid "``WKT2`` (latest WKT version, currently *WKT2_2018*)"
 msgstr ""
+"``WKT2`` (最新の WKT バージョン, 現在 *WKT2_2018* です)"
 
 #: ../../source/programs/ogrinfo.rst:222
 msgid "``WKT2_2015``"
@@ -303,6 +362,8 @@ msgid ""
 "The data source to open. May be a filename, directory or other virtual "
 "name. See the OGR Vector Formats list for supported datasources."
 msgstr ""
+"開くデータソース. ファイル名, ディレクトリ, または他の仮想名にすることができます. サポートされているデータソースについては, "
+"OGR ベクトルフォーマットリストを参照してください."
 
 #: ../../source/programs/ogrinfo.rst:235
 msgid ""
@@ -313,10 +374,14 @@ msgid ""
 "matching query parameters will be reported to the terminal. If no query "
 "parameters are provided, all features are reported."
 msgstr ""
+"1 つ以上のレイヤー名が報告される場合があります. レイヤー名が渡されない場合, ogrinfo は利用可能なレイヤーのリスト"
+" (およびレイヤー全体のジオメトリタイプ) を報告します. "
+"レイヤー名が指定されている場合, その範囲, 座標系, 地物数, ジオメトリタイプ, スキーマ, およびクエリパラメータに一致するすべての地物が端末に報告されます. "
+"クエリパラメータが提供されていない場合, すべての地物が報告されます."
 
 #: ../../source/programs/ogrinfo.rst:242
 msgid "Geometries are reported in OGC WKT format."
-msgstr ""
+msgstr "ジオメトリは OGC WKT 形式で報告されます."
 
 #: ../../source/programs/ogrinfo.rst:245
 msgid "C API"
@@ -324,43 +389,48 @@ msgstr ""
 
 #: ../../source/programs/ogrinfo.rst:247
 msgid "This utility is also callable from C with :cpp:func:`GDALVectorInfo`."
-msgstr ""
+msgstr "このユーティリティは :cpp:func:`GDALVectorInfo` を使用して C からも呼び出すことができます."
 
 #: ../../source/programs/ogrinfo.rst:252
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/ogrinfo.rst:254
 msgid "Example of reporting the names of the layers in a NTF file:"
-msgstr ""
+msgstr "NTF ファイルのレイヤー名を報告する例:"
 
 #: ../../source/programs/ogrinfo.rst:267
 msgid ""
 "Example of retrieving a summary (``-so``) of a layer without showing "
 "details about every single feature:"
 msgstr ""
+"各個別地物の詳細を表示しないでレイヤーのサマリー  (``-so``)  を取得する例:"
+
 
 #: ../../source/programs/ogrinfo.rst:300
 msgid ""
 "Example of retrieving information on a file in JSON format without "
 "showing details about every single feature:"
 msgstr ""
+"各個別地物の詳細を表示せずに JSON 形式でファイルの情報を取得する例:"
 
 #: ../../source/programs/ogrinfo.rst:504
 msgid ""
 "Example of using -q and an attribute query, to restrict the output to "
 "certain features in a layer:"
 msgstr ""
+"-q と属性クエリを使用して, レイヤー内の特定の地物に出力を制限する例:"
 
 #: ../../source/programs/ogrinfo.rst:522
 msgid ""
 "Example of updating a value of an attribute in a shapefile with SQL by "
 "using the SQLite dialect:"
 msgstr ""
+"SQLite 方言を使用して SQL でシェープファイルの属性の値を更新する例:"
 
 #: ../../source/programs/ogrinfo.rst:528
 msgid "Adding a column to an input file:"
-msgstr ""
+msgstr "入力ファイルに列を追加する:"
 
 #: ../../source/programs/ogrinfo.rst:534
 msgid ""
@@ -368,6 +438,8 @@ msgid ""
 " one may use the ``:memory:`` input file which is a in-memory empty "
 "SQLite file (and the SQLite SQL dialect will be implicitly used)."
 msgstr ""
+"計算に入力ファイルが関与していない場合があります. そのような場合には, 空のメモリ内 SQLite ファイルである ``:memory:`` "
+"入力ファイルを使用できます (および SQLite SQL 方言が暗黙的に使用されます)."
 
 #~ msgid ""
 #~ "Summary Only: suppress listing of "

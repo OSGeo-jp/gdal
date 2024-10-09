@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/ogr2ogr.rst:9
 msgid "Converts simple features data between file formats."
-msgstr ""
+msgstr "単純な地物データをファイル形式間で変換します."
 
 #: ../../source/programs/ogr2ogr.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/ogr2ogr.rst:69
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/ogr2ogr.rst:71
 msgid ""
@@ -43,16 +43,20 @@ msgid ""
 "setting the output coordinate system or even reprojecting the features "
 "during translation."
 msgstr ""
+":program:`ogr2ogr` は単純な地物データをファイル形式間で変換するために使用できます. "
+"また, 処理中に空間または属性の選択, 属性のセットの縮小, 出力座標系の設定, または変換中に地物を再投影するなど, "
+"さまざまな操作を実行することもできます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/options/if.rst:3
 msgid ""
@@ -64,6 +68,10 @@ msgid ""
 "dataset. In particular, some drivers have requirements on file "
 "extensions."
 msgstr ""
+"入力ファイルを開こうとするフォーマット/ドライバ名です. 通常は指定する必要はありませんが, 適切なドライバを選択できない場合に "
+"自動ドライバ検出をスキップするために使用できます. このオプションは複数回繰り返して複数の候補ドライバを指定できます. "
+"これらのドライバをデータセットを開くように強制するわけではないことに注意してください. 特に, 一部のドライバはファイル拡張子に "
+"要件を持っています."
 
 #: ../../source/programs/ogr2ogr.rst:84
 msgid ""
@@ -71,12 +79,15 @@ msgid ""
 "``PostgreSQL``.  Starting with GDAL 2.3, if not specified, the format is "
 "guessed from the extension (previously was ESRI Shapefile)."
 msgstr ""
+"出力ファイル形式名, 例: ``ESRI Shapefile``, ``MapInfo File``, ``PostgreSQL``. GDAL 2.3 以降, 指定されていない場合, 形式は拡張子から推測されます "
+"(以前は ESRI Shapefile でした)."
 
 #: ../../source/programs/ogr2ogr.rst:90
 msgid ""
 "Append to existing layer instead of creating new. This option also "
 "enables :option:`-update`."
 msgstr ""
+"新しいレイヤーを作成する代わりに既存のレイヤーに追加します. このオプションは :option:`-update` も有効にします."
 
 #: ../../source/programs/ogr2ogr.rst:97
 msgid ""
@@ -84,12 +95,15 @@ msgid ""
 ":cpp:func:`OGRLayer::UpsertFeature` operation is used to insert or update"
 " features instead of appending with :cpp:func:`OGRLayer::CreateFeature`."
 msgstr ""
+":option:`-append` の変種で, :cpp:func:`OGRLayer::CreateFeature` で追加する代わりに  :cpp:func:`OGRLayer::UpsertFeature` 操作が"
+"使用されて地物を挿入または更新します. "
 
 #: ../../source/programs/ogr2ogr.rst:101
 msgid ""
 "This is currently implemented only in a few drivers: :ref:`vector.gpkg` "
 "and :ref:`vector.mongodbv3`."
 msgstr ""
+"現在, これはいくつかのドライバでのみ実装されています: :ref:`vector.gpkg` と :ref:`vector.mongodbv3`."
 
 #: ../../source/programs/ogr2ogr.rst:104
 msgid ""
@@ -98,6 +112,8 @@ msgid ""
 "string), as the key to update existing features. It is crucial to make "
 "sure that the FID in the source and target layers are consistent."
 msgstr ""
+"入力地物の FID が設定されており \"有意\" である場合 (つまり FID 列名が空の文字列でない場合), "
+"既存の地物を更新するキーとして使用されます. ソースとターゲットのレイヤーの FID が一貫していることを確認することが重要です."
 
 #: ../../source/programs/ogr2ogr.rst:109
 msgid ""
@@ -106,20 +122,23 @@ msgid ""
 "FID from the source feature), when there is a UNIQUE column that is not "
 "the integer primary key."
 msgstr ""
+"GPKG ドライバの場合, 整数主キーでない UNIQUE 列がある場合は,FID が設定されていないか有意でない地物を更新することも可能です"
+" (:option:`-unsetFid` はソース地物の FID を無視するために使用できます), "
 
 #: ../../source/programs/ogr2ogr.rst:116
 msgid "Delete the output layer and recreate it empty"
-msgstr ""
+msgstr "出力レイヤーを削除して空で再作成します"
 
 #: ../../source/programs/ogr2ogr.rst:120
 msgid ""
 "Open existing output datasource in update mode rather than trying to "
 "create a new one"
 msgstr ""
+"新しいデータソースを作成しようとする代わりに既存の出力データソースを更新モードで開きます"
 
 #: ../../source/programs/ogr2ogr.rst:125
 msgid "Comma-delimited list of fields from input layer to copy to the new layer."
-msgstr ""
+msgstr "新しいレイヤーにコピーする入力レイヤーのフィールドのカンマ区切りリストです."
 
 #: ../../source/programs/ogr2ogr.rst:127
 msgid ""
@@ -128,6 +147,8 @@ msgid ""
 "and double-quote characters in a field name should be escaped with "
 "backslash."
 msgstr ""
+"GDAL 3.9 以降, スペース, コンマ, またはダブルクォートを含むフィールド名は, 開始と終了のダブルクォート文字で囲む必要があります. "
+"また, フィールド名内のダブルクォート文字はバックスラッシュでエスケープする必要があります."
 
 #: ../../source/programs/ogr2ogr.rst:131
 msgid ""
@@ -135,16 +156,19 @@ msgid ""
 "example, to select ``regular_field``, ``a_field_with space, and comma`` "
 "and ``a field with \" double quote`` with a Unix shell:"
 msgstr ""
+"使用しているシェルによっては, さらなる引用符が必要になる場合があります. たとえば, Unix シェルで ``regular_field``, "
+"``a_field_with space, and comma`` および ``a field with \" double quote`` を選択するには:"
 
 #: ../../source/programs/ogr2ogr.rst:139
 msgid ""
 "A field is only selected once, even if mentioned several times in the "
 "list and if the input layer has duplicate field names."
 msgstr ""
+"フィールドはリスト内で複数回言及されていても, 入力レイヤーに重複するフィールド名がある場合でも, 1 回だけ選択されます."
 
 #: ../../source/programs/ogr2ogr.rst:142
 msgid "Geometry fields can also be specified in the list."
-msgstr ""
+msgstr "ジオメトリフィールドもリストで指定できます."
 
 #: ../../source/programs/ogr2ogr.rst:144
 msgid ""
@@ -152,6 +176,8 @@ msgid ""
 "empty string can be used to disable selecting any attribute field, and "
 "only keep geometries."
 msgstr ""
+"-select が指定されていない場合はすべてのフィールドが選択されます. 空の文字列を指定すると, 任意の属性フィールドを選択せず, "
+"ジオメトリのみを保持することができます."
 
 #: ../../source/programs/ogr2ogr.rst:148
 msgid ""
@@ -159,12 +185,14 @@ msgid ""
 "the selection of fields when appending to a layer, use ``-fieldmap`` or "
 "``-sql``."
 msgstr ""
+"この設定は ``-append`` と一緒に使用できません. レイヤーに追加する場合のフィールドの選択を制御するには, ``-fieldmap`` または ``-sql`` を使用してください."
 
 #: ../../source/programs/ogr2ogr.rst:153
 msgid ""
 "Display progress on terminal. Only works if input layers have the \"fast "
 "feature count\" capability."
 msgstr ""
+"端末で進行状況を表示します. 入力レイヤーが \"高速地物数\" 機能を持っている場合のみ機能します."
 
 #: ../../source/programs/ogr2ogr.rst:158
 msgid ""
@@ -173,6 +201,8 @@ msgid ""
 "indicate that the content is in the pointed filename. (Cannot be used "
 "with :option:`-spat_srs`.)"
 msgstr ""
+"実行する SQL 文. 結果のテーブル/レイヤーは出力に保存されます. GDAL 2.1 以降, ``@filename`` 構文を使用して, "
+"内容が指定されたファイル名であることを示すことができます. (:option:`-spat_srs` と一緒に使用できません.)"
 
 #: ../../source/programs/ogr2ogr.rst:164
 msgid ""
@@ -182,6 +212,9 @@ msgid ""
 "be chosen with the ``SQLITE`` and ``INDIRECT_SQLITE`` dialect values, and"
 " this can be used with any datasource."
 msgstr ""
+"SQL 方言. 一部の場合, RDBMS のネイティブ SQL の代わりに ``OGRSQL`` 方言値を渡すことで (最適化されていない) "
+":ref:`ogr_sql_dialect` を使用することができます. ``SQLITE`` および ``INDIRECT_SQLITE`` 方言値で :ref:`sql_sqlite_dialect` 方言を選択でき, "
+"これは任意のデータソースで使用できます."
 
 #: ../../source/programs/ogr2ogr.rst:171
 msgid ""
@@ -189,10 +222,11 @@ msgid ""
 "``@filename`` syntax can be used to indicate that the content is in the "
 "pointed filename."
 msgstr ""
+"属性クエリ (SQL WHERE のような). GDAL 2.1 以降, ``@filename`` 構文を使用して, 内容が指定されたファイル名であることを示すことができます."
 
 #: ../../source/programs/ogr2ogr.rst:176
 msgid "Continue after a failure, skipping the failed feature."
-msgstr ""
+msgstr "失敗後に続行し, 失敗した地物をスキップします."
 
 #: ../../source/programs/ogr2ogr.rst:180
 msgid ""
@@ -201,26 +235,28 @@ msgid ""
 "the extents will be selected. The geometries will not be clipped unless "
 "``-clipsrc`` is specified."
 msgstr ""
+"空間クエリの範囲, 元のレイヤーの SRS (または ``-spat_srs`` で指定された SRS) で. ジオメトリが範囲に交差する地物のみが選択されます. "
+"ジオメトリは ``-clipsrc`` が指定されていない限りクリップされません."
 
 #: ../../source/programs/ogr2ogr.rst:187
 msgid "Override spatial filter SRS. (Cannot be used with :option:`-sql`.)"
-msgstr ""
+msgstr "空間フィルタ SRS をオーバーライドします. (:option:`-sql` と一緒に使用できません.)"
 
 #: ../../source/programs/ogr2ogr.rst:191
 msgid "Name of the geometry field on which the spatial filter operates on."
-msgstr ""
+msgstr "空間フィルタが作用するジオメトリフィールドの名前です."
 
 #: ../../source/programs/ogr2ogr.rst:195
 msgid "Dataset creation option (format specific)"
-msgstr ""
+msgstr "データセット作成オプション (フォーマット固有)"
 
 #: ../../source/programs/ogr2ogr.rst:199
 msgid "Layer creation option (format specific)"
-msgstr ""
+msgstr "レイヤー作成オプション (フォーマット固有)"
 
 #: ../../source/programs/ogr2ogr.rst:203
 msgid "Assign an alternate name to the new layer"
-msgstr ""
+msgstr "新しいレイヤーに別の名前を割り当てます"
 
 #: ../../source/programs/ogr2ogr.rst:207
 msgid ""
@@ -247,12 +283,25 @@ msgid ""
 "multipolygons with ``-nlt POLYGON``, the resulting polygon will break the"
 " Simple Features rules."
 msgstr ""
+"作成されたレイヤーのジオメトリタイプを定義します. ``NONE``, ``GEOMETRY``, ``POINT``, ``LINESTRING``, ``POLYGON``, "
+"``GEOMETRYCOLLECTION``, ``MULTIPOINT``, ``MULTIPOLYGON``, ``MULTILINESTRING``, ``CIRCULARSTRING``, ``COMPOUNDCURVE``, "
+"``CURVEPOLYGON``, ``MULTICURVE``, および ``MULTISURFACE`` の非線形ジオメトリタイプのいずれかです. タイプ名に ``Z``, ``M``, "
+"または ``ZM`` を追加して, 標高, 測定, または標高と測定を指定します. ``PROMOTE_TO_MULTI`` は, ポリゴンまたはマルチポリゴンを混在させるレイヤーを自動的にマルチポリゴンに昇格し, "
+"ラインストリングまたはマルチラインストリングを混在させるレイヤーをマルチラインストリングに昇格させるために使用できます. "
+"ジオメトリタイプを厳密にチェックするターゲットドライバ (PostGIS など) にシェープファイルを変換するときに便利です. "
+"``CONVERT_TO_LINEAR`` は, 非線形ジオメトリタイプを線形ジオメトリタイプに変換して近似するために使用でき, "
+"``CONVERT_TO_CURVE`` は, 非線形タイプを一般化された曲線タイプに昇格させるために使用できます (``POLYGON`` を ``CURVEPOLYGON``, "
+"``MULTIPOLYGON`` を ``MULTISURFACE``, ``LINESTRING`` を ``COMPOUNDCURVE``, ``MULTILINESTRING`` を ``MULTICURVE``). "
+"バージョン 2.1 以降, タイプは測定されたものとして定義できます (\"25D\" は単一の \"Z\" のエイリアスとして残ります). "
+"一部の強制ジオメトリ変換は無効なジオメトリを生成する可能性があります. たとえば, ``-nlt POLYGON`` でマルチパートマルチポリゴンをポリゴンに強制変換すると, "
+"結果のポリゴンは Simple Features ルールを破ります."
 
 #: ../../source/programs/ogr2ogr.rst:229
 msgid ""
 "Starting with GDAL 3.0.5, ``-nlt CONVERT_TO_LINEAR`` and ``-nlt "
 "PROMOTE_TO_MULTI`` can be used simultaneously."
 msgstr ""
+"GDAL 3.0.5 以降, ``-nlt CONVERT_TO_LINEAR`` と ``-nlt PROMOTE_TO_MULTI`` を同時に使用できます."
 
 #: ../../source/programs/ogr2ogr.rst:234
 msgid ""
@@ -264,12 +313,16 @@ msgid ""
 "coordinate dimension declared by the layer. Support for M was added in "
 "GDAL 2.1."
 msgstr ""
+"座標次元を val に強制します (有効な値は ``XY``, ``XYZ``, ``XYM``, および ``XYZM`` です - 互換性のために ``2`` は ``XY`` のエイリアスであり, "
+"``3`` は ``XYZ`` のエイリアスです). これはレイヤーのジオメトリタイプと地物のジオメトリの両方に影響します. "
+"値を ``layer_dim`` に設定すると, 地物のジオメトリがレイヤーで宣言された座標次元に昇格するように指示できます. M のサポートは GDAL 2.1 で追加されました."
 
 #: ../../source/programs/ogr2ogr.rst:243
 msgid ""
 "Assign an output SRS, but without reprojecting (use :option:`-t_srs` to "
 "reproject)"
 msgstr ""
+"出力 SRS を割り当てますが, 再投影は行いません (:option:`-t_srs` を使用して再投影します)"
 
 #: ../../source/programs/options/srs_def.rst:1
 msgid ""
@@ -279,6 +332,8 @@ msgid ""
 "EPSG:4296), a well known text (WKT) CRS definition, PROJ.4 declarations, "
 "or the name of a .prj file containing a WKT CRS definition."
 msgstr ""
+"渡すことができる座標参照システムは, :cpp:func:`OGRSpatialReference::SetFromUserInput` 呼び出しでサポートされているものです. "
+"これには, EPSG 投影, 地理, または複合 CRS (つまり EPSG:4296), 既知のテキスト (WKT) CRS 定義, PROJ.4 宣言, または WKT CRS 定義を含む .prj ファイルの名前が含まれます."
 
 #: ../../source/programs/ogr2ogr.rst:252
 msgid ""
@@ -286,10 +341,11 @@ msgid ""
 "output SRS is a dynamic CRS. Only taken into account if :option:`-a_srs` "
 "is used."
 msgstr ""
+"出力 SRS に関連付けられた座標エポックを割り当てます. 出力 SRS が動的 CRS の場合に便利です. :option:`-a_srs` が使用されている場合のみ考慮されます."
 
 #: ../../source/programs/ogr2ogr.rst:258
 msgid "Reproject/transform to this SRS on output, and assign it as output SRS."
-msgstr ""
+msgstr "出力時にこの SRS に再投影/変換し, 出力 SRS として割り当てます."
 
 #: ../../source/programs/ogr2ogr.rst:260
 msgid ""
@@ -297,6 +353,8 @@ msgid ""
 "will be by default the one found in the source layer when it is "
 "available, or as overridden by the user with :option:`-s_srs`"
 msgstr ""
+"再投影が発生するためには, ソース SRS が利用可能である必要があります. ソース SRS は, 利用可能な場合はソースレイヤーで見つかるものであり, "
+"ユーザーによって :option:`-s_srs` で上書きされます."
 
 #: ../../source/programs/ogr2ogr.rst:270
 msgid ""
@@ -304,6 +362,8 @@ msgid ""
 "output SRS is a dynamic CRS. Only taken into account if :option:`-t_srs` "
 "is used. It is also mutually exclusive with  :option:`-a_coord_epoch`."
 msgstr ""
+"出力 SRS に関連付けられた座標エポックを割り当てます. 出力 SRS が動的 CRS の場合に便利です. :option:`-t_srs` が使用されている場合のみ考慮されます. "
+"また, :option:`-a_coord_epoch` とは相互排他です."
 
 #: ../../source/programs/ogr2ogr.rst:274 ../../source/programs/ogr2ogr.rst:336
 msgid ""
@@ -311,6 +371,7 @@ msgid ""
 "were mutually exclusive, due to lack of support for transformations "
 "between two dynamic CRS."
 msgstr ""
+"PROJ 9.4 以前, :option:`-s_coord_epoch` と :option:`-t_coord_epoch` は, 2 つの動的 CRS 間の変換のサポートがないため, 相互排他でした."
 
 #: ../../source/programs/ogr2ogr.rst:279
 msgid ""
@@ -318,6 +379,8 @@ msgid ""
 "will be used. This option has only an effect if used together with "
 ":option:`-t_srs` to reproject."
 msgstr ""
+"ソース SRS をオーバーライドします. 指定されていない場合, 入力レイヤーで見つかった SRS が使用されます. "
+"再投影するために :option:`-t_srs` と一緒に使用された場合のみ効果があります."
 
 #: ../../source/programs/ogr2ogr.rst:289
 msgid ""
@@ -326,6 +389,8 @@ msgid ""
 "target SRS. The m, mm or deg suffixes can be specified to indicate that "
 "the value must be interpreted as being in meter, millimeter or degree."
 msgstr ""
+"ジオメトリの X/Y 座標解像度を設定/オーバーライドします. 数値値のみが指定されている場合, それはターゲット SRS の単位で表されていると見なされます. "
+"m, mm, または deg 接尾辞を指定して, 値がメートル, ミリメートル, または度であると解釈されることを示すことができます."
 
 #: ../../source/programs/ogr2ogr.rst:294
 msgid ""
@@ -336,12 +401,15 @@ msgid ""
 ":config:`OGR_APPLY_GEOM_SET_PRECISION` configuration option is set to "
 "``NO``)"
 msgstr ""
+"このオプションを指定すると, 出力ドライバに渡す前に, ジオメトリ (曲線でないもの) に :cpp:func:`OGRGeometry::SetPrecision` メソッドが実行され, "
+"潜在的に低い精度による無効なジオメトリの生成を回避します (:config:`OGR_APPLY_GEOM_SET_PRECISION` 構成オプションが ``NO`` に設定されていない限り)"
 
 #: ../../source/programs/ogr2ogr.rst:300
 msgid ""
 "If neither this option nor :option:`-unsetCoordPrecision` are specified, "
 "the coordinate resolution of the source layer, if available, is used."
 msgstr ""
+"このオプションも :option:`-unsetCoordPrecision` も指定されていない場合, 利用可能な場合はソースレイヤーの座標解像度が使用されます."
 
 #: ../../source/programs/ogr2ogr.rst:307
 msgid ""
@@ -352,6 +420,9 @@ msgid ""
 "this option nor :option:`-unsetCoordPrecision` are specified, the "
 "coordinate resolution of the source layer, if available, is used."
 msgstr ""
+"ジオメトリの Z 座標解像度を設定/オーバーライドします. 数値値のみが指定されている場合, それはターゲット SRS の単位で表されていると見なされます. "
+"m または mm 接尾辞を指定して, 値がメートルまたはミリメートルであると解釈されることを示すことができます. このオプションも :option:`-unsetCoordPrecision` も指定されていない場合, "
+"利用可能な場合はソースレイヤーの座標解像度が使用されます."
 
 #: ../../source/programs/ogr2ogr.rst:318
 msgid ""
@@ -359,12 +430,15 @@ msgid ""
 " nor :option:`-unsetCoordPrecision` are specified, the coordinate "
 "resolution of the source layer, if available, is used."
 msgstr ""
+"ジオメトリの M 座標解像度を設定/オーバーライドします. このオプションも :option:`-unsetCoordPrecision` も指定されていない場合, "
+"利用可能な場合はソースレイヤーの座標解像度が使用されます."
 
 #: ../../source/programs/ogr2ogr.rst:326
 msgid ""
 "Prevent the geometry coordinate resolution from being set on target "
 "layer(s)."
 msgstr ""
+"ターゲットレイヤーのジオメトリ座標解像度の設定を防ぎます."
 
 #: ../../source/programs/ogr2ogr.rst:332
 msgid ""
@@ -372,6 +446,7 @@ msgid ""
 "source SRS is a dynamic CRS. Only taken into account if :option:`-s_srs` "
 "is used."
 msgstr ""
+"ソース SRS に関連付けられた座標エポックを割り当てます. ソース SRS が動的 CRS の場合に便利です. :option:`-s_srs` が使用されている場合のみ考慮されます."
 
 #: ../../source/programs/ogr2ogr.rst:341
 msgid ""
@@ -380,6 +455,8 @@ msgid ""
 "a urn:ogc:def:coordinateOperation:EPSG::XXXX URN overriding the default "
 "transformation from the source to the target CRS."
 msgstr ""
+"PROJ 文字列 (単一ステップ操作または +proj=pipeline で始まる複数ステップ文字列), CoordinateOperation を記述する WKT2 文字列, "
+"またはソースからターゲット CRS へのデフォルトの変換をオーバーライドする urn:ogc:def:coordinateOperation:EPSG::XXXX URN です."
 
 #: ../../source/programs/ogr2ogr.rst:346
 msgid ""
@@ -389,6 +466,8 @@ msgid ""
 "order, and/or at the end of the pipeline if the target CRS has "
 "northing/easting axis order."
 msgstr ""
+"通常, ソース CRS が北方/東方軸順序を持つ場合はパイプラインの先頭に ``step proj=axisswap order=2,1`` を含め, "
+"ターゲット CRS が北方/東方軸順序を持つ場合はパイプラインの末尾に含める必要があります."
 
 #: ../../source/programs/ogr2ogr.rst:355
 msgid ""
@@ -400,6 +479,9 @@ msgid ""
 "preserved. This behavior can be disabled by setting ``-unsetFid``. This "
 "option is not compatible with ``-explodecollections``."
 msgstr ""
+"出力ドライバが FID を必要とするフォーマットの場合, 出力ドライバが自動的に新しい FID を割り当てる代わりに, ソース地物の FID を使用します. "
+"追加モードでない場合, 出力ドライバに FID レイヤー作成オプションがある場合, この動作はデフォルトであり, ソース FID 列の名前が使用され, "
+"ソース地物 ID が保持されることが試みられます. この動作は ``-unsetFid`` を設定することで無効にできます. このオプションは ``-explodecollections`` と互換性がありません."
 
 #: ../../source/programs/ogr2ogr.rst:365
 msgid ""
@@ -409,20 +491,24 @@ msgid ""
 "can also use the fact the 'fid' is a special field recognized by OGR SQL."
 " So, `-where \"fid in (1,3,5)\"` would select features 1, 3 and 5."
 msgstr ""
+"指定された場合, 指定された地物 ID の地物のみが処理されます. 空間クエリまたは属性クエリと排他的に操作します. 注意: "
+"地物 ID に基づいて複数の地物を選択する場合は, 'fid' が OGR SQL によって認識される特別なフィールドであることを利用できます. "
+"したがって, `-where \"fid in (1,3,5)\"` は地物 1, 3, および 5 を選択します."
 
 #: ../../source/programs/ogr2ogr.rst:373
 msgid "Limit the number of features per layer."
-msgstr ""
+msgstr "レイヤーごとの地物数を制限します."
 
 #: ../../source/programs/ogr2ogr.rst:377
 msgid "Input dataset open option (format specific)."
-msgstr ""
+msgstr "入力データセットオープンオプション (フォーマット固有)."
 
 #: ../../source/programs/ogr2ogr.rst:381
 msgid ""
 "Destination dataset open option (format specific), only valid in -update "
 "mode."
 msgstr ""
+"宛先データセットオープンオプション (フォーマット固有), -update モードでのみ有効です."
 
 #: ../../source/programs/ogr2ogr.rst:385
 msgid ""
@@ -431,6 +517,8 @@ msgid ""
 "transaction support. ``n`` can be set to unlimited to load the data into "
 "a single transaction."
 msgstr ""
+"トランザクションごとに n 個の地物をグループ化します (デフォルト 100,000). トランザクションサポートを持つ DBMS ドライバに書き込むときのパフォーマンスを向上させるために値を増やします. "
+"``n`` はデータを単一のトランザクションにロードするために無制限に設定できます."
 
 #: ../../source/programs/ogr2ogr.rst:392
 msgid ""
@@ -438,92 +526,103 @@ msgid ""
 "such mechanism), especially for drivers such as FileGDB that only support"
 " dataset level transaction in emulation mode."
 msgstr ""
+"データセットレベルのトランザクションの使用を強制します (そのような"
+"メカニズムをサポートするドライバに対して), 特にエミュレーションモードで"
+"のみデータセットレベルのトランザクションをサポートする FileGDB などのドライバに対して
+処理を行います."
 
 #: ../../source/programs/ogr2ogr.rst:398
 msgid "Clip geometries (before potential reprojection) to one of the following:"
-msgstr ""
+msgstr "(再投影前に) ジオメトリを次のいずれかにクリップします:"
 
 #: ../../source/programs/ogr2ogr.rst:400
 msgid "the specified bounding box (expressed in source SRS)"
-msgstr ""
+msgstr "指定されたバウンディングボックス (元の SRS で表現)"
 
 #: ../../source/programs/ogr2ogr.rst:401
 msgid "a WKT geometry (POLYGON or MULTIPOLYGON expressed in source SRS)"
-msgstr ""
+msgstr "WKT ジオメトリ (元の SRS で表現された POLYGON または MULTIPOLYGON)"
 
 #: ../../source/programs/ogr2ogr.rst:402 ../../source/programs/ogr2ogr.rst:426
 msgid "one or more geometries selected from a datasource"
-msgstr ""
+msgstr "データソースから選択された 1 つ以上のジオメトリ"
 
 #: ../../source/programs/ogr2ogr.rst:403
 msgid "the spatial extent of the -spat option if you use the spat_extent keyword."
-msgstr ""
+msgstr "spat_extent キーワードを使用する場合の -spat オプションの空間範囲."
 
 #: ../../source/programs/ogr2ogr.rst:405
 msgid ""
 "When specifying a datasource, you will generally want to use -clipsrc in "
 "combination of the -clipsrclayer, -clipsrcwhere or -clipsrcsql options."
 msgstr ""
+"データソースを指定する場合, 通常は -clipsrclayer, -clipsrcwhere, または -clipsrcsql オプションと組み合わせて -clipsrc を使用する必要があります."
 
 #: ../../source/programs/ogr2ogr.rst:410
 msgid ""
 "Select desired geometries from the source clip datasource using an SQL "
 "query."
 msgstr ""
+"SQL クエリを使用して, ソースクリップデータソースから必要なジオメトリを選択します."
 
 #: ../../source/programs/ogr2ogr.rst:414
 msgid "Select the named layer from the source clip datasource."
-msgstr ""
+msgstr "ソースクリップデータソースから指定されたレイヤーを選択します."
 
 #: ../../source/programs/ogr2ogr.rst:418
 msgid ""
 "Restrict desired geometries from the source clip layer based on an "
 "attribute query."
 msgstr ""
+"属性クエリに基づいて, ソースクリップレイヤーから必要なジオメトリを制限します."
 
 #: ../../source/programs/ogr2ogr.rst:422
 msgid "Clip geometries (after potential reprojection) to one of the following:"
-msgstr ""
+msgstr "(再投影後に) ジオメトリを次のいずれかにクリップします:"
 
 #: ../../source/programs/ogr2ogr.rst:424
 msgid "the specified bounding box (expressed in destination SRS)"
-msgstr ""
+msgstr "指定されたバウンディングボックス (変換先 SRS で表現)"
 
 #: ../../source/programs/ogr2ogr.rst:425
 msgid "a WKT geometry (POLYGON or MULTIPOLYGON expressed in destination SRS)"
-msgstr ""
+msgstr "WKT ジオメトリ (変換先 SRS で表現された POLYGON または MULTIPOLYGON)"
 
 #: ../../source/programs/ogr2ogr.rst:428
 msgid ""
 "When specifying a datasource, you will generally want to use -clipdst in "
 "combination with the -clipdstlayer, -clipdstwhere or -clipdstsql options."
 msgstr ""
+"データソースを指定する場合, 通常は -clipdstlayer, -clipdstwhere, または -clipdstsql オプションと組み合わせて -clipdst を使用する必要があります."
 
 #: ../../source/programs/ogr2ogr.rst:433
 msgid ""
 "Select desired geometries from the destination clip datasource using an "
 "SQL query."
 msgstr ""
+"SQL クエリを使用して, 宛先クリップデータソースから必要なジオメトリを選択します."
 
 #: ../../source/programs/ogr2ogr.rst:437
 msgid "Select the named layer from the destination clip datasource."
-msgstr ""
+msgstr "宛先クリップデータソースから指定されたレイヤーを選択します."
 
 #: ../../source/programs/ogr2ogr.rst:441
 msgid ""
 "Restrict desired geometries from the destination clip layer based on an "
 "attribute query."
 msgstr ""
+"属性クエリに基づいて, 宛先クリップレイヤーから必要なジオメトリを制限します."
 
 #: ../../source/programs/ogr2ogr.rst:445
 msgid "Split geometries crossing the dateline meridian (long. = +/- 180deg)"
-msgstr ""
+msgstr "日付変更線 (long. = +/- 180deg) を横切るジオメトリを分割します."
 
 #: ../../source/programs/ogr2ogr.rst:449
 msgid ""
 "Offset from dateline in degrees (default long. = +/- 10deg, geometries "
 "within 170deg to -170deg will be split)"
 msgstr ""
+"日付変更線からのオフセット (デフォルト long. = +/- 10deg, 170deg から -170deg の範囲内のジオメトリが分割されます)"
 
 #: ../../source/programs/ogr2ogr.rst:454
 msgid ""
@@ -531,6 +630,7 @@ msgid ""
 " topology per feature, in particular for polygon geometries, but not for "
 "a whole layer."
 msgstr ""
+"単純化のための距離許容度. 注意: 使用されるアルゴリズムは, 特にポリゴンジオメトリについて, 地物ごとにトポロジーを保存しますが, レイヤ全体には保存しません."
 
 #: ../../source/programs/ogr2ogr.rst:458
 msgid ""
@@ -540,6 +640,8 @@ msgid ""
 "georeferenced units of the source vector dataset. This option is applied "
 "before the reprojection implied by :option:`-t_srs`"
 msgstr ""
+"このオプションの指定値は, :cpp:func:`OGRGeometry::Simplify` メソッドを使用して出力ジオメトリの連続する点をマージするために使用される許容度です. "
+"距離の単位は, ソースベクトルデータセットのジオリファレンス単位です. このオプションは :option:`-t_srs` によって暗黙的に再投影される前に適用されます."
 
 #: ../../source/programs/ogr2ogr.rst:467
 msgid ""
@@ -549,6 +651,8 @@ msgid ""
 "raster. This option is applied before the reprojection implied by "
 ":option:`-t_srs`"
 msgstr ""
+"このオプションの指定値は, 中間点が追加される前の出力ジオメトリの連続する 2 つの点の最大距離です. 距離の単位は, ソースラスタのジオリファレンス単位です. "
+"このオプションは :option:`-t_srs` によって暗黙的に再投影される前に適用されます."
 
 #: ../../source/programs/ogr2ogr.rst:474
 msgid ""
@@ -557,6 +661,8 @@ msgid ""
 "geometries to ensure they are valid regarding the rules of the Simple "
 "Features specification."
 msgstr ""
+"ジオメトリが Simple Features 仕様のルールに従って有効であることを確認するために, :cpp:func:`OGRGeometry::MakeValid` 操作, および "
+":cpp:func:`OGRGeometryFactory::removeLowerDimensionSubGeoms` を実行します."
 
 #: ../../source/programs/ogr2ogr.rst:482
 msgid ""
@@ -565,6 +671,8 @@ msgid ""
 "specification. If they are not, the feature is skipped. This check is "
 "done after all other geometry operations."
 msgstr ""
+"ジオメトリが Simple Features 仕様のルールに従って有効であるかどうかを確認するために, ジオメトリに :cpp:func:`OGRGeometry::IsValid` 操作を実行します. "
+"有効でない場合, 地物はスキップされます. このチェックは他のすべてのジオメトリ操作の後に行われます."
 
 #: ../../source/programs/ogr2ogr.rst:491
 msgid ""
@@ -579,6 +687,11 @@ msgid ""
 "Also note that this option is without effects on fields whose presence "
 "and type is hard-coded in the output driver (e.g KML, GPX)"
 msgstr ""
+"指定されたタイプのフィールドを宛先レイヤーの文字列型のフィールドに変換します. 有効なタイプは : ``Integer``, ``Integer64``, "
+"``Real``, ``String``, ``Date``, ``Time``, ``DateTime``, ``Binary``, "
+"``IntegerList``, ``Integer64List``, ``RealList``, ``StringList`` です. 特別な値 ``All`` はすべてのフィールドを文字列に変換するために使用できます. "
+"これは, 長い SQL クエリを入力することを避けることができる OGR SQL の CAST 演算子の代替方法です. これは, ソースドライバで使用されるフィールドタイプに影響を与えず, "
+"後からの変換のみです. また, このオプションは, 出力ドライバでハードコードされたフィールドの存在とタイプに影響を与えません (例: KML, GPX) ことに注意してください."
 
 #: ../../source/programs/ogr2ogr.rst:503
 msgid ""
@@ -595,6 +708,10 @@ msgid ""
 "is without effects on fields whose presence and type is hard-coded in the"
 " output driver (e.g KML, GPX)"
 msgstr ""
+"指定されたタイプのフィールドを別のタイプに変換します. 有効なタイプは : ``Integer``, ``Integer64``, ``Real``, ``String``, ``Date``, ``Time``, "
+"``DateTime``, ``Binary``, ``IntegerList``, ``Integer64List``, ``RealList``, ``StringList`` です. タイプには, ``Integer(Boolean)``, ``Real(Float32)``, ... のようなサブタイプを含めることもできます. "
+"特別な値 ``All`` はすべてのフィールドを別のタイプに変換するために使用できます. これは, 長い SQL クエリを入力することを避けることができる OGR SQL の CAST 演算子の代替方法です. "
+"これは, -fieldTypeToString の一般化です. これは, ソースドライバで使用されるフィールドタイプに影響を与えず, 後からの変換のみです. また, このオプションは, 出力ドライバでハードコードされたフィールドの存在とタイプに影響を与えません (例: KML, GPX) ことに注意してください."
 
 #: ../../source/programs/ogr2ogr.rst:520
 msgid ""
@@ -602,26 +719,30 @@ msgid ""
 " to the target timezone expressed with :option:`-dateTimeTo`. Datetime "
 "whose timezone is unknown or localtime are not modified."
 msgstr ""
+"ソース値で指定されたタイムゾーンから :option:`-dateTimeTo` で表現されたターゲット"
+"タイムゾーンに日時値を変換します. タイムゾーンが不明またはローカルタイムの日時は変更されません."
 
 #: ../../source/programs/ogr2ogr.rst:524
 msgid "HH must be in the [0,14] range and MM=00, 15, 30 or 45."
-msgstr ""
+msgstr "HH は [0,14] の範囲内で, MM=00, 15, 30, または 45 である必要があります."
 
 #: ../../source/programs/ogr2ogr.rst:528
 msgid "Set field width and precision to 0."
-msgstr ""
+msgstr "フィールド幅と精度を 0 に設定します."
 
 #: ../../source/programs/ogr2ogr.rst:532
 msgid ""
 "Split fields of type StringList, RealList or IntegerList into as many "
 "fields of type String, Real or Integer as necessary."
 msgstr ""
+"StringList, RealList, または IntegerList タイプのフィールドを, 必要なだけの String, Real, または Integer タイプのフィールドに分割します."
 
 #: ../../source/programs/ogr2ogr.rst:537
 msgid ""
 "To be combined with ``-splitlistfields`` to limit the number of subfields"
 " created for each split field."
 msgstr ""
+"各分割フィールドに作成されるサブフィールドの数を制限するために ``-splitlistfields`` と組み合わせるために使用されます."
 
 #: ../../source/programs/ogr2ogr.rst:542
 msgid ""
@@ -631,10 +752,13 @@ msgid ""
 "original_fid, * FROM ...\"`` can be used to store the original FID if "
 "needed."
 msgstr ""
+"ソースファイルの任意のジオメトリコレクション内の各ジオメトリに 1 つの地物を生成します. これは ``-sql`` オプションの後に適用されます. "
+"このオプションは ``-preserve_fid`` と互換性がありませんが, 必要に応じて元の FID を保存するために"
+" ``-sql \"SELECT fid AS original_fid, * FROM ...\"`` を使用できます."
 
 #: ../../source/programs/ogr2ogr.rst:549
 msgid "Uses the specified field to fill the Z coordinate of geometries."
-msgstr ""
+msgstr "指定されたフィールドを使用してジオメトリの Z 座標を埋めます."
 
 #: ../../source/programs/ogr2ogr.rst:553
 msgid ""
@@ -645,16 +769,20 @@ msgid ""
 "output dataset. This option may be provided multiple times to provide a "
 "set of GCPs (at least 2 GCPs are needed)."
 msgstr ""
+"指定された地上制御点を使用して座標変換を計算します. 変換方法は :option:`-order` または :option:`-tps` オプションを指定することで選択できます. "
+"gdal_edit や gdal_translate のようなラスタツールとは異なり, GCP は出力データセットに追加されません. このオプションは複数回提供することができ, "
+"(少なくとも 2 つの GCP が必要です)."
 
 #: ../../source/programs/ogr2ogr.rst:563
 msgid ""
 "Order of polynomial used for warping (1 to 3). The default is to select a"
 " polynomial order based on the number of GCPs."
 msgstr ""
+"変形に使用される多項式の順序 (1 から 3). デフォルトは, GCP の数に基づいて多項式の順序を選択します."
 
 #: ../../source/programs/ogr2ogr.rst:568
 msgid "Force use of thin plate spline transformer based on available GCPs."
-msgstr ""
+msgstr "利用可能な GCP に基づいて薄板スプライン変換器の使用を強制します."
 
 #: ../../source/programs/ogr2ogr.rst:572
 msgid ""
@@ -668,6 +796,9 @@ msgid ""
 "same order. This setting should be used along with the ``-append`` "
 "setting."
 msgstr ""
+"ソースから宛先にコピーするフィールドのインデックスのリストを指定します. リストで指定された (n) 番目の値は, ソースレイヤの n 番目のフィールドをコピーするためのターゲットレイヤ定義内のフィールドのインデックスです. "
+"インデックスのカウントはゼロから始まります. フィールドを省略するには, -1 の値を指定します. ソースレイヤのフィールド数と同じ数の値がリストに含まれている必要があります. "
+"フィールドを同じ順序で転送するように指定するには 'identity' 設定を使用できます. この設定は ``-append`` 設定と一緒に使用する必要があります."
 
 #: ../../source/programs/ogr2ogr.rst:583
 msgid ""
@@ -679,24 +810,30 @@ msgid ""
 " layers. Note that if you plan to use -addfields, you may need to combine"
 " it with -forceNullable, including for the initial import."
 msgstr ""
+"これは ``-append`` の特殊なバージョンです. ``-append`` とは異なり, ``-addfields`` は, ソースレイヤで見つかった新しいフィールドを既存のターゲットレイヤに追加する効果があります. "
+"これは, 厳密に同一の構造を持たないファイルをマージするときに便利です. これは, 既存の空でないレイヤにフィールドを追加することをサポートしていない出力フォーマットでは機能しないかもしれません. "
+"-addfields を使用する予定の場合は, 初期インポートにも -forceNullable を含める必要があるかもしれません."
 
 #: ../../source/programs/ogr2ogr.rst:593
 msgid ""
 "Do field name matching between source and existing target layer in a more"
 " relaxed way if the target driver has an implementation for it."
 msgstr ""
+"ターゲットドライバにその実装がある場合, ソースと既存のターゲットレイヤのフィールド名の一致をより緩和された方法で行います."
 
 #: ../../source/programs/ogr2ogr.rst:598
 msgid ""
 "Do not propagate not-nullable constraints to target layer if they exist "
 "in source layer."
 msgstr ""
+"ソースレイヤに存在する場合, ターゲットレイヤに非 NULL 制約を伝播しません."
 
 #: ../../source/programs/ogr2ogr.rst:603
 msgid ""
 "Do not propagate default field values to target layer if they exist in "
 "source layer."
 msgstr ""
+"ソースレイヤに存在する場合, ターゲットレイヤにデフォルトフィールド値を伝播しません."
 
 #: ../../source/programs/ogr2ogr.rst:608
 msgid ""
@@ -704,10 +841,11 @@ msgid ""
 "feature IDs from being re-used for the target layer. This option can for "
 "example be useful if selecting source features with a ORDER BY clause."
 msgstr ""
+"ソース FID 列の名前とソース地物 ID がターゲットレイヤで再利用されるのを防ぐために指定できます. このオプションは, ORDER BY 句でソース地物を選択する場合に便利です."
 
 #: ../../source/programs/ogr2ogr.rst:616
 msgid "Treat empty string values as null."
-msgstr ""
+msgstr "空の文字列値を NULL として扱います."
 
 #: ../../source/programs/ogr2ogr.rst:622
 msgid ""
@@ -716,18 +854,22 @@ msgid ""
 "(``{dstfield}_resolved``), that will contain the description of the coded"
 " value."
 msgstr ""
+"これが指定されると, コード化されたフィールドドメインにリンクされた選択されたフィールドは, "
+"コード化された値の説明を含む追加のフィールド (``{dstfield}_resolved``) が付属します."
 
 #: ../../source/programs/ogr2ogr.rst:628
 msgid ""
 "To disable copying of metadata from source dataset and layers into target"
 " dataset and layers, when supported by output driver."
 msgstr ""
+"出力ドライバでサポートされている場合, ソースデータセットとレイヤからメタデータをターゲットデータセットとレイヤにコピーしないようにします."
 
 #: ../../source/programs/ogr2ogr.rst:633
 msgid ""
 "Passes a metadata key and value to set on the output dataset, when "
 "supported by output driver."
 msgstr ""
+"出力ドライバでサポートされている場合, 出力データセットに設定するメタデータキーと値を渡します."
 
 #: ../../source/programs/ogr2ogr.rst:638
 msgid ""
@@ -735,24 +877,26 @@ msgid ""
 "captured by OGR abstraction, that are otherwise preserved by some drivers"
 " (like GeoJSON) when converting to same format."
 msgstr ""
+"同じフォーマットに変換するときに, 一部のドライバ (GeoJSON のような) によって保存される, OGR 抽象化によってキャプチャされないソースフォーマットの詳細であるネイティブデータのコピーを無効にします."
 
 #: ../../source/programs/ogr2ogr.rst:646
 msgid "Output dataset name."
-msgstr ""
+msgstr "出力データセット名."
 
 #: ../../source/programs/ogr2ogr.rst:650
 msgid "Source dataset name."
-msgstr ""
+msgstr "ソースデータセット名."
 
 #: ../../source/programs/ogr2ogr.rst:654
 msgid ""
 "One or more source layer names to copy to the output dataset. If no layer"
 " names are passed, then all source layers are copied."
 msgstr ""
+"出力データセットにコピーする 1 つ以上のソースレイヤ名. レイヤ名が渡されない場合, すべてのソースレイヤがコピーされます."
 
 #: ../../source/programs/ogr2ogr.rst:659
 msgid "Performance Hints"
-msgstr ""
+msgstr "パフォーマンスヒント"
 
 #: ../../source/programs/ogr2ogr.rst:661
 msgid ""
@@ -765,6 +909,9 @@ msgid ""
 "of rows. However, note that -skipfailures overrides -gt and sets the size"
 " of transactions to 1."
 msgstr ""
+"トランザクショナル DBMS (SQLite/PostgreSQL,MySQL, など) に書き込む場合, BEGIN TRANSACTION と COMMIT TRANSACTION ステートメントの間で実行される INSERT ステートメントの数を増やすと有益である場合があります. "
+"この数は -gt オプションで指定されます. たとえば, SQLite の場合, -gt 65536 を明示的に定義することで, 数十万行または数百万行を含むいくつかのテーブルを埋める際に最適なパフォーマンスが得られます. "
+"ただし, -skipfailures は -gt をオーバーライドし, トランザクションのサイズを 1 に設定します."
 
 #: ../../source/programs/ogr2ogr.rst:669
 msgid ""
@@ -772,16 +919,18 @@ msgid ""
 " for a significant insertion performance boost. See the PG driver "
 "documentation page."
 msgstr ""
+"PostgreSQL の場合, :config:`PG_USE_COPY` 設定オプションを YES に設定すると, 挿入パフォーマンスが大幅に向上します. PG ドライバのドキュメントページを参照してください."
 
 #: ../../source/programs/ogr2ogr.rst:672
 msgid ""
 "More generally, consult the documentation page of the input and output "
 "drivers for performance hints."
 msgstr ""
+"一般的には, パフォーマンスヒントのために入力および出力ドライバのドキュメントページを参照してください."
 
 #: ../../source/programs/ogr2ogr.rst:676
 msgid "Known issues"
-msgstr ""
+msgstr "既知の問題"
 
 #: ../../source/programs/ogr2ogr.rst:678
 msgid ""
@@ -797,6 +946,10 @@ msgid ""
 "approach. If that flag is needed with GDAL >= 3.9, please file an issue "
 "on the `GDAL issue tracker <https://github.com/OSGeo/gdal/issues>`__."
 msgstr ""
+"GDAL 3.8 以降, ogr2ogr は一部のソースフォーマット (特に GeoPackage または FlatGeoBuf) に対して Arrow 配列ベースの API (cf :ref:`rfc-86`) を内部的に使用し, "
+"最も基本的な操作に対してパフォーマンスを向上させます. この ogr2ogr 内部ロジックの大幅な変更により, 完全に安定化するために GDAL 3.8.x バグ修正リリース全体で多くの修正が必要でした. "
+"ほとんどの問題は GDAL 3.9 で解決されていると考えています. 以前の GDAL バージョンで満たされないエラーが発生した場合, ogr2ogr コマンドラインで ``--config OGR2OGR_USE_ARROW_API NO`` を指定して, "
+"反復的な地物ベースのアプローチを使用する古典的なアルゴリズムを選択できます. GDAL >= 3.9 でそのフラグが必要な場合は, `GDAL issue tracker <https://github.com/OSGeo/gdal/issues>`__ に問題を報告してください."
 
 #: ../../source/programs/ogr2ogr.rst:691
 msgid "C API"
@@ -804,47 +957,49 @@ msgstr ""
 
 #: ../../source/programs/ogr2ogr.rst:693
 msgid "This utility is also callable from C with :cpp:func:`GDALVectorTranslate`."
-msgstr ""
+msgstr "このユーティリティは, :cpp:func:`GDALVectorTranslate` で C からも呼び出すことができます."
 
 #: ../../source/programs/ogr2ogr.rst:698
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/ogr2ogr.rst:700
 msgid "Basic conversion from Shapefile to GeoPackage:"
-msgstr ""
+msgstr "Shapefile から GeoPackage への基本的な変換:"
 
 #: ../../source/programs/ogr2ogr.rst:706
 msgid ""
 "Change the coordinate reference system from ``EPSG:4326`` to "
 "``EPSG:3857``:"
 msgstr ""
+"座標参照系を ``EPSG:4326`` から ``EPSG:3857`` に変更:"
 
 #: ../../source/programs/ogr2ogr.rst:712
 msgid "Example appending to an existing layer:"
-msgstr ""
+msgstr "既存のレイヤに追加する例:"
 
 #: ../../source/programs/ogr2ogr.rst:718
 msgid "Clip input layer with a bounding box (<xmin> <ymin> <xmax> <ymax>):"
-msgstr ""
+msgstr "バウンディングボックス (<xmin> <ymin> <xmax> <ymax>) で入力レイヤをクリップ:"
 
 #: ../../source/programs/ogr2ogr.rst:724
 msgid "Filter Features by a ``-where`` clause:"
-msgstr ""
+msgstr "``-where`` 句で地物をフィルタリング:"
 
 #: ../../source/programs/ogr2ogr.rst:732
 msgid "More examples are given in the individual format pages."
-msgstr ""
+msgstr "個々のフォーマットページには, さらに多くの例が記載されています."
 
 #: ../../source/programs/ogr2ogr.rst:735
 msgid "Advanced examples"
-msgstr ""
+msgstr "高度な例"
 
 #: ../../source/programs/ogr2ogr.rst:737
 msgid ""
 "Reprojecting from ETRS_1989_LAEA_52N_10E to EPSG:4326 and clipping to a "
 "bounding box:"
 msgstr ""
+"ETRS_1989_LAEA_52N_10E から EPSG:4326 に再投影し, バウンディングボックスにクリップ:"
 
 #: ../../source/programs/ogr2ogr.rst:743
 msgid ""
@@ -853,20 +1008,23 @@ msgid ""
 " the second field of the source layer is ignored, the third field of the "
 "source layer used to fill the fifth field of the target layer."
 msgstr ""
+"``-fieldmap`` 設定を使用します. ソースレイヤの最初のフィールドは, ターゲットレイヤの 3 番目のフィールド (インデックス 2 = 3 番目のフィールド) を埋めるために使用され, "
+"ソースレイヤの 2 番目のフィールドは無視され, ソースレイヤの 3 番目のフィールドはターゲットレイヤの 5 番目のフィールドを埋めるために使用されます."
 
 #: ../../source/programs/ogr2ogr.rst:752
 msgid "Outputting geometries with the CSV driver."
-msgstr ""
+msgstr "CSV ドライバでジオメトリを出力します."
 
 #: ../../source/programs/ogr2ogr.rst:754
 msgid ""
 "By default, this driver does not preserve geometries on layer creation by"
 " default. An explicit layer creation option is needed:"
 msgstr ""
+"デフォルトでは, このドライバはレイヤ作成時にジオメトリをデフォルトで保存しません. 明示的なレイヤ作成オプションが必要です:"
 
 #: ../../source/programs/ogr2ogr.rst:761
 msgid "Extracting only geometries."
-msgstr ""
+msgstr "ジオメトリのみを抽出します."
 
 #: ../../source/programs/ogr2ogr.rst:763
 msgid ""
@@ -874,12 +1032,14 @@ msgid ""
 "geometry column, or not. First check, with ogrinfo if there is a reported"
 " geometry column."
 msgstr ""
+"入力レイヤに名前付きジオメトリ列があるかどうかによって, 異なる状況があります. まず, ogrinfo で報告されたジオメトリ列があるかどうかを確認します."
 
 #: ../../source/programs/ogr2ogr.rst:771
 msgid ""
 "In that situation where the input format is a FileGeodatabase, it is "
 "called SHAPE and can thus be referenced directly in a SELECT statement."
 msgstr ""
+"入力フォーマットが FileGeodatabase の場合, それは SHAPE と呼ばれ, そのため SELECT ステートメントで直接参照できます."
 
 #: ../../source/programs/ogr2ogr.rst:779
 msgid ""
@@ -891,6 +1051,9 @@ msgid ""
 "require that double quotes are escaped and the final SELECT statement "
 "could look like:"
 msgstr ""
+"名前付きジオメトリ列がない shapefile の場合, デフォルトの :ref:`OGR SQL <ogr_sql_dialect>` 方言を使用すると, 暗黙のジオメトリ列を指定するための特別な名前として ``_ogr_geometry_`` を使用できます. "
+"名前はアンダースコアで始まり, SQL 構文では, ダブルクォートで囲まれている必要があります. さらに, コマンドラインインタプリタはダブルクォートをエスケープする必要があるかもしれず, "
+"最終的な SELECT ステートメントは次のようになります:"
 
 #: ../../source/programs/ogr2ogr.rst:791
 msgid ""
@@ -898,6 +1061,7 @@ msgid ""
 "geometry name is ``geometry`` when the source geometry column has no "
 "name."
 msgstr ""
+":ref:`SQL SQLite <sql_sqlite_dialect>` 方言を使用する場合, ソースジオメトリ列に名前がない場合, 特別なジオメトリ名は ``geometry`` です."
 
 #~ msgid ""
 #~ "SQL statement to execute. The resulting"

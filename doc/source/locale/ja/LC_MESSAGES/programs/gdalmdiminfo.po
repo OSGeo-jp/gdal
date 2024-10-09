@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/gdalmdiminfo.rst:11
 msgid "Reports structure and content of a multidimensional dataset."
-msgstr ""
+msgstr "多次元データセットの構造と内容を報告します."
 
 #: ../../source/programs/gdalmdiminfo.rst:16
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/gdalmdiminfo.rst:26
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/gdalmdiminfo.rst:28
 msgid ""
@@ -42,32 +42,35 @@ msgid ""
 "following `JSON schema "
 "<https://github.com/OSGeo/gdal/blob/master/data/gdalmdiminfo_output.schema.json>`_"
 msgstr ""
+":program:`gdalmdiminfo` プログラムは, GDAL がサポートする多次元ラスターデータセットについてのさまざまな情報を JSON 出力でリストします. 以下の `JSON スキーマ "
+"<https://github.com/OSGeo/gdal/blob/master/data/gdalmdiminfo_output.schema.json>`_ に従います."
 
 #: ../../source/programs/gdalmdiminfo.rst:32
 msgid "The following command line parameters can appear in any order"
-msgstr ""
+msgstr "以下のコマンドラインパラメータは任意の順序で現れることができます"
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的な GDAL コマンドラインオプションの使用方法の簡単なメッセージを表示して終了します."
 
 #: ../../source/programs/gdalmdiminfo.rst:40
 msgid "Most verbose output. Report attribute data types and array values."
-msgstr ""
+msgstr "大多数の冗長な出力. 属性データ型と配列値を報告します."
 
 #: ../../source/programs/gdalmdiminfo.rst:44
 msgid "Outputs on a single line without any indentation."
-msgstr ""
+msgstr "インデントなしで 1 行に出力します."
 
 #: ../../source/programs/gdalmdiminfo.rst:48
 msgid "Name of the array used to restrict the output to the specified array."
-msgstr ""
+msgstr "出力を指定された配列に制限するために使用される配列の名前."
 
 #: ../../source/programs/gdalmdiminfo.rst:52
 msgid ""
@@ -75,12 +78,14 @@ msgid ""
 "array values. By default, unlimited. Only taken into account if used with"
 " -detailed."
 msgstr ""
+"各次元の値の数. 配列値の表示を制限するために使用されます. デフォルトでは無制限です. -detailed と一緒に使用された場合のみ考慮されます."
 
 #: ../../source/programs/gdalmdiminfo.rst:58
 msgid ""
 "Dataset open option (format specific). This option may be used several "
 "times."
 msgstr ""
+"データセットオープンオプション (フォーマット固有). このオプションは複数回使用できます."
 
 #: ../../source/programs/gdalmdiminfo.rst:63
 msgid ""
@@ -88,12 +93,15 @@ msgid ""
 "reported arrays. Such option is format specific. Consult driver "
 "documentation. This option may be used several times."
 msgstr ""
+"報告される配列をフィルタリングするために :cpp:func:`GDALGroup::GetMDArrayNames` "
+"に渡されるオプション. このようなオプションはフォーマット固有です. ドライバのドキュメントを参照してください. このオプションは複数回使用できます."
 
 #: ../../source/programs/gdalmdiminfo.rst:69
 msgid ""
 "Read and display image statistics. Force computation if no statistics are"
 " stored in an image."
 msgstr ""
+"画像統計を読み込んで表示します. 画像に統計が保存されていない場合は計算を強制します."
 
 #: ../../source/programs/options/if.rst:3
 msgid ""
@@ -105,6 +113,11 @@ msgid ""
 "dataset. In particular, some drivers have requirements on file "
 "extensions."
 msgstr ""
+"入力ファイルを開こうとするフォーマット/ドライバ名. 通常は指定する必要はありませんが, "
+"適切なドライバを選択できない場合に自動ドライバ検出をスキップするために使用できます. "
+"このオプションは複数回繰り返すことができ, 複数の候補ドライバを指定するために使用できます. "
+"これらのドライバをデータセットを開くように強制するわけではないことに注意してください. "
+"特に, 一部のドライバはファイル拡張子に要件を持っています."
 
 #: ../../source/programs/gdalmdiminfo.rst:78
 msgid "C API"
@@ -112,17 +125,17 @@ msgstr ""
 
 #: ../../source/programs/gdalmdiminfo.rst:80
 msgid "This utility is also callable from C with :cpp:func:`GDALMultiDimInfo`."
-msgstr ""
+msgstr "このユーティリティは :cpp:func:`GDALMultiDimInfo` を使用して C からも呼び出すことができます."
 
 #: ../../source/programs/gdalmdiminfo.rst:83
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/gdalmdiminfo.rst:85
 msgid "Display general structure1"
-msgstr ""
+msgstr "一般的な構造1を表示"
 
 #: ../../source/programs/gdalmdiminfo.rst:194
 msgid "Display detailed information about a given array"
-msgstr ""
+msgstr "指定された配列に関する詳細情報を表示"
 
