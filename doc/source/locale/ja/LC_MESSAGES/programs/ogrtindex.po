@@ -25,15 +25,15 @@ msgstr ""
 
 #: ../../source/programs/ogrtindex.rst:9
 msgid "Creates a tileindex."
-msgstr ""
+msgstr "タイルインデックスを作成します."
 
 #: ../../source/programs/ogrtindex.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/ogrtindex.rst:28
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/ogrtindex.rst:30
 msgid ""
@@ -43,42 +43,51 @@ msgid ""
 "`MapServer <http://mapserver.org/>`__ for tiled access to layers using "
 "the OGR connection type."
 msgstr ""
+":program:`ogrtindex` プログラムは、タイルインデックスを作成するために使"
+"用されます.タイルインデックスは、他のファイルの識別子とその空間範囲"
+"のリストを含むファイルです.これは主に、OGR接続タイプを使用してレイヤ"
+"にタイルアクセスするために `MapServer <http://mapserver.org/>`__ で使われ"
+"ることを意図しています."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的なGDALコマンドラインオプションの使用方法を簡単に表示して終了し"
+"ます."
 
 #: ../../source/programs/ogrtindex.rst:42
 msgid "Add layer number ``n`` from each source file in the tile index."
-msgstr ""
+msgstr "タイルインデックスにソースファイルの各レイヤ番号 ``n`` を追加します."
 
 #: ../../source/programs/ogrtindex.rst:46
 msgid "Add the layer named ``name`` from each source file in the tile index."
-msgstr ""
+msgstr "タイルインデックスにソースファイルの各レイヤ名 ``name`` を追加します."
 
 #: ../../source/programs/ogrtindex.rst:50
 msgid "Select an output format name. The default is to create a shapefile."
-msgstr ""
+msgstr "出力フォーマット名を選択します.デフォルトはシェープファイルを作成します."
 
 #: ../../source/programs/ogrtindex.rst:54
 msgid "The name to use for the dataset name. Defaults to LOCATION."
-msgstr ""
+msgstr "データセット名に使用する名前です.デフォルトはLOCATIONです."
 
 #: ../../source/programs/ogrtindex.rst:58
 msgid "Filenames are written with absolute paths"
-msgstr ""
+msgstr "ファイル名は絶対パスで書き込まれます"
 
 #: ../../source/programs/ogrtindex.rst:62
 msgid ""
 "Only layers with same projection ref as layers already inserted in the "
 "tileindex will be inserted."
 msgstr ""
+"タイルインデックスに挿入されたレイヤと同じ投影参照を持つレイヤのみが挿入"
+"されます."
 
 #: ../../source/programs/ogrtindex.rst:67
 msgid ""
@@ -88,18 +97,26 @@ msgid ""
 "polygons in the same coordinate reference system as the input vector "
 "layers."
 msgstr ""
+"入力ファイルの範囲は、目的のターゲット座標参照系に変換されます.このオプショ"
+"ンを使用すると、MapServer < 7.2 と互換性のないファイルが生成されます.デフォ"
+"ルトでは、入力ベクトルレイヤと同じ座標参照系で単純な矩形ポリゴンが作成さ"
+"れます."
 
 #: ../../source/programs/ogrtindex.rst:77
 msgid ""
 "The name of the field to store the SRS of each tile. This field name can "
 "be used as the value of the TILESRS keyword in MapServer >= 7.2."
 msgstr ""
+"各タイルのSRSを格納するフィールドの名前です.このフィールド名は、MapServer"
+" >= 7.2 でのTILESRSキーワードの値として使用できます."
 
 #: ../../source/programs/ogrtindex.rst:84
 msgid ""
 "The format in which the SRS of each tile must be written. Available "
 "formats are: ``AUTO``, ``WKT``, ``EPSG``, ``PROJ``."
 msgstr ""
+"各タイルのSRSを書き込む形式です.利用可能なフォーマットは: ``AUTO``, ``WKT``"
+", ``EPSG``, ``PROJ`` です."
 
 #: ../../source/programs/ogrtindex.rst:91
 msgid ""
@@ -108,6 +125,10 @@ msgid ""
 " disabled. Be aware that resulting index may be incompatible with "
 "MapServer!"
 msgstr ""
+"デフォルトでは、ogrtindex はインデックスに挿入されたすべてのレイヤが同じ"
+"属性スキーマを持っているかどうかをチェックします.このオプションを指定す"
+"ると、このテストが無効になります.生成されたインデックスがMapServerと互換"
+"性がない可能性があることに注意してください!"
 
 #: ../../source/programs/ogrtindex.rst:96
 msgid ""
@@ -115,16 +136,21 @@ msgid ""
 "assumed that all layers in source datasets should be added to the tile "
 "index as independent records."
 msgstr ""
+":option:`-lnum` または :option:`-lname` 引数が指定されていない場合、ソース"
+"データセットのすべてのレイヤが独立したレコードとしてタイルインデックスに"
+"追加されると仮定されます."
 
 #: ../../source/programs/ogrtindex.rst:100
 msgid ""
 "If the tile index already exists it will be appended to, otherwise it "
 "will be created."
 msgstr ""
+"タイルインデックスがすでに存在する場合は追加され、それ以外の場合は作成さ"
+"れます."
 
 #: ../../source/programs/ogrtindex.rst:104
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/ogrtindex.rst:106
 msgid ""
@@ -132,4 +158,6 @@ msgid ""
 "tile index of the ``BL2000_LINK`` layers in all the NTF files in the "
 ":file:`wrk` directory:"
 msgstr ""
-
+"この例では、:file:`wrk` ディレクトリ内のすべてのNTFファイルの ``BL2000_LINK"
+"`` レイヤのタイルインデックスを含むシェープファイル (:file:`tindex.shp`) が"
+"作成されます:"
