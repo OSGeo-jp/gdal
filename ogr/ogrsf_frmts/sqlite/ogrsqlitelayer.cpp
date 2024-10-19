@@ -17,23 +17,7 @@
  * Copyright (c) 2004, Frank Warmerdam <warmerdam@pobox.com>
  * Copyright (c) 2009-2021, Even Rouault <even dot rouault at spatialys.com>
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  ****************************************************************************/
 
 #include "cpl_port.h"
@@ -249,6 +233,8 @@ void OGRSQLiteLayer::BuildFeatureDefn(const char *pszLayerName, bool bIsSelect,
     m_panFieldOrdinals =
         static_cast<int *>(CPLMalloc(sizeof(int) * nRawColumns));
 
+    std::set<std::string> oSetFields;
+
     for (int iCol = 0; iCol < nRawColumns; iCol++)
     {
         OGRFieldDefn oField(SQLUnescape(sqlite3_column_name(hStmtIn, iCol)),
@@ -258,7 +244,7 @@ void OGRSQLiteLayer::BuildFeatureDefn(const char *pszLayerName, bool bIsSelect,
         // In some cases, particularly when there is a real name for
         // the primary key/_rowid_ column we will end up getting the
         // primary key column appearing twice.  Ignore any repeated names.
-        if (m_poFeatureDefn->GetFieldIndex(pszFieldName) != -1)
+        if (cpl::contains(oSetFields, pszFieldName))
             continue;
 
         if (EQUAL(pszFieldName, "OGR_NATIVE_DATA"))
@@ -670,6 +656,7 @@ void OGRSQLiteLayer::BuildFeatureDefn(const char *pszLayerName, bool bIsSelect,
             oField.SetType(eFieldType);
         }
 
+        oSetFields.insert(oField.GetNameRef());
         m_poFeatureDefn->AddFieldDefn(&oField);
         m_panFieldOrdinals[m_poFeatureDefn->GetFieldCount() - 1] = iCol;
     }
@@ -883,9 +870,11 @@ OGRFeature *OGRSQLiteLayer::GetNextRawFeature()
     /* -------------------------------------------------------------------- */
     /*      set the fields.                                                 */
     /* -------------------------------------------------------------------- */
-    for (int iField = 0; iField < m_poFeatureDefn->GetFieldCount(); iField++)
+    const int nFieldCount = m_poFeatureDefn->GetFieldCount();
+    for (int iField = 0; iField < nFieldCount; iField++)
     {
-        OGRFieldDefn *poFieldDefn = m_poFeatureDefn->GetFieldDefn(iField);
+        const OGRFieldDefn *poFieldDefn =
+            m_poFeatureDefn->GetFieldDefnUnsafe(iField);
         if (poFieldDefn->IsIgnored())
             continue;
 
@@ -901,6 +890,25 @@ OGRFeature *OGRSQLiteLayer::GetNextRawFeature()
         switch (poFieldDefn->GetType())
         {
             case OFTInteger:
+            {
+                /* Possible since SQLite3 has no strong typing */
+                if (nSQLite3Type == SQLITE_TEXT)
+                    poFeature->SetField(
+                        iField, reinterpret_cast<const char *>(
+                                    sqlite3_column_text(m_hStmt, iRawField)));
+                else
+                {
+                    const GIntBig nVal =
+                        sqlite3_column_int64(m_hStmt, iRawField);
+                    if (nVal >= INT_MIN && nVal <= INT_MAX)
+                        poFeature->SetFieldSameTypeUnsafe(
+                            iField, static_cast<int>(nVal));
+                    else
+                        poFeature->SetField(iField, nVal);
+                }
+                break;
+            }
+
             case OFTInteger64:
             {
                 /* Possible since SQLite3 has no strong typing */
@@ -909,7 +917,7 @@ OGRFeature *OGRSQLiteLayer::GetNextRawFeature()
                         iField, reinterpret_cast<const char *>(
                                     sqlite3_column_text(m_hStmt, iRawField)));
                 else
-                    poFeature->SetField(
+                    poFeature->SetFieldSameTypeUnsafe(
                         iField, sqlite3_column_int64(m_hStmt, iRawField));
                 break;
             }

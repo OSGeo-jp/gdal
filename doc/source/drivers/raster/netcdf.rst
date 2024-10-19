@@ -287,7 +287,7 @@ The following open options are available:
       valid_min, valid_max or valid_range attributes.
 
 -  .. oo:: IGNORE_XY_AXIS_NAME_CHECKS
-      :choices: YES, NOA
+      :choices: YES, NO
       :default: NO
       :since: 3.4.2
 
@@ -749,9 +749,6 @@ This driver is compiled with the UNIDATA NetCDF library.
 
 You need to download or compile the NetCDF library before configuring
 GDAL with NetCDF support.
-
-See `NetCDF GDAL wiki <http://trac.osgeo.org/gdal/wiki/NetCDF>`__ for
-build instructions and information regarding HDF4, NetCDF-4 and HDF5.
 
 See Also:
 ---------

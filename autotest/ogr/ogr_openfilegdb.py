@@ -10,23 +10,7 @@
 ###############################################################################
 # Copyright (c) 2014, Even Rouault <even dot rouault at spatialys.com>
 #
-# Permission is hereby granted, free of charge, to any person obtaining a
-# copy of this software and associated documentation files (the "Software"),
-# to deal in the Software without restriction, including without limitation
-# the rights to use, copy, modify, merge, publish, distribute, sublicense,
-# and/or sell copies of the Software, and to permit persons to whom the
-# Software is furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included
-# in all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-# DEALINGS IN THE SOFTWARE.
+# SPDX-License-Identifier: MIT
 ###############################################################################
 
 import os
@@ -2943,3 +2927,19 @@ def test_ogr_openfilegdb_read_from_http():
 
     finally:
         webserver.server_stop(webserver_process, webserver_port)
+
+
+###############################################################################
+# Test reading a geometry where there is an arc with an interior point, but
+# it is actually flagged as a line
+
+
+def test_ogr_openfilegdb_arc_interior_point_bug_line():
+
+    with ogr.Open("data/filegdb/arc_segment_interior_point_but_line.gdb.zip") as ds:
+        lyr = ds.GetLayer(0)
+        f = lyr.GetNextFeature()
+        ogrtest.check_feature_geometry(
+            f,
+            "MULTILINESTRING ((37252520.1717 7431529.9154,38549084.9654 758964.7573))",
+        )

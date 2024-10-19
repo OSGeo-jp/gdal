@@ -8,23 +8,7 @@
  * Copyright (c) 2004, Frank Warmerdam
  * Copyright (c) 2009-2013, Even Rouault <even dot rouault at spatialys.com>
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  ****************************************************************************/
 
 #include "cpl_port.h"
@@ -580,20 +564,30 @@ CPLErr OGRSQLiteTableLayer::EstablishFeatureDefn(const char *pszGeomCol,
         {
             const std::set<std::string> uniqueFieldsUC(
                 SQLGetUniqueFieldUCConstraints(hDB, m_pszTableName));
+
+            const int nFieldCount = m_poFeatureDefn->GetFieldCount();
+            std::map<std::string, int> oMapNametoIdx;
+            for (int i = 0; i < nFieldCount; ++i)
+                oMapNametoIdx[m_poFeatureDefn->GetFieldDefnUnsafe(i)
+                                  ->GetNameRef()] = i;
+
             for (int i = 0; i < nRowCount; i++)
             {
                 const char *pszName = papszResult[(i + 1) * 6 + 1];
+                if (!pszName)
+                    continue;  // should normally never happen
                 const char *pszNotNull = papszResult[(i + 1) * 6 + 3];
                 const char *pszDefault = papszResult[(i + 1) * 6 + 4];
-                const int idx = pszName != nullptr
-                                    ? m_poFeatureDefn->GetFieldIndex(pszName)
-                                    : -1;
+                int idx = -1;
+                const auto oIter = oMapNametoIdx.find(pszName);
+                if (oIter != oMapNametoIdx.end())
+                    idx = oIter->second;
                 if (pszDefault != nullptr)
                 {
                     if (idx >= 0)
                     {
                         OGRFieldDefn *poFieldDefn =
-                            m_poFeatureDefn->GetFieldDefn(idx);
+                            m_poFeatureDefn->GetFieldDefnUnsafe(idx);
                         if (poFieldDefn->GetType() == OFTString &&
                             !EQUAL(pszDefault, "NULL") &&
                             !STARTS_WITH_CI(pszDefault, "CURRENT_") &&
@@ -628,11 +622,11 @@ CPLErr OGRSQLiteTableLayer::EstablishFeatureDefn(const char *pszGeomCol,
                             poFieldDefn->SetDefault(pszDefault);
                     }
                 }
-                if (pszName != nullptr && pszNotNull != nullptr &&
-                    EQUAL(pszNotNull, "1"))
+                if (pszNotNull != nullptr && EQUAL(pszNotNull, "1"))
                 {
                     if (idx >= 0)
-                        m_poFeatureDefn->GetFieldDefn(idx)->SetNullable(0);
+                        m_poFeatureDefn->GetFieldDefnUnsafe(idx)->SetNullable(
+                            0);
                     else
                     {
                         const int geomFieldIdx =
@@ -646,7 +640,7 @@ CPLErr OGRSQLiteTableLayer::EstablishFeatureDefn(const char *pszGeomCol,
                     uniqueFieldsUC.find(CPLString(pszName).toupper()) !=
                         uniqueFieldsUC.end())
                 {
-                    m_poFeatureDefn->GetFieldDefn(idx)->SetUnique(TRUE);
+                    m_poFeatureDefn->GetFieldDefnUnsafe(idx)->SetUnique(TRUE);
                 }
             }
         }
@@ -2666,26 +2660,29 @@ OGRErr OGRSQLiteTableLayer::BindValues(OGRFeature *poFeature,
         }
         else
         {
-            OGRFieldDefn *poFieldDefn = m_poFeatureDefn->GetFieldDefn(iField);
+            const OGRFieldDefn *poFieldDefn =
+                m_poFeatureDefn->GetFieldDefnUnsafe(iField);
             switch (poFieldDefn->GetType())
             {
                 case OFTInteger:
                 {
-                    int nFieldVal = poFeature->GetFieldAsInteger(iField);
+                    int nFieldVal = poFeature->GetFieldAsIntegerUnsafe(iField);
                     rc = sqlite3_bind_int(m_hStmtIn, nBindField++, nFieldVal);
                     break;
                 }
 
                 case OFTInteger64:
                 {
-                    GIntBig nFieldVal = poFeature->GetFieldAsInteger64(iField);
+                    GIntBig nFieldVal =
+                        poFeature->GetFieldAsInteger64Unsafe(iField);
                     rc = sqlite3_bind_int64(m_hStmtIn, nBindField++, nFieldVal);
                     break;
                 }
 
                 case OFTReal:
                 {
-                    double dfFieldVal = poFeature->GetFieldAsDouble(iField);
+                    double dfFieldVal =
+                        poFeature->GetFieldAsDoubleUnsafe(iField);
                     rc = sqlite3_bind_double(m_hStmtIn, nBindField++,
                                              dfFieldVal);
                     break;

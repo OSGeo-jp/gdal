@@ -8,23 +8,7 @@
  * Copyright (c) 2002, Frank Warmerdam <warmerdam@pobox.com>
  * Copyright (c) 2007-2013, Even Rouault <even dot rouault at spatialys.com>
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  *
  ******************************************************************************
  * Contributor: Alessandro Furieri, a.furieri@lqt.it
@@ -80,10 +64,10 @@ static CPLString ReplaceSpaceByPct20IfNeeded(const char *pszURL)
 /************************************************************************/
 
 OGRGMLDataSource::OGRGMLDataSource()
-    : papoLayers(nullptr), nLayers(0), pszName(nullptr),
-      papszCreateOptions(nullptr), fpOutput(nullptr),
-      bFpOutputIsNonSeekable(false), bFpOutputSingleFile(false), bBBOX3D(false),
-      nBoundedByLocation(-1), nSchemaInsertLocation(-1), bIsOutputGML3(false),
+    : papoLayers(nullptr), nLayers(0), papszCreateOptions(nullptr),
+      fpOutput(nullptr), bFpOutputIsNonSeekable(false),
+      bFpOutputSingleFile(false), bBBOX3D(false), nBoundedByLocation(-1),
+      nSchemaInsertLocation(-1), bIsOutputGML3(false),
       bIsOutputGML3Deegree(false), bIsOutputGML32(false),
       eSRSNameFormat(SRSNAME_SHORT), bWriteSpaceIndentation(true),
       poReader(nullptr), bOutIsTempFile(false), bExposeGMLId(false),
@@ -253,7 +237,6 @@ OGRGMLDataSource::~OGRGMLDataSource()
     }
 
     CSLDestroy(papszCreateOptions);
-    CPLFree(pszName);
 
     for (int i = 0; i < nLayers; i++)
         delete papoLayers[i];
@@ -269,9 +252,10 @@ OGRGMLDataSource::~OGRGMLDataSource()
 
     delete poStoredGMLFeature;
 
-    if (osXSDFilename.compare(CPLSPrintf("/vsimem/tmp_gml_xsd_%p.xsd", this)) ==
-        0)
+    if (m_bUnlinkXSDFilename)
+    {
         VSIUnlink(osXSDFilename);
+    }
 }
 
 /************************************************************************/
@@ -380,8 +364,6 @@ bool OGRGMLDataSource::Open(GDALOpenInfo *poOpenInfo)
     }
 
     const char *pszFilename = osFilename.c_str();
-
-    pszName = CPLStrdup(poOpenInfo->pszFilename);
 
     // Open the source file.
     VSILFILE *fpToClose = nullptr;
@@ -532,7 +514,8 @@ bool OGRGMLDataSource::Open(GDALOpenInfo *poOpenInfo)
             }
         }
     }
-    else if (STARTS_WITH(pszFilename, "/vsimem/tempwfs_"))
+    else if (STARTS_WITH(pszFilename, "/vsimem/") &&
+             strstr(pszFilename, "_ogr_wfs_"))
     {
         // http://regis.intergraph.com/wfs/dcmetro/request.asp? returns a
         // <G:FeatureCollection> Who knows what servers can return?  When
@@ -1101,8 +1084,10 @@ bool OGRGMLDataSource::Open(GDALOpenInfo *poOpenInfo)
                                         psResult->pabyData != nullptr)
                                     {
                                         bHasFoundXSD = true;
-                                        osXSDFilename = CPLSPrintf(
-                                            "/vsimem/tmp_gml_xsd_%p.xsd", this);
+                                        m_bUnlinkXSDFilename = true;
+                                        osXSDFilename =
+                                            VSIMemGenerateHiddenFilename(
+                                                "tmp_ogr_gml.xsd");
                                         VSILFILE *fpMem = VSIFileFromMemBuffer(
                                             osXSDFilename, psResult->pabyData,
                                             psResult->nDataLen, TRUE);
@@ -1852,8 +1837,8 @@ bool OGRGMLDataSource::Create(const char *pszFilename, char **papszOptions)
         CSLFetchNameValueDef(papszCreateOptions, "SPACE_INDENTATION", "YES"));
 
     // Create the output file.
-    pszName = CPLStrdup(pszFilename);
-    osFilename = pszName;
+    osFilename = pszFilename;
+    SetDescription(pszFilename);
 
     if (strcmp(pszFilename, "/vsistdout/") == 0 ||
         STARTS_WITH(pszFilename, "/vsigzip/"))
@@ -1866,12 +1851,10 @@ bool OGRGMLDataSource::Create(const char *pszFilename, char **papszOptions)
     {
         if (EQUAL(CPLGetExtension(pszFilename), "zip"))
         {
-            CPLFree(pszName);
-            pszName =
-                CPLStrdup(CPLFormFilename(pszFilename, "out.gml", nullptr));
+            SetDescription(CPLFormFilename(pszFilename, "out.gml", nullptr));
         }
 
-        fpOutput = VSIFOpenExL(pszName, "wb", true);
+        fpOutput = VSIFOpenExL(GetDescription(), "wb", true);
         bFpOutputIsNonSeekable = true;
     }
     else
@@ -1923,7 +1906,7 @@ bool OGRGMLDataSource::Create(const char *pszFilename, char **papszOptions)
     }
     else if (pszSchemaOpt == nullptr || EQUAL(pszSchemaOpt, "EXTERNAL"))
     {
-        char *pszBasename = CPLStrdup(CPLGetBasename(pszName));
+        char *pszBasename = CPLStrdup(CPLGetBasename(GetDescription()));
 
         PrintLine(
             fpOutput,
@@ -2060,7 +2043,7 @@ OGRGMLDataSource::ICreateLayer(const char *pszLayerName,
         CPLError(CE_Failure, CPLE_NoWriteAccess,
                  "Data source %s opened for read access.\n"
                  "New layer %s cannot be created.\n",
-                 pszName, pszLayerName);
+                 GetDescription(), pszLayerName);
 
         return nullptr;
     }
@@ -2198,7 +2181,7 @@ void OGRGMLDataSource::InsertHeader()
     VSILFILE *fpSchema = nullptr;
     if (pszSchemaOpt == nullptr || EQUAL(pszSchemaOpt, "EXTERNAL"))
     {
-        const char *pszXSDFilename = CPLResetExtension(pszName, "xsd");
+        const char *pszXSDFilename = CPLResetExtension(GetDescription(), "xsd");
 
         fpSchema = VSIFOpenL(pszXSDFilename, "wt");
         if (fpSchema == nullptr)
@@ -3060,8 +3043,7 @@ OGRLayer *OGRGMLDataSource::ExecuteSQL(const char *pszSQLCommand,
         return new OGRGMLSingleFeatureLayer(bIsValid);
     }
 
-    return OGRDataSource::ExecuteSQL(pszSQLCommand, poSpatialFilter,
-                                     pszDialect);
+    return GDALDataset::ExecuteSQL(pszSQLCommand, poSpatialFilter, pszDialect);
 }
 
 /************************************************************************/

@@ -8,26 +8,11 @@
  *
  ******************************************************************************
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  ****************************************************************************/
 
-#pragma once
+#ifndef VIEWSHED_H_INCLUDED
+#define VIEWSHED_H_INCLUDED
 
 #include <algorithm>
 #include <array>
@@ -59,13 +44,10 @@ class Viewshed
      *
      * @param opts Options to use when calculating viewshed.
     */
-    CPL_DLL explicit Viewshed(const Options &opts)
-        : oOpts{opts}, oOutExtent{}, oCurExtent{}, poDstDS{}, pSrcBand{}
-    {
-    }
+    CPL_DLL explicit Viewshed(const Options &opts);
 
-    Viewshed(const Viewshed &) = delete;
-    Viewshed &operator=(const Viewshed &) = delete;
+    /** Destructor */
+    CPL_DLL ~Viewshed();
 
     CPL_DLL bool run(GDALRasterBandH hBand,
                      GDALProgressFunc pfnProgress = GDALDummyProgress,
@@ -83,10 +65,10 @@ class Viewshed
 
   private:
     Options oOpts;
-    Window oOutExtent;
-    Window oCurExtent;
-    DatasetPtr poDstDS;
-    GDALRasterBand *pSrcBand;
+    Window oOutExtent{};
+    Window oCurExtent{};
+    DatasetPtr poDstDS{};
+    GDALRasterBand *pSrcBand = nullptr;
 
     DatasetPtr execute(int nX, int nY, const std::string &outFilename);
     void setOutput(double &dfResult, double &dfCellVal, double dfZ);
@@ -96,7 +78,12 @@ class Viewshed
                                      std::vector<double> &thisLineVal);
     bool calcExtents(int nX, int nY,
                      const std::array<double, 6> &adfInvTransform);
+
+    Viewshed(const Viewshed &) = delete;
+    Viewshed &operator=(const Viewshed &) = delete;
 };
 
 }  // namespace viewshed
 }  // namespace gdal
+
+#endif

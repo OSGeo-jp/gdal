@@ -43,9 +43,10 @@ else:
     doc_version = open(version_file).read().strip()
     gdal_version = gdal.__version__
     gdal_version_stripped = gdal_version
-    pos_dev = gdal_version_stripped.find("dev")
-    if pos_dev > 0:
-        gdal_version_stripped = gdal_version_stripped[0:pos_dev]
+    for suffix in ["dev", "beta"]:
+        pos_suffix = gdal_version_stripped.find(suffix)
+        if pos_suffix > 0:
+            gdal_version_stripped = gdal_version_stripped[0:pos_suffix]
 
     if doc_version.strip() != gdal_version_stripped:
         logger.warn(
@@ -140,7 +141,7 @@ html_theme_options = {
     "canonical_url": "https://gdal.org/",  # Trailing slash needed to have correct <link rel="canonical" href="..."/> URLs
     "analytics_id": "",  #  Provided by Google in your dashboard
     "logo_only": True,
-    "display_version": True,
+    "version_selector": True,
     "prev_next_buttons_location": "both",
     "style_external_links": False,
     #'vcs_pageview_mode': '',
@@ -151,6 +152,7 @@ html_theme_options = {
     #'navigation_depth': 4,
     "includehidden": True,
     "titles_only": False,
+    "flyout_display": "attached",
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

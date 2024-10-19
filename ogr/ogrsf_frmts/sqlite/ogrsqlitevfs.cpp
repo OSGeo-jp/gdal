@@ -7,23 +7,7 @@
  ******************************************************************************
  * Copyright (c) 2011-2012, Even Rouault <even dot rouault at spatialys.com>
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  ****************************************************************************/
 
 #include "cpl_port.h"
@@ -33,7 +17,6 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "cpl_atomic_ops.h"
 #include "cpl_conv.h"
 #include "cpl_error.h"
 #include "cpl_string.h"
@@ -54,7 +37,6 @@ typedef struct
     sqlite3_vfs *pDefaultVFS;
     pfnNotifyFileOpenedType pfn;
     void *pfnUserData;
-    int nCounter;
 } OGRSQLiteVFSAppDataStruct;
 
 #define GET_UNDERLYING_VFS(pVFS)                                               \
@@ -243,22 +225,19 @@ static const sqlite3_io_methods OGRSQLiteIOMethods = {
     nullptr,  // xUnfetch
 };
 
-static int OGRSQLiteVFSOpen(sqlite3_vfs *pVFS, const char *zName,
+static int OGRSQLiteVFSOpen(sqlite3_vfs *pVFS, const char *zNameIn,
                             sqlite3_file *pFile, int flags, int *pOutFlags)
 {
 #ifdef DEBUG_IO
-    CPLDebug("SQLITE", "OGRSQLiteVFSOpen(%s, %d)", zName ? zName : "(null)",
+    CPLDebug("SQLITE", "OGRSQLiteVFSOpen(%s, %d)", zNameIn ? zNameIn : "(null)",
              flags);
 #endif
 
     OGRSQLiteVFSAppDataStruct *pAppData =
         static_cast<OGRSQLiteVFSAppDataStruct *>(pVFS->pAppData);
 
-    if (zName == nullptr)
-    {
-        zName = CPLSPrintf("/vsimem/sqlite/%p_%d", pVFS,
-                           CPLAtomicInc(&(pAppData->nCounter)));
-    }
+    const std::string osName(
+        zNameIn ? zNameIn : VSIMemGenerateHiddenFilename("sqlitevfs"));
 
     OGRSQLiteFileStruct *pMyFile =
         reinterpret_cast<OGRSQLiteFileStruct *>(pFile);
@@ -266,17 +245,17 @@ static int OGRSQLiteVFSOpen(sqlite3_vfs *pVFS, const char *zName,
     pMyFile->bDeleteOnClose = FALSE;
     pMyFile->pszFilename = nullptr;
     if (flags & SQLITE_OPEN_READONLY)
-        pMyFile->fp = VSIFOpenL(zName, "rb");
+        pMyFile->fp = VSIFOpenL(osName.c_str(), "rb");
     else if (flags & SQLITE_OPEN_CREATE)
     {
         VSIStatBufL sStatBufL;
-        if (VSIStatExL(zName, &sStatBufL, VSI_STAT_EXISTS_FLAG) == 0)
-            pMyFile->fp = VSIFOpenL(zName, "rb+");
+        if (VSIStatExL(osName.c_str(), &sStatBufL, VSI_STAT_EXISTS_FLAG) == 0)
+            pMyFile->fp = VSIFOpenL(osName.c_str(), "rb+");
         else
-            pMyFile->fp = VSIFOpenL(zName, "wb+");
+            pMyFile->fp = VSIFOpenL(osName.c_str(), "wb+");
     }
     else if (flags & SQLITE_OPEN_READWRITE)
-        pMyFile->fp = VSIFOpenL(zName, "rb+");
+        pMyFile->fp = VSIFOpenL(osName.c_str(), "rb+");
     else
         pMyFile->fp = nullptr;
 
@@ -290,12 +269,12 @@ static int OGRSQLiteVFSOpen(sqlite3_vfs *pVFS, const char *zName,
     pfnNotifyFileOpenedType pfn = pAppData->pfn;
     if (pfn)
     {
-        pfn(pAppData->pfnUserData, zName, pMyFile->fp);
+        pfn(pAppData->pfnUserData, osName.c_str(), pMyFile->fp);
     }
 
     pMyFile->pMethods = &OGRSQLiteIOMethods;
     pMyFile->bDeleteOnClose = (flags & SQLITE_OPEN_DELETEONCLOSE);
-    pMyFile->pszFilename = CPLStrdup(zName);
+    pMyFile->pszFilename = CPLStrdup(osName.c_str());
 
     if (pOutFlags != nullptr)
         *pOutFlags = flags;
@@ -514,7 +493,6 @@ sqlite3_vfs *OGRSQLiteCreateVFS(pfnNotifyFileOpenedType pfn, void *pfnUserData)
     pVFSAppData->pDefaultVFS = pDefaultVFS;
     pVFSAppData->pfn = pfn;
     pVFSAppData->pfnUserData = pfnUserData;
-    pVFSAppData->nCounter = 0;
 
     pMyVFS->iVersion = 2;
     pMyVFS->szOsFile = sizeof(OGRSQLiteFileStruct);

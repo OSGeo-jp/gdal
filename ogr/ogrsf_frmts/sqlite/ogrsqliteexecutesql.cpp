@@ -7,23 +7,7 @@
  ******************************************************************************
  * Copyright (c) 2012-2013, Even Rouault <even dot rouault at spatialys.com>
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  ****************************************************************************/
 
 #include "ogr_sqlite.h"
@@ -851,9 +835,7 @@ OGRLayer *OGRSQLiteExecuteSQL(GDALDataset *poDS, const char *pszStatement,
     }
 
     char *pszTmpDBName = static_cast<char *>(CPLMalloc(256));
-    char szPtr[32];
-    snprintf(szPtr, sizeof(szPtr), "%p", pszTmpDBName);
-    snprintf(pszTmpDBName, 256, "/vsimem/ogr2sqlite/temp_%s.db", szPtr);
+    snprintf(pszTmpDBName, 256, "%s", VSIMemGenerateHiddenFilename("temp.db"));
 
     OGRSQLiteDataSource *poSQLiteDS = nullptr;
     bool bSpatialiteDB = false;
@@ -881,9 +863,8 @@ OGRLayer *OGRSQLiteExecuteSQL(GDALDataset *poDS, const char *pszStatement,
         {
             bTried = true;
             char *pszCachedFilename = static_cast<char *>(CPLMalloc(256));
-            snprintf(szPtr, sizeof(szPtr), "%p", pszCachedFilename);
-            snprintf(pszCachedFilename, 256,
-                     "/vsimem/ogr2sqlite/reference_%s.db", szPtr);
+            snprintf(pszCachedFilename, 256, "%s",
+                     VSIMemGenerateHiddenFilename("reference.db"));
             char **papszOptions = CSLAddString(nullptr, "SPATIALITE=YES");
             OGRSQLiteDataSource *poCachedDS = new OGRSQLiteDataSource();
             const int nRet =
@@ -1036,8 +1017,9 @@ OGRLayer *OGRSQLiteExecuteSQL(GDALDataset *poDS, const char *pszStatement,
         }
         else
         {
-            GDALDataset *poOtherDS = OGRDataSource::FromHandle(
-                OGROpen(oLayerDesc.osDSName, FALSE, nullptr));
+            auto poOtherDS = std::unique_ptr<GDALDataset>(
+                GDALDataset::Open(oLayerDesc.osDSName, GDAL_OF_VECTOR, nullptr,
+                                  nullptr, nullptr));
             if (poOtherDS == nullptr)
             {
                 CPLError(CE_Failure, CPLE_AppDefined,
@@ -1056,7 +1038,6 @@ OGRLayer *OGRSQLiteExecuteSQL(GDALDataset *poDS, const char *pszStatement,
                          "Cannot find layer '%s' in '%s'",
                          oLayerDesc.osLayerName.c_str(),
                          oLayerDesc.osDSName.c_str());
-                delete poOtherDS;
                 delete poSQLiteDS;
                 VSIUnlink(pszTmpDBName);
                 CPLFree(pszTmpDBName);
@@ -1065,7 +1046,7 @@ OGRLayer *OGRSQLiteExecuteSQL(GDALDataset *poDS, const char *pszStatement,
 
             osTableName = oLayerDesc.osSubstitutedName;
 
-            nExtraDS = OGR2SQLITE_AddExtraDS(poModule, poOtherDS);
+            nExtraDS = OGR2SQLITE_AddExtraDS(poModule, poOtherDS.release());
         }
 
         if (!poLayer->TestCapability(OLCStringsAsUTF8))

@@ -8,23 +8,7 @@
  * Copyright (c) 2005, Frank Warmerdam <warmerdam@pobox.com>
  * Copyright (c) 2008-2015, Even Rouault <even dot rouault at spatialys dot com>
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
+ * SPDX-License-Identifier: MIT
  ****************************************************************************/
 
 #include "cpl_port.h"
@@ -104,12 +88,12 @@ GDALRasterizeOptionsGetParser(GDALRasterizeOptions *psOptions,
         _("This program burns vector geometries (points, lines, and polygons) "
           "into the raster band(s) of a raster image."));
 
+    // Dealt manually as argparse::nargs_pattern::at_least_one is problematic
     argParser->add_argument("-b")
         .metavar("<band>")
         .append()
         .scan<'i', int>()
-        .nargs(argparse::nargs_pattern::at_least_one)
-        .store_into(psOptions->anBandList)
+        //.nargs(argparse::nargs_pattern::at_least_one)
         .help(_("The band(s) to burn values into."));
 
     argParser->add_argument("-i")
@@ -132,22 +116,12 @@ GDALRasterizeOptionsGetParser(GDALRasterizeOptions *psOptions,
         auto &group = argParser->add_mutually_exclusive_group(
             psOptionsForBinary != nullptr);
 
+        // Dealt manually as argparse::nargs_pattern::at_least_one is problematic
         group.add_argument("-burn")
             .metavar("<value>")
             .scan<'g', double>()
             .append()
-            .nargs(argparse::nargs_pattern::at_least_one)
-            .action(
-                [psOptions](const std::string &s)
-                {
-                    const CPLStringList aosTokens(
-                        CSLTokenizeString2(s.c_str(), " ", 0));
-                    for (int i = 0; i < aosTokens.size(); i++)
-                    {
-                        psOptions->adfBurnValues.push_back(
-                            CPLAtof(aosTokens[i]));
-                    }
-                })
+            //.nargs(argparse::nargs_pattern::at_least_one)
             .help(_("A fixed value to burn into the raster band(s)."));
 
         group.add_argument("-a")
@@ -238,22 +212,12 @@ GDALRasterizeOptionsGetParser(GDALRasterizeOptions *psOptions,
         .metavar("<value>")
         .help(_("Assign a specified nodata value to output bands."));
 
+    // Dealt manually as argparse::nargs_pattern::at_least_one is problematic
     argParser->add_argument("-init")
         .metavar("<value>")
         .append()
-        .nargs(argparse::nargs_pattern::at_least_one)
+        //.nargs(argparse::nargs_pattern::at_least_one)
         .scan<'g', double>()
-        .action(
-            [psOptions](const std::string &s)
-            {
-                const CPLStringList aosTokens(
-                    CSLTokenizeString2(s.c_str(), " ", 0));
-                for (int i = 0; i < aosTokens.size(); i++)
-                {
-                    psOptions->adfInitVals.push_back(CPLAtof(aosTokens[i]));
-                }
-                psOptions->bCreateOutput = true;
-            })
         .help(_("Initialize the output bands to the specified value."));
 
     argParser->add_argument("-a_srs")
@@ -336,13 +300,16 @@ GDALRasterizeOptionsGetParser(GDALRasterizeOptions *psOptions,
         .action([psOptions](const std::string &)
                 { psOptions->bCreateOutput = true; });
 
+    // Written that way so that in library mode, users can still use the -q
+    // switch, even if it has no effect
+    argParser->add_quiet_argument(
+        psOptionsForBinary ? &(psOptionsForBinary->bQuiet) : nullptr);
+
     if (psOptionsForBinary)
     {
 
         argParser->add_open_options_argument(
             psOptionsForBinary->aosOpenOptions);
-
-        argParser->add_quiet_argument(&psOptionsForBinary->bQuiet);
 
         argParser->add_argument("src_datasource")
             .metavar("<src_datasource>")
@@ -1279,6 +1246,18 @@ GDALDatasetH GDALRasterize(const char *pszDest, GDALDatasetH hDstDS,
 }
 
 /************************************************************************/
+/*                       ArgIsNumericRasterize()                        */
+/************************************************************************/
+
+static bool ArgIsNumericRasterize(const char *pszArg)
+
+{
+    char *pszEnd = nullptr;
+    CPLStrtod(pszArg, &pszEnd);
+    return pszEnd != nullptr && pszEnd[0] == '\0';
+}
+
+/************************************************************************/
 /*                           GDALRasterizeOptionsNew()                  */
 /************************************************************************/
 
@@ -1328,11 +1307,80 @@ GDALRasterizeOptionsNew(char **papszArgv,
             psOptions->osNoData = s;
             psOptions->bCreateOutput = true;
         }
-    }
 
-    if (papszArgv)
-    {
-        for (int i = 0; papszArgv[i] != nullptr; i++)
+        // argparser is confused by arguments that have at_least_one
+        // cardinality, if they immediately precede positional arguments.
+        else if (EQUAL(papszArgv[i], "-burn") && papszArgv[i + 1])
+        {
+            if (strchr(papszArgv[i + 1], ' '))
+            {
+                const CPLStringList aosTokens(
+                    CSLTokenizeString(papszArgv[i + 1]));
+                for (const char *pszToken : aosTokens)
+                {
+                    psOptions->adfBurnValues.push_back(CPLAtof(pszToken));
+                }
+                i += 1;
+            }
+            else
+            {
+                while (i < argc - 1 && ArgIsNumericRasterize(papszArgv[i + 1]))
+                {
+                    psOptions->adfBurnValues.push_back(
+                        CPLAtof(papszArgv[i + 1]));
+                    i += 1;
+                }
+            }
+
+            // Dummy value to make argparse happy, as at least one of
+            // -burn, -a or -3d is required
+            aosArgv.AddString("-burn");
+            aosArgv.AddString("0");
+        }
+        else if (EQUAL(papszArgv[i], "-init") && papszArgv[i + 1])
+        {
+            if (strchr(papszArgv[i + 1], ' '))
+            {
+                const CPLStringList aosTokens(
+                    CSLTokenizeString(papszArgv[i + 1]));
+                for (const char *pszToken : aosTokens)
+                {
+                    psOptions->adfInitVals.push_back(CPLAtof(pszToken));
+                }
+                i += 1;
+            }
+            else
+            {
+                while (i < argc - 1 && ArgIsNumericRasterize(papszArgv[i + 1]))
+                {
+                    psOptions->adfInitVals.push_back(CPLAtof(papszArgv[i + 1]));
+                    i += 1;
+                }
+            }
+            psOptions->bCreateOutput = true;
+        }
+        else if (EQUAL(papszArgv[i], "-b") && papszArgv[i + 1])
+        {
+            if (strchr(papszArgv[i + 1], ' '))
+            {
+                const CPLStringList aosTokens(
+                    CSLTokenizeString(papszArgv[i + 1]));
+                for (const char *pszToken : aosTokens)
+                {
+                    psOptions->anBandList.push_back(atoi(pszToken));
+                }
+                i += 1;
+            }
+            else
+            {
+                while (i < argc - 1 && ArgIsNumericRasterize(papszArgv[i + 1]))
+                {
+                    psOptions->anBandList.push_back(atoi(papszArgv[i + 1]));
+                    i += 1;
+                }
+            }
+        }
+        else
         {
             aosArgv.AddString(papszArgv[i]);
         }
@@ -1369,10 +1417,10 @@ GDALRasterizeOptionsNew(char **papszArgv,
             psOptions->bCreateOutput = true;
         }
 
-        if (auto oTs = argParser->present<int>("-ts"))
+        if (auto oTs = argParser->present<std::vector<int>>("-ts"))
         {
-            psOptions->nXSize = oTs.value();
-            psOptions->nYSize = oTs.value();
+            psOptions->nXSize = oTs.value()[0];
+            psOptions->nYSize = oTs.value()[1];
 
             if (psOptions->nXSize <= 0 || psOptions->nYSize <= 0)
             {
@@ -1445,6 +1493,11 @@ GDALRasterizeOptionsNew(char **papszArgv,
             psOptionsForBinary->bCreateOutput = psOptions->bCreateOutput;
             if (!psOptions->osFormat.empty())
                 psOptionsForBinary->osFormat = psOptions->osFormat;
+        }
+        else if (psOptions->adfBurnValues.empty() &&
+                 psOptions->osBurnAttribute.empty() && !psOptions->b3D)
+        {
+            psOptions->adfBurnValues.push_back(255);
         }
     }
     catch (const std::exception &e)

@@ -18,11 +18,11 @@ Source Code
 Current Release
 ...............
 
-* **2024-08-16** `gdal-3.9.2.tar.gz`_ `3.9.2 Release Notes`_ (`3.9.2 md5`_)
+* **2024-10-14** `gdal-3.9.3.tar.gz`_ `3.9.3 Release Notes`_ (`3.9.3 md5`_)
 
-.. _`3.9.2 Release Notes`: https://github.com/OSGeo/gdal/blob/v3.9.2/NEWS.md
-.. _`gdal-3.9.2.tar.gz`: https://github.com/OSGeo/gdal/releases/download/v3.9.2/gdal-3.9.2.tar.gz
-.. _`3.9.2 md5`: https://github.com/OSGeo/gdal/releases/download/v3.9.2/gdal-3.9.2.tar.gz.md5
+.. _`3.9.3 Release Notes`: https://github.com/OSGeo/gdal/blob/v3.9.3/NEWS.md
+.. _`gdal-3.9.3.tar.gz`: https://github.com/OSGeo/gdal/releases/download/v3.9.3/gdal-3.9.3.tar.gz
+.. _`3.9.3 md5`: https://github.com/OSGeo/gdal/releases/download/v3.9.3/gdal-3.9.3.tar.gz.md5
 
 Past Releases
 .............
@@ -95,6 +95,25 @@ Mac OS
 GDAL packages are available on `Homebrew`_.
 
 .. _`Homebrew`: https://formulae.brew.sh/formula/gdal
+
+
+Android
+.......
+
+GDAL can be installed using :ref:`vcpkg`. You may also refer to `vcpkg Android support <https://learn.microsoft.com/en-us/vcpkg/users/platforms/android>`__ for general instructions.
+
+For example to install default configuration for the ``arm64-android`` target:
+
+.. code-block:: shell
+
+    git clone https://github.com/Microsoft/vcpkg.git
+    cd vcpkg
+    ./bootstrap-vcpkg.sh  # ./bootstrap-vcpkg.bat for Windows
+    ./vcpkg integrate install
+    export ANDROID_NDK_HOME=/path/to/android_ndk_home  # to adapt
+    ./vcpkg search gdal --featurepackages  # list optional features
+    ./vcpkg install gdal:arm64-android  # install with default configuration
+    ./vcpkg install gdal[poppler,netcdf]:arm64-android  # install with Poppler and netdf support
 
 
 Cross-Platform Package Managers
@@ -193,13 +212,15 @@ vcpkg
 The GDAL port in the `vcpkg <https://github.com/Microsoft/vcpkg>`__ dependency manager is kept up to date by Microsoft team members and community contributors.
 You can download and install GDAL using the vcpkg as follows:
 
-::
+.. code-block:: shell
 
     git clone https://github.com/Microsoft/vcpkg.git
     cd vcpkg
     ./bootstrap-vcpkg.sh  # ./bootstrap-vcpkg.bat for Windows
     ./vcpkg integrate install
-    ./vcpkg install gdal
+    ./vcpkg search gdal --featurepackages  # list optional features
+    ./vcpkg install gdal  # install with default configuration
+    ./vcpkg install gdal[poppler,netcdf]  # install with Poppler and netdf support
 
 If the version is out of date, please `create an issue or pull request <https://github.com/Microsoft/vcpkg>`__ on the vcpkg repository.
 
