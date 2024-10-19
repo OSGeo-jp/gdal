@@ -25,41 +25,44 @@ msgstr ""
 
 #: ../../source/programs/ogrlineref.rst:9
 msgid "Create linear reference and provide some calculations using it"
-msgstr ""
+msgstr "線形参照を作成し,それを使用していくつかの計算を提供します"
 
 #: ../../source/programs/ogrlineref.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/ogrlineref.rst:30
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/ogrlineref.rst:32
 msgid "The :program:`ogrlineref` program can be used to:"
-msgstr ""
+msgstr ":program:`ogrlineref` プログラムは以下のように使用できます:"
 
 #: ../../source/programs/ogrlineref.rst:34
 msgid "create a linear reference file from input data"
-msgstr ""
+msgstr "入力データから線形参照ファイルを作成します"
 
 #: ../../source/programs/ogrlineref.rst:36
 msgid ""
 "return the \"linear referenced\" distance for the projection of the input"
 " coordinates (point) on the path"
 msgstr ""
+"入力座標 (点) の投影の \"線形参照\" 距離を返します"
 
 #: ../../source/programs/ogrlineref.rst:39
 msgid ""
 "return the coordinates (point) on the path according to the \"linear "
 "referenced\" distance"
 msgstr ""
+"\"線形参照\" 距離に従ってパス上の座標 (点) を返します"
 
 #: ../../source/programs/ogrlineref.rst:42
 msgid ""
 "return the portion of the path according to the \"linear referenced\" "
 "begin and end distances"
 msgstr ""
+"\"線形参照\" 開始および終了距離に従ってパスの一部を返します"
 
 #: ../../source/programs/ogrlineref.rst:45
 msgid ""
@@ -70,125 +73,135 @@ msgid ""
 "``Z`` components in the geometry. The results can be stored in any OGR "
 "supported format. Also some information is written to the stdout."
 msgstr ""
+":program:`ogrlineref` ユーティリティは、一定の長さのセグメント (例: 参照単位"
+"で1 km) を含むファイルである線形参照を作成します.ユーザはこのファイルから座"
+"標、線形参照距離、またはサブライン (サブパス) を取得できます.このユーティリ"
+"ティはジオメトリに ``M`` または ``Z`` のコンポーネントを必要としません.結果は"
+",OGRでサポートされている任意のフォーマットに保存できます.また、一部の情報が"
+"標準出力に書き込まれます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
-msgstr ""
+msgstr "このヘルプメッセージを表示して終了します"
 
 #: ../../source/programs/options/help_general.rst:3
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
 msgstr ""
+"一般的なGDALコマンドラインオプションの使用方法を簡単に表示して終了し"
+"ます."
 
 #: ../../source/programs/ogrlineref.rst:56
 msgid "Show progress."
-msgstr ""
+msgstr "実行状況を表示します."
 
 #: ../../source/programs/ogrlineref.rst:60
 msgid "Suppress all messages except errors and results."
-msgstr ""
+msgstr "エラーと結果以外のすべてのメッセージを抑制します."
 
 #: ../../source/programs/ogrlineref.rst:64
 msgid "Select an output format name. The default is to create a shapefile."
-msgstr ""
+msgstr "出力フォーマット名を選択します.デフォルトはシェープファイルを作成します."
 
 #: ../../source/programs/ogrlineref.rst:68
 msgid "Dataset creation option (format specific)"
-msgstr ""
+msgstr "データセット作成オプション (フォーマット固有)"
 
 #: ../../source/programs/ogrlineref.rst:72
 msgid "Layer creation option (format specific)."
-msgstr ""
+msgstr "レイヤ作成オプション (フォーマット固有)."
 
 #: ../../source/programs/ogrlineref.rst:76
 msgid "Create the linear reference file (linestring of parts)."
-msgstr ""
+msgstr "線形参照ファイル (部分のラインストリング) を作成します."
 
 #: ../../source/programs/ogrlineref.rst:80
 msgid "The path to input linestring datasource (e.g. the road)"
-msgstr ""
+msgstr "入力ラインストリングデータソースへのパス (例: 道路)"
 
 #: ../../source/programs/ogrlineref.rst:84
 #: ../../source/programs/ogrlineref.rst:97
 #: ../../source/programs/ogrlineref.rst:113
 #: ../../source/programs/ogrlineref.rst:121
 msgid "The layer name in datasource"
-msgstr ""
+msgstr "データソース内のレイヤ名"
 
 #: ../../source/programs/ogrlineref.rst:88
 msgid ""
 "The field name of unique values to separate the input lines (e.g. the set"
 " of roads)."
 msgstr ""
+"入力ラインを分離するためのユニークな値のフィールド名 (例: 道路のセット)."
 
 #: ../../source/programs/ogrlineref.rst:93
 msgid "The path to linear references points (e.g. the road mile-stones)"
-msgstr ""
+msgstr "線形参照ポイントへのパス (例: 道路のマイルストーン)"
 
 #: ../../source/programs/ogrlineref.rst:101
 msgid "The field name of distances along path (e.g. mile-stones values)"
-msgstr ""
+msgstr "パス沿いの距離のフィールド名 (例: マイルストーンの値)"
 
 #: ../../source/programs/ogrlineref.rst:105
 msgid "The field name of unique values to map input reference points to lines."
-msgstr ""
+msgstr "入力参照ポイントをラインにマッピングするためのユニークな値のフィールド名."
 
 #: ../../source/programs/ogrlineref.rst:109
 msgid "The path to linear reference file."
-msgstr ""
+msgstr "線形参照ファイルへのパス."
 
 #: ../../source/programs/ogrlineref.rst:117
 msgid "The path to output linear reference file (linestring datasource)"
-msgstr ""
+msgstr "出力線形参照ファイル (ラインストリングデータソース) へのパス"
 
 #: ../../source/programs/ogrlineref.rst:125
 msgid "The field name for storing the unique values of input lines"
-msgstr ""
+msgstr "入力ラインのユニークな値を格納するフィールド名"
 
 #: ../../source/programs/ogrlineref.rst:129
 msgid "The part size in linear units"
-msgstr ""
+msgstr "線形単位の部分サイズ"
 
 #: ../../source/programs/ogrlineref.rst:133
 msgid "Return linear referenced position for input X, Y"
-msgstr ""
+msgstr "入力 X, Y の線形参照位置を返します"
 
 #: ../../source/programs/ogrlineref.rst:137
 msgid "Input X coordinate"
-msgstr ""
+msgstr "入力 X 座標"
 
 #: ../../source/programs/ogrlineref.rst:141
 msgid "Input Y coordinate"
-msgstr ""
+msgstr "入力 Y 座標"
 
 #: ../../source/programs/ogrlineref.rst:145
 msgid "Return point on path for input linear distance"
-msgstr ""
+msgstr "入力線形距離のパス上のポイントを返します"
 
 #: ../../source/programs/ogrlineref.rst:149
 msgid "The input linear distance"
-msgstr ""
+msgstr "入力線形距離"
 
 #: ../../source/programs/ogrlineref.rst:153
 msgid "Return the portion of the input path from and to input linear positions."
-msgstr ""
+msgstr "入力線形位置から入力線形位置までのパスの一部を返します."
 
 #: ../../source/programs/ogrlineref.rst:157
 msgid "The input begin linear distance"
-msgstr ""
+msgstr "入力開始線形距離"
 
 #: ../../source/programs/ogrlineref.rst:161
 msgid "The input end linear distance"
-msgstr ""
+msgstr "入力終了線形距離"
 
 #: ../../source/programs/ogrlineref.rst:164
 msgid "Example"
-msgstr ""
+msgstr "例"
 
 #: ../../source/programs/ogrlineref.rst:166
 msgid ""
 "This example would create a shapefile (:file:`parts.shp`) containing a "
 "data needed for linear referencing (1 km parts):"
 msgstr ""
-
+"この例では、線形参照に必要なデータ (1 km パーツ) を含むシェープファイル "
+"(:file:`parts.shp`) が作成されます:"
