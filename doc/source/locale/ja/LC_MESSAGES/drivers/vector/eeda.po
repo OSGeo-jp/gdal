@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/eeda.rst:4
 msgid "Google Earth Engine Data API"
@@ -71,34 +71,36 @@ msgstr ""
 msgid "|about-open-options| The following open options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:44
+#: ../../source/drivers/vector/eeda.rst:50
 msgid "Authentication methods"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:46
+#: ../../source/drivers/vector/eeda.rst:52
 msgid "The following authentication methods can be used:"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:48
+#: ../../source/drivers/vector/eeda.rst:54
 msgid ""
 "Authentication Bearer header passed through the EEDA_BEARER or "
 ":config:`EEDA_BEARER_FILE` configuration options."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:50
+#: ../../source/drivers/vector/eeda.rst:56
 msgid ""
 "Service account private key file, through the "
-":config:`GOOGLE_APPLICATION_CREDENTIALS` configuration option."
+":config:`GOOGLE_APPLICATION_CREDENTIALS` configuration option, or set as "
+"a path-specific option whose value is set in the VSI_PATH_FOR_AUTH open "
+"option."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:52
+#: ../../source/drivers/vector/eeda.rst:60
 msgid ""
 "OAuth2 Service Account authentication through the "
 ":config:`EEDA_PRIVATE_KEY`/ :config:`EEDA_PRIVATE_KEY_FILE` + "
 ":config:`EEDA_CLIENT_EMAIL` configuration options."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:56
+#: ../../source/drivers/vector/eeda.rst:64
 msgid ""
 "Finally if none of the above method succeeds, the code will check if the "
 "current machine is a Google Compute Engine instance, and if so will use "
@@ -107,43 +109,43 @@ msgid ""
 "instance  you can set :config:`CPL_MACHINE_IS_GCE` to YES."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:63
+#: ../../source/drivers/vector/eeda.rst:71
 msgid "Configuration options"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:65
+#: ../../source/drivers/vector/eeda.rst:73
 msgid "|about-config-options| The following configuration options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:68
+#: ../../source/drivers/vector/eeda.rst:76
 msgid ":copy-config:`EEDA_BEARER`"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:70
+#: ../../source/drivers/vector/eeda.rst:78
 msgid ":copy-config:`EEDA_BEARER_FILE`"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:72
+#: ../../source/drivers/vector/eeda.rst:80
 msgid ":copy-config:`GOOGLE_APPLICATION_CREDENTIALS`"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:74
+#: ../../source/drivers/vector/eeda.rst:82
 msgid ":copy-config:`EEDA_PRIVATE_KEY`"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:76
+#: ../../source/drivers/vector/eeda.rst:84
 msgid ":copy-config:`EEDA_PRIVATE_KEY_FILE`"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:78
+#: ../../source/drivers/vector/eeda.rst:86
 msgid ":copy-config:`EEDA_CLIENT_EMAIL`"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:89
+#: ../../source/drivers/vector/eeda.rst:97
 msgid "Attributes"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:91
+#: ../../source/drivers/vector/eeda.rst:99
 msgid ""
 "The layer field definition is built by requesting a single image from the"
 " collection and guessing the schema from its \"properties\" element. The "
@@ -152,241 +154,241 @@ msgid ""
 "above mentioned schema guessing will not done."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:97
+#: ../../source/drivers/vector/eeda.rst:105
 msgid "The following attributes will always be present:"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:103
+#: ../../source/drivers/vector/eeda.rst:111
 msgid "Field name"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:103
+#: ../../source/drivers/vector/eeda.rst:111
 msgid "Type"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:103
+#: ../../source/drivers/vector/eeda.rst:111
 msgid "Meaning"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:103
+#: ../../source/drivers/vector/eeda.rst:111
 msgid "Server-side filter compatible"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:105
+#: ../../source/drivers/vector/eeda.rst:113
 msgid "name"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:105
-#: ../../source/drivers/vector/eeda.rst:109
-#: ../../source/drivers/vector/eeda.rst:112
-#: ../../source/drivers/vector/eeda.rst:114
-#: ../../source/drivers/vector/eeda.rst:143
-#: ../../source/drivers/vector/eeda.rst:145
+#: ../../source/drivers/vector/eeda.rst:113
+#: ../../source/drivers/vector/eeda.rst:117
+#: ../../source/drivers/vector/eeda.rst:120
+#: ../../source/drivers/vector/eeda.rst:122
+#: ../../source/drivers/vector/eeda.rst:151
+#: ../../source/drivers/vector/eeda.rst:153
 msgid "String"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:105
+#: ../../source/drivers/vector/eeda.rst:113
 msgid ""
 "Image name (e.g. projects/earthengine-public/ "
 "assets/COPERNICUS/S2/20170430T190351\\_ 20170430T190351_T10SEG)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:105
-#: ../../source/drivers/vector/eeda.rst:109
-#: ../../source/drivers/vector/eeda.rst:112
-#: ../../source/drivers/vector/eeda.rst:114
-#: ../../source/drivers/vector/eeda.rst:127
-#: ../../source/drivers/vector/eeda.rst:129
-#: ../../source/drivers/vector/eeda.rst:131
-#: ../../source/drivers/vector/eeda.rst:133
+#: ../../source/drivers/vector/eeda.rst:113
+#: ../../source/drivers/vector/eeda.rst:117
+#: ../../source/drivers/vector/eeda.rst:120
+#: ../../source/drivers/vector/eeda.rst:122
 #: ../../source/drivers/vector/eeda.rst:135
 #: ../../source/drivers/vector/eeda.rst:137
 #: ../../source/drivers/vector/eeda.rst:139
 #: ../../source/drivers/vector/eeda.rst:141
 #: ../../source/drivers/vector/eeda.rst:143
 #: ../../source/drivers/vector/eeda.rst:145
+#: ../../source/drivers/vector/eeda.rst:147
+#: ../../source/drivers/vector/eeda.rst:149
+#: ../../source/drivers/vector/eeda.rst:151
+#: ../../source/drivers/vector/eeda.rst:153
 msgid "No"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:109
+#: ../../source/drivers/vector/eeda.rst:117
 msgid "id"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:109
+#: ../../source/drivers/vector/eeda.rst:117
 msgid ""
 "Image ID; equivalent to name without the \"projects/\\*/assets/\" prefix "
 "(e.g. users/USER/ASSET)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:112
+#: ../../source/drivers/vector/eeda.rst:120
 msgid "path"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:112
+#: ../../source/drivers/vector/eeda.rst:120
 msgid "(Deprecated) Image path; equivalent to id"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:114
+#: ../../source/drivers/vector/eeda.rst:122
 msgid "gdal_dataset"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:114
+#: ../../source/drivers/vector/eeda.rst:122
 msgid ""
 "GDAL dataset name (e.g. EEDAI:projects/earthengine-public/ "
 "assets/COPERNICUS/S2/ 20170430T190351_20170430T190351\\_ T10SEG) that can"
 " be opened with the :ref:`raster.eedai` driver"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:121
+#: ../../source/drivers/vector/eeda.rst:129
 msgid "startTime"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:121
-#: ../../source/drivers/vector/eeda.rst:124
-#: ../../source/drivers/vector/eeda.rst:127
+#: ../../source/drivers/vector/eeda.rst:129
+#: ../../source/drivers/vector/eeda.rst:132
+#: ../../source/drivers/vector/eeda.rst:135
 msgid "DateTime"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:121
+#: ../../source/drivers/vector/eeda.rst:129
 msgid "Acquisition start date"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:121
+#: ../../source/drivers/vector/eeda.rst:129
 msgid "**Yes** (restricted to >= comparison on top level)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:124
+#: ../../source/drivers/vector/eeda.rst:132
 msgid "endTime"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:124
+#: ../../source/drivers/vector/eeda.rst:132
 msgid "Acquisition end date"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:124
+#: ../../source/drivers/vector/eeda.rst:132
 msgid "**Yes** (restricted to <= comparison on top level)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:127
+#: ../../source/drivers/vector/eeda.rst:135
 msgid "updateTime"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:127
+#: ../../source/drivers/vector/eeda.rst:135
 msgid "Update date"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:129
+#: ../../source/drivers/vector/eeda.rst:137
 msgid "sizeBytes"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:129
+#: ../../source/drivers/vector/eeda.rst:137
 msgid "Integer64"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:129
+#: ../../source/drivers/vector/eeda.rst:137
 msgid "File size in bytes"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:131
+#: ../../source/drivers/vector/eeda.rst:139
 msgid "band_count"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:131
-#: ../../source/drivers/vector/eeda.rst:133
-#: ../../source/drivers/vector/eeda.rst:135
+#: ../../source/drivers/vector/eeda.rst:139
+#: ../../source/drivers/vector/eeda.rst:141
+#: ../../source/drivers/vector/eeda.rst:143
 msgid "Integer"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:131
+#: ../../source/drivers/vector/eeda.rst:139
 msgid "Number of bands"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:133
+#: ../../source/drivers/vector/eeda.rst:141
 msgid "band_max_width"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:133
+#: ../../source/drivers/vector/eeda.rst:141
 msgid "Maximum width among bands"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:135
+#: ../../source/drivers/vector/eeda.rst:143
 msgid "band_max_height"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:135
+#: ../../source/drivers/vector/eeda.rst:143
 msgid "Maximum height among bands"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:137
+#: ../../source/drivers/vector/eeda.rst:145
 msgid "band_min_pixel_size"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:137
-#: ../../source/drivers/vector/eeda.rst:139
-#: ../../source/drivers/vector/eeda.rst:141
+#: ../../source/drivers/vector/eeda.rst:145
+#: ../../source/drivers/vector/eeda.rst:147
+#: ../../source/drivers/vector/eeda.rst:149
 msgid "Real"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:137
+#: ../../source/drivers/vector/eeda.rst:145
 msgid "Minimum pixel size among bands"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:139
+#: ../../source/drivers/vector/eeda.rst:147
 msgid "band_upper_left_x"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:139
+#: ../../source/drivers/vector/eeda.rst:147
 msgid "X origin (only set if equal among all bands)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:141
+#: ../../source/drivers/vector/eeda.rst:149
 msgid "band_upper_left_y"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:141
+#: ../../source/drivers/vector/eeda.rst:149
 msgid "Y origin (only set if equal among all bands)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:143
+#: ../../source/drivers/vector/eeda.rst:151
 msgid "band_crs"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:143
+#: ../../source/drivers/vector/eeda.rst:151
 msgid "CRS as EPSG:XXXX or WKT (only set if equal among all bands)"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:145
+#: ../../source/drivers/vector/eeda.rst:153
 msgid "other_properties"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:145
+#: ../../source/drivers/vector/eeda.rst:153
 msgid ""
 "Serialized JSON dictionary with key/value pairs where key is not a "
 "standalone field"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:149
+#: ../../source/drivers/vector/eeda.rst:157
 msgid ""
 "\"Server-side filter compatible\" means that when this field is included "
 "in an attribute filter, it is forwarded to the server (otherwise only "
 "client-side filtering is done)."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:154
+#: ../../source/drivers/vector/eeda.rst:162
 msgid "Geometry"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:156
+#: ../../source/drivers/vector/eeda.rst:164
 msgid ""
 "The footprint of each image is reported as a MultiPolygon with a "
 "longitude/latitude WGS84 coordinate system (EPSG:4326)."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:160
+#: ../../source/drivers/vector/eeda.rst:168
 msgid "Filtering"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:162
+#: ../../source/drivers/vector/eeda.rst:170
 msgid ""
 "The driver will forward any spatial filter set with SetSpatialFilter() to"
 " the server. It also makes the same for simple attribute filters set with"
@@ -394,53 +396,59 @@ msgid ""
 "comparison operators (=, <>, <, <=, > and >=) are supported."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:168
+#: ../../source/drivers/vector/eeda.rst:176
 msgid "Paging"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:170
+#: ../../source/drivers/vector/eeda.rst:178
 msgid ""
 "Features are retrieved from the server by chunks of 1000 by default (and "
 "this is the maximum value accepted by the server). This number can be "
 "altered with the :config:`EEDA_PAGE_SIZE` configuration option."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:175
+#: ../../source/drivers/vector/eeda.rst:183
 msgid "Extent and feature count"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:177
+#: ../../source/drivers/vector/eeda.rst:185
 msgid ""
 "The reported extent and feature count will always be respectively "
 "(-180,-90,180,90) and -1, given there is no way to get efficient answer "
 "to those queries from the server."
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:182
+#: ../../source/drivers/vector/eeda.rst:190
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:184
+#: ../../source/drivers/vector/eeda.rst:192
 msgid "Listing all images available:"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:190
+#: ../../source/drivers/vector/eeda.rst:198
 msgid "or"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:196
+#: ../../source/drivers/vector/eeda.rst:204
 msgid "Listing all images under a point of (lat,lon)=(40,-100) :"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:202
+#: ../../source/drivers/vector/eeda.rst:210
 msgid "Listing all images available matching criteria :"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:209
+#: ../../source/drivers/vector/eeda.rst:217
 msgid "See Also:"
 msgstr ""
 
-#: ../../source/drivers/vector/eeda.rst:211
+#: ../../source/drivers/vector/eeda.rst:219
 msgid ":ref:`Google Earth Engine Data API Image driver <raster.eedai>`"
 msgstr ""
+
+#~ msgid ""
+#~ "Service account private key file, "
+#~ "through the :config:`GOOGLE_APPLICATION_CREDENTIALS` "
+#~ "configuration option."
+#~ msgstr ""
 

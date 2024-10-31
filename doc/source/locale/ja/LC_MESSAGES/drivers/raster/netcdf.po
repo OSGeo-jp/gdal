@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -672,35 +672,36 @@ msgid ""
 "GDAL with NetCDF support."
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:753
-msgid ""
-"See `NetCDF GDAL wiki <http://trac.osgeo.org/gdal/wiki/NetCDF>`__ for "
-"build instructions and information regarding HDF4, NetCDF-4 and HDF5."
-msgstr ""
-
-#: ../../source/drivers/raster/netcdf.rst:757
+#: ../../source/drivers/raster/netcdf.rst:754
 msgid "See Also:"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:759
+#: ../../source/drivers/raster/netcdf.rst:756
 msgid ":ref:`Vector side of the netCDF driver. <vector.netcdf>`"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:760
+#: ../../source/drivers/raster/netcdf.rst:757
 msgid ""
 "`NetCDF CF-1.5 convention <http://cf-pcmdi.llnl.gov/documents/cf-"
 "conventions/1.5/cf-conventions.html>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:762
+#: ../../source/drivers/raster/netcdf.rst:759
 msgid ""
 "`NetCDF compiled libraries "
 "<http://www.unidata.ucar.edu/downloads/netcdf/index.jsp>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/netcdf.rst:764
+#: ../../source/drivers/raster/netcdf.rst:761
 msgid ""
 "`NetCDF Documentation "
 "<http://www.unidata.ucar.edu/software/netcdf/docs/>`__"
 msgstr ""
+
+#~ msgid ""
+#~ "See `NetCDF GDAL wiki "
+#~ "<http://trac.osgeo.org/gdal/wiki/NetCDF>`__ for build "
+#~ "instructions and information regarding HDF4,"
+#~ " NetCDF-4 and HDF5."
+#~ msgstr ""
 

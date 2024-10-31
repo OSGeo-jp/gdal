@@ -25,19 +25,19 @@ msgstr ""
 
 #: ../../source/programs/ogrmerge.rst:9
 msgid "Merge several vector datasets into a single one."
-msgstr ""
+msgstr "いくつかのベクターデータセットを1つにマージします."
 
 #: ../../source/programs/ogrmerge.rst:14
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../source/programs/ogrmerge.rst:27
 msgid "Options specific to the :ref:`-single <ogrmerge_single_option>` option:"
-msgstr ""
+msgstr "オプション :ref:`-single <ogrmerge_single_option>` に特有のオプション:"
 
 #: ../../source/programs/ogrmerge.rst:36
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: ../../source/programs/ogrmerge.rst:40
 msgid ""
@@ -45,16 +45,19 @@ msgid ""
 "having one or several vector layers, and copies them into a target "
 "dataset."
 msgstr ""
+":program:`ogrmerge` は複数のベクターデータセットを入力として受け取り,それぞれが"
+"1つ以上のベクターレイヤーを持ち,それらをターゲットデータセットにコピーします."
 
 #: ../../source/programs/ogrmerge.rst:44
 msgid "There are essentially two modes:"
-msgstr ""
+msgstr "基本的に2つのモードがあります:"
 
 #: ../../source/programs/ogrmerge.rst:46
 msgid ""
 "the default one, where each input vector layer, is copied as a separate "
 "layer into the target dataset"
 msgstr ""
+"デフォルトのモードでは,各入力ベクターレイヤーが別々のレイヤーとしてターゲットデータセットにコピーされます."
 
 #: ../../source/programs/ogrmerge.rst:49
 msgid ""

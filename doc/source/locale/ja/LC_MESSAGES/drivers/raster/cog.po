@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/cog.rst:5
 msgid "COG -- Cloud Optimized GeoTIFF generator"
@@ -67,37 +67,36 @@ msgid ""
 "``JPEG`` should generally only be used with Byte data (8 bit per "
 "channel). But if GDAL is built with internal libtiff and libjpeg, it is"
 "    possible to read and write TIFF files with 12bit JPEG compressed TIFF"
-" files (seen as UInt16 bands with NBITS=12). See the `\"8 and 12 bit JPEG"
-" in TIFF\" <http://trac.osgeo.org/gdal/wiki/TIFF12BitJPEG>`__ wiki page "
-"for more details. For the COG driver, JPEG compression for 3 or 4-band "
-"images automatically selects the PHOTOMETRIC=YCBCR colorspace with a "
-"4:2:2 subsampling of the Y,Cb,Cr components. For a input dataset (single-"
-"band or 3-band), plus an alpha band, the alpha band will be converted as "
-"a 1-bit DEFLATE compressed mask."
+" files (seen as UInt16 bands with NBITS=12). For the COG driver, JPEG "
+"compression for 3 or 4-band images automatically selects the "
+"PHOTOMETRIC=YCBCR colorspace with a 4:2:2 subsampling of the Y,Cb,Cr "
+"components. For a input dataset (single-band or 3-band), plus an alpha "
+"band, the alpha band will be converted as a 1-bit DEFLATE compressed "
+"mask."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:65
+#: ../../source/drivers/raster/cog.rst:63
 msgid ""
 "``LZW``, ``DEFLATE`` and ``ZSTD`` compressions can be used with the "
 "PREDICTOR creation option."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:67
+#: ../../source/drivers/raster/cog.rst:65
 msgid ""
 "``ZSTD`` is available when using internal libtiff and if GDAL built "
 "against libzstd >=1.0, or if built against external libtiff with zstd "
 "support."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:70
+#: ../../source/drivers/raster/cog.rst:68
 msgid "``LERC`` is available when using internal libtiff."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:72
+#: ../../source/drivers/raster/cog.rst:70
 msgid "``LERC_ZSTD`` is available when ``LERC`` and ``ZSTD`` are available."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:74
+#: ../../source/drivers/raster/cog.rst:72
 msgid ""
 "``JXL`` is for JPEG-XL, and is only available when using internal libtiff"
 " and building GDAL against https://github.com/libjxl/libjxl . JXL "
@@ -105,39 +104,39 @@ msgid ""
 "added in GDAL 3.4"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:86
+#: ../../source/drivers/raster/cog.rst:84
 msgid ""
 "For DEFLATE/LZMA, 9 is the slowest/higher compression rate (or 12 when "
 "using a libtiff with libdeflate support). The default is 6."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:88
+#: ../../source/drivers/raster/cog.rst:86
 msgid "For ZSTD, 22 is the slowest/higher compression rate. The default is 9."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:194
+#: ../../source/drivers/raster/cog.rst:192
 msgid "``YES`` forces BigTIFF."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:195
+#: ../../source/drivers/raster/cog.rst:193
 msgid "``NO`` forces classic TIFF."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:196
+#: ../../source/drivers/raster/cog.rst:194
 msgid ""
 "``IF_NEEDED`` will only create a BigTIFF if it is clearly needed (in the "
 "uncompressed case, and image larger than 4GB. So no effect when using a "
 "compression)."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:199
+#: ../../source/drivers/raster/cog.rst:197
 msgid ""
 "``IF_SAFER`` will create BigTIFF if the resulting file \\*might\\* exceed"
 " 4GB. Note: this is only a heuristics that might not always work "
 "depending on compression ratios."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:203
+#: ../../source/drivers/raster/cog.rst:201
 msgid ""
 "BigTIFF is a TIFF variant which can contain more than 4GiB of data (size "
 "of classic TIFF is limited by that value). This option is available if "
@@ -145,7 +144,7 @@ msgid ""
 "IF_NEEDED."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:208
+#: ../../source/drivers/raster/cog.rst:206
 msgid ""
 "When creating a new GeoTIFF with no compression, GDAL computes in advance"
 " the size of the resulting file. If that computed file size is over 4GiB,"
@@ -159,39 +158,39 @@ msgid ""
 "message like \"TIFFAppendToStrip:Maximum TIFF file size exceeded\"."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:250
+#: ../../source/drivers/raster/cog.rst:248
 msgid ""
 "``AUTO`` (default): source overviews will be used if present. If not "
 "present, overviews will be automatically generated in the output file."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:254
+#: ../../source/drivers/raster/cog.rst:252
 msgid ""
 "``IGNORE_EXISTING``: potential existing overviews on the source dataset "
 "will be ignored and new overviews will be automatically generated."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:257
+#: ../../source/drivers/raster/cog.rst:255
 msgid ""
 "``FORCE_USE_EXISTING``: potential existing overviews on the source will "
 "be used. If there is no source overview, this is equivalent to specifying"
 " ``NONE``."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:261
+#: ../../source/drivers/raster/cog.rst:259
 msgid ""
 "``NONE``: potential source overviews will be ignored, and no overview "
 "will be generated."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:266
+#: ../../source/drivers/raster/cog.rst:264
 msgid ""
 "When using the gdal_translate utility, source overviews will not be "
 "available if general options (i.e. options which are not creation "
 "options, like subsetting, etc.) are used."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:281
+#: ../../source/drivers/raster/cog.rst:279
 msgid ""
 "If not specified, the driver will use all the overviews available in the "
 "source raster, in :co:`OVERVIEWS=AUTO` or ``FORCE_USE_EXISTING`` modes. "
@@ -200,21 +199,21 @@ msgid ""
 "smaller or equal to the :co:`BLOCKSIZE` value."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:292
+#: ../../source/drivers/raster/cog.rst:290
 msgid ""
 "By default (``AUTO``) the overviews will be created with the same "
 "compression method as the COG."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:324
+#: ../../source/drivers/raster/cog.rst:322
 msgid "Write support for GeoTIFF 1.1 requires libgeotiff 1.6.0 or later."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:354
+#: ../../source/drivers/raster/cog.rst:352
 msgid "Reprojection related creation options"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:366
+#: ../../source/drivers/raster/cog.rst:364
 msgid ""
 "The tile size indicated in the tiling scheme definition (generally 256 "
 "pixels) will be used, unless the user has specified a value with the "
@@ -224,7 +223,7 @@ msgid ""
 "the HiDPi tiles)."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:372
+#: ../../source/drivers/raster/cog.rst:370
 msgid ""
 "In non-CUSTOM mode, TARGET_SRS, RES and EXTENT options are ignored. "
 "Starting with GDAL 3.2, the value of :co:`TILING_SCHEME` can also be the "
@@ -236,11 +235,11 @@ msgid ""
 "``gdalinfo --format COG``."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:441
+#: ../../source/drivers/raster/cog.rst:439
 msgid "Update"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:443
+#: ../../source/drivers/raster/cog.rst:441
 msgid ""
 "Updating a COG file generally breaks part of the optimizations, but still"
 " produces a valid GeoTIFF file. Starting with GDAL 3.8, to avoid "
@@ -249,138 +248,138 @@ msgid ""
 "also explicitly set to YES."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:448
+#: ../../source/drivers/raster/cog.rst:446
 msgid ""
 "Note that a subset of operations are possible when opening a COG file in "
 "read-only mode, like metadata edition (including statistics storage), "
 "that will be stored in a auxiliary .aux.xml side-car file."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:453
+#: ../../source/drivers/raster/cog.rst:451
 msgid "File format details"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:456
+#: ../../source/drivers/raster/cog.rst:454
 msgid "High level"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:458
+#: ../../source/drivers/raster/cog.rst:456
 msgid "A Cloud optimized GeoTIFF has the following characteristics:"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:460
+#: ../../source/drivers/raster/cog.rst:458
 msgid "TIFF or BigTIFF file"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:461
+#: ../../source/drivers/raster/cog.rst:459
 msgid "Tiled (512 pixels by default) for imagery, mask and overviews"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:462
+#: ../../source/drivers/raster/cog.rst:460
 msgid ""
 "Overviews until the maximum dimension of the smallest overview level is "
 "lower than 512 pixels."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:464
+#: ../../source/drivers/raster/cog.rst:462
 msgid "Compressed or not"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:465
+#: ../../source/drivers/raster/cog.rst:463
 msgid "Pixel interleaving for multi-band dataset"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:466
+#: ../../source/drivers/raster/cog.rst:464
 msgid ""
 "Optimized layout of TIFF sections to minimize the number of GET requests "
 "needed by a reader doing random read access."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:470
+#: ../../source/drivers/raster/cog.rst:468
 msgid "Low level"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:472
+#: ../../source/drivers/raster/cog.rst:470
 msgid ""
 "A COG file is organized as the following (if using libtiff >= 4.0.11 or "
 "GDAL internal libtiff. For other versions, the layout will be different "
 "and some of the optimizations will not be available)."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:476
+#: ../../source/drivers/raster/cog.rst:474
 msgid ""
 "TIFF/BigTIFF header/signature and pointer to first IFD (Image File "
 "Directory)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:477
+#: ../../source/drivers/raster/cog.rst:475
 msgid "\"ghost area\" with COG optimizations (see `Header ghost area`_)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:478
+#: ../../source/drivers/raster/cog.rst:476
 msgid ""
 "IFD of the full resolution image, followed by TIFF tags values, excluding"
 " the TileOffsets and TileByteCounts arrays."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:480
+#: ../../source/drivers/raster/cog.rst:478
 msgid ""
 "IFD of the mask of the full resolution image, if present, followed by "
 "TIFF tags values, excluding the TileOffsets and TileByteCounts arrays."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:482
+#: ../../source/drivers/raster/cog.rst:480
 msgid "IFD of the first (largest in dimensions) overview level, if present"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:483
-#: ../../source/drivers/raster/cog.rst:486
-#: ../../source/drivers/raster/cog.rst:492
+#: ../../source/drivers/raster/cog.rst:481
+#: ../../source/drivers/raster/cog.rst:484
+#: ../../source/drivers/raster/cog.rst:490
 msgid "..."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:484
+#: ../../source/drivers/raster/cog.rst:482
 msgid "IFD of the last (smallest) overview level, if present"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:485
+#: ../../source/drivers/raster/cog.rst:483
 msgid ""
 "IFD of the first (largest in dimensions) overview level of the mask, if "
 "present"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:487
+#: ../../source/drivers/raster/cog.rst:485
 msgid "IFD of the last (smallest) overview level of the mask, if present"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:488
+#: ../../source/drivers/raster/cog.rst:486
 msgid "TileOffsets and TileByteCounts arrays of the above IFDs"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:489
+#: ../../source/drivers/raster/cog.rst:487
 msgid ""
 "tile data of the smallest overview, if present (with each tile followed "
 "by the corresponding tile of mask data, if present), with :ref:`leader "
 "and trailer bytes <cog.tile_data_leader_trailer>`"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:493
+#: ../../source/drivers/raster/cog.rst:491
 msgid ""
 "tile data of the largest overview, if present (interleaved with mask data"
 " if present)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:494
+#: ../../source/drivers/raster/cog.rst:492
 msgid ""
 "tile data of the full resolution image, if present (interleaved with "
 "corresponding  mask data if present)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:497
+#: ../../source/drivers/raster/cog.rst:495
 msgid "Header ghost area"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:499
+#: ../../source/drivers/raster/cog.rst:497
 msgid ""
 "To describe the specific layout of COG files, a description of the "
 "features used is located at the beginning of the file, so that optimized "
@@ -393,23 +392,23 @@ msgid ""
 " be:"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:520
+#: ../../source/drivers/raster/cog.rst:518
 msgid "A newline character `\\\\n` is used to separate those strings."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:521
+#: ../../source/drivers/raster/cog.rst:519
 msgid ""
 "A space character is inserted after the newline following "
 "`KNOWN_INCOMPATIBLE_EDITION=NO`"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:522
+#: ../../source/drivers/raster/cog.rst:520
 msgid ""
 "For a COG without mask, the `MASK_INTERLEAVED_WITH_IMAGERY` item will not"
 " be present of course."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:524
+#: ../../source/drivers/raster/cog.rst:522
 msgid ""
 "The ghost area starts with ``GDAL_STRUCTURAL_METADATA_SIZE=XXXXXX "
 "bytes\\n`` (of a fixed size of 43 bytes) where XXXXXX is a 6-digit number"
@@ -417,7 +416,7 @@ msgid ""
 " linefeed character of this starting line)."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:529
+#: ../../source/drivers/raster/cog.rst:527
 msgid ""
 "``LAYOUT=IFDS_BEFORE_DATA``: the IFDs are located at the beginning of the"
 " file. GDAL will also makes sure that the tile index arrays are written "
@@ -425,28 +424,28 @@ msgid ""
 " of 16 KB will always get all the IFDs"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:534
+#: ../../source/drivers/raster/cog.rst:532
 msgid ""
 "``BLOCK_ORDER=ROW_MAJOR``: (strile is a contraction of 'strip or tile') "
 "the data for tiles is written in increasing tile id order. Future "
 "enhancements could possibly implement other layouts."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:538
+#: ../../source/drivers/raster/cog.rst:536
 msgid ""
 "``BLOCK_LEADER=SIZE_AS_UINT4``: each tile data is preceded by 4 bytes, in"
 " a *ghost* area as well, indicating the real tile size (in little endian "
 "order). See `Tile data leader and trailer`_ for more details."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:542
+#: ../../source/drivers/raster/cog.rst:540
 msgid ""
 "``BLOCK_TRAILER=LAST_4_BYTES_REPEATED``: just after the tile data, the "
 "last 4 bytes of the tile data are repeated. See `Tile data leader and "
 "trailer`_ for more details."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:545
+#: ../../source/drivers/raster/cog.rst:543
 msgid ""
 "``KNOWN_INCOMPATIBLE_EDITION=NO``: when a COG is generated this is always"
 " written. If GDAL is then used to modify the COG file, as most of the "
@@ -456,7 +455,7 @@ msgid ""
 "users know they have *broken* their COG file"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:552
+#: ../../source/drivers/raster/cog.rst:550
 msgid ""
 "``MASK_INTERLEAVED_WITH_IMAGERY=YES``: indicates that mask data "
 "immediately follows imagery data. So when reading data at "
@@ -464,44 +463,44 @@ msgid ""
 " get a buffer with:"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:556
+#: ../../source/drivers/raster/cog.rst:554
 msgid "leader with imagery tile size (4 bytes)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:557
+#: ../../source/drivers/raster/cog.rst:555
 msgid "imagery data (starting at TileOffsets[i] and of size TileByteCounts[i])"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:558
+#: ../../source/drivers/raster/cog.rst:556
 msgid "trailer of imagery (4 bytes)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:559
+#: ../../source/drivers/raster/cog.rst:557
 msgid "leader with mask tilesize (4 bytes)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:560
+#: ../../source/drivers/raster/cog.rst:558
 msgid ""
 "mask data (starting at mask.TileOffsets[i] and of size "
 "mask.TileByteCounts[i], but none of them actually need to be read)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:562
+#: ../../source/drivers/raster/cog.rst:560
 msgid "trailer of mask data (4 bytes)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:566
+#: ../../source/drivers/raster/cog.rst:564
 msgid ""
 "The content of the header ghost area can be retrieved by getting the "
 "``GDAL_STRUCTURAL_METADATA`` metadata item of the ``TIFF`` metadata "
 "domain on the datasett object (with GetMetadataItem())"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:573
+#: ../../source/drivers/raster/cog.rst:571
 msgid "Tile data leader and trailer"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:575
+#: ../../source/drivers/raster/cog.rst:573
 msgid ""
 "Each tile data is immediately preceded by a leader, consisting of a "
 "unsigned 4-byte integer, in little endian order, giving the number of "
@@ -511,7 +510,7 @@ msgid ""
 "TileOffsets[i]-4."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:581
+#: ../../source/drivers/raster/cog.rst:579
 msgid ""
 "An optimized reader seeing the ``BLOCK_LEADER=SIZE_AS_UINT4`` metadata "
 "item will thus look for TileOffset[i] and TileOffset[i+1] to deduce it "
@@ -526,7 +525,7 @@ msgid ""
 "mask will follow the imagery data (see MASK_INTERLEAVED_WITH_IMAGERY=YES)"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:592
+#: ../../source/drivers/raster/cog.rst:590
 msgid ""
 "Each tile data is immediately followed by a trailer, consisting of the "
 "repetition of the last 4 bytes of the payload of the tile data. The size "
@@ -538,30 +537,52 @@ msgid ""
 "using TileOffsets[i] + TileByteCounts[i]."
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:601
+#: ../../source/drivers/raster/cog.rst:599
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:612
+#: ../../source/drivers/raster/cog.rst:610
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:614
+#: ../../source/drivers/raster/cog.rst:612
 msgid ":ref:`raster.gtiff` driver"
 msgstr ""
 
-#: ../../source/drivers/raster/cog.rst:615
-msgid ""
-"`How to generate and read cloud optimized GeoTIFF files "
-"<https://trac.osgeo.org/gdal/wiki/CloudOptimizedGeoTIFF>`__ (before GDAL "
-"3.1)"
-msgstr ""
-
-#: ../../source/drivers/raster/cog.rst:617
+#: ../../source/drivers/raster/cog.rst:613
 msgid ""
 "If your source dataset is an internally tiled geotiff with the desired "
 "georeferencing and compression, using `cogger "
 "<https://github.com/airbusgeo/cogger>`__ (possibly along with gdaladdo to"
 " create overviews) will be much faster than the COG driver."
 msgstr ""
+
+#~ msgid ""
+#~ "``JPEG`` should generally only be used"
+#~ " with Byte data (8 bit per "
+#~ "channel). But if GDAL is built "
+#~ "with internal libtiff and libjpeg, it"
+#~ " is    possible to read and write "
+#~ "TIFF files with 12bit JPEG compressed"
+#~ " TIFF files (seen as UInt16 bands "
+#~ "with NBITS=12). See the `\"8 and "
+#~ "12 bit JPEG in TIFF\" "
+#~ "<http://trac.osgeo.org/gdal/wiki/TIFF12BitJPEG>`__ wiki "
+#~ "page for more details. For the COG"
+#~ " driver, JPEG compression for 3 or"
+#~ " 4-band images automatically selects the"
+#~ " PHOTOMETRIC=YCBCR colorspace with a 4:2:2"
+#~ " subsampling of the Y,Cb,Cr components. "
+#~ "For a input dataset (single-band "
+#~ "or 3-band), plus an alpha band, "
+#~ "the alpha band will be converted "
+#~ "as a 1-bit DEFLATE compressed mask."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`How to generate and read cloud "
+#~ "optimized GeoTIFF files "
+#~ "<https://trac.osgeo.org/gdal/wiki/CloudOptimizedGeoTIFF>`__ "
+#~ "(before GDAL 3.1)"
+#~ msgstr ""
 

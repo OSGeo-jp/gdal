@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/msg.rst:5
 msgid "MSG -- Meteosat Second Generation"
@@ -74,138 +74,97 @@ msgstr ""
 msgid "Build Instructions"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:39
-msgid "CMake builds"
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:41
+#: ../../source/drivers/raster/msg.rst:38
 msgid "See the ``GDAL_USE_PUBLICDECOMPWT`` option of :ref:`building_from_source`."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:44
-msgid "Other build systems"
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:46
-msgid "Clone the EUMETSAT library for wavelet decompression into ``frmts/msg``."
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:48
-msgid ""
-"If you are building with Visual Studio 6.0, extract the .vc makefiles for"
-" the PublicDecompWT from the file `PublicDecompWTMakefiles.zip` stored in"
-" that directory."
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:52
-msgid ""
-"If you build using the GNUMakefile, use *--with-msg* option to enable MSG"
-" driver:"
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:59
-msgid ""
-"If you find that some adjustments are needed in the makefile and/or the "
-"msg source files, please \"commit\" them. The EUMETSAT library promises "
-"to be \"platform independent\", but as we are working with Microsoft "
-"Windows and Visual Studio 6.0, we did not have the facilities to check if"
-" the rest of the msg driver is. Furthermore, apply steps 4 to 7 from the "
-":ref:`raster_driver_tut`, section \"Adding Driver to GDAL Tree\"."
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:66
-msgid ""
-"MSG Wiki page is available at http://trac.osgeo.org/gdal/wiki/MSG. It's "
-"dedicated to document building and usage hints"
-msgstr ""
-
-#: ../../source/drivers/raster/msg.rst:70
+#: ../../source/drivers/raster/msg.rst:41
 msgid "Specification of Source Dataset"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:72
+#: ../../source/drivers/raster/msg.rst:43
 msgid ""
 "It is possible to select individual files for opening. In this case, the "
 "driver will gather the files that correspond to the other strips of the "
 "same image, and correctly compose the image."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:76
+#: ../../source/drivers/raster/msg.rst:47
 msgid "Example with gdal_translate.exe:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:84
+#: ../../source/drivers/raster/msg.rst:55
 msgid "It is also possible to use the following syntax for opening the MSG files:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:87
+#: ../../source/drivers/raster/msg.rst:58
 msgid "MSG(source_folder,timestamp,(channel,channel,...,channel),use_root_folder,data_conversion,nr_cycles,step)"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:90
+#: ../../source/drivers/raster/msg.rst:61
 msgid "source_folder: a path to a folder structure that contains the files"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:92
+#: ../../source/drivers/raster/msg.rst:63
 msgid ""
 "timestamp: 12 digits representing a date/time that identifies the 114 "
 "files of the 12 images of that time, e.g. 200501181200"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:94
+#: ../../source/drivers/raster/msg.rst:65
 msgid ""
 "channel: a number between 1 and 12, representing each of the 12 available"
 " channels. When only specifying one channel, the brackets are optional."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:97
+#: ../../source/drivers/raster/msg.rst:68
 msgid ""
 "use_root_folder: Y to indicate that the files reside directly into the "
 "source_folder specified. N to indicate that the files reside in date "
 "structured folders: source_folder/YYYY/MM/DD"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:100
+#: ../../source/drivers/raster/msg.rst:71
 msgid "data_conversion:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:103
+#: ../../source/drivers/raster/msg.rst:74
 msgid "N to keep the original 10 bits DN values. The result is UInt16."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:104
+#: ../../source/drivers/raster/msg.rst:75
 msgid ""
 "B to convert to 8 bits (handy for GIF and JPEG images). The result is "
 "Byte."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:106
+#: ../../source/drivers/raster/msg.rst:77
 msgid ""
 "R to perform radiometric calibration and get the result in "
 "mW/m2/sr/(cm-1)-1. The result is Float32."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:108
+#: ../../source/drivers/raster/msg.rst:79
 msgid ""
 "L to perform radiometric calibration and get the result in W/m2/sr/um. "
 "The result is Float32."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:110
+#: ../../source/drivers/raster/msg.rst:81
 msgid ""
 "T to get the reflectance for the visible bands (1, 2, 3 and 12) and the "
 "temperature in degrees Kelvin for the infrared bands (all other bands). "
 "The result is Float32."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:114
+#: ../../source/drivers/raster/msg.rst:85
 msgid ""
 "nr_cycles: a number that indicates the number of consecutive cycles to be"
 " included in the same file (time series). These are appended as "
 "additional bands."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:117
+#: ../../source/drivers/raster/msg.rst:88
 msgid ""
 "step: a number that indicates what is the stepsize when multiple cycles "
 "are chosen. E.g. every 15 minutes: step = 1, every 30 minutes: step = 2 "
@@ -213,69 +172,69 @@ msgid ""
 "get images from times in-between (the step is an integer)."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:123
+#: ../../source/drivers/raster/msg.rst:94
 msgid "Examples with gdal_translate utility:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:125
+#: ../../source/drivers/raster/msg.rst:96
 msgid ""
 "Example call to fetch an MSG image of 200501181200 with bands 1, 2 and 3 "
 "in IMG format:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:132
+#: ../../source/drivers/raster/msg.rst:103
 msgid ""
 "In JPG format, and converting the 10 bits image to 8 bits by dividing all"
 " values by 4:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:139
+#: ../../source/drivers/raster/msg.rst:110
 msgid "The same, but reordering the bands in the JPEG image to resemble RGB:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:145
+#: ../../source/drivers/raster/msg.rst:116
 msgid "Geotiff output, only band 2, original 10 bits values:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:151
+#: ../../source/drivers/raster/msg.rst:122
 msgid "Band 12:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:157
+#: ../../source/drivers/raster/msg.rst:128
 msgid "The same band 12 with radiometric calibration in mW/m2/sr/(cm-1)-1:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:163
+#: ../../source/drivers/raster/msg.rst:134
 msgid ""
 "Retrieve data from c:\\hrit-data\\2005\\01\\18 instead of "
 "\\\\\\pc2133-24002\\RawData\\... :"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:170
+#: ../../source/drivers/raster/msg.rst:141
 msgid ""
 "Another option to do the same (note the difference in the Y and the N for"
 " the “use_root_folder” parameter:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:177
+#: ../../source/drivers/raster/msg.rst:148
 msgid ""
 "Without radiometric calibration, but for 10 consecutive cycles (thus from"
 " 1200 to 1415):"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:184
+#: ../../source/drivers/raster/msg.rst:155
 msgid "10 cycles, but every hour (thus from 1200 to 2100):"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:190
+#: ../../source/drivers/raster/msg.rst:161
 msgid "10 cycles, every hour, and bands 3, 2 and 1:"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:197
+#: ../../source/drivers/raster/msg.rst:168
 msgid "Georeference and Projection"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:199
+#: ../../source/drivers/raster/msg.rst:170
 msgid ""
 "The images are using the Geostationary Satellite View projection. Most "
 "GIS packages don't recognize this projection (we only know of ILWIS that "
@@ -283,17 +242,64 @@ msgid ""
 "the images."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:205
+#: ../../source/drivers/raster/msg.rst:176
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:207
+#: ../../source/drivers/raster/msg.rst:178
 msgid "Implemented as :source_file:`frmts/msg/msgdataset.cpp`."
 msgstr ""
 
-#: ../../source/drivers/raster/msg.rst:208
+#: ../../source/drivers/raster/msg.rst:179
 msgid ""
 "http://www.eumetsat.int - European Organisation for the Exploitation of "
 "Meteorological Satellites"
 msgstr ""
+
+#~ msgid "CMake builds"
+#~ msgstr ""
+
+#~ msgid "Other build systems"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Clone the EUMETSAT library for wavelet"
+#~ " decompression into ``frmts/msg``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are building with Visual "
+#~ "Studio 6.0, extract the .vc makefiles"
+#~ " for the PublicDecompWT from the file"
+#~ " `PublicDecompWTMakefiles.zip` stored in that "
+#~ "directory."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you build using the GNUMakefile, "
+#~ "use *--with-msg* option to enable "
+#~ "MSG driver:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you find that some adjustments "
+#~ "are needed in the makefile and/or "
+#~ "the msg source files, please \"commit\""
+#~ " them. The EUMETSAT library promises "
+#~ "to be \"platform independent\", but as"
+#~ " we are working with Microsoft "
+#~ "Windows and Visual Studio 6.0, we "
+#~ "did not have the facilities to "
+#~ "check if the rest of the msg "
+#~ "driver is. Furthermore, apply steps 4"
+#~ " to 7 from the :ref:`raster_driver_tut`,"
+#~ " section \"Adding Driver to GDAL "
+#~ "Tree\"."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "MSG Wiki page is available at "
+#~ "http://trac.osgeo.org/gdal/wiki/MSG. It's dedicated "
+#~ "to document building and usage hints"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/index.rst:115
 msgid "Go"
@@ -25,10 +25,6 @@ msgstr ""
 
 #: ../../source/api/index.rst:115
 msgid "Julia"
-msgstr ""
-
-#: ../../source/api/index.rst:115
-msgid "Lua"
 msgstr ""
 
 #: ../../source/api/index.rst:115
@@ -59,15 +55,15 @@ msgstr ""
 msgid "Rust"
 msgstr ""
 
-#: ../../source/api/index.rst:136
+#: ../../source/api/index.rst:131
 msgid "Fiona"
 msgstr ""
 
-#: ../../source/api/index.rst:136
+#: ../../source/api/index.rst:131
 msgid "Rasterio"
 msgstr ""
 
-#: ../../source/api/index.rst:144
+#: ../../source/api/index.rst:139
 msgid "Godal"
 msgstr ""
 
@@ -133,24 +129,27 @@ msgid ""
 "GDAL/OGR C/C++ API). These include bindings for"
 msgstr ""
 
-#: ../../source/api/index.rst:130
-msgid ""
-"For Perl, since GDAL 3.5 the link `Perl "
-"<https://trac.osgeo.org/gdal/wiki/GdalOgrInPerl>`__ is deprecated, use "
-"above link instead."
-msgstr ""
-
-#: ../../source/api/index.rst:134
+#: ../../source/api/index.rst:129
 msgid "There are also more Pythonic ways of using the vector/OGR functions with"
 msgstr ""
 
-#: ../../source/api/index.rst:142
+#: ../../source/api/index.rst:137
 msgid "There is a more idiomatic Golang way of using the raster functions with"
 msgstr ""
 
-#: ../../source/api/index.rst:151
+#: ../../source/api/index.rst:146
 msgid ""
 "API is omitted in this PDF document. You can consult it on "
 "https://gdal.org/api/index.html"
 msgstr ""
+
+#~ msgid "Lua"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For Perl, since GDAL 3.5 the link"
+#~ " `Perl <https://trac.osgeo.org/gdal/wiki/GdalOgrInPerl>`__"
+#~ " is deprecated, use above link "
+#~ "instead."
+#~ msgstr ""
 

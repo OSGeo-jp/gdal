@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 11:33+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
@@ -238,25 +238,25 @@ msgid "Geometry field"
 msgstr "ジオメトリフィールド"
 
 #: ../../source/user/sql_sqlite_dialect.rst:123
+#, fuzzy
 msgid ""
-"The ``GEOMETRY`` special field represents the geometry of the feature "
-"returned by OGRFeature::GetGeometryRef(). It can be explicitly specified "
-"in the result column list of a SELECT, and is automatically selected if "
-"the * wildcard is used."
+"Geometry fields can be explicitly specified in the result column list of "
+"a SELECT, or automatically selected if the * wildcard is used."
 msgstr ""
 "``GEOMETRY`` 特殊フィールドは, OGRFeature::GetGeometryRef() "
 "によって返される地物のジオメトリを表します. SELECTの結果列リストで明示的に指定することができ, * "
 "ワイルドカードが使用されると自動的に選択されます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:128
+#: ../../source/user/sql_sqlite_dialect.rst:126
+#, fuzzy
 msgid ""
 "For OGR layers that have a non-empty geometry column name (generally for "
 "RDBMS datasources), as returned by OGRLayer::GetGeometryColumn(), the "
-"name of the geometry special field in the SQL statement will be the name "
+"name of the geometry special field in the SQL statement must be the name "
 "of the geometry column of the underlying OGR layer. If the name of the "
 "geometry column in the source layer is empty, like with shapefiles etc., "
-"the name to use in the SQL statement is always \"geometry\". Here we'll "
-"use it case-insensitively (as all field names are in a SELECT statement):"
+"the name to use in the SQL statement must be \"geometry\". Here we'll use"
+" it case-insensitively (as all field names are in a SELECT statement):"
 msgstr ""
 "一般的にRDBMSデータソースの場合, OGRLayer::GetGeometryColumn() "
 "によって返されるジオメトリ列名が空でないOGRレイヤーに対して, SQLステートメントのジオメトリ特殊フィールドの名前は, "
@@ -264,19 +264,19 @@ msgstr ""
 "SQLステートメントで使用する名前は常に \"geometry\" です. ここでは, "
 "大文字小文字を区別せずに使用します(すべてのフィールド名がSELECTステートメントであるため):"
 
-#: ../../source/user/sql_sqlite_dialect.rst:139
-#: ../../source/user/sql_sqlite_dialect.rst:151
+#: ../../source/user/sql_sqlite_dialect.rst:137
+#: ../../source/user/sql_sqlite_dialect.rst:149
 #: ../../source/user/sql_sqlite_dialect.rst:226
 #: ../../source/user/sql_sqlite_dialect.rst:355
 #: ../../source/user/sql_sqlite_dialect.rst:366
 msgid "returns:"
 msgstr "リターン:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:162
+#: ../../source/user/sql_sqlite_dialect.rst:160
 msgid "Feature id (FID)"
 msgstr "地物ID (FID)"
 
-#: ../../source/user/sql_sqlite_dialect.rst:164
+#: ../../source/user/sql_sqlite_dialect.rst:162
 msgid ""
 "The feature id is a special property of a feature and not treated as an "
 "attribute of the feature.  In some cases it is convenient to be able to "
@@ -286,7 +286,7 @@ msgstr ""
 "地物IDは地物の特別なプロパティであり, 地物の属性として扱われません. 場合によっては, "
 "地物IDをクエリや結果セットで通常のフィールドとして利用できると便利です. その場合は ``rowid`` という名前を使用します."
 
-#: ../../source/user/sql_sqlite_dialect.rst:169
+#: ../../source/user/sql_sqlite_dialect.rst:167
 msgid ""
 "Starting with GDAL 3.8, if the layer has a named FID column "
 "(:cpp:func:`OGRLayer::GetFIDColumn` != \"\"), this name may also be used."
@@ -294,22 +294,21 @@ msgstr ""
 "GDAL 3.8以降, レイヤーに名前付きFID列がある場合 (:cpp:func:`OGRLayer::GetFIDColumn` != "
 "\"\"), この名前も使用できます."
 
-#: ../../source/user/sql_sqlite_dialect.rst:172
-#: ../../source/user/sql_sqlite_dialect.rst:180
+#: ../../source/user/sql_sqlite_dialect.rst:170
 msgid ""
 "The field wildcard expansions will not include the feature id, but it may"
 " be explicitly included using a syntax like:"
 msgstr "フィールドワイルドカードの展開には地物IDは含まれませんが, 次のような構文を使用して明示的に含めることができます:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:187
+#: ../../source/user/sql_sqlite_dialect.rst:177
 msgid "It is of course possible to rename it:"
 msgstr "これの名前を変更することも可能です:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:194
+#: ../../source/user/sql_sqlite_dialect.rst:184
 msgid "OGR_STYLE special field"
 msgstr "OGR_STYLE特殊フィールド"
 
-#: ../../source/user/sql_sqlite_dialect.rst:196
+#: ../../source/user/sql_sqlite_dialect.rst:186
 msgid ""
 "The ``OGR_STYLE`` special field represents the style string of the "
 "feature returned by OGRFeature::GetStyleString(). By using this field and"
@@ -320,27 +319,73 @@ msgstr ""
 "によって返される地物のスタイル文字列を表します. このフィールドと ``LIKE`` 演算子を使用することで, "
 "クエリの結果をスタイルでフィルタリングすることができます. 例えば, アノテーション地物を選択することができます:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:206
+#: ../../source/user/sql_sqlite_dialect.rst:196
 msgid "Statistics functions"
 msgstr "統計関数"
 
-#: ../../source/user/sql_sqlite_dialect.rst:208
+#: ../../source/user/sql_sqlite_dialect.rst:198
 msgid ""
 "In addition to standard COUNT(), SUM(), AVG(), MIN(), MAX(), the "
 "following aggregate functions are available:"
 msgstr "標準の COUNT(), SUM(), AVG(), MIN(), MAX() に加えて, 次の集計関数が利用可能です:"
 
-#: ../../source/user/sql_sqlite_dialect.rst:211
-msgid "STDDEV_POP: (GDAL >= 3.10) numerical population standard deviation."
+#: ../../source/user/sql_sqlite_dialect.rst:201
+#, fuzzy
+msgid ""
+"``STDDEV_POP(numeric_value)``: (GDAL >= 3.10) numerical population "
+"standard deviation."
 msgstr "STDDEV_POP: (GDAL >= 3.10) 数値の母集団標準偏差."
 
-#: ../../source/user/sql_sqlite_dialect.rst:212
+#: ../../source/user/sql_sqlite_dialect.rst:202
+#, fuzzy
 msgid ""
-"STDDEV_SAMP: (GDAL >= 3.10) numerical `sample standard deviation "
+"``STDDEV_SAMP(numeric_value)``: (GDAL >= 3.10) numerical `sample standard"
+" deviation "
 "<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__"
 msgstr ""
 "STDDEV_SAMP: (GDAL >= 3.10) 数値の `標本標準偏差 "
 "<https://en.wikipedia.org/wiki/Standard_deviation#Sample_standard_deviation>`__"
+
+#: ../../source/user/sql_sqlite_dialect.rst:205
+#, fuzzy
+msgid "Ordered-set aggregate functions"
+msgstr "ラスタ関連関数"
+
+#: ../../source/user/sql_sqlite_dialect.rst:207
+msgid ""
+"The following aggregate functions are available. Note that they require "
+"to allocate an amount of memory proportional to the number of selected "
+"rows (for ``MEDIAN``, ``PERCENTILE`` and ``PERCENTILE_CONT``) or to the "
+"number of values (for ``MODE``)."
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:209
+msgid ""
+"``MEDIAN(numeric_value)``: (GDAL >= 3.10) (continuous) median (equivalent"
+" to ``PERCENTILE(numeric_value, 50)``). NULL values are ignored."
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:210
+msgid ""
+"``PERCENTILE(numeric_value, percentage)``: (GDAL >= 3.10) (continuous) "
+"percentile, with percentage between 0 and 100 (equivalent to "
+"``PERCENTILE_CONT(numeric_value, percentage / 100)``). NULL values are "
+"ignored."
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:211
+msgid ""
+"``PERCENTILE_CONT(numeric_value, fraction)``: (GDAL >= 3.10) (continuous)"
+" percentile, with fraction between 0 and 1. NULL values are ignored."
+msgstr ""
+
+#: ../../source/user/sql_sqlite_dialect.rst:212
+msgid ""
+"``MODE(value)``: (GDAL >= 3.10): mode, i.e. most frequent input value "
+"(strings and numeric values are supported), arbitrarily choosing the "
+"first one if there are multiple equally-frequent results. NULL values are"
+" ignored."
+msgstr ""
 
 #: ../../source/user/sql_sqlite_dialect.rst:215
 msgid "Spatialite SQL functions"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/sqlite.rst:4
 msgid "SQLite / Spatialite RDBMS"
@@ -453,55 +453,71 @@ msgid ""
 "and optimize it."
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:561
+#: ../../source/drivers/vector/sqlite.rst:560
+msgid "Secure deletion"
+msgstr ""
+
+#: ../../source/drivers/vector/sqlite.rst:562
+msgid ""
+"Depending on how SQLite3 is built, `secure deletion "
+"<https://www.sqlite.org/pragma.html#pragma_secure_delete>`__ might or "
+"might not be enabled. Starting with GDAL 3.10, secure deletion is always "
+"enabled, unless ``SECURE_DELETE`` is specified through the "
+":config:`OGR_SQLITE_PRAGMA` configuration option. Note that secure "
+"deletion does not recover potential lost space, so running a `VACUUM "
+"<https://sqlite.org/lang_vacuum.html>`__ query is recommended to fully "
+"optimized a database that has been subject to updates or deletions."
+msgstr ""
+
+#: ../../source/drivers/vector/sqlite.rst:572
 msgid "Example"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:563
+#: ../../source/drivers/vector/sqlite.rst:574
 msgid "Convert a non-spatial SQLite table into a GeoPackage:"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:579
+#: ../../source/drivers/vector/sqlite.rst:590
 msgid "Perform a join between 2 SQLite/Spatialite databases:"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:588
+#: ../../source/drivers/vector/sqlite.rst:599
 msgid "Credits"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:590
+#: ../../source/drivers/vector/sqlite.rst:601
 msgid ""
 "Development of the OGR SQLite driver was supported by `DM Solutions Group"
 " <http://www.dmsolutions.ca/>`__ and `GoMOOS <http://www.gomoos.org/>`__."
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:593
+#: ../../source/drivers/vector/sqlite.rst:604
 msgid ""
 "Full support for SpatiaLite was contributed by A.Furieri, with funding "
 "from `Regione Toscana <http://www.regione.toscana.it/>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:597
+#: ../../source/drivers/vector/sqlite.rst:608
 msgid "Links"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:599
+#: ../../source/drivers/vector/sqlite.rst:610
 msgid "`http://www.sqlite.org <http://www.sqlite.org/>`__: Main SQLite page."
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:600
+#: ../../source/drivers/vector/sqlite.rst:611
 msgid ""
 "https://www.gaia-gis.it/fossil/libspatialite/index: SpatiaLite extension "
 "to SQLite."
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:601
+#: ../../source/drivers/vector/sqlite.rst:612
 msgid ""
 "`FDO RFC 16 <http://trac.osgeo.org/fdo/wiki/FDORfc16>`__: FDO Provider "
 "for SQLite"
 msgstr ""
 
-#: ../../source/drivers/vector/sqlite.rst:603
+#: ../../source/drivers/vector/sqlite.rst:614
 msgid ":ref:`RasterLite2 driver <raster.rasterlite2>`"
 msgstr ""
 

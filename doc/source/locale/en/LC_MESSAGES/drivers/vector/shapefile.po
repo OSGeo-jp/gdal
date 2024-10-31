@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/shapefile.rst:4
 msgid "ESRI Shapefile / DBF"
@@ -256,18 +256,15 @@ msgid ""
 "Note that this can make it very difficult to translate a mixed geometry "
 "layer from another format into Shapefile format using ogr2ogr, since "
 "ogr2ogr has no support for separating out geometries from a source layer."
-" See the `FAQ "
-"<http://trac.osgeo.org/gdal/wiki/FAQVector#HowdoItranslateamixedgeometryfiletoshapefileformat>`__"
-" for a solution."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:173
+#: ../../source/drivers/vector/shapefile.rst:171
 msgid ""
 "Shapefile feature attributes are stored in an associated .dbf file, and "
 "so attributes suffer a number of limitations:"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:176
+#: ../../source/drivers/vector/shapefile.rst:174
 msgid ""
 "Attribute names can only be up to 10 characters long. The OGR Shapefile "
 "driver tries to generate unique field names. Successive duplicate field "
@@ -275,26 +272,26 @@ msgid ""
 "truncated to 8 characters and appended with a serial number from 1 to 99."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:182
+#: ../../source/drivers/vector/shapefile.rst:180
 msgid "For example:"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:184
+#: ../../source/drivers/vector/shapefile.rst:182
 msgid "a → a, a → a_1, A → A_2;"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:185
+#: ../../source/drivers/vector/shapefile.rst:183
 msgid "abcdefghijk → abcdefghij, abcdefghijkl → abcdefgh_1"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:187
+#: ../../source/drivers/vector/shapefile.rst:185
 msgid ""
 "Only Integer, Integer64, Real, String and Date (not DateTime, just "
 "year/month/day) field types are supported. The various list, and binary "
 "field types cannot be created."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:191
+#: ../../source/drivers/vector/shapefile.rst:189
 msgid ""
 "The field width and precision are directly used to establish storage size"
 " in the .dbf file. This means that strings longer than the field width, "
@@ -302,36 +299,36 @@ msgid ""
 "truncation."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:196
+#: ../../source/drivers/vector/shapefile.rst:194
 msgid ""
 "Integer fields without an explicit width are treated as width 9, and "
 "extended to 10 or 11 if needed."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:199
+#: ../../source/drivers/vector/shapefile.rst:197
 msgid ""
 "Integer64 fields without an explicit width are treated as width 18, and "
 "extended to 19 or 20 if needed."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:202
+#: ../../source/drivers/vector/shapefile.rst:200
 msgid ""
 "Real (floating point) fields without an explicit width are treated as "
 "width 24 with 15 decimal places of precision."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:205
+#: ../../source/drivers/vector/shapefile.rst:203
 msgid "String fields without an assigned width are treated as 80 characters."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:207
+#: ../../source/drivers/vector/shapefile.rst:205
 msgid ""
 "Also, .dbf files are required to have at least one field. If none are "
 "created by the application an \"FID\" field will be automatically created"
 " and populated with the record number."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:211
+#: ../../source/drivers/vector/shapefile.rst:209
 msgid ""
 "The OGR shapefile driver supports rewriting existing shapes in a "
 "shapefile as well as deleting shapes. Deleted shapes are marked for "
@@ -340,32 +337,32 @@ msgid ""
 "'REPACK <tablename>' via the datasource ExecuteSQL() method."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:217
+#: ../../source/drivers/vector/shapefile.rst:215
 msgid ""
 "REPACK will also result in .shp being rewritten if a feature geometry has"
 " been modified with SetFeature() and resulted in a change of the size the"
 " binary encoding of the geometry in the .shp file."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:222
+#: ../../source/drivers/vector/shapefile.rst:220
 msgid ""
 "Starting with GDAL 2.2, REPACK is also done automatically at file "
 "closing, or at FlushCache()/SyncToDisk() time, since shapefiles with "
 "holes can cause interoperability issues with other software."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:227
+#: ../../source/drivers/vector/shapefile.rst:225
 msgid "Field sizes"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:229
+#: ../../source/drivers/vector/shapefile.rst:227
 msgid ""
 "The driver knows to auto-extend string and integer fields (up to the 255 "
 "bytes limit imposed by the DBF format) to dynamically accommodate for the"
 " length of the data to be inserted."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:233
+#: ../../source/drivers/vector/shapefile.rst:231
 msgid ""
 "It is also possible to force a resize of the fields to the optimal width "
 "by issuing a SQL 'RESIZE <tablename>' via the datasource ExecuteSQL() "
@@ -373,11 +370,11 @@ msgid ""
 "(80 characters for a string field) is bigger than necessary."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:239
+#: ../../source/drivers/vector/shapefile.rst:237
 msgid "Spatial extent"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:241
+#: ../../source/drivers/vector/shapefile.rst:239
 msgid ""
 "Shapefiles store the layer spatial extent in the .SHP file. The layer "
 "spatial extent is automatically updated when inserting a new feature in a"
@@ -389,30 +386,30 @@ msgid ""
 "method. The same applies for the deletion of a shape."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:251
+#: ../../source/drivers/vector/shapefile.rst:249
 msgid "Size Issues"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:253
+#: ../../source/drivers/vector/shapefile.rst:251
 msgid ""
 "Geometry: The Shapefile format explicitly uses 32bit offsets and so "
 "cannot go over 8GB (it actually uses 32bit offsets to 16bit words), but "
 "the OGR shapefile implementation has a limitation to 4GB."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:257
+#: ../../source/drivers/vector/shapefile.rst:255
 msgid ""
 "Attributes: The dbf format does not have any offsets in it, so it can be "
 "arbitrarily large."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:260
+#: ../../source/drivers/vector/shapefile.rst:258
 msgid ""
 "However, for compatibility with other software implementation, it is not "
 "recommended to use a file size over 2GB for both .SHP and .DBF files."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:263
+#: ../../source/drivers/vector/shapefile.rst:261
 msgid ""
 "The 2GB_LIMIT=YES layer creation option can be used to strictly enforce "
 "that limit. For update mode, the :config:`SHAPE_2GB_LIMIT` configuration "
@@ -420,11 +417,11 @@ msgid ""
 " will be emitted when the 2GB limit is reached."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:269
+#: ../../source/drivers/vector/shapefile.rst:267
 msgid "Compressed files"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:271
+#: ../../source/drivers/vector/shapefile.rst:269
 msgid ""
 "Starting with GDAL 3.1, the driver can also support reading, creating and"
 " editing .shz files (ZIP files containing the .shp, .shx, .dbf and other "
@@ -433,41 +430,41 @@ msgid ""
 "temporary files."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:277
+#: ../../source/drivers/vector/shapefile.rst:275
 msgid "Open options"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:279
+#: ../../source/drivers/vector/shapefile.rst:277
 msgid "|about-open-options| The following open options are supported:"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:341
+#: ../../source/drivers/vector/shapefile.rst:339
 msgid "Dataset creation options"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:343
+#: ../../source/drivers/vector/shapefile.rst:341
 msgid "None"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:346
+#: ../../source/drivers/vector/shapefile.rst:344
 msgid "Layer creation options"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:348
+#: ../../source/drivers/vector/shapefile.rst:346
 msgid ""
 "|about-layer-creation-options| The following layer creation options are "
 "supported:"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:412
+#: ../../source/drivers/vector/shapefile.rst:410
 msgid "Configuration options"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:414
+#: ../../source/drivers/vector/shapefile.rst:412
 msgid "|about-config-options| The following configuration options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:427
+#: ../../source/drivers/vector/shapefile.rst:425
 msgid ""
 "Starting with GDAL 3.7, for Polygon/MultiPolygon, the default value is "
 "NO, with the effect that the winding order of rings will be determined "
@@ -476,45 +473,56 @@ msgid ""
 "which could cause troubles for non-planar 3D geometries."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:455
+#: ../../source/drivers/vector/shapefile.rst:453
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:457
+#: ../../source/drivers/vector/shapefile.rst:455
 msgid ""
 "A merge of two shapefiles 'file1.shp' and 'file2.shp' into a new file "
 "'file_merged.shp' is performed like this:"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:465
+#: ../../source/drivers/vector/shapefile.rst:463
 msgid ""
 "The second command is opening file_merged.shp in update mode, and trying "
 "to find existing layers and append the features being copied."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:468
+#: ../../source/drivers/vector/shapefile.rst:466
 msgid "The -nln option sets the name of the layer to be copied to."
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:470
+#: ../../source/drivers/vector/shapefile.rst:468
 msgid "Building a spatial index :"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:476
+#: ../../source/drivers/vector/shapefile.rst:474
 msgid "Resizing columns of a DBF file to their optimal size :"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:484
+#: ../../source/drivers/vector/shapefile.rst:482
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:486
+#: ../../source/drivers/vector/shapefile.rst:484
 msgid "`Shapelib Page <http://shapelib.maptools.org/>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/shapefile.rst:487
-msgid ""
-"`User Notes on OGR Shapefile Driver "
-"<http://trac.osgeo.org/gdal/wiki/UserDocs/Shapefiles>`__"
-msgstr ""
+#~ msgid ""
+#~ "Note that this can make it very"
+#~ " difficult to translate a mixed "
+#~ "geometry layer from another format into"
+#~ " Shapefile format using ogr2ogr, since "
+#~ "ogr2ogr has no support for separating"
+#~ " out geometries from a source layer."
+#~ " See the `FAQ "
+#~ "<http://trac.osgeo.org/gdal/wiki/FAQVector#HowdoItranslateamixedgeometryfiletoshapefileformat>`__"
+#~ " for a solution."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`User Notes on OGR Shapefile Driver "
+#~ "<http://trac.osgeo.org/gdal/wiki/UserDocs/Shapefiles>`__"
+#~ msgstr ""
 

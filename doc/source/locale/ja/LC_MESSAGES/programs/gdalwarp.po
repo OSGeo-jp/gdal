@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdalwarp.rst:5
 msgid "gdalwarp"
@@ -42,9 +42,9 @@ msgid ""
 "and can also apply GCPs stored with the image if the image is \"raw\" "
 "with control information."
 msgstr ""
-":program:`gdalwarp` ユーティリティは画像モザイキング, 再投影および変形ユーティリティ"
-"です. このプログラムは, 任意のサポートされている投影法に再投影でき, 画像が制御情報"
-"を持つ \"raw\" である場合は画像に格納された GCP を適用することもできます."
+":program:`gdalwarp` ユーティリティは画像モザイキング, 再投影および変形ユーティリティです. このプログラムは, "
+"任意のサポートされている投影法に再投影でき, 画像が制御情報を持つ \"raw\" である場合は画像に格納された GCP "
+"を適用することもできます."
 
 #: ../../source/programs/options/help.rst:3
 msgid "Show this help message and exit"
@@ -54,23 +54,19 @@ msgstr "このヘルプメッセージを表示して終了します"
 msgid ""
 "Gives a brief usage message for the generic GDAL commandline options and "
 "exit."
-msgstr ""
-"一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
+msgstr "一般的な GDAL コマンドラインオプションの使用方法を簡単に表示して終了します."
 
 #: ../../source/programs/gdalwarp.rst:68
 msgid ""
 "Specify an input band number to warp (between 1 and the number of bands "
 "of the source dataset)."
-msgstr ""
-"変形する入力バンド番号を指定します (1 からソースデータセットのバンド数まで)."
+msgstr "変形する入力バンド番号を指定します (1 からソースデータセットのバンド数まで)."
 
 #: ../../source/programs/gdalwarp.rst:71
 msgid ""
 "This option is used to warp a subset of the input bands. All input bands "
 "are used when it is not specified."
-msgstr ""
-"このオプションは, 入力バンドのサブセットを変形するために使用されます. 指定されて"
-"いない場合は, すべての入力バンドが使用されます."
+msgstr "このオプションは, 入力バンドのサブセットを変形するために使用されます. 指定されていない場合は, すべての入力バンドが使用されます."
 
 #: ../../source/programs/gdalwarp.rst:74
 msgid ""
@@ -78,17 +74,14 @@ msgid ""
 " The order in which bands are specified will be the order in which they "
 "appear in the output dataset (unless :option:`-dstband` is specified)."
 msgstr ""
-"このオプションは複数回繰り返すことができ, 複数の入力バンドを選択します. バンドが"
-"指定された順序が出力データセットに表示される順序になります (:option:`-dstband` が"
-"指定されていない限り)."
+"このオプションは複数回繰り返すことができ, 複数の入力バンドを選択します. バンドが指定された順序が出力データセットに表示される順序になります "
+"(:option:`-dstband` が指定されていない限り)."
 
 #: ../../source/programs/gdalwarp.rst:78
 msgid ""
 "The alpha band should not be specified in the list, as it will be "
 "automatically retrieved (unless :option:`-nosrcalpha` is specified)."
-msgstr ""
-"アルファバンドはリストに指定しないでください. 自動的に取得されます (:option:`-nosrcalpha`"
-" が指定されていない限り)."
+msgstr "アルファバンドはリストに指定しないでください. 自動的に取得されます (:option:`-nosrcalpha` が指定されていない限り)."
 
 #: ../../source/programs/gdalwarp.rst:81
 msgid ""
@@ -96,8 +89,8 @@ msgid ""
 "as Blue, Green, Red, NearInfraRed in an output dataset with bands ordered"
 " as Red, Green, Blue."
 msgstr ""
-"次の呼び出しは, Blue, Green, Red, NearInfraRed として並べられたバンドを Red, Green, "
-"Blue として並べられた出力データセットで変形します."
+"次の呼び出しは, Blue, Green, Red, NearInfraRed として並べられたバンドを Red, Green, Blue "
+"として並べられた出力データセットで変形します."
 
 #: ../../source/programs/gdalwarp.rst:94
 msgid ""
@@ -105,16 +98,16 @@ msgid ""
 " is only useful when updating an existing dataset, e.g to warp one band "
 "at at time."
 msgstr ""
-"変形する出力バンド番号を指定します. 実際には, 既存のデータセットを更新する場合にのみ"
-"有用です. たとえば, 1 回に 1 つのバンドを変形するために使用します."
+"変形する出力バンド番号を指定します. 実際には, 既存のデータセットを更新する場合にのみ有用です. たとえば, 1 回に 1 "
+"つのバンドを変形するために使用します."
 
 #: ../../source/programs/gdalwarp.rst:106
 msgid ""
 "If :option:`-srcband` is specified, there must be as many occurrences of "
 ":option:`-dstband` as there are of :option:`-srcband`."
 msgstr ""
-":option:`-srcband` が指定されている場合, :option:`-srcband` の数と同じ数の :option:`-dstband`"
-" がある必要があります."
+":option:`-srcband` が指定されている場合, :option:`-srcband` の数と同じ数の "
+":option:`-dstband` がある必要があります."
 
 #: ../../source/programs/gdalwarp.rst:109
 msgid ""
@@ -122,8 +115,8 @@ msgid ""
 "automatically created if the input dataset has an alpha band, or if "
 ":option:`-dstalpha` is specified."
 msgstr ""
-"出力アルファバンドは指定しないでください. 入力データセットにアルファバンドがある場合"
-"や :option:`-dstalpha` が指定されている場合は, 自動的に作成されます."
+"出力アルファバンドは指定しないでください. 入力データセットにアルファバンドがある場合や :option:`-dstalpha` "
+"が指定されている場合は, 自動的に作成されます."
 
 #: ../../source/programs/gdalwarp.rst:113
 msgid ""
@@ -131,16 +124,15 @@ msgid ""
 "-dstband N`` is assumed where N is the number of input bands (specified "
 "explicitly either with :option:`-srcband` or implicitly)"
 msgstr ""
-":option:`-dstband` が指定されていない場合, ``-dstband 1 -dstband 2 ... -dstband N`` が"
-"仮定されます. ここで, N は入力バンドの数です ( :option:`-srcband` で明示的に指定されているか"
-"暗黙的に指定されています)."
+":option:`-dstband` が指定されていない場合, ``-dstband 1 -dstband 2 ... -dstband N`` "
+"が仮定されます. ここで, N は入力バンドの数です ( :option:`-srcband` "
+"で明示的に指定されているか暗黙的に指定されています)."
 
 #: ../../source/programs/gdalwarp.rst:120
 msgid ""
 "Set source spatial reference. If not specified the SRS found in the input"
 " dataset will be used."
-msgstr ""
-"ソース空間参照を設定します. 指定されていない場合, 入力データセットで見つかった SRS が使用されます."
+msgstr "ソース空間参照を設定します. 指定されていない場合, 入力データセットで見つかった SRS が使用されます."
 
 #: ../../source/programs/options/srs_def_gdalwarp.rst:1
 msgid ""
@@ -150,10 +142,9 @@ msgid ""
 "well known text (WKT) CRS definition, PROJ.4 declarations, or the name of"
 " a .prj file containing a WKT CRS definition."
 msgstr ""
-"渡すことができる座標参照システムは, OGRSpatialReference.SetFromUserInput() 呼び出しで"
-"サポートされているものです. これには, EPSG プロジェクト済み, 地理的または複合 CRS (つまり"
-"EPSG:4296), 既知のテキスト (WKT) CRS 定義, PROJ.4 宣言, または WKT CRS 定義を含む .prj ファイル"
-"の名前が含まれます."
+"渡すことができる座標参照システムは, OGRSpatialReference.SetFromUserInput() "
+"呼び出しでサポートされているものです. これには, EPSG プロジェクト済み, 地理的または複合 CRS (つまりEPSG:4296), "
+"既知のテキスト (WKT) CRS 定義, PROJ.4 宣言, または WKT CRS 定義を含む .prj ファイルの名前が含まれます."
 
 #: ../../source/programs/options/srs_def_gdalwarp.rst:6
 msgid ""
@@ -162,8 +153,8 @@ msgid ""
 "dataset, a vertical correction will be applied to the values of the "
 "dataset."
 msgstr ""
-"GDAL 2.2 以降, SRS に PROJ.4 geoidgrids を指す明示的な垂直基準がある場合, 入力データセットが"
-"単一バンドデータセットである場合, データセットの値に垂直補正が適用されます."
+"GDAL 2.2 以降, SRS に PROJ.4 geoidgrids を指す明示的な垂直基準がある場合, "
+"入力データセットが単一バンドデータセットである場合, データセットの値に垂直補正が適用されます."
 
 #: ../../source/programs/gdalwarp.rst:129
 msgid ""
@@ -171,8 +162,8 @@ msgid ""
 "source SRS is a dynamic CRS. Only taken into account if :option:`-s_srs` "
 "is used."
 msgstr ""
-"ソース SRS にリンクされた座標エポックを割り当てます. ソース SRS が動的 CRS の場合に便利です."
-" :option:`-s_srs` が使用されている場合のみ考慮されます."
+"ソース SRS にリンクされた座標エポックを割り当てます. ソース SRS が動的 CRS の場合に便利です. :option:`-s_srs` "
+"が使用されている場合のみ考慮されます."
 
 #: ../../source/programs/gdalwarp.rst:133
 #: ../../source/programs/gdalwarp.rst:154
@@ -181,8 +172,8 @@ msgid ""
 "were mutually exclusive, due to lack of support for transformations "
 "between two dynamic CRS."
 msgstr ""
-"PROJ 9.4 以前, :option:`-s_coord_epoch` と :option:`-t_coord_epoch` は, 2 つの動的 CRS 間の"
-"変換のサポートがないため, 相互に排他的でした."
+"PROJ 9.4 以前, :option:`-s_coord_epoch` と :option:`-t_coord_epoch` は, 2 "
+"つの動的 CRS 間の変換のサポートがないため, 相互に排他的でした."
 
 #: ../../source/programs/gdalwarp.rst:138
 msgid "Set target spatial reference."
@@ -194,8 +185,8 @@ msgid ""
 "will be by default the one found in the input dataset when it is "
 "available, or as overridden by the user with :option:`-s_srs`"
 msgstr ""
-"再投影が発生するためには, ソース SRS が利用可能である必要があります. ソース SRS は, 利用可能な"
-"場合は入力データセットで見つかったものであり, ユーザーによって :option:`-s_srs` で上書きされます."
+"再投影が発生するためには, ソース SRS が利用可能である必要があります. ソース SRS は, "
+"利用可能な場合は入力データセットで見つかったものであり, ユーザーによって :option:`-s_srs` で上書きされます."
 
 #: ../../source/programs/gdalwarp.rst:150
 msgid ""
@@ -203,8 +194,8 @@ msgid ""
 "target SRS is a dynamic CRS. Only taken into account if :option:`-t_srs` "
 "is used."
 msgstr ""
-"ターゲット SRS にリンクされた座標エポックを割り当てます. ターゲット SRS が動的 CRS の場合に便利です."
-" :option:`-t_srs` が使用されている場合のみ考慮されます."
+"ターゲット SRS にリンクされた座標エポックを割り当てます. ターゲット SRS が動的 CRS の場合に便利です. "
+":option:`-t_srs` が使用されている場合のみ考慮されます."
 
 #: ../../source/programs/gdalwarp.rst:159
 msgid ""
@@ -213,9 +204,9 @@ msgid ""
 "a urn:ogc:def:coordinateOperation:EPSG::XXXX URN overriding the default "
 "transformation from the source to the target CRS."
 msgstr ""
-"PROJ 文字列 (単一ステップ操作または +proj=pipeline で始まる複数ステップ文字列), "
-"CoordinateOperation を記述する WKT2 文字列, またはソースからターゲット CRS へのデフォルト"
-"変換を上書きする urn:ogc:def:coordinateOperation:EPSG::XXXX URN."
+"PROJ 文字列 (単一ステップ操作または +proj=pipeline で始まる複数ステップ文字列), CoordinateOperation "
+"を記述する WKT2 文字列, またはソースからターゲット CRS へのデフォルト変換を上書きする "
+"urn:ogc:def:coordinateOperation:EPSG::XXXX URN."
 
 #: ../../source/programs/gdalwarp.rst:164
 msgid ""
@@ -226,8 +217,8 @@ msgid ""
 "northing/easting axis order."
 msgstr ""
 "通常, ソース CRS が北方/東方軸順序を持つ場合はパイプラインの先頭に ``step proj=axisswap order=2,1`` "
-"を含め, ターゲット CRS が北方/東方軸順序を持つ場合はパイプラインの末尾に含める必要があります."
-"ソースとターゲット CRS の軸順序を考慮する必要があります."
+"を含め, ターゲット CRS が北方/東方軸順序を持つ場合はパイプラインの末尾に含める必要があります.ソースとターゲット CRS "
+"の軸順序を考慮する必要があります."
 
 #: ../../source/programs/gdalwarp.rst:169
 msgid ""
@@ -236,9 +227,8 @@ msgid ""
 "file, but the parameters of the CoordinateOperation will override those "
 "of the standard transformation."
 msgstr ""
-"新しい出力ファイルを作成する場合, :option:`-t_srs` を使用して出力ファイルのメタデータに"
-"ターゲット CRS を書き込む必要がありますが, CoordinateOperation のパラメータは標準変換の"
-"パラメータを上書きします."
+"新しい出力ファイルを作成する場合, :option:`-t_srs` を使用して出力ファイルのメタデータにターゲット CRS "
+"を書き込む必要がありますが, CoordinateOperation のパラメータは標準変換のパラメータを上書きします."
 
 #: ../../source/programs/gdalwarp.rst:178
 msgid ""
@@ -246,8 +236,8 @@ msgid ""
 ":cpp:func:`GDALCreateGenImgProjTransformer2`. See "
 ":cpp:func:`GDALCreateRPCTransformerV2()` for RPC specific options."
 msgstr ""
-":cpp:func:`GDALCreateGenImgProjTransformer2` に渡すのに適した変換オプションを設定します."
-"RPC 固有のオプションについては, :cpp:func:`GDALCreateRPCTransformerV2()` を参照してください."
+":cpp:func:`GDALCreateGenImgProjTransformer2` に渡すのに適した変換オプションを設定します.RPC "
+"固有のオプションについては, :cpp:func:`GDALCreateRPCTransformerV2()` を参照してください."
 
 #: ../../source/programs/gdalwarp.rst:183
 msgid ""
@@ -255,8 +245,8 @@ msgid ""
 "except when using an explicit coordinate transformation (:option:`-ct`), "
 "and not specifying an explicit source and target SRS."
 msgstr ""
-"垂直シフトの使用を強制します. このオプションは一般的には必要ありませんが, 明示的な座標変換"
-"(:option:`-ct`)を使用し, 明示的なソースとターゲット SRS を指定しない場合にのみ必要です."
+"垂直シフトの使用を強制します. このオプションは一般的には必要ありませんが, 明示的な座標変換(:option:`-ct`)を使用し, "
+"明示的なソースとターゲット SRS を指定しない場合にのみ必要です."
 
 #: ../../source/programs/gdalwarp.rst:191
 msgid ""
@@ -264,8 +254,8 @@ msgid ""
 "has an explicit vertical datum, and the input dataset is a single band "
 "dataset."
 msgstr ""
-"ソースまたはターゲット SRS のいずれかが明示的な垂直基準を持ち, 入力データセットが単一バンドデータセットの場合,"
-"垂直シフトの使用を無効にします."
+"ソースまたはターゲット SRS のいずれかが明示的な垂直基準を持ち, "
+"入力データセットが単一バンドデータセットの場合,垂直シフトの使用を無効にします."
 
 #: ../../source/programs/gdalwarp.rst:194
 msgid "this option was named ``-novshiftgrid`` in GDAL 2.2 to 3.3."
@@ -275,8 +265,7 @@ msgstr "このオプションは GDAL 2.2 から 3.3 では ``-novshiftgrid`` �
 msgid ""
 "order of polynomial used for warping (1 to 3). The default is to select a"
 " polynomial order based on the number of GCPs."
-msgstr ""
-"変形に使用される多項式の順序 (1 から 3). デフォルトは, GCP の数に基づいて多項式の順序を選択します."
+msgstr "変形に使用される多項式の順序 (1 から 3). デフォルトは, GCP の数に基づいて多項式の順序を選択します."
 
 #: ../../source/programs/gdalwarp.rst:205
 msgid "Force use of thin plate spline transformer based on available GCPs."
@@ -291,14 +280,15 @@ msgid "Force use of Geolocation Arrays."
 msgstr "ジオロケーション配列の使用を強制します."
 
 #: ../../source/programs/gdalwarp.rst:217
+#, fuzzy
 msgid ""
-"Error threshold for transformation approximation (in pixel units - "
-"defaults to 0.125, unless, starting with GDAL 2.1, the RPC_DEM "
-"transformer option is specified, in which case, an exact transformer, "
-"i.e. err_threshold=0, will be used)."
+"Error threshold for transformation approximation, expressed as a number "
+"of source pixels. Defaults to 0.125 pixels unless the ``RPC_DEM`` "
+"transformer option is specified, in which case an exact transformer, i.e."
+" ``err_threshold=0``, will be used."
 msgstr ""
-"変換近似のエラー閾値 (ピクセル単位 - デフォルトは 0.125 ですが, GDAL 2.1 以降, RPC_DEM 変換器"
-"オプションが指定されている場合は, 正確な変換器, つまり err_threshold=0 が使用されます)."
+"変換近似のエラー閾値 (ピクセル単位 - デフォルトは 0.125 ですが, GDAL 2.1 以降, RPC_DEM "
+"変換器オプションが指定されている場合は, 正確な変換器, つまり err_threshold=0 が使用されます)."
 
 #: ../../source/programs/gdalwarp.rst:224
 msgid ""
@@ -310,18 +300,18 @@ msgid ""
 "available, otherwise it is in SRS units. If minimum_gcps is not provided,"
 " the minimum GCPs according to the polynomial model is used."
 msgstr ""
-"外れ値を自動的に除外して GCP を洗練します. 外れ値は, 最小_gcps が残っているか, 外れ値が検出されなくなるまで"
-"除外されます. 許容値は, GCP が除外されるタイミングを調整するために渡されます. GCP の洗練は多項式補間"
-"とのみ機能します. 許容値は, 投影が利用できない場合はピクセル単位で, それ以外の場合は SRS 単位で指定されます."
-"minimum_gcps が提供されていない場合, 多項式モデルに従って最小 GCP が使用されます."
+"外れ値を自動的に除外して GCP を洗練します. 外れ値は, 最小_gcps が残っているか, 外れ値が検出されなくなるまで除外されます. "
+"許容値は, GCP が除外されるタイミングを調整するために渡されます. GCP の洗練は多項式補間とのみ機能します. 許容値は, "
+"投影が利用できない場合はピクセル単位で, それ以外の場合は SRS 単位で指定されます.minimum_gcps が提供されていない場合, "
+"多項式モデルに従って最小 GCP が使用されます."
 
 #: ../../source/programs/gdalwarp.rst:233
 msgid ""
 "Set georeferenced extents of output file to be created (in target SRS by "
 "default, or in the SRS specified with :option:`-te_srs`)"
 msgstr ""
-"作成される出力ファイルのジオリファレンスされた範囲を設定します (デフォルトではターゲット SRS または"
-" :option:`-te_srs` で指定された SRS で)."
+"作成される出力ファイルのジオリファレンスされた範囲を設定します (デフォルトではターゲット SRS または :option:`-te_srs` "
+"で指定された SRS で)."
 
 #: ../../source/programs/gdalwarp.rst:238
 msgid ""
@@ -334,9 +324,9 @@ msgid ""
 "projected coordinate system."
 msgstr ""
 "-te で指定された座標を解釈する SRS を指定します. <srs_def> は, 通常の GDAL/OGR 形式, 完全な WKT, "
-"PROJ.4, EPSG:n または WKT を含むファイルのいずれかです. これは, 出力データセットのターゲット SRS である"
-"-t_srs と混同してはいけません. :option:`-te_srs` は, 出力座標を地理的な経度/緯度 SRS で知っている場合"
-"でも, 投影された座標系で結果を得たい場合などの便利な機能です."
+"PROJ.4, EPSG:n または WKT を含むファイルのいずれかです. これは, 出力データセットのターゲット SRS である-t_srs "
+"と混同してはいけません. :option:`-te_srs` は, 出力座標を地理的な経度/緯度 SRS で知っている場合でも, "
+"投影された座標系で結果を得たい場合などの便利な機能です."
 
 #: ../../source/programs/gdalwarp.rst:248
 msgid "Set output file resolution (in target georeferenced units)."
@@ -347,8 +337,8 @@ msgid ""
 "If not specified (or not deduced from -te and -ts), gdalwarp will, in the"
 " general case, generate an output raster with xres=yres."
 msgstr ""
-"指定されていない場合 (または -te と -ts から推論されていない場合), gdalwarp は, 一般的な場合,"
-"xres=yres の出力ラスタを生成します."
+"指定されていない場合 (または -te と -ts から推論されていない場合), gdalwarp は, 一般的な場合,xres=yres "
+"の出力ラスタを生成します."
 
 #: ../../source/programs/gdalwarp.rst:253
 msgid ""
@@ -359,10 +349,10 @@ msgid ""
 "was always generated). It is possible to ask square pixels to still be "
 "generated, by specifying ``square`` as the value for :option:`-tr`."
 msgstr ""
-"GDAL 3.7 以降, :option:`-tr` または :option:`-ts` のいずれも指定されていない場合, 再投影が"
-"関係していない場合 (ジオロケーション配列や RPC を考慮に入れることを含む), ソースファイルの解像度が"
-"保持されます (以前のバージョンでは, 常に xres=yres の出力ラスタが生成されました). ``square`` を"
-" :option:`-tr` の値として指定することで, 依然として正方形のピクセルを生成することができます."
+"GDAL 3.7 以降, :option:`-tr` または :option:`-ts` のいずれも指定されていない場合, "
+"再投影が関係していない場合 (ジオロケーション配列や RPC を考慮に入れることを含む), ソースファイルの解像度が保持されます "
+"(以前のバージョンでは, 常に xres=yres の出力ラスタが生成されました). ``square`` を :option:`-tr` "
+"の値として指定することで, 依然として正方形のピクセルを生成することができます."
 
 #: ../../source/programs/gdalwarp.rst:262
 msgid ""
@@ -373,10 +363,9 @@ msgid ""
 "Alignment means that xmin / resx, ymin / resy, xmax / resx and ymax / "
 "resy are integer values."
 msgstr ""
-"(ターゲットに整列したピクセル) 出力ファイルの範囲の座標を :option:`-tr` の値に整列させ, 整列した"
-"範囲が最小範囲を含むようにします (実際の変形前に検出された空白のエッジ行/列は, GDAL 3.8 以降"
-"削除されます). 整列とは, xmin / resx, ymin / resy, xmax / resx, ymax / resy が整数値であることを"
-"意味します."
+"(ターゲットに整列したピクセル) 出力ファイルの範囲の座標を :option:`-tr` の値に整列させ, "
+"整列した範囲が最小範囲を含むようにします (実際の変形前に検出された空白のエッジ行/列は, GDAL 3.8 以降削除されます). 整列とは, "
+"xmin / resx, ymin / resy, xmax / resx, ymax / resy が整数値であることを意味します."
 
 #: ../../source/programs/gdalwarp.rst:271
 msgid ""
@@ -384,9 +373,8 @@ msgid ""
 " the other dimension will be guessed from the computed resolution. Note "
 "that :option:`-ts` cannot be used with :option:`-tr`"
 msgstr ""
-"ピクセル数と行数の出力ファイルサイズを設定します. 幅または高さが 0 に設定されている場合, 他の"
-"次元は計算された解像度から推測されます. :option:`-ts` は :option:`-tr` とは使用できないことに"
-"注意してください."
+"ピクセル数と行数の出力ファイルサイズを設定します. 幅または高さが 0 に設定されている場合, 他の次元は計算された解像度から推測されます. "
+":option:`-ts` は :option:`-tr` とは使用できないことに注意してください."
 
 #: ../../source/programs/gdalwarp.rst:277
 msgid ""
@@ -401,19 +389,18 @@ msgid ""
 "resampling method)."
 msgstr ""
 "使用するソースファイルのオーバービューレベルを指定します. デフォルトの選択肢である AUTO は, "
-"ターゲット解像度に最も近い解像度のオーバービューレベルを選択します. 特定のレベルを選択するには, "
-"整数値 (0 から始まる, つまり 0=1 番目のオーバービューレベル) を指定します. AUTO よりも低いオーバービューレベルを"
-"選択するには, AUTO-n と指定します. ここで n は 1 以上の整数です. または, NONE を指定してベース解像度を"
-"使用するように強制します (オーバービューが低品質のリサンプリング方法で生成されており, 変形が高品質の"
-"リサンプリング方法を使用して行われている場合に便利です)."
+"ターゲット解像度に最も近い解像度のオーバービューレベルを選択します. 特定のレベルを選択するには, 整数値 (0 から始まる, つまり 0=1 "
+"番目のオーバービューレベル) を指定します. AUTO よりも低いオーバービューレベルを選択するには, AUTO-n と指定します. ここで n "
+"は 1 以上の整数です. または, NONE を指定してベース解像度を使用するように強制します "
+"(オーバービューが低品質のリサンプリング方法で生成されており, 変形が高品質のリサンプリング方法を使用して行われている場合に便利です)."
 
 #: ../../source/programs/gdalwarp.rst:288
 msgid ""
 "Set a warp option.  The :cpp:member:`GDALWarpOptions::papszWarpOptions` "
 "docs show all options. Multiple :option:`-wo` options may be listed."
 msgstr ""
-"変形オプションを設定します. :cpp:member:`GDALWarpOptions::papszWarpOptions` ドキュメントに"
-"すべてのオプションが表示されます. 複数の :option:`-wo` オプションをリストアップすることができます."
+"変形オプションを設定します. :cpp:member:`GDALWarpOptions::papszWarpOptions` "
+"ドキュメントにすべてのオプションが表示されます. 複数の :option:`-wo` オプションをリストアップすることができます."
 
 #: ../../source/programs/options/ot.rst:3
 msgid ""
@@ -423,17 +410,16 @@ msgid ""
 "``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` or "
 "``CFloat64``."
 msgstr ""
-"ドライバでサポートされている特定のデータ型を持つ出力画像バンドを強制します. これは, 次のいずれか"
-"である可能性があります: ``Byte``, ``Int8``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, "
-"``UInt64``, ``Int64``, ``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` または"
-"``CFloat64``."
+"ドライバでサポートされている特定のデータ型を持つ出力画像バンドを強制します. これは, 次のいずれかである可能性があります: ``Byte``, "
+"``Int8``, ``UInt16``, ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, "
+"``Int64``, ``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32``"
+" または``CFloat64``."
 
 #: ../../source/programs/gdalwarp.rst:295
 msgid ""
 "Working pixel data type. The data type of pixels in the source image and "
 "destination image buffers."
-msgstr ""
-"作業ピクセルデータ型. ソース画像と宛先画像バッファ内のピクセルのデータ型."
+msgstr "作業ピクセルデータ型. ソース画像と宛先画像バッファ内のピクセルのデータ型."
 
 #: ../../source/programs/gdalwarp.rst:300
 msgid "Resampling method to use. Available methods are:"
@@ -443,8 +429,7 @@ msgstr "使用するリサンプリング方法. 使用可能な方法は次の�
 msgid ""
 "``near``: nearest neighbour resampling (default, fastest algorithm, worst"
 " interpolation quality)."
-msgstr ""
-"``near``: 最近傍補間 (デフォルト, 最速のアルゴリズム, 最悪の補間品質)."
+msgstr "``near``: 最近傍補間 (デフォルト, 最速のアルゴリズム, 最悪の補間品質)."
 
 #: ../../source/programs/gdalwarp.rst:304
 msgid "``bilinear``: bilinear resampling."
@@ -466,16 +451,13 @@ msgstr "``lanczos``: Lanczos windowed sinc 補間."
 msgid ""
 "``average``: average resampling, computes the weighted average of all "
 "non-NODATA contributing pixels."
-msgstr ""
-"``average``: average 補間, すべての非NODATAの寄与ピクセルの加重背筋を"
-"計算します."
+msgstr "``average``: average 補間, すべての非NODATAの寄与ピクセルの加重背筋を計算します."
 
 #: ../../source/programs/gdalwarp.rst:314
 msgid ""
 "``rms`` root mean square / quadratic mean of all non-NODATA contributing "
 "pixels (GDAL >= 3.3)"
-msgstr ""
-"``rms``: すべての非NODATAの寄与ピクセルの平均二乗平方根 / 平方平均 (GDAL >= 3.3)"
+msgstr "``rms``: すべての非NODATAの寄与ピクセルの平均二乗平方根 / 平方平均 (GDAL >= 3.3)"
 
 #: ../../source/programs/gdalwarp.rst:316
 msgid ""
@@ -490,45 +472,40 @@ msgstr ""
 msgid ""
 "``max``: maximum resampling, selects the maximum value from all non-"
 "NODATA contributing pixels."
-msgstr ""
-"``max``: 最大値補間, すべての非NODATAの寄与ピクセルから最大値を選択します."
+msgstr "``max``: 最大値補間, すべての非NODATAの寄与ピクセルから最大値を選択します."
 
 #: ../../source/programs/gdalwarp.rst:320
 msgid ""
 "``min``: minimum resampling, selects the minimum value from all non-"
 "NODATA contributing pixels."
-msgstr ""
-"``min``: 最小値補間, すべての非NODATAの寄与ピクセルから最小値を選択します."
+msgstr "``min``: 最小値補間, すべての非NODATAの寄与ピクセルから最小値を選択します."
 
 #: ../../source/programs/gdalwarp.rst:322
 msgid ""
 "``med``: median resampling, selects the median value of all non-NODATA "
 "contributing pixels."
-msgstr ""
-"``med``: median 補間, すべての非NODATAの寄与ピクセルの中央値を選択します."
+msgstr "``med``: median 補間, すべての非NODATAの寄与ピクセルの中央値を選択します."
 
 #: ../../source/programs/gdalwarp.rst:324
 msgid ""
 "``q1``: first quartile resampling, selects the first quartile value of "
 "all non-NODATA contributing pixels."
-msgstr ""
-"``q1``: 第 1 四分位数補間, すべての非NODATAの寄与ピクセルの第 1 四分位数値を選択します."
+msgstr "``q1``: 第 1 四分位数補間, すべての非NODATAの寄与ピクセルの第 1 四分位数値を選択します."
 
 #: ../../source/programs/gdalwarp.rst:326
 msgid ""
 "``q3``: third quartile resampling, selects the third quartile value of "
 "all non-NODATA contributing pixels."
-msgstr ""
-"``q3``: 第 3 四分位数補間, すべての非NODATAの寄与ピクセルの第 3 四分位数値を選択します."
+msgstr "``q3``: 第 3 四分位数補間, すべての非NODATAの寄与ピクセルの第 3 四分位数値を選択します."
 
 #: ../../source/programs/gdalwarp.rst:328
 msgid ""
 "``sum``: compute the weighted sum of all non-NODATA contributing pixels "
 "(since GDAL 3.1)"
-msgstr ""
-"``sum``: すべての非NODATAの寄与ピクセルの加重和を計算します (GDAL 3.1 以降)"
+msgstr "``sum``: すべての非NODATAの寄与ピクセルの加重和を計算します (GDAL 3.1 以降)"
 
 #: ../../source/programs/gdalwarp.rst:332
+#, fuzzy
 msgid ""
 "When downsampling is performed (use of :option:`-tr` or :option:`-ts`), "
 "existing overviews (either internal/implicit or external ones) on the "
@@ -536,16 +513,16 @@ msgid ""
 " the desired output resolution. The resampling method used to create "
 "those overviews is generally not the one you specify through the "
 ":option:`-r` option. Some formats, like JPEG2000, can contain significant"
-" outliers due to wavelet compression works. It might thus be useful in "
-"those situations to use the :option:`-ovr` ``NONE`` option to prevent "
+" outliers due to how wavelet compression works. It might thus be useful "
+"in those situations to use the :option:`-ovr` ``NONE`` option to prevent "
 "existing overviews to be used."
 msgstr ""
-"ダウンサンプリングが実行される場合 (:option:`-tr` または :option:`-ts` の使用), ソース画像の既存の"
-"オーバービュー (内部/暗黙的または外部のいずれか) は, 通常, 出力解像度に最も近いオーバービューを選択して"
-"デフォルトで使用されます. これらのオーバービューを作成するために使用されるリサンプリング方法は, 通常, "
-":option:`-r` オプションを通じて指定する方法ではありません. JPEG2000 のような一部のフォーマットは, "
-"ウェーブレット圧縮の動作による重要な外れ値を含むことがあります. そのような状況では, 既存のオーバービュー"
-"が使用されないようにするために, :option:`-ovr` ``NONE`` オプションを使用すると便利です."
+"ダウンサンプリングが実行される場合 (:option:`-tr` または :option:`-ts` の使用), ソース画像の既存のオーバービュー"
+" (内部/暗黙的または外部のいずれか) は, 通常, 出力解像度に最も近いオーバービューを選択してデフォルトで使用されます. "
+"これらのオーバービューを作成するために使用されるリサンプリング方法は, 通常, :option:`-r` "
+"オプションを通じて指定する方法ではありません. JPEG2000 のような一部のフォーマットは, "
+"ウェーブレット圧縮の動作による重要な外れ値を含むことがあります. そのような状況では, 既存のオーバービューが使用されないようにするために, "
+":option:`-ovr` ``NONE`` オプションを使用すると便利です."
 
 #: ../../source/programs/gdalwarp.rst:344
 msgid ""
@@ -555,17 +532,15 @@ msgid ""
 "argument. Masked values will not be used in interpolation (details given "
 "in :ref:`gdalwarp_nodata`)"
 msgstr ""
-"入力バンドのためのノーデータマスク値を設定します (異なる値を各バンドに供給することができます). "
-"複数の値が供給される場合, すべての値を引用符で囲んで, 1 つのオペレーティングシステム引数として"
-"まとめておく必要があります. マスクされた値は補間に使用されません (:ref:`gdalwarp_nodata` で詳細を"
-"説明しています)."
+"入力バンドのためのノーデータマスク値を設定します (異なる値を各バンドに供給することができます). 複数の値が供給される場合, "
+"すべての値を引用符で囲んで, 1 つのオペレーティングシステム引数としてまとめておく必要があります. マスクされた値は補間に使用されません "
+"(:ref:`gdalwarp_nodata` で詳細を説明しています)."
 
 #: ../../source/programs/gdalwarp.rst:349
 msgid ""
 "Use a value of ``None`` to ignore intrinsic nodata settings on the source"
 " dataset."
-msgstr ""
-"ソースデータセットの固有のノーデータ設定を無視するには, ``None`` の値を使用します."
+msgstr "ソースデータセットの固有のノーデータ設定を無視するには, ``None`` の値を使用します."
 
 #: ../../source/programs/gdalwarp.rst:351
 msgid ""
@@ -574,9 +549,9 @@ msgid ""
 ":cpp:member:`GDALWarpOptions::papszWarpOptions`) to be set to ``YES``, if"
 " it is not explicitly set."
 msgstr ""
-"このオプションが ``None`` 以外の値に設定されている場合, ``UNIFIED_SRC_NODATA`` 変形オプション"
-"(:cpp:member:`GDALWarpOptions::papszWarpOptions`) が明示的に設定されていない場合に ``YES`` に"
-"設定されます."
+"このオプションが ``None`` 以外の値に設定されている場合, ``UNIFIED_SRC_NODATA`` "
+"変形オプション(:cpp:member:`GDALWarpOptions::papszWarpOptions`) が明示的に設定されていない場合に"
+" ``YES`` に設定されます."
 
 #: ../../source/programs/gdalwarp.rst:355
 msgid ""
@@ -584,8 +559,8 @@ msgid ""
 "nodata values, they will be taken into account, with "
 "``UNIFIED_SRC_NODATA`` at ``PARTIAL`` by default."
 msgstr ""
-"``-srcnodata`` が明示的に設定されていない場合, ただしソースデータセットにノーデータ値がある場合, "
-"デフォルトで ``UNIFIED_SRC_NODATA`` は ``PARTIAL`` で考慮されます."
+"``-srcnodata`` が明示的に設定されていない場合, ただしソースデータセットにノーデータ値がある場合, デフォルトで "
+"``UNIFIED_SRC_NODATA`` は ``PARTIAL`` で考慮されます."
 
 #: ../../source/programs/gdalwarp.rst:361
 msgid ""
@@ -597,59 +572,60 @@ msgid ""
 "that nodata is not defined. If this argument is not used then nodata "
 "values will be copied from the source dataset."
 msgstr ""
-"出力バンドのためのノーデータ値を設定します (異なる値を各バンドに供給することができます). "
-"複数の値が供給される場合, すべての値を引用符で囲んで, 1 つのオペレーティングシステム引数として"
-"まとめておく必要があります. 新しいファイルはこの値で初期化され, 可能であればノーデータ値は出力ファイルに"
-"記録されます. ノーデータが定義されていないことを確認するには, ``None`` の値を使用します. この引数が"
-"使用されていない場合, ノーデータ値はソースデータセットからコピーされます."
+"出力バンドのためのノーデータ値を設定します (異なる値を各バンドに供給することができます). 複数の値が供給される場合, "
+"すべての値を引用符で囲んで, 1 つのオペレーティングシステム引数としてまとめておく必要があります. 新しいファイルはこの値で初期化され, "
+"可能であればノーデータ値は出力ファイルに記録されます. ノーデータが定義されていないことを確認するには, ``None`` の値を使用します. "
+"この引数が使用されていない場合, ノーデータ値はソースデータセットからコピーされます."
 
 #: ../../source/programs/gdalwarp.rst:371
 msgid ""
 "Force the last band of a source image to be considered as a source alpha "
 "band."
-msgstr ""
-"ソース画像の最後のバンドをソースアルファバンドとして扱うように強制します."
+msgstr "ソース画像の最後のバンドをソースアルファバンドとして扱うように強制します."
 
 #: ../../source/programs/gdalwarp.rst:376
 msgid ""
 "Prevent the alpha band of a source image to be considered as such (it "
 "will be warped as a regular band)"
-msgstr ""
-"ソース画像のアルファバンドがそのように考慮されないようにします (通常のバンドとして変形されます)"
+msgstr "ソース画像のアルファバンドがそのように考慮されないようにします (通常のバンドとして変形されます)"
 
 #: ../../source/programs/gdalwarp.rst:383
 msgid "Create an output alpha band to identify nodata (unset/transparent) pixels."
 msgstr "ノーデータ (未設定/透過) ピクセルを識別するための出力アルファバンドを作成します."
 
 #: ../../source/programs/gdalwarp.rst:387
+#, fuzzy
 msgid ""
 "Set the amount of memory that the warp API is allowed to use for caching."
-" The value is interpreted as being in megabytes if the value is less than"
-" 10000. For values >=10000, this is interpreted as bytes."
+" Defaults to 64 MB. Since GDAL 3.10, the value can be specified either as"
+" a fixed amount of memory (e.g., ``-wm 200MB``, ``-wm 1G``) or as a "
+"percentage of usable RAM (``-wm 10%``). In earlier versions, or if a unit"
+" is not specified, the value is interpreted as being in megabytes if the "
+"value is less than 10000. For values >=10000, it is interpreted as bytes."
 msgstr ""
-"ワープ API がキャッシュに使用するメモリ量を設定します. 値が 10000 未満の場合, メガバイト単位として"
-"解釈されます. 10000 以上の値の場合, バイトとして解釈されます."
+"ワープ API がキャッシュに使用するメモリ量を設定します. 値が 10000 未満の場合, メガバイト単位として解釈されます. 10000 "
+"以上の値の場合, バイトとして解釈されます."
 
-#: ../../source/programs/gdalwarp.rst:392
+#: ../../source/programs/gdalwarp.rst:397
 msgid ""
 "The warper will total up the memory required to hold the input and output"
 " image arrays and any auxiliary masking arrays and if they are larger "
 "than the \"warp memory\" allowed it will subdivide the chunk into smaller"
 " chunks and try again."
 msgstr ""
-"ワーパーは, 入力および出力画像配列と補助マスキング配列を保持するために必要なメモリを合計し, "
-"それらが許容される \"ワープメモリ\" よりも大きい場合, チャンクをより小さなチャンクに分割して再試行します."
+"ワーパーは, 入力および出力画像配列と補助マスキング配列を保持するために必要なメモリを合計し, それらが許容される \"ワープメモリ\" "
+"よりも大きい場合, チャンクをより小さなチャンクに分割して再試行します."
 
-#: ../../source/programs/gdalwarp.rst:397
+#: ../../source/programs/gdalwarp.rst:402
 msgid ""
 "If the -wm value is very small there is some extra overhead in doing many"
 " small chunks so setting it larger is better but it is a matter of "
 "diminishing returns."
 msgstr ""
-"-wm 値が非常に小さい場合, 多くの小さなチャンクを処理するための追加のオーバーヘッドが発生するため, "
-"大きく設定する方が良いですが, それは収穫逓減の問題です."
+"-wm 値が非常に小さい場合, 多くの小さなチャンクを処理するための追加のオーバーヘッドが発生するため, 大きく設定する方が良いですが, "
+"それは収穫逓減の問題です."
 
-#: ../../source/programs/gdalwarp.rst:403
+#: ../../source/programs/gdalwarp.rst:408
 msgid ""
 "Use multithreaded warping implementation. Two threads will be used to "
 "process chunks of image and perform input/output operation "
@@ -657,11 +633,12 @@ msgid ""
 "that, you can use the :option:`-wo` NUM_THREADS=val/ALL_CPUS option, "
 "which can be combined with :option:`-multi`"
 msgstr ""
-"マルチスレッドワーピング実装を使用します. 2 つのスレッドが画像のチャンクを処理し, 入出力操作を同時に"
-"実行します. 計算自体はマルチスレッド化されていません. そのため, :option:`-wo` NUM_THREADS=val/ALL_CPUS"
-"オプションを使用することができます. これは :option:`-multi` と組み合わせて使用することができます."
+"マルチスレッドワーピング実装を使用します. 2 つのスレッドが画像のチャンクを処理し, 入出力操作を同時に実行します. "
+"計算自体はマルチスレッド化されていません. そのため, :option:`-wo` "
+"NUM_THREADS=val/ALL_CPUSオプションを使用することができます. これは :option:`-multi` "
+"と組み合わせて使用することができます."
 
-#: ../../source/programs/gdalwarp.rst:411
+#: ../../source/programs/gdalwarp.rst:416
 msgid "Be quiet."
 msgstr "静かにします."
 
@@ -675,10 +652,10 @@ msgid ""
 "dataset. In particular, some drivers have requirements on file "
 "extensions."
 msgstr ""
-"入力ファイルを開こうとするフォーマット/ドライバ名. 通常, 指定する必要はありませんが, 適切なドライバを選択できない"
-"場合に自動ドライバ検出をスキップするために使用できます. このオプションは複数回繰り返すことができ, 複数の候補"
-"ドライバを指定するために使用できます. ただし, これらのドライバをデータセットを開くように強制するわけではありません."
-"特に, 一部のドライバはファイル拡張子に要件を持っています."
+"入力ファイルを開こうとするフォーマット/ドライバ名. 通常, 指定する必要はありませんが, "
+"適切なドライバを選択できない場合に自動ドライバ検出をスキップするために使用できます. このオプションは複数回繰り返すことができ, "
+"複数の候補ドライバを指定するために使用できます. ただし, これらのドライバをデータセットを開くように強制するわけではありません.特に, "
+"一部のドライバはファイル拡張子に要件を持っています."
 
 #: ../../source/programs/options/of.rst:3
 msgid ""
@@ -686,8 +663,8 @@ msgid ""
 "format is guessed from the extension (previously was GTiff). Use the "
 "short format name."
 msgstr ""
-"出力フォーマットを選択します. GDAL 2.3 以降, 指定されていない場合, フォーマットは拡張子から推測されます"
-"(以前は GTiff でした). 短いフォーマット名を使用します."
+"出力フォーマットを選択します. GDAL 2.3 以降, 指定されていない場合, フォーマットは拡張子から推測されます(以前は GTiff "
+"でした). 短いフォーマット名を使用します."
 
 #: ../../source/programs/options/co.rst:5
 msgid ""
@@ -696,9 +673,8 @@ msgid ""
 "driver supports creation options to control compression, and whether the "
 "file should be tiled."
 msgstr ""
-"多くのフォーマットには, 作成されるファイルについての特定の点を制御するために使用できる 1 つ以上のオプションが"
-"あります. たとえば, GeoTIFF ドライバは, 圧縮を制御する作成オプションや, ファイルをタイル化するかどうかを"
-"制御する作成オプションをサポートしています."
+"多くのフォーマットには, 作成されるファイルについての特定の点を制御するために使用できる 1 つ以上のオプションがあります. たとえば, "
+"GeoTIFF ドライバは, 圧縮を制御する作成オプションや, ファイルをタイル化するかどうかを制御する作成オプションをサポートしています."
 
 #: ../../source/programs/options/co.rst:10
 msgid ""
@@ -710,160 +686,209 @@ msgid ""
 "driver creation options. See :ref:`raster_drivers` format specific "
 "documentation for legal creation options for each format."
 msgstr ""
-"利用可能な作成オプションはフォーマットドライバによって異なり, 一部のシンプルなフォーマットには全く作成オプションが"
-"ありません. フォーマットでサポートされているオプションのリストは, :ref:`--formats <raster_common_options_formats>` "
-"コマンドラインオプションでリストアップすることができますが, フォーマットのドキュメントがドライバ作成オプションに"
-"関する情報の決定的なソースです. 各フォーマットの法的な作成オプションについては, :ref:`raster_drivers` フォーマット"
-"固有のドキュメントを参照してください."
+"利用可能な作成オプションはフォーマットドライバによって異なり, 一部のシンプルなフォーマットには全く作成オプションがありません. "
+"フォーマットでサポートされているオプションのリストは, :ref:`--formats "
+"<raster_common_options_formats>` コマンドラインオプションでリストアップすることができますが, "
+"フォーマットのドキュメントがドライバ作成オプションに関する情報の決定的なソースです. 各フォーマットの法的な作成オプションについては, "
+":ref:`raster_drivers` フォーマット固有のドキュメントを参照してください."
 
-#: ../../source/programs/gdalwarp.rst:421
+#: ../../source/programs/gdalwarp.rst:426
 msgid ""
 "Enable use of a blend cutline from the name of a vector dataset. Starting"
 " with GDAL 3.9, a WKT geometry string starting with POLYGON or "
 "MULTIPOLYGON can also be specified."
 msgstr ""
-"ベクトルデータセットの名前からブレンドカットラインの使用を有効にします. GDAL 3.9 以降, POLYGON または"
-"MULTIPOLYGON で始まる WKT ジオメトリ文字列も指定できます."
+"ベクトルデータセットの名前からブレンドカットラインの使用を有効にします. GDAL 3.9 以降, POLYGON またはMULTIPOLYGON"
+" で始まる WKT ジオメトリ文字列も指定できます."
 
-#: ../../source/programs/gdalwarp.rst:429
+#: ../../source/programs/gdalwarp.rst:434
 msgid "Sets or overrides the SRS of the cutline."
 msgstr "カットラインの SRS を設定または上書きします."
 
-#: ../../source/programs/gdalwarp.rst:433
+#: ../../source/programs/gdalwarp.rst:438
 msgid "Select the named layer from the cutline datasource."
 msgstr "カットラインデータソースから名前付きレイヤを選択します."
 
-#: ../../source/programs/gdalwarp.rst:437
+#: ../../source/programs/gdalwarp.rst:442
 msgid "Restrict desired cutline features based on attribute query."
 msgstr "属性クエリに基づいて希望のカットラインフィーチャを制限します."
 
-#: ../../source/programs/gdalwarp.rst:441
+#: ../../source/programs/gdalwarp.rst:446
 msgid ""
 "Select cutline features using an SQL query instead of from a layer with "
 ":option:`-cl`."
-msgstr ""
-":option:`-cl` で指定されたレイヤではなく, SQL クエリを使用してカットラインフィーチャを選択します."
+msgstr ":option:`-cl` で指定されたレイヤではなく, SQL クエリを使用してカットラインフィーチャを選択します."
 
-#: ../../source/programs/gdalwarp.rst:445
+#: ../../source/programs/gdalwarp.rst:450
 msgid "Set a blend distance to use to blend over cutlines (in pixels)."
 msgstr "カットライン上でブレンドするために使用するブレンド距離を設定します (ピクセル単位)."
 
-#: ../../source/programs/gdalwarp.rst:449
+#: ../../source/programs/gdalwarp.rst:454
 msgid "Crop the extent of the target dataset to the extent of the cutline."
 msgstr "ターゲットデータセットの範囲をカットラインの範囲に切り取ります."
 
-#: ../../source/programs/gdalwarp.rst:453
+#: ../../source/programs/gdalwarp.rst:458
 msgid ""
 "Overwrite the target dataset if it already exists. Overwriting must be "
 "understood here as deleting and recreating the file from scratch. Note "
 "that if this option is *not* specified and the output file already "
 "exists, it will be updated in place."
 msgstr ""
-"ターゲットデータセットが既に存在する場合, 上書きします. ここでの上書きは, ファイルをゼロから削除して再作成する"
-"こととして理解する必要があります. このオプションが指定されていない場合, 出力ファイルが既に存在する場合, "
+"ターゲットデータセットが既に存在する場合, 上書きします. ここでの上書きは, "
+"ファイルをゼロから削除して再作成することとして理解する必要があります. このオプションが指定されていない場合, 出力ファイルが既に存在する場合, "
 "その場所で更新されます."
 
-#: ../../source/programs/gdalwarp.rst:460
+#: ../../source/programs/gdalwarp.rst:465
 msgid ""
 "Do not copy metadata. Without this option, dataset and band metadata (as "
 "well as some band information) will be copied from the first source "
 "dataset. Items that differ between source datasets will be set to * (see "
 ":option:`-cvmd` option)."
 msgstr ""
-"メタデータをコピーしないでください. このオプションがない場合, データセットおよびバンドメタデータ (および一部のバンド情報) は"
-"最初のソースデータセットからコピーされます. ソースデータセット間で異なる項目は * に設定されます ( :option:`-cvmd` "
+"メタデータをコピーしないでください. このオプションがない場合, データセットおよびバンドメタデータ (および一部のバンド情報) "
+"は最初のソースデータセットからコピーされます. ソースデータセット間で異なる項目は * に設定されます ( :option:`-cvmd` "
 "オプションを参照してください)."
-
-#: ../../source/programs/gdalwarp.rst:466
-msgid ""
-"Value to set metadata items that conflict between source datasets "
-"(default is \"*\"). Use \"\" to remove conflicting items."
-msgstr ""
-"ソースデータセット間で競合するメタデータ項目を設定する値 (デフォルトは \"*\"). 競合する項目を削除するには"
-"\"\" を使用します."
 
 #: ../../source/programs/gdalwarp.rst:471
 msgid ""
-"Set the color interpretation of the bands of the target dataset from the "
-"source dataset."
-msgstr ""
-"ターゲットデータセットのバンドのカラーインタープリテーションをソースデータセットから設定します."
+"Value to set metadata items that conflict between source datasets "
+"(default is \"*\"). Use \"\" to remove conflicting items."
+msgstr "ソースデータセット間で競合するメタデータ項目を設定する値 (デフォルトは \"*\"). 競合する項目を削除するには\"\" を使用します."
 
 #: ../../source/programs/gdalwarp.rst:476
+msgid ""
+"Set the color interpretation of the bands of the target dataset from the "
+"source dataset."
+msgstr "ターゲットデータセットのバンドのカラーインタープリテーションをソースデータセットから設定します."
+
+#: ../../source/programs/gdalwarp.rst:481
 msgid "Dataset open option (format specific)"
 msgstr "データセットオープンオプション (フォーマット固有)"
 
-#: ../../source/programs/gdalwarp.rst:480
+#: ../../source/programs/gdalwarp.rst:485
 msgid "Output dataset open option (format specific)"
 msgstr "出力データセットオープンオプション (フォーマット固有)"
 
-#: ../../source/programs/gdalwarp.rst:486
+#: ../../source/programs/gdalwarp.rst:491
 msgid "The source file name(s)."
 msgstr "ソースファイル名."
 
-#: ../../source/programs/gdalwarp.rst:490
+#: ../../source/programs/gdalwarp.rst:495
 msgid "The destination file name."
 msgstr "宛先ファイル名."
 
-#: ../../source/programs/gdalwarp.rst:493
+#: ../../source/programs/gdalwarp.rst:499
+msgid "Overview"
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:501
+msgid ""
+":program:`gdalwarp` transforms images between different coordinate "
+"reference systems and spatial resolutions."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:504
+msgid ""
+"First, :program:`gdalwarp` must determine the extent and resolution of "
+"the output, if these have not been specified using :option:`-te` and "
+":option:`-tr`. These are determined by transforming a sample of points "
+"from the source CRS to the destination CRS. Details of the procedure can "
+"be found in the documentation for :cpp:func:`GDALSuggestedWarpOutput`. If"
+" multiple inputs are provided to :program:`gdalwarp`, the output extent "
+"will be calculated to cover all of them, at a resolution consistent with "
+"the highest-resolution input."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:512
+msgid ""
+"Once the dimensions of the output image have been determined, "
+":program:`gdalwarp` divides the output image into chunks that can be "
+"processed independently within the amount of memory specified by "
+":option:`-wm`. :program:`gdalwarp` then iterates over scanlines in these "
+"chunks, and for each output pixel determines a rectangular region of "
+"source pixels that contribute to the value of the output pixel. The "
+"dimensions of this rectangular region are typically determined by "
+"estimating the relative scales of the source and destination raster, but "
+"can be manually specified (see documentation of the ``XSCALE`` parameter "
+"in :cpp:member:`GDALWarpOptions::papszWarpOptions`). Because the source "
+"region is a simple rectangle, it is not possible for an output pixel to "
+"be associated with source pixels from both sides of the antimeridian or "
+"pole (when transforming from geographic coordinates)."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:525
+msgid ""
+"The rectangular region of source pixels is then provided to a function "
+"that performs the resampling algorithm selected with :option:`-r`.  "
+"Depending on the resampling algorithm and relative scales of the source "
+"and destination rasters, source pixels may be weighted either according "
+"to the approximate fraction of the source pixel that is covered by the "
+"destination pixel (e.g., \"mean\" and \"sum\" resampling), or by "
+"horizontal and vertical Cartesian distances between the center of the "
+"source pixel and the center of the target pixel (e.g., bilinear or cubic "
+"spline resampling). In the latter case, the relative weight of an "
+"individual source pixel is determined by the product of the weights "
+"determined for its row and column; the diagonal Cartesian distance is not"
+" calculated."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:538
+msgid "Writing to an existing file"
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:540
+#, fuzzy
 msgid ""
 "Mosaicing into an existing output file is supported if the output file "
 "already exists. The spatial extent of the existing file will not be "
 "modified to accommodate new data, so you may have to remove it in that "
-"case, or use the -overwrite option."
+"case, or use the :option:`-overwrite` option."
 msgstr ""
-"既存の出力ファイルにモザイクを作成することがサポートされています. 既存のファイルの空間範囲は新しいデータに対応する"
-"ために変更されませんので, その場合は削除するか, -overwrite オプションを使用する必要があります."
+"既存の出力ファイルにモザイクを作成することがサポートされています. 既存のファイルの空間範囲は新しいデータに対応するために変更されませんので, "
+"その場合は削除するか, -overwrite オプションを使用する必要があります."
 
-#: ../../source/programs/gdalwarp.rst:498
+#: ../../source/programs/gdalwarp.rst:545
+#, fuzzy
 msgid ""
 "Polygon cutlines may be used as a mask to restrict the area of the "
 "destination file that may be updated, including blending.  If the OGR "
 "layer containing the cutline features has no explicit SRS, the cutline "
-"features must be in the SRS of the destination file. When writing to a "
-"not yet existing target dataset, its extent will be the one of the "
-"original raster unless -te or -crop_to_cutline are specified."
+"features are assumed to be in the SRS of the destination file. When "
+"writing to a not yet existing target dataset, its extent will be the one "
+"of the original raster unless :option:`-te` or :option:`-crop_to_cutline`"
+" are specified."
 msgstr ""
-"ポリゴンカットラインは, ブレンドを含む, 更新できる宛先ファイルの領域を制限するためのマスクとして使用できます. "
-"カットラインフィーチャを含む OGR レイヤに明示的な SRS がない場合, カットラインフィーチャは宛先ファイルの SRS である"
-"必要があります. まだ存在しないターゲットデータセットに書き込む場合, -te または -crop_to_cutline が指定されていない"
-"限り, その範囲は元のラスタの範囲になります."
+"ポリゴンカットラインは, ブレンドを含む, 更新できる宛先ファイルの領域を制限するためのマスクとして使用できます. カットラインフィーチャを含む "
+"OGR レイヤに明示的な SRS がない場合, カットラインフィーチャは宛先ファイルの SRS である必要があります. "
+"まだ存在しないターゲットデータセットに書き込む場合, -te または -crop_to_cutline が指定されていない限り, "
+"その範囲は元のラスタの範囲になります."
 
-#: ../../source/programs/gdalwarp.rst:505
-msgid ""
-"Starting with GDAL 3.1, it is possible to use as output format a driver "
-"that only supports the CreateCopy operation. This may internally imply "
-"creation of a temporary file."
-msgstr ""
-"GDAL 3.1 以降, CreateCopy 操作のみをサポートするドライバを出力フォーマットとして使用することが可能です. "
-"これは内部的に一時ファイルの作成を意味する場合があります."
-
-#: ../../source/programs/gdalwarp.rst:512
+#: ../../source/programs/gdalwarp.rst:556
 msgid "Nodata / source validity mask handling"
 msgstr "ノーデータ / ソース有効マスクの処理"
 
-#: ../../source/programs/gdalwarp.rst:514
+#: ../../source/programs/gdalwarp.rst:558
 msgid ""
 "Invalid values in source pixels, either identified through a nodata value"
 " metadata set on the source band, a mask band, an alpha band or the use "
 "of :option:`-srcnodata` will not be used in interpolation. The details of"
 " how it is taken into account depends on the resampling kernel:"
 msgstr ""
-"ソースピクセルの無効な値は, ソースバンドに設定されたノーデータ値メタデータ, マスクバンド, アルファバンド, "
-"または :option:`-srcnodata` の使用によって識別され, 補間に使用されません. それがどのように考慮されるかの詳細は, "
+"ソースピクセルの無効な値は, ソースバンドに設定されたノーデータ値メタデータ, マスクバンド, アルファバンド, または "
+":option:`-srcnodata` の使用によって識別され, 補間に使用されません. それがどのように考慮されるかの詳細は, "
 "補間カーネルに依存します:"
 
-#: ../../source/programs/gdalwarp.rst:519
+#: ../../source/programs/gdalwarp.rst:563
 msgid ""
 "for nearest resampling, for each target pixel, the coordinate of its "
 "center is projected back to source coordinates and the source pixel "
 "containing that coordinate is identified. If this source pixel is "
 "invalid, the target pixel is considered as nodata."
 msgstr ""
-"最近傍補間の場合, 各ターゲットピクセルについて, その中心の座標がソース座標に逆投影され, その座標を含むソースピクセルが"
-"識別されます. このソースピクセルが無効な場合, ターゲットピクセルはノーデータと見なされます."
+"最近傍補間の場合, 各ターゲットピクセルについて, その中心の座標がソース座標に逆投影され, その座標を含むソースピクセルが識別されます. "
+"このソースピクセルが無効な場合, ターゲットピクセルはノーデータと見なされます."
 
-#: ../../source/programs/gdalwarp.rst:524
+#: ../../source/programs/gdalwarp.rst:568
 msgid ""
 "for bilinear, cubic, cubicspline and lanczos, for each target pixel, the "
 "coordinate of its center is projected back to source coordinates and a "
@@ -875,13 +900,13 @@ msgid ""
 "weights used to take into account those invalid values will be set to "
 "zero to ignore them."
 msgstr ""
-"バイリニア, 立方体, キュービックスプライン, ランチョスの場合, 各ターゲットピクセルについて, その中心の座標がソース座標に"
-"逆投影され, 対応するソースピクセルが識別されます. このソースピクセルが無効な場合, ターゲットピクセルはノーデータと"
-"見なされます. これらの補間カーネルはノンゼロカーネル半径を持っているため, このソースピクセルは他のいくつかのソースピクセル"
-"の 1 つに過ぎず, これらの他の寄与ソースピクセルに無効な値がある可能性があります. これらの無効な値を考慮するために使用される"
-"重みは, それらを無視するためにゼロに設定されます."
+"バイリニア, 立方体, キュービックスプライン, ランチョスの場合, 各ターゲットピクセルについて, その中心の座標がソース座標に逆投影され, "
+"対応するソースピクセルが識別されます. このソースピクセルが無効な場合, ターゲットピクセルはノーデータと見なされます. "
+"これらの補間カーネルはノンゼロカーネル半径を持っているため, このソースピクセルは他のいくつかのソースピクセルの 1 つに過ぎず, "
+"これらの他の寄与ソースピクセルに無効な値がある可能性があります. これらの無効な値を考慮するために使用される重みは, "
+"それらを無視するためにゼロに設定されます."
 
-#: ../../source/programs/gdalwarp.rst:534
+#: ../../source/programs/gdalwarp.rst:578
 msgid ""
 "for the other resampling methods, source pixels contributing to the "
 "target pixel are ignored if invalid. Only the valid ones are taken into "
@@ -890,7 +915,7 @@ msgstr ""
 "その他の補間方法の場合, 無効なソースピクセルは無視されます. 有効なもののみが考慮されます. 有効なものがない場合, "
 "ターゲットピクセルはノーデータと見なされます."
 
-#: ../../source/programs/gdalwarp.rst:538
+#: ../../source/programs/gdalwarp.rst:582
 msgid ""
 "If using :option:`-srcnodata` for multiple images with different invalid "
 "values, you need to either (a) pre-process them to have the same to-be-"
@@ -901,74 +926,85 @@ msgstr ""
 "または各ファイルにノーデータフラグを設定する必要があります. 何らかの理由で元の値を保持する必要がある場合は, (b) を使用してください. "
 "たとえば:"
 
-#: ../../source/programs/gdalwarp.rst:559
+#: ../../source/programs/gdalwarp.rst:603
 msgid "Approximate transformation"
 msgstr "近似変換"
 
-#: ../../source/programs/gdalwarp.rst:561
+#: ../../source/programs/gdalwarp.rst:605
+#, fuzzy
 msgid ""
 "By default :program:`gdalwarp` uses a linear approximator for the "
-"transformations with a permitted error of 0.125 pixels. The approximator "
-"basically transforms three points on a scanline: the start, end and "
-"middle. Then it compares the linear approximation of the center based on "
-"the end points to the real thing and checks the error. If the error is "
-"less than the error threshold then the remaining points are approximated "
-"(in two chunks utilizing the center point). If the error exceeds the "
-"threshold, the scanline is split into two sections, and the approximator "
+"transformations with a permitted error of 0.125 pixels in the source "
+"dataset. The approximator precisely transforms three points per output "
+"scanline (the start, middle, and end) from a row and column in the output"
+" dataset to a row and column in the source dataset. It then compares a "
+"linear approximation of the center point coordinates to the precisely "
+"transformed value. If the sum of the horizontal and vertical errors is "
+"less than the error threshold then the remaining source points are "
+"approximated using linear interpolation between the start and middle "
+"point, and between the middle and end point. If the error exceeds the "
+"threshold, the scanline is split into two sections and the approximator "
 "is recursively applied to each section until the error is less than the "
 "threshold or all points have been exactly computed."
 msgstr ""
 "デフォルトでは, :program:`gdalwarp` は許容誤差 0.125 ピクセルで変換に対して線形近似器を使用します. "
-"近似器は基本的にスキャンライン上の 3 つの点を変換します: 開始, 終了, および中間. 次に, 真のものと比較して"
-"中心の線形近似をエンドポイントに基づいて行い, エラーをチェックします. エラーがエラー閾値未満の場合, 残りの点が"
-"近似されます (中心点を利用して 2 つのチャンクに分割されます). エラーが閾値を超えると, スキャンラインは 2 つのセクションに"
-"分割され, エラーが閾値未満になるか, すべての点が正確に計算されるまで, 近似器が再帰的に各セクションに適用されます."
+"近似器は基本的にスキャンライン上の 3 つの点を変換します: 開始, 終了, および中間. 次に, "
+"真のものと比較して中心の線形近似をエンドポイントに基づいて行い, エラーをチェックします. エラーがエラー閾値未満の場合, 残りの点が近似されます"
+" (中心点を利用して 2 つのチャンクに分割されます). エラーが閾値を超えると, スキャンラインは 2 つのセクションに分割され, "
+"エラーが閾値未満になるか, すべての点が正確に計算されるまで, 近似器が再帰的に各セクションに適用されます."
 
-#: ../../source/programs/gdalwarp.rst:572
+#: ../../source/programs/gdalwarp.rst:620
+#, fuzzy
 msgid ""
-"The error threshold (in pixels) can be controlled with the gdalwarp "
-":option:`-et` switch. If you want to compare a true pixel-by-pixel "
-"reprojection use :option:`-et 0` which disables this approximator "
+"The error threshold (in source dataset pixels) can be controlled with the"
+" gdalwarp :option:`-et` switch. If you want to compare a true pixel-by-"
+"pixel reprojection use :option:`-et 0` which disables this approximator "
 "entirely."
 msgstr ""
-"エラー閾値 (ピクセル単位) は gdalwarp :option:`-et` スイッチで制御できます. 真のピクセル単位の再投影を比較する場合は, "
-":option:`-et 0` を使用してこの近似器を完全に無効にします."
+"エラー閾値 (ピクセル単位) は gdalwarp :option:`-et` スイッチで制御できます. "
+"真のピクセル単位の再投影を比較する場合は, :option:`-et 0` を使用してこの近似器を完全に無効にします."
 
-#: ../../source/programs/gdalwarp.rst:577
+#: ../../source/programs/gdalwarp.rst:625
 msgid "Vertical transformation"
 msgstr "垂直変換"
 
-#: ../../source/programs/gdalwarp.rst:579
+#: ../../source/programs/gdalwarp.rst:627
+#, fuzzy
 msgid ""
-"While gdalwarp can essentially perform coordinate transformations in the "
-"2D space, it can perform as well vertical transformations. This is "
-"automatically enabled when the 2 following conditions are met:"
+"While gdalwarp is most commonly used to perform coordinate "
+"transformations in the 2D space, it can also perform vertical "
+"transformations. Vertical transformations are automatically performed "
+"when the following two conditions are met:"
 msgstr ""
-"gdalwarp は基本的に 2D 空間で座標変換を実行できますが, 垂直変換も実行できます. これは, 次の 2 つの条件が満たされると"
-"自動的に有効になります:"
+"gdalwarp は基本的に 2D 空間で座標変換を実行できますが, 垂直変換も実行できます. これは, 次の 2 "
+"つの条件が満たされると自動的に有効になります:"
 
-#: ../../source/programs/gdalwarp.rst:583
+#: ../../source/programs/gdalwarp.rst:631
+#, fuzzy
 msgid ""
 "at least one of the source or target CRS has an explicit vertical CRS (as"
-" part of a compound CRS) or is a 3D (generally geographic) CRS,"
+" part of a compound CRS) or is a 3D (generally geographic) CRS, and"
 msgstr ""
-"ソースまたはターゲットのいずれかに少なくとも 1 つの明示的な垂直 CRS (複合 CRS の一部) があるか, 3D (一般的に地理的) CRS である,"
+"ソースまたはターゲットのいずれかに少なくとも 1 つの明示的な垂直 CRS (複合 CRS の一部) があるか, 3D (一般的に地理的) CRS"
+" である,"
 
-#: ../../source/programs/gdalwarp.rst:585
-msgid "and the raster has a single band."
+#: ../../source/programs/gdalwarp.rst:633
+#, fuzzy
+msgid "the raster has a single band"
 msgstr "およびラスタに単一バンドがある."
 
-#: ../../source/programs/gdalwarp.rst:587
+#: ../../source/programs/gdalwarp.rst:635
 msgid ""
 "This mode can also be forced by using the :option:`-vshift` (this is "
 "essentially useful when the CRS involved are not explicitly 3D, but a "
 "transformation pipeline is specified with :option:`-ct`), or disabled "
 "with :option:`-novshift`."
 msgstr ""
-"このモードは, :option:`-vshift` を使用して強制することもできます (:option:`-ct` で指定された変換パイプラインが"
-"明示的に 3D でない CRS が関係している場合に実質的に有用です), または :option:`-novshift` で無効にすることもできます."
+"このモードは, :option:`-vshift` を使用して強制することもできます (:option:`-ct` "
+"で指定された変換パイプラインが明示的に 3D でない CRS が関係している場合に実質的に有用です), または "
+":option:`-novshift` で無効にすることもできます."
 
-#: ../../source/programs/gdalwarp.rst:592
+#: ../../source/programs/gdalwarp.rst:640
 msgid ""
 "When a vertical transformation is involved, typically a shift value read "
 "in a geoid grid will be applied. This may require such grid(s) to be "
@@ -986,20 +1022,21 @@ msgid ""
 "example ``-wo MULT_FACTOR_VERTICAL_SHIFT=1`` to disable any vertical unit"
 " change."
 msgstr ""
-"垂直変換が関係している場合, 通常, ジオイドグリッドから読み取ったシフト値が適用されます. これには, そのようなグリッドを"
-"インストールするか, PROJ ネットワーキング機能を有効にする必要があります. 詳細については `PROJ <https://proj.org>`__ "
-"のドキュメントを参照してください. シフトに加えて, ラスタ値は垂直単位の変更を考慮するために因子で乗算される場合があります. "
-"優先的に, :cpp:func:`GDALRasterBand::GetUnitType` が返す値が使用されます. 現在認識されている値は次のとおりです: ``m``, "
-"``metre``, ``metre``, ``ft``, ``foot``, ``US survey foot``. バンドレベルで定義された単位タイプがない場合, ソース CRS の"
-"垂直単位が使用されます. ターゲット CRS の垂直単位も, その変換係数を決定するために使用されます. 変換係数は, "
-" :option:`-wo` で ``MULT_FACTOR_VERTICAL_SHIFT`` ワーピングオプションを設定することで上書きできます. たとえば, "
+"垂直変換が関係している場合, 通常, ジオイドグリッドから読み取ったシフト値が適用されます. これには, そのようなグリッドをインストールするか,"
+" PROJ ネットワーキング機能を有効にする必要があります. 詳細については `PROJ <https://proj.org>`__ "
+"のドキュメントを参照してください. シフトに加えて, ラスタ値は垂直単位の変更を考慮するために因子で乗算される場合があります. 優先的に, "
+":cpp:func:`GDALRasterBand::GetUnitType` が返す値が使用されます. 現在認識されている値は次のとおりです: "
+"``m``, ``metre``, ``metre``, ``ft``, ``foot``, ``US survey foot``. "
+"バンドレベルで定義された単位タイプがない場合, ソース CRS の垂直単位が使用されます. ターゲット CRS の垂直単位も, "
+"その変換係数を決定するために使用されます. 変換係数は,  :option:`-wo` で "
+"``MULT_FACTOR_VERTICAL_SHIFT`` ワーピングオプションを設定することで上書きできます. たとえば, "
 "垂直単位の変更を無効にするには ``-wo MULT_FACTOR_VERTICAL_SHIFT=1`` のようにします."
 
-#: ../../source/programs/gdalwarp.rst:607
+#: ../../source/programs/gdalwarp.rst:655
 msgid "Memory usage"
 msgstr "メモリ使用量"
 
-#: ../../source/programs/gdalwarp.rst:609
+#: ../../source/programs/gdalwarp.rst:657
 msgid ""
 "Adding RAM will almost certainly increase the speed of "
 ":program:`gdalwarp`. That's not at all the same as saying that it is "
@@ -1012,64 +1049,67 @@ msgid ""
 ":program:`gdalwarp` with :option:`-wo NUM_THREADS` (or its equivalent "
 ":config:`GDAL_NUM_THREADS`) greater than 1."
 msgstr ""
-"RAM を追加すると, :program:`gdalwarp` の速度がほぼ確実に向上します. それはそれが価値があるかどうか, または速度の向上が"
-"著しいかどうかとは全く異なるものです. ディスクはプロセスの中で最も遅い部分です. デフォルトでは, :program:`gdalwarp` は"
-"RAM をあまり活用しません. フラグ :option:`-wm 500` を使用すると, 一度に 500MB のチャンクで操作されるため, デフォルトより"
-"も良いです. :option:`-wm` で指定されたワープメモリはすべてのスレッドで共有されるため, :option:`-wo NUM_THREADS` "
-"( :config:`GDAL_NUM_THREADS` の場合も) が 1 より大きい場合に :program:`gdalwarp` を実行するときにこの値を増やすと特に"
-"有益です."
+"RAM を追加すると, :program:`gdalwarp` の速度がほぼ確実に向上します. それはそれが価値があるかどうか, "
+"または速度の向上が著しいかどうかとは全く異なるものです. ディスクはプロセスの中で最も遅い部分です. デフォルトでは, "
+":program:`gdalwarp` はRAM をあまり活用しません. フラグ :option:`-wm 500` を使用すると, 一度に "
+"500MB のチャンクで操作されるため, デフォルトよりも良いです. :option:`-wm` "
+"で指定されたワープメモリはすべてのスレッドで共有されるため, :option:`-wo NUM_THREADS` ( "
+":config:`GDAL_NUM_THREADS` の場合も) が 1 より大きい場合に :program:`gdalwarp` "
+"を実行するときにこの値を増やすと特に有益です."
 
-#: ../../source/programs/gdalwarp.rst:619
+#: ../../source/programs/gdalwarp.rst:667
 msgid ""
 "Increasing the I/O block cache size may also help. This can be done by "
 "setting the :config:`GDAL_CACHEMAX` configuration like:"
 msgstr ""
-"I/O ブロックキャッシュサイズを増やすことも役立ちます. これは, 次のように :config:`GDAL_CACHEMAX` 設定を行うことで行うことができます:"
+"I/O ブロックキャッシュサイズを増やすことも役立ちます. これは, 次のように :config:`GDAL_CACHEMAX` "
+"設定を行うことで行うことができます:"
 
-#: ../../source/programs/gdalwarp.rst:626
+#: ../../source/programs/gdalwarp.rst:674
 msgid ""
 "This uses 500MB of RAM for read/write caching, and 500MB of RAM for "
 "working buffers during the warp. Beyond that it is doubtful more memory "
 "will make a substantial difference."
 msgstr ""
-"これは, 読み書きキャッシングに 500MB の RAM を使用し, ワープ中の作業バッファに 500MB の RAM を使用します. それ以上の"
-"メモリを使用しても, 大きな違いはないと疑われます."
+"これは, 読み書きキャッシングに 500MB の RAM を使用し, ワープ中の作業バッファに 500MB の RAM を使用します. "
+"それ以上のメモリを使用しても, 大きな違いはないと疑われます."
 
-#: ../../source/programs/gdalwarp.rst:630
+#: ../../source/programs/gdalwarp.rst:678
 msgid ""
 "Check CPU usage while :program:`gdalwarp` is running. If it is "
 "substantially less than 100% then you know things are IO bound. Otherwise"
 " they are CPU bound. The ``--debug`` option may also provide useful "
 "information. For instance, after running the following:"
 msgstr ""
-":program:`gdalwarp` が実行中に CPU 使用率をチェックしてください. それが 100% 未満である場合, それは IO に制約されていることが"
-"わかります. それ以外の場合は CPU に制約されています. ``--debug`` オプションも有用な情報を提供する場合があります. たとえば, "
-"次のように実行した後:"
+":program:`gdalwarp` が実行中に CPU 使用率をチェックしてください. それが 100% 未満である場合, それは IO "
+"に制約されていることがわかります. それ以外の場合は CPU に制約されています. ``--debug`` "
+"オプションも有用な情報を提供する場合があります. たとえば, 次のように実行した後:"
 
-#: ../../source/programs/gdalwarp.rst:639
+#: ../../source/programs/gdalwarp.rst:687
 msgid "a message like the following will be output:"
 msgstr "次のようなメッセージが出力されます:"
 
-#: ../../source/programs/gdalwarp.rst:645
+#: ../../source/programs/gdalwarp.rst:693
 msgid ""
 "In this case it is saying that band 1 of :file:`utm.tif` has 32 blocks, "
 "but that 224 block reads were done, implying that lots of data was having"
 " to be re-read, presumably because of a limited IO cache. You will also "
 "see messages like:"
 msgstr ""
-"この場合, :file:`utm.tif` のバンド 1 には 32 ブロックがありますが, 224 ブロックの読み取りが行われたと言っており, 多くのデータが"
-"再読み込みされていることを示しています. おそらく, 限られた IO キャッシュのためです. また, 次のようなメッセージも表示されます:"
+"この場合, :file:`utm.tif` のバンド 1 には 32 ブロックがありますが, 224 ブロックの読み取りが行われたと言っており, "
+"多くのデータが再読み込みされていることを示しています. おそらく, 限られた IO キャッシュのためです. また, "
+"次のようなメッセージも表示されます:"
 
-#: ../../source/programs/gdalwarp.rst:655
+#: ../../source/programs/gdalwarp.rst:703
 msgid ""
 "The Src/Dst windows show you the \"chunk size\" being used. In this case "
 "my whole image which is very small. If you find things are being broken "
 "into a lot of chunks increasing :option:`-wm` may help somewhat."
 msgstr ""
-"Src/Dst ウィンドウは使用されている \"チャンクサイズ\" を示しています. この場合, とても小さい私の全画像です. チャンクに分割されて"
-"いることがわかった場合, :option:`-wm` を増やすと多少助けになるかもしれません."
+"Src/Dst ウィンドウは使用されている \"チャンクサイズ\" を示しています. この場合, とても小さい私の全画像です. "
+"チャンクに分割されていることがわかった場合, :option:`-wm` を増やすと多少助けになるかもしれません."
 
-#: ../../source/programs/gdalwarp.rst:659
+#: ../../source/programs/gdalwarp.rst:707
 msgid ""
 "But far more important than memory are ensuring you are going through an "
 "optimized path in the warper. If you ever see it reporting "
@@ -1077,15 +1117,15 @@ msgid ""
 " slow. Basically, the fastest situations are nearest neighbour resampling"
 " on 8bit data without nodata or alpha masking in effect."
 msgstr ""
-"メモリよりもはるかに重要なのは, ワーパーで最適化されたパスを通ることを確認することです. いつでも ``GDALWarpKernel()::GWKGeneralCase()``"
-" と報告されている場合, それは比較的遅いことを知っています. 基本的に, 最速の状況は, ノードータやアルファマスキングが有効でない 8 ビットデータ"
-"の最近傍補間です."
+"メモリよりもはるかに重要なのは, ワーパーで最適化されたパスを通ることを確認することです. いつでも "
+"``GDALWarpKernel()::GWKGeneralCase()`` と報告されている場合, それは比較的遅いことを知っています. "
+"基本的に, 最速の状況は, ノードータやアルファマスキングが有効でない 8 ビットデータの最近傍補間です."
 
-#: ../../source/programs/gdalwarp.rst:667
+#: ../../source/programs/gdalwarp.rst:715
 msgid "Compressed output"
 msgstr "圧縮された出力"
 
-#: ../../source/programs/gdalwarp.rst:669
+#: ../../source/programs/gdalwarp.rst:717
 msgid ""
 "In some cases, the output of :program:`gdalwarp` may be much larger than "
 "the original, even if the same compression algorithm is used. By default,"
@@ -1094,106 +1134,117 @@ msgid ""
 "this might cause repeated compression/decompression of partial blocks, "
 "leading to lost space in the output format."
 msgstr ""
-"場合によっては, :program:`gdalwarp` の出力が元のものよりもはるかに大きくなることがあります. 同じ圧縮アルゴリズムが使用されていてもです. "
-"デフォルトでは, :program:`gdalwarp` は出力フォーマットのブロック/タイル/ストリップの境界に必ずしも整列していないチャンクで動作するため, "
+"場合によっては, :program:`gdalwarp` の出力が元のものよりもはるかに大きくなることがあります. "
+"同じ圧縮アルゴリズムが使用されていてもです. デフォルトでは, :program:`gdalwarp` "
+"は出力フォーマットのブロック/タイル/ストリップの境界に必ずしも整列していないチャンクで動作するため, "
 "これにより部分ブロックの繰り返し圧縮/解凍が発生し, 出力フォーマットでのスペースが失われる可能性があります."
 
-#: ../../source/programs/gdalwarp.rst:676
+#: ../../source/programs/gdalwarp.rst:724
 msgid ""
 "The situation can be improved by using the ``OPTIMIZE_SIZE`` warping "
 "option (:option:`-wo OPTIMIZE_SIZE=YES`), but note that depending on the "
 "source and target projections, it might also significantly slow down the "
 "warping process."
 msgstr ""
-"状況は, ``OPTIMIZE_SIZE`` ワーピングオプション (:option:`-wo OPTIMIZE_SIZE=YES`) を使用することで改善できますが, ソースとターゲットの"
-"投影によっては, ワーピングプロセスが大幅に遅くなる可能性もあることに注意してください."
+"状況は, ``OPTIMIZE_SIZE`` ワーピングオプション (:option:`-wo OPTIMIZE_SIZE=YES`) "
+"を使用することで改善できますが, ソースとターゲットの投影によっては, ワーピングプロセスが大幅に遅くなる可能性もあることに注意してください."
 
-#: ../../source/programs/gdalwarp.rst:680
+#: ../../source/programs/gdalwarp.rst:728
 msgid ""
 "Another possibility is to use :program:`gdalwarp` without compression and"
 " then follow up with :program:`gdal_translate` with compression:"
 msgstr ""
-"別の可能性は, 圧縮なしで :program:`gdalwarp` を使用して, 圧縮を伴う :program:`gdal_translate` を後に続けることです:"
+"別の可能性は, 圧縮なしで :program:`gdalwarp` を使用して, 圧縮を伴う :program:`gdal_translate` "
+"を後に続けることです:"
 
-#: ../../source/programs/gdalwarp.rst:688
+#: ../../source/programs/gdalwarp.rst:736
 msgid ""
 "Alternatively, you can use a VRT file as the output format of "
 ":program:`gdalwarp`. The VRT file is just an XML file that will be "
 "created immediately. The :program:`gdal_translate` operations will be of "
 "course a bit slower as it will do the real warping operation."
 msgstr ""
-"または, :program:`gdalwarp` の出力フォーマットとして VRT ファイルを使用することもできます. VRT ファイルはすぐに作成される"
-"XML ファイルです. :program:`gdal_translate` 操作はもちろん少し遅くなりますが, 実際のワーピング操作を行います."
+"または, :program:`gdalwarp` の出力フォーマットとして VRT ファイルを使用することもできます. VRT "
+"ファイルはすぐに作成されるXML ファイルです. :program:`gdal_translate` 操作はもちろん少し遅くなりますが, "
+"実際のワーピング操作を行います."
 
-#: ../../source/programs/gdalwarp.rst:700
+#: ../../source/programs/gdalwarp.rst:748
 msgid "Examples"
 msgstr "例"
 
-#: ../../source/programs/gdalwarp.rst:702
+#: ../../source/programs/gdalwarp.rst:750
 msgid "Basic transformation:"
 msgstr "基本的な変換:"
 
-#: ../../source/programs/gdalwarp.rst:709
+#: ../../source/programs/gdalwarp.rst:757
 msgid ""
 "For instance, an eight bit spot scene stored in GeoTIFF with control "
 "points mapping the corners to lat/long could be warped to a UTM "
 "projection with a command like this:"
 msgstr ""
-"たとえば, 四隅を緯度/経度にマッピングするコントロールポイントで保存された GeoTIFF の 8 ビットスポットシーンを, 次のようなコマンドで"
-"UTM 投影に変換できます:"
+"たとえば, 四隅を緯度/経度にマッピングするコントロールポイントで保存された GeoTIFF の 8 ビットスポットシーンを, "
+"次のようなコマンドでUTM 投影に変換できます:"
 
-#: ../../source/programs/gdalwarp.rst:717
+#: ../../source/programs/gdalwarp.rst:765
 msgid ""
 "For instance, the second channel of an ASTER image stored in HDF with "
 "control points mapping the corners to lat/long could be warped to a UTM "
 "projection with a command like this:"
 msgstr ""
-"たとえば, 四隅を緯度/経度にマッピングするコントロールポイントで保存された HDF の ASTER 画像の 2 番目のチャンネルを, 次のような"
-"コマンドで UTM 投影に変換できます:"
+"たとえば, 四隅を緯度/経度にマッピングするコントロールポイントで保存された HDF の ASTER 画像の 2 番目のチャンネルを, "
+"次のようなコマンドで UTM 投影に変換できます:"
 
-#: ../../source/programs/gdalwarp.rst:728
+#: ../../source/programs/gdalwarp.rst:776
 msgid ""
 "To apply a cutline on a un-georeferenced image and clip from pixel "
 "(220,60) to pixel (1160,690):"
-msgstr ""
-"ジオリファレンスされていない画像にカットラインを適用し, ピクセル (220,60) からピクセル (1160,690) までクリップするには:"
+msgstr "ジオリファレンスされていない画像にカットラインを適用し, ピクセル (220,60) からピクセル (1160,690) までクリップするには:"
 
-#: ../../source/programs/gdalwarp.rst:735
+#: ../../source/programs/gdalwarp.rst:783
 msgid "where cutline.csv content is like:"
 msgstr "cutline.csv の内容は次のようになります:"
 
-#: ../../source/programs/gdalwarp.rst:742
+#: ../../source/programs/gdalwarp.rst:790
 msgid ""
 "To transform a DEM from geoid elevations (using EGM96) to WGS84 "
 "ellipsoidal heights:"
-msgstr ""
-"ジオイド標高 (EGM96 を使用) から WGS84 楕円体高に DEM を変換するには:"
+msgstr "ジオイド標高 (EGM96 を使用) から WGS84 楕円体高に DEM を変換するには:"
 
-#: ../../source/programs/gdalwarp.rst:752
+#: ../../source/programs/gdalwarp.rst:800
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:754
+#: ../../source/programs/gdalwarp.rst:802
 msgid "This utility is also callable from C with :cpp:func:`GDALWarp`."
 msgstr "このユーティリティは, :cpp:func:`GDALWarp` で C からも呼び出すことができます."
 
-#: ../../source/programs/gdalwarp.rst:758
-msgid "See also"
-msgstr "関連項目"
+#~ msgid ""
+#~ "Starting with GDAL 3.1, it is "
+#~ "possible to use as output format a"
+#~ " driver that only supports the "
+#~ "CreateCopy operation. This may internally "
+#~ "imply creation of a temporary file."
+#~ msgstr ""
+#~ "GDAL 3.1 以降, CreateCopy "
+#~ "操作のみをサポートするドライバを出力フォーマットとして使用することが可能です. "
+#~ "これは内部的に一時ファイルの作成を意味する場合があります."
 
-#: ../../source/programs/gdalwarp.rst:762
-msgid ""
-"`Wiki page discussing options and behaviours of gdalwarp "
-"<https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp>`_"
-msgstr ""
-"`gdalwarp のオプションと動作について説明する Wiki ページ "
-"<https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp>`_"
+#~ msgid "See also"
+#~ msgstr "関連項目"
 
-#: ../../source/programs/gdalwarp.rst:766
-msgid ""
-"Wiki page discussing options and behaviours of gdalwarp: "
-"https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp"
-msgstr ""
-"gdalwarp のオプションと動作について説明する Wiki ページ: "
-"https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp"
+#~ msgid ""
+#~ "`Wiki page discussing options and "
+#~ "behaviours of gdalwarp "
+#~ "<https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp>`_"
+#~ msgstr ""
+#~ "`gdalwarp のオプションと動作について説明する Wiki ページ "
+#~ "<https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp>`_"
+
+#~ msgid ""
+#~ "Wiki page discussing options and "
+#~ "behaviours of gdalwarp: "
+#~ "https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp"
+#~ msgstr ""
+#~ "gdalwarp のオプションと動作について説明する Wiki ページ: "
+#~ "https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp"
 

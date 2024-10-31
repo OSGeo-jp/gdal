@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/python/general.rst:9
 msgid "Python General API"
@@ -37,6 +37,18 @@ msgstr ""
 
 #: ../../source/api/python/general.rst:96
 msgid "File Management"
+msgstr ""
+
+#: ../../source/api/python/general.rst:99
+msgid "osgeo.gdal_fsspec module"
+msgstr ""
+
+#: ../../source/api/python/general.rst:108
+msgid "osgeo.gdal.VSIFile class"
+msgstr ""
+
+#: ../../source/api/python/general.rst:116
+msgid "Low level functions"
 msgstr ""
 
 #: of osgeo.gdal.DirEntry:1

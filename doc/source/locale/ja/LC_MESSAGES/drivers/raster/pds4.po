@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/pds4.rst:5
 msgid "PDS4 -- NASA Planetary Data System (Version 4)"
@@ -148,35 +148,32 @@ msgid ""
 "Template label to use. If not specified and not creating from an existing"
 " PDS4 file, the data/pds4_template.xml file will be used. For GDAL "
 "utilities to find this default PDS4 template, GDAL's data directory "
-"should be defined in your environment (typically on Windows builds). "
-"Consult the `wiki "
-"<https://trac.osgeo.org/gdal/wiki/FAQInstallationAndBuilding#HowtosetGDAL_DATAvariable>`__"
-" for more information."
+"should be defined in your environment (typically on Windows builds)."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:231
+#: ../../source/drivers/raster/pds4.rst:228
 msgid "Layer creation options (vector/table datasets)"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:233
+#: ../../source/drivers/raster/pds4.rst:230
 msgid ""
 "|about-layer-creation-options| (Starting with GDAL 3.0) When creating a "
 "PDS4 vector dataset, or appending a new table to an existing table, the "
 "following layer creation options are available:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:316
+#: ../../source/drivers/raster/pds4.rst:313
 msgid "Subdataset / multiple image support"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:318
+#: ../../source/drivers/raster/pds4.rst:315
 msgid ""
 "If several Array objects are present in the label, they will be reported "
 "as separate subdatasets (typically the main subdataset is an Array3D, and"
 " backplanes are represented as Array2D)."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:322
+#: ../../source/drivers/raster/pds4.rst:319
 msgid ""
 "Since GDAL 3.0, creation of new datasets with subdatasets is supported "
 "(through the :co:`APPEND_SUBDATASET=YES` creation option). One important "
@@ -189,138 +186,152 @@ msgid ""
 ":co:`ARRAY_IDENTIFIER`."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:333
+#: ../../source/drivers/raster/pds4.rst:330
 msgid "PDS4 raster examples"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:335
+#: ../../source/drivers/raster/pds4.rst:332
 msgid "Listing bands and subdatasets:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:383
+#: ../../source/drivers/raster/pds4.rst:380
 msgid ""
 "The information displayed by default is the one of the first subdataset "
 "(SUBDATASET_1_NAME)"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:386
+#: ../../source/drivers/raster/pds4.rst:383
 msgid "Getting information on a subdataset:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:406
+#: ../../source/drivers/raster/pds4.rst:403
 msgid "Conversion to GeoTIFF of a given subdatasets:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:412
+#: ../../source/drivers/raster/pds4.rst:409
 msgid "Conversion to GeoTIFF of a all subdatasets:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:418
+#: ../../source/drivers/raster/pds4.rst:415
 msgid "This will create b0011_p237201_01_01v02_X.tif files where X=1,....,N"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:420
+#: ../../source/drivers/raster/pds4.rst:417
 msgid ""
 "Creation of a new PDS4 dataset, using the default template and setting "
 "its parameterized variables:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:434
+#: ../../source/drivers/raster/pds4.rst:431
 msgid ""
 "Creation of the same PDS4 dataset as above, using the default template "
 "but setting its parameterized variables from a text file. Helps with long"
 " command lines:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:438
+#: ../../source/drivers/raster/pds4.rst:435
 msgid "Create a text file \"myOptions.txt\" with the below content"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:457
+#: ../../source/drivers/raster/pds4.rst:454
 msgid ""
 "For more on --optfile, consult `the general documentation on GDAL "
 "utilities <gdal_utilities.html>`__."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:460
+#: ../../source/drivers/raster/pds4.rst:457
 msgid ""
 "Creation of a PDS4 dataset, using a non default template (here on a HTTP "
 "server, but local filename also possible):"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:468
+#: ../../source/drivers/raster/pds4.rst:465
 msgid ""
 "Creation of a PDS4 dataset from a source PDS4 dataset (using the XML file"
 " of this source PDS4 dataset as an implicit template), with subsetting:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:476
+#: ../../source/drivers/raster/pds4.rst:473
 msgid ""
 "In Python, creation of a PDS4 dataset from a GeoTIFF, using a base "
 "template into which one substitute one element with a new value:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:502
+#: ../../source/drivers/raster/pds4.rst:499
 msgid "Appending a new image (subdataset) to an existing PDS4 dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:511
+#: ../../source/drivers/raster/pds4.rst:508
 msgid "Adding a PDS4 label to an existing ISIS3 dataset. (GDAL >= 3.1)"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:518
+#: ../../source/drivers/raster/pds4.rst:515
 msgid "PDS4 vector examples"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:520
+#: ../../source/drivers/raster/pds4.rst:517
 msgid "Displaying the content of a PDS4 dataset with a table:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:526
+#: ../../source/drivers/raster/pds4.rst:523
 msgid ""
 "Converting a PDS4 dataset with a table to shapefile, by specifying "
 "columns that contain longitude and latitude:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:533
+#: ../../source/drivers/raster/pds4.rst:530
 msgid ""
 "Converting a shapefile to a PDS4 dataset with a CSV-delimited table (with"
 " an implicit WKT column to store the geometry):"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:541
-msgid "Limitations"
-msgstr ""
-
-#: ../../source/drivers/raster/pds4.rst:543
-msgid ""
-"As a new driver and new format, please report any issues to the bug "
-"tracker, as explained on the `wiki <https://trac.osgeo.org/gdal/wiki>`__"
-msgstr ""
-
-#: ../../source/drivers/raster/pds4.rst:547
+#: ../../source/drivers/raster/pds4.rst:538
 msgid "See Also:"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:549
+#: ../../source/drivers/raster/pds4.rst:540
 msgid "Implemented as :source_file:`frmts/pds/pds4dataset.cpp`."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:550
+#: ../../source/drivers/raster/pds4.rst:541
 msgid "`Official documentation <https://pds.nasa.gov/pds4/doc/index.shtml>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:552
+#: ../../source/drivers/raster/pds4.rst:543
 msgid ""
 "`Schemas, including the cartography extension "
 "<https://pds.nasa.gov/pds4/schema/released/>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:554
+#: ../../source/drivers/raster/pds4.rst:545
 msgid ":ref:`raster.pds` driver."
 msgstr ""
 
-#: ../../source/drivers/raster/pds4.rst:555
+#: ../../source/drivers/raster/pds4.rst:546
 msgid ":ref:`raster.isis3` driver."
 msgstr ""
+
+#~ msgid ""
+#~ "Template label to use. If not "
+#~ "specified and not creating from an "
+#~ "existing PDS4 file, the data/pds4_template.xml"
+#~ " file will be used. For GDAL "
+#~ "utilities to find this default PDS4 "
+#~ "template, GDAL's data directory should "
+#~ "be defined in your environment "
+#~ "(typically on Windows builds). Consult "
+#~ "the `wiki "
+#~ "<https://trac.osgeo.org/gdal/wiki/FAQInstallationAndBuilding#HowtosetGDAL_DATAvariable>`__"
+#~ " for more information."
+#~ msgstr ""
+
+#~ msgid "Limitations"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a new driver and new format,"
+#~ " please report any issues to the "
+#~ "bug tracker, as explained on the "
+#~ "`wiki <https://trac.osgeo.org/gdal/wiki>`__"
+#~ msgstr ""
 

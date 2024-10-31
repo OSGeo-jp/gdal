@@ -1,0 +1,502 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/thanks.rst:5
+msgid "Thanks"
+msgstr ""
+
+#: ../../source/thanks.rst:7
+msgid ""
+"As of 2024, GDAL has now a 26 year-long existence, and many individuals, "
+"companies, and :ref:`sponsors` have contributed to its development and "
+"success. While it is always difficult to properly acknowledge all "
+"contributions, a few individuals particularly stand out:"
+msgstr ""
+
+#: ../../source/thanks.rst:12
+msgid ""
+"`Frank Warmerdam <https://github.com/warmerdam>`__, creator of GDAL, "
+"initial chair of its Project Steering Committee (PSC) and maintainer from"
+" 1998 to 2012, founding member of OSGeo, and currently Principal Engineer"
+" at Planet. GDAL would not be what is is without his outstanding work. "
+"Support for GeoTIFF, JPEG, PNG, VRT, Shapefile, CSV, PostGIS and dozens "
+"of other popular (or niche) formats, as well as gdal_translate, gdalwarp,"
+" ogr2ogr and most other utilities are all to be credited to Frank."
+msgstr ""
+
+#: ../../source/thanks.rst:20
+msgid ""
+"`Howard Butler <https://github.com/hobu>`__, director of Hobu Inc., "
+"active on GDAL since 2004, contributor to the Python SWIG bindings, PSC "
+"member, founding member of OSGeo. Howard was the coordinator of the "
+"fundraising that lead to the advent of GDAL 3 and PROJ 6, and since 2021,"
+" he has been instrumental in setting up the GDAL Sponsorship Program and "
+"serves as its head, liaising with our sponsors and NumFOCUS, and hosting "
+"GDAL contributor monthly meetings."
+msgstr ""
+
+#: ../../source/thanks.rst:27
+msgid ""
+"`Jukka Rahkonen <https://github.com/jratike80>`__, Chief IT Specialist at"
+" the National Land Survey of Finland, power-user and long-time passionate"
+" of GDAL, PSC member. Over the last 15 years, Jukka has been tirelessly "
+"helping users and triaging reports on the issue tracker and other support"
+" forums."
+msgstr ""
+
+#: ../../source/thanks.rst:32
+msgid ""
+"`Even Rouault <https://github.com/rouault>`__, involved since 2007, main "
+"maintainer since 2014, current PSC chair, director of Spatialys. Even has"
+" authored dozens of drivers (and happy to have managed to retire a few of"
+" them!) and many enhancements. He has also been involved in code "
+"modernization, extension of the regression test suite, continuous "
+"integration and security efforts."
+msgstr ""
+
+#: ../../source/thanks.rst:39
+msgid ""
+"Among `code contributors "
+"<https://github.com/OSGeo/gdal/graphs/contributors>`__, we want to "
+"acknowledge the key, past or current, documentation or code contributions"
+" of the following persons:"
+msgstr ""
+
+#: ../../source/thanks.rst:43
+msgid "`Ben Ahmed Daho Ali <https://github.com/allilou>`__: SXF driver"
+msgstr ""
+
+#: ../../source/thanks.rst:44
+msgid "`Jorge Arevalo <https://github.com/jorgeas80>`__: PostGIS Raster driver"
+msgstr ""
+
+#: ../../source/thanks.rst:45
+msgid ""
+"`Dan Baston <https://github.com/dbaston>`__: modernization of the Python "
+"test suite and Python bindings."
+msgstr ""
+
+#: ../../source/thanks.rst:46
+msgid ""
+"`Norman Barker <https://github.com/normanb>`__: JPIPKAK and TileDB "
+"drivers, PSC member."
+msgstr ""
+
+#: ../../source/thanks.rst:47
+msgid ""
+"`Dmitry Baryshnikov <https://github.com/bishopgis>`__: SXF and CAD "
+"drivers and the GNM component."
+msgstr ""
+
+#: ../../source/thanks.rst:48
+msgid ""
+"`Andrew Bell <https://github.com/abellgithub>`__: gdal_viewshed "
+"enhancements."
+msgstr ""
+
+#: ../../source/thanks.rst:49
+msgid "`Pete Bunting <https://github.com/petebunting>`__: KEA driver."
+msgstr ""
+
+#: ../../source/thanks.rst:50
+msgid "`Ragi Yaser Burhum <https://github.com/rburhum>`__: FileGDB driver."
+msgstr ""
+
+#: ../../source/thanks.rst:51
+msgid "Brian Case: LIBKML driver."
+msgstr ""
+
+#: ../../source/thanks.rst:52
+msgid "`Victor Chernetsky <https://github.com/vchernetsky>`__: AmigoCloud driver."
+msgstr ""
+
+#: ../../source/thanks.rst:53
+msgid "Benjamin Collins: SWIG Java bindings."
+msgstr ""
+
+#: ../../source/thanks.rst:54
+msgid "Christopher Condit: OGR to KML conversion."
+msgstr ""
+
+#: ../../source/thanks.rst:55
+msgid ""
+"`Nyall Dawson <https://github.com/nyalldawson>`__: GeoPackage, "
+"OpenFileGDB, ODBC/PGeo and OGR core enhancements. Past co-maintainer."
+msgstr ""
+
+#: ../../source/thanks.rst:56
+msgid "`Jürgen Fischer <https://github.com/jef-n/>`__: NAS driver."
+msgstr ""
+
+#: ../../source/thanks.rst:57
+msgid ""
+"`Alessandro Furieri <https://www.gaia-gis.it/gaia-sins>`__: Spatialite "
+"support in SQLite driver, enhancements in GML driver."
+msgstr ""
+
+#: ../../source/thanks.rst:58
+msgid ""
+"`Andrea Giudiceandrea <https://github.com/agiudiceandrea>`__: "
+"documentation fixes"
+msgstr ""
+
+#: ../../source/thanks.rst:59
+msgid ""
+"`Ari Jolma <https://github.com/ajolma>`__: Author of (ex) SWIG Perl "
+"bindings."
+msgstr ""
+
+#: ../../source/thanks.rst:60
+msgid ""
+"`Trent Hare <https://github.com/thareusgs>`__: PDS, ISIS2 and ISIS3 "
+"drivers."
+msgstr ""
+
+#: ../../source/thanks.rst:61
+msgid "`Björn Harrtell <https://github.com/bjornharrtell>`__: FlatGeoBuf driver."
+msgstr ""
+
+#: ../../source/thanks.rst:62
+msgid "`Thomas Hirsch <https://github.com/relet>`__: SOSI driver."
+msgstr ""
+
+#: ../../source/thanks.rst:63
+msgid "François Hissel: Selafin driver."
+msgstr ""
+
+#: ../../source/thanks.rst:64
+msgid "`Pirmin Kalberer <https://github.com/pka>`__: Interlis drivers."
+msgstr ""
+
+#: ../../source/thanks.rst:65
+msgid ""
+"`Andrey Kiselev <https://github.com/dron>`__: BMP, HDF4, HDF5, L1B, MrSID"
+" and RMF support, gdal_grid, past PSC member."
+msgstr ""
+
+#: ../../source/thanks.rst:66
+msgid "`Dan Jacobson <https://github.com/jidanni>`__: documentation enhancements."
+msgstr ""
+
+#: ../../source/thanks.rst:67
+msgid "`Kor de Jong <https://github.com/kordejong>`__: PCRaster driver."
+msgstr ""
+
+#: ../../source/thanks.rst:68
+msgid ""
+"`Peter A. Jonsson <https://github.com/pjonsson>`__: Docker scripts "
+"enhancements."
+msgstr ""
+
+#: ../../source/thanks.rst:69
+msgid "Chaitanya Kumar CH: past GDAL maintainer."
+msgstr ""
+
+#: ../../source/thanks.rst:70
+msgid "`Martin Lambers <https://github.com/marlam>`__: GTA driver."
+msgstr ""
+
+#: ../../source/thanks.rst:71
+msgid "`Martin Landa <https://github.com/landam>`__: VFK driver."
+msgstr ""
+
+#: ../../source/thanks.rst:72
+msgid ""
+"`Kikitte Lee <https://github.com/kikitte>`__: Two-Arm chains edge tracing"
+" algorithm of gdal_polygonize."
+msgstr ""
+
+#: ../../source/thanks.rst:73
+msgid "`Alexandr Lisovenko <https://github.com/alisovenko>`__: SXF driver"
+msgstr ""
+
+#: ../../source/thanks.rst:74
+msgid ""
+"`Mateusz Łoskot <https://github.com/mloskot>`__: GeoJSON driver, (ex) "
+"Windows CE support, past GDAL maintainer."
+msgstr ""
+
+#: ../../source/thanks.rst:75
+msgid ""
+"`Ivan Lucena <https://github.com/IvanLucena>`__: Idrisi, Intergraph and "
+"Oracle drivers, (ex) Windows build scripts."
+msgstr ""
+
+#: ../../source/thanks.rst:76
+msgid ""
+"`Hugo Mercier <https://github.com/mhugo>`__: marching square algorithm of"
+" gdal_contour"
+msgstr ""
+
+#: ../../source/thanks.rst:77
+msgid "`Idan Miara <https://github.com/idanmiara>`__: gdal-utils Python package."
+msgstr ""
+
+#: ../../source/thanks.rst:78
+msgid ""
+"`Martin Mikita <https://github.com/martinmikita>`__: PDFium backend of "
+"the PDF driver."
+msgstr ""
+
+#: ../../source/thanks.rst:79
+msgid ""
+"`Hiroshi Miura <https://github.com/miurahr>`__: Initial CMake build "
+"system."
+msgstr ""
+
+#: ../../source/thanks.rst:80
+msgid "`Vincent Mora <https://github.com/vmora>`__: WAsP driver"
+msgstr ""
+
+#: ../../source/thanks.rst:81
+msgid ""
+"`Daniel Morissette <https://github.com/dmorissette>`__: CPL library, "
+"MapInfo .mif/.tab and Arc/Info vector coverage (AVC) support, PSC member."
+msgstr ""
+
+#: ../../source/thanks.rst:82
+msgid "Denis Nadeau: netCDF support."
+msgstr ""
+
+#: ../../source/thanks.rst:83
+msgid ""
+"`Markus Neteler <https://github.com/neteler>`__: various contributions to"
+" GDAL documentation"
+msgstr ""
+
+#: ../../source/thanks.rst:84
+msgid "Adam Nowacki: WMS driver."
+msgstr ""
+
+#: ../../source/thanks.rst:85
+msgid "Jens Oberender: KML driver."
+msgstr ""
+
+#: ../../source/thanks.rst:86
+msgid ""
+"`Alessandro Pasotti <https://github.com/elpaso>`__: co-maintainer since "
+"2022."
+msgstr ""
+
+#: ../../source/thanks.rst:87
+msgid ""
+"`Kai Pastor <https://github.com/dg0yt>`__: contributions to the CMake "
+"build system."
+msgstr ""
+
+#: ../../source/thanks.rst:88
+msgid "`Abel Pau <https://github.com/AbelPau>`__: MiraMon driver."
+msgstr ""
+
+#: ../../source/thanks.rst:89
+msgid "`Matthew Perry <https://github.com/perrygeo>`__: gdaldem"
+msgstr ""
+
+#: ../../source/thanks.rst:90
+msgid "Mark Phillips: TIGER driver."
+msgstr ""
+
+#: ../../source/thanks.rst:91
+msgid "`Lucian Plesea <https://github.com/lucianpls>`__: ESRIC and MRF drivers."
+msgstr ""
+
+#: ../../source/thanks.rst:92
+msgid "`Petr Pridal <https://github.com/klokan>`__: gdal2tiles utility."
+msgstr ""
+
+#: ../../source/thanks.rst:93
+msgid ""
+"`Paul Ramsey <https://github.com/pramsey>`__: GeoPackage and FileGDB "
+"drivers."
+msgstr ""
+
+#: ../../source/thanks.rst:94
+msgid "Bas Retsios: MSG driver."
+msgstr ""
+
+#: ../../source/thanks.rst:95
+msgid "Didier Richard: Geoconcept driver."
+msgstr ""
+
+#: ../../source/thanks.rst:96
+msgid "Kevin Ruland: SWIG bindings refactor."
+msgstr ""
+
+#: ../../source/thanks.rst:97
+msgid "`Maxim Rylov <https://github.com/mrylov>`__: Hana driver."
+msgstr ""
+
+#: ../../source/thanks.rst:98
+msgid "`Michael Scholz <https://github.com/michikommader>`__: OpenDRIVE driver."
+msgstr ""
+
+#: ../../source/thanks.rst:99
+msgid ""
+"`Kurt Schwehr <https://github.com/schwehr>`__: code linting through the "
+"whole codebase, PSC member."
+msgstr ""
+
+#: ../../source/thanks.rst:100
+msgid ""
+"`Avyav Kumar Singh <https://github.com/avyavkumar>`__: enhancements in "
+"the OGR geometry support, SFCGAL support."
+msgstr ""
+
+#: ../../source/thanks.rst:101
+msgid ""
+"`Craig de Stigter <https://github.com/craigds>`__: port of GDAL Python "
+"autotest suite to the pytest framework."
+msgstr ""
+
+#: ../../source/thanks.rst:102
+msgid ""
+"`Michael Sumner <https://github.com/mdsumner>`__: documentation "
+"enhancements, vrt:// enhancements."
+msgstr ""
+
+#: ../../source/thanks.rst:103
+msgid ""
+"`Tamas Szekeres <https://github.com/szekerest>`__: SWIG CSharp bindings, "
+"gdal_viewshed, PSC member."
+msgstr ""
+
+#: ../../source/thanks.rst:104
+msgid ""
+"`Alan Thomas <https://github.com/atlight>`__: major enhancements in the "
+"DXF driver."
+msgstr ""
+
+#: ../../source/thanks.rst:105
+msgid ""
+"`Etienne Tourigny <https://github.com/etiennesky>`__: major enhancements "
+"in the netCDF driver."
+msgstr ""
+
+#: ../../source/thanks.rst:106
+msgid "Philippe Vachon: COASP, GFF, JaxaPalsar, TSX drivers."
+msgstr ""
+
+#: ../../source/thanks.rst:107
+msgid "Stephane Villeneuve: OGR Feature Style support, MapInfo .mif."
+msgstr ""
+
+#: ../../source/thanks.rst:108
+msgid "`Yorick de Wid <https://github.com/yorickdewid>`__: LVBAG driver."
+msgstr ""
+
+#: ../../source/thanks.rst:109
+msgid "Chris Yesson: gdaldem"
+msgstr ""
+
+#: ../../source/thanks.rst:111
+msgid "Graphical contributions:"
+msgstr ""
+
+#: ../../source/thanks.rst:113
+msgid ""
+"Marin Byrne: for producing the current GDAL icon set (based on the "
+"earlier version by Martin Daly)."
+msgstr ""
+
+#: ../../source/thanks.rst:114
+msgid ""
+"Darek Krawczyk: for producing design of the initial GDAL Team Member "
+"t-shirt (based on Marin's and Martin's graphics)."
+msgstr ""
+
+#: ../../source/thanks.rst:115
+msgid ""
+"`Joe Morrison <https://www.linkedin.com/in/joe-morrison>`__: for "
+"producing the new `GDAL t-shirt "
+"<https://teespring.com/gdal?pid=387&cid=101810>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:117
+msgid "Packaging:"
+msgstr ""
+
+#: ../../source/thanks.rst:119
+msgid "Alpine Linux: `Holger Jaekel <https://github.com/hjaekel>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:120
+msgid ""
+"Debian: `Bas Couwenberg <https://github.com/sebastic>`__, `Francesco "
+"Paolo Lovergine <https://github.com/fpl>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:121
+msgid ""
+"Conda-Forge: `Filipe Fernandes <https://github.com/ocefpaf>`__, `Daryl "
+"Herzmann <https://github.com/akrherz>`__ and `others <https://github.com"
+"/conda-forge/gdal-feedstock/graphs/contributors>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:122
+msgid "Fedora: `Sandro Mani <https://github.com/manisandro>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:123
+msgid "GISInternals: `Tamas Szekeres <https://github.com/szekerest>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:124
+msgid ""
+"Homebrew: `GDAL Homebrew maintainers <https://github.com/Homebrew"
+"/homebrew-core/commits/master/Formula/g/gdal.rb>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:125
+msgid "MS4W: `Jeff McKenna <https://github.com/jmckenna>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:126
+msgid "OpenBSD: `Landry Breuil <https://github.com/landryb>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:127
+msgid "OSGeo4W: `Jürgen Fischer <https://github.com/jef-n/>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:128
+msgid "netBSD: `Greg Troxel <https://github.com/gdt>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:129
+msgid "Spack: `Adam J. Stewart <https://github.com/adamjstewart>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:130
+msgid "Ubuntu: `Angelos Tzotsos <https://github.com/kalxas>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:131
+msgid "vcpkg: `Kai Pastor <https://github.com/dg0yt>`__"
+msgstr ""
+
+#: ../../source/thanks.rst:133
+msgid ""
+"You can also consult `Frank Warmerdam's sponsors, acknowledgments and "
+"credits "
+"<http://web.archive.org/web/20130509110604/http://www.gdal.org/credits.html>`__"
+" for the period 1998-2010."
+msgstr ""
+

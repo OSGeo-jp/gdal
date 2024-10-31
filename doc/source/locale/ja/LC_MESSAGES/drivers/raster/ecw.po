@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-23 17:54+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -363,7 +363,6 @@ msgid ""
 " to apply to ECW SDK 3.3 sources"
 msgstr ""
 
-#: ../../source/drivers/raster/ecw.rst:330
-msgid "`GDAL ECW Build Hints <http://trac.osgeo.org/gdal/wiki/ECW>`__"
-msgstr ""
+#~ msgid "`GDAL ECW Build Hints <http://trac.osgeo.org/gdal/wiki/ECW>`__"
+#~ msgstr ""
 

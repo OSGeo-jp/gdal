@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 11:33+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -698,40 +698,41 @@ msgstr ""
 
 #: ../../source/software_using_gdal.rst:121
 msgid ""
-"`TerraGo Technologies  <http://www.terragotech.com>`_  The GeoPDF file "
-"format is used to distribute and collaborate geospatial data and uses "
-"GDAL for data import/export."
-msgstr ""
-
-#: ../../source/software_using_gdal.rst:122
-msgid ""
 "`TerrainView  <http://www.viewtec.net>`_  Interactive real-time 3D GIS "
 "Software."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:123
+#: ../../source/software_using_gdal.rst:122
 msgid ""
 "`TransCAD GIS  <http://www.caliper.com>`_  Desktop Transportation "
 "Analysis Software"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:124
+#: ../../source/software_using_gdal.rst:123
 msgid ""
 "`TravTime  <https://travtime.software.informer.com/download/>`_  .NET "
 "Application for visualizing, processing and analyzing GPS data for travel"
 " time, speed, and de"
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:125
+#: ../../source/software_using_gdal.rst:124
 msgid ""
 "`VectorWorks <http://www.vectorworks.net>`_ The Vectorworks line of "
 "software products provides professional design solutions in the AEC, "
 "entertainment and landscape design industries."
 msgstr ""
 
-#: ../../source/software_using_gdal.rst:126
+#: ../../source/software_using_gdal.rst:125
 msgid ""
 "`WindNinja  <https://www.firelab.org/project/windninja>`_  wind model for"
 " fire behavior modeling."
 msgstr ""
+
+#~ msgid ""
+#~ "`TerraGo Technologies  <http://www.terragotech.com>`_  "
+#~ "The GeoPDF file format is used to"
+#~ " distribute and collaborate geospatial data"
+#~ " and uses GDAL for data "
+#~ "import/export."
+#~ msgstr ""
 

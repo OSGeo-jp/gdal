@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/tutorials/index.rst:5
 msgid "Tutorials"
@@ -43,5 +43,74 @@ msgstr ""
 msgid ""
 "Projections and Spatial Reference Systems tutorial (OSR - "
 "OGRSpatialReference)"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:54
+msgid "Workshops"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:56
+msgid ""
+"`Raster and vector processing with GDAL "
+"<http://download.osgeo.org/gdal/workshop/foss4ge2015/workshop_gdal.html>`__,"
+" FOSS4G-Europe 2015, Even Rouault"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:59
+msgid "External tutorials"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:62
+msgid "A Gentle Introduction to GDAL, by Robert Simmon"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:64
+msgid ""
+"`A Gentle Introduction to GDAL <https://medium.com/planet-stories/a"
+"-gentle-introduction-to-gdal-part-1-a3253eb96082>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:65
+msgid ""
+"`Map Projections & gdalwarp <https://medium.com/planet-stories/a-gentle-"
+"introduction-to-gdal-part-2-map-projections-gdalwarp-e05173bd710a>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:66
+msgid ""
+"`Geodesy & Local Map Projections <https://medium.com/@robsimmon/a-gentle-"
+"introduction-to-gdal-part-3-geodesy-local-map-projections-"
+"794c6ff675ca>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:67
+msgid ""
+"`Working with Satellite Data <https://medium.com/planet-stories/a-gentle-"
+"introduction-to-gdal-part-4-working-with-satellite-data-d3835b5e2971>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:68
+msgid ""
+"`Shaded Relief <https://medium.com/@robsimmon/a-gentle-introduction-to-"
+"gdal-part-5-shaded-relief-ec29601db654>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:69
+msgid ""
+"`Visualizing Data <https://medium.com/@robsimmon/a-gentle-introduction-"
+"to-gdal-part-6-1-visualizing-data-8e6e7d6ef641>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:70
+msgid ""
+"`Transforming Data <https://medium.com/@robsimmon/a-gentle-introduction-"
+"to-gdal-part-7-transforming-data-178df8640dd2>`__"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:71
+msgid ""
+"`Reading Scientific Data Formats <https://medium.com/@robsimmon/a-gentle-"
+"introduction-to-gdal-part-8-reading-scientific-data-formats-"
+"1a1f70d5388c>`__"
 msgstr ""
 

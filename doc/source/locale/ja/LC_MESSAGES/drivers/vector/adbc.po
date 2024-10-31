@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/drivers/vector/adbc.rst:4
+msgid "ADBC -- Arrow Database Connectivity"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:-1
+msgid "Driver short name"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:8
+msgid "ADBC"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:10
+msgid "ADBC is a set of APIs and libraries for Arrow-native access to database."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:12
+msgid "This driver has 2 modes:"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:14
+msgid ""
+"either it has been built against the ``adbc-driver-manager`` library. In "
+"that case, it can directly be used to connect to available ADBC drivers, "
+"and expose content as classic OGR features, or as a ArrowArrayStream. In "
+"that mode the driver metadata exposes the ``HAS_ADBC_DRIVER_MANAGER`` "
+"metadata item."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:19
+msgid ""
+"or it has not, in which case applications embedding GDAL must use "
+":cpp:func:`GDALSetAdbcLoadDriverOverride` as detailed in a below "
+"paragraph. Note that use of that function can also be done even if the "
+"driver has been built against the ``adbc-driver-manager`` library."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:24
+msgid ""
+"Consult the `installation instruction "
+"<https://arrow.apache.org/adbc/current/driver/installation.html>`__ for "
+"the various ADBC drivers. At time of writing, there are drivers for "
+"SQLite3, PostgreSQL, Snowflake, BigQuery, DuckDB, Flight SQL, etc."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:28
+msgid ""
+"The driver is read-only, and there is no support for spatial data "
+"currently."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:31
+msgid "Connection string"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:33
+msgid "Several connection strings are supported:"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:35
+msgid "``ADBC:{some_uri}``, together with the ``ADBC_DRIVER`` open option."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:36
+msgid "a SQLite3 database filename, if the ``adbc_driver_sqlite`` is available."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:37
+msgid ""
+"a DuckDB database filename, if the :file:`libduckdb.so`, "
+":file:`libduckdb.dylib` or :file:`duckdb.dll` is available (and it is in "
+"a system location, or can be located through LD_LIBRARY_PATH on Linux, "
+"DYLD_LIBRARY_PATH on MacOSX or PATH on Windows)."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:40
+msgid ""
+"a Parquet database filename, if the :file:`libduckdb.so`, "
+":file:`libduckdb.dylib` or :file:`duckdb.dll` is available (and it is in "
+"a system location, or can be located through LD_LIBRARY_PATH on Linux, "
+"DYLD_LIBRARY_PATH on MacOSX or PATH on Windows)."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:43
+msgid ""
+"a PostgreSQL URI starting with ``postgresql://``, if the "
+"``adbc_driver_postgresql`` is available."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:45
+msgid ""
+"Note: if present, the :ref:`vector.sqlite`, :ref:`vector.gpkg` or "
+":ref:`vector.parquet` drivers are registered before the ADBC driver, so "
+"they will be used in priority when available. The ``ADBC:`` prefix or the"
+" ``-if ADBC`` switch of :program:`ogrinfo` or :program:`ogr2ogr` can be "
+"used to use the ADBC driver instead."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:52
+msgid "Dataset open options"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:54
+msgid "|about-open-options| The following open options are supported:"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:78
+msgid "\"table_list\" special layer"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:80
+msgid ""
+"For PostgreSQL, SQLite3, DuckDB and Parquet datasets, the driver "
+"automatically instantiates OGR layers from available tables. For other "
+"databases, the user must explicit provide a SQL open option or issue a "
+":cpp:func:`GDALDataset::ExecuteSQL` request. To facilitate that process, "
+"a special OGR ``table_list`` layer can be queried through "
+":cpp:func:`GDALDataset::GetLayerByName` (or as the layer name with "
+":program:`ogrinfo`). It returns for each table a OGR feature with the "
+"following fields (some potentially unset or with an empty string): "
+"``catalog_name``, ``schema_name``, ``table_name``, ``table_type``."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:92
+msgid "Custom driver entry point"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:94
+msgid ""
+"A custom driver entry point can be specified by applications by calling "
+":cpp:func:`GDALSetAdbcLoadDriverOverride` (defined in header "
+":file:`gdal_adbc.h`) before using the driver. The specified init function"
+" will be used by the GDAL ADBC driver as a way of locating and loading "
+"the ADBC driver if GDAL was not built with ADBC Driver Manager support or"
+" if an embedding application has an updated or augmented collection of "
+"drivers available."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:102
+msgid "Examples"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:104
+#: ../../source/drivers/vector/adbc.rst:115
+msgid ""
+"Assuming :file:`libduckdb.so`, :file:`libduckdb.dylib` or "
+":file:`duckdb.dll` is available (and it is in a system location, or can "
+"be located through LD_LIBRARY_PATH on Linux, DYLD_LIBRARY_PATH on MacOSX "
+"or PATH on Windows)."
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:108
+msgid "Convert a Parquet file to GeoPackage:"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:119
+msgid "Convert a DuckDB database to GeoPackage:"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:127
+msgid "See Also"
+msgstr ""
+
+#: ../../source/drivers/vector/adbc.rst:129
+msgid ""
+"`ADBC: Arrow Database Connectivity "
+"<https://arrow.apache.org/adbc/current/index.html>`__"
+msgstr ""
+

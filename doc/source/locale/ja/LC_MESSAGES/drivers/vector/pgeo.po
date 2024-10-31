@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/pgeo.rst:4
 msgid "ESRI Personal GeoDatabase"
@@ -156,19 +156,17 @@ msgstr ""
 msgid ""
 "This article gives step-by-step explanation of how to use OGR with "
 "unixODBC package and how to access Personal Geodatabase with PGeo driver."
-" See also `GDAL wiki for other details "
-"<http://trac.osgeo.org/gdal/wiki/mdbtools>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:111
+#: ../../source/drivers/vector/pgeo.rst:110
 msgid "Prerequisites"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:115
+#: ../../source/drivers/vector/pgeo.rst:114
 msgid "Install `unixODBC <http://www.unixodbc.org>`__ >= 2.2.11"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:116
+#: ../../source/drivers/vector/pgeo.rst:115
 msgid ""
 "Install MDB Tools. The official upstream of MDB Tools is maintained at "
 "`https://github.com/mdbtools/mdbtools "
@@ -178,42 +176,42 @@ msgid ""
 "Debian Linux and :bash:`ogrinfo sample.mdb` works fine."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:123
+#: ../../source/drivers/vector/pgeo.rst:122
 msgid "(On Ubuntu : sudo apt-get install unixodbc libmdbodbc)"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:125
+#: ../../source/drivers/vector/pgeo.rst:124
 msgid "(On Debian : sudo apt-get install unixodbc odbc-mdbtools)"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:128
+#: ../../source/drivers/vector/pgeo.rst:127
 msgid "Configuration"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:130
+#: ../../source/drivers/vector/pgeo.rst:129
 msgid "There are two configuration files for unixODBC:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:132
+#: ../../source/drivers/vector/pgeo.rst:131
 msgid ""
 "odbcinst.ini - this file contains definition of ODBC drivers available to"
 " all users; this file can be found in /etc directory or location given as"
 " --sysconfdir if you did build unixODBC yourself."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:135
+#: ../../source/drivers/vector/pgeo.rst:134
 msgid ""
 "odbc.ini - this file contains definition of ODBC data sources (DSN "
 "entries) available to all users."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:137
+#: ../../source/drivers/vector/pgeo.rst:136
 msgid ""
 "~/.odbc.ini - this is the private file where users can put their own ODBC"
 " data sources."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:140
+#: ../../source/drivers/vector/pgeo.rst:139
 msgid ""
 "Editing the odbc.ini files is only required if you want to setup an ODBC "
 "Data Source Name (DSN) so that Personal Geodatabase files can be directly"
@@ -222,28 +220,28 @@ msgid ""
 "direct .mdb file name is used instead."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:146
+#: ../../source/drivers/vector/pgeo.rst:145
 msgid "Format of configuration files is very simple:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:154
+#: ../../source/drivers/vector/pgeo.rst:153
 msgid ""
 "For more details, refer to `unixODBC manual "
 "<http://www.unixodbc.org/doc/>`__."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:158
+#: ../../source/drivers/vector/pgeo.rst:157
 msgid "1. ODBC driver configuration"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:160
+#: ../../source/drivers/vector/pgeo.rst:159
 msgid ""
 "First, you need to configure ODBC driver to access Microsoft Access "
 "databases with MDB Tools. Add following definition to your odbcinst.ini "
 "file."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:174
+#: ../../source/drivers/vector/pgeo.rst:173
 msgid ""
 "[Microsoft Access Driver (\\*.mdb)] - remember to use \"Microsoft Access "
 "Driver (\\*.mdb)\" as the name of section because PGeo driver composes "
@@ -251,72 +249,72 @@ msgid ""
 "Access Driver (\\*.mdb);\" string."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:178
+#: ../../source/drivers/vector/pgeo.rst:177
 msgid "Description - put short description of this driver definition."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:179
+#: ../../source/drivers/vector/pgeo.rst:178
 msgid "Driver - full path of ODBC driver for MDB Tools."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:182
+#: ../../source/drivers/vector/pgeo.rst:181
 msgid "2. ODBC data source configuration (optional)"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:184
+#: ../../source/drivers/vector/pgeo.rst:183
 msgid ""
 "In this section, I use 'sample.mdb' as a name of Personal Geodatabase, so"
 " replace this name with your own database."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:187
+#: ../../source/drivers/vector/pgeo.rst:186
 msgid "Create .odbc.ini file in your HOME directory:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:193
+#: ../../source/drivers/vector/pgeo.rst:192
 msgid "Put following ODBC data source definition to your .odbc.ini file:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:208
+#: ../../source/drivers/vector/pgeo.rst:207
 msgid "Step by step explanation of DSN entry:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:210
+#: ../../source/drivers/vector/pgeo.rst:209
 msgid ""
 "[sample_pgeo] - this is name of ODBC data source (DSN). You will refer to"
 " your Personal Geodatabase using this name. You can use your own name "
 "here."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:213
+#: ../../source/drivers/vector/pgeo.rst:212
 msgid "Description - short description of the DSN entry."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:214
+#: ../../source/drivers/vector/pgeo.rst:213
 msgid "Driver - full name of driver defined in step 1. above."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:215
+#: ../../source/drivers/vector/pgeo.rst:214
 msgid "Database - full path to .mdb file with your Personal Geodatabase."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:216
+#: ../../source/drivers/vector/pgeo.rst:215
 msgid "Host, Port, User and Password entries are not used by MDB Tools driver."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:220
+#: ../../source/drivers/vector/pgeo.rst:219
 msgid "Testing PGeo driver with ogrinfo"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:222
+#: ../../source/drivers/vector/pgeo.rst:221
 msgid "Now, you can try to access PGeo data source with ogrinfo."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:224
+#: ../../source/drivers/vector/pgeo.rst:223
 msgid "First, check if you have PGeo driver built in OGR:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:235
+#: ../../source/drivers/vector/pgeo.rst:234
 msgid ""
 "Now, you can access your Personal Geodatabase. If you've setup a DSN for "
 "the Personal Geodatabase (as detailed in section 2 above), the data "
@@ -324,33 +322,42 @@ msgid ""
 "to your .odbc.ini."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:239
+#: ../../source/drivers/vector/pgeo.rst:238
 msgid ""
 "Alternatively, you can pass a .mdb filename directly to OGR to avoid "
 "manual creation of the DSN."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:249
+#: ../../source/drivers/vector/pgeo.rst:248
 msgid ""
 "After you run the command above, you should get list of layers stored in "
 "your geodatabase."
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:252
+#: ../../source/drivers/vector/pgeo.rst:251
 msgid "Now, you can try to query details of particular layer:"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:263
+#: ../../source/drivers/vector/pgeo.rst:262
 msgid "Resources"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:265
+#: ../../source/drivers/vector/pgeo.rst:264
 msgid ""
 "`About ESRI Geodatabase "
 "<http://www.esri.com/software/arcgis/geodatabase/index.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/pgeo.rst:267
+#: ../../source/drivers/vector/pgeo.rst:266
 msgid "`MDB Tools project home <https://github.com/mdbtools/mdbtools>`__"
 msgstr ""
+
+#~ msgid ""
+#~ "This article gives step-by-step "
+#~ "explanation of how to use OGR with"
+#~ " unixODBC package and how to access"
+#~ " Personal Geodatabase with PGeo driver. "
+#~ "See also `GDAL wiki for other "
+#~ "details <http://trac.osgeo.org/gdal/wiki/mdbtools>`__"
+#~ msgstr ""
 

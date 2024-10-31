@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,9 +17,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../source/programs/index.rst:23 ../../source/programs/index.rst:122
+#: ../../source/programs/index.rst:23 ../../source/programs/index.rst:124
 msgid "Common options"
 msgstr "共通オプション"
 
@@ -39,262 +39,237 @@ msgstr ""
 msgid "Raster programs"
 msgstr "ラスタープログラム"
 
-#: ../../source/programs/index.rst:67
+#: ../../source/programs/index.rst:68
 msgid ":ref:`Common options <raster_common_options>`"
 msgstr ":ref:`共通オプション <raster_common_options>`"
 
-#: ../../source/programs/index.rst:68
+#: ../../source/programs/index.rst:69
 msgid ""
 ":ref:`gdal-config`: Determines various information about a GDAL "
 "installation."
-msgstr ""
-":ref:`gdal-config`: GDALインストール時の様々な情報を "
-"決定します."
+msgstr ":ref:`gdal-config`: GDALインストール時の様々な情報を 決定します."
 
-#: ../../source/programs/index.rst:69
+#: ../../source/programs/index.rst:70
 msgid ""
 ":ref:`gdal2tiles`: Generates directory with TMS tiles, KMLs and simple "
 "web viewers."
-msgstr ""
-":ref:`gdal2tiles`: TMSタイル、KML、シンプルなウェブビューアを含むディレクトリ"
-"を生成します."
+msgstr ":ref:`gdal2tiles`: TMSタイル、KML、シンプルなウェブビューアを含むディレクトリを生成します."
 
-#: ../../source/programs/index.rst:70
+#: ../../source/programs/index.rst:71
 msgid ":ref:`gdal2xyz`: Translates a raster file into xyz format."
 msgstr ":ref:`gdal2xyz`: ラスタファイルをxyz形式に変換します."
 
-#: ../../source/programs/index.rst:71
+#: ../../source/programs/index.rst:72
 msgid ":ref:`gdal_calc`: Command line raster calculator with numpy syntax."
 msgstr ":ref:`gdal_calc`: numpy文法を利用したコマンドラインラスタ計算機."
 
-#: ../../source/programs/index.rst:72
+#: ../../source/programs/index.rst:73
 msgid ""
 ":ref:`gdal_contour`: Builds vector contour lines from a raster elevation "
 "model."
-msgstr ""
-":ref:`gdal_contour`: ラスタ標高モデルからベクター等高線を作成します"
-"します."
+msgstr ":ref:`gdal_contour`: ラスタ標高モデルからベクター等高線を作成しますします."
 
-#: ../../source/programs/index.rst:73
+#: ../../source/programs/index.rst:74
 msgid ":ref:`gdal_create`: Create a raster file (without source dataset)."
 msgstr ":ref:`gdal_create`: ラスタファイルをつくります (参照データセット無しで)."
 
-#: ../../source/programs/index.rst:74
+#: ../../source/programs/index.rst:75
 msgid ""
 ":ref:`gdal_edit`: Edit in place various information of an existing GDAL "
 "dataset."
-msgstr ""
-":ref:`gdal_edit`: 既存GDALデータセットの様々な情報を編集"
-"します."
+msgstr ":ref:`gdal_edit`: 既存GDALデータセットの様々な情報を編集します."
 
-#: ../../source/programs/index.rst:75
+#: ../../source/programs/index.rst:76
 msgid ":ref:`gdal_fillnodata`: Fill raster regions by interpolation from edges."
 msgstr ":ref:`gdal_fillnodata`: ラスタ領域をエッジからの補間で埋めます."
 
-#: ../../source/programs/index.rst:76
+#: ../../source/programs/index.rst:77
 msgid ":ref:`gdal_footprint`: Compute footprint of a raster."
 msgstr ":ref:`gdal_footprint`: ラスタのフットプリントを計算します."
 
-#: ../../source/programs/index.rst:77
+#: ../../source/programs/index.rst:78
 msgid ":ref:`gdal_grid`: Creates regular grid from the scattered data."
 msgstr ":ref:`gdal_grid`: 散在データから正規グリッドを作成します."
 
-#: ../../source/programs/index.rst:78
+#: ../../source/programs/index.rst:79
 msgid ":ref:`gdal_merge`: Mosaics a set of images."
 msgstr ":ref:`gdal_merge`: 画像のセットをモザイクします."
 
-#: ../../source/programs/index.rst:79
+#: ../../source/programs/index.rst:80
 msgid ":ref:`gdal_pansharpen`: Perform a pansharpen operation."
 msgstr ":ref:`gdal_pansharpen`: パンシャープン操作を実行します."
 
-#: ../../source/programs/index.rst:80
+#: ../../source/programs/index.rst:81
 msgid ":ref:`gdal_polygonize`: Produces a polygon feature layer from a raster."
 msgstr ":ref:`gdal_polygonize`: ラスタからポリゴン地物レイヤを生成します."
 
-#: ../../source/programs/index.rst:81
+#: ../../source/programs/index.rst:82
 msgid ":ref:`gdal_proximity`: Produces a raster proximity map."
 msgstr ":ref:`gdal_proximity`: ラスタ近接マップを生成します."
 
-#: ../../source/programs/index.rst:82
+#: ../../source/programs/index.rst:83
 msgid ":ref:`gdal_rasterize`: Burns vector geometries into a raster."
 msgstr ":ref:`gdal_rasterize`: ベクタージオメトリをラスタに書き込みします."
 
-#: ../../source/programs/index.rst:83
+#: ../../source/programs/index.rst:84
 msgid ""
 ":ref:`gdal_retile`: Retiles a set of tiles and/or build tiled pyramid "
 "levels."
-msgstr ""
-":ref:`gdal_retile`: タイルのセットを再タイル化し、またはタイルピラミッド"
-"を構築します."
+msgstr ":ref:`gdal_retile`: タイルのセットを再タイル化し、またはタイルピラミッドを構築します."
 
-#: ../../source/programs/index.rst:84
+#: ../../source/programs/index.rst:85
 msgid ":ref:`gdal_sieve`: Removes small raster polygons."
 msgstr ":ref:`gdal_sieve`: 小さなラスタポリゴンを除去します."
 
-#: ../../source/programs/index.rst:85
+#: ../../source/programs/index.rst:86
 msgid ":ref:`gdal_translate`: Converts raster data between different formats."
 msgstr ":ref:`gdal_translate`: ラスタデータを異なる形式に変換します."
 
-#: ../../source/programs/index.rst:86
+#: ../../source/programs/index.rst:87
 msgid ":ref:`gdal_viewshed`: Compute a visibility mask for a raster."
 msgstr ":ref:`gdal_viewshed`: ラスタの可視性マスクを計算します."
 
-#: ../../source/programs/index.rst:87
+#: ../../source/programs/index.rst:88
 msgid ":ref:`gdaladdo`: Builds or rebuilds overview images."
 msgstr ":ref:`gdaladdo`: オーバービュー画像を構築または再構築します."
 
-#: ../../source/programs/index.rst:88
+#: ../../source/programs/index.rst:89
 msgid ""
 ":ref:`gdalattachpct`: Attach a color table to a raster file from an input"
 " file."
-msgstr ""
-":ref:`gdalattachpct`: カラーテーブルを入力ファイルからラスタファイルに"
-"添付します."
+msgstr ":ref:`gdalattachpct`: カラーテーブルを入力ファイルからラスタファイルに添付します."
 
-#: ../../source/programs/index.rst:89
+#: ../../source/programs/index.rst:90
 msgid ":ref:`gdalbuildvrt`: Builds a VRT from a list of datasets."
 msgstr ":ref:`gdalbuildvrt`: データセットのリストからVRTを構築します."
 
-#: ../../source/programs/index.rst:90
+#: ../../source/programs/index.rst:91
 msgid ":ref:`gdalcompare`: Compare two images."
 msgstr ":ref:`gdalcompare`: 2つの画像を比較します."
 
-#: ../../source/programs/index.rst:91
+#: ../../source/programs/index.rst:92
 msgid ":ref:`gdaldem`: Tools to analyze and visualize DEMs."
 msgstr ":ref:`gdaldem`: DEMを分析および可視化するためのツール."
 
-#: ../../source/programs/index.rst:92
+#: ../../source/programs/index.rst:93
+msgid ":ref:`gdalenhance`: Enhance an image with LUT-based contrast enhancement"
+msgstr ""
+
+#: ../../source/programs/index.rst:94
 msgid ":ref:`gdalinfo`: Lists information about a raster dataset."
 msgstr ":ref:`gdalinfo`: ラスタデータセットに関する情報をリストします."
 
-#: ../../source/programs/index.rst:93
+#: ../../source/programs/index.rst:95
 msgid ":ref:`gdallocationinfo`: Raster query tool"
 msgstr ":ref:`gdallocationinfo`: ラスタクエリーツール"
 
-
-#: ../../source/programs/index.rst:94
+#: ../../source/programs/index.rst:96
 msgid ":ref:`gdalmanage`: Identify, delete, rename and copy raster data files."
 msgstr ":ref:`gdalmanage`: ラスタデータファイルを識別、削除、名前変更、コピーします."
 
-#: ../../source/programs/index.rst:95
+#: ../../source/programs/index.rst:97
 msgid ":ref:`gdalmove`: Transform georeferencing of raster file in place."
 msgstr ":ref:`gdalmove`: ラスタファイルのジオリファレンスを変換します."
 
-#: ../../source/programs/index.rst:96
+#: ../../source/programs/index.rst:98
 msgid ""
 ":ref:`gdalsrsinfo`: Lists info about a given SRS in number of formats "
 "(WKT, PROJ.4, etc.)"
-msgstr ""
-":ref:`gdalsrsinfo`: 指定されたSRSに関する情報をリストします"
-"(WKT, PROJ.4, etc.)"
+msgstr ":ref:`gdalsrsinfo`: 指定されたSRSに関する情報をリストします(WKT, PROJ.4, etc.)"
 
-#: ../../source/programs/index.rst:97
+#: ../../source/programs/index.rst:99
 msgid ":ref:`gdaltindex`: Builds an OGR-supported dataset as a raster tileindex."
 msgstr ":ref:`gdaltindex`: OGRサポートデータセットをラスタタイルインデックスとして構築します."
 
-#: ../../source/programs/index.rst:98
+#: ../../source/programs/index.rst:100
 msgid ":ref:`gdaltransform`: Transforms coordinates."
 msgstr ":ref:`gdaltransform`: 座標を変換します."
 
-#: ../../source/programs/index.rst:99
+#: ../../source/programs/index.rst:101
 msgid ":ref:`gdalwarp`: Image reprojection and warping utility."
 msgstr ":ref:`gdalwarp`: 画像の再投影および歪み補正ユーティリティ."
 
-#: ../../source/programs/index.rst:100
+#: ../../source/programs/index.rst:102
 msgid ":ref:`nearblack`: Convert nearly black/white borders to black."
 msgstr ":ref:`nearblack`: ほとんど黒/白の境界を黒に変換します."
 
-#: ../../source/programs/index.rst:101
+#: ../../source/programs/index.rst:103
 msgid ":ref:`pct2rgb`: Convert an 8bit paletted image to 24bit RGB."
 msgstr ":ref:`pct2rgb`: 8ビットパレット画像を24ビットRGBに変換します."
 
-#: ../../source/programs/index.rst:102
+#: ../../source/programs/index.rst:104
 msgid ":ref:`rgb2pct`: Convert a 24bit RGB image to 8bit paletted."
 msgstr ":ref:`rgb2pct`: 24ビットRGB画像を8ビットパレットに変換します."
 
-#: ../../source/programs/index.rst:105
+#: ../../source/programs/index.rst:107
 msgid "Multidimensional Raster programs"
 msgstr "多次元ラスタープログラム"
 
-#: ../../source/programs/index.rst:116
+#: ../../source/programs/index.rst:118
 msgid ""
 ":ref:`gdalmdiminfo`: Reports structure and content of a multidimensional "
 "dataset."
-msgstr ""
-":ref:`gdalmdiminfo`: 多次元データセットの構造と内容を"
-"レポートします."
+msgstr ":ref:`gdalmdiminfo`: 多次元データセットの構造と内容をレポートします."
 
-#: ../../source/programs/index.rst:117
+#: ../../source/programs/index.rst:119
 msgid ""
 ":ref:`gdalmdimtranslate`: Converts multidimensional data between "
 "different formats, and perform subsetting."
-msgstr ""
-":ref:`gdalmdimtranslate`: 多次元データを異なる形式に変換し、サブセットを"
-"実行します."
+msgstr ":ref:`gdalmdimtranslate`: 多次元データを異なる形式に変換し、サブセットを実行します."
 
-#: ../../source/programs/index.rst:120
+#: ../../source/programs/index.rst:122
 msgid "Vector programs"
 msgstr "ベクタープログラム"
 
-#: ../../source/programs/index.rst:136
+#: ../../source/programs/index.rst:138
 msgid ":ref:`Common options <vector_common_options>`"
 msgstr ":ref:`共通オプション <vector_common_options>`"
 
-#: ../../source/programs/index.rst:137
+#: ../../source/programs/index.rst:139
 msgid ":ref:`ogrinfo`: Lists information about an OGR-supported data source."
 msgstr ":ref:`ogrinfo`: OGRサポートデータソースに関する情報をリストします."
 
-#: ../../source/programs/index.rst:138
+#: ../../source/programs/index.rst:140
 msgid ":ref:`ogr2ogr`: Converts simple features data between file formats."
 msgstr ":ref:`ogr2ogr`: シンプル地物データをファイル形式間で変換します."
 
-
-#: ../../source/programs/index.rst:139
+#: ../../source/programs/index.rst:141
 msgid ":ref:`ogrtindex`: Creates a tileindex."
 msgstr ":ref:`ogrtindex`: タイルインデックスを作成します."
 
-
-#: ../../source/programs/index.rst:140
+#: ../../source/programs/index.rst:142
 msgid ""
 ":ref:`ogrlineref`: Create linear reference and provide some calculations "
 "using it."
-msgstr ""
-":ref:`ogrlineref`: 線形リファレンスを作成し,それを使用していくつかの計算を"
-"実行します."
+msgstr ":ref:`ogrlineref`: 線形リファレンスを作成し,それを使用していくつかの計算を実行します."
 
-#: ../../source/programs/index.rst:141
+#: ../../source/programs/index.rst:143
 msgid ":ref:`ogrmerge`: Merge several vector datasets into a single one."
 msgstr ":ref:`ogrmerge`: 複数のベクターデータセットを1つに結合します."
 
-#: ../../source/programs/index.rst:142
+#: ../../source/programs/index.rst:144
 msgid ""
 ":ref:`ogr_layer_algebra`: Performs various Vector layer algebraic "
 "operations."
-msgstr ""
-":ref:`ogr_layer_algebra`: 様々なベクターレイヤーで代数操作を実行"
-"します."
+msgstr ":ref:`ogr_layer_algebra`: 様々なベクターレイヤーで代数操作を実行します."
 
-#: ../../source/programs/index.rst:145
+#: ../../source/programs/index.rst:147
 msgid "Geographic network programs"
 msgstr "地理ネットワークプログラム"
 
-#: ../../source/programs/index.rst:156
+#: ../../source/programs/index.rst:158
 msgid ":ref:`gnmmanage`: Manages networks"
 msgstr ":ref:`gnmmanage`: ネットワークを管理します"
 
-
-#: ../../source/programs/index.rst:157
+#: ../../source/programs/index.rst:159
 msgid ":ref:`gnmanalyse`: Analyses networks"
 msgstr ":ref:`gnmanalyse`: ネットワークを分析します"
 
-
-#: ../../source/programs/index.rst:160
+#: ../../source/programs/index.rst:162
 msgid "Other utilities"
 msgstr "その他のユーティリティ"
 
-
-#: ../../source/programs/index.rst:170
+#: ../../source/programs/index.rst:172
 msgid ":ref:`sozip`: Generate a seek-optimized ZIP (SOZip) file"
 msgstr ":ref:`sozip`: シーク最適化ZIP(SOZip)ファイルを生成します"
-
 

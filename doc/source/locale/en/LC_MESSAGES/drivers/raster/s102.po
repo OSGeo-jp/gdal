@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/s102.rst:5
 msgid "S102 -- S-102 Bathymetric Surface Product"
@@ -42,7 +42,7 @@ msgstr ""
 #: ../../source/drivers/raster/s102.rst:13
 msgid ""
 "This driver provides read-only support for bathymetry data in the S-102 "
-"format, which is a specific product profile in an HDF5 file"
+"format, which is a specific product profile in an HDF5 file."
 msgstr ""
 
 #: ../../source/drivers/raster/s102.rst:16
@@ -68,19 +68,27 @@ msgstr ""
 msgid "Nodata, minimum and maximum values for each band are also reported."
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:29
+#: ../../source/drivers/raster/s102.rst:28
+msgid ""
+"Supported versions of the specification are S-102 v2.1, v2.2 and v3.0 "
+"(support for v3.0 spatial metadata added in GDAL 3.10. Multiple grids per"
+" file, as permitted by S-102 v3.0, are not supported currently. Only the "
+"first one will be reported.)"
+msgstr ""
+
+#: ../../source/drivers/raster/s102.rst:34
 msgid "Driver capabilities"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:36
+#: ../../source/drivers/raster/s102.rst:41
 msgid "Open options"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:38
+#: ../../source/drivers/raster/s102.rst:43
 msgid "|about-open-options| The following open options are supported:"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:57
+#: ../../source/drivers/raster/s102.rst:62
 msgid ""
 "This is the default behavior of most GDAL formats, but the native "
 "organization of the data in S-102 products is to have the first line of "
@@ -89,51 +97,83 @@ msgid ""
 " term of the geotransform matrix will be positive)"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:64
+#: ../../source/drivers/raster/s102.rst:69
 msgid "Spatial metadata support"
-msgstr ""
-
-#: ../../source/drivers/raster/s102.rst:66
-msgid "Starting with GDAL 3.9, GDAL can handle QualityOfSurvey spatial metadata."
-msgstr ""
-
-#: ../../source/drivers/raster/s102.rst:68
-msgid ""
-"When such spatial metadata is present, the subdataset list will include a"
-" name of the form ``S102:\"{filename}\":QualityOfSurvey``"
 msgstr ""
 
 #: ../../source/drivers/raster/s102.rst:71
 msgid ""
-"The ``/QualityOfSurvey/featureAttributeTable`` dataset is exposed as a "
-"GDAL Raster Attribute Table associated to the GDAL raster band. The pixel"
-" values of the raster match the ``id`` column of the Raster Attribute "
-"Table."
+"Starting with GDAL 3.9, GDAL can handle QualityOfSurvey (or "
+"QualityOfBathymetryCoverage in S102 v3.0) spatial metadata."
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:76
-msgid "See Also"
+#: ../../source/drivers/raster/s102.rst:74
+msgid ""
+"When such spatial metadata is present, the subdataset list will include a"
+" name of the form ``S102:\"{filename}\":QualityOfSurvey`` ( or "
+"``S102:\"{filename}\":QualityOfBathymetryCoverage`` in S102 v3.0)"
 msgstr ""
 
 #: ../../source/drivers/raster/s102.rst:78
+msgid ""
+"The ``/QualityOfSurvey/featureAttributeTable`` "
+"(``/QualityOfBathymetryCoverage/featureAttributeTable`` in S102 v3.0) "
+"dataset is exposed as a GDAL Raster Attribute Table associated to the "
+"GDAL raster band. The pixel values of the raster match the ``id`` column "
+"of the Raster Attribute Table."
+msgstr ""
+
+#: ../../source/drivers/raster/s102.rst:85
+msgid "See Also"
+msgstr ""
+
+#: ../../source/drivers/raster/s102.rst:87
 msgid "Implemented as :source_file:`frmts/hdf5/s102dataset.cpp`."
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:79
+#: ../../source/drivers/raster/s102.rst:88
 msgid ""
 "`S-102 Bathymetric Surface Product Specification "
 "<https://registry.iho.int/productspec/view.do?idx=199&product_ID=S-102&statusS=5&domainS=20&category=product_ID&searchValue=>`__"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:80
+#: ../../source/drivers/raster/s102.rst:89
 msgid ":ref:`BAG driver <raster.bag>`"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:81
+#: ../../source/drivers/raster/s102.rst:90
 msgid ":ref:`S-104 driver <raster.s104>`"
 msgstr ""
 
-#: ../../source/drivers/raster/s102.rst:82
+#: ../../source/drivers/raster/s102.rst:91
 msgid ":ref:`S-111 driver <raster.s111>`"
 msgstr ""
+
+#~ msgid ""
+#~ "This driver provides read-only support"
+#~ " for bathymetry data in the S-102 "
+#~ "format, which is a specific product "
+#~ "profile in an HDF5 file"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Starting with GDAL 3.9, GDAL can "
+#~ "handle QualityOfSurvey spatial metadata."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When such spatial metadata is present,"
+#~ " the subdataset list will include a"
+#~ " name of the form "
+#~ "``S102:\"{filename}\":QualityOfSurvey``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``/QualityOfSurvey/featureAttributeTable`` dataset "
+#~ "is exposed as a GDAL Raster "
+#~ "Attribute Table associated to the GDAL"
+#~ " raster band. The pixel values of "
+#~ "the raster match the ``id`` column "
+#~ "of the Raster Attribute Table."
+#~ msgstr ""
 

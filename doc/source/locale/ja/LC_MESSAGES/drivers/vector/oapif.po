@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/vector/oapif.rst:4
 msgid "OGC API - Features"
@@ -108,11 +108,17 @@ msgstr ""
 msgid "Rectangular spatial filtering is forward to the server as well."
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:62
+#: ../../source/drivers/vector/oapif.rst:61
+msgid ""
+"Starting with GDAL 3.10, the ``DATETIME`` open option can also be "
+"specified for temporal filtering."
+msgstr ""
+
+#: ../../source/drivers/vector/oapif.rst:65
 msgid "CRS support"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:64
+#: ../../source/drivers/vector/oapif.rst:67
 msgid ""
 "Starting with GDAL 3.7, the driver supports the `OGC API - Features - "
 "Part 2: Coordinate Reference Systems by Reference "
@@ -126,66 +132,73 @@ msgid ""
 "order of the authority."
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:74
+#: ../../source/drivers/vector/oapif.rst:77
 msgid ""
 "The CRS of layers can also be controlled with the :oo:`CRS` or "
 ":oo:`PREFERRED_CRS` open options documented below."
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:78
+#: ../../source/drivers/vector/oapif.rst:81
 msgid "Open options"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:80
+#: ../../source/drivers/vector/oapif.rst:83
 msgid "|about-open-options| The following open options are available:"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:115
+#: ../../source/drivers/vector/oapif.rst:118
 msgid ""
 "Set to YES to ignore the XML Schema or JSON schema that may be offered by"
 " the server."
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:145
+#: ../../source/drivers/vector/oapif.rst:150
+msgid ""
+"Temporal filter. Its value should match the ones mentioned at `paragraph "
+"Parameter datetime of the OGC API Features specification "
+"<https://docs.ogc.org/is/17-069r3/17-069r3.html#_parameter_datetime>`__"
+msgstr ""
+
+#: ../../source/drivers/vector/oapif.rst:155
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:147
+#: ../../source/drivers/vector/oapif.rst:157
 msgid "Listing the types of a OGC API - Features server :"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:157
+#: ../../source/drivers/vector/oapif.rst:167
 msgid "Listing the summary information of a OGC API - Features layer :"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:211
+#: ../../source/drivers/vector/oapif.rst:221
 msgid ""
 "Filtering on a property (depending on if the server exposes filtering "
 "capabilities of the properties, part or totally of the filter might be "
 "evaluated on client side)"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:244
+#: ../../source/drivers/vector/oapif.rst:254
 msgid "Spatial filtering"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:277
+#: ../../source/drivers/vector/oapif.rst:287
 msgid "See Also"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:279
+#: ../../source/drivers/vector/oapif.rst:289
 msgid ""
 "`\"OGC API - Features - Part 1: Core\" Standard "
 "<http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:281
+#: ../../source/drivers/vector/oapif.rst:291
 msgid ""
 "`\"OGC API - Features - Part 2: Coordinate Reference Systems by "
 "Reference\" Standard <https://docs.ogc.org/is/18-058/18-058.html>`__"
 msgstr ""
 
-#: ../../source/drivers/vector/oapif.rst:283
+#: ../../source/drivers/vector/oapif.rst:293
 msgid ":ref:`WFS (1.0,1.1,2.0) driver documentation <vector.wfs>`"
 msgstr ""
 

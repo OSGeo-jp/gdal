@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-28 04:14+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -43,55 +43,59 @@ msgstr ""
 msgid "Bronze level:"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:113
+#: ../../source/sponsors/index.rst:120
 msgid "Supporter level:"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:120
+#: ../../source/sponsors/index.rst:127
 msgid "Myles Sutherland"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:124
+#: ../../source/sponsors/index.rst:131
 msgid "`Dynamic Graphics, Inc. <https://www.dgi.com/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:128
+#: ../../source/sponsors/index.rst:135
 msgid "`Kaplan Open Source Consulting <https://kaplanopensource.co.il/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:132
+#: ../../source/sponsors/index.rst:139
+msgid "`Phoenix LiDAR Systems, LLC <https://phoenixlidar.com/>`__"
+msgstr ""
+
+#: ../../source/sponsors/index.rst:143
 msgid "`PIX4D <https://www.pix4d.com/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:136
+#: ../../source/sponsors/index.rst:147
 msgid "`Regrid <https://regrid.com>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:140
+#: ../../source/sponsors/index.rst:151
 msgid "`Route4Me, Inc. <https://route4me.com>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:144
+#: ../../source/sponsors/index.rst:155
 msgid "`Satelligence <https://satelligence.com/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:148
+#: ../../source/sponsors/index.rst:159
 msgid "`Space Intelligence <https://www.space-intelligence.com>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:152
+#: ../../source/sponsors/index.rst:163
 msgid "`T-Kartor USA <https://www.t-kartorusa.com/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:156
+#: ../../source/sponsors/index.rst:167
 msgid "`Umbra <https://umbra.space/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:160
+#: ../../source/sponsors/index.rst:171
 msgid "`Vortex f.d.c. <https://vortexfdc.com/>`__"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:202
+#: ../../source/sponsors/index.rst:213
 msgid ""
 "The GDAL Project is hosted by `OSGeo <https://www.osgeo.org>`__, and a "
 "fiscally sponsored project of `NumFOCUS <https://numfocus.org>`__, a "
@@ -101,7 +105,7 @@ msgid ""
 "support our efforts."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:208
+#: ../../source/sponsors/index.rst:219
 msgid ""
 "NumFOCUS is 501(c)(3) non-profit charity in the United States; as such, "
 "donations to NumFOCUS are tax-deductible as allowed by law. As with any "
@@ -109,11 +113,11 @@ msgid ""
 "about your particular tax situation."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:229
+#: ../../source/sponsors/index.rst:240
 msgid "Sponsoring"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:231
+#: ../../source/sponsors/index.rst:242
 msgid ""
 "If your organization benefits from GDAL we recommend joining the group of"
 " sponsors above to \"pay it forward\" and ensure the project has the "
@@ -124,15 +128,23 @@ msgid ""
 "contact gdal-sponsors@osgeo.org."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:239
+#: ../../source/sponsors/index.rst:250
 msgid "Related resources"
 msgstr ""
 
-#: ../../source/sponsors/index.rst:241
+#: ../../source/sponsors/index.rst:252
 msgid "`Sustainable GDAL Sponsorship Prospectus`_."
 msgstr ""
 
-#: ../../source/sponsors/index.rst:242
+#: ../../source/sponsors/index.rst:253
 msgid ":ref:`Sponsoring frequently asked questions (FAQ) <sponsoring-faq>`."
+msgstr ""
+
+#: ../../source/sponsors/index.rst:254
+msgid ":ref:`rfc-80`"
+msgstr ""
+
+#: ../../source/sponsors/index.rst:255
+msgid ":ref:`rfc-83`"
 msgstr ""
 

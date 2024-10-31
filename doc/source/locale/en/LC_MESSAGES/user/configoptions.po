@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/user/configoptions.rst:5
 msgid "Configuration options"
@@ -188,7 +188,7 @@ msgstr ""
 msgid "Performance and caching"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:257
+#: ../../source/user/configoptions.rst:260
 msgid ""
 "Number of datasets that can be opened simultaneously by the GDALProxyPool"
 " mechanism (used by VRT for example). Can be increased to get better "
@@ -198,7 +198,7 @@ msgid ""
 "currently clamped between 2 and 1000."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:269
+#: ../../source/user/configoptions.rst:272
 #, python-format
 msgid ""
 "The value can also be suffixed with ``MB`` or ``GB`` to respectively "
@@ -206,30 +206,30 @@ msgid ""
 "usable physical RAM minus the :config:`GDAL_CACHEMAX` value."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:278
+#: ../../source/user/configoptions.rst:281
 msgid ""
 "Size of the swath when copying raster data from one dataset to another "
 "one (in bytes). Should not be smaller than :config:`GDAL_CACHEMAX`."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:292
+#: ../../source/user/configoptions.rst:295
 msgid ""
 "If set to EMPTY_DIR, only the file that is being opened will be seen when"
 " a GDAL driver will request sibling files, so this is a way to disable "
 "loading side-car/auxiliary files."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:312
+#: ../../source/user/configoptions.rst:315
 msgid ""
 "When enabled, this cache is used for most I/O in GDAL, including local "
 "files."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:323
+#: ../../source/user/configoptions.rst:329
 msgid "Driver management"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:330
+#: ../../source/user/configoptions.rst:336
 msgid ""
 "This option can be used to unregister one or several GDAL drivers. This "
 "can be useful when a driver tries to open a dataset that it should not "
@@ -239,14 +239,14 @@ msgid ""
 " short name of the GDAL drivers to unregister."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:337
+#: ../../source/user/configoptions.rst:343
 msgid ""
 "This option must be set before calling :cpp:func:`GDALAllRegister`, or an"
 " explicit call to :cpp:func:`GDALDriverManager::AutoSkipDrivers` will be "
 "required."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:354
+#: ../../source/user/configoptions.rst:360
 msgid ""
 "This function will automatically load drivers from shared libraries. It "
 "searches the \"driver path\" for .so (or .dll) files that start with the "
@@ -256,7 +256,7 @@ msgid ""
 "or failing that to call GDALRegisterMe()."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:361
+#: ../../source/user/configoptions.rst:367
 msgid ""
 "There are a few rules for the driver path. If the ``GDAL_DRIVER_PATH`` "
 "environment variable it set, it is taken to be a list of directories to "
@@ -266,54 +266,54 @@ msgid ""
 "UNIX and $(BINDIR)\\gdalplugins on Windows."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:368
+#: ../../source/user/configoptions.rst:374
 msgid ""
 "Auto loading can be completely disabled by setting the "
 "``GDAL_DRIVER_PATH`` config option to \"disable\"."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:371
+#: ../../source/user/configoptions.rst:377
 msgid ""
 "This option must be set before calling :cpp:func:`GDALAllRegister`, or an"
 " explicit call to :cpp:func:`GDALDriverManager::AutoLoadDrivers` will be "
 "required."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:381
+#: ../../source/user/configoptions.rst:387
 msgid "General options"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:389
+#: ../../source/user/configoptions.rst:395
 msgid ""
 "This option is read by the GDAL and OGR driver registration functions. It"
 " is used to expand EPSG codes into their description in the OSR model "
 "(WKT based)."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:393
+#: ../../source/user/configoptions.rst:399
 msgid ""
 "On some builds (Unix), the value can be hard-coded at compilation time to"
 " point to the path after installation (/usr/share/gdal/data for example)."
 " On Windows platform, this option must be generally declared."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:487
+#: ../../source/user/configoptions.rst:493
 msgid ""
 "Can be set to YES to use Erdas Imagine format (.aux) as overview format. "
 "See :program:`gdaladdo` documentation."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:498
+#: ../../source/user/configoptions.rst:504
 msgid "Vector related options"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:508
+#: ../../source/user/configoptions.rst:514
 msgid ""
 "The approximation of arcs as linestrings is done by splitting the arcs "
 "into subarcs of no more than the angle specified by this option."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:533
+#: ../../source/user/configoptions.rst:539
 msgid ""
 "``DEFAULT``: perform a full analysis of the topological relationships "
 "between all rings, classifying them as shells or holes and associating "
@@ -322,7 +322,7 @@ msgid ""
 "result will be the same as with :config:`OGR_ORGANIZE_POLYGONS=SKIP`."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:539
+#: ../../source/user/configoptions.rst:545
 msgid ""
 "``ONLY_CCW``: assume that rings with clockwise orientation represent "
 "shells and rings with counterclockwise orientation represent holes. "
@@ -330,7 +330,7 @@ msgid ""
 "each hole. The Shapefile driver defaults to this method."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:544
+#: ../../source/user/configoptions.rst:550
 msgid ""
 "``CCW_INNER_JUST_AFTER_CW_OUTER``: assume that rings with clockwise "
 "orientation represent shells and rings with counterclockwise orientation "
@@ -338,7 +338,7 @@ msgid ""
 " associated."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:549
+#: ../../source/user/configoptions.rst:555
 msgid ""
 "``SKIP``: avoid attempting to classify rings as shells or holes. A single"
 " geometry (Polygon/MultiPolygon/CurvePolygon/MultiSurface) will be "
@@ -346,29 +346,45 @@ msgid ""
 "elements are present, a GeometryCollection will be returned."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:569
+#: ../../source/user/configoptions.rst:575
 msgid ""
 "Those XML based drivers should write UTF8 content. If they are provided "
 "with non UTF8 content, they will replace each non-ASCII character by '?' "
 "when OGR_FORCE_ASCII=YES."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:573
+#: ../../source/user/configoptions.rst:579
 msgid ""
 "Set to NO to preserve the content, but beware that the resulting XML file"
 " will not be valid and will require manual edition of the encoding in the"
 " XML header."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:592
+#: ../../source/user/configoptions.rst:598
 msgid "Networking options"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:601
+#: ../../source/user/configoptions.rst:607
 msgid "For example:"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:870
+#: ../../source/user/configoptions.rst:644
+msgid "``NO`` to always disable forwarding of Authorization header"
+msgstr ""
+
+#: ../../source/user/configoptions.rst:645
+msgid ""
+"``YES`` to always enable forwarding of Authorization header (was the "
+"default value prior to GDAL 3.10)"
+msgstr ""
+
+#: ../../source/user/configoptions.rst:647
+msgid ""
+"``IF_SAME_HOST`` to enable forwarding of Authorization header only if the"
+" redirection is to the same host."
+msgstr ""
+
+#: ../../source/user/configoptions.rst:895
 msgid ""
 "When using NTLM, you can set the domain by prepending it to the user name"
 " and separating the domain and name with a forward (/) or backward slash "
@@ -377,68 +393,124 @@ msgid ""
 "authentication."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:897
+#: ../../source/user/configoptions.rst:922
 msgid ""
 "GDAL respects the environment variables http_proxy, ftp_proxy, all_proxy "
 "etc, if any of those are set. GDAL_HTTP_PROXY option does however "
 "override any possibly set environment variables."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:943
+#: ../../source/user/configoptions.rst:968
 msgid "Persistent Auxiliary Metadata (PAM) options"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:963
+#: ../../source/user/configoptions.rst:988
 msgid "PROJ options"
 msgstr ""
 
-#: ../../source/user/configoptions.rst:972
+#: ../../source/user/configoptions.rst:998
 msgid ""
-"This option can be used to control the behavior of gdalwarp when warping "
-"global datasets or when transforming from/to polar projections, which "
-"causes coordinate discontinuities. See "
+"This option can be used to control the behavior of :program:`gdalwarp` "
+"when warping global datasets or when transforming from/to polar "
+"projections, which causes coordinate discontinuities. See "
 "http://trac.osgeo.org/gdal/ticket/2305."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:976
+#: ../../source/user/configoptions.rst:1002
 msgid ""
 "The background is that PROJ does not guarantee that converting from "
-"src_srs to dst_srs and then from dst_srs to src_srs will yield to the "
-"initial coordinates. This can lead to errors in the computation of the "
-"target bounding box of gdalwarp, or to visual artifacts."
-msgstr ""
-
-#: ../../source/user/configoptions.rst:981
-msgid ""
-"If CHECK_WITH_INVERT_PROJ option is not set, gdalwarp will check that the"
-" the computed coordinates of the edges of the target image are in the "
-"validity area of the target projection. If they are not, it will retry "
-"computing them by setting :config:`CHECK_WITH_INVERT_PROJ=TRUE` that "
-"forces ogrct.cpp to check the consistency of each requested projection "
-"result with the invert projection."
-msgstr ""
-
-#: ../../source/user/configoptions.rst:987
-msgid "If set to NO, gdalwarp will not attempt to use the invert projection."
-msgstr ""
-
-#: ../../source/user/configoptions.rst:994
-msgid ""
-"Used in combination with :config:`CHECK_WITH_INVERT_PROJ=TRUE`. Define "
-"the acceptable threshold used to check if the roundtrip from src_srs to "
-"dst_srs and from dst_srs to srs_srs yield to the initial coordinates. The"
-" value must be expressed in the units of the source SRS (typically "
-"degrees for a geographic SRS, meters for a projected SRS)"
+"``src_srs`` to ``dst_srs`` and then from ``dst_srs`` to ``src_srs`` will "
+"yield the initial coordinates. This can lead to errors in the computation"
+" of the target bounding box of :program:`gdalwarp`, or to visual "
+"artifacts."
 msgstr ""
 
 #: ../../source/user/configoptions.rst:1007
+msgid ""
+"If :config:`CHECK_WITH_INVERT_PROJ` option is not set, "
+":program:`gdalwarp` will check that the computed coordinates of the edges"
+" of the target image are in the validity area of the target projection. "
+"If they are not, it will retry computing them by setting "
+":config:`CHECK_WITH_INVERT_PROJ=TRUE` that forces "
+":source_file:`ogr/ogrct.cpp` to check the consistency of each requested "
+"projection result with the inverse projection."
+msgstr ""
+
+#: ../../source/user/configoptions.rst:1014
+msgid ""
+"If set to ``NO``, :program:`gdalwarp` will not attempt to use the inverse"
+" projection."
+msgstr ""
+
+#: ../../source/user/configoptions.rst:1022
+msgid ""
+"Used in combination with :config:`CHECK_WITH_INVERT_PROJ=TRUE`. Defines "
+"the acceptable threshold used to check if the round-trip from ``src_srs``"
+" to ``dst_srs`` and from ``dst_srs`` to ``srs_srs`` yields the initial "
+"coordinates. The round-trip transformation will be considered successful "
+"if the ``x`` and ``y`` values are both within :config:`THRESHOLD` of the "
+"original values. The value must be expressed in the units of the source "
+"SRS (typically degrees for a geographic SRS, meters for a projected SRS)."
+msgstr ""
+
+#: ../../source/user/configoptions.rst:1037
 msgid ""
 "Can be set to YES to remove points that cannot be reprojected. This can "
 "for example help reproject lines that have an extremity at a pole, when "
 "the reprojection does not support coordinates at poles."
 msgstr ""
 
-#: ../../source/user/configoptions.rst:1071
+#: ../../source/user/configoptions.rst:1101
 msgid "List of configuration options and where they are documented"
 msgstr ""
+
+#~ msgid ""
+#~ "This option can be used to control"
+#~ " the behavior of gdalwarp when "
+#~ "warping global datasets or when "
+#~ "transforming from/to polar projections, which"
+#~ " causes coordinate discontinuities. See "
+#~ "http://trac.osgeo.org/gdal/ticket/2305."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The background is that PROJ does "
+#~ "not guarantee that converting from "
+#~ "src_srs to dst_srs and then from "
+#~ "dst_srs to src_srs will yield to "
+#~ "the initial coordinates. This can lead"
+#~ " to errors in the computation of "
+#~ "the target bounding box of gdalwarp, "
+#~ "or to visual artifacts."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If CHECK_WITH_INVERT_PROJ option is not "
+#~ "set, gdalwarp will check that the "
+#~ "the computed coordinates of the edges"
+#~ " of the target image are in the"
+#~ " validity area of the target "
+#~ "projection. If they are not, it "
+#~ "will retry computing them by setting "
+#~ ":config:`CHECK_WITH_INVERT_PROJ=TRUE` that forces "
+#~ "ogrct.cpp to check the consistency of"
+#~ " each requested projection result with "
+#~ "the invert projection."
+#~ msgstr ""
+
+#~ msgid "If set to NO, gdalwarp will not attempt to use the invert projection."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Used in combination with "
+#~ ":config:`CHECK_WITH_INVERT_PROJ=TRUE`. Define the "
+#~ "acceptable threshold used to check if"
+#~ " the roundtrip from src_srs to "
+#~ "dst_srs and from dst_srs to srs_srs "
+#~ "yield to the initial coordinates. The"
+#~ " value must be expressed in the "
+#~ "units of the source SRS (typically "
+#~ "degrees for a geographic SRS, meters "
+#~ "for a projected SRS)"
+#~ msgstr ""
 

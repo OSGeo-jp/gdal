@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 03:46+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/faq.rst:5
 msgid "FAQ"
@@ -63,9 +63,8 @@ msgid ""
 "Features which was separated from GDAL. With the GDAL 2.0 release, the "
 "GDAL and OGR components were integrated together."
 msgstr ""
-"OGR は OpenGIS Simple Features にインスパイアされたベクタ"
-"IOライブラリでGDALとは別のものでした。GDAL 2.0 のリリース時に、"
-"GDAL と OGR のコンポーネントは統合されました。"
+"OGR は OpenGIS Simple Features にインスパイアされたベクタIOライブラリでGDALとは別のものでした。GDAL 2.0"
+" のリリース時に、GDAL と OGR のコンポーネントは統合されました。"
 
 #: ../../source/faq.rst:30
 msgid "What does OGR stand for?"
@@ -80,16 +79,14 @@ msgid ""
 "meaning of OGR in this name is historical. OGR is also the prefix used "
 "everywhere in the source of the library for class names, filenames, etc."
 msgstr ""
-"OGR は OpenGIS Simple Features Reference Implementationの略称でした。 "
-"ただしOGR はOpenGIS Simple Feature specificationに完全に準拠しておらず、 "
-" 仕様の実装としては承認されていないため"
-"この名前は OGR Simple Features Libraryに変更していました。この名前における"
-"OGR は歴史的な意味しかありません。また OGRはライブラリのソースのあらゆる場所で"
-"クラス名,ファイル名等に利用される接頭語でもあります。"
+"OGR は OpenGIS Simple Features Reference Implementationの略称でした。 ただしOGR "
+"はOpenGIS Simple Feature specificationに完全に準拠しておらず、  "
+"仕様の実装としては承認されていないためこの名前は OGR Simple Features Libraryに変更していました。この名前におけるOGR"
+" は歴史的な意味しかありません。また OGRはライブラリのソースのあらゆる場所でクラス名,ファイル名等に利用される接頭語でもあります。"
 
 #: ../../source/faq.rst:35
 msgid "What does CPL stand for?"
-msgstr "CPLとは何の略ですか?" 
+msgstr "CPLとは何の略ですか?"
 
 #: ../../source/faq.rst:37
 msgid ""
@@ -99,9 +96,8 @@ msgid ""
 " compilers was a challenge (or PITA), CPL proved necessary for smooth "
 "portability of GDAL/OGR."
 msgstr ""
-"Common Portability Library. これはGDALの内部のクロスプラットフォーム標準ライブラリと考えてください."
-"GDAL開発の初期には,クロスプラットフォーム開発やコンパイラの互換性と標準準拠が課題であったため,"
-"CPLはGDAL/OGRのスムーズな移植性のために必要であることが証明されました."
+"Common Portability Library. "
+"これはGDALの内部のクロスプラットフォーム標準ライブラリと考えてください.GDAL開発の初期には,クロスプラットフォーム開発やコンパイラの互換性と標準準拠が課題であったため,CPLはGDAL/OGRのスムーズな移植性のために必要であることが証明されました."
 
 #: ../../source/faq.rst:39
 msgid ""
@@ -117,9 +113,7 @@ msgstr "GDALプロジェクトはいつ始まりましたか?"
 msgid ""
 "In late 1998, Frank Warmerdam started to work as independent professional"
 " on the GDAL/OGR library."
-msgstr ""
-"1998年後半, Frank Warmerdam は独立した専門家として"
-"GDAL/OGR libraryライブラリの仕事を開始しました。"
+msgstr "1998年後半, Frank Warmerdam は独立した専門家としてGDAL/OGR libraryライブラリの仕事を開始しました。"
 
 #: ../../source/faq.rst:47
 msgid "Is GDAL/OGR proprietary software?"
@@ -147,9 +141,9 @@ msgid ""
 "OS X; all supported versions of Microsoft Windows; mobile environments "
 "(Android and iOS). Both 32-bit and 64-bit architectures are supported."
 msgstr ""
-"GDAL/OGRはすべての現代的なUnixのバリエーション: Linux, FreeBSD, Mac "
-"OS X; すべてのサポートされているMicrosoft Windowsのバージョン; モバイル環境(AndroidとiOS)で使用できます."
-"32ビットと64ビットのアーキテクチャの両方がサポートされています."
+"GDAL/OGRはすべての現代的なUnixのバリエーション: Linux, FreeBSD, Mac OS X; "
+"すべてのサポートされているMicrosoft Windowsのバージョン; "
+"モバイル環境(AndroidとiOS)で使用できます.32ビットと64ビットのアーキテクチャの両方がサポートされています."
 
 #: ../../source/faq.rst:62
 msgid "Is there a graphical user interface to GDAL/OGR?"
@@ -167,9 +161,7 @@ msgstr "GDAL/OGRをビルドするためにどのコンパイラを使用でき�
 msgid ""
 "GDAL/OGR must be compiled with a C++17 capable compiler since GDAL 3.9 "
 "(C++11 in previous versions)"
-msgstr ""
-"GDAL/OGRはGDAL 3.9 以降はC++17対応のコンパイラでコンパイルする必要があります"
-"(以前のバージョンではC++11)"
+msgstr "GDAL/OGRはGDAL 3.9 以降はC++17対応のコンパイラでコンパイルする必要があります(以前のバージョンではC++11)"
 
 #: ../../source/faq.rst:76
 msgid "Build requirements are described in :ref:`build_requirements`."
@@ -179,9 +171,7 @@ msgstr "ビルド要件は :ref:`build_requirements` に記載されています
 msgid ""
 "I have a question that's not answered here. Where can I get more "
 "information?"
-msgstr ""
-"ここで回答がされていない質問があります。 そのような場合私はどこで"
-"情報を得ることができますか?"
+msgstr "ここで回答がされていない質問があります。 そのような場合私はどこで情報を得ることができますか?"
 
 #: ../../source/faq.rst:81
 msgid "See :ref:`community`"
@@ -195,9 +185,8 @@ msgid ""
 "<http://www.catb.org/~esr/faqs/smart-questions.html>`_ by Eric S. "
 "Raymond."
 msgstr ""
-"質問の質には回答の質が多少関係していることを心に留めておいてください. "
-"これについてより詳しい説明が必要な場合は,Eric S. Raymondによるエッセイ"
-"`How To Ask Questions The Smart Way "
+"質問の質には回答の質が多少関係していることを心に留めておいてください. これについてより詳しい説明が必要な場合は,Eric S. "
+"Raymondによるエッセイ`How To Ask Questions The Smart Way "
 "<http://www.catb.org/~esr/faqs/smart-questions.html>`_ を参照してください."
 
 #: ../../source/faq.rst:86
@@ -208,9 +197,7 @@ msgstr "新しいフォーマットのサポートを追加するにはどうす
 msgid ""
 "To some extent this is now covered by the :ref:`raster_driver_tut` and "
 ":ref:`vector_driver_tut`"
-msgstr ""
-"現在ある程度は :ref:`raster_driver_tut` と "
-":ref:`vector_driver_tut` で説明されています。"
+msgstr "現在ある程度は :ref:`raster_driver_tut` と :ref:`vector_driver_tut` で説明されています。"
 
 #: ../../source/faq.rst:91
 msgid "Is GDAL thread-safe ?"
@@ -221,10 +208,22 @@ msgid "See :ref:`multithreading`"
 msgstr "参照 :ref:`multithreading`"
 
 #: ../../source/faq.rst:96
+msgid "Does GDAL provide a Section 508 information?"
+msgstr ""
+
+#: ../../source/faq.rst:98
+msgid ""
+"No, GDAL itself is an open-source software and project, not a Vendor. If "
+"your organization considers they need a `VPAT or Section 508 "
+"<https://www.section508.gov/sell/acr/>`_ form to be able to use GDAL, it "
+"is their responsibility to complete the needed steps themselves."
+msgstr ""
+
+#: ../../source/faq.rst:101
 msgid "How do I cite GDAL ?"
 msgstr "GDALをどのように引用すればよいですか？"
 
-#: ../../source/faq.rst:98
+#: ../../source/faq.rst:103
 msgid "See `CITATION`_"
 msgstr "参照 `CITATION`_"
 

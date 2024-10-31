@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/user/security.rst:5
+msgid "Security considerations"
+msgstr ""
+
+#: ../../source/user/security.rst:7
+msgid ""
+"This page discusses some security issues that users or developers may "
+"face while using GDAL. It can also serve as a check-list of items to take"
+" care of, for developers coding new drivers."
+msgstr ""
+
+#: ../../source/user/security.rst:11
+msgid ""
+"While GDAL maintainers take a number of steps to limit the risk of "
+"software vulnerabilities, GDAL has a large attack surface, because it "
+"deals with data in a variety of file formats."
+msgstr ""
+
+#: ../../source/user/security.rst:17
+msgid ""
+"This page is not intended to be a comprehensive cook-book for being "
+"\"safe\" in all circumstances, and should be considered as work-in-"
+"progress that can benefit from continued feedback of people deploying "
+"GDAL. Although they are specialists of the GDAL code base, GDAL "
+"maintainers are not security experts."
+msgstr ""
+
+#: ../../source/user/security.rst:24
+msgid "Classes of potential vulnerabilities"
+msgstr ""
+
+#: ../../source/user/security.rst:26
+msgid ""
+"Arbitrary code execution with the privileges of the user running the GDAL"
+" process."
+msgstr ""
+
+#: ../../source/user/security.rst:29
+msgid "Theft, tampering or destruction of data."
+msgstr ""
+
+#: ../../source/user/security.rst:31
+msgid ""
+"Denial of Service : abortion of a process, high consumption of CPU, "
+"memory, I/O resource."
+msgstr ""
+
+#: ../../source/user/security.rst:34
+msgid "Unwanted network access."
+msgstr ""
+
+#: ../../source/user/security.rst:37
+msgid "Causes"
+msgstr ""
+
+#: ../../source/user/security.rst:39
+msgid ""
+"Software bugs - in GDAL code itself, or in third-party dependencies - "
+"related to code that processes user data. Common defects can be:"
+msgstr ""
+
+#: ../../source/user/security.rst:42
+msgid ""
+"stack or heap buffer overflows, potentially leading to arbitrary code "
+"execution."
+msgstr ""
+
+#: ../../source/user/security.rst:45
+msgid "excessive memory allocation"
+msgstr ""
+
+#: ../../source/user/security.rst:47
+msgid "infinite, or very long, loops in code"
+msgstr ""
+
+#: ../../source/user/security.rst:49
+msgid ""
+"Software functionalities themselves, depending on the context of use, can"
+" be a source of vulnerabilities. Consult :ref:`security_known_issues` "
+"below."
+msgstr ""
+
+#: ../../source/user/security.rst:53
+msgid "Situations at risk"
+msgstr ""
+
+#: ../../source/user/security.rst:55
+msgid ""
+"The following are examples of situations where a user may process "
+"untrusted data that has been crafted to trigger a vulnerability:"
+msgstr ""
+
+#: ../../source/user/security.rst:58
+msgid "web services accepting input files provided by a client,"
+msgstr ""
+
+#: ../../source/user/security.rst:60
+msgid ""
+"desktop use of GDAL where an hostile party manages to convince the victim"
+" user to process hostile data."
+msgstr ""
+
+#: ../../source/user/security.rst:64
+msgid "Mitigation"
+msgstr ""
+
+#: ../../source/user/security.rst:66
+msgid ""
+"Upgrade to the latest versions of GDAL and its dependencies that might "
+"contain bug fixes for some vulnerabilities."
+msgstr ""
+
+#: ../../source/user/security.rst:69
+msgid ""
+"Build GDAL with the hardening options of compilers, e.g. with "
+"-D_FORTIFY_SOURCE=2 (some Linux distributions turn on it by default), to "
+"minimize the effect of buffer overflows."
+msgstr ""
+
+#: ../../source/user/security.rst:73
+msgid ""
+"Restrict access to the part of the file system that are only needed. The "
+"``​chroot`` mechanism, or other sand-boxing solutions, might be a "
+"technical solution for this."
+msgstr ""
+
+#: ../../source/user/security.rst:76
+msgid ""
+"Compile only the subset of drivers needed. The "
+"``GDAL_ENABLE_DRIVER_{name}`` or ``OGR_ENABLE_DRIVER_{name}`` CMake build"
+" options can be used for that purpose."
+msgstr ""
+
+#: ../../source/user/security.rst:79
+msgid ""
+"Disable unneeded drivers at run-time by setting the :config:`GDAL_SKIP` "
+"configuration option."
+msgstr ""
+
+#: ../../source/user/security.rst:82
+msgid ""
+"When network access is not needed, disable Curl at build time with the "
+"``GDAL_USE_CURL=OFF`` CMake option."
+msgstr ""
+
+#: ../../source/user/security.rst:85
+msgid ""
+"Process untrusted data in a dedicated user account with no access to "
+"other local sensitive data (data files, passwords, encryption/signing "
+"keys, etc...). Note that the mere act of opening a dataset with the "
+"GDAL/OGR API or utilities is a form of processing."
+msgstr ""
+
+#: ../../source/user/security.rst:90
+msgid ""
+"For automatic services, place restrictions on the CPU time and memory "
+"consumption allowed to the process using GDAL. Check the options of your "
+"HTTP server."
+msgstr ""
+
+#: ../../source/user/security.rst:94
+msgid ""
+"Check the raster dimensions and number of bands just after opening a GDAL"
+" driver and before processing it. Several GDAL drivers use the "
+":cpp:func:`GDALCheckDatasetDimensions` and :cpp:func:`GDALCheckBandCount`"
+" functions to do early sanity checks, but user checks can also be useful."
+" For example, a dataset with huge raster dimensions but with a very small"
+" file size might be suspicious (but not always, for example a VRT file, "
+"or highly compressed data...)"
+msgstr ""
+
+#: ../../source/user/security.rst:102
+msgid ""
+"Do not allow arbitrary arguments to be passed to command line utilities. "
+"In particular ``--config GDAL_DRIVER_PATH xxx`` or ``--config "
+"OGR_DRIVER_PATH xxx`` could be used to trigger arbitrary code execution "
+"for someone with write access to some parts of the file system. "
+"Similarly, :config:`GDAL_VRT_ENABLE_PYTHON` or "
+":config:`GDAL_VRT_PYTHON_TRUSTED_MODULES` could be used to trigger "
+"hostile Python code execution."
+msgstr ""
+
+#: ../../source/user/security.rst:109
+msgid ""
+"When possible, avoid using closed-source dependency libraries that cannot"
+" be audited for vulnerabilities."
+msgstr ""
+
+#: ../../source/user/security.rst:115
+msgid "Credential related issues"
+msgstr ""
+
+#: ../../source/user/security.rst:117
+msgid ""
+"GDAL network virtual file systems can access credentials needed to grant "
+"access to remote resources, from the environment or local files. Those "
+"secrets are stored in RAM using normal mechanisms. Consequently they "
+"could potentially be recovered by untrusted code that would run in the "
+"same process as GDAL code."
+msgstr ""
+
+#: ../../source/user/security.rst:122
+msgid ""
+"The same applies for connection strings to some drivers such as "
+"PostgreSQL, MySQL, etc. which may include passwords."
+msgstr ""
+
+#: ../../source/user/security.rst:126
+msgid "Known issues in API"
+msgstr ""
+
+#: ../../source/user/security.rst:128
+msgid ":cpp:func:`OGRSpatialReference::SetFromUserInput` accepts URLs by default"
+msgstr ""
+
+#: ../../source/user/security.rst:131
+msgid "Known issues in drivers"
+msgstr ""
+
+#: ../../source/user/security.rst:134
+msgid "General issues"
+msgstr ""
+
+#: ../../source/user/security.rst:136
+msgid ""
+"Drivers do not always use file extensions to determine which file must be"
+" handled by which driver (this is a feature in most situations). But, for"
+" example, a VRT file might be disguised as a .tif, .png, or .jpg file. So"
+" you cannot know which driver will handle a file by just looking at its "
+"extension. Using ``gdalmanage identify the.file`` (or "
+":cpp:func:`GDALIdentifyDriver`) can be a way to know the driver without "
+"attempting a full open of the file, but, drivers not having a specialized"
+" implementation of the Identify() method will fall back to the Open() "
+"method."
+msgstr ""
+
+#: ../../source/user/security.rst:146
+msgid ""
+"Drivers depending on third-party libraries whose code has been embedded "
+"in GDAL. Binary builds might rely on the internal version, or the "
+"external version. If using the internal version, they might use an "
+"obsolete version of the third-party library that might contain known "
+"vulnerabilities. Potentially concerned drivers are GTiff (libtiff, "
+"libgeotiff), PNG (libpng), GIF (giflib), JPEG (libjpeg), PCRaster "
+"(libcsf), GeoJSON (libjson-c), MRF (liblerc). An internal version of ZLib"
+" is also contained in GDAL sources. Packagers of GDAL are recommended to "
+"use the external version of the libraries when possible, so that security"
+" upgrades of those dependencies benefit to GDAL."
+msgstr ""
+
+#: ../../source/user/security.rst:156
+msgid ""
+"Drivers using GDALOpen()/GDALOpenEx()/OGROpen() internally cause other "
+"drivers to be used (and their possible flaws exploited), without it being"
+" obvious at first sight. VRT, MBTiles, KMLSuperOverlay, RasterLite, "
+"PCIDSK, PDF, RPFTOC, RS2, WMS, WCS, WFS, OAPIF, OGCAPI and GTI are "
+"examples of drivers with this behavior."
+msgstr ""
+
+#: ../../source/user/security.rst:162
+msgid ""
+"Drivers depending on downloaded data (HTTP, WMS, WCS, WFS, OAPIF, OGCAPI,"
+" STACIT, STACTA, etc.)."
+msgstr ""
+
+#: ../../source/user/security.rst:165
+msgid ""
+"XML based drivers: they might be subject to denial of service by "
+"`​billion laugh-like "
+"<https://en.wikipedia.org/wiki/Billion_laughs_attack>`__ attacks. "
+"Existing GDAL XML based drivers are thought to take defensive measures "
+"against such patterns (starting with GDAL 3.9.3 for LVBAG and GMLAS "
+"drivers)"
+msgstr ""
+
+#: ../../source/user/security.rst:170
+msgid ""
+"SQL injections: services that would accept untrusted SQL requests could "
+"trigger SQL injection vulnerabilities in database-based drivers."
+msgstr ""
+
+#: ../../source/user/security.rst:175
+msgid "​GDAL MEM driver"
+msgstr ""
+
+#: ../../source/user/security.rst:177
+msgid ""
+"The opening syntax "
+"``MEM:::DATAPOINTER=<memory_address>,PIXELS=<number>,LINES=<number>`` can"
+" access any memory of the process. Feeding it with a random access can "
+"cause a crash, or a read of unwanted virtual memory. The MEM driver is "
+"used by various algorithms and drivers in creation mode (which is not "
+"vulnerable to the DATAPOINTER issue), so completely disabling the driver "
+"might be detrimental to other areas of GDAL. It is possible to define the"
+" GDAL_NO_OPEN_FOR_MEM_DRIVER *compilation* flag to disable the "
+"``MEM:::DATAPOINTER``` syntax only."
+msgstr ""
+
+#: ../../source/user/security.rst:186
+msgid "​GDAL PDF driver"
+msgstr ""
+
+#: ../../source/user/security.rst:188
+msgid ""
+"The OGR_DATASOURCE creation option accepts a file name. So any OGR "
+"datasource, and potentially any file (see OGR VRT) could be read through "
+"this option, and its content embedded in the generated PDF. Similarly for"
+" the COMPOSITION_FILE creation option."
+msgstr ""
+
+#: ../../source/user/security.rst:194
+msgid "​GDAL VRT driver"
+msgstr ""
+
+#: ../../source/user/security.rst:196
+msgid ""
+"It can be used to access any valid GDAL dataset. If a hostile party, with"
+" knowledge of the location on the filesystem of a valid GDAL dataset, "
+"convinces a user to run gdal_translate a VRT file and give it back the "
+"result, it might be able to steal data. That could potentially be able "
+"for a web service accepting data from the user, converting it, and "
+"sending back the result."
+msgstr ""
+
+#: ../../source/user/security.rst:202
+msgid ""
+"The VRTRawRasterBand mechanism can read any file (not necessarily a valid"
+" GDAL dataset) accessible, which can extend the scope of the above "
+"mentioned issue."
+msgstr ""
+
+#: ../../source/user/security.rst:206
+msgid ""
+"The VRTDerivedRasterBand mechanism can use Pixel functions written in "
+"Python, directly embedded in a VRT file, or pointing to external Python "
+"code. By default this mechanism is disabled, to avoid arbitrary code "
+"execution. Consult :ref:`raster_vrt_security_implications` for more "
+"details."
+msgstr ""
+
+#: ../../source/user/security.rst:211
+msgid ""
+"/vsicurl/ (and associated network-capable virtual file systems) filenames"
+" can be used, thus causing remote data to be downloaded."
+msgstr ""
+
+#: ../../source/user/security.rst:215
+msgid "​GDAL GTI driver"
+msgstr ""
+
+#: ../../source/user/security.rst:217
+msgid "Same issues as the GDAL VRT driver."
+msgstr ""
+
+#: ../../source/user/security.rst:220
+msgid "​OGR VRT driver"
+msgstr ""
+
+#: ../../source/user/security.rst:222
+msgid ""
+"Similar issues as the GDAL VRT driver. ``<SrcSQL>`` could be used to "
+"modify data."
+msgstr ""
+

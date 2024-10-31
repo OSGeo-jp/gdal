@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 11:33+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/heif.rst:5
-msgid "HEIF / HEIC -- ISO/IEC 23008-12:2017 High Efficiency Image File Format"
+msgid "HEIF / HEIC -- ISO/IEC 23008-12 High Efficiency Image File Format"
 msgstr ""
 
 #: ../../source/drivers/raster/heif.rst:-1
@@ -57,27 +57,34 @@ msgstr ""
 
 #: ../../source/drivers/raster/heif.rst:21
 msgid ""
-"The driver can read EXIF metadata (exposed in the ``EXIF`` metadata "
-"domain) and XMP metadata (exposed in the ``xml:XMP`` metadata domain)"
+"Later versions of libheif may also support one or more of AVIF (AV1 in "
+"HEIF), JPEG, JPEG 2000 and uncompressed images depending on compile-time "
+"options."
 msgstr ""
 
 #: ../../source/drivers/raster/heif.rst:24
 msgid ""
-"The driver will expose the thumbnail as an overview (when its number of "
-"bands matches the one of the full resolution image)"
+"The driver can read EXIF metadata (exposed in the ``EXIF`` metadata "
+"domain) and XMP metadata (exposed in the ``xml:XMP`` metadata domain)"
 msgstr ""
 
 #: ../../source/drivers/raster/heif.rst:27
+msgid ""
+"The driver will expose the thumbnail as an overview (when its number of "
+"bands matches the number of bands in the full resolution image)."
+msgstr ""
+
+#: ../../source/drivers/raster/heif.rst:30
 msgid ""
 "If a file contains several top-level images, they will be exposed as GDAL"
 " subdatasets."
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:30
+#: ../../source/drivers/raster/heif.rst:33
 msgid "AVIF support"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:32
+#: ../../source/drivers/raster/heif.rst:35
 msgid ""
 "Starting with GDAL 3.10, the AVIF_HEIF companion driver to the HEIF "
 "driver may be used to open images encoding with the AVIF (AV1 Image File)"
@@ -86,7 +93,7 @@ msgid ""
 "are able of AV1 decoding (libaom or libdav1d)."
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:40
+#: ../../source/drivers/raster/heif.rst:43
 msgid "Driver capabilities"
 msgstr ""
 
@@ -94,36 +101,46 @@ msgstr ""
 msgid "Supports VirtualIO"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:42
+#: ../../source/drivers/raster/heif.rst:45
 msgid "if libheif >= 1.4"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:46
+#: ../../source/drivers/raster/heif.rst:51
 msgid "Built hints on Windows"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:48
+#: ../../source/drivers/raster/heif.rst:53
 msgid ""
 "Download source archives for libheif at "
 "https://github.com/strukturag/libheif and libde265 at "
 "https://github.com/strukturag/libde265"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:52
+#: ../../source/drivers/raster/heif.rst:57
 msgid ""
 "Unpack the archives (for example libde265-1.0.5.tar.gz and "
 "libheif-1.7.0.tar.gz)"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:54
+#: ../../source/drivers/raster/heif.rst:59
 msgid "Build libde265:"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:68
+#: ../../source/drivers/raster/heif.rst:73
 msgid "Build libheif with libde265 support:"
 msgstr ""
 
-#: ../../source/drivers/raster/heif.rst:83
+#: ../../source/drivers/raster/heif.rst:88
 msgid "Add in GDAL's nmake.local the following lines before building GDAL:"
 msgstr ""
+
+#~ msgid "HEIF / HEIC -- ISO/IEC 23008-12:2017 High Efficiency Image File Format"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The driver will expose the thumbnail "
+#~ "as an overview (when its number of"
+#~ " bands matches the one of the "
+#~ "full resolution image)"
+#~ msgstr ""
 

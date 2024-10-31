@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,9 +17,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: ../../source/programs/index.rst:23 ../../source/programs/index.rst:122
+#: ../../source/programs/index.rst:23 ../../source/programs/index.rst:124
 msgid "Common options"
 msgstr ""
 
@@ -39,233 +39,237 @@ msgstr ""
 msgid "Raster programs"
 msgstr ""
 
-#: ../../source/programs/index.rst:67
+#: ../../source/programs/index.rst:68
 msgid ":ref:`Common options <raster_common_options>`"
 msgstr ""
 
-#: ../../source/programs/index.rst:68
+#: ../../source/programs/index.rst:69
 msgid ""
 ":ref:`gdal-config`: Determines various information about a GDAL "
 "installation."
 msgstr ""
 
-#: ../../source/programs/index.rst:69
+#: ../../source/programs/index.rst:70
 msgid ""
 ":ref:`gdal2tiles`: Generates directory with TMS tiles, KMLs and simple "
 "web viewers."
 msgstr ""
 
-#: ../../source/programs/index.rst:70
+#: ../../source/programs/index.rst:71
 msgid ":ref:`gdal2xyz`: Translates a raster file into xyz format."
 msgstr ""
 
-#: ../../source/programs/index.rst:71
+#: ../../source/programs/index.rst:72
 msgid ":ref:`gdal_calc`: Command line raster calculator with numpy syntax."
 msgstr ""
 
-#: ../../source/programs/index.rst:72
+#: ../../source/programs/index.rst:73
 msgid ""
 ":ref:`gdal_contour`: Builds vector contour lines from a raster elevation "
 "model."
 msgstr ""
 
-#: ../../source/programs/index.rst:73
+#: ../../source/programs/index.rst:74
 msgid ":ref:`gdal_create`: Create a raster file (without source dataset)."
 msgstr ""
 
-#: ../../source/programs/index.rst:74
+#: ../../source/programs/index.rst:75
 msgid ""
 ":ref:`gdal_edit`: Edit in place various information of an existing GDAL "
 "dataset."
 msgstr ""
 
-#: ../../source/programs/index.rst:75
+#: ../../source/programs/index.rst:76
 msgid ":ref:`gdal_fillnodata`: Fill raster regions by interpolation from edges."
 msgstr ""
 
-#: ../../source/programs/index.rst:76
+#: ../../source/programs/index.rst:77
 msgid ":ref:`gdal_footprint`: Compute footprint of a raster."
 msgstr ""
 
-#: ../../source/programs/index.rst:77
+#: ../../source/programs/index.rst:78
 msgid ":ref:`gdal_grid`: Creates regular grid from the scattered data."
 msgstr ""
 
-#: ../../source/programs/index.rst:78
+#: ../../source/programs/index.rst:79
 msgid ":ref:`gdal_merge`: Mosaics a set of images."
 msgstr ""
 
-#: ../../source/programs/index.rst:79
+#: ../../source/programs/index.rst:80
 msgid ":ref:`gdal_pansharpen`: Perform a pansharpen operation."
 msgstr ""
 
-#: ../../source/programs/index.rst:80
+#: ../../source/programs/index.rst:81
 msgid ":ref:`gdal_polygonize`: Produces a polygon feature layer from a raster."
 msgstr ""
 
-#: ../../source/programs/index.rst:81
+#: ../../source/programs/index.rst:82
 msgid ":ref:`gdal_proximity`: Produces a raster proximity map."
 msgstr ""
 
-#: ../../source/programs/index.rst:82
+#: ../../source/programs/index.rst:83
 msgid ":ref:`gdal_rasterize`: Burns vector geometries into a raster."
 msgstr ""
 
-#: ../../source/programs/index.rst:83
+#: ../../source/programs/index.rst:84
 msgid ""
 ":ref:`gdal_retile`: Retiles a set of tiles and/or build tiled pyramid "
 "levels."
 msgstr ""
 
-#: ../../source/programs/index.rst:84
+#: ../../source/programs/index.rst:85
 msgid ":ref:`gdal_sieve`: Removes small raster polygons."
 msgstr ""
 
-#: ../../source/programs/index.rst:85
+#: ../../source/programs/index.rst:86
 msgid ":ref:`gdal_translate`: Converts raster data between different formats."
 msgstr ""
 
-#: ../../source/programs/index.rst:86
+#: ../../source/programs/index.rst:87
 msgid ":ref:`gdal_viewshed`: Compute a visibility mask for a raster."
 msgstr ""
 
-#: ../../source/programs/index.rst:87
+#: ../../source/programs/index.rst:88
 msgid ":ref:`gdaladdo`: Builds or rebuilds overview images."
 msgstr ""
 
-#: ../../source/programs/index.rst:88
+#: ../../source/programs/index.rst:89
 msgid ""
 ":ref:`gdalattachpct`: Attach a color table to a raster file from an input"
 " file."
 msgstr ""
 
-#: ../../source/programs/index.rst:89
+#: ../../source/programs/index.rst:90
 msgid ":ref:`gdalbuildvrt`: Builds a VRT from a list of datasets."
 msgstr ""
 
-#: ../../source/programs/index.rst:90
+#: ../../source/programs/index.rst:91
 msgid ":ref:`gdalcompare`: Compare two images."
 msgstr ""
 
-#: ../../source/programs/index.rst:91
+#: ../../source/programs/index.rst:92
 msgid ":ref:`gdaldem`: Tools to analyze and visualize DEMs."
 msgstr ""
 
-#: ../../source/programs/index.rst:92
-msgid ":ref:`gdalinfo`: Lists information about a raster dataset."
-msgstr ""
-
 #: ../../source/programs/index.rst:93
-msgid ":ref:`gdallocationinfo`: Raster query tool"
+msgid ":ref:`gdalenhance`: Enhance an image with LUT-based contrast enhancement"
 msgstr ""
 
 #: ../../source/programs/index.rst:94
-msgid ":ref:`gdalmanage`: Identify, delete, rename and copy raster data files."
+msgid ":ref:`gdalinfo`: Lists information about a raster dataset."
 msgstr ""
 
 #: ../../source/programs/index.rst:95
-msgid ":ref:`gdalmove`: Transform georeferencing of raster file in place."
+msgid ":ref:`gdallocationinfo`: Raster query tool"
 msgstr ""
 
 #: ../../source/programs/index.rst:96
+msgid ":ref:`gdalmanage`: Identify, delete, rename and copy raster data files."
+msgstr ""
+
+#: ../../source/programs/index.rst:97
+msgid ":ref:`gdalmove`: Transform georeferencing of raster file in place."
+msgstr ""
+
+#: ../../source/programs/index.rst:98
 msgid ""
 ":ref:`gdalsrsinfo`: Lists info about a given SRS in number of formats "
 "(WKT, PROJ.4, etc.)"
 msgstr ""
 
-#: ../../source/programs/index.rst:97
+#: ../../source/programs/index.rst:99
 msgid ":ref:`gdaltindex`: Builds an OGR-supported dataset as a raster tileindex."
 msgstr ""
 
-#: ../../source/programs/index.rst:98
+#: ../../source/programs/index.rst:100
 msgid ":ref:`gdaltransform`: Transforms coordinates."
 msgstr ""
 
-#: ../../source/programs/index.rst:99
+#: ../../source/programs/index.rst:101
 msgid ":ref:`gdalwarp`: Image reprojection and warping utility."
 msgstr ""
 
-#: ../../source/programs/index.rst:100
+#: ../../source/programs/index.rst:102
 msgid ":ref:`nearblack`: Convert nearly black/white borders to black."
 msgstr ""
 
-#: ../../source/programs/index.rst:101
+#: ../../source/programs/index.rst:103
 msgid ":ref:`pct2rgb`: Convert an 8bit paletted image to 24bit RGB."
 msgstr ""
 
-#: ../../source/programs/index.rst:102
+#: ../../source/programs/index.rst:104
 msgid ":ref:`rgb2pct`: Convert a 24bit RGB image to 8bit paletted."
 msgstr ""
 
-#: ../../source/programs/index.rst:105
+#: ../../source/programs/index.rst:107
 msgid "Multidimensional Raster programs"
 msgstr ""
 
-#: ../../source/programs/index.rst:116
+#: ../../source/programs/index.rst:118
 msgid ""
 ":ref:`gdalmdiminfo`: Reports structure and content of a multidimensional "
 "dataset."
 msgstr ""
 
-#: ../../source/programs/index.rst:117
+#: ../../source/programs/index.rst:119
 msgid ""
 ":ref:`gdalmdimtranslate`: Converts multidimensional data between "
 "different formats, and perform subsetting."
 msgstr ""
 
-#: ../../source/programs/index.rst:120
+#: ../../source/programs/index.rst:122
 msgid "Vector programs"
 msgstr ""
 
-#: ../../source/programs/index.rst:136
+#: ../../source/programs/index.rst:138
 msgid ":ref:`Common options <vector_common_options>`"
 msgstr ""
 
-#: ../../source/programs/index.rst:137
+#: ../../source/programs/index.rst:139
 msgid ":ref:`ogrinfo`: Lists information about an OGR-supported data source."
 msgstr ""
 
-#: ../../source/programs/index.rst:138
+#: ../../source/programs/index.rst:140
 msgid ":ref:`ogr2ogr`: Converts simple features data between file formats."
 msgstr ""
 
-#: ../../source/programs/index.rst:139
+#: ../../source/programs/index.rst:141
 msgid ":ref:`ogrtindex`: Creates a tileindex."
 msgstr ""
 
-#: ../../source/programs/index.rst:140
+#: ../../source/programs/index.rst:142
 msgid ""
 ":ref:`ogrlineref`: Create linear reference and provide some calculations "
 "using it."
 msgstr ""
 
-#: ../../source/programs/index.rst:141
+#: ../../source/programs/index.rst:143
 msgid ":ref:`ogrmerge`: Merge several vector datasets into a single one."
 msgstr ""
 
-#: ../../source/programs/index.rst:142
+#: ../../source/programs/index.rst:144
 msgid ""
 ":ref:`ogr_layer_algebra`: Performs various Vector layer algebraic "
 "operations."
 msgstr ""
 
-#: ../../source/programs/index.rst:145
+#: ../../source/programs/index.rst:147
 msgid "Geographic network programs"
 msgstr ""
 
-#: ../../source/programs/index.rst:156
+#: ../../source/programs/index.rst:158
 msgid ":ref:`gnmmanage`: Manages networks"
 msgstr ""
 
-#: ../../source/programs/index.rst:157
+#: ../../source/programs/index.rst:159
 msgid ":ref:`gnmanalyse`: Analyses networks"
 msgstr ""
 
-#: ../../source/programs/index.rst:160
+#: ../../source/programs/index.rst:162
 msgid "Other utilities"
 msgstr ""
 
-#: ../../source/programs/index.rst:170
+#: ../../source/programs/index.rst:172
 msgid ":ref:`sozip`: Generate a seek-optimized ZIP (SOZip) file"
 msgstr ""
 

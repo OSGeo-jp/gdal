@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 11:33+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -151,9 +151,9 @@ msgstr ""
 
 #: ../../source/drivers/raster/pdf.rst:195
 msgid ""
-"Note: some raster-only PDF files (such as some USGS GeoPDF files), that "
-"are regularly tiled are exposed as tiled dataset by the GDAL PDF driver, "
-"and can be rendered with any backends."
+"Note: some raster-only PDF files (such as some USGS PDF files), that are "
+"regularly tiled are exposed as tiled dataset by the GDAL PDF driver, and "
+"can be rendered with any backends."
 msgstr ""
 
 #: ../../source/drivers/raster/pdf.rst:199
@@ -509,7 +509,7 @@ msgstr ""
 
 #: ../../source/drivers/raster/pdf.rst:812
 msgid ""
-"`OGC GeoPDF Encoding Best Practice Version 2.2 (08-139r3) "
+"`OGC PDF Georegistration Encoding Best Practice Version 2.2 (08-139r3) "
 "<http://portal.opengeospatial.org/files/?artifact_id=40537>`__"
 msgstr ""
 
@@ -577,5 +577,20 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "With GDAL >= 3.9"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note: some raster-only PDF files "
+#~ "(such as some USGS GeoPDF files), "
+#~ "that are regularly tiled are exposed "
+#~ "as tiled dataset by the GDAL PDF"
+#~ " driver, and can be rendered with "
+#~ "any backends."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`OGC GeoPDF Encoding Best Practice "
+#~ "Version 2.2 (08-139r3) "
+#~ "<http://portal.opengeospatial.org/files/?artifact_id=40537>`__"
 #~ msgstr ""
 

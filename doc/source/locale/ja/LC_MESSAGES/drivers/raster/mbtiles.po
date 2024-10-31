@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/mbtiles.rst:5
 #: ../../source/drivers/raster/mbtiles.rst:7
@@ -195,7 +195,7 @@ msgstr ""
 msgid ""
 "MBTiles can store tiles in PNG, JPEG or WEBP (since 3.8). Support for "
 "those tile formats depend if the underlying drivers are available in "
-"GDAL. By default, GDAL will PNG tiles."
+"GDAL. By default, GDAL will produce PNG tiles."
 msgstr ""
 
 #: ../../source/drivers/raster/mbtiles.rst:222
@@ -381,4 +381,13 @@ msgstr ""
 #: ../../source/drivers/raster/mbtiles.rst:651
 msgid ":ref:`Mapbox Vector tiles driver <vector.mvt>`"
 msgstr ""
+
+#~ msgid ""
+#~ "MBTiles can store tiles in PNG, "
+#~ "JPEG or WEBP (since 3.8). Support "
+#~ "for those tile formats depend if "
+#~ "the underlying drivers are available in"
+#~ " GDAL. By default, GDAL will PNG "
+#~ "tiles."
+#~ msgstr ""
 

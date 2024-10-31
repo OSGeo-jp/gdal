@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdaldem.rst:5
 msgid "gdaldem"
@@ -582,14 +582,23 @@ msgid "Documentation of related GRASS utilities:"
 msgstr ""
 
 #: ../../source/programs/gdaldem.rst:416
-msgid "https://grass.osgeo.org/grass79/manuals/r.slope.aspect.html"
+msgid "https://grass.osgeo.org/grass84/manuals/r.slope.aspect.html"
 msgstr ""
 
 #: ../../source/programs/gdaldem.rst:418
-msgid "https://grass.osgeo.org/grass79/manuals/r.relief.html"
+msgid "https://grass.osgeo.org/grass84/manuals/r.relief.html"
 msgstr ""
 
 #: ../../source/programs/gdaldem.rst:420
-msgid "https://grass.osgeo.org/grass79/manuals/r.colors.html"
+msgid "https://grass.osgeo.org/grass84/manuals/r.colors.html"
 msgstr ""
+
+#~ msgid "https://grass.osgeo.org/grass79/manuals/r.slope.aspect.html"
+#~ msgstr ""
+
+#~ msgid "https://grass.osgeo.org/grass79/manuals/r.relief.html"
+#~ msgstr ""
+
+#~ msgid "https://grass.osgeo.org/grass79/manuals/r.colors.html"
+#~ msgstr ""
 

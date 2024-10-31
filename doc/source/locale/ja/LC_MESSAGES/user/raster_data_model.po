@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-23 17:54+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yoichi Kayama <yoichi.kayama@gmail.com>\n"
 "Language: ja\n"
@@ -27,9 +27,7 @@ msgstr "ラスターデータモデル"
 msgid ""
 "This document attempts to describe the GDAL data model. That is the types"
 " of information that a GDAL data store can contain, and their semantics."
-msgstr ""
-"このドキュメントはGDALデータモデルを記述しようとします.その内容はGDALデータストアが含む"
-"ことができる情報のタイプとそれらの意味についてです."
+msgstr "このドキュメントはGDALデータモデルを記述しようとします.その内容はGDALデータストアが含むことができる情報のタイプとそれらの意味についてです."
 
 #: ../../source/user/raster_data_model.rst:10
 msgid "Dataset"
@@ -45,19 +43,14 @@ msgid ""
 " bands. The dataset itself can also have associated metadata, a list of "
 "name/value pairs in string form."
 msgstr ""
-"データセット(クラス :cpp:class:`GDALDataset` で表される)は,関連するラスターバンド"
-"の集合と,それら全てに共通する情報です.特にデータセットは,全てのバンドに適用される"
-"ラスターサイズ(ピクセルとライン)の概念を持ちます.データセットはまた,全てのバンドの"
-"地理参照変換と座標系定義を担当します.データセット自体には,文字列形式の名前/値ペアの"
-"リストとして関連するメタデータがあります."
+"データセット(クラス :cpp:class:`GDALDataset` "
+"で表される)は,関連するラスターバンドの集合と,それら全てに共通する情報です.特にデータセットは,全てのバンドに適用されるラスターサイズ(ピクセルとライン)の概念を持ちます.データセットはまた,全てのバンドの地理参照変換と座標系定義を担当します.データセット自体には,文字列形式の名前/値ペアのリストとして関連するメタデータがあります."
 
 #: ../../source/user/raster_data_model.rst:14
 msgid ""
 "Note that the GDAL dataset, and raster band data model is loosely based "
 "on the OpenGIS Grid Coverages specification."
-msgstr ""
-"GDALデータセットとラスターバンドデータモデルは,OpenGIS Grid Coverages仕様に"
-"基づいています."
+msgstr "GDALデータセットとラスターバンドデータモデルは,OpenGIS Grid Coverages仕様に基づいています."
 
 #: ../../source/user/raster_data_model.rst:17
 msgid "Coordinate System"
@@ -67,9 +60,7 @@ msgstr "座標系"
 msgid ""
 "Dataset coordinate systems are represented as OpenGIS Well Known Text "
 "strings. This can contain:"
-msgstr ""
-"データセットの座標系はOpenGIS Well Known Text文字列として表されます.これは"
-"以下を含むことができます:"
+msgstr "データセットの座標系はOpenGIS Well Known Text文字列として表されます.これは以下を含むことができます:"
 
 #: ../../source/user/raster_data_model.rst:20
 msgid "An overall coordinate system name."
@@ -111,9 +102,7 @@ msgstr "軸の名前と順序"
 msgid ""
 "Codes for most of the above in terms of predefined coordinate systems "
 "from authorities such as EPSG."
-msgstr ""
-"上記のほとんどコードは,EPSGなどの標準座標系で定義されている"
-"コードです."
+msgstr "上記のほとんどコードは,EPSGなどの標準座標系で定義されているコードです."
 
 #: ../../source/user/raster_data_model.rst:31
 msgid ""
@@ -121,8 +110,8 @@ msgid ""
 "mechanisms to manipulate them, refer to the osr_tutorial document and/or "
 "the OGRSpatialReference class documentation."
 msgstr ""
-"OpenGIS WKT 座標系システム定義の詳細とそれらを操作するメカニズムについては,"
-"osr_tutorial ドキュメントと OGRSpatialReference クラスドキュメントを参照してください."
+"OpenGIS WKT 座標系システム定義の詳細とそれらを操作するメカニズムについては,osr_tutorial ドキュメントと "
+"OGRSpatialReference クラスドキュメントを参照してください."
 
 #: ../../source/user/raster_data_model.rst:33
 msgid ""
@@ -134,19 +123,16 @@ msgid ""
 "coordinates of the GCPs returned by :cpp:func:`GDALDataset::GetGCPs`."
 msgstr ""
 ":cpp:func:`GDALDataset::GetProjectionRef` で返される座標系は, "
-":cpp:func:`GDALDataset::GetGeoTransform` によって返されるアフィン地理変換を"
-"前提とした地理参照座標を記述します. "
-" :cpp:func:`GDALDataset::GetGCPProjection` から返される座標系では "
-" :cpp:func:`GDALDataset::GetGCPs` から返されるGCPでジオリファレンス"
-"された座標を記述します."
+":cpp:func:`GDALDataset::GetGeoTransform` "
+"によって返されるアフィン地理変換を前提とした地理参照座標を記述します.  "
+":cpp:func:`GDALDataset::GetGCPProjection` から返される座標系では  "
+":cpp:func:`GDALDataset::GetGCPs` から返されるGCPでジオリファレンスされた座標を記述します."
 
 #: ../../source/user/raster_data_model.rst:35
 msgid ""
 "Note that a returned coordinate system strings of \"\" indicates nothing "
 "is known about the georeferencing coordinate system."
-msgstr ""
-"返される座標系文字列が \"\" の場合, ジオリファレンス座標系について"
-"何も指定されていないことを表します."
+msgstr "返される座標系文字列が \"\" の場合, ジオリファレンス座標系について何も指定されていないことを表します."
 
 #: ../../source/user/raster_data_model.rst:40
 msgid "Affine GeoTransform"
@@ -159,9 +145,8 @@ msgid ""
 " first, and most commonly used is the affine transform (the other is "
 "GCPs)."
 msgstr ""
-"GDAL データセットは, ラスタの位置 (ピクセル/行座標) と地理参照座標の関係を"
-"2 つの方法で記述します. 最初の最も一般的に使用される方法はアフィン変換です"
-"(もう 1 つの方法は GCPs です)."
+"GDAL データセットは, ラスタの位置 (ピクセル/行座標) と地理参照座標の関係を2 つの方法で記述します. "
+"最初の最も一般的に使用される方法はアフィン変換です(もう 1 つの方法は GCPs です)."
 
 #: ../../source/user/raster_data_model.rst:44
 msgid ""
@@ -192,8 +177,8 @@ msgid ""
 " pixel would therefore be (0.5,0.5)."
 msgstr ""
 "上記のピクセル/行座標は,左上隅の左上ピクセルが (0.0,0.0) で, "
-"右下隅の右下ピクセルの(width_in_pixels,height_in_pixels) までです. "
-"左上ピクセルの中心のピクセル/行の位置は (0.5,0.5) です."
+"右下隅の右下ピクセルの(width_in_pixels,height_in_pixels) までです. 左上ピクセルの中心のピクセル/行の位置は "
+"(0.5,0.5) です."
 
 #: ../../source/user/raster_data_model.rst:56
 msgid "GCPs"
@@ -207,11 +192,9 @@ msgid ""
 ":cpp:func:`GDALDataset::GetGCPProjection`). Each GCP (represented as the "
 "GDAL_GCP class) contains the following:"
 msgstr ""
-"データセットは, ピクセル/行座標に関連する制御点のセットを持つことができます. "
-"すべてのGCPsは, "
-"ジオリファレンスする座標系 ( "
-":cpp:func:`GDALDataset::GetGCPProjection` から返される)を共有します. "
-"各GCP (GDAL_GCPクラスとして表されます) は次のようになります:"
+"データセットは, ピクセル/行座標に関連する制御点のセットを持つことができます. すべてのGCPsは, ジオリファレンスする座標系 ( "
+":cpp:func:`GDALDataset::GetGCPProjection` から返される)を共有します. 各GCP "
+"(GDAL_GCPクラスとして表されます) は次のようになります:"
 
 #: ../../source/user/raster_data_model.rst:73
 msgid ""
@@ -221,18 +204,16 @@ msgid ""
 " text associated with the GCP. Potentially this can also contain machine "
 "parsable information on GCP status though that isn't done at this time."
 msgstr ""
-"pszId文字列は, このデータセット上のGCPsのセット内のGCPの一意の (しばしば, しかし常に) "
-"数値の識別子です. pszInfoは通常空文字列ですが, GCPに関連するユーザ定義のテキストを含めることができます. "
-"現在は通常利用されていませんが, GCPの状態に関する機械可読情報を含めることもできます."
+"pszId文字列は, このデータセット上のGCPsのセット内のGCPの一意の (しばしば, しかし常に) 数値の識別子です. "
+"pszInfoは通常空文字列ですが, GCPに関連するユーザ定義のテキストを含めることができます. 現在は通常利用されていませんが, "
+"GCPの状態に関する機械可読情報を含めることもできます."
 
 #: ../../source/user/raster_data_model.rst:75
 msgid ""
 "The (Pixel,Line) position is the GCP location on the raster. The (X,Y,Z) "
 "position is the associated georeferenced location with the Z often being "
 "zero."
-msgstr ""
-"(ピクセル,行) 位置はラスタ上のGCP位置です. (X,Y,Z) 位置は, Z がよくゼロである"
-"ジオリファレンスされた位置です."
+msgstr "(ピクセル,行) 位置はラスタ上のGCP位置です. (X,Y,Z) 位置は, Z がよくゼロであるジオリファレンスされた位置です."
 
 #: ../../source/user/raster_data_model.rst:77
 msgid ""
@@ -240,9 +221,8 @@ msgid ""
 "be generated from the GCPs ... this is left to the application. However "
 "1st to 5th order polynomials are common."
 msgstr ""
-"GDAL データモデルは, GCPs から生成される変換メカニズムを実装しません ... "
-"これはアプリケーションに任されています. ただし,1 次から 5 次の多項式は"
-"一般的に利用されます."
+"GDAL データモデルは, GCPs から生成される変換メカニズムを実装しません ... これはアプリケーションに任されています. ただし,1 "
+"次から 5 次の多項式は一般的に利用されます."
 
 #: ../../source/user/raster_data_model.rst:79
 msgid ""
@@ -250,8 +230,8 @@ msgid ""
 "neither. It is uncommon to have both, and it is undefined which is "
 "authoritative."
 msgstr ""
-"通常, データセットはアフィン地理変換, GCPs のいずれかを含みます. 両方を含むことは"
-"一般的ではありません. どちらが優先されるかは未定義です."
+"通常, データセットはアフィン地理変換, GCPs のいずれかを含みます. 両方を含むことは一般的ではありません. "
+"どちらが優先されるかは未定義です."
 
 #: ../../source/user/raster_data_model.rst:82
 msgid "Metadata"
@@ -264,10 +244,8 @@ msgid ""
 "behaved tokens (no spaces, or odd characters). The values can be of any "
 "length, and contain anything except an embedded null (ASCII zero)."
 msgstr ""
-"GDALメタデータは,名前/値のペアのリストとして保持される補助的なフォーマット"
-"およびアプリケーション固有のテキストデータです.名前は適切な形式のトークン"
-"(スペースや特殊文字を含まない)である必要があります.値は任意の長さで,埋め込み"
-"ヌル(ASCII ゼロ)以外の任意の内容を含むことができます."
+"GDALメタデータは,名前/値のペアのリストとして保持される補助的なフォーマットおよびアプリケーション固有のテキストデータです.名前は適切な形式のトークン(スペースや特殊文字を含まない)である必要があります.値は任意の長さで,埋め込みヌル(ASCII"
+" ゼロ)以外の任意の内容を含むことができます."
 
 #: ../../source/user/raster_data_model.rst:86
 msgid ""
@@ -275,9 +253,8 @@ msgid ""
 "bodies of metadata. Handling of more than 100K of metadata for a dataset "
 "is likely to lead to performance degradation."
 msgstr ""
-"メタデータ取り扱いシステムはとても巨大な本体を持つメタデータを扱うために適切には"
-"調整されていません. データセットに対して100Kを超えるメタデータを扱うと,パフォーマ"
-"ンスの低下を引き起こす可能性があります."
+"メタデータ取り扱いシステムはとても巨大な本体を持つメタデータを扱うために適切には調整されていません. "
+"データセットに対して100Kを超えるメタデータを扱うと,パフォーマンスの低下を引き起こす可能性があります."
 
 #: ../../source/user/raster_data_model.rst:88
 msgid ""
@@ -285,11 +262,7 @@ msgid ""
 "format drivers will map specific format fields to metadata names. For "
 "instance the TIFF driver returns a few information tags as metadata "
 "including the date/time field which is returned as:"
-msgstr ""
-"一部のフォーマットは汎用的な(ユーザー定義の)メタデータをサポートしますが,他の"
-"フォーマットドライバは特定のフォーマットフィールドをメタデータ名にマッピングし"
-"ます.例えば、TIFFドライバは日付/時刻フィールドを含むいくつかの情報タグをメタ"
-"データとして返します。日付/時刻フィールドは次のように返されます:"
+msgstr "一部のフォーマットは汎用的な(ユーザー定義の)メタデータをサポートしますが,他のフォーマットドライバは特定のフォーマットフィールドをメタデータ名にマッピングします.例えば、TIFFドライバは日付/時刻フィールドを含むいくつかの情報タグをメタデータとして返します。日付/時刻フィールドは次のように返されます:"
 
 #: ../../source/user/raster_data_model.rst:94
 msgid ""
@@ -299,19 +272,15 @@ msgid ""
 "the domains available for a given object, but applications can \"test\" "
 "for any domains they know how to interpret."
 msgstr ""
-"メタデータはドメインと呼ばれる名前付きグループに分割されます,デフォルトドメイン"
-"には名前がありません(NULLまたは\"\"). 特別な目的のために存在する特定のドメイン"
-"もあります.現在,特定のオブジェクトに対して利用可能なすべてのドメインを列挙する"
-"方法はありませんが,アプリケーションは解釈方法を知っているドメインに対して \"テスト\" "
-"を行うことができます."
+"メタデータはドメインと呼ばれる名前付きグループに分割されます,デフォルトドメインには名前がありません(NULLまたは\"\"). "
+"特別な目的のために存在する特定のドメインもあります.現在,特定のオブジェクトに対して利用可能なすべてのドメインを列挙する方法はありませんが,アプリケーションは解釈方法を知っているドメインに対して"
+" \"テスト\" を行うことができます."
 
 #: ../../source/user/raster_data_model.rst:96
 msgid ""
 "The following metadata items have well defined semantics in the default "
 "domain:"
-msgstr ""
-"以下のメタデータ項目は、デフォルトドメインにおいて明確に定義された意味を"
-"持ちます："
+msgstr "以下のメタデータ項目は、デフォルトドメインにおいて明確に定義された意味を持ちます："
 
 #: ../../source/user/raster_data_model.rst:98
 msgid ""
@@ -321,10 +290,8 @@ msgid ""
 "pixel. This is not intended to influence interpretation of georeferencing"
 " which remains area oriented."
 msgstr ""
-"AREA_OR_POINT: \"Area\"(デフォルト)または\"Point\"のいずれかでしょう."
-"ピクセル値がピクセル領域全体のサンプリングを表すのか,ピクセルの中心点での"
-"サンプリングを表すのかを示します.これは地理参照の解釈に影響を与えることを"
-"意図したものではなく,地理参照は領域指向のままです."
+"AREA_OR_POINT: "
+"\"Area\"(デフォルト)または\"Point\"のいずれかでしょう.ピクセル値がピクセル領域全体のサンプリングを表すのか,ピクセルの中心点でのサンプリングを表すのかを示します.これは地理参照の解釈に影響を与えることを意図したものではなく,地理参照は領域指向のままです."
 
 #: ../../source/user/raster_data_model.rst:99
 msgid ""
@@ -336,13 +303,11 @@ msgid ""
 "is not widely honoured by GDAL drivers, algorithms or utilities at this "
 "time."
 msgstr ""
-"NODATA_VALUES: この値はデータセット内のバンド数に一致するスペースで区切ら"
-"れたピクセル値のリストです.これらの値は,データセット内でデータなし(nodata)"
-"のピクセルを識別するために集合的に使用されます.このスタイルのnodataでは,"
-"すべてのバンドが NODATA_VALUES タプル内の対応する値と一致する場合にのみ,"
-"そのピクセルはすべてのバンドでデータなしと見なされます.現時点では,このメタ"
-"データは GDAL ドライバ,アルゴリズム,ユーティリティによって広くサポートされて"
-"いるわけではありません."
+"NODATA_VALUES: "
+"この値はデータセット内のバンド数に一致するスペースで区切られたピクセル値のリストです.これらの値は,データセット内でデータなし(nodata)のピクセルを識別するために集合的に使用されます.このスタイルのnodataでは,すべてのバンドが"
+" NODATA_VALUES "
+"タプル内の対応する値と一致する場合にのみ,そのピクセルはすべてのバンドでデータなしと見なされます.現時点では,このメタデータは GDAL "
+"ドライバ,アルゴリズム,ユーティリティによって広くサポートされているわけではありません."
 
 #: ../../source/user/raster_data_model.rst:100
 msgid ""
@@ -350,8 +315,8 @@ msgid ""
 "contains the matrix representation that this data is provided in. The "
 "following are acceptable values:"
 msgstr ""
-"MATRIX_REPRESENTATION: この値は,偏波SARデータセットに使用され,このデータが"
-"提供される行列表現を含みます.以下が受け入れ可能な値です："
+"MATRIX_REPRESENTATION: "
+"この値は,偏波SARデータセットに使用され,このデータが提供される行列表現を含みます.以下が受け入れ可能な値です："
 
 #: ../../source/user/raster_data_model.rst:102
 msgid "SCATTERING"
@@ -397,21 +362,16 @@ msgid ""
 "matrix itself is a hermitian matrix, that is all the data that is "
 "required to describe the matrix)."
 msgstr ""
-"POLARIMETRIC_INTERP: このメタデータ項目は,偏波SARデータのラスターバンドに対して"
-"定義されています.これは,指定された行列表現のどのエントリをこのバンドが表しているか"
-"を示します.例えば,散乱行列として提供されるデータセットの場合,このメタデータ項目の"
-"受け入れ可能な値はHH,HV,VH,VVです.データセットが共分散行列の場合,例えば,このメタ"
-"データ項目はCovariance_11,Covariance_22,Covariance_33,Covariance_12,Covariance_13,"
-"Covariance_23のいずれかになります(行列自体がエルミート行列であるため,これらが行列を記述"
-"するために必要なすべてのデータです)."
+"POLARIMETRIC_INTERP: "
+"このメタデータ項目は,偏波SARデータのラスターバンドに対して定義されています.これは,指定された行列表現のどのエントリをこのバンドが表しているかを示します.例えば,散乱行列として提供されるデータセットの場合,このメタデータ項目の受け入れ可能な値はHH,HV,VH,VVです.データセットが共分散行列の場合,例えば,このメタデータ項目はCovariance_11,Covariance_22,Covariance_33,Covariance_12,Covariance_13,Covariance_23のいずれかになります(行列自体がエルミート行列であるため,これらが行列を記述するために必要なすべてのデータです)."
 
 #: ../../source/user/raster_data_model.rst:111
 msgid ""
 "METADATATYPE: If IMAGERY Domain present, the item consist the reader "
 "which processed the metadata. Now present such readers:"
 msgstr ""
-"METADATATYPE: IMAGERYドメインが存在する場合,この項目はメタデータを処理した"
-"リーダーを示します.現在,以下のようなリーダーが存在します："
+"METADATATYPE: "
+"IMAGERYドメインが存在する場合,この項目はメタデータを処理したリーダーを示します.現在,以下のようなリーダーが存在します："
 
 #: ../../source/user/raster_data_model.rst:113
 msgid "DG: DigitalGlobe imagery metadata"
@@ -443,9 +403,8 @@ msgid ""
 "WMS driver. This is useful when dataset deletes with cached data or when "
 "external program need to put tiles in cache for some area of interest."
 msgstr ""
-"CACHE_PATH: キャッシュディレクトリーのパス. 現在このメタデータはWMSドライバーでのみ"
-"設定されます. これはデータセットとキャッシュを同時に削除する場合や外部プログラムで"
-"インターネットのどこかの場所にタイルを格納するような場合に便利です."
+"CACHE_PATH: キャッシュディレクトリーのパス. 現在このメタデータはWMSドライバーでのみ設定されます. "
+"これはデータセットとキャッシュを同時に削除する場合や外部プログラムでインターネットのどこかの場所にタイルを格納するような場合に便利です."
 
 #: ../../source/user/raster_data_model.rst:122
 msgid "SUBDATASETS Domain"
@@ -457,16 +416,14 @@ msgid ""
 "used to provide pointers to a list of images stored within a single multi"
 " image file."
 msgstr ""
-"SUBDATASETS ドメインは子データセットのリストを保有します. 通常これは"
-"単一のマルチイメージファイル内に格納されているイメージのリストへのポインターを提供するために使用されます."
+"SUBDATASETS ドメインは子データセットのリストを保有します. "
+"通常これは単一のマルチイメージファイル内に格納されているイメージのリストへのポインターを提供するために使用されます."
 
 #: ../../source/user/raster_data_model.rst:126
 msgid ""
 "For example, an NITF with two images might have the following subdataset "
 "list."
-msgstr ""
-"たとえば2個の画像を持つNITFは以下のようなサブデータセットを"
-"持つでしょう."
+msgstr "たとえば2個の画像を持つNITFは以下のようなサブデータセットを持つでしょう."
 
 #: ../../source/user/raster_data_model.rst:135
 msgid ""
@@ -475,9 +432,8 @@ msgid ""
 "be a more user friendly string that can be displayed to the user in a "
 "selector."
 msgstr ""
-" _NAME の値は :cpp:func:`GDALOpen` で開くことができるファイルの文字列です."
-"  _DESC の値はセレクタに表示される ユーザーに"
-"とってわかりやすい文字列です."
+" _NAME の値は :cpp:func:`GDALOpen` で開くことができるファイルの文字列です.  _DESC の値はセレクタに表示される"
+" ユーザーにとってわかりやすい文字列です."
 
 #: ../../source/user/raster_data_model.rst:137
 msgid ""
@@ -485,9 +441,8 @@ msgid ""
 "capability. This information is reported when the --format and --formats "
 "options are passed to the command line utilities."
 msgstr ""
-"サブデータセットをサポートするドライバは, ``DMD_SUBDATASETS`` 機能を公開します."
-"この情報は,コマンドラインユーティリティに --formatおよび --formatsオプションが"
-"渡された際に報告されます."
+"サブデータセットをサポートするドライバは, ``DMD_SUBDATASETS`` 機能を公開します.この情報は,コマンドラインユーティリティに "
+"--formatおよび --formatsオプションが渡された際に報告されます."
 
 #: ../../source/user/raster_data_model.rst:139
 msgid ""
@@ -495,9 +450,9 @@ msgid ""
 "GEORASTER, GTiff, HDF4, HDF5, netCDF, NITF, NTv2, OGDI, PDF, "
 "PostGISRaster, Rasterlite, RPFTOC, RS2, TileDB, WCS, WMS, and Zarr."
 msgstr ""
-"現在以下のドライバーがサブデータセットをサポートしています: ADRG, ECRGTOC, "
-"GEORASTER, GTiff, HDF4, HDF5, netCDF, NITF, NTv2, OGDI, PDF, "
-"PostGISRaster, Rasterlite, RPFTOC, RS2, TileDB, WCS, WMS, と Zarr."
+"現在以下のドライバーがサブデータセットをサポートしています: ADRG, ECRGTOC, GEORASTER, GTiff, HDF4, "
+"HDF5, netCDF, NITF, NTv2, OGDI, PDF, PostGISRaster, Rasterlite, RPFTOC, "
+"RS2, TileDB, WCS, WMS, と Zarr."
 
 #: ../../source/user/raster_data_model.rst:142
 msgid "IMAGE_STRUCTURE Domain"
@@ -512,22 +467,15 @@ msgid ""
 "file format and storage mechanism. In order to prevent this getting "
 "copied along with datasets it is placed in a special domain called "
 "IMAGE_STRUCTURE that should not normally be copied to new formats."
-msgstr ""
-"デフォルトドメインのメタデータは,画像に関連するものであり,画像がディスク上に"
-"どのように保存されているかという方法には特に関連しません.つまり,データセットが"
-"新しいフォーマットにコピーされる際に,一緒にコピーするのに適しています.一方,特定"
-"のファイルフォーマットや保存メカニズムに密接に関連する重要な情報もあります."
-"これらの情報がデータセットと一緒にコピーされるのを防ぐため,IMAGE_STRUCTUREと"
-"呼ばれる特別なドメインに配置されます.このドメインは通常,新しいフォーマットに"
-"コピーされるべきではありません."
+msgstr "デフォルトドメインのメタデータは,画像に関連するものであり,画像がディスク上にどのように保存されているかという方法には特に関連しません.つまり,データセットが新しいフォーマットにコピーされる際に,一緒にコピーするのに適しています.一方,特定のファイルフォーマットや保存メカニズムに密接に関連する重要な情報もあります.これらの情報がデータセットと一緒にコピーされるのを防ぐため,IMAGE_STRUCTUREと呼ばれる特別なドメインに配置されます.このドメインは通常,新しいフォーマットにコピーされるべきではありません."
 
 #: ../../source/user/raster_data_model.rst:146
 msgid ""
 "Currently the following items are defined by :ref:`rfc-14` as having "
 "specific semantics in the IMAGE_STRUCTURE domain."
 msgstr ""
-"現在以下のアイテムは "
-"IMAGE_STRUCTURE ドメインで固有のセマンティックを持つものとして :ref:`rfc-14` で定義されています."
+"現在以下のアイテムは IMAGE_STRUCTURE ドメインで固有のセマンティックを持つものとして :ref:`rfc-14` "
+"で定義されています."
 
 #: ../../source/user/raster_data_model.rst:148
 msgid ""
@@ -536,11 +484,8 @@ msgid ""
 "includes a COMPRESSION creation option, the same list of values should be"
 " used here as there."
 msgstr ""
-"COMPRESSION: データセットまたはバンドの圧縮タイプ. 圧縮タイプ名の"
-" 確定したカタログはありません. ただし,"
-"特定のフォーマットがCOMPRESSION作成オプションを含む場合,そこで使用される"
-"値のリストと同じものがここでも使用されるべきです."
-
+"COMPRESSION: データセットまたはバンドの圧縮タイプ. 圧縮タイプ名の 確定したカタログはありません. "
+"ただし,特定のフォーマットがCOMPRESSION作成オプションを含む場合,そこで使用される値のリストと同じものがここでも使用されるべきです."
 
 #: ../../source/user/raster_data_model.rst:149
 msgid ""
@@ -549,17 +494,16 @@ msgid ""
 "for the datatype, such as when a 1 bit TIFF is represented through GDAL "
 "as GDT_Byte."
 msgstr ""
-"NBITS: このバンド,またはこのデータセットのバンドに使用される実際のビット数です."
-"通常,ビット数がデータ型の標準と異なる場合にのみ存在します.例えば,1ビットのTIFF"
-"ファイルがGDALを通じてGDT_Byteとして表されている場合などです."
+"NBITS: "
+"このバンド,またはこのデータセットのバンドに使用される実際のビット数です.通常,ビット数がデータ型の標準と異なる場合にのみ存在します.例えば,1ビットのTIFFファイルがGDALを通じてGDT_Byteとして表されている場合などです."
 
 #: ../../source/user/raster_data_model.rst:150
 msgid ""
 "INTERLEAVE: This only applies on datasets, and the value should be one of"
 " PIXEL, LINE or BAND. It can be used as a data access hint."
 msgstr ""
-"INTERLEAVE: これはデータセットにのみ適用され,その値はPIXEL,LINE,またはBANDの"
-"いずれかである必要があります.これはデータアクセスのヒントとして使用されることがあります."
+"INTERLEAVE: "
+"これはデータセットにのみ適用され,その値はPIXEL,LINE,またはBANDのいずれかである必要があります.これはデータアクセスのヒントとして使用されることがあります."
 
 #: ../../source/user/raster_data_model.rst:151
 msgid ""
@@ -570,11 +514,9 @@ msgid ""
 " with GDAL 3.7, this metadata item is no longer used, as the Int8 data "
 "type is used for signed bytes."
 msgstr ""
-"PIXELTYPE: これはGDT_Byteバンド(または対応するデータセット)に現れることがあり,"
-"値がSIGNEDBYTEである場合,128から255までの符号なしバイト値を,SIGNEDBYTEタイプ"
-"を認識するアプリケーションにおいては-128から-1として解釈すべきことを示します."
-"GDAL 3.7以降,このメタデータ項目は使用されなくなり,符号付きバイトにはInt8データ"
-"タイプが使用されるようになりました。
+"PIXELTYPE: "
+"これはGDT_Byteバンド(または対応するデータセット)に現れることがあり,値がSIGNEDBYTEである場合,128から255までの符号なしバイト値を,SIGNEDBYTEタイプを認識するアプリケーションにおいては-128から-1として解釈すべきことを示します.GDAL"
+" 3.7以降,このメタデータ項目は使用されなくなり,符号付きバイトにはInt8データタイプが使用されるようになりました"
 
 #: ../../source/user/raster_data_model.rst:158
 msgid "RPC Domain"
@@ -588,24 +530,23 @@ msgid ""
 " The items defining the model are:"
 msgstr ""
 "RPCメタデータドメインには,画像の有理多項式係数ジオメトリ モデル (存在する場合) "
-"を説明するメタデータが保持されます.このジオメトリモデルは,ピクセル/ラインと地理"
-"参照された場所の間の変換に使用できます.モデルを定義する項目は次のとおりです:
+"を説明するメタデータが保持されます.このジオメトリモデルは,ピクセル/ラインと地理参照された場所の間の変換に使用できます.モデルを定義する項目は次のとおりです"
 
 #: ../../source/user/raster_data_model.rst:162
 msgid ""
 "ERR_BIAS: Error - Bias. The RMS bias error in meters per horizontal axis "
 "of all points in the image (-1.0 if unknown)"
 msgstr ""
-"ERR_BIAS:  エラー - バイアス,画像内のすべての点に対する水平方向の軸ごとのRMS"
-"(二乗平均平方根)バイアス誤差をメートル単位で示します(不明な場合は-1.0と表示されます)"
+"ERR_BIAS:  エラー - "
+"バイアス,画像内のすべての点に対する水平方向の軸ごとのRMS(二乗平均平方根)バイアス誤差をメートル単位で示します(不明な場合は-1.0と表示されます)"
 
 #: ../../source/user/raster_data_model.rst:163
 msgid ""
 "ERR_RAND: Error - Random. RMS random error in meters per horizontal axis "
 "of each point in the image (-1.0 if unknown)"
 msgstr ""
-"ERR_RAND:エラー - ランダム.画像内の各点に対する水平方向の軸ごとのRMS(二乗平均平方根)"
-"ランダム誤差をメートル単位で示します（不明な場合は-1.0と表示されます）."
+"ERR_RAND:エラー - "
+"ランダム.画像内の各点に対する水平方向の軸ごとのRMS(二乗平均平方根)ランダム誤差をメートル単位で示します（不明な場合は-1.0と表示されます）."
 
 #: ../../source/user/raster_data_model.rst:164
 msgid "LINE_OFF: Line Offset"
@@ -651,36 +592,28 @@ msgstr "HEIGHT_SCALE: 測地学的高さスケール"
 msgid ""
 "LINE_NUM_COEFF (1-20): Line Numerator Coefficients. Twenty coefficients "
 "for the polynomial in the Numerator of the rn equation. (space separated)"
-msgstr ""
-"LINE_NUM_COEFF (1-20): ライン分子係数. rn 方程式の分子の多項式のための20個の係数"
-"（スペースで区切られています）."
+msgstr "LINE_NUM_COEFF (1-20): ライン分子係数. rn 方程式の分子の多項式のための20個の係数（スペースで区切られています）."
 
 #: ../../source/user/raster_data_model.rst:175
 msgid ""
 "LINE_DEN_COEFF (1-20): Line Denominator Coefficients. Twenty coefficients"
 " for the polynomial in the Denominator of the rn equation. (space "
 "separated)"
-msgstr ""
-"LINE_DEN_COEFF (1-20): ライン分母係数. rn 方程式の分母の多項式のための20個の係数."
-" (スペースで区切られています) "
+msgstr "LINE_DEN_COEFF (1-20): ライン分母係数. rn 方程式の分母の多項式のための20個の係数. (スペースで区切られています) "
 
 #: ../../source/user/raster_data_model.rst:176
 msgid ""
 "SAMP_NUM_COEFF (1-20): Sample Numerator Coefficients. Twenty coefficients"
 " for the polynomial in the Numerator of the cn equation. (space "
 "separated)"
-msgstr ""
-"SAMP_NUM_COEFF (1-20): サンプル分子係数. cn 方程式の分子の多項式のための20個の係数."
-" (スペースで区切られています)"
+msgstr "SAMP_NUM_COEFF (1-20): サンプル分子係数. cn 方程式の分子の多項式のための20個の係数. (スペースで区切られています)"
 
 #: ../../source/user/raster_data_model.rst:177
 msgid ""
 "SAMP_DEN_COEFF (1-20): Sample Denominator Coefficients. Twenty "
 "coefficients for the polynomial in the Denominator of the cn equation. "
 "(space separated)"
-msgstr ""
-"SAMP_DEN_COEFF (1-20): サンプル分母係数. cn 方程式の分母の多項式のための20個の係数."
-" (スペースで区切られています)"
+msgstr "SAMP_DEN_COEFF (1-20): サンプル分母係数. cn 方程式の分母の多項式のための20個の係数. (スペースで区切られています)"
 
 #: ../../source/user/raster_data_model.rst:179
 msgid ""
@@ -691,14 +624,11 @@ msgstr ""
 "これらのフィールドは,GeoTIFF RPC ドキュメント(http://geotiff.maptools.org/rpc_prop.html) "
 "から直接派生しており,そのドキュメントはNITF RPC00B 定義を厳密にモデル化したものです."
 
-
 #: ../../source/user/raster_data_model.rst:181
 msgid ""
 "The line and pixel offset expressed with LINE_OFF and SAMP_OFF are with "
 "respect to the center of the pixel."
-msgstr ""
-"LINE_OFF と SAMP_OFF で表されるラインとピクセルオフセットは,ピクセルの中心を基準としています."
-
+msgstr "LINE_OFF と SAMP_OFF で表されるラインとピクセルオフセットは,ピクセルの中心を基準としています."
 
 #: ../../source/user/raster_data_model.rst:184
 msgid "IMAGERY Domain (remote sensing)"
@@ -711,12 +641,7 @@ msgid ""
 "The files at the same directory with image file tested by the set of "
 "metadata readers, if files can be processed by the metadata reader, it "
 "fill the IMAGERY Domain with the following items:"
-msgstr ""
-"衛星画像や航空画像の場合,IMAGERYドメインが存在することがあります.これは,画像"
-"ファイルの近くに特別なメタデータファイルが存在するかどうかに依存します.メタ"
-"データリーダーのセットが同じディレクトリ内の画像ファイルと一緒に存在するファイル"
-"をテストし,ファイルがメタデータリーダーによって処理できる場合,IMAGERYドメイン"
-"に次の項目が入力されます:"
+msgstr "衛星画像や航空画像の場合,IMAGERYドメインが存在することがあります.これは,画像ファイルの近くに特別なメタデータファイルが存在するかどうかに依存します.メタデータリーダーのセットが同じディレクトリ内の画像ファイルと一緒に存在するファイルをテストし,ファイルがメタデータリーダーによって処理できる場合,IMAGERYドメインに次の項目が入力されます:"
 
 #: ../../source/user/raster_data_model.rst:188
 msgid "SATELLITEID: A satellite or scanner name"
@@ -726,31 +651,60 @@ msgstr "SATELLITEID: 衛星またはスキャナの名前"
 msgid ""
 "CLOUDCOVER: Cloud coverage. The value between 0 - 100 or 999 if not "
 "available"
-msgstr ""
-"CLOUDCOVER: 雲の覆い具合. 値は 0 - 100 の範囲でデータが利用できない場合は "
-"999"
+msgstr "CLOUDCOVER: 雲の覆い具合. 値は 0 - 100 の範囲でデータが利用できない場合は 999"
 
 #: ../../source/user/raster_data_model.rst:190
 msgid "ACQUISITIONDATETIME: The image acquisition date time in UTC"
 msgstr "ACQUISITIONDATETIME: 画像の取得日時 (UTC)"
 
-#: ../../source/user/raster_data_model.rst:193
+#: ../../source/user/raster_data_model.rst:192
+msgid ""
+"Starting with GDAL 3.10, there also exists a raster band level IMAGERY "
+"metadata domain with the following items:"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:194
+msgid "CENTRAL_WAVELENGTH_UM: Central Wavelength in micrometers."
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:195
+msgid "FWHM_UM: Full-width half-maximum (FWHM) in micrometers."
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:197
+msgid ""
+"Clients can get (resp. set) these metadata items with "
+":cpp:func:`GDALRasterBand::GetMetadataItem()` (resp. "
+":cpp:func:`GDALRasterBand::SetMetadataItem()`).`"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:200
+msgid ""
+"They are specifically set by the :ref:`raster.sentinel2` and "
+":ref:`raster.envi` drivers (if corresponding metadata items are found in "
+"the ENVI header), but may also be found in other drivers handling "
+"arbitrary GDAL metadata, such as the one using the GDAL Persistent "
+"Auxiliary Mechanism (PAM / .aux.xml side car files) or :ref:`raster.vrt` "
+"drivers. The :ref:`raster.gtiff` driver also supports serializing and "
+"deserializing the band IMAGERY metadata domain in the ``GDAL_METADATA`` "
+"TIFF tag."
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:208
 msgid "xml: Domains"
 msgstr "xml: ドメイン"
 
-#: ../../source/user/raster_data_model.rst:195
+#: ../../source/user/raster_data_model.rst:210
 msgid ""
 "Any domain name prefixed with \"xml:\" is not normal name/value metadata."
 " It is a single XML document stored in one big string."
-msgstr ""
-"\"xml:\"で始まるドメイン名は通常の名前/値形式のメタデータではありません."
-"それは,1つの大きな文字列に格納されたXMLドキュメント全体を指します."
+msgstr "\"xml:\"で始まるドメイン名は通常の名前/値形式のメタデータではありません.それは,1つの大きな文字列に格納されたXMLドキュメント全体を指します."
 
-#: ../../source/user/raster_data_model.rst:198
+#: ../../source/user/raster_data_model.rst:213
 msgid "Raster Band"
 msgstr "ラスターバンド"
 
-#: ../../source/user/raster_data_model.rst:200
+#: ../../source/user/raster_data_model.rst:215
 msgid ""
 "A raster band is represented in GDAL with the :cpp:class:`GDALRasterBand`"
 " class. It represents a single raster band/channel/layer. It does not "
@@ -758,34 +712,30 @@ msgid ""
 "would normally be represented as a dataset with three bands, one for red,"
 " one for green and one for blue."
 msgstr ""
-"ラスターバンドはGDALでは :cpp:class:`GDALRasterBand` クラスで表現されます."
-"これは,単一のラスターバンド/チャンネル/レイヤーを表します.これは必ずしも"
-"全画像を表すわけではありません.たとえば,24ビットのRGB画像は通常,赤,緑,青"
-"の3つのバンドを持つデータセットとして表されます."
+"ラスターバンドはGDALでは :cpp:class:`GDALRasterBand` "
+"クラスで表現されます.これは,単一のラスターバンド/チャンネル/レイヤーを表します.これは必ずしも全画像を表すわけではありません.たとえば,24ビットのRGB画像は通常,赤,緑,青の3つのバンドを持つデータセットとして表されます."
 
-#: ../../source/user/raster_data_model.rst:202
+#: ../../source/user/raster_data_model.rst:217
 msgid "A raster band has the following properties:"
 msgstr "ラスターバンドには以下のプロパティがあります:"
 
-#: ../../source/user/raster_data_model.rst:204
+#: ../../source/user/raster_data_model.rst:219
 msgid ""
 "A width and height in pixels and lines. This is the same as that defined "
 "for the dataset, if this is a full resolution band."
-msgstr ""
-"ピクセルとラインの幅と高さ. これは,これがフル解像度バンドの場合にデータセット"
-"で定義されたものと同じです."
+msgstr "ピクセルとラインの幅と高さ. これは,これがフル解像度バンドの場合にデータセットで定義されたものと同じです."
 
-#: ../../source/user/raster_data_model.rst:205
+#: ../../source/user/raster_data_model.rst:220
 msgid ""
 "A datatype (GDALDataType). One of Byte, Int8, UInt16, Int16, UInt32, "
 "Int32, UInt64, Int64, Float32, Float64, and the complex types CInt16, "
 "CInt32, CFloat32, and CFloat64."
 msgstr ""
 "データ型 (GDALDataType). Byte, Int8, UInt16, Int16, UInt32, Int32, UInt64, "
-"Int64, Float32, Float64, および複素数型 CInt16, CInt32, CFloat32, CFloat64 の"
-"いずれかです."
+"Int64, Float32, Float64, および複素数型 CInt16, CInt32, CFloat32, CFloat64 "
+"のいずれかです."
 
-#: ../../source/user/raster_data_model.rst:207
+#: ../../source/user/raster_data_model.rst:222
 msgid ""
 "UInt64 and Int64 data types have been added in GDAL 3.5. Beyond reading "
 "and write pixel values, their support is limited.  Some algorithms might "
@@ -795,242 +745,353 @@ msgid ""
 "where exact values are preserved can be [0, 2^53] (or less if 32-bit "
 "floating-point is used)."
 msgstr ""
-"UInt64 および Int64 データ型は GDAL 3.5 で追加されました. ピクセル値の読み取り"
-"と書き込みを超えて,そのサポートは限られています. 一部のアルゴリズムは内部で"
-"64ビット浮動小数点数を使用する場合があります(ワーピング),また,一部のメソッドは"
-"倍精度値のみを返す場合があります(GetMinimum(), GetMaximum() など),または32ビット"
-"浮動小数点数(概要, RasterIO リサンプリング)を使用する場合があります.したがって,"
-"正確な値が保持される範囲は [0, 2^53] (32ビット浮動小数点数を使用する場合はそれ以下)"
-"になります."
+"UInt64 および Int64 データ型は GDAL 3.5 で追加されました. "
+"ピクセル値の読み取りと書き込みを超えて,そのサポートは限られています. "
+"一部のアルゴリズムは内部で64ビット浮動小数点数を使用する場合があります(ワーピング),また,一部のメソッドは倍精度値のみを返す場合があります(GetMinimum(),"
+" GetMaximum() など),または32ビット浮動小数点数(概要, RasterIO "
+"リサンプリング)を使用する場合があります.したがって,正確な値が保持される範囲は [0, 2^53] "
+"(32ビット浮動小数点数を使用する場合はそれ以下)になります."
 
-#: ../../source/user/raster_data_model.rst:209
+#: ../../source/user/raster_data_model.rst:224
 msgid "Int8 data type has been added in GDAL 3.7."
 msgstr "Int8 データ型は GDAL 3.7 で追加されました."
 
-#: ../../source/user/raster_data_model.rst:211
+#: ../../source/user/raster_data_model.rst:226
 msgid ""
 "A block size. This is a preferred (efficient) access chunk size. For "
 "tiled images this will be one tile. For scanline oriented images this "
 "will normally be one scanline."
 msgstr ""
-"ブロックサイズ. これは,好ましい(効率的な)アクセスチャンクサイズです. タイル画像の"
-"場合,これは1つのタイルになります. スキャンライン指向の画像の場合,通常は1つの"
-"スキャンラインになります."
+"ブロックサイズ. これは,好ましい(効率的な)アクセスチャンクサイズです. タイル画像の場合,これは1つのタイルになります. "
+"スキャンライン指向の画像の場合,通常は1つのスキャンラインになります."
 
-#: ../../source/user/raster_data_model.rst:212
+#: ../../source/user/raster_data_model.rst:227
 msgid ""
 "A list of name/value pair metadata in the same format as the dataset, but"
 " of information that is potentially specific to this band."
-msgstr ""
-"データセットと同じ形式の名前/値ペアメタデータのリストですが,このバンドに特有"
-"の情報です."
+msgstr "データセットと同じ形式の名前/値ペアメタデータのリストですが,このバンドに特有の情報です."
 
-#: ../../source/user/raster_data_model.rst:213
+#: ../../source/user/raster_data_model.rst:228
 msgid "An optional description string."
 msgstr "オプションの説明文字列."
 
-#: ../../source/user/raster_data_model.rst:214
+#: ../../source/user/raster_data_model.rst:229
 msgid ""
 "An optional single nodata pixel value (see also NODATA_VALUES metadata on"
 " the dataset for multi-band style nodata values)."
-msgstr ""
-"オプションの単一のノーデータピクセル値 (データセットの NODATA_VALUES メタデータ"
-"についても参照してください)."
+msgstr "オプションの単一のノーデータピクセル値 (データセットの NODATA_VALUES メタデータについても参照してください)."
 
-#: ../../source/user/raster_data_model.rst:215
+#: ../../source/user/raster_data_model.rst:230
 msgid ""
 "An optional nodata mask band marking pixels as nodata or in some cases "
 "transparency as discussed in RFC 15: Band Masks and documented in "
 "GDALRasterBand::GetMaskBand()."
 msgstr ""
-"ノーデータまたは一部の場合は透過性を示すピクセルをマークするオプションのノーデータ"
-"マスクバンド. RFC 15: Band Masks で議論され, GDALRasterBand::GetMaskBand() で"
-"文書化されています."
+"ノーデータまたは一部の場合は透過性を示すピクセルをマークするオプションのノーデータマスクバンド. RFC 15: Band Masks "
+"で議論され, GDALRasterBand::GetMaskBand() で文書化されています."
 
-#: ../../source/user/raster_data_model.rst:216
+#: ../../source/user/raster_data_model.rst:231
 msgid ""
 "An optional list of category names (effectively class names in a thematic"
 " image)."
-msgstr ""
-"オプションのカテゴリ名のリスト (テーマ画像の"
-"クラス名)."
+msgstr "オプションのカテゴリ名のリスト (テーマ画像のクラス名)."
 
-
-#: ../../source/user/raster_data_model.rst:217
+#: ../../source/user/raster_data_model.rst:232
 msgid "An optional minimum and maximum value."
 msgstr "オプションの最小値と最大値."
 
-#: ../../source/user/raster_data_model.rst:218
+#: ../../source/user/raster_data_model.rst:233
 msgid "Optional statistics stored in metadata:"
 msgstr "メタデータに格納されたオプションの統計情報:"
 
-#: ../../source/user/raster_data_model.rst:220
+#: ../../source/user/raster_data_model.rst:235
 msgid "STATISTICS_MEAN: mean"
 msgstr "STATISTICS_MEAN: 平均"
 
-#: ../../source/user/raster_data_model.rst:221
+#: ../../source/user/raster_data_model.rst:236
 msgid "STATISTICS_MINIMUM: minimum"
 msgstr "STATISTICS_MINIMUM: 最小値"
 
-#: ../../source/user/raster_data_model.rst:222
+#: ../../source/user/raster_data_model.rst:237
 msgid "STATISTICS_MAXIMUM: maximum"
 msgstr "STATISTICS_MAXIMUM: 最大値"
 
-#: ../../source/user/raster_data_model.rst:223
+#: ../../source/user/raster_data_model.rst:238
 msgid "STATISTICS_STDDEV: standard deviation"
 msgstr "STATISTICS_STDDEV: 標準偏差"
 
-#: ../../source/user/raster_data_model.rst:224
+#: ../../source/user/raster_data_model.rst:239
 msgid ""
 "STATISTICS_APPROXIMATE: only present if GDAL has computed approximate "
 "statistics"
-msgstr ""
-"STATISTICS_APPROXIMATE: GDALが計算された近似統計を持つときにのみ存在"
-"します "
+msgstr "STATISTICS_APPROXIMATE: GDALが計算された近似統計を持つときにのみ存在します "
 
-
-#: ../../source/user/raster_data_model.rst:225
+#: ../../source/user/raster_data_model.rst:240
 msgid "STATISTICS_VALID_PERCENT: percentage of valid (not nodata) pixel"
 msgstr "STATISTICS_VALID_PERCENT: 有効なピクセル (nodataではない) の割合"
 
-#: ../../source/user/raster_data_model.rst:227
+#: ../../source/user/raster_data_model.rst:242
 msgid ""
 "An optional offset and scale for transforming raster values into meaning "
 "full values (e.g., translate height to meters)."
-msgstr ""
-"ラスター値を意味のある完全な値に変換するためのオプションのオフセットとスケール"
-"(例:高さをメートルに変換する)."
+msgstr "ラスター値を意味のある完全な値に変換するためのオプションのオフセットとスケール(例:高さをメートルに変換する)."
 
-#: ../../source/user/raster_data_model.rst:228
+#: ../../source/user/raster_data_model.rst:243
 msgid ""
 "An optional raster unit name. For instance, this might indicate linear "
 "units for elevation data."
-msgstr ""
-"オプションのラスター単位名.例えば標高データの線形単位を示す場合"
-"があります."
+msgstr "オプションのラスター単位名.例えば標高データの線形単位を示す場合があります."
 
-#: ../../source/user/raster_data_model.rst:229
+#: ../../source/user/raster_data_model.rst:244
 msgid "A color interpretation for the band. This is one of:"
 msgstr "バンドの色解釈. 以下のいずれかです:"
 
-#: ../../source/user/raster_data_model.rst:231
-msgid "GCI_Undefined: the default, nothing is known."
+#: ../../source/user/raster_data_model.rst:246
+#, fuzzy
+msgid "GCI_Undefined / \"Undefined\": default, nothing is known."
 msgstr "GCI_Undefined: デフォルト, すべて不明."
 
-#: ../../source/user/raster_data_model.rst:232
-msgid "GCI_GrayIndex: this is an independent gray-scale image"
+#: ../../source/user/raster_data_model.rst:247
+#, fuzzy
+msgid "GCI_GrayIndex / \"Gray\": independent gray-scale image"
 msgstr "GCI_GrayIndex: これは独立したグレースケール画像です"
 
-#: ../../source/user/raster_data_model.rst:233
-msgid "GCI_PaletteIndex: this raster acts as an index into a color table"
+#: ../../source/user/raster_data_model.rst:248
+#, fuzzy
+msgid ""
+"GCI_PaletteIndex / \"Palette\": this raster acts as an index into a color"
+" table"
 msgstr "GCI_PaletteIndex: このラスターはカラーテーブルのインデクスとして機能します"
 
-#: ../../source/user/raster_data_model.rst:234
-msgid "GCI_RedBand: this raster is the red portion of an RGB or RGBA image"
-msgstr "GCI_RedBand: このラスターはRGBまたはRGBA画像の赤の部分です"
+#: ../../source/user/raster_data_model.rst:249
+msgid ""
+"GCI_RedBand / \"Red\": red portion of an RGB or RGBA image, or red "
+"spectral band [0.62 - 0.69 um]"
+msgstr ""
 
-#: ../../source/user/raster_data_model.rst:235
-msgid "GCI_GreenBand: this raster is the green portion of an RGB or RGBA image"
+#: ../../source/user/raster_data_model.rst:250
+#, fuzzy
+msgid ""
+"GCI_GreenBand/ \"Green\": green portion of an RGB or RGBA image, or green"
+" spectral band [0.51 - 0.60 um]"
 msgstr "GCI_GreenBand: このラスターはRGBまたはRGBA画像の緑の部分です"
 
-#: ../../source/user/raster_data_model.rst:236
-msgid "GCI_BlueBand: this raster is the blue portion of an RGB or RGBA image"
-msgstr "GCI_BlueBand: このラスターはRGBまたはRGBA画像の青の部分です"
+#: ../../source/user/raster_data_model.rst:251
+msgid ""
+"GCI_BlueBand / \"Blue\": blue portion of an RGB or RGBA image, or blue "
+"spectral band [0.45 - 0.53 um]"
+msgstr ""
 
-#: ../../source/user/raster_data_model.rst:237
-msgid "GCI_AlphaBand: this raster is the alpha portion of an RGBA image"
+#: ../../source/user/raster_data_model.rst:252
+#, fuzzy
+msgid "GCI_AlphaBand / \"Alpha\": alpha portion of an RGBA image"
 msgstr "GCI_AlphaBand: このラスターはRGBA画像のアルファの部分です"
 
-#: ../../source/user/raster_data_model.rst:238
-msgid "GCI_HueBand: this raster is the hue of an HLS image"
+#: ../../source/user/raster_data_model.rst:253
+#, fuzzy
+msgid "GCI_HueBand / \"Hue\": hue of a HLS image"
 msgstr "GCI_HueBand: このラスターはHLS画像の色相です"
 
-#: ../../source/user/raster_data_model.rst:239
-msgid "GCI_SaturationBand: this raster is the saturation of an HLS image"
+#: ../../source/user/raster_data_model.rst:254
+#, fuzzy
+msgid "GCI_SaturationBand / \"Saturation\": saturation of a HLS image"
 msgstr "GCI_SaturationBand: このラスターはHLS画像の彩度です"
 
-#: ../../source/user/raster_data_model.rst:240
-msgid "GCI_LightnessBand: this raster is the lightness of an HLS image"
+#: ../../source/user/raster_data_model.rst:255
+#, fuzzy
+msgid "GCI_LightnessBand / \"Lightness\": lightness of a HLS image"
 msgstr "GCI_LightnessBand: このラスターはHLS画像の輝度です"
 
-#: ../../source/user/raster_data_model.rst:241
-msgid "GCI_CyanBand: this band is the cyan portion of a CMY or CMYK image"
+#: ../../source/user/raster_data_model.rst:256
+#, fuzzy
+msgid "GCI_CyanBand / \"Cyan\": cyan portion of a CMY or CMYK image"
 msgstr "GCI_CyanBand: このバンドはCMY または CMYK 画像のシアン部分です"
 
-#: ../../source/user/raster_data_model.rst:242
-msgid "GCI_MagentaBand: this band is the magenta portion of a CMY or CMYK image"
+#: ../../source/user/raster_data_model.rst:257
+#, fuzzy
+msgid "GCI_MagentaBand / \"Magenta\": magenta portion of a CMY or CMYK image"
 msgstr "GCI_MagentaBand: このバンドはCMY または CMYK 画像のマゼンダ部分です"
 
-#: ../../source/user/raster_data_model.rst:243
-msgid "GCI_YellowBand: this band is the yellow portion of a CMY or CMYK image"
+#: ../../source/user/raster_data_model.rst:258
+#, fuzzy
+msgid ""
+"GCI_YellowBand / \"Yellow\": yellow portion of a CMY or CMYK image, or "
+"yellow spectral band [0.58 - 0.62 um]"
 msgstr "GCI_YellowBand: このバンドはCMY または CMYK 画像のイエロー部分です"
 
-#: ../../source/user/raster_data_model.rst:244
-msgid "GCI_BlackBand: this band is the black portion of a CMYK image."
+#: ../../source/user/raster_data_model.rst:259
+#, fuzzy
+msgid "GCI_BlackBand / \"Black\": black portion of a CMYK image."
 msgstr "GCI_BlackBand: このバンドはCMYK 画像のブラック部分です."
 
-#: ../../source/user/raster_data_model.rst:246
+#: ../../source/user/raster_data_model.rst:261
+#, fuzzy
+msgid "Below values have been added in GDAL 3.10:"
+msgstr "Int8 データ型は GDAL 3.7 で追加されました."
+
+#: ../../source/user/raster_data_model.rst:263
+msgid "GCI_PanBand / \"Pan\": Panchromatic band [0.40 - 1.00 um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:264
+msgid "GCI_CoastalBand / \"Coastal\": Coastal band [0.40 - 0.45 um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:265
+msgid "GCI_RedEdgeBand / \"RedEdge\": Red-edge band [0.69 - 0.79 um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:266
+msgid "GCI_NIRBand / \"NIR\": Near-InfraRed (NIR) band [0.75 - 1.40 um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:267
+msgid ""
+"GCI_SWIRBand / \"SWIR\": Short-Wavelength InfraRed (SWIR) band [1.40 - "
+"3.00 um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:268
+msgid ""
+"GCI_MWIRBand / \"MWIR\": Mid-Wavelength InfraRed (MWIR) band [3.00 - 8.00"
+" um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:269
+msgid ""
+"GCI_LWIRBand / \"LWIR\": Long-Wavelength InfraRed (LWIR) band [8.00 - 15 "
+"um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:270
+msgid ""
+"GCI_TIRBand / \"TIR\": Thermal InfraRed (TIR) band (MWIR or LWIR) [3 - 15"
+" um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:271
+msgid "GCI_OtherIRBand / \"OtherIR\": Other infrared band [0.75 - 1000 um]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:272
+msgid ""
+"GCI_SAR_Ka_Band / \"SAR_Ka\": Synthetic Aperture Radar (SAR) Ka band [0.8"
+" - 1.1 cm / 27 - 40 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:273
+msgid ""
+"GCI_SAR_K_Band / \"SAR_K\": Synthetic Aperture Radar (SAR) K band [1.1 - "
+"1.7 cm / 18 - 27 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:274
+msgid ""
+"GCI_SAR_Ku_Band / \"SAR_Ku\": Synthetic Aperture Radar (SAR) Ku band [1.7"
+" - 2.4 cm / 12 - 18 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:275
+msgid ""
+"GCI_SAR_X_Band / \"SAR_X\": Synthetic Aperture Radar (SAR) X band [2.4 - "
+"3.8 cm / 8 - 12 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:276
+msgid ""
+"GCI_SAR_C_Band / \"SAR_C\": Synthetic Aperture Radar (SAR) C band [3.8 - "
+"7.5 cm / 4 - 8 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:277
+msgid ""
+"GCI_SAR_S_Band / \"SAR_S\": Synthetic Aperture Radar (SAR) S band [7.5 - "
+"15 cm / 2 - 4 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:278
+msgid ""
+"GCI_SAR_L_Band / \"SAR_L\": Synthetic Aperture Radar (SAR) L band [15 - "
+"30 cm / 1 - 2 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:279
+msgid ""
+"GCI_SAR_P_Band / \"SAR_P\": Synthetic Aperture Radar (SAR) P band [30 - "
+"100 cm / 0.3 - 1 GHz]"
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:281
+msgid ""
+"For spectral bands, the wavelength ranges are indicative only, and may "
+"vary depending on sensors. The ``CENTRAL_WAVELENGTH_UM`` and ``FWHM_UM`` "
+"metadata items in the band ``IMAGERY`` metadata domain of the raster "
+"band, when present, will give more accurate characteristics."
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:286
+msgid ""
+"Values belonging to the IR domain are in the [GCI_IR_Start, GCI_IR_End] "
+"range. Values belonging to the SAR domain are in the [GCI_SAR_Start, "
+"GCI_SAR_End] range."
+msgstr ""
+
+#: ../../source/user/raster_data_model.rst:289
 msgid "A color table, described in more detail later."
 msgstr "カラーテーブル, 詳細は後に記述あります."
 
-#: ../../source/user/raster_data_model.rst:247
+#: ../../source/user/raster_data_model.rst:290
 msgid "Knowledge of reduced resolution overviews (pyramids) if available."
 msgstr "解像度を下げたオーバービュー(ピラミッド)に関する情報（利用可能な場合）."
 
-#: ../../source/user/raster_data_model.rst:250
+#: ../../source/user/raster_data_model.rst:293
 msgid "Color Table"
 msgstr "カラーテーブル"
 
-#: ../../source/user/raster_data_model.rst:252
+#: ../../source/user/raster_data_model.rst:295
 msgid ""
 "A color table consists of zero or more color entries described in C by "
 "the following structure:"
-msgstr ""
-"カラーテーブルはC言語で記述された0またはそれ以上の色のエントリです.以下の構造で"
-"記述されます:" 
+msgstr "カラーテーブルはC言語で記述された0またはそれ以上の色のエントリです.以下の構造で記述されます:"
 
-#: ../../source/user/raster_data_model.rst:271
+#: ../../source/user/raster_data_model.rst:314
 msgid ""
 "The color table also has a palette interpretation value "
 "(GDALPaletteInterp) which is one of the following values, and indicates "
 "how the c1/c2/c3/c4 values of a color entry should be interpreted."
 msgstr ""
-"カラー テーブルには、パレット解釈値 (GDALPaletteInterp) もあります."
-"これは,次のいずれかの値で,カラー エントリの c1/c2/c3/c4 値をどのように"
-"解釈するかを示します."
+"カラー テーブルには、パレット解釈値 (GDALPaletteInterp) もあります.これは,次のいずれかの値で,カラー エントリの "
+"c1/c2/c3/c4 値をどのように解釈するかを示します."
 
-#: ../../source/user/raster_data_model.rst:273
+#: ../../source/user/raster_data_model.rst:316
 msgid "GPI_Gray: Use c1 as gray scale value."
 msgstr "GPI_Gray: c1をグレイスケール値として使います."
 
-#: ../../source/user/raster_data_model.rst:274
+#: ../../source/user/raster_data_model.rst:317
 msgid "GPI_RGB: Use c1 as red, c2 as green, c3 as blue and c4 as alpha."
 msgstr "GPI_RGB: c1 を赤, c2 を緑, c3を青 c4 をアルファとして使います."
 
-#: ../../source/user/raster_data_model.rst:275
+#: ../../source/user/raster_data_model.rst:318
 msgid "GPI_CMYK: Use c1 as cyan, c2 as magenta, c3 as yellow and c4 as black."
 msgstr "GPI_CMYK: c1 をシアン, c2をマゼンタ, c3 をイエロウ c4をブラックとして使います."
 
-#: ../../source/user/raster_data_model.rst:276
+#: ../../source/user/raster_data_model.rst:319
 msgid "GPI_HLS: Use c1 as hue, c2 as lightness, and c3 as saturation."
 msgstr "GPI_HLS: c1 を色相, c2 を明度, c3 を彩度として使います."
 
-#: ../../source/user/raster_data_model.rst:278
+#: ../../source/user/raster_data_model.rst:321
 msgid ""
 "To associate a color with a raster pixel, the pixel value is used as a "
 "subscript into the color table. That means that the colors are always "
 "applied starting at zero and ascending. There is no provision for "
 "indicating a pre-scaling mechanism before looking up in the color table."
-msgstr ""
-"ラスターピクセルに色を関連付けるために,ピクセル値はカラーテーブルに対する"
-"添字として使用されます.つまり,色は常にゼロから始まり昇順に適用されます."
-"カラーテーブルを参照する前に事前スケーリングメカニズムを示すための規定はありません."
+msgstr "ラスターピクセルに色を関連付けるために,ピクセル値はカラーテーブルに対する添字として使用されます.つまり,色は常にゼロから始まり昇順に適用されます.カラーテーブルを参照する前に事前スケーリングメカニズムを示すための規定はありません."
 
-#: ../../source/user/raster_data_model.rst:281
+#: ../../source/user/raster_data_model.rst:324
 msgid "Overviews"
 msgstr "オーバービュー"
 
-#: ../../source/user/raster_data_model.rst:283
+#: ../../source/user/raster_data_model.rst:326
 msgid ""
 "A band may have zero or more overviews. Each overview is represented as a"
 " \"free standing\" :cpp:class:`GDALRasterBand`. The size (in pixels and "
@@ -1038,21 +1099,18 @@ msgid ""
 "the geographic region covered by overviews is the same as the full "
 "resolution band."
 msgstr ""
-"バンドには0またはそれ以上のオーバービューが存在する場合があります.各オーバービューは"
-" \"独立した\" :cpp:class:`GDALRasterBand` として表されます. オーバービューのサイズ (ピクセル数と"
-"行数) は元となるラスターとは異なりますが,"
-"オーバービューでカバーされる地理領域は完全な解像度のバンドと同じです."
+"バンドには0またはそれ以上のオーバービューが存在する場合があります.各オーバービューは \"独立した\" "
+":cpp:class:`GDALRasterBand` として表されます. オーバービューのサイズ (ピクセル数と行数) "
+"は元となるラスターとは異なりますが,オーバービューでカバーされる地理領域は完全な解像度のバンドと同じです."
 
-#: ../../source/user/raster_data_model.rst:285
+#: ../../source/user/raster_data_model.rst:328
 msgid ""
 "The overviews are used to display reduced resolution overviews more "
 "quickly than could be done by reading all the full resolution data and "
 "downsampling."
-msgstr ""
-"オーバービューは,全解像度データをすべて読み取ってダウンサンプリングするよりも"
-"高速に縮小解像度のオーバービューを表示するために使用されます. "
+msgstr "オーバービューは,全解像度データをすべて読み取ってダウンサンプリングするよりも高速に縮小解像度のオーバービューを表示するために使用されます. "
 
-#: ../../source/user/raster_data_model.rst:287
+#: ../../source/user/raster_data_model.rst:330
 msgid ""
 "Bands also have a HasArbitraryOverviews property which is TRUE if the "
 "raster can be read at any resolution efficiently but with no distinct "
@@ -1060,21 +1118,18 @@ msgid ""
 "pulled through gateways where downsampling can be done efficiently at the"
 " remote point."
 msgstr ""
-"バンドには,HasArbitraryOverviews プロパティもあります.これは,ラスターが任意の"
-"解像度で効率的に読み取ることができるが,明確なオーバービューレベルがない場合"
-"に TRUE になります.これは,一部のFFTエンコードされた画像や,ダウンサンプリングが"
-"リモートポイントで効率的に行われるゲートウェイを通じて取得された画像に適用されます."
+"バンドには,HasArbitraryOverviews "
+"プロパティもあります.これは,ラスターが任意の解像度で効率的に読み取ることができるが,明確なオーバービューレベルがない場合に TRUE "
+"になります.これは,一部のFFTエンコードされた画像や,ダウンサンプリングがリモートポイントで効率的に行われるゲートウェイを通じて取得された画像に適用されます."
 
-#: ../../source/user/raster_data_model.rst:289
+#: ../../source/user/raster_data_model.rst:332
 msgid ""
 "How overviews are selected depends on the software logic. The "
 ":cpp:func:`GDALRasterBand::RasterIO` or :cpp:func:`GDALDataset::RasterIO`"
 " methods document their logic."
 msgstr ""
-"オーバービューが選択される方法は,ソフトウェアのロジックに依存します."
-" :cpp:func:`GDALRasterBand::RasterIO` または :cpp:func:`GDALDataset::RasterIO`"
-" メソッドはそのロジックを文書化しています."
-
+"オーバービューが選択される方法は,ソフトウェアのロジックに依存します. :cpp:func:`GDALRasterBand::RasterIO` "
+"または :cpp:func:`GDALDataset::RasterIO` メソッドはそのロジックを文書化しています."
 
 #~ msgid ""
 #~ "Currently, drivers which support subdatasets"
@@ -1083,4 +1138,10 @@ msgstr ""
 #~ " PDF, PostGISRaster, Rasterlite, RPFTOC, "
 #~ "RS2, TileDB, WCS, and WMS."
 #~ msgstr ""
+
+#~ msgid "GCI_RedBand: this raster is the red portion of an RGB or RGBA image"
+#~ msgstr "GCI_RedBand: このラスターはRGBまたはRGBA画像の赤の部分です"
+
+#~ msgid "GCI_BlueBand: this raster is the blue portion of an RGB or RGBA image"
+#~ msgstr "GCI_BlueBand: このラスターはRGBまたはRGBA画像の青の部分です"
 

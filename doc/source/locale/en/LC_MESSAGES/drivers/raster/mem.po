@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/mem.rst:5
 msgid "MEM -- In Memory Raster"
@@ -129,29 +129,37 @@ msgid ""
 msgstr ""
 
 #: ../../source/drivers/raster/mem.rst:76
+msgid ""
+"Starting with GDAL 3.10, opening a MEM dataset using the above syntax is "
+"no longer enabled by default for security reasons. If you want to allow "
+"it, define the ``GDAL_MEM_ENABLE_OPEN`` configuration option to ``YES``, "
+"or build GDAL with the ``GDAL_MEM_ENABLE_OPEN`` compilation definition."
+msgstr ""
+
+#: ../../source/drivers/raster/mem.rst:91
 msgid "Creation Options"
 msgstr ""
 
-#: ../../source/drivers/raster/mem.rst:78
+#: ../../source/drivers/raster/mem.rst:93
 msgid "There are no supported creation options."
 msgstr ""
 
-#: ../../source/drivers/raster/mem.rst:80
+#: ../../source/drivers/raster/mem.rst:95
 msgid ""
 "The MEM format is one of the few that supports the AddBand() method. The "
 "AddBand() method supports DATAPOINTER, PIXELOFFSET and LINEOFFSET options"
 " to reference an existing memory array."
 msgstr ""
 
-#: ../../source/drivers/raster/mem.rst:85
+#: ../../source/drivers/raster/mem.rst:100
 msgid "Driver capabilities"
 msgstr ""
 
-#: ../../source/drivers/raster/mem.rst:94
+#: ../../source/drivers/raster/mem.rst:109
 msgid "Multidimensional API support"
 msgstr ""
 
-#: ../../source/drivers/raster/mem.rst:98
+#: ../../source/drivers/raster/mem.rst:113
 msgid "The MEM driver supports the :ref:`multidim_raster_data_model`."
 msgstr ""
 

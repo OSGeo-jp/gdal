@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -131,10 +131,10 @@ msgstr ""
 #: ../../source/user/virtual_file_systems.rst:79
 #: ../../source/user/virtual_file_systems.rst:169
 #: ../../source/user/virtual_file_systems.rst:196
-#: ../../source/user/virtual_file_systems.rst:1093
-#: ../../source/user/virtual_file_systems.rst:1111
-#: ../../source/user/virtual_file_systems.rst:1222
-#: ../../source/user/virtual_file_systems.rst:1304
+#: ../../source/user/virtual_file_systems.rst:1098
+#: ../../source/user/virtual_file_systems.rst:1116
+#: ../../source/user/virtual_file_systems.rst:1227
+#: ../../source/user/virtual_file_systems.rst:1309
 msgid "Examples:"
 msgstr ""
 
@@ -746,7 +746,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user/virtual_file_systems.rst:406
-#: ../../source/user/virtual_file_systems.rst:456
+#: ../../source/user/virtual_file_systems.rst:461
 msgid ""
 "The :config:`GDAL_HTTP_PROXY` (for both HTTP and HTTPS protocols), "
 ":config:`GDAL_HTTPS_PROXY` (for HTTPS protocol only), "
@@ -757,7 +757,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/user/virtual_file_systems.rst:408
-#: ../../source/user/virtual_file_systems.rst:458
+#: ../../source/user/virtual_file_systems.rst:463
 msgid ""
 "Starting with GDAL 2.1.3, the :config:`CURL_CA_BUNDLE` or "
 ":config:`SSL_CERT_FILE` configuration options can be used to set the path"
@@ -782,70 +782,79 @@ msgstr ""
 
 #: ../../source/user/virtual_file_systems.rst:416
 msgid ""
+"Starting with GDAL 3.10, the ``Authorization`` header is no longer "
+"automatically forwarded when redirections are followed. That behavior can"
+" be configured by setting the "
+":config:`CPL_VSIL_CURL_AUTHORIZATION_HEADER_ALLOWED_IF_REDIRECT` "
+"configuration option."
+msgstr ""
+
+#: ../../source/user/virtual_file_systems.rst:421
+msgid ""
 "Starting with GDAL 2.3, the :config:`GDAL_HTTP_MAX_RETRY` (number of "
 "attempts) and :config:`GDAL_HTTP_RETRY_DELAY` (in seconds) configuration "
 "option can be set, so that request retries are done in case of HTTP "
 "errors 429, 502, 503 or 504."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:418
+#: ../../source/user/virtual_file_systems.rst:423
 msgid ""
 "Starting with GDAL 3.6, the following configuration options control the "
 "TCP keep-alive functionality (cf https://daniel.haxx.se/blog/2020/02/10"
 "/curl-ootw-keepalive-time/ for a detailed explanation):"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:420
+#: ../../source/user/virtual_file_systems.rst:425
 msgid ""
 ":config:`GDAL_HTTP_TCP_KEEPALIVE` = YES/NO. whether to enable TCP keep-"
 "alive. Defaults to NO"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:421
+#: ../../source/user/virtual_file_systems.rst:426
 msgid ""
 ":config:`GDAL_HTTP_TCP_KEEPIDLE` = integer, in seconds. Keep-alive idle "
 "time. Defaults to 60. Only taken into account if "
 "GDAL_HTTP_TCP_KEEPALIVE=YES."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:422
+#: ../../source/user/virtual_file_systems.rst:427
 msgid ""
 ":config:`GDAL_HTTP_TCP_KEEPINTVL` = integer, in seconds. Interval time "
 "between keep-alive probes. Defaults to 60. Only taken into account if "
 "GDAL_HTTP_TCP_KEEPALIVE=YES."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:424
+#: ../../source/user/virtual_file_systems.rst:429
 msgid ""
 "Starting with GDAL 3.7, the following configuration options control "
 "support for SSL client certificates:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:426
+#: ../../source/user/virtual_file_systems.rst:431
 msgid ""
 ":config:`GDAL_HTTP_SSLCERT` = filename. Filename of the the SSL client "
 "certificate. Cf https://curl.se/libcurl/c/CURLOPT_SSLCERT.html"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:427
+#: ../../source/user/virtual_file_systems.rst:432
 msgid ""
 ":config:`GDAL_HTTP_SSLCERTTYPE` = string. Format of the SSL certificate: "
 "\"PEM\" or \"DER\". Cf https://curl.se/libcurl/c/CURLOPT_SSLCERTTYPE.html"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:428
+#: ../../source/user/virtual_file_systems.rst:433
 msgid ""
 ":config:`GDAL_HTTP_SSLKEY` = filename. Private key file for TLS and SSL "
 "client certificate. Cf https://curl.se/libcurl/c/CURLOPT_SSLKEY.html"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:429
+#: ../../source/user/virtual_file_systems.rst:434
 msgid ""
 ":config:`GDAL_HTTP_KEYPASSWD` = string. Passphrase to private key. Cf "
 "https://curl.se/libcurl/c/CURLOPT_KEYPASSWD.html"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:431
+#: ../../source/user/virtual_file_systems.rst:436
 msgid ""
 "More generally options of :cpp:func:`CPLHTTPFetch` available through "
 "configuration options are available. Starting with GDAL 3.7, the above "
@@ -853,7 +862,7 @@ msgid ""
 " :cpp:func:`VSISetPathSpecificOption`."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:435
+#: ../../source/user/virtual_file_systems.rst:440
 msgid ""
 "The file can be cached in RAM by setting the configuration option "
 ":config:`VSI_CACHE` to ``TRUE``. The cache size defaults to 25 MB, but "
@@ -862,7 +871,7 @@ msgid ""
 "when the file handle is closed."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:437
+#: ../../source/user/virtual_file_systems.rst:442
 msgid ""
 "Starting with GDAL 2.3, the :config:`CPL_VSIL_CURL_NON_CACHED` "
 "configuration option can be set to values like "
@@ -873,7 +882,7 @@ msgid ""
 "Alternatively, :cpp:func:`VSICurlClearCache` can be used."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:439
+#: ../../source/user/virtual_file_systems.rst:444
 msgid ""
 "Starting with GDAL 2.1, ``/vsicurl/`` will try to query directly "
 "redirected URLs to Amazon S3 signed URLs during their validity period, so"
@@ -881,26 +890,26 @@ msgid ""
 " configuration option :config:`CPL_VSIL_CURL_USE_S3_REDIRECT` to ``NO``."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:441
-#: ../../source/user/virtual_file_systems.rst:462
+#: ../../source/user/virtual_file_systems.rst:446
+#: ../../source/user/virtual_file_systems.rst:467
 msgid ""
 ":cpp:func:`VSIStatL` will return the size in st_size member and file "
 "nature- file or directory - in st_mode member (the later only reliable "
 "with FTP resources for now)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:443
+#: ../../source/user/virtual_file_systems.rst:448
 msgid ""
 ":cpp:func:`VSIReadDir` should be able to parse the HTML directory listing"
 " returned by the most popular web servers, such as Apache and Microsoft "
 "IIS."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:448
+#: ../../source/user/virtual_file_systems.rst:453
 msgid "/vsicurl_streaming/ (http/https/ftp files: streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:450
+#: ../../source/user/virtual_file_systems.rst:455
 msgid ""
 "/vsicurl_streaming/ is a file system handler that allows on-the-fly "
 "sequential reading of files streamed through HTTP/FTP web protocols, "
@@ -908,7 +917,7 @@ msgid ""
 "against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:452
+#: ../../source/user/virtual_file_systems.rst:457
 msgid ""
 "Although this file handler is able seek to random offsets in the file, "
 "this will not be efficient. If you need efficient random access and that "
@@ -916,7 +925,7 @@ msgid ""
 " <vsicurl>` file system handler instead."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:454
+#: ../../source/user/virtual_file_systems.rst:459
 msgid ""
 "Recognized filenames are of the form "
 ":file:`/vsicurl_streaming/http[s]://path/to/remote/resource` or "
@@ -924,7 +933,7 @@ msgid ""
 ":file:`path/to/remote/resource` is the URL of a remote resource."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:460
+#: ../../source/user/virtual_file_systems.rst:465
 msgid ""
 "The file can be cached in RAM by setting the configuration option "
 ":config:`VSI_CACHE` to ``TRUE``. The cache size defaults to 25 MB, but "
@@ -932,11 +941,11 @@ msgid ""
 ":config:`VSI_CACHE_SIZE` (in bytes)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:467
+#: ../../source/user/virtual_file_systems.rst:472
 msgid "/vsis3/ (AWS S3 files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:469
+#: ../../source/user/virtual_file_systems.rst:474
 msgid ""
 "/vsis3/ is a file system handler that allows on-the-fly random reading of"
 " (primarily non-public) files available in AWS S3 buckets, without prior "
@@ -944,7 +953,7 @@ msgid ""
 "libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:471
+#: ../../source/user/virtual_file_systems.rst:476
 msgid ""
 "It also allows sequential writing of files. No seeks or read operations "
 "are then allowed, so in particular direct writing of GeoTIFF files with "
@@ -958,56 +967,56 @@ msgid ""
 "(empty) directories with :cpp:func:`VSIRmdir` are also possible."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:475
+#: ../../source/user/virtual_file_systems.rst:480
 msgid ""
 "Recognized filenames are of the form :file:`/vsis3/bucket/key`, where "
 "``bucket`` is the name of the S3 bucket and ``key`` is the S3 object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:477
-#: ../../source/user/virtual_file_systems.rst:691
-#: ../../source/user/virtual_file_systems.rst:805
-#: ../../source/user/virtual_file_systems.rst:936
-#: ../../source/user/virtual_file_systems.rst:992
-#: ../../source/user/virtual_file_systems.rst:1120
+#: ../../source/user/virtual_file_systems.rst:482
+#: ../../source/user/virtual_file_systems.rst:696
+#: ../../source/user/virtual_file_systems.rst:810
+#: ../../source/user/virtual_file_systems.rst:941
+#: ../../source/user/virtual_file_systems.rst:997
+#: ../../source/user/virtual_file_systems.rst:1125
 msgid "The generalities of :ref:`/vsicurl/ <vsicurl>` apply."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:479
+#: ../../source/user/virtual_file_systems.rst:484
 msgid "The following configuration options are specific to the /vsis3/ handler:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:534
+#: ../../source/user/virtual_file_systems.rst:539
 msgid ""
 "Path to file with identity token for use for authentication via the "
 "`AssumeRoleWithWebIdentity API "
 "<https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html>`_."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:610
-#: ../../source/user/virtual_file_systems.rst:759
-#: ../../source/user/virtual_file_systems.rst:862
+#: ../../source/user/virtual_file_systems.rst:615
+#: ../../source/user/virtual_file_systems.rst:764
+#: ../../source/user/virtual_file_systems.rst:867
 msgid ""
 "Several authentication methods are possible, and are attempted in the "
 "following order:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:612
+#: ../../source/user/virtual_file_systems.rst:617
 msgid ""
 "If :config:`AWS_NO_SIGN_REQUEST=YES` configuration option is set, request"
 " signing is disabled. This option might be used for buckets with public "
 "access rights. Available since GDAL 2.3"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:613
+#: ../../source/user/virtual_file_systems.rst:618
 msgid ""
 "The :config:`AWS_SECRET_ACCESS_KEY` and :config:`AWS_ACCESS_KEY_ID` "
 "configuration options can be set. The :config:`AWS_SESSION_TOKEN` "
 "configuration option must be set when temporary credentials are used."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:614
+#: ../../source/user/virtual_file_systems.rst:619
 msgid ""
 "Starting with GDAL 2.3, alternate ways of providing credentials similar "
 "to what the \"aws\" command line utility or Boto3 support can be used. If"
@@ -1020,14 +1029,14 @@ msgid ""
 "\"default\")."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:615
+#: ../../source/user/virtual_file_systems.rst:620
 msgid ""
 "The ``~/.aws/config`` or ``%UserProfile%/.aws/config`` file may also be "
 "used (or the file pointer by :config:`AWS_CONFIG_FILE`) to retrieve "
 "credentials and the AWS region."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:616
+#: ../../source/user/virtual_file_systems.rst:621
 msgid ""
 "Starting with GDAL 3.6, if :config:`AWS_ROLE_ARN` and "
 ":config:`AWS_WEB_IDENTITY_TOKEN_FILE` are defined we will rely on "
@@ -1037,13 +1046,13 @@ msgid ""
 "accounts.html)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:617
+#: ../../source/user/virtual_file_systems.rst:622
 msgid ""
 "If none of the above method succeeds, instance profile credentials will "
 "be retrieved when GDAL is used on EC2 instances (cf :ref:`vsis3_imds`)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:619
+#: ../../source/user/virtual_file_systems.rst:624
 msgid ""
 "On writing, the file is uploaded using the S3 multipart upload API. The "
 "size of chunks is set to 50 MB by default, allowing creating files up to "
@@ -1057,14 +1066,14 @@ msgid ""
 "instead of the multipart upload API."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:621
-#: ../../source/user/virtual_file_systems.rst:878
+#: ../../source/user/virtual_file_systems.rst:626
+#: ../../source/user/virtual_file_systems.rst:883
 msgid ""
 "Since GDAL 3.1, the :cpp:func:`VSIRename` operation is supported (first "
 "doing a copy of the original file and then deleting it)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:623
+#: ../../source/user/virtual_file_systems.rst:628
 msgid ""
 "Since GDAL 3.1, the :cpp:func:`VSIRmdirRecursive` operation is supported "
 "(using batch deletion method). The "
@@ -1074,7 +1083,7 @@ msgid ""
 " option in the :ref:`GDAL configuration file <gdal_configuration_file>`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:625
+#: ../../source/user/virtual_file_systems.rst:630
 msgid ""
 "The :config:`CPL_VSIS3_CREATE_DIR_OBJECT` configuration option can be set"
 " to NO to prevent the :cpp:func:`VSIMkdir` operation from creating an "
@@ -1084,7 +1093,7 @@ msgid ""
 "applications that do not expect such empty objects."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:628
+#: ../../source/user/virtual_file_systems.rst:633
 msgid ""
 "Starting with GDAL 3.5, profiles that use IAM role assumption (see "
 "https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-role.html)"
@@ -1094,11 +1103,11 @@ msgid ""
 "supported currently."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:633
+#: ../../source/user/virtual_file_systems.rst:638
 msgid "/vsis3/ and AWS Instance Metadata Service (IMDS)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:635
+#: ../../source/user/virtual_file_systems.rst:640
 msgid ""
 "On EC2 instances, GDAL will try to use the `IMDSv2 "
 "<https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-"
@@ -1110,7 +1119,7 @@ msgid ""
 "the authentication step)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:637
+#: ../../source/user/virtual_file_systems.rst:642
 msgid ""
 "There are known issues when running inside a Docker instance in a EC2 "
 "instance that require extra configuration of the instance. For example, "
@@ -1119,11 +1128,11 @@ msgid ""
 "retrieval.html#imds-considerations>`__"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:639
+#: ../../source/user/virtual_file_systems.rst:644
 msgid "There are several ways to do this. One way is to run this command: ::"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:647
+#: ../../source/user/virtual_file_systems.rst:652
 msgid ""
 "Another is to set the HttpPutResponseHopLimit metadata on an "
 "AutoScalingGroup LaunchTemplate: - "
@@ -1132,7 +1141,7 @@ msgid ""
 "properties-ec2-launchtemplate-metadataoptions.html"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:651
+#: ../../source/user/virtual_file_systems.rst:656
 msgid ""
 "Another possibility is to start the Docker container with host networking"
 " (``--network=host``), although this breaks isolation of containers by "
@@ -1140,45 +1149,45 @@ msgid ""
 "implications <https://stackoverflow.com/a/57051970/40785>`__."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:654
+#: ../../source/user/virtual_file_systems.rst:659
 msgid "Configuring /vsis3/ with Minio"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:656
+#: ../../source/user/virtual_file_systems.rst:661
 msgid ""
 "The following configuration options can be set to access a `Minio Docker "
 "image <https://min.io/docs/minio/container/index.html>`__"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:659
+#: ../../source/user/virtual_file_systems.rst:664
 msgid "AWS_VIRTUAL_HOSTING=FALSE"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:660
+#: ../../source/user/virtual_file_systems.rst:665
 msgid "AWS_HTTPS=NO"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:661
+#: ../../source/user/virtual_file_systems.rst:666
 msgid "AWS_S3_ENDPOINT=\"localhost:9000\""
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:662
+#: ../../source/user/virtual_file_systems.rst:667
 msgid "AWS_REGION=\"us-east-1\""
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:663
+#: ../../source/user/virtual_file_systems.rst:668
 msgid "AWS_SECRET_ACCESS_KEY=\"your_secret_access_key\""
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:664
+#: ../../source/user/virtual_file_systems.rst:669
 msgid "AWS_ACCESS_KEY_ID=\"your_access_key\""
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:669
+#: ../../source/user/virtual_file_systems.rst:674
 msgid "/vsis3_streaming/ (AWS S3 files: streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:671
+#: ../../source/user/virtual_file_systems.rst:676
 msgid ""
 "/vsis3_streaming/ is a file system handler that allows on-the-fly "
 "sequential reading of (primarily non-public) files available in AWS S3 "
@@ -1186,24 +1195,24 @@ msgid ""
 "be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:673
+#: ../../source/user/virtual_file_systems.rst:678
 msgid ""
 "Recognized filenames are of the form :file:`/vsis3_streaming/bucket/key` "
 "where ``bucket`` is the name of the S3 bucket and ``key`` is the S3 "
 "object \"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:675
+#: ../../source/user/virtual_file_systems.rst:680
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsis3/ <vsis3>`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:682
+#: ../../source/user/virtual_file_systems.rst:687
 msgid "/vsigs/ (Google Cloud Storage files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:684
+#: ../../source/user/virtual_file_systems.rst:689
 msgid ""
 "/vsigs/ is a file system handler that allows on-the-fly random reading of"
 " (primarily non-public) files available in Google Cloud Storage buckets, "
@@ -1211,7 +1220,7 @@ msgid ""
 "against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:686
+#: ../../source/user/virtual_file_systems.rst:691
 msgid ""
 "Starting with GDAL 2.3, it also allows sequential writing of files. No "
 "seeks or read operations are then allowed, so in particular direct "
@@ -1226,45 +1235,45 @@ msgid ""
 "possible."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:689
+#: ../../source/user/virtual_file_systems.rst:694
 msgid ""
 "Recognized filenames are of the form :file:`/vsigs/bucket/key` where "
 "``bucket`` is the name of the bucket and ``key`` is the object \"key\", "
 "i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:693
+#: ../../source/user/virtual_file_systems.rst:698
 msgid "The following configuration options are specific to the /vsigs/ handler:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:761
+#: ../../source/user/virtual_file_systems.rst:766
 msgid ""
 "If :config:`GS_NO_SIGN_REQUEST=YES` configuration option is set, request "
 "signing is disabled. This option might be used for buckets with public "
 "access rights. Available since GDAL 3.4"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:762
+#: ../../source/user/virtual_file_systems.rst:767
 msgid ""
 "The :config:`GS_SECRET_ACCESS_KEY` and :config:`GS_ACCESS_KEY_ID` "
 "configuration options can be set for AWS-style authentication"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:763
+#: ../../source/user/virtual_file_systems.rst:768
 msgid ""
 "The :config:`GDAL_HTTP_HEADER_FILE` configuration option to point to a "
 "filename of a text file with \"key: value\" headers. Typically, it must "
 "contain a \"Authorization: Bearer XXXXXXXXX\" line."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:764
+#: ../../source/user/virtual_file_systems.rst:769
 msgid ""
 "(GDAL >= 3.7) The :config:`GDAL_HTTP_HEADERS` configuration option can "
 "also be set. It must contain at least a line starting with "
 "\"Authorization:\" to be used as an authentication method."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:765
+#: ../../source/user/virtual_file_systems.rst:770
 msgid ""
 "(GDAL >= 2.3) The :config:`GS_OAUTH2_REFRESH_TOKEN` configuration option "
 "can be set to use OAuth2 client authentication. See "
@@ -1276,7 +1285,7 @@ msgid ""
 "defined both for gdal_auth.py and later execution of /vsigs)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:766
+#: ../../source/user/virtual_file_systems.rst:771
 msgid ""
 "(GDAL >= 2.3) The :config:`GOOGLE_APPLICATION_CREDENTIALS` configuration "
 "option can be set to point to a JSON file containing OAuth2 service "
@@ -1291,14 +1300,14 @@ msgid ""
 "\"https://www.googleapis.com/auth/devstorage.read_only\" if needed."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:767
+#: ../../source/user/virtual_file_systems.rst:772
 msgid ""
 "(GDAL >= 3.4.2) The :config:`GOOGLE_APPLICATION_CREDENTIALS` "
 "configuration option can be set to point to a JSON file containing OAuth2"
 " user credentials (``type: authorized_user``)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:768
+#: ../../source/user/virtual_file_systems.rst:773
 msgid ""
 "(GDAL >= 2.3) Variant of the previous method. The "
 ":config:`GS_OAUTH2_PRIVATE_KEY` (or :config:`GS_OAUTH2_PRIVATE_KEY_FILE` "
@@ -1318,7 +1327,7 @@ msgid ""
 "\"https://www.googleapis.com/auth/devstorage.read_only\" if needed."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:769
+#: ../../source/user/virtual_file_systems.rst:774
 msgid ""
 "(GDAL >= 2.3) An alternate way of providing credentials similar to what "
 "the \"gsutil\" command line utility or Boto3 support can be used. If the "
@@ -1331,7 +1340,7 @@ msgid ""
 "entry for OAuth2 client authentication."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:770
+#: ../../source/user/virtual_file_systems.rst:775
 msgid ""
 "(GDAL >= 2.3) Finally if none of the above method succeeds, the code will"
 " check if the current machine is a Google Compute Engine instance, and if"
@@ -1341,17 +1350,17 @@ msgid ""
 "to the boot logs), you can set :config:`CPL_MACHINE_IS_GCE` to ``YES``."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:772
+#: ../../source/user/virtual_file_systems.rst:777
 msgid ""
 "Since GDAL 3.1, the Rename() operation is supported (first doing a copy "
 "of the original file and then deleting it)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:779
+#: ../../source/user/virtual_file_systems.rst:784
 msgid "/vsigs_streaming/ (Google Cloud Storage files: streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:781
+#: ../../source/user/virtual_file_systems.rst:786
 msgid ""
 "/vsigs_streaming/ is a file system handler that allows on-the-fly "
 "sequential reading of files (primarily non-public) files available in "
@@ -1359,24 +1368,24 @@ msgid ""
 "It requires GDAL to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:783
+#: ../../source/user/virtual_file_systems.rst:788
 msgid ""
 "Recognized filenames are of the form :file:`/vsigs_streaming/bucket/key` "
 "where ``bucket`` is the name of the bucket and ``key`` is the object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:785
+#: ../../source/user/virtual_file_systems.rst:790
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsigs/ <vsigs>`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:792
+#: ../../source/user/virtual_file_systems.rst:797
 msgid "/vsiaz/ (Microsoft Azure Blob files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:794
+#: ../../source/user/virtual_file_systems.rst:799
 msgid ""
 "/vsiaz/ is a file system handler that allows on-the-fly random reading of"
 " (primarily non-public) files available in Microsoft Azure Blob "
@@ -1384,13 +1393,13 @@ msgid ""
 "to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:796
+#: ../../source/user/virtual_file_systems.rst:801
 msgid ""
 "See :ref:`/vsiadls/ <vsiadls>` for a related filesystem for Azure Data "
 "Lake Storage Gen2."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:798
+#: ../../source/user/virtual_file_systems.rst:803
 msgid ""
 "It also allows sequential writing of files. No seeks or read operations "
 "are then allowed, so in particular direct writing of GeoTIFF files with "
@@ -1403,7 +1412,7 @@ msgid ""
 "blob will be created (with a maximum file size of 195 GB)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:801
+#: ../../source/user/virtual_file_systems.rst:806
 msgid ""
 "Deletion of files with :cpp:func:`VSIUnlink`, creation of directories "
 "with :cpp:func:`VSIMkdir` and deletion of (empty) directories with "
@@ -1420,28 +1429,28 @@ msgid ""
 ":cpp:func:`VSIRmdir` invocation."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:803
+#: ../../source/user/virtual_file_systems.rst:808
 msgid ""
 "Recognized filenames are of the form :file:`/vsiaz/container/key`, where "
 "``container`` is the name of the container and ``key`` is the object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:807
+#: ../../source/user/virtual_file_systems.rst:812
 msgid "The following configuration options are specific to the /vsiaz/ handler:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:864
+#: ../../source/user/virtual_file_systems.rst:869
 msgid "The :config:`AZURE_STORAGE_CONNECTION_STRING` configuration option"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:866
+#: ../../source/user/virtual_file_systems.rst:871
 msgid ""
 "The :config:`AZURE_STORAGE_ACCOUNT` configuration option is set to "
 "specify the account name AND"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:868
+#: ../../source/user/virtual_file_systems.rst:873
 msgid ""
 "(GDAL >= 3.5) The :config:`AZURE_STORAGE_ACCESS_TOKEN` configuration "
 "option is set to specify the access token, that will be included in a "
@@ -1450,20 +1459,20 @@ msgid ""
 " (MSAL)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:869
+#: ../../source/user/virtual_file_systems.rst:874
 msgid ""
 "The :config:`AZURE_STORAGE_ACCESS_KEY` configuration option is set to "
 "specify the secret key."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:870
+#: ../../source/user/virtual_file_systems.rst:875
 msgid ""
 "The :config:`AZURE_NO_SIGN_REQUEST=YES` configuration option is set, so "
 "as to disable any request signing. This option might be used for accounts"
 " with public access rights. Available since GDAL 3.2"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:871
+#: ../../source/user/virtual_file_systems.rst:876
 msgid ""
 "The :config:`AZURE_STORAGE_SAS_TOKEN` configuration option (``AZURE_SAS``"
 " if GDAL < 3.5) is set to specify a Shared Access Signature. This SAS is "
@@ -1474,7 +1483,7 @@ msgid ""
 " Available since GDAL 3.2"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:872
+#: ../../source/user/virtual_file_systems.rst:877
 msgid ""
 "The current machine is a Azure Virtual Machine with Azure Active "
 "Directory permissions assigned to it (see https://docs.microsoft.com/en-"
@@ -1482,7 +1491,7 @@ msgid ""
 "configure-portal-windows-vm). Available since GDAL 3.3."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:874
+#: ../../source/user/virtual_file_systems.rst:879
 msgid ""
 "Authentication using Azure Active Directory Workload Identity (using "
 "AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_FEDERATED_TOKEN_FILE and "
@@ -1490,7 +1499,7 @@ msgid ""
 "Kubernetes, is available since GDAL 3.7.2"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:876
+#: ../../source/user/virtual_file_systems.rst:881
 msgid ""
 "Starting with GDAL 3.5, the `configuration file "
 "<https://github.com/MicrosoftDocs/azure-docs-cli/blob/main/docs-ref-"
@@ -1500,17 +1509,17 @@ msgid ""
 "``key`` or ``account`` + ``sas_token``"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:880
+#: ../../source/user/virtual_file_systems.rst:885
 msgid ""
 "Since GDAL 3.3, the :cpp:func:`VSIGetFileMetadata` and "
 ":cpp:func:`VSISetFileMetadata` operations are supported."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:887
+#: ../../source/user/virtual_file_systems.rst:892
 msgid "/vsiaz_streaming/ (Microsoft Azure Blob files: streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:889
+#: ../../source/user/virtual_file_systems.rst:894
 msgid ""
 "/vsiaz_streaming/ is a file system handler that allows on-the-fly "
 "sequential reading of files (primarily non-public) files available in "
@@ -1518,7 +1527,7 @@ msgid ""
 "entire file. It requires GDAL to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:891
+#: ../../source/user/virtual_file_systems.rst:896
 msgid ""
 "Recognized filenames are of the form "
 ":file:`/vsiaz_streaming/container/key` where ``container`` is the name of"
@@ -1526,17 +1535,17 @@ msgid ""
 "potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:893
+#: ../../source/user/virtual_file_systems.rst:898
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsiaz/ <vsiaz>`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:900
+#: ../../source/user/virtual_file_systems.rst:905
 msgid "/vsiadls/ (Microsoft Azure Data Lake Storage Gen2)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:902
+#: ../../source/user/virtual_file_systems.rst:907
 msgid ""
 "/vsiadls/ is a file system handler that allows on-the-fly random reading "
 "of (primarily non-public) files available in Microsoft Azure Data Lake "
@@ -1544,7 +1553,7 @@ msgid ""
 "requires GDAL to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:907
+#: ../../source/user/virtual_file_systems.rst:912
 msgid ""
 "It has similar capabilities as :ref:`/vsiaz/ <vsiaz>`, and in particular "
 "uses the same configuration options for authentication. Its advantages "
@@ -1554,42 +1563,42 @@ msgid ""
 "/en-us/azure/storage/blobs/data-lake-storage-introduction>`__"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:913
+#: ../../source/user/virtual_file_systems.rst:918
 msgid "The main enhancements over /vsiaz/ are:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:915
+#: ../../source/user/virtual_file_systems.rst:920
 msgid ""
 "True directory support (no need for the artificial "
 ":file:`.gdal_marker_for_dir` empty file that is used for /vsiaz/ to have "
 "empty directories)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:917
+#: ../../source/user/virtual_file_systems.rst:922
 msgid "One-call recursive directory deletion with :cpp:func:`VSIRmdirRecursive`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:918
+#: ../../source/user/virtual_file_systems.rst:923
 msgid "Atomic renaming with :cpp:func:`VSIRename`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:919
+#: ../../source/user/virtual_file_systems.rst:924
 msgid ""
 ":cpp:func:`VSIGetFileMetadata` support for the \"STATUS\" and \"ACL\" "
 "metadata domains"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:920
+#: ../../source/user/virtual_file_systems.rst:925
 msgid ""
 ":cpp:func:`VSISetFileMetadata` support for the \"PROPERTIES\" and \"ACL\""
 " metadata domains"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:927
+#: ../../source/user/virtual_file_systems.rst:932
 msgid "/vsioss/ (Alibaba Cloud OSS files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:929
+#: ../../source/user/virtual_file_systems.rst:934
 msgid ""
 "/vsioss/ is a file system handler that allows on-the-fly random reading "
 "of (primarily non-public) files available in Alibaba Cloud Object Storage"
@@ -1597,9 +1606,9 @@ msgid ""
 "requires GDAL to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:931
-#: ../../source/user/virtual_file_systems.rst:987
-#: ../../source/user/virtual_file_systems.rst:1117
+#: ../../source/user/virtual_file_systems.rst:936
+#: ../../source/user/virtual_file_systems.rst:992
+#: ../../source/user/virtual_file_systems.rst:1122
 msgid ""
 "It also allows sequential writing of files. No seeks or read operations "
 "are then allowed, so in particular direct writing of GeoTIFF files with "
@@ -1613,19 +1622,19 @@ msgid ""
 " with :cpp:func:`VSIRmdir` are also possible."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:934
+#: ../../source/user/virtual_file_systems.rst:939
 msgid ""
 "Recognized filenames are of the form :file:`/vsioss/bucket/key` where "
 "``bucket`` is the name of the OSS bucket and ``key`` is the OSS object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:938
-#: ../../source/user/virtual_file_systems.rst:994
+#: ../../source/user/virtual_file_systems.rst:943
+#: ../../source/user/virtual_file_systems.rst:999
 msgid "The following configuration options are specific to the /vsioss/ handler:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:961
+#: ../../source/user/virtual_file_systems.rst:966
 msgid ""
 "The :config:`OSS_SECRET_ACCESS_KEY` and :config:`OSS_ACCESS_KEY_ID` "
 "configuration options must be set. The :config:`OSS_ENDPOINT` "
@@ -1635,7 +1644,7 @@ msgid ""
 "the appropriate endpoint."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:963
+#: ../../source/user/virtual_file_systems.rst:968
 msgid ""
 "On writing, the file is uploaded using the OSS multipart upload API. The "
 "size of chunks is set to 50 MB by default, allowing creating files up to "
@@ -1648,11 +1657,11 @@ msgid ""
 "simple PUT request is used instead of the multipart upload API."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:970
+#: ../../source/user/virtual_file_systems.rst:975
 msgid "/vsioss_streaming/ (Alibaba Cloud OSS files: streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:972
+#: ../../source/user/virtual_file_systems.rst:977
 msgid ""
 "/vsioss_streaming/ is a file system handler that allows on-the-fly "
 "sequential reading of files (primarily non-public) files available in "
@@ -1661,24 +1670,24 @@ msgid ""
 "libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:974
+#: ../../source/user/virtual_file_systems.rst:979
 msgid ""
 "Recognized filenames are of the form :file:`/vsioss_streaming/bucket/key`"
 " where ``bucket`` is the name of the bucket and ``key`` is the object "
 "\"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:976
+#: ../../source/user/virtual_file_systems.rst:981
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsioss/ <vsioss>`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:983
+#: ../../source/user/virtual_file_systems.rst:988
 msgid "/vsiswift/ (OpenStack Swift Object Storage)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:985
+#: ../../source/user/virtual_file_systems.rst:990
 msgid ""
 "/vsiswift/ is a file system handler that allows on-the-fly random reading"
 " of (primarily non-public) files available in OpenStack Swift Object "
@@ -1686,20 +1695,20 @@ msgid ""
 "requires GDAL to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:990
+#: ../../source/user/virtual_file_systems.rst:995
 msgid ""
 "Recognized filenames are of the form :file:`/vsiswift/bucket/key` where "
 "``bucket`` is the name of the swift bucket and ``key`` is the swift "
 "object \"key\", i.e. a filename potentially containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1016
+#: ../../source/user/virtual_file_systems.rst:1021
 msgid ""
 "Three authentication methods are possible, and are attempted in the "
 "following order:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1018
+#: ../../source/user/virtual_file_systems.rst:1023
 msgid ""
 "The :config:`SWIFT_STORAGE_URL` and :config:`SWIFT_AUTH_TOKEN` "
 "configuration options are set respectively to the storage URL (e.g "
@@ -1707,7 +1716,7 @@ msgid ""
 "token authorization token."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1019
+#: ../../source/user/virtual_file_systems.rst:1024
 msgid ""
 "The :config:`SWIFT_AUTH_V1_URL`, :config:`SWIFT_USER` and "
 ":config:`SWIFT_KEY` configuration options are set respectively to the "
@@ -1717,7 +1726,7 @@ msgid ""
 " authorization token mentioned in the first authentication method."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1020
+#: ../../source/user/virtual_file_systems.rst:1025
 msgid ""
 "Authentication with Keystone v3 is using the same options as python-"
 "swiftclient, see https://docs.openstack.org/python-"
@@ -1725,67 +1734,67 @@ msgid ""
 "(>= 3.1) supports the following options:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1022
-#: ../../source/user/virtual_file_systems.rst:1033
+#: ../../source/user/virtual_file_systems.rst:1027
+#: ../../source/user/virtual_file_systems.rst:1038
 msgid "`OS_IDENTITY_API_VERSION=3`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1023
-#: ../../source/user/virtual_file_systems.rst:1035
+#: ../../source/user/virtual_file_systems.rst:1028
+#: ../../source/user/virtual_file_systems.rst:1040
 msgid "`OS_AUTH_URL`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1024
+#: ../../source/user/virtual_file_systems.rst:1029
 msgid "`OS_USERNAME`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1025
+#: ../../source/user/virtual_file_systems.rst:1030
 msgid "`OS_PASSWORD`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1026
+#: ../../source/user/virtual_file_systems.rst:1031
 msgid "`OS_USER_DOMAIN_NAME`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1027
+#: ../../source/user/virtual_file_systems.rst:1032
 msgid "`OS_PROJECT_NAME`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1028
+#: ../../source/user/virtual_file_systems.rst:1033
 msgid "`OS_PROJECT_DOMAIN_NAME`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1029
-#: ../../source/user/virtual_file_systems.rst:1038
+#: ../../source/user/virtual_file_systems.rst:1034
+#: ../../source/user/virtual_file_systems.rst:1043
 msgid "`OS_REGION_NAME`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1031
+#: ../../source/user/virtual_file_systems.rst:1036
 msgid ""
 "Application Credential Authentication via Keystone v3, GDAL (>= 3.3.1) "
 "supports application-credential authentication with the following "
 "options:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1034
+#: ../../source/user/virtual_file_systems.rst:1039
 msgid "`OS_AUTH_TYPE=v3applicationcredential`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1036
+#: ../../source/user/virtual_file_systems.rst:1041
 msgid "`OS_APPLICATION_CREDENTIAL_ID`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1037
+#: ../../source/user/virtual_file_systems.rst:1042
 msgid "`OS_APPLICATION_CREDENTIAL_SECRET`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1040
+#: ../../source/user/virtual_file_systems.rst:1045
 msgid ""
 "This file system handler also allows sequential writing of files (no "
 "seeks or read operations are then allowed)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1042
+#: ../../source/user/virtual_file_systems.rst:1047
 msgid ""
 "In some versions of OpenStack Swift, the access to large (segmented) "
 "files fails unless they are explicitly marked as static large objects, "
@@ -1797,11 +1806,11 @@ msgid ""
 "https://docs.openstack.org/swift/latest/api/large_objects.html."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1049
+#: ../../source/user/virtual_file_systems.rst:1054
 msgid "/vsiswift_streaming/ (OpenStack Swift Object Storage: streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1051
+#: ../../source/user/virtual_file_systems.rst:1056
 msgid ""
 "/vsiswift_streaming/ is a file system handler that allows on-the-fly "
 "sequential reading of files (primarily non-public) files available in "
@@ -1809,7 +1818,7 @@ msgid ""
 " the entire file. It requires GDAL to be built against libcurl."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1053
+#: ../../source/user/virtual_file_systems.rst:1058
 msgid ""
 "Recognized filenames are of the form "
 ":file:`/vsiswift_streaming/bucket/key` where ``bucket`` is the name of "
@@ -1817,17 +1826,17 @@ msgid ""
 " containing subdirectories."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1055
+#: ../../source/user/virtual_file_systems.rst:1060
 msgid ""
 "Authentication options, and read-only features, are identical to "
 ":ref:`/vsiswift/ <vsiswift>`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1062
+#: ../../source/user/virtual_file_systems.rst:1067
 msgid "/vsihdfs/ (Hadoop File System)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1064
+#: ../../source/user/virtual_file_systems.rst:1069
 msgid ""
 "/vsihdfs/ is a file system handler that provides read access to HDFS. "
 "This handler requires GDAL to have been built with Java support (CMake "
@@ -1836,96 +1845,96 @@ msgid ""
 "handler is currently only available on Unix-like systems."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1070
+#: ../../source/user/virtual_file_systems.rst:1075
 msgid ""
 "Note: support for the HTTP REST API (webHdfs) is also available with "
 ":ref:`vsiwebhdfs`"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1072
+#: ../../source/user/virtual_file_systems.rst:1077
 msgid ""
 "The LD_LIBRARY_PATH and CLASSPATH environment variables must be typically"
 " set up as following."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1082
+#: ../../source/user/virtual_file_systems.rst:1087
 msgid ""
 "Failure to properly define the CLASSPATH will result in hard crashes in "
 "the native libhdfs."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1085
+#: ../../source/user/virtual_file_systems.rst:1090
 msgid "Relevant Hadoop documentation links:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1087
+#: ../../source/user/virtual_file_systems.rst:1092
 msgid ""
 "`C API libhdfs <https://hadoop.apache.org/docs/stable/hadoop-project-dist"
 "/hadoop-hdfs/LibHdfs.html>`__"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1088
+#: ../../source/user/virtual_file_systems.rst:1093
 msgid ""
 "`HDFS Users Guide <https://hadoop.apache.org/docs/stable/hadoop-project-"
 "dist/hadoop-hdfs/HdfsUserGuide.html>`__"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1089
+#: ../../source/user/virtual_file_systems.rst:1094
 msgid ""
 "`Hadoop: Setting up a Single Node Cluster "
 "<https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-"
 "common/SingleCluster.html>`__"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1091
+#: ../../source/user/virtual_file_systems.rst:1096
 msgid ""
 "Recognized filenames are of the form :file:`/vsihdfs/hdfsUri` where "
 "``hdfsUri`` is a valid HDFS URI."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1105
+#: ../../source/user/virtual_file_systems.rst:1110
 msgid "/vsiwebhdfs/ (Web Hadoop File System REST API)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1107
+#: ../../source/user/virtual_file_systems.rst:1112
 msgid ""
 "/vsiwebhdfs/ is a file system handler that provides read and write access"
 " to HDFS through its HTTP REST API."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1109
+#: ../../source/user/virtual_file_systems.rst:1114
 msgid ""
 "Recognized filenames are of the form "
 ":file:`/vsiwebhdfs/http://hostname:port/webhdfs/v1/path/to/filename`."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1122
+#: ../../source/user/virtual_file_systems.rst:1127
 msgid "The following configuration options are available:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1146
+#: ../../source/user/virtual_file_systems.rst:1151
 msgid ""
 "This file system handler also allows sequential writing of files (no "
 "seeks or read operations are then allowed)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1153
+#: ../../source/user/virtual_file_systems.rst:1158
 msgid "/vsistdin/ (standard input streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1155
+#: ../../source/user/virtual_file_systems.rst:1160
 msgid ""
 "/vsistdin/ is a file handler that allows reading from the standard input "
 "stream."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1157
+#: ../../source/user/virtual_file_systems.rst:1162
 msgid ""
 "The filename syntax must be only :file:`/vsistdin/`, (not e.g., "
 "/vsistdin/path/to/f.csv , but \"/vsistdin?buffer_limit=value\" is OK.)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1160
+#: ../../source/user/virtual_file_systems.rst:1165
 msgid ""
 "The file operations available are of course limited to Read() and forward"
 " Seek(). Full seek in the first MB of a file is possible, and it is "
@@ -1933,60 +1942,60 @@ msgid ""
 "this first megabyte is possible multiple times in the same process."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1165
+#: ../../source/user/virtual_file_systems.rst:1170
 msgid ""
 "The size of the in-memory cache can be controlled with the "
 ":config:`CPL_VSISTDIN_BUFFER_LIMIT` configuration option:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1175
+#: ../../source/user/virtual_file_systems.rst:1180
 msgid "The \"/vsistdin?buffer_limit=value\" syntax can also be used."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1177
+#: ../../source/user/virtual_file_systems.rst:1182
 msgid ""
 "/vsistdin filenames can be combined with other file system. For example, "
 "to read a file within a potentially big ZIP file streamed to "
 "gdal_translate:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1188
+#: ../../source/user/virtual_file_systems.rst:1193
 msgid "/vsistdout/ (standard output streaming)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1190
+#: ../../source/user/virtual_file_systems.rst:1195
 msgid ""
 "/vsistdout/ is a file handler that allows writing into the standard "
 "output stream."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1192
+#: ../../source/user/virtual_file_systems.rst:1197
 msgid "The filename syntax must be only :file:`/vsistdout/`."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1194
+#: ../../source/user/virtual_file_systems.rst:1199
 msgid "The file operations available are of course limited to Write()."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1196
+#: ../../source/user/virtual_file_systems.rst:1201
 msgid ""
 "A variation of this file system exists as the "
 ":file:`/vsistdout_redirect/` file system handler, where the output "
 "function can be defined with :cpp:func:`VSIStdoutSetRedirection`."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1201
+#: ../../source/user/virtual_file_systems.rst:1206
 msgid "/vsimem/ (in-memory files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1203
+#: ../../source/user/virtual_file_systems.rst:1208
 msgid ""
 "/vsimem/ is a file handler that allows block of memory to be treated as "
 "files. All portions of the file system underneath the base path "
 ":file:`/vsimem/` will be handled by this driver."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1205
+#: ../../source/user/virtual_file_systems.rst:1210
 msgid ""
 "Normal VSI*L functions can be used freely to create and destroy memory "
 "arrays, treating them as if they were real file system objects. Some "
@@ -1996,11 +2005,11 @@ msgid ""
 ":cpp:func:`VSIFileFromMemBuffer` and :cpp:func:`VSIGetMemFileBuffer`."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1207
+#: ../../source/user/virtual_file_systems.rst:1212
 msgid "Directory related functions are supported."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1209
+#: ../../source/user/virtual_file_systems.rst:1214
 msgid ""
 "/vsimem/ files are visible within the same process. Multiple threads can "
 "access the same underlying file in read mode, provided they used "
@@ -2009,24 +2018,24 @@ msgid ""
 "of calling code)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1214
+#: ../../source/user/virtual_file_systems.rst:1219
 msgid "/vsisubfile/ (portions of files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1216
+#: ../../source/user/virtual_file_systems.rst:1221
 msgid ""
 "The /vsisubfile/ virtual file system handler allows access to subregions "
 "of files, treating them as a file on their own to the virtual file system"
 " functions (VSIFOpenL(), etc)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1218
+#: ../../source/user/virtual_file_systems.rst:1223
 msgid ""
 "A special form of the filename is used to indicate a subportion of "
 "another file: :file:`/vsisubfile/<offset>[_<size>],<filename>`."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1220
+#: ../../source/user/virtual_file_systems.rst:1225
 msgid ""
 "The size parameter is optional. Without it the remainder of the file from"
 " the start offset as treated as part of the subfile. Otherwise only "
@@ -2035,7 +2044,7 @@ msgid ""
 " The <offset> and <size> values are in bytes."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1229
+#: ../../source/user/virtual_file_systems.rst:1234
 msgid ""
 "Unlike the /vsimem/ or conventional file system handlers, there is no "
 "meaningful support for filesystem operations for creating new files, "
@@ -2044,11 +2053,11 @@ msgid ""
 " on the file handle returned by :cpp:func:`VSIFOpenL` operate properly."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1234
+#: ../../source/user/virtual_file_systems.rst:1239
 msgid "/vsisparse/ (sparse files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1236
+#: ../../source/user/virtual_file_systems.rst:1241
 msgid ""
 "The /vsisparse/ virtual file handler allows a virtual file to be composed"
 " from chunks of data in other files, potentially with large spaces in the"
@@ -2060,21 +2069,21 @@ msgid ""
 "files on different file systems as one large virtual file."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1238
+#: ../../source/user/virtual_file_systems.rst:1243
 msgid ""
 "The file referenced by /vsisparse/ should be an XML control file "
 "formatted something like:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1272
+#: ../../source/user/virtual_file_systems.rst:1277
 msgid "Hopefully the values and semantics are fairly obvious."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1278
+#: ../../source/user/virtual_file_systems.rst:1283
 msgid "/vsicached/ (File caching)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1280
+#: ../../source/user/virtual_file_systems.rst:1285
 msgid ""
 "The :cpp:func:`VSICreateCachedFile` function takes a virtual file handle "
 "and returns a new handle that caches read-operations on the input file "
@@ -2083,13 +2092,13 @@ msgid ""
 "of blocks of 32KB each (default size)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1282
+#: ../../source/user/virtual_file_systems.rst:1287
 msgid ""
 "This is mostly useful for files accessible through slow local/operating-"
 "system-mounted filesystems."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1284
+#: ../../source/user/virtual_file_systems.rst:1289
 msgid ""
 "That is implicitly used by a number of the above mentioned file systems "
 "(namely the default one for standard file system operations, and the "
@@ -2097,26 +2106,26 @@ msgid ""
 "configuration option is set to ``YES``."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1286
+#: ../../source/user/virtual_file_systems.rst:1291
 msgid ""
 "The default size of caching for each file is 25 MB (25 MB for each file "
 "that is cached), and can be controlled with the ``VSI_CACHE_SIZE`` "
 "configuration option (value in bytes)."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1288
+#: ../../source/user/virtual_file_systems.rst:1293
 msgid ""
 "The :cpp:class:`VSICachedFile` class only handles read operations at that"
 " time, and will error out on write operations."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1290
+#: ../../source/user/virtual_file_systems.rst:1295
 msgid ""
 "Starting with GDAL 3.8, a ``/vsicached?`` virtual file system also exists"
 " to cache a particular file."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1292
+#: ../../source/user/virtual_file_systems.rst:1297
 msgid ""
 "The syntax is the following one: "
 "``/vsicached?[option_i=val_i&]*file=<filename>`` where each option name "
@@ -2127,43 +2136,43 @@ msgid ""
 "files, list directory content, can work properly."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1299
+#: ../../source/user/virtual_file_systems.rst:1304
 msgid "Currently supported options are:"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1301
+#: ../../source/user/virtual_file_systems.rst:1306
 msgid ""
 "``chunk_size=<value>`` where value is the` size of the chunk size in "
 "bytes. ``KB`` or ``MB`` suffixes can be also appended (without space "
 "after the numeric value). The maximum supported value is 1 GB."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1302
+#: ../../source/user/virtual_file_systems.rst:1307
 msgid ""
 "``cache_size=<value>`` where value is the size of the cache size in "
 "bytes, for each file. ``KB`` or ``MB`` suffixes can be also appended."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1306
+#: ../../source/user/virtual_file_systems.rst:1311
 msgid "``/vsicached?chunk_size=1MB&file=/home/even/byte.tif``"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1307
+#: ../../source/user/virtual_file_systems.rst:1312
 msgid "``/vsicached?file=./byte.tif``"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1313
+#: ../../source/user/virtual_file_systems.rst:1318
 msgid "/vsicrypt/ (encrypted files)"
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1315
+#: ../../source/user/virtual_file_systems.rst:1320
 msgid ""
 "/vsicrypt/ is a special file handler is installed that allows "
 "reading/creating/update encrypted files on the fly, with random access "
 "capabilities."
 msgstr ""
 
-#: ../../source/user/virtual_file_systems.rst:1317
+#: ../../source/user/virtual_file_systems.rst:1322
 msgid "Refer to :cpp:func:`VSIInstallCryptFileHandler` for more details."
 msgstr ""
 

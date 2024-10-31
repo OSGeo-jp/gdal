@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -297,17 +297,52 @@ msgid ""
 msgstr ""
 
 #: ../../source/development/building_from_source.rst:228
+msgid "Resource files embedding"
+msgstr ""
+
+#: ../../source/development/building_from_source.rst:230
+msgid ""
+"Starting with GDAL 3.11, if a C23-compatible compiler is used, such as "
+"clang >= 19 or GCC >= 15, it is possible to embed resource files inside "
+"the GDAL library, without relying on resource files to be available on "
+"the file system (such resource files are located through an hard-coded "
+"path at build time in ``${CMAKE_INSTALL_PREFIX}/share/gdal``, or at run-"
+"time through the :config:`GDAL_DATA` configuration option)."
+msgstr ""
+
+#: ../../source/development/building_from_source.rst:237
+msgid "The following CMake options control that behavior:"
+msgstr ""
+
+#: ../../source/development/building_from_source.rst:243
+msgid ""
+"Default is OFF for shared library builds (BUILD_SHARED_LIBS=ON), and ON "
+"for static library builds (BUILD_SHARED_LIBS=OFF). When ON, resource "
+"files needed by GDAL will be embedded into the GDAL library and/or "
+"relevant plugins."
+msgstr ""
+
+#: ../../source/development/building_from_source.rst:252
+msgid ""
+"Even if EMBED_RESOURCE_FILES=ON, GDAL will still try to locate resource "
+"files on the file system by default , and fallback to the embedded "
+"version if not found. By setting USE_ONLY_EMBEDDED_RESOURCE_FILES=ON, no "
+"attempt at locating resource files on the file system is made. Default is"
+" OFF."
+msgstr ""
+
+#: ../../source/development/building_from_source.rst:258
 msgid "CMake package dependent options"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:232
+#: ../../source/development/building_from_source.rst:262
 msgid ""
 "Generally speaking, packages (external dependencies) will be "
 "automatically found if they are in default locations used by CMake. This "
 "can be also tuned for example with the ``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:236
+#: ../../source/development/building_from_source.rst:266
 msgid ""
 "Starting with CMake 3.12, it is also possible to use a "
 "``<Packagename>_ROOT`` variable to define the prefix for a particular "
@@ -317,17 +352,17 @@ msgid ""
 "_INCLUDE_DIR and _LIBRARY variables."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:242
+#: ../../source/development/building_from_source.rst:272
 msgid ""
 "Most dependencies that would be found can also be disabled by setting the"
 " following option:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:247
+#: ../../source/development/building_from_source.rst:277
 msgid "Control whether a found dependency can be used for the GDAL build."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:249
+#: ../../source/development/building_from_source.rst:279
 msgid ""
 "It is also possible to ask GDAL to disable the use of any external "
 "dependency (besides the required one, PROJ) by default by setting the "
@@ -335,7 +370,7 @@ msgid ""
 "explicitly with GDAL_USE_<Packagename_in_upper_case>:BOOL=ON."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:256
+#: ../../source/development/building_from_source.rst:286
 msgid ""
 "Defaults to ON. When set to OFF, all external dependencies (but mandatory"
 " ones) will be disabled, unless individually enabled with "
@@ -346,7 +381,7 @@ msgid ""
 "libraries."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:263
+#: ../../source/development/building_from_source.rst:293
 msgid ""
 "Some of the GDAL dependencies (GEOTIFF, GIF, JPEG, JSONC, LERC, OPENCAD, "
 "PNG, QHULL, TIFF, ZLIB) have a copy of their source code inside the GDAL "
@@ -356,7 +391,7 @@ msgid ""
 "The behavior can also be globally controlled with the following variable:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:271
+#: ../../source/development/building_from_source.rst:301
 msgid ""
 "Control how internal libraries should be used. If set to ON, they will "
 "always be used. If set to OFF, they will never be used (unless "
@@ -367,7 +402,7 @@ msgid ""
 "be set before CMakeCache.txt is created."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:282
+#: ../../source/development/building_from_source.rst:312
 msgid ""
 "Using together GDAL_USE_EXTERNAL_LIBS=OFF and GDAL_USE_INTERNAL_LIBS=OFF "
 "will result in a CMake configuration failure, because the following "
@@ -376,64 +411,64 @@ msgid ""
 "external or internal libraries is thus required."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:290
+#: ../../source/development/building_from_source.rst:320
 msgid "Archive"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:292
+#: ../../source/development/building_from_source.rst:322
 msgid ""
 "`libarchive <https://www.libarchive.org/>`_ is a library that supports a "
 "variety of archive and compression formats. It might be used since GDAL "
 "3.7 to enable the :ref:`/vsi7z/ <vsi7z>` virtual file system."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:298
+#: ../../source/development/building_from_source.rst:328
 msgid "Path to an include directory with the ``archive.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:302
-#: ../../source/development/building_from_source.rst:363
-#: ../../source/development/building_from_source.rst:405
-#: ../../source/development/building_from_source.rst:559
-#: ../../source/development/building_from_source.rst:614
-#: ../../source/development/building_from_source.rst:707
-#: ../../source/development/building_from_source.rst:730
-#: ../../source/development/building_from_source.rst:749
-#: ../../source/development/building_from_source.rst:862
-#: ../../source/development/building_from_source.rst:981
-#: ../../source/development/building_from_source.rst:1006
-#: ../../source/development/building_from_source.rst:1055
-#: ../../source/development/building_from_source.rst:1076
-#: ../../source/development/building_from_source.rst:1100
-#: ../../source/development/building_from_source.rst:1153
-#: ../../source/development/building_from_source.rst:1198
-#: ../../source/development/building_from_source.rst:1387
-#: ../../source/development/building_from_source.rst:1426
-#: ../../source/development/building_from_source.rst:1445
-#: ../../source/development/building_from_source.rst:1464
-#: ../../source/development/building_from_source.rst:1495
-#: ../../source/development/building_from_source.rst:1543
-#: ../../source/development/building_from_source.rst:1638
-#: ../../source/development/building_from_source.rst:1689
-#: ../../source/development/building_from_source.rst:1785
-#: ../../source/development/building_from_source.rst:1817
-#: ../../source/development/building_from_source.rst:1966
-#: ../../source/development/building_from_source.rst:1987
-#: ../../source/development/building_from_source.rst:2038
+#: ../../source/development/building_from_source.rst:332
+#: ../../source/development/building_from_source.rst:393
+#: ../../source/development/building_from_source.rst:435
+#: ../../source/development/building_from_source.rst:589
+#: ../../source/development/building_from_source.rst:644
+#: ../../source/development/building_from_source.rst:737
+#: ../../source/development/building_from_source.rst:760
+#: ../../source/development/building_from_source.rst:779
+#: ../../source/development/building_from_source.rst:892
+#: ../../source/development/building_from_source.rst:1011
+#: ../../source/development/building_from_source.rst:1036
+#: ../../source/development/building_from_source.rst:1085
+#: ../../source/development/building_from_source.rst:1106
+#: ../../source/development/building_from_source.rst:1130
+#: ../../source/development/building_from_source.rst:1183
+#: ../../source/development/building_from_source.rst:1228
+#: ../../source/development/building_from_source.rst:1417
+#: ../../source/development/building_from_source.rst:1456
+#: ../../source/development/building_from_source.rst:1475
+#: ../../source/development/building_from_source.rst:1494
+#: ../../source/development/building_from_source.rst:1525
+#: ../../source/development/building_from_source.rst:1573
+#: ../../source/development/building_from_source.rst:1668
+#: ../../source/development/building_from_source.rst:1719
+#: ../../source/development/building_from_source.rst:1815
+#: ../../source/development/building_from_source.rst:1847
+#: ../../source/development/building_from_source.rst:1996
+#: ../../source/development/building_from_source.rst:2017
+#: ../../source/development/building_from_source.rst:2068
 msgid "Path to a shared or static library file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:306
+#: ../../source/development/building_from_source.rst:336
 msgid ""
 "Control whether to use libarchive. Defaults to ON when libarchive is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:310
+#: ../../source/development/building_from_source.rst:340
 msgid "Armadillo"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:312
+#: ../../source/development/building_from_source.rst:342
 msgid ""
 "The `Armadillo <http://arma.sourceforge.net/>`_ C++ library is used to "
 "speed up computations related to the Thin Plate Spline transformer. See "
@@ -443,36 +478,36 @@ msgid ""
 "libcblas liblapack liblapacke``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:320
+#: ../../source/development/building_from_source.rst:350
 msgid "Control whether to use Armadillo. Defaults to ON when Armadillo is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:324
+#: ../../source/development/building_from_source.rst:354
 msgid "Arrow"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:326
+#: ../../source/development/building_from_source.rst:356
 msgid ""
 "The `Apache Arrow C++ <https://github.com/apache/arrow/tree/master/cpp>` "
 "library is required for the :ref:`vector.arrow` and :ref:`vector.parquet`"
 " drivers. Specify install prefix in the ``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:332
+#: ../../source/development/building_from_source.rst:362
 msgid "Control whether to use Arrow. Defaults to ON when Arrow is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:336
+#: ../../source/development/building_from_source.rst:366
 msgid ""
 "Control whether to use statically built Arrow libraries. Defaults to OFF "
 "when Arrow is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:339
+#: ../../source/development/building_from_source.rst:369
 msgid "basisu"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:341
+#: ../../source/development/building_from_source.rst:371
 msgid ""
 "The `Basis Universal "
 "<https://github.com/rouault/basis_universal/tree/cmake>` library is "
@@ -481,131 +516,131 @@ msgid ""
 "``basisu_ROOT`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:347
+#: ../../source/development/building_from_source.rst:377
 msgid "Control whether to use basisu. Defaults to ON when basisu is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:351
+#: ../../source/development/building_from_source.rst:381
 msgid "Blosc"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:353
+#: ../../source/development/building_from_source.rst:383
 msgid ""
 "`Blosc <https://github.com/Blosc/c-blosc>`_ is a library which offers a "
 "meta-compression, with different backends (LZ4, Snappy, Zlib, Zstd, "
 "etc.). It is used by the :ref:`raster.zarr` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:359
+#: ../../source/development/building_from_source.rst:389
 msgid "Path to an include directory with the ``blosc.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:367
+#: ../../source/development/building_from_source.rst:397
 msgid "Control whether to use Blosc. Defaults to ON when Blosc is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:371
+#: ../../source/development/building_from_source.rst:401
 msgid "BRUNSLI"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:373
+#: ../../source/development/building_from_source.rst:403
 msgid ""
 "The `Brunsli <https://github.com/google/brunsli>`_ JPEG repacking "
 "library, used by the :ref:`raster.marfa` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:378
+#: ../../source/development/building_from_source.rst:408
 msgid ""
 "Path to an include directory with the ``brunsli/decode.h`` and "
 "``brunsli\\encode.h`` header files."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:382
+#: ../../source/development/building_from_source.rst:412
 msgid "Path to the brunslienc-c library file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:386
+#: ../../source/development/building_from_source.rst:416
 msgid "Path to the brunslidec-c library file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:390
+#: ../../source/development/building_from_source.rst:420
 msgid "Control whether to use BRUNSLI. Defaults to ON when Brunsli is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:394
+#: ../../source/development/building_from_source.rst:424
 msgid "CFITSIO"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:396
+#: ../../source/development/building_from_source.rst:426
 msgid ""
 "The `C FITS I/O <https://heasarc.gsfc.nasa.gov/fitsio/>`_ library is "
 "required for the :ref:`raster.fits` driver. It can be detected with pkg-"
 "config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:401
+#: ../../source/development/building_from_source.rst:431
 msgid "Path to an include directory with the ``fitsio.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:409
+#: ../../source/development/building_from_source.rst:439
 msgid "Control whether to use CFITSIO. Defaults to ON when CFITSIO is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:413
+#: ../../source/development/building_from_source.rst:443
 msgid "Crnlib"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:415
+#: ../../source/development/building_from_source.rst:445
 msgid ""
 "`Crnlib / crunch <https://github.com/rouault/crunch/tree/build_fixes>`_ "
 "is required for the :ref:`raster.dds` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:420
+#: ../../source/development/building_from_source.rst:450
 msgid "Path to Crnlib include directory with ``crunch/crnlib.h`` header."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:424
+#: ../../source/development/building_from_source.rst:454
 msgid "Path to Crnlib library to be linked."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:428
+#: ../../source/development/building_from_source.rst:458
 msgid "Control whether to use Crnlib. Defaults to ON when Crnlib is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:432
+#: ../../source/development/building_from_source.rst:462
 msgid "CURL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:434
+#: ../../source/development/building_from_source.rst:464
 msgid ""
 "`libcurl <https://curl.se/>`_ is required for all network accesses (HTTP,"
 " etc.)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:438
+#: ../../source/development/building_from_source.rst:468
 msgid "Path to an include directory with the ``curl`` directory."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:442
+#: ../../source/development/building_from_source.rst:472
 msgid ""
 "Path to a shared or static library file, such as ``libcurl.so``, "
 "``libcurl.lib``, or other name."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:449
+#: ../../source/development/building_from_source.rst:479
 msgid "Must be set to ON when linking against a static build of Curl."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:453
+#: ../../source/development/building_from_source.rst:483
 msgid "Control whether to use Curl. Defaults to ON when Curl is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:457
+#: ../../source/development/building_from_source.rst:487
 msgid "CryptoPP"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:459
+#: ../../source/development/building_from_source.rst:489
 msgid ""
 "The `Crypto++ <https://github.com/weidai11/cryptopp>`_ library can be "
 "used for the RSA SHA256 signing functionality used by some authentication"
@@ -615,36 +650,36 @@ msgid ""
 " file system."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:467
-#: ../../source/development/building_from_source.rst:1114
-#: ../../source/development/building_from_source.rst:1194
-#: ../../source/development/building_from_source.rst:1854
-#: ../../source/development/building_from_source.rst:1983
+#: ../../source/development/building_from_source.rst:497
+#: ../../source/development/building_from_source.rst:1144
+#: ../../source/development/building_from_source.rst:1224
+#: ../../source/development/building_from_source.rst:1884
+#: ../../source/development/building_from_source.rst:2013
 msgid "Path to the base include directory."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:471
+#: ../../source/development/building_from_source.rst:501
 msgid ""
 "Path to a shared or static library file.  A similar variable "
 "``CRYPTOPP_LIBRARY_DEBUG`` can also be specified to a similar library for"
 " building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:477
+#: ../../source/development/building_from_source.rst:507
 msgid ""
 "Defaults to OFF. Might be required to set to ON when linking against "
 "cryptopp.dll"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:482
+#: ../../source/development/building_from_source.rst:512
 msgid "Control whether to use CryptoPP. Defaults to ON when CryptoPP is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:486
+#: ../../source/development/building_from_source.rst:516
 msgid "Deflate"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:488
+#: ../../source/development/building_from_source.rst:518
 msgid ""
 "`libdeflate <https://github.com/ebiggers/libdeflate>`_ is a compression "
 "library which offers the lossless Deflate/Zip compression algorithm. It "
@@ -652,68 +687,68 @@ msgid ""
 "it, consequently it must be used as a complement to ZLib."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:496
+#: ../../source/development/building_from_source.rst:526
 msgid "Path to an include directory with the ``libdeflate.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:500
+#: ../../source/development/building_from_source.rst:530
 msgid ""
 "Path to a shared or static library file. A similar variable "
 "``Deflate_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:506
+#: ../../source/development/building_from_source.rst:536
 msgid "Control whether to use Deflate. Defaults to ON when Deflate is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:510
+#: ../../source/development/building_from_source.rst:540
 msgid "ECW"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:512
+#: ../../source/development/building_from_source.rst:542
 msgid ""
 "The Hexagon ECW SDK (closed source/proprietary) is required for the "
 ":ref:`raster.ecw` driver. Currently only support for ECW SDK 3.3 and 5.5 "
 "is offered."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:515
+#: ../../source/development/building_from_source.rst:545
 msgid ""
 "For ECW SDK 5.5, ECW_ROOT or CMAKE_PREFIX_PATH should point to the "
 "directory into which there are include and lib subdirectories, typically "
 "ending with ERDAS-ECW_JPEG_2000_SDK-5.5.0/Desktop_Read-Only."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:521
+#: ../../source/development/building_from_source.rst:551
 msgid "Path to the include directory with the ``NCSECWClient.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:525
+#: ../../source/development/building_from_source.rst:555
 msgid "Path to library file libNCSEcw"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:529
+#: ../../source/development/building_from_source.rst:559
 msgid "Path to library file libNCSCnet (only needed for SDK 3.3)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:533
+#: ../../source/development/building_from_source.rst:563
 msgid "Path to library file libNCSEcwC (only needed for SDK 3.3)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:537
+#: ../../source/development/building_from_source.rst:567
 msgid "Path to library file libNCSUtil (only needed for SDK 3.3)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:541
+#: ../../source/development/building_from_source.rst:571
 msgid "Control whether to use ECW. Defaults to ON when ECW is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:545
+#: ../../source/development/building_from_source.rst:575
 msgid "EXPAT"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:547
+#: ../../source/development/building_from_source.rst:577
 msgid ""
 "`Expat <https://github.com/libexpat/libexpat>`_ is a stream-oriented XML "
 "parser library which is required to enable XML parsing capabilities in an"
@@ -722,23 +757,23 @@ msgid ""
 "ILI or GMLAS may also require the XercesC library."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:555
+#: ../../source/development/building_from_source.rst:585
 msgid "Path to the include directory with the ``expat.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:565
+#: ../../source/development/building_from_source.rst:595
 msgid "Must be set to ON when linking against a static build of Expat."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:569
+#: ../../source/development/building_from_source.rst:599
 msgid "Control whether to use EXPAT. Defaults to ON when EXPAT is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:573
+#: ../../source/development/building_from_source.rst:603
 msgid "FileGDB"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:575
+#: ../../source/development/building_from_source.rst:605
 msgid ""
 "The `FileGDB SDK <https://github.com/Esri/file-geodatabase-api>`_ (closed"
 " source/proprietary) is required for the :ref:`vector.filegdb` driver "
@@ -746,95 +781,95 @@ msgid ""
 " external requirements)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:579
+#: ../../source/development/building_from_source.rst:609
 msgid ""
 "FileGDB_ROOT or CMAKE_PREFIX_PATH should point to the directory of the "
 "SDK."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:583
+#: ../../source/development/building_from_source.rst:613
 msgid "Path to the include directory with the ``FileGDBAPI.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:587
+#: ../../source/development/building_from_source.rst:617
 msgid "Path to library file"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:591
+#: ../../source/development/building_from_source.rst:621
 msgid "Path to Release library file (only used on Windows)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:595
+#: ../../source/development/building_from_source.rst:625
 msgid "Path to Debug library file (only used on Windows)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:599
+#: ../../source/development/building_from_source.rst:629
 msgid "Control whether to use FileGDB. Defaults to ON when FileGDB is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:603
+#: ../../source/development/building_from_source.rst:633
 msgid "FreeXL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:605
+#: ../../source/development/building_from_source.rst:635
 msgid ""
 "The `FreeXL <https://www.gaia-gis.it/fossil/freexl/index>`_ library is "
 "required for the :ref:`vector.xls` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:610
+#: ../../source/development/building_from_source.rst:640
 msgid "Path to an include directory with the ``freexl.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:618
+#: ../../source/development/building_from_source.rst:648
 msgid "Control whether to use FreeXL. Defaults to ON when FreeXL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:622
+#: ../../source/development/building_from_source.rst:652
 msgid "FYBA"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:624
+#: ../../source/development/building_from_source.rst:654
 msgid ""
 "The `OpenFyba <https://github.com/kartverket/fyba>`_ libraries are needed"
 " to build the :ref:`vector.sosi` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:628
+#: ../../source/development/building_from_source.rst:658
 msgid "Path to an include directory with the ``fyba.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:632
+#: ../../source/development/building_from_source.rst:662
 msgid "Path to a library file ``fyba``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:636
+#: ../../source/development/building_from_source.rst:666
 msgid "Path to a library file ``fygm``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:640
+#: ../../source/development/building_from_source.rst:670
 msgid "Path to a library file ``fyut``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:644
+#: ../../source/development/building_from_source.rst:674
 msgid "Control whether to use FYBA. Defaults to ON when FYBA is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:648
+#: ../../source/development/building_from_source.rst:678
 msgid "GEOTIFF"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:650
+#: ../../source/development/building_from_source.rst:680
 msgid ""
 "It is required for the :ref:`raster.gtiff` drivers, and a few other "
 "drivers. If not found, an internal copy of libgeotiff can be used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:655
+#: ../../source/development/building_from_source.rst:685
 msgid "Path to an include directory with the libgeotiff header files."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:659
+#: ../../source/development/building_from_source.rst:689
 msgid ""
 "Path to a shared or static library file, such as ``libgeotiff.so``, "
 "``geotiff.lib``, or other name. A similar variable "
@@ -842,24 +877,24 @@ msgid ""
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:666
+#: ../../source/development/building_from_source.rst:696
 msgid ""
 "Control whether to use external libgeotiff. Defaults to ON when external "
 "libgeotiff is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:670
+#: ../../source/development/building_from_source.rst:700
 msgid ""
 "Control whether to use internal libgeotiff copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_GEOTIFF=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:675
+#: ../../source/development/building_from_source.rst:705
 msgid "GEOS"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:677
+#: ../../source/development/building_from_source.rst:707
 msgid ""
 "`GEOS <https://github.com/libgeos/geos>`_ is a C++ library for performing"
 " operations on two-dimensional vector geometries. It is used as the "
@@ -868,124 +903,124 @@ msgid ""
 "detect it."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:684
+#: ../../source/development/building_from_source.rst:714
 msgid "Path to an include directory with the ``geos_c.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:688
+#: ../../source/development/building_from_source.rst:718
 msgid "Path to a shared or static library file (libgeos_c)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:692
+#: ../../source/development/building_from_source.rst:722
 msgid "Control whether to use GEOS. Defaults to ON when GEOS is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:696
+#: ../../source/development/building_from_source.rst:726
 msgid "GIF"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:698
+#: ../../source/development/building_from_source.rst:728
 msgid ""
 "`giflib <http://giflib.sourceforge.net/>`_ is required for the "
 ":ref:`raster.gif` driver. If not found, an internal copy can be used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:703
+#: ../../source/development/building_from_source.rst:733
 msgid "Path to an include directory with the ``gif_lib.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:711
+#: ../../source/development/building_from_source.rst:741
 msgid ""
 "Control whether to use external giflib. Defaults to ON when external "
 "giflib is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:715
+#: ../../source/development/building_from_source.rst:745
 msgid ""
 "Control whether to use internal giflib copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_GIF=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:720
+#: ../../source/development/building_from_source.rst:750
 msgid "GTA"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:722
+#: ../../source/development/building_from_source.rst:752
 msgid ""
 "The `GTA <https://marlam.de/gta/>`_ library is required for the "
 ":ref:`raster.gta` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:726
+#: ../../source/development/building_from_source.rst:756
 msgid "Path to an include directory with the ``gta/gta.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:734
+#: ../../source/development/building_from_source.rst:764
 msgid "Control whether to use GTA. Defaults to ON when GTA is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:738
+#: ../../source/development/building_from_source.rst:768
 msgid "HEIF"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:740
+#: ../../source/development/building_from_source.rst:770
 msgid ""
 "The `HEIF <https://github.com/strukturag/libheif>`_ (>= 1.1) library used"
 " by the :ref:`raster.heif` driver. It can be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:745
+#: ../../source/development/building_from_source.rst:775
 msgid "Path to an include directory with the ``libheif/heif.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:753
+#: ../../source/development/building_from_source.rst:783
 msgid "Control whether to use HEIF. Defaults to ON when HEIF is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:756
+#: ../../source/development/building_from_source.rst:786
 msgid "HDF4"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:758
+#: ../../source/development/building_from_source.rst:788
 msgid ""
 "The `HDF4 <https://support.hdfgroup.org/products/hdf4/>`_ C library is "
 "needed for the :ref:`raster.hdf4` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:763
+#: ../../source/development/building_from_source.rst:793
 msgid "Path to an include directory with the ``hdf.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:767
+#: ../../source/development/building_from_source.rst:797
 msgid ""
 "Path to a shared or static ``dfalt`` or ``df`` library file. A similar "
 "variable ``HDF4_df_LIBRARY_DEBUG`` can also be specified to a similar "
 "library for building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:773
+#: ../../source/development/building_from_source.rst:803
 msgid ""
 "Path to a shared or static ``mfhdfalt`` or ``mfhdf`` library file. A "
 "similar variable ``HDF4_mfhdf_LIBRARY_DEBUG`` can also be specified to a "
 "similar library for building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:779
+#: ../../source/development/building_from_source.rst:809
 msgid ""
 "Path to a shared or static ``xdr`` library file. A similar variable "
 "``HDF4_xdr_LIBRARY_DEBUG`` can also be specified to a similar library for"
 " building Debug releases. It is generally not needed for Linux builds"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:786
+#: ../../source/development/building_from_source.rst:816
 msgid ""
 "Path to a shared or static ``szip`` library file. A similar variable "
 "``HDF4_szip_LIBRARY_DEBUG`` can also be specified to a similar library "
 "for building Debug releases. It is generally not needed for Linux builds"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:793
+#: ../../source/development/building_from_source.rst:823
 msgid ""
 "The value of this option is a list which defaults to "
 "``df;mfhdf;xdr;szip``. It may be customized if the linking of HDF4 "
@@ -994,15 +1029,15 @@ msgid ""
 "configure the library file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:800
+#: ../../source/development/building_from_source.rst:830
 msgid "Control whether to use HDF4. Defaults to ON when HDF4 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:804
+#: ../../source/development/building_from_source.rst:834
 msgid "HDF5"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:806
+#: ../../source/development/building_from_source.rst:836
 msgid ""
 "The `HDF5 <https://github.com/HDFGroup/hdf5>`_ C library is needed for "
 "the :ref:`raster.hdf5` and :ref:`raster.bag` drivers. The HDF5 CXX "
@@ -1011,11 +1046,11 @@ msgid ""
 "to detect the HDF5 library."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:814
+#: ../../source/development/building_from_source.rst:844
 msgid "Control whether to use HDF5. Defaults to ON when HDF5 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:818
+#: ../../source/development/building_from_source.rst:848
 msgid ""
 "Control whether to add a global lock around calls to HDF5 library. This "
 "is needed if the HDF5 library is not built with thread-safety enabled and"
@@ -1025,34 +1060,34 @@ msgid ""
 "the setting must be manually set when needed."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:829
+#: ../../source/development/building_from_source.rst:859
 msgid "HDFS"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:831
+#: ../../source/development/building_from_source.rst:861
 msgid ""
 "The `Hadoop File System <https://hadoop.apache.org/docs/stable/hadoop-"
 "project-dist/hadoop-hdfs/LibHdfs.html>`_ native library is needed for the"
 " :ref:`/vsihdfs/ <vsihdfs>` virtual file system."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:836
+#: ../../source/development/building_from_source.rst:866
 msgid "Path to an include directory with the ``hdfs.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:840
+#: ../../source/development/building_from_source.rst:870
 msgid "Path to a shared or static ``hdfs`` library file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:844
+#: ../../source/development/building_from_source.rst:874
 msgid "Control whether to use HDFS. Defaults to ON when HDFS is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:848
+#: ../../source/development/building_from_source.rst:878
 msgid "Iconv"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:850
+#: ../../source/development/building_from_source.rst:880
 msgid ""
 "The `Iconv <https://www.gnu.org/software/libiconv/>`_ library is used to "
 "convert text from one encoding to another encoding. It is generally "
@@ -1061,64 +1096,64 @@ msgid ""
 " using Iconv will provide additional capabilities."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:858
+#: ../../source/development/building_from_source.rst:888
 msgid "Path to an include directory with the ``iconv.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:866
+#: ../../source/development/building_from_source.rst:896
 msgid "Control whether to use Iconv. Defaults to ON when Iconv is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:870
+#: ../../source/development/building_from_source.rst:900
 msgid "IDB"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:872
+#: ../../source/development/building_from_source.rst:902
 msgid ""
 "The Informix DataBase Client SDK (closed source/proprietary)  is needed "
 "to build the :ref:`vector.idb` driver. IDB_ROOT or CMAKE_PREFIX_PATH "
 "should point to the directory of the SDK."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:879
+#: ../../source/development/building_from_source.rst:909
 msgid ""
 "Path to an include directory (typically ending with ``incl``) with the "
 "``c++/it.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:883
+#: ../../source/development/building_from_source.rst:913
 msgid ""
 "Path to a library file ``ifc++`` (typically in the ``lib/c++`` sub "
 "directory)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:887
+#: ../../source/development/building_from_source.rst:917
 msgid ""
 "Path to a library file ``ifdmi`` (typically in the ``lib/dmi`` sub "
 "directory)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:891
+#: ../../source/development/building_from_source.rst:921
 msgid ""
 "Path to a library file ``ifsql`` (typically in the ``lib/esql`` sub "
 "directory)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:895
+#: ../../source/development/building_from_source.rst:925
 msgid ""
 "Path to a library file ``ifcli`` (typically in the ``lib/cli`` sub "
 "directory)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:899
+#: ../../source/development/building_from_source.rst:929
 msgid "Control whether to use IDB. Defaults to ON when IDB is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:903
+#: ../../source/development/building_from_source.rst:933
 msgid "JPEG"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:905
+#: ../../source/development/building_from_source.rst:935
 msgid ""
 "libjpeg is required for the :ref:`raster.jpeg` driver, and may be used by"
 " a few other drivers (:ref:`raster.gpkg`, :ref:`raster.marfa`, internal "
@@ -1129,49 +1164,49 @@ msgid ""
 " on how the library is detected."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:915
+#: ../../source/development/building_from_source.rst:945
 msgid ""
 "When using libjpeg-turbo, JPEG_LIBRARY[_RELEASE/_DEBUG] should point to a"
 " library with libjpeg ABI, not TurboJPEG. See https://libjpeg-"
 "turbo.org/About/TurboJPEG for the difference."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:921
+#: ../../source/development/building_from_source.rst:951
 msgid "Path to an include directory with the ``jpeglib.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:925
+#: ../../source/development/building_from_source.rst:955
 msgid ""
 "Path to a shared or static library file. A similar variable "
 "``JPEG_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:931
+#: ../../source/development/building_from_source.rst:961
 msgid ""
 "Control whether to use external libjpeg. Defaults to ON when external "
 "libjpeg is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:935
+#: ../../source/development/building_from_source.rst:965
 msgid ""
 "Control whether to use internal libjpeg copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_JPEG=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:940
+#: ../../source/development/building_from_source.rst:970
 msgid ""
 "Used with external libjpeg. number is for example 80, for libjpeg 8 ABI. "
 "This can be used to check a build time that the expected JPEG library is "
 "the one that is included by GDAL."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:946
+#: ../../source/development/building_from_source.rst:976
 msgid "JPEG12"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:948
+#: ../../source/development/building_from_source.rst:978
 msgid ""
 "libjpeg-12 bit can be used by the :ref:`raster.jpeg`, :ref:`raster.gtiff`"
 " (when using internal libtiff), :ref:`raster.jpeg`, :ref:`raster.marfa` "
@@ -1181,11 +1216,11 @@ msgid ""
 "libjpeg is used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:956
+#: ../../source/development/building_from_source.rst:986
 msgid "Control whether to use internal libjpeg-12 copy. Defaults to ON."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:960
+#: ../../source/development/building_from_source.rst:990
 msgid ""
 "Starting with GDAL 3.7, if using libjpeg-turbo >= 2.2, which adds native "
 "support for dual 8/12-bit, using internal libjpeg-12 is no longer needed "
@@ -1195,56 +1230,56 @@ msgid ""
 "in the GeoTIFF support."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:968
+#: ../../source/development/building_from_source.rst:998
 msgid "JSON-C"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:970
+#: ../../source/development/building_from_source.rst:1000
 msgid ""
 "The `json-c <https://github.com/json-c/json-c>`_ library is required to "
 "read and write JSON content. It can be detected with pkg-config. If not "
 "found, an internal copy of json-c can be used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:977
+#: ../../source/development/building_from_source.rst:1007
 msgid "Path to an include directory with the ``json.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:985
+#: ../../source/development/building_from_source.rst:1015
 msgid "Control whether to use JSON-C. Defaults to ON when JSON-C is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:989
+#: ../../source/development/building_from_source.rst:1019
 msgid ""
 "Control whether to use internal JSON-C copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_JSONC=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:994
+#: ../../source/development/building_from_source.rst:1024
 msgid "JXL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:996
+#: ../../source/development/building_from_source.rst:1026
 msgid ""
 "The `libjxl <https://github.com/libjxl/libjxl>` library used by the "
 ":ref:`raster.gtiff` driver, when built against internal libtiff. It can "
 "be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1002
+#: ../../source/development/building_from_source.rst:1032
 msgid "Path to an include directory with the ``jxl/decode.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1010
+#: ../../source/development/building_from_source.rst:1040
 msgid "Control whether to use JXL. Defaults to ON when JXL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1014
+#: ../../source/development/building_from_source.rst:1044
 msgid "KDU"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1016
+#: ../../source/development/building_from_source.rst:1046
 msgid ""
 "The Kakadu library (proprietary) is required for the :ref:`raster.jp2kak`"
 " and :ref:`raster.jpipkak` drivers. There is no standardized installation"
@@ -1255,51 +1290,51 @@ msgid ""
 "KDU_AUX_LIBRARY variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1026
+#: ../../source/development/building_from_source.rst:1056
 msgid ""
 "Path to the root of the Kakadu build tree, from which the "
 "``coresys/common/kdu_elementary.h`` header file should be found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1031
+#: ../../source/development/building_from_source.rst:1061
 msgid ""
 "Path to a shared library file whose name is like libkdu_vXYR.so on Unix "
 "or kdu_vXYR.lib on Windows, where X.Y is the Kakadu version."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1036
+#: ../../source/development/building_from_source.rst:1066
 msgid ""
 "Path to a shared library file whose name is like libkdu_aXYR.so on Unix "
 "or kdu_aXYR.lib on Windows, where X.Y is the Kakadu version."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1041
+#: ../../source/development/building_from_source.rst:1071
 msgid "Control whether to use KDU. Defaults to ON when KDU is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1044
+#: ../../source/development/building_from_source.rst:1074
 msgid "KEA"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1046
+#: ../../source/development/building_from_source.rst:1076
 msgid ""
 "The `KEA <http://www.kealib.org/>`_ library is required for the "
 ":ref:`raster.kea` driver. The HDF5 CXX library is also required."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1051
+#: ../../source/development/building_from_source.rst:1081
 msgid "Path to an include directory with the ``libkea/KEACommon.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1059
+#: ../../source/development/building_from_source.rst:1089
 msgid "Control whether to use KEA. Defaults to ON when KEA is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1063
+#: ../../source/development/building_from_source.rst:1093
 msgid "LERC"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1065
+#: ../../source/development/building_from_source.rst:1095
 msgid ""
 "`LERC <https://github.com/esri/lerc>`_ is an open-source image or raster "
 "format which supports rapid encoding and decoding for any pixel type (not"
@@ -1308,26 +1343,26 @@ msgid ""
 " (within user defined error bounds)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1072
+#: ../../source/development/building_from_source.rst:1102
 msgid "Path to an include directory with the ``Lerc_c_api.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1080
+#: ../../source/development/building_from_source.rst:1110
 msgid "Control whether to use LERC. Defaults to ON when LERC is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1084
+#: ../../source/development/building_from_source.rst:1114
 msgid ""
 "Control whether to use the LERC internal library. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_LERC=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1088
+#: ../../source/development/building_from_source.rst:1118
 msgid "LIBAEC"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1090
+#: ../../source/development/building_from_source.rst:1120
 msgid ""
 "`libaec <https://gitlab.dkrz.de/k202009/libaec>`_ is a compression "
 "library which offers the extended Golomb-Rice coding as defined in the "
@@ -1335,78 +1370,78 @@ msgid ""
 ":ref:`raster.grib` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1096
+#: ../../source/development/building_from_source.rst:1126
 msgid "Path to an include directory with the ``libaec.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1104
+#: ../../source/development/building_from_source.rst:1134
 msgid "Control whether to use LIBAEC. Defaults to ON when LIBAEC is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1107
+#: ../../source/development/building_from_source.rst:1137
 msgid "LibKML"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1109
+#: ../../source/development/building_from_source.rst:1139
 msgid ""
 "`LibKML <https://github.com/libkml/libkml>`_ is required for the "
 ":ref:`vector.libkml` driver. It can be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1118
+#: ../../source/development/building_from_source.rst:1148
 msgid "Path to a shared or static library file for ``kmlbase``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1122
+#: ../../source/development/building_from_source.rst:1152
 msgid "Path to a shared or static library file for ``kmldom``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1126
+#: ../../source/development/building_from_source.rst:1156
 msgid "Path to a shared or static library file for ``kmlengine``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1130
+#: ../../source/development/building_from_source.rst:1160
 msgid "Path to a shared or static library file for ``minizip``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1134
+#: ../../source/development/building_from_source.rst:1164
 msgid "Path to a shared or static library file for ``uriparser``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1138
+#: ../../source/development/building_from_source.rst:1168
 msgid "Control whether to use LibKML. Defaults to ON when LibKML is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1141
+#: ../../source/development/building_from_source.rst:1171
 msgid "LibLZMA"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1143
+#: ../../source/development/building_from_source.rst:1173
 msgid ""
 "`LibLZMA <https://tukaani.org/xz/>`_ is a compression library which "
 "offers the lossless LZMA2 compression algorithm. It is used by the "
 "internal libtiff library or the :ref:`raster.zarr` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1149
+#: ../../source/development/building_from_source.rst:1179
 msgid "Path to an include directory with the ``lzma.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1157
+#: ../../source/development/building_from_source.rst:1187
 msgid "Control whether to use LibLZMA. Defaults to ON when LibLZMA is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1161
+#: ../../source/development/building_from_source.rst:1191
 msgid "libOpenDRIVE"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1163
+#: ../../source/development/building_from_source.rst:1193
 msgid ""
 "`libOpenDRIVE <https://github.com/pageldev/libOpenDRIVE>`_ in version >= "
 "0.6.0 is required for the :ref:`vector.xodr` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1167
+#: ../../source/development/building_from_source.rst:1197
 msgid ""
 "Path to libOpenDRIVE CMake configuration directory "
 "``<installDir>/cmake/``. The :file:`cmake/` path is usually automatically"
@@ -1414,31 +1449,31 @@ msgid ""
 "configuration files for inclusion into other project builds."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1171
+#: ../../source/development/building_from_source.rst:1201
 msgid ""
 "Control whether to use libOpenDRIVE. Defaults to ON when libOpenDRIVE is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1175
+#: ../../source/development/building_from_source.rst:1205
 msgid "LibQB3"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1177
+#: ../../source/development/building_from_source.rst:1207
 msgid ""
 "The `QB3 <https://github.com/lucianpls/QB3>`_ compression, used by the "
 ":ref:`raster.marfa` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1182
+#: ../../source/development/building_from_source.rst:1212
 msgid "Control whether to use LibQB3. Defaults to ON when LibQB3 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1186
+#: ../../source/development/building_from_source.rst:1216
 msgid "LibXml2"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1188
+#: ../../source/development/building_from_source.rst:1218
 msgid ""
 "The `LibXml2 <http://xmlsoft.org/>`_ processing library is used to do "
 "validation of XML files against a XML Schema (.xsd) in a few drivers "
@@ -1446,108 +1481,108 @@ msgid ""
 "generation."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1202
+#: ../../source/development/building_from_source.rst:1232
 msgid "Control whether to use LibXml2. Defaults to ON when LibXml2 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1206
+#: ../../source/development/building_from_source.rst:1236
 msgid "LURATECH"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1208
+#: ../../source/development/building_from_source.rst:1238
 msgid ""
 "The Luratech JPEG2000 SDK (closed source/proprietary) is required for the"
 " :ref:`raster.jp2lura` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1211
+#: ../../source/development/building_from_source.rst:1241
 msgid ""
 "LURATECH_ROOT or CMAKE_PREFIX_PATH should point to the directory of the "
 "SDK."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1215
+#: ../../source/development/building_from_source.rst:1245
 msgid "Path to the include directory with the ``lwf_jp2.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1219
+#: ../../source/development/building_from_source.rst:1249
 msgid "Path to library file lib_lwf_jp2.a / lwf_jp2.lib"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1223
+#: ../../source/development/building_from_source.rst:1253
 msgid "Control whether to use LURATECH. Defaults to ON when LURATECH is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1227
+#: ../../source/development/building_from_source.rst:1257
 msgid "LZ4"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1229
+#: ../../source/development/building_from_source.rst:1259
 msgid ""
 "`LZ4 <https://github.com/lz4/lz4>`_ is a compression library which offers"
 " the lossless LZ4 compression algorithm. It is used by the "
 ":ref:`raster.zarr` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1235
+#: ../../source/development/building_from_source.rst:1265
 msgid "Path to an include directory with the ``lz4.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1239
+#: ../../source/development/building_from_source.rst:1269
 msgid ""
 "Path to a shared or static library file.  A similar variable "
 "``LZ4_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1245
+#: ../../source/development/building_from_source.rst:1275
 msgid "Control whether to use LZ4. Defaults to ON when LZ4 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1249
+#: ../../source/development/building_from_source.rst:1279
 msgid "MONGOCXX"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1251
+#: ../../source/development/building_from_source.rst:1281
 msgid ""
 "The `MongoCXX <https://github.com/mongodb/mongo-cxx-driver>`_ and BsonCXX"
 " libraries are needed to build the :ref:`vector.mongodbv3` driver. They "
 "can be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1257
+#: ../../source/development/building_from_source.rst:1287
 msgid "Path to an include directory with the ``mongocxx/client.hpp`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1261
+#: ../../source/development/building_from_source.rst:1291
 msgid ""
 "Path to an include directory with the ``bsoncxx/config/version.hpp`` "
 "header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1265
+#: ../../source/development/building_from_source.rst:1295
 msgid "Path to a library file ``mongocxx``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1269
+#: ../../source/development/building_from_source.rst:1299
 msgid "Path to a library file ``bsoncxx``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1273
+#: ../../source/development/building_from_source.rst:1303
 msgid "Control whether to use MONGOCXX. Defaults to ON when MONGOCXX is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1277
+#: ../../source/development/building_from_source.rst:1307
 msgid "MRSID"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1279
+#: ../../source/development/building_from_source.rst:1309
 msgid ""
 "The MRSID Raster DSDK (closed source/proprietary) is required for the "
 ":ref:`raster.mrsid` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1282
+#: ../../source/development/building_from_source.rst:1312
 msgid ""
 "MRSID_ROOT or CMAKE_PREFIX_PATH should point to the directory of the SDK "
 "ending with Raster_DSDK. Note that on Linux, its lib subdirectory should "
@@ -1555,29 +1590,29 @@ msgid ""
 "and libtbb.so can be found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1289
+#: ../../source/development/building_from_source.rst:1319
 msgid "Path to the include directory with the ``lt_base.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1293
+#: ../../source/development/building_from_source.rst:1323
 msgid "Path to library file libltidsdk"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1297
+#: ../../source/development/building_from_source.rst:1327
 msgid ""
 "Whether to enable JPEG2000 support through the MrSID SDK. The default "
 "value of this option is OFF."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1302
+#: ../../source/development/building_from_source.rst:1332
 msgid "Control whether to use MRSID. Defaults to ON when MRSID is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1306
+#: ../../source/development/building_from_source.rst:1336
 msgid "MSSQL_NCLI"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1308
+#: ../../source/development/building_from_source.rst:1338
 msgid ""
 "The Microsoft SQL Native Client Library (closed source/proprietary) is "
 "required to enable bulk copy in the :ref:`vector.mssqlspatial` driver. If"
@@ -1586,31 +1621,31 @@ msgid ""
 "and at version 11."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1315
+#: ../../source/development/building_from_source.rst:1345
 msgid "Major version of the Native Client, typically 11"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1319
+#: ../../source/development/building_from_source.rst:1349
 msgid "Path to include directory with ``sqlncli.h`` header."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1323
-#: ../../source/development/building_from_source.rst:1348
-#: ../../source/development/building_from_source.rst:1367
+#: ../../source/development/building_from_source.rst:1353
+#: ../../source/development/building_from_source.rst:1378
+#: ../../source/development/building_from_source.rst:1397
 msgid "Path to library to be linked."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1327
+#: ../../source/development/building_from_source.rst:1357
 msgid ""
 "Control whether to use MSSQL_NCLI. Defaults to ON when MSSQL_NCLI is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1331
+#: ../../source/development/building_from_source.rst:1361
 msgid "MSSQL_ODBC"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1333
+#: ../../source/development/building_from_source.rst:1363
 msgid ""
 "The Microsoft SQL Native ODBC driver Library (closed source/proprietary) "
 "is required to enable bulk copy in the :ref:`vector.mssqlspatial` driver."
@@ -1619,62 +1654,62 @@ msgid ""
 "location, and at version 17."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1340
+#: ../../source/development/building_from_source.rst:1370
 msgid "Major version of the Native Client, typically 17"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1344
+#: ../../source/development/building_from_source.rst:1374
 msgid "Path to include directory with ``msodbcsql.h`` header."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1352
+#: ../../source/development/building_from_source.rst:1382
 msgid ""
 "Control whether to use MSSQL_ODBC. Defaults to ON when MSSQL_ODBC is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1356
+#: ../../source/development/building_from_source.rst:1386
 msgid "MYSQL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1358
+#: ../../source/development/building_from_source.rst:1388
 msgid ""
 "The MySQL or MariaDB client library is required to enable the "
 ":ref:`vector.mysql` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1363
+#: ../../source/development/building_from_source.rst:1393
 msgid "Path to include directory with ``mysql.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1371
+#: ../../source/development/building_from_source.rst:1401
 msgid "Control whether to use MYSQL. Defaults to ON when MYSQL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1375
+#: ../../source/development/building_from_source.rst:1405
 msgid "NetCDF"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1377
+#: ../../source/development/building_from_source.rst:1407
 msgid ""
 "The `netCDF <https://github.com/Unidata/netcdf-c>`_ is required to enable"
 " the :ref:`raster.netcdf` driver. The ``nc-config`` program can be used "
 "to detect it."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1383
+#: ../../source/development/building_from_source.rst:1413
 msgid "Path to an include directory with the ``netcdf.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1391
+#: ../../source/development/building_from_source.rst:1421
 msgid "Control whether to use netCDF. Defaults to ON when netCDF is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1395
+#: ../../source/development/building_from_source.rst:1425
 msgid "ODBC"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1397
+#: ../../source/development/building_from_source.rst:1427
 msgid ""
 "ODBC is required for various drivers: :ref:`vector.odbc`, "
 ":ref:`vector.pgeo`, :ref:`vector.hana` and :ref:`vector.mssqlspatial`. It"
@@ -1682,93 +1717,93 @@ msgid ""
 "Windows."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1403
+#: ../../source/development/building_from_source.rst:1433
 msgid "Path to ODBC include directory with ``sql.h`` header."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1407
+#: ../../source/development/building_from_source.rst:1437
 msgid "Path to ODBC library to be linked."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1411
+#: ../../source/development/building_from_source.rst:1441
 msgid "Control whether to use ODBC. Defaults to ON when ODBC is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1415
+#: ../../source/development/building_from_source.rst:1445
 msgid "ODBC-CPP"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1417
+#: ../../source/development/building_from_source.rst:1447
 msgid ""
 "The `odbc-cpp-wrapper library <https://github.com/SAP/odbc-cpp-wrapper>`_"
 " is required for the :ref:`vector.hana` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1422
+#: ../../source/development/building_from_source.rst:1452
 msgid "Path to an include directory with the ``odbc/Environment.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1430
+#: ../../source/development/building_from_source.rst:1460
 msgid "Control whether to use ODBC-CPP. Defaults to ON when ODBC-CPP is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1434
+#: ../../source/development/building_from_source.rst:1464
 msgid "OGDI"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1436
+#: ../../source/development/building_from_source.rst:1466
 msgid ""
 "The `OGDI <https://github.com/libogdi/ogdi/>`_ library is required for "
 "the :ref:`vector.ogdi` driver. It can be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1441
+#: ../../source/development/building_from_source.rst:1471
 msgid "Path to an include directory with the ``ecs.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1449
+#: ../../source/development/building_from_source.rst:1479
 msgid "Control whether to use OGDI. Defaults to ON when OGDI is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1453
+#: ../../source/development/building_from_source.rst:1483
 msgid "OpenCAD"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1455
+#: ../../source/development/building_from_source.rst:1485
 msgid ""
 "`libopencad <https://github.com/nextgis-borsch/lib_opencad>`_ is required"
 " for the :ref:`vector.cad` driver. If not found, an internal copy can be "
 "used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1460
+#: ../../source/development/building_from_source.rst:1490
 msgid "Path to an include directory with the ``opencad.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1468
+#: ../../source/development/building_from_source.rst:1498
 msgid ""
 "Control whether to use external libopencad. Defaults to ON when external "
 "libopencad is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1472
+#: ../../source/development/building_from_source.rst:1502
 msgid ""
 "Control whether to use internal libopencad copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_OPENCAD=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1478
+#: ../../source/development/building_from_source.rst:1508
 msgid "OpenCL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1480
+#: ../../source/development/building_from_source.rst:1510
 msgid ""
 "The OpenCL library may be used to accelerate warping computations, "
 "typically with a GPU."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1483
+#: ../../source/development/building_from_source.rst:1513
 msgid ""
 "(GDAL 3.5 and 3.6) It is disabled by default even when detected, since "
 "the current OpenCL warping implementation lags behind the generic "
@@ -1778,25 +1813,25 @@ msgid ""
 "GDAL_USE_OPENCL must be set to YES to enable it."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1491
+#: ../../source/development/building_from_source.rst:1521
 msgid "Path to an include directory with the ``CL/cl.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1499
+#: ../../source/development/building_from_source.rst:1529
 msgid "Control whether to use OPENCL. Defaults to *OFF* when OPENCL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1503
+#: ../../source/development/building_from_source.rst:1533
 msgid "OpenEXR"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1505
+#: ../../source/development/building_from_source.rst:1535
 msgid ""
 "`OpenEXR <https://github.com/AcademySoftwareFoundation/openexr>`_ is "
 "required for the :ref:`raster.exr` driver"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1507
+#: ../../source/development/building_from_source.rst:1537
 msgid ""
 "Specify ``OpenEXR_ROOT`` variable pointing to the parent directory of "
 "/lib and /include subdirectories, i.e. /DEV/lib/openexr-3.0. For OpenEXR "
@@ -1804,34 +1839,34 @@ msgid ""
 "now, i.e. /DEV/lib/imath-3.1.3"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1512
-#: ../../source/development/building_from_source.rst:1517
+#: ../../source/development/building_from_source.rst:1542
+#: ../../source/development/building_from_source.rst:1547
 msgid "or"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1514
+#: ../../source/development/building_from_source.rst:1544
 msgid ""
 "Specify root directory adding to the ``CMAKE_PREFIX_PATH`` variable to "
 "find OpenEXR's pkgconfig. For example "
 "-DCMAKE_PREFIX_PATH=/DEV/lib/openexr-3.0;/DEV/lib/imath-3.1.3"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1519
+#: ../../source/development/building_from_source.rst:1549
 msgid ""
 "Get real specific and set ``OpenEXR_INCLUDE_DIR``, ``Imath_INCLUDE_DIR``,"
 " ``OpenEXR_LIBRARY``, ``OpenEXR_UTIL_LIBRARY``, ``OpenEXR_HALF_LIBRARY``,"
 " ``OpenEXR_IEX_LIBRARY`` explicitly"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1527
+#: ../../source/development/building_from_source.rst:1557
 msgid "Control whether to use OpenEXR. Defaults to ON when OpenEXR is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1531
+#: ../../source/development/building_from_source.rst:1561
 msgid "OpenJPEG"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1533
+#: ../../source/development/building_from_source.rst:1563
 msgid ""
 "The `OpenJPEG <https://github.com/uclouvain/openjpeg>`_ library is an "
 "open-source JPEG-2000 codec written in C language. It is required for the"
@@ -1839,15 +1874,15 @@ msgid ""
 "functionality."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1539
+#: ../../source/development/building_from_source.rst:1569
 msgid "Path to an include directory with the ``openjpeg.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1547
+#: ../../source/development/building_from_source.rst:1577
 msgid "Control whether to use OpenJPEG. Defaults to ON when OpenJPEG is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1553
+#: ../../source/development/building_from_source.rst:1583
 msgid ""
 "Control the mode used for find_package(OpenJPEG). Defaults to MODULE for "
 "compatibility with OpenJPEG < 2.5.1. If set to CONFIG, only Config mode "
@@ -1855,11 +1890,11 @@ msgid ""
 "(https://cmake.org/cmake/help/latest/command/find_package.html) applies."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1560
+#: ../../source/development/building_from_source.rst:1590
 msgid "OpenSSL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1562
+#: ../../source/development/building_from_source.rst:1592
 msgid ""
 "The Crypto component of the `OpenSSL "
 "<https://github.com/openssl/openssl>`_ library can be used for the RSA "
@@ -1868,7 +1903,7 @@ msgid ""
 "or use the :ref:`/vsigs/ <vsigs>` virtual file system."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1567
+#: ../../source/development/building_from_source.rst:1597
 msgid ""
 "See https://cmake.org/cmake/help/latest/module/FindOpenSSL.html for "
 "details on how to configure the library. For static linking, the "
@@ -1876,33 +1911,33 @@ msgid ""
 "-DOPENSSL_MSVC_STATIC_RT=TRUE"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1573
+#: ../../source/development/building_from_source.rst:1603
 msgid "Control whether to use OpenSSL. Defaults to ON when OpenSSL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1577
+#: ../../source/development/building_from_source.rst:1607
 msgid "Oracle"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1579
+#: ../../source/development/building_from_source.rst:1609
 msgid ""
 "The Oracle Instant Client SDK (closed source/proprietary) is required for"
 " the :ref:`vector.oci` and the :ref:`raster.georaster` drivers"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1584
+#: ../../source/development/building_from_source.rst:1614
 msgid "Path to the root directory of the Oracle Instant Client SDK."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1588
+#: ../../source/development/building_from_source.rst:1618
 msgid "Control whether to use Oracle. Defaults to ON when Oracle is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1592
+#: ../../source/development/building_from_source.rst:1622
 msgid "Parquet"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1594
+#: ../../source/development/building_from_source.rst:1624
 msgid ""
 "The Parquet component of the `Apache Arrow C++ "
 "<https://github.com/apache/arrow/tree/master/cpp>` library is required "
@@ -1910,62 +1945,62 @@ msgid ""
 "``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1600
+#: ../../source/development/building_from_source.rst:1630
 msgid "Control whether to use Parquet. Defaults to ON when Parquet is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1604
+#: ../../source/development/building_from_source.rst:1634
 msgid ""
 "Control whether to use statically built Arrow libraries. Defaults to OFF "
 "when Parquet is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1608
+#: ../../source/development/building_from_source.rst:1638
 msgid "PCRE2"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1610
+#: ../../source/development/building_from_source.rst:1640
 msgid ""
 "`PCRE2 <https://github.com/PhilipHazel/pcre2>`_ implements Perl-"
 "compatible Regular Expressions support. It is used for the REGEXP "
 "operator in drivers using SQLite3."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1615
+#: ../../source/development/building_from_source.rst:1645
 msgid "Path to an include directory with the ``pcre2.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1619
+#: ../../source/development/building_from_source.rst:1649
 msgid "Path to a shared or static library file with \"pcre2-8\" in its name."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1623
+#: ../../source/development/building_from_source.rst:1653
 msgid "Control whether to use PCRE2. Defaults to ON when PCRE2 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1627
+#: ../../source/development/building_from_source.rst:1657
 msgid "PDFIUM"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1629
+#: ../../source/development/building_from_source.rst:1659
 msgid ""
 "The `PDFium <https://github.com/rouault/pdfium_build_gdal_3_5>`_ library "
 "is one of the possible backends for the :ref:`raster.pdf` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1634
+#: ../../source/development/building_from_source.rst:1664
 msgid "Path to an include directory with the ``public/fpdfview.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1642
+#: ../../source/development/building_from_source.rst:1672
 msgid "Control whether to use PDFIUM. Defaults to ON when PDFIUM is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1646
+#: ../../source/development/building_from_source.rst:1676
 msgid "PNG"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1648
+#: ../../source/development/building_from_source.rst:1678
 msgid ""
 "`libpng <https://github.com/glennrp/libpng>`_ is required for the "
 ":ref:`raster.png` driver, and may be used by a few other drivers "
@@ -1975,104 +2010,104 @@ msgid ""
 "on how the library is detected."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1656
+#: ../../source/development/building_from_source.rst:1686
 msgid "Path to an include directory with the ``png.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1660
+#: ../../source/development/building_from_source.rst:1690
 msgid ""
 "Path to a shared or static library file. A similar variable "
 "``PNG_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1666
+#: ../../source/development/building_from_source.rst:1696
 msgid ""
 "Control whether to use external libpng. Defaults to ON when external "
 "libpng is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1670
+#: ../../source/development/building_from_source.rst:1700
 msgid ""
 "Control whether to use internal libpng copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_PNG=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1675
+#: ../../source/development/building_from_source.rst:1705
 msgid "Poppler"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1677
+#: ../../source/development/building_from_source.rst:1707
 msgid ""
 "The `Poppler <https://poppler.freedesktop.org/>`_ library is one of the "
 "possible backends for the :ref:`raster.pdf` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1680
+#: ../../source/development/building_from_source.rst:1710
 msgid ""
 "Note that GDAL requires Poppler private headers, that are only installed "
 "if configuring Poppler with -DENABLE_UNSTABLE_API_ABI_HEADERS."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1685
+#: ../../source/development/building_from_source.rst:1715
 msgid "Path to an include directory with the ``poppler-config.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1693
+#: ../../source/development/building_from_source.rst:1723
 msgid "Control whether to use Poppler. Defaults to ON when Poppler is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1697
+#: ../../source/development/building_from_source.rst:1727
 msgid "PostgreSQL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1699
+#: ../../source/development/building_from_source.rst:1729
 msgid ""
 "The `PostgreSQL client library <https://www.postgresql.org/>`_ is "
 "required for the :ref:`vector.pg` and :ref:`raster.postgisraster` "
 "drivers."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1704
+#: ../../source/development/building_from_source.rst:1734
 msgid "Path to an include directory with the ``libpq-fe.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1708
+#: ../../source/development/building_from_source.rst:1738
 msgid ""
 "Path to a shared or static library file ``pq`` / ``libpq``. A similar "
 "variable ``PostgreSQL_LIBRARY_DEBUG`` can also be specified to a similar "
 "library for building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1714
+#: ../../source/development/building_from_source.rst:1744
 msgid ""
 "Control whether to use PostgreSQL. Defaults to ON when PostgreSQL is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1718
+#: ../../source/development/building_from_source.rst:1748
 msgid "PROJ"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1720
+#: ../../source/development/building_from_source.rst:1750
 msgid ""
 "`PROJ <https://github.com/OSGeo/PROJ/>`_ >= 6.3 is a *required* "
 "dependency for GDAL."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1724
+#: ../../source/development/building_from_source.rst:1754
 msgid "Path to an include directory with the ``proj.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1728
+#: ../../source/development/building_from_source.rst:1758
 msgid ""
 "Path to a shared or static library file, such as ``libproj.so``, "
 "``proj.lib``, or other name. A similar variable ``PROJ_LIBRARY_DEBUG`` "
 "can also be specified to a similar library for building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1737
+#: ../../source/development/building_from_source.rst:1767
 msgid ""
 "Control the mode used for find_package(PROJ). Alters how the default "
 "CMake search logic "
@@ -2082,166 +2117,166 @@ msgid ""
 "directly to find_package()"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1745
+#: ../../source/development/building_from_source.rst:1775
 msgid "QHULL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1747
+#: ../../source/development/building_from_source.rst:1777
 msgid ""
 "The `QHULL <https://github.com/qhull/qhull>`_ library is used for the "
 "linear interpolation of gdal_grid. If not found, an internal copy can be "
 "used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1752
+#: ../../source/development/building_from_source.rst:1782
 msgid ""
 "Name of the pkg-config package, typically ``qhull_r`` or "
 "``qhullstatic_r``. Defaults to ``qhull_r``"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1756
+#: ../../source/development/building_from_source.rst:1786
 msgid ""
 "Path to an include directory with the ``libqhull_r/libqhull_r.h`` header "
 "file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1760
+#: ../../source/development/building_from_source.rst:1790
 msgid "Path to a shared or static library file to the reentrant library."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1764
+#: ../../source/development/building_from_source.rst:1794
 msgid "Control whether to use QHULL. Defaults to ON when QHULL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1768
+#: ../../source/development/building_from_source.rst:1798
 msgid ""
 "Control whether to use internal QHULL copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_QHULL=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1773
+#: ../../source/development/building_from_source.rst:1803
 msgid "RASTERLITE2"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1775
+#: ../../source/development/building_from_source.rst:1805
 msgid ""
 "The `RasterLite2 <https://www.gaia-gis.it/fossil/librasterlite2/index>`_ "
 "(>= 1.1.0) library used by the :ref:`raster.rasterlite2` driver. It can "
 "be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1781
+#: ../../source/development/building_from_source.rst:1811
 msgid ""
 "Path to an include directory with the ``rasterlite2/rasterlite2.h`` "
 "header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1789
+#: ../../source/development/building_from_source.rst:1819
 msgid ""
 "Control whether to use RasterLite2. Defaults to ON when RasterLite2 is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1793
+#: ../../source/development/building_from_source.rst:1823
 msgid "rdb"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1795
+#: ../../source/development/building_from_source.rst:1825
 msgid ""
 "The `RDB <https://repository.riegl.com/software/libraries/rdblib>` "
 "(closed source/proprietary) library is required for the :ref:`raster.rdb`"
 " driver. Specify install prefix in the ``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1801
+#: ../../source/development/building_from_source.rst:1831
 msgid "Control whether to use rdb. Defaults to ON when rdb is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1805
+#: ../../source/development/building_from_source.rst:1835
 msgid "SPATIALITE"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1807
+#: ../../source/development/building_from_source.rst:1837
 msgid ""
 "The `Spatialite <https://www.gaia-gis.it/fossil/libspatialite/index>`_ "
 "library used by the :ref:`vector.sqlite` and :ref:`vector.gpkg` drivers, "
 "and the :ref:`sql_sqlite_dialect`. It can be detected with pkg-config."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1813
+#: ../../source/development/building_from_source.rst:1843
 msgid "Path to an include directory with the ``spatialite.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1821
+#: ../../source/development/building_from_source.rst:1851
 msgid ""
 "Control whether to use Spatialite. Defaults to ON when Spatialite is "
 "found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1825
+#: ../../source/development/building_from_source.rst:1855
 msgid "SQLite3"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1827
+#: ../../source/development/building_from_source.rst:1857
 msgid ""
 "The `SQLite3 <https://sqlite.org/index.html>`_ library  is required for "
 "the :ref:`vector.sqlite` and :ref:`vector.gpkg` drivers (and also used by"
 " other drivers), and the :ref:`sql_sqlite_dialect`."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1833
+#: ../../source/development/building_from_source.rst:1863
 msgid "Path to an include directory with the ``sqlite3.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1837
+#: ../../source/development/building_from_source.rst:1867
 msgid ""
 "Path to a shared or static library file, such as ``libsqlite3.so``, "
 "``sqlite3.lib`` or other name."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1842
+#: ../../source/development/building_from_source.rst:1872
 msgid "Control whether to use SQLite3. Defaults to ON when SQLite3 is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1846
+#: ../../source/development/building_from_source.rst:1876
 msgid "SFCGAL"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1848
+#: ../../source/development/building_from_source.rst:1878
 msgid ""
 "`SFCGAL <https://github.com/Oslandia/SFCGAL>`_ is a geometry library "
 "which supports ISO 19107:2013 and OGC Simple Features Access 1.2 for 3D "
 "operations (PolyhedralSurface, TINs, ...)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1858
+#: ../../source/development/building_from_source.rst:1888
 msgid ""
 "Path to a shared or static library file. A similar variable "
 "``SFCGAL_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1864
+#: ../../source/development/building_from_source.rst:1894
 msgid "Control whether to use SFCGAL. Defaults to ON when SFCGAL is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1868
+#: ../../source/development/building_from_source.rst:1898
 msgid "SWIG"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1870
+#: ../../source/development/building_from_source.rst:1900
 msgid ""
 "`SWIG <http://swig.org/>`_ is a software development tool that connects "
 "programs written in C and C++ with a variety of high-level programming "
 "languages. It is used for the Python, Java and CSharp bindings."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1876
+#: ../../source/development/building_from_source.rst:1906
 msgid "Path to the SWIG executable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1878
+#: ../../source/development/building_from_source.rst:1908
 msgid ""
 "Note that setting it explicitly might be needed, and that putting the "
 "directory of the installed binary into the PATH might not be sufficient. "
@@ -2250,11 +2285,11 @@ msgid ""
 "elsewhere in the PATH."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1886
+#: ../../source/development/building_from_source.rst:1916
 msgid "TEIGHA"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1888
+#: ../../source/development/building_from_source.rst:1918
 msgid ""
 "The TEIGHA / Open Design Alliance libraries (closed source/proprietary) "
 "are required for the :ref:`vector.dwg` and :ref:`vector.dgnv8` drivers. "
@@ -2264,13 +2299,13 @@ msgid ""
 "TEIGHA_ROOT variable must be set."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1897
+#: ../../source/development/building_from_source.rst:1927
 msgid ""
 "Path to the base directory where the Kernel and Drawings package must be "
 "extracted."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1902
+#: ../../source/development/building_from_source.rst:1932
 msgid ""
 "Path to a directory where a ``OdActivationInfo`` file is located. If the "
 "file is somewhere under TEIGHA_ROOT, it will be automatically discovered."
@@ -2278,88 +2313,88 @@ msgid ""
 "with 2021 and later)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1909
+#: ../../source/development/building_from_source.rst:1939
 msgid "Control whether to use TEIGHA. Defaults to ON when TEIGHA is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1913
+#: ../../source/development/building_from_source.rst:1943
 msgid "TIFF"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1915
+#: ../../source/development/building_from_source.rst:1945
 msgid ""
 "`libtiff <https://gitlab.com/libtiff/libtiff/>`_ is required for the "
 ":ref:`raster.gtiff` drivers, and a few other drivers. If not found, an "
 "internal copy of libtiff can be used."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1921
+#: ../../source/development/building_from_source.rst:1951
 msgid "Path to an include directory with the ``tiff.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1925
+#: ../../source/development/building_from_source.rst:1955
 msgid ""
 "Path to a shared or static library file, such as ``libtiff.so``, "
 "``tiff.lib``, or other name. A similar variable ``TIFF_LIBRARY_DEBUG`` "
 "can also be specified to a similar library for building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1932
+#: ../../source/development/building_from_source.rst:1962
 msgid ""
 "Control whether to use external libtiff. Defaults to ON when external "
 "libtiff is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1936
+#: ../../source/development/building_from_source.rst:1966
 msgid ""
 "Control whether to use internal libtiff copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_TIFF=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1941
+#: ../../source/development/building_from_source.rst:1971
 msgid "TileDB"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1943
+#: ../../source/development/building_from_source.rst:1973
 msgid ""
 "The `TileDB <https://github.com/TileDB-Inc/TileDB>` library is required "
 "for the :ref:`raster.tiledb` driver. Specify install prefix in the "
 "``CMAKE_PREFIX_PATH`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1946
+#: ../../source/development/building_from_source.rst:1976
 msgid "TileDB >= 2.15 is required since GDAL 3.9"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1950
+#: ../../source/development/building_from_source.rst:1980
 msgid "Control whether to use TileDB. Defaults to ON when TileDB is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1954
+#: ../../source/development/building_from_source.rst:1984
 msgid "WebP"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1956
+#: ../../source/development/building_from_source.rst:1986
 msgid ""
 "`WebP <https://github.com/webmproject/libwebp>`_ is a image compression "
 "library. It is required for the :ref:`raster.webp` driver, and may be "
 "used by the :ref:`raster.gpkg` and the internal libtiff library."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1962
+#: ../../source/development/building_from_source.rst:1992
 msgid "Path to an include directory with the ``webp/encode.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1970
+#: ../../source/development/building_from_source.rst:2000
 msgid "Control whether to use WebP. Defaults to ON when WebP is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1974
+#: ../../source/development/building_from_source.rst:2004
 msgid "XercesC"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1976
+#: ../../source/development/building_from_source.rst:2006
 msgid ""
 "`Xerces-C <https://github.com/apache/xerces-c>`_ is a stream-oriented XML"
 " parser library which is required to enable XML parsing capabilities in "
@@ -2367,53 +2402,53 @@ msgid ""
 " It can also be used as an alternative to Expat for the GML driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1991
+#: ../../source/development/building_from_source.rst:2021
 msgid "Control whether to use XercesC. Defaults to ON when XercesC is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1995
+#: ../../source/development/building_from_source.rst:2025
 msgid "ZLIB"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:1997
+#: ../../source/development/building_from_source.rst:2027
 msgid ""
 "`ZLib <https://github.com/madler/zlib>`_ is a compression library which "
 "offers the lossless Deflate/Zip compression algorithm."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2002
+#: ../../source/development/building_from_source.rst:2032
 msgid "Path to an include directory with the ``zlib.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2006
+#: ../../source/development/building_from_source.rst:2036
 msgid ""
 "Path to a shared or static library file. A similar variable "
 "``ZLIB_LIBRARY_DEBUG`` can also be specified to a similar library for "
 "building Debug releases."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2012
+#: ../../source/development/building_from_source.rst:2042
 msgid ""
 "Link to static external ZLIB directory. Only used if "
 "GDAL_USE_ZLIB_INTERNAL=OFF and MSVC."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2017
+#: ../../source/development/building_from_source.rst:2047
 msgid "Control whether to use ZLIB. Defaults to ON when ZLIB is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2021
+#: ../../source/development/building_from_source.rst:2051
 msgid ""
 "Control whether to use internal zlib copy. Defaults depends on "
 "GDAL_USE_INTERNAL_LIBS. When set to ON, has precedence over "
 "GDAL_USE_ZLIB=ON"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2026
+#: ../../source/development/building_from_source.rst:2056
 msgid "ZSTD"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2028
+#: ../../source/development/building_from_source.rst:2058
 msgid ""
 "`ZSTD <https://github.com/facebook/zstd>`_ is a compression library which"
 " offers the lossless ZStd compression algorithm (faster than Deflate/ZIP,"
@@ -2421,46 +2456,46 @@ msgid ""
 " the :ref:`raster.zarr` driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2034
+#: ../../source/development/building_from_source.rst:2064
 msgid "Path to an include directory with the ``zstd.h`` header file."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2042
+#: ../../source/development/building_from_source.rst:2072
 msgid "Control whether to use ZSTD. Defaults to ON when ZSTD is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2048
+#: ../../source/development/building_from_source.rst:2078
 msgid "Selection of drivers"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2050
+#: ../../source/development/building_from_source.rst:2080
 msgid ""
 "By default, all drivers that have their build requirements satisfied will"
 " be built-in in the GDAL core library."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2053
+#: ../../source/development/building_from_source.rst:2083
 msgid "The following options are available to select a subset of drivers:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2059
-#: ../../source/development/building_from_source.rst:2198
+#: ../../source/development/building_from_source.rst:2089
+#: ../../source/development/building_from_source.rst:2228
 msgid ""
 "Independently of options that control global behavior, drivers can be "
 "individually enabled or disabled with those options."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2064
+#: ../../source/development/building_from_source.rst:2094
 msgid ""
 "<driver_name> above and below is *generally*, but not systematically the "
 "short driver name."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2066
+#: ../../source/development/building_from_source.rst:2096
 msgid "Some drivers may also be grouped together for build purposes."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2068
+#: ../../source/development/building_from_source.rst:2098
 msgid ""
 "A number of \"raw\" raster drivers (ACE2, BT, BYN, CPG, CTable2, DIPEx, "
 "DOQ1, DOQ2, EHDR, EIR, ENVI, FAST, GenBIN, GSC, GTX, MFF2, ISCE, KRO, "
@@ -2468,125 +2503,125 @@ msgid ""
 " controlled by the GDAL_ENABLE_DRIVER_RAW option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2073
+#: ../../source/development/building_from_source.rst:2103
 msgid ""
 "Planetary raster formats (PDS, PDS4, ISIS2, ISIS3, VICAR) are controlled "
 "by the GDAL_ENABLE_DRIVER_PDS option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2076
+#: ../../source/development/building_from_source.rst:2106
 msgid ""
 "The AAIGRID, GRASSASCIIGRID and ISG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_AAIGRID option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2078
+#: ../../source/development/building_from_source.rst:2108
 msgid ""
 "The ECW and JP2ECW raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_ECW option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2080
+#: ../../source/development/building_from_source.rst:2110
 msgid ""
 "The vector EEDA and raster EEDAI drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_EEDA option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2082
+#: ../../source/development/building_from_source.rst:2112
 msgid ""
 "The GSAG, GSBG and GS7BG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_GSG option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2084
+#: ../../source/development/building_from_source.rst:2114
 msgid ""
 "The HDF5 and BAG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_HDF5 option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2086
+#: ../../source/development/building_from_source.rst:2116
 msgid ""
 "The MrSID and JP2MrSID raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_MRSID option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2088
+#: ../../source/development/building_from_source.rst:2118
 msgid ""
 "The NITF, RPFTOC and ECRGTOC raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_NITF option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2090
+#: ../../source/development/building_from_source.rst:2120
 msgid ""
 "The NWT_GRD and NWT_GRC raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_NORTHWOOD option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2092
+#: ../../source/development/building_from_source.rst:2122
 msgid ""
 "The SRP and ADRG raster drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_ADRG option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2094
+#: ../../source/development/building_from_source.rst:2124
 msgid ""
 "The Interlis 1 and Interlis 2 vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_ILI option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2096
+#: ../../source/development/building_from_source.rst:2126
 msgid ""
 "The WFS and OAPIF vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_WFS option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2098
+#: ../../source/development/building_from_source.rst:2128
 msgid ""
 "The AVCBIN and AVCE00 vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_AVC option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2100
+#: ../../source/development/building_from_source.rst:2130
 msgid ""
 "The DWG and DGNv8 vector drivers are controlled by the "
 "GDAL_ENABLE_DRIVER_DWG option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2102
+#: ../../source/development/building_from_source.rst:2132
 msgid "There might be variations in naming, e.g. :"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2104
+#: ../../source/development/building_from_source.rst:2134
 msgid "the \"AIG\" raster driver is controlled by GDAL_ENABLE_DRIVER_AIGRID."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2106
+#: ../../source/development/building_from_source.rst:2136
 msgid "the \"ESAT\" raster driver is controlled by GDAL_ENABLE_DRIVER_ENVISAT."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2108
+#: ../../source/development/building_from_source.rst:2138
 msgid "the \"GeoRaster\" raster driver is controlled by GDAL_ENABLE_DRIVER_GEOR."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2110
+#: ../../source/development/building_from_source.rst:2140
 msgid "the \"RST\" raster driver is controlled by GDAL_ENABLE_DRIVER_IDRISI."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2112
+#: ../../source/development/building_from_source.rst:2142
 msgid ""
 "the \"ElasticSearch\" vector driver is controlled by "
 "OGR_ENABLE_DRIVER_ELASTIC."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2114
+#: ../../source/development/building_from_source.rst:2144
 msgid "the \"PostgreSQL\" vector driver is controlled by OGR_ENABLE_DRIVER_PG."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2116
+#: ../../source/development/building_from_source.rst:2146
 msgid "the \"UK .NTF\" vector driver is controlled by OGR_ENABLE_DRIVER_NTF."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2120
+#: ../../source/development/building_from_source.rst:2150
 msgid ""
 "Drivers that have both a raster and vector side (and are internally "
 "implemented by a single GDALDriver instance) are controlled by either a "
@@ -2594,37 +2629,37 @@ msgid ""
 "OGR_ENABLE_DRIVER_<driver_name> one, but not both:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2124
+#: ../../source/development/building_from_source.rst:2154
 msgid "The CAD drivers are controlled by the OGR_ENABLE_DRIVER_CAD option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2125
+#: ../../source/development/building_from_source.rst:2155
 msgid "The netCDF drivers are controlled by the GDAL_ENABLE_DRIVER_NETCDF option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2126
+#: ../../source/development/building_from_source.rst:2156
 msgid "The PDF drivers are controlled by the GDAL_ENABLE_DRIVER_PDF option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2127
+#: ../../source/development/building_from_source.rst:2157
 msgid "The GPKG drivers are controlled by the OGR_ENABLE_DRIVER_GPKG option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2128
+#: ../../source/development/building_from_source.rst:2158
 msgid "The NGW drivers are controlled by the OGR_ENABLE_DRIVER_NGW option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2129
+#: ../../source/development/building_from_source.rst:2159
 msgid "The SQLite drivers are controlled by the OGR_ENABLE_DRIVER_SQLITE option."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2133
+#: ../../source/development/building_from_source.rst:2163
 msgid ""
 "The GDAL_ENABLE_DRIVER_<driver_name> and OGR_ENABLE_DRIVER_<driver_name> "
 "options are only created when their required dependencies are found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2141
+#: ../../source/development/building_from_source.rst:2171
 msgid ""
 "Globally enable/disable all optional GDAL/raster, resp. all optional "
 "OGR/vector drivers. More exactly, setting those variables to ON affect "
@@ -2633,7 +2668,7 @@ msgid ""
 "set)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2146
+#: ../../source/development/building_from_source.rst:2176
 msgid ""
 "This can be combined with individual activation of a subset of drivers by"
 " using the ``GDAL_ENABLE_DRIVER_<driver_name>:BOOL=ON`` or "
@@ -2644,7 +2679,7 @@ msgid ""
 "-UOGR_ENABLE_DRIVER_*`` to reset their state."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2155
+#: ../../source/development/building_from_source.rst:2185
 msgid ""
 "The following GDAL drivers cannot be disabled: VRT, DERIVED, GTiff, COG, "
 "HFA, MEM. The following OGR drivers cannot be disabled: \"ESRI "
@@ -2652,7 +2687,7 @@ msgid ""
 " ESRIJSON, TopoJSON."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2160
+#: ../../source/development/building_from_source.rst:2190
 msgid ""
 "Disabling all OGR/vector drivers with -DOGR_BUILD_OPTIONAL_DRIVERS=OFF "
 "may affect the ability to enable some GDAL/raster drivers that require "
@@ -2665,15 +2700,15 @@ msgid ""
 "vector drivers."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2171
+#: ../../source/development/building_from_source.rst:2201
 msgid "Example of minimal build with the JP2OpenJPEG and SVG drivers enabled::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2179
+#: ../../source/development/building_from_source.rst:2209
 msgid "Build drivers as plugins"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2181
+#: ../../source/development/building_from_source.rst:2211
 msgid ""
 "An important subset, but not all, drivers can be also built as plugin, "
 "that is to say as standalone .dll/.so shared libraries, to be installed "
@@ -2683,24 +2718,24 @@ msgid ""
 "library."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2187
+#: ../../source/development/building_from_source.rst:2217
 msgid "The list of drivers that can be built as plugins can be obtained with::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2191
+#: ../../source/development/building_from_source.rst:2221
 msgid ""
 "The following options are available to select the plugin/builtin status "
 "of a driver:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2201
+#: ../../source/development/building_from_source.rst:2231
 msgid ""
 "Note that for the driver to be built, the corresponding base "
 "``GDAL_ENABLE_DRIVER_{driver_name}:BOOL=ON`` or "
 "``OGR_ENABLE_DRIVER_{driver_name}:BOOL=ON`` option must be set."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2207
+#: ../../source/development/building_from_source.rst:2237
 msgid ""
 "Globally enable/disable building all (plugin capable), GDAL and OGR, "
 "drivers as plugins. More exactly, setting that variable to ON affects the"
@@ -2709,7 +2744,7 @@ msgid ""
 "yet set)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2212
+#: ../../source/development/building_from_source.rst:2242
 msgid ""
 "This can be combined with individual activation/deactivation of the "
 "plugin status with the ``GDAL_ENABLE_DRIVER_{driver_name}_PLUGIN:BOOL`` "
@@ -2720,13 +2755,13 @@ msgid ""
 " to reset their state."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2218
+#: ../../source/development/building_from_source.rst:2248
 msgid ""
 "Example of build with all potential drivers as plugins, except the "
 "JP2OpenJPEG one::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2224
+#: ../../source/development/building_from_source.rst:2254
 msgid ""
 "There is a subtelty regarding ``GDAL_ENABLE_PLUGINS:BOOL=ON``. It only "
 "controls the plugin status of plugin-capable drivers that have external "
@@ -2734,7 +2769,7 @@ msgid ""
 "netCDF, HDF4, Oracle, PDF, etc.)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2230
+#: ../../source/development/building_from_source.rst:2260
 msgid ""
 "Globally enable/disable building all (plugin capable), GDAL and OGR, "
 "drivers as plugins, for drivers that have no external dependencies (e.g. "
@@ -2743,21 +2778,21 @@ msgid ""
 " necessary, hence the use of a different option from GDAL_ENABLE_PLUGINS."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2236
+#: ../../source/development/building_from_source.rst:2266
 msgid ""
 "In some circumstances, it might be desirable to prevent loading of GDAL "
 "plugins. This can be done with:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2241
+#: ../../source/development/building_from_source.rst:2271
 msgid "Set to OFF to disable loading of GDAL plugins. Default is ON."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2245
+#: ../../source/development/building_from_source.rst:2275
 msgid "Deferred loaded plugins"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2247
+#: ../../source/development/building_from_source.rst:2277
 msgid ""
 "Starting with GDAL 3.9, a number of in-tree drivers, that can be built as"
 " plugins, are loaded in a deferred way. This involves that some part of "
@@ -2767,7 +2802,7 @@ msgid ""
 "built in a single operation, this is fully transparent to the user."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2254
+#: ../../source/development/building_from_source.rst:2284
 msgid ""
 "When a plugin driver is known of core libgdal, but not available as a "
 "plugin at runtime, GDAL will inform the user that the plugin is not "
@@ -2775,21 +2810,21 @@ msgid ""
 "how to install a plugin by setting the following option:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2263
+#: ../../source/development/building_from_source.rst:2293
 msgid "Custom message to give a hint to the user how to install a missing plugin"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2266
+#: ../../source/development/building_from_source.rst:2296
 msgid "For example, if doing a build with::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2270
+#: ../../source/development/building_from_source.rst:2300
 msgid ""
 "and opening a Parquet file while the plugin is not installed will display"
 " the following error::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2277
+#: ../../source/development/building_from_source.rst:2307
 msgid ""
 "For more specific builds where libgdal would be first built, and then "
 "plugin drivers built in later incremental builds, this approach would not"
@@ -2797,7 +2832,7 @@ msgid ""
 " to declare the plugin(s)."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2282
+#: ../../source/development/building_from_source.rst:2312
 msgid ""
 "In that situation, the user building GDAL will need to explicitly declare"
 " at initial libgdal build time that one or several plugin(s) will be "
@@ -2805,22 +2840,22 @@ msgid ""
 "even if the plugins are not always available at runtime."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2287
-#: ../../source/development/building_from_source.rst:2329
+#: ../../source/development/building_from_source.rst:2317
+#: ../../source/development/building_from_source.rst:2359
 msgid "This can be done with the following option:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2293
+#: ../../source/development/building_from_source.rst:2323
 msgid "Declares that a driver will be later built as a plugin."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2295
+#: ../../source/development/building_from_source.rst:2325
 msgid ""
 "Setting this option to drivers not ready for it will lead to an explicit "
 "CMake error."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2299
+#: ../../source/development/building_from_source.rst:2329
 msgid ""
 "For some drivers (ECW, HEIF, JP2KAK, JPEG, JPEGXL, KEA, LERC, MrSID, "
 "MSSQLSpatial, netCDF, OpenJPEG, PDF, TileDB, WEBP), the metadata and/or "
@@ -2832,11 +2867,11 @@ msgid ""
 "the plugin is built."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2308
+#: ../../source/development/building_from_source.rst:2338
 msgid "For example for netCDF::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2317
+#: ../../source/development/building_from_source.rst:2347
 msgid ""
 "For other drivers, GDAL_REGISTER_DRIVER_<driver_name>_FOR_LATER_PLUGIN / "
 "OGR_REGISTER_DRIVER_<driver_name>_FOR_LATER_PLUGIN can be declared at "
@@ -2844,18 +2879,18 @@ msgid ""
 "build the plugin later to be available."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2323
+#: ../../source/development/building_from_source.rst:2353
 msgid "Out-of-tree deferred loaded plugins"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2325
+#: ../../source/development/building_from_source.rst:2355
 msgid ""
 "Out-of-tree drivers can also benefit from the deferred loading "
 "capability, provided libgdal is built with CMake variable(s) pointing to "
 "external code containing the code for registering a proxy driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2333
+#: ../../source/development/building_from_source.rst:2363
 msgid ""
 "The pointed file must declare a ``void "
 "DeclareDeferred<driver_name>(void)`` method with C linkage that takes "
@@ -2863,24 +2898,24 @@ msgid ""
 ":cpp:func:`GDALDriverManager::DeclareDeferredPluginDriver` on it."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2340
+#: ../../source/development/building_from_source.rst:2370
 msgid "Python bindings options"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2344
+#: ../../source/development/building_from_source.rst:2374
 msgid ""
 "Whether Python bindings should be built. It is ON by default, but only "
 "effective if a Python installation is found."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2347
+#: ../../source/development/building_from_source.rst:2377
 msgid ""
 "A nominal Python installation should comprise the Python runtime (>= 3.6)"
 " and the setuptools module. numpy and its header and development library "
 "are also strongly recommended."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2351
+#: ../../source/development/building_from_source.rst:2381
 msgid ""
 "The Python installation is normally found if found in the path or "
 "registered through other standard installation mechanisms of the Python "
@@ -2889,46 +2924,46 @@ msgid ""
 "stage/module/FindPython.html"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2356
+#: ../../source/development/building_from_source.rst:2386
 msgid "GDAL also provides the following option:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2360
+#: ../../source/development/building_from_source.rst:2390
 msgid ""
 "When it is specified, Python_FIND_STRATEGY=VERSION is assumed. Note that "
 "the patch number must be provided, as the EXACT strategy is used"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2363
+#: ../../source/development/building_from_source.rst:2393
 msgid "Other useful options:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2367
+#: ../../source/development/building_from_source.rst:2397
 msgid "Specify 'ONLY' to use virtualenv activated."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2371
+#: ../../source/development/building_from_source.rst:2401
 msgid "Specify Python installation prefix."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2373
+#: ../../source/development/building_from_source.rst:2403
 msgid "Examples::"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2380
+#: ../../source/development/building_from_source.rst:2410
 msgid ""
 "The following options are advanced ones and only taken into account "
 "during the ``install`` CMake target."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2385
+#: ../../source/development/building_from_source.rst:2415
 msgid ""
 "This option can be specified to a directory name, to override the "
 "``CMAKE_INSTALL_PREFIX`` option. It is used to set the value of the "
 "``--prefix`` option of ``python3 setup.py install``."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2391
+#: ../../source/development/building_from_source.rst:2421
 msgid ""
 "This option can be specified to set the value of the ``--install-layout``"
 " option of ``python3 setup.py install``. The install layout is by default"
@@ -2936,25 +2971,25 @@ msgid ""
 "for the ``site-packages`` subdirectory. Otherwise it is unspecified."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2398
+#: ../../source/development/building_from_source.rst:2428
 msgid ""
 "This option can be specified to set the value of the ``--install-lib`` "
 "option of ``python3 setup.py install``. It is only taken into account on "
 "MacOS systems, when the Python installation is a framework."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2404
+#: ../../source/development/building_from_source.rst:2434
 msgid ""
 "The Python bindings are made of several modules (osgeo.gdal, osgeo.ogr, "
 "etc.) which link each against libgdal. Consequently, a static build of "
 "libgdal is not compatible with the bindings."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2411
+#: ../../source/development/building_from_source.rst:2441
 msgid "Java bindings options"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2415
+#: ../../source/development/building_from_source.rst:2445
 msgid ""
 "Whether Java bindings should be built. It is ON by default, but only "
 "effective if Java runtime and development packages are found. The "
@@ -2964,62 +2999,62 @@ msgid ""
 "binary must also be available in the PATH."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2424
+#: ../../source/development/building_from_source.rst:2454
 msgid ""
 "Subdirectory into which to install the :file:`gdal.jar` file. It defaults"
 " to \"${CMAKE_INSTALL_DATADIR}/java\""
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2428
+#: ../../source/development/building_from_source.rst:2458
 msgid ""
 "Prior to GDAL 3.8, the gdalalljni library was also installed in that "
 "directory. Starting with GDAL 3.8, this is controlled by the "
 "``GDAL_JAVA_JNI_INSTALL_DIR`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2436
+#: ../../source/development/building_from_source.rst:2466
 msgid ""
 "Subdirectory into which to install the :file:`libgdalalljni.so` / "
 ":file:`libgdalalljni.dylib` / :file:`gdalalljni.dll` library. It defaults"
 " to \"${CMAKE_INSTALL_LIBDIR}/jni\"."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2441
+#: ../../source/development/building_from_source.rst:2471
 msgid ""
 "Prior to GDAL 3.8, the gdalalljni library was installed in the directory "
 "controlled by the ``GDAL_JAVA_INSTALL_DIR`` variable."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2447
+#: ../../source/development/building_from_source.rst:2477
 msgid ""
 "The Java bindings are made of several modules (org.osgeo.gdal, "
 "org.osgeo.ogr, etc.) which link each against libgdal. Consequently, a "
 "static build of libgdal is not compatible with the bindings."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2451
+#: ../../source/development/building_from_source.rst:2481
 msgid "Option only to be used by maintainers:"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2455
+#: ../../source/development/building_from_source.rst:2485
 msgid "GPG key to sign build artifacts. Needed to generate bundle.jar."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2459
+#: ../../source/development/building_from_source.rst:2489
 msgid "GPG pass phrase to sign build artifacts."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2462
+#: ../../source/development/building_from_source.rst:2492
 msgid "C# bindings options"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2464
+#: ../../source/development/building_from_source.rst:2494
 msgid ""
 "For more details on how to build and use the C# bindings read the "
 "dedicated section :ref:`csharp_compile_cmake`."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2468
+#: ../../source/development/building_from_source.rst:2498
 msgid ""
 "Whether C# bindings should be built. It is ON by default, but only "
 "effective if C# runtime and development packages are found. Either .NET "
@@ -3028,11 +3063,11 @@ msgid ""
 "and ``cmake/modules/thirdparty/FindMono.cmake``."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2476
+#: ../../source/development/building_from_source.rst:2506
 msgid "Forces the use of Mono as opposed to .NET to compile the C# bindings."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2480
+#: ../../source/development/building_from_source.rst:2510
 msgid ""
 "Sets the .NET (or Mono) target SDK to be used when compiling the C# "
 "binding libraries. `List of acceptable contents for .NET "
@@ -3040,7 +3075,7 @@ msgid ""
 "target-frameworks>`_"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2484
+#: ../../source/development/building_from_source.rst:2514
 msgid ""
 "Sets the .NET (or Mono) target SDK to be used when compiling the C# "
 "sample applications. `List of acceptable contents for .NET "
@@ -3048,25 +3083,25 @@ msgid ""
 "target-frameworks>`_"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2488
+#: ../../source/development/building_from_source.rst:2518
 msgid ""
 "Build the C# bindings without building GDAL. This should be used when "
 "building the bindings on top of an existing GDAL installation - for "
 "instance on top of the CONDA package."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2492
+#: ../../source/development/building_from_source.rst:2522
 msgid ""
 "The C# bindings are made of several modules (OSGeo.GDAL, OSGeo.OGR, etc.)"
 " which link each against libgdal. Consequently, a static build of libgdal"
 " is not compatible with the bindings."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2497
+#: ../../source/development/building_from_source.rst:2527
 msgid "Driver specific options"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2501
+#: ../../source/development/building_from_source.rst:2531
 msgid ""
 "The :ref:`raster.msg` driver is built only if this option is set to ON "
 "(default is OFF). Its effect is to download the "
@@ -3075,11 +3110,11 @@ msgid ""
 "the build tree and build the needed files from it into the driver."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2508
+#: ../../source/development/building_from_source.rst:2538
 msgid "Cross-compiling for Android"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2510
+#: ../../source/development/building_from_source.rst:2540
 msgid ""
 "First refer to https://cmake.org/cmake/help/latest/manual/cmake-"
 "toolchains.7.html#cross-compiling-for-android and to "
@@ -3087,15 +3122,15 @@ msgid ""
 " a build script to cross-compile from Ubuntu."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2516
+#: ../../source/development/building_from_source.rst:2546
 msgid "Typical build issues"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2519
+#: ../../source/development/building_from_source.rst:2549
 msgid "How do I get PROJ ?"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2521
+#: ../../source/development/building_from_source.rst:2551
 msgid ""
 "PROJ is the only required build-time dependency of GDAL that is not "
 "vendorized in the GDAL source code tree. Consequently, the PROJ header "
@@ -3103,11 +3138,11 @@ msgid ""
 "`PROJ installation <https://proj.org/install.html>`__."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2526
+#: ../../source/development/building_from_source.rst:2556
 msgid "Conflicting PROJ libraries"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2528
+#: ../../source/development/building_from_source.rst:2558
 msgid ""
 "If using a custom PROJ build (that is a PROJ build that does not come "
 "from a distribution channel), it can sometimes happen that this custom "
@@ -3115,7 +3150,7 @@ msgid ""
 "libgeotiff, that themselves link to another copy of PROJ."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2533
+#: ../../source/development/building_from_source.rst:2563
 msgid ""
 "The clean way to solve this is to rebuild from sources those other "
 "libraries against the custom PROJ build. For Linux based systems, given "
@@ -3127,7 +3162,7 @@ msgid ""
 "environment."
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2541
+#: ../../source/development/building_from_source.rst:2571
 msgid ""
 "In any case, if ``ldd libgdal.so | grep libproj`` reports more than one "
 "line, crashes will occur at runtime (often at process termination with a "
@@ -3135,19 +3170,25 @@ msgid ""
 "dumped)`` error message)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2547
+#: ../../source/development/building_from_source.rst:2577
 msgid "Autoconf/nmake (GDAL versions < 3.5.0)"
 msgstr ""
 
-#: ../../source/development/building_from_source.rst:2549
+#: ../../source/development/building_from_source.rst:2579
 msgid ""
-"See https://trac.osgeo.org/gdal/wiki/BuildHints for hints for GDAL < 3.5 "
-"autoconf and nmake build systems."
+"See http://web.archive.org/https://trac.osgeo.org/gdal/wiki/BuildHints "
+"for hints for GDAL < 3.5 autoconf and nmake build systems."
 msgstr ""
 
 #~ msgid ""
 #~ "`libOpenDRIVE <https://github.com/pageldev/libOpenDRIVE>`_ "
 #~ "is required for the :ref:`vector.xodr` "
 #~ "driver."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See https://trac.osgeo.org/gdal/wiki/BuildHints for "
+#~ "hints for GDAL < 3.5 autoconf and"
+#~ " nmake build systems."
 #~ msgstr ""
 

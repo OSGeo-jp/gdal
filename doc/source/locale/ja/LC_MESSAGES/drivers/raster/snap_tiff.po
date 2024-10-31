@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/drivers/raster/snap_tiff.rst:5
+msgid "SNAP_TIFF -- Sentinel Application Processing GeoTIFF"
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:-1
+msgid "Driver short name"
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:9
+msgid "SNAP_TIFF"
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:13
+msgid ""
+"This driver deals specifically with GeoTIFF files produced by the "
+"Sentinel Application Processing (SNAP) toolbox."
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:16
+msgid ""
+"Such files are formulated in a way that makes it difficult to read them "
+"with the generic :ref:`raster.gtiff` driver."
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:20
+msgid "Driver capabilities"
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:27
+msgid "Georeferencing"
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:29
+msgid ""
+"SNAP GeoTIFF files contain a geolocation array (stored as a regular grid "
+"of GeoTIFF tie points). It is reported in the ``GEOLOCATION`` metadata "
+"domain."
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:32
+msgid ""
+"The 4 corners of the geolocation array are also reported as ground "
+"control points for faster (but less accurate) georeferencing."
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:36
+msgid "Metadata"
+msgstr ""
+
+#: ../../source/drivers/raster/snap_tiff.rst:38
+msgid ""
+"Extensive metadata following DIMAP conventions is reported in the "
+"``xml:DIMAP`` metadata domain."
+msgstr ""
+

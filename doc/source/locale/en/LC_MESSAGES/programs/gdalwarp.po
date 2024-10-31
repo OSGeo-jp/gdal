@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdalwarp.rst:5
 msgid "gdalwarp"
@@ -238,10 +238,10 @@ msgstr ""
 
 #: ../../source/programs/gdalwarp.rst:217
 msgid ""
-"Error threshold for transformation approximation (in pixel units - "
-"defaults to 0.125, unless, starting with GDAL 2.1, the RPC_DEM "
-"transformer option is specified, in which case, an exact transformer, "
-"i.e. err_threshold=0, will be used)."
+"Error threshold for transformation approximation, expressed as a number "
+"of source pixels. Defaults to 0.125 pixels unless the ``RPC_DEM`` "
+"transformer option is specified, in which case an exact transformer, i.e."
+" ``err_threshold=0``, will be used."
 msgstr ""
 
 #: ../../source/programs/gdalwarp.rst:224
@@ -432,8 +432,8 @@ msgid ""
 " the desired output resolution. The resampling method used to create "
 "those overviews is generally not the one you specify through the "
 ":option:`-r` option. Some formats, like JPEG2000, can contain significant"
-" outliers due to wavelet compression works. It might thus be useful in "
-"those situations to use the :option:`-ovr` ``NONE`` option to prevent "
+" outliers due to how wavelet compression works. It might thus be useful "
+"in those situations to use the :option:`-ovr` ``NONE`` option to prevent "
 "existing overviews to be used."
 msgstr ""
 
@@ -497,11 +497,14 @@ msgstr ""
 #: ../../source/programs/gdalwarp.rst:387
 msgid ""
 "Set the amount of memory that the warp API is allowed to use for caching."
-" The value is interpreted as being in megabytes if the value is less than"
-" 10000. For values >=10000, this is interpreted as bytes."
+" Defaults to 64 MB. Since GDAL 3.10, the value can be specified either as"
+" a fixed amount of memory (e.g., ``-wm 200MB``, ``-wm 1G``) or as a "
+"percentage of usable RAM (``-wm 10%``). In earlier versions, or if a unit"
+" is not specified, the value is interpreted as being in megabytes if the "
+"value is less than 10000. For values >=10000, it is interpreted as bytes."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:392
+#: ../../source/programs/gdalwarp.rst:397
 msgid ""
 "The warper will total up the memory required to hold the input and output"
 " image arrays and any auxiliary masking arrays and if they are larger "
@@ -509,14 +512,14 @@ msgid ""
 " chunks and try again."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:397
+#: ../../source/programs/gdalwarp.rst:402
 msgid ""
 "If the -wm value is very small there is some extra overhead in doing many"
 " small chunks so setting it larger is better but it is a matter of "
 "diminishing returns."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:403
+#: ../../source/programs/gdalwarp.rst:408
 msgid ""
 "Use multithreaded warping implementation. Two threads will be used to "
 "process chunks of image and perform input/output operation "
@@ -525,7 +528,7 @@ msgid ""
 "which can be combined with :option:`-multi`"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:411
+#: ../../source/programs/gdalwarp.rst:416
 msgid "Be quiet."
 msgstr ""
 
@@ -566,40 +569,40 @@ msgid ""
 "documentation for legal creation options for each format."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:421
+#: ../../source/programs/gdalwarp.rst:426
 msgid ""
 "Enable use of a blend cutline from the name of a vector dataset. Starting"
 " with GDAL 3.9, a WKT geometry string starting with POLYGON or "
 "MULTIPOLYGON can also be specified."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:429
+#: ../../source/programs/gdalwarp.rst:434
 msgid "Sets or overrides the SRS of the cutline."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:433
+#: ../../source/programs/gdalwarp.rst:438
 msgid "Select the named layer from the cutline datasource."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:437
+#: ../../source/programs/gdalwarp.rst:442
 msgid "Restrict desired cutline features based on attribute query."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:441
+#: ../../source/programs/gdalwarp.rst:446
 msgid ""
 "Select cutline features using an SQL query instead of from a layer with "
 ":option:`-cl`."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:445
+#: ../../source/programs/gdalwarp.rst:450
 msgid "Set a blend distance to use to blend over cutlines (in pixels)."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:449
+#: ../../source/programs/gdalwarp.rst:454
 msgid "Crop the extent of the target dataset to the extent of the cutline."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:453
+#: ../../source/programs/gdalwarp.rst:458
 msgid ""
 "Overwrite the target dataset if it already exists. Overwriting must be "
 "understood here as deleting and recreating the file from scratch. Note "
@@ -607,7 +610,7 @@ msgid ""
 "exists, it will be updated in place."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:460
+#: ../../source/programs/gdalwarp.rst:465
 msgid ""
 "Do not copy metadata. Without this option, dataset and band metadata (as "
 "well as some band information) will be copied from the first source "
@@ -615,64 +618,117 @@ msgid ""
 ":option:`-cvmd` option)."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:466
+#: ../../source/programs/gdalwarp.rst:471
 msgid ""
 "Value to set metadata items that conflict between source datasets "
 "(default is \"*\"). Use \"\" to remove conflicting items."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:471
+#: ../../source/programs/gdalwarp.rst:476
 msgid ""
 "Set the color interpretation of the bands of the target dataset from the "
 "source dataset."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:476
+#: ../../source/programs/gdalwarp.rst:481
 msgid "Dataset open option (format specific)"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:480
+#: ../../source/programs/gdalwarp.rst:485
 msgid "Output dataset open option (format specific)"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:486
+#: ../../source/programs/gdalwarp.rst:491
 msgid "The source file name(s)."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:490
+#: ../../source/programs/gdalwarp.rst:495
 msgid "The destination file name."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:493
+#: ../../source/programs/gdalwarp.rst:499
+msgid "Overview"
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:501
+msgid ""
+":program:`gdalwarp` transforms images between different coordinate "
+"reference systems and spatial resolutions."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:504
+msgid ""
+"First, :program:`gdalwarp` must determine the extent and resolution of "
+"the output, if these have not been specified using :option:`-te` and "
+":option:`-tr`. These are determined by transforming a sample of points "
+"from the source CRS to the destination CRS. Details of the procedure can "
+"be found in the documentation for :cpp:func:`GDALSuggestedWarpOutput`. If"
+" multiple inputs are provided to :program:`gdalwarp`, the output extent "
+"will be calculated to cover all of them, at a resolution consistent with "
+"the highest-resolution input."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:512
+msgid ""
+"Once the dimensions of the output image have been determined, "
+":program:`gdalwarp` divides the output image into chunks that can be "
+"processed independently within the amount of memory specified by "
+":option:`-wm`. :program:`gdalwarp` then iterates over scanlines in these "
+"chunks, and for each output pixel determines a rectangular region of "
+"source pixels that contribute to the value of the output pixel. The "
+"dimensions of this rectangular region are typically determined by "
+"estimating the relative scales of the source and destination raster, but "
+"can be manually specified (see documentation of the ``XSCALE`` parameter "
+"in :cpp:member:`GDALWarpOptions::papszWarpOptions`). Because the source "
+"region is a simple rectangle, it is not possible for an output pixel to "
+"be associated with source pixels from both sides of the antimeridian or "
+"pole (when transforming from geographic coordinates)."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:525
+msgid ""
+"The rectangular region of source pixels is then provided to a function "
+"that performs the resampling algorithm selected with :option:`-r`.  "
+"Depending on the resampling algorithm and relative scales of the source "
+"and destination rasters, source pixels may be weighted either according "
+"to the approximate fraction of the source pixel that is covered by the "
+"destination pixel (e.g., \"mean\" and \"sum\" resampling), or by "
+"horizontal and vertical Cartesian distances between the center of the "
+"source pixel and the center of the target pixel (e.g., bilinear or cubic "
+"spline resampling). In the latter case, the relative weight of an "
+"individual source pixel is determined by the product of the weights "
+"determined for its row and column; the diagonal Cartesian distance is not"
+" calculated."
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:538
+msgid "Writing to an existing file"
+msgstr ""
+
+#: ../../source/programs/gdalwarp.rst:540
 msgid ""
 "Mosaicing into an existing output file is supported if the output file "
 "already exists. The spatial extent of the existing file will not be "
 "modified to accommodate new data, so you may have to remove it in that "
-"case, or use the -overwrite option."
+"case, or use the :option:`-overwrite` option."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:498
+#: ../../source/programs/gdalwarp.rst:545
 msgid ""
 "Polygon cutlines may be used as a mask to restrict the area of the "
 "destination file that may be updated, including blending.  If the OGR "
 "layer containing the cutline features has no explicit SRS, the cutline "
-"features must be in the SRS of the destination file. When writing to a "
-"not yet existing target dataset, its extent will be the one of the "
-"original raster unless -te or -crop_to_cutline are specified."
+"features are assumed to be in the SRS of the destination file. When "
+"writing to a not yet existing target dataset, its extent will be the one "
+"of the original raster unless :option:`-te` or :option:`-crop_to_cutline`"
+" are specified."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:505
-msgid ""
-"Starting with GDAL 3.1, it is possible to use as output format a driver "
-"that only supports the CreateCopy operation. This may internally imply "
-"creation of a temporary file."
-msgstr ""
-
-#: ../../source/programs/gdalwarp.rst:512
+#: ../../source/programs/gdalwarp.rst:556
 msgid "Nodata / source validity mask handling"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:514
+#: ../../source/programs/gdalwarp.rst:558
 msgid ""
 "Invalid values in source pixels, either identified through a nodata value"
 " metadata set on the source band, a mask band, an alpha band or the use "
@@ -680,7 +736,7 @@ msgid ""
 " how it is taken into account depends on the resampling kernel:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:519
+#: ../../source/programs/gdalwarp.rst:563
 msgid ""
 "for nearest resampling, for each target pixel, the coordinate of its "
 "center is projected back to source coordinates and the source pixel "
@@ -688,7 +744,7 @@ msgid ""
 "invalid, the target pixel is considered as nodata."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:524
+#: ../../source/programs/gdalwarp.rst:568
 msgid ""
 "for bilinear, cubic, cubicspline and lanczos, for each target pixel, the "
 "coordinate of its center is projected back to source coordinates and a "
@@ -701,14 +757,14 @@ msgid ""
 "zero to ignore them."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:534
+#: ../../source/programs/gdalwarp.rst:578
 msgid ""
 "for the other resampling methods, source pixels contributing to the "
 "target pixel are ignored if invalid. Only the valid ones are taken into "
 "account. If there are none, the target pixel is considered as nodata."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:538
+#: ../../source/programs/gdalwarp.rst:582
 msgid ""
 "If using :option:`-srcnodata` for multiple images with different invalid "
 "values, you need to either (a) pre-process them to have the same to-be-"
@@ -716,54 +772,58 @@ msgid ""
 "need to preserve the original values for some reason, for example:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:559
+#: ../../source/programs/gdalwarp.rst:603
 msgid "Approximate transformation"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:561
+#: ../../source/programs/gdalwarp.rst:605
 msgid ""
 "By default :program:`gdalwarp` uses a linear approximator for the "
-"transformations with a permitted error of 0.125 pixels. The approximator "
-"basically transforms three points on a scanline: the start, end and "
-"middle. Then it compares the linear approximation of the center based on "
-"the end points to the real thing and checks the error. If the error is "
-"less than the error threshold then the remaining points are approximated "
-"(in two chunks utilizing the center point). If the error exceeds the "
-"threshold, the scanline is split into two sections, and the approximator "
+"transformations with a permitted error of 0.125 pixels in the source "
+"dataset. The approximator precisely transforms three points per output "
+"scanline (the start, middle, and end) from a row and column in the output"
+" dataset to a row and column in the source dataset. It then compares a "
+"linear approximation of the center point coordinates to the precisely "
+"transformed value. If the sum of the horizontal and vertical errors is "
+"less than the error threshold then the remaining source points are "
+"approximated using linear interpolation between the start and middle "
+"point, and between the middle and end point. If the error exceeds the "
+"threshold, the scanline is split into two sections and the approximator "
 "is recursively applied to each section until the error is less than the "
 "threshold or all points have been exactly computed."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:572
+#: ../../source/programs/gdalwarp.rst:620
 msgid ""
-"The error threshold (in pixels) can be controlled with the gdalwarp "
-":option:`-et` switch. If you want to compare a true pixel-by-pixel "
-"reprojection use :option:`-et 0` which disables this approximator "
+"The error threshold (in source dataset pixels) can be controlled with the"
+" gdalwarp :option:`-et` switch. If you want to compare a true pixel-by-"
+"pixel reprojection use :option:`-et 0` which disables this approximator "
 "entirely."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:577
+#: ../../source/programs/gdalwarp.rst:625
 msgid "Vertical transformation"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:579
+#: ../../source/programs/gdalwarp.rst:627
 msgid ""
-"While gdalwarp can essentially perform coordinate transformations in the "
-"2D space, it can perform as well vertical transformations. This is "
-"automatically enabled when the 2 following conditions are met:"
+"While gdalwarp is most commonly used to perform coordinate "
+"transformations in the 2D space, it can also perform vertical "
+"transformations. Vertical transformations are automatically performed "
+"when the following two conditions are met:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:583
+#: ../../source/programs/gdalwarp.rst:631
 msgid ""
 "at least one of the source or target CRS has an explicit vertical CRS (as"
-" part of a compound CRS) or is a 3D (generally geographic) CRS,"
+" part of a compound CRS) or is a 3D (generally geographic) CRS, and"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:585
-msgid "and the raster has a single band."
+#: ../../source/programs/gdalwarp.rst:633
+msgid "the raster has a single band"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:587
+#: ../../source/programs/gdalwarp.rst:635
 msgid ""
 "This mode can also be forced by using the :option:`-vshift` (this is "
 "essentially useful when the CRS involved are not explicitly 3D, but a "
@@ -771,7 +831,7 @@ msgid ""
 "with :option:`-novshift`."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:592
+#: ../../source/programs/gdalwarp.rst:640
 msgid ""
 "When a vertical transformation is involved, typically a shift value read "
 "in a geoid grid will be applied. This may require such grid(s) to be "
@@ -790,11 +850,11 @@ msgid ""
 " change."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:607
+#: ../../source/programs/gdalwarp.rst:655
 msgid "Memory usage"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:609
+#: ../../source/programs/gdalwarp.rst:657
 msgid ""
 "Adding RAM will almost certainly increase the speed of "
 ":program:`gdalwarp`. That's not at all the same as saying that it is "
@@ -808,20 +868,20 @@ msgid ""
 ":config:`GDAL_NUM_THREADS`) greater than 1."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:619
+#: ../../source/programs/gdalwarp.rst:667
 msgid ""
 "Increasing the I/O block cache size may also help. This can be done by "
 "setting the :config:`GDAL_CACHEMAX` configuration like:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:626
+#: ../../source/programs/gdalwarp.rst:674
 msgid ""
 "This uses 500MB of RAM for read/write caching, and 500MB of RAM for "
 "working buffers during the warp. Beyond that it is doubtful more memory "
 "will make a substantial difference."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:630
+#: ../../source/programs/gdalwarp.rst:678
 msgid ""
 "Check CPU usage while :program:`gdalwarp` is running. If it is "
 "substantially less than 100% then you know things are IO bound. Otherwise"
@@ -829,11 +889,11 @@ msgid ""
 "information. For instance, after running the following:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:639
+#: ../../source/programs/gdalwarp.rst:687
 msgid "a message like the following will be output:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:645
+#: ../../source/programs/gdalwarp.rst:693
 msgid ""
 "In this case it is saying that band 1 of :file:`utm.tif` has 32 blocks, "
 "but that 224 block reads were done, implying that lots of data was having"
@@ -841,14 +901,14 @@ msgid ""
 "see messages like:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:655
+#: ../../source/programs/gdalwarp.rst:703
 msgid ""
 "The Src/Dst windows show you the \"chunk size\" being used. In this case "
 "my whole image which is very small. If you find things are being broken "
 "into a lot of chunks increasing :option:`-wm` may help somewhat."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:659
+#: ../../source/programs/gdalwarp.rst:707
 msgid ""
 "But far more important than memory are ensuring you are going through an "
 "optimized path in the warper. If you ever see it reporting "
@@ -857,11 +917,11 @@ msgid ""
 " on 8bit data without nodata or alpha masking in effect."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:667
+#: ../../source/programs/gdalwarp.rst:715
 msgid "Compressed output"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:669
+#: ../../source/programs/gdalwarp.rst:717
 msgid ""
 "In some cases, the output of :program:`gdalwarp` may be much larger than "
 "the original, even if the same compression algorithm is used. By default,"
@@ -871,7 +931,7 @@ msgid ""
 "leading to lost space in the output format."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:676
+#: ../../source/programs/gdalwarp.rst:724
 msgid ""
 "The situation can be improved by using the ``OPTIMIZE_SIZE`` warping "
 "option (:option:`-wo OPTIMIZE_SIZE=YES`), but note that depending on the "
@@ -879,13 +939,13 @@ msgid ""
 "warping process."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:680
+#: ../../source/programs/gdalwarp.rst:728
 msgid ""
 "Another possibility is to use :program:`gdalwarp` without compression and"
 " then follow up with :program:`gdal_translate` with compression:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:688
+#: ../../source/programs/gdalwarp.rst:736
 msgid ""
 "Alternatively, you can use a VRT file as the output format of "
 ":program:`gdalwarp`. The VRT file is just an XML file that will be "
@@ -893,65 +953,189 @@ msgid ""
 "course a bit slower as it will do the real warping operation."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:700
+#: ../../source/programs/gdalwarp.rst:748
 msgid "Examples"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:702
+#: ../../source/programs/gdalwarp.rst:750
 msgid "Basic transformation:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:709
+#: ../../source/programs/gdalwarp.rst:757
 msgid ""
 "For instance, an eight bit spot scene stored in GeoTIFF with control "
 "points mapping the corners to lat/long could be warped to a UTM "
 "projection with a command like this:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:717
+#: ../../source/programs/gdalwarp.rst:765
 msgid ""
 "For instance, the second channel of an ASTER image stored in HDF with "
 "control points mapping the corners to lat/long could be warped to a UTM "
 "projection with a command like this:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:728
+#: ../../source/programs/gdalwarp.rst:776
 msgid ""
 "To apply a cutline on a un-georeferenced image and clip from pixel "
 "(220,60) to pixel (1160,690):"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:735
+#: ../../source/programs/gdalwarp.rst:783
 msgid "where cutline.csv content is like:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:742
+#: ../../source/programs/gdalwarp.rst:790
 msgid ""
 "To transform a DEM from geoid elevations (using EGM96) to WGS84 "
 "ellipsoidal heights:"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:752
+#: ../../source/programs/gdalwarp.rst:800
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:754
+#: ../../source/programs/gdalwarp.rst:802
 msgid "This utility is also callable from C with :cpp:func:`GDALWarp`."
 msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:758
-msgid "See also"
-msgstr ""
+#~ msgid ""
+#~ "Error threshold for transformation "
+#~ "approximation (in pixel units - defaults"
+#~ " to 0.125, unless, starting with GDAL"
+#~ " 2.1, the RPC_DEM transformer option "
+#~ "is specified, in which case, an "
+#~ "exact transformer, i.e. err_threshold=0, will"
+#~ " be used)."
+#~ msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:762
-msgid ""
-"`Wiki page discussing options and behaviours of gdalwarp "
-"<https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp>`_"
-msgstr ""
+#~ msgid ""
+#~ "When downsampling is performed (use of"
+#~ " :option:`-tr` or :option:`-ts`), existing "
+#~ "overviews (either internal/implicit or "
+#~ "external ones) on the source image "
+#~ "will be used by default by "
+#~ "selecting the closest overview to the"
+#~ " desired output resolution. The resampling"
+#~ " method used to create those "
+#~ "overviews is generally not the one "
+#~ "you specify through the :option:`-r` "
+#~ "option. Some formats, like JPEG2000, can"
+#~ " contain significant outliers due to "
+#~ "wavelet compression works. It might thus"
+#~ " be useful in those situations to "
+#~ "use the :option:`-ovr` ``NONE`` option "
+#~ "to prevent existing overviews to be "
+#~ "used."
+#~ msgstr ""
 
-#: ../../source/programs/gdalwarp.rst:766
-msgid ""
-"Wiki page discussing options and behaviours of gdalwarp: "
-"https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp"
-msgstr ""
+#~ msgid ""
+#~ "Set the amount of memory that the"
+#~ " warp API is allowed to use for"
+#~ " caching. The value is interpreted as"
+#~ " being in megabytes if the value "
+#~ "is less than 10000. For values "
+#~ ">=10000, this is interpreted as bytes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Mosaicing into an existing output file"
+#~ " is supported if the output file "
+#~ "already exists. The spatial extent of"
+#~ " the existing file will not be "
+#~ "modified to accommodate new data, so "
+#~ "you may have to remove it in "
+#~ "that case, or use the -overwrite "
+#~ "option."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Polygon cutlines may be used as a"
+#~ " mask to restrict the area of "
+#~ "the destination file that may be "
+#~ "updated, including blending.  If the OGR"
+#~ " layer containing the cutline features "
+#~ "has no explicit SRS, the cutline "
+#~ "features must be in the SRS of "
+#~ "the destination file. When writing to"
+#~ " a not yet existing target dataset,"
+#~ " its extent will be the one of"
+#~ " the original raster unless -te or"
+#~ " -crop_to_cutline are specified."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Starting with GDAL 3.1, it is "
+#~ "possible to use as output format a"
+#~ " driver that only supports the "
+#~ "CreateCopy operation. This may internally "
+#~ "imply creation of a temporary file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default :program:`gdalwarp` uses a "
+#~ "linear approximator for the transformations"
+#~ " with a permitted error of 0.125 "
+#~ "pixels. The approximator basically transforms"
+#~ " three points on a scanline: the "
+#~ "start, end and middle. Then it "
+#~ "compares the linear approximation of the"
+#~ " center based on the end points "
+#~ "to the real thing and checks the"
+#~ " error. If the error is less "
+#~ "than the error threshold then the "
+#~ "remaining points are approximated (in "
+#~ "two chunks utilizing the center point)."
+#~ " If the error exceeds the threshold,"
+#~ " the scanline is split into two "
+#~ "sections, and the approximator is "
+#~ "recursively applied to each section "
+#~ "until the error is less than the"
+#~ " threshold or all points have been"
+#~ " exactly computed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The error threshold (in pixels) can "
+#~ "be controlled with the gdalwarp "
+#~ ":option:`-et` switch. If you want to "
+#~ "compare a true pixel-by-pixel "
+#~ "reprojection use :option:`-et 0` which "
+#~ "disables this approximator entirely."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "While gdalwarp can essentially perform "
+#~ "coordinate transformations in the 2D "
+#~ "space, it can perform as well "
+#~ "vertical transformations. This is "
+#~ "automatically enabled when the 2 "
+#~ "following conditions are met:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "at least one of the source or "
+#~ "target CRS has an explicit vertical "
+#~ "CRS (as part of a compound CRS)"
+#~ " or is a 3D (generally geographic)"
+#~ " CRS,"
+#~ msgstr ""
+
+#~ msgid "and the raster has a single band."
+#~ msgstr ""
+
+#~ msgid "See also"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Wiki page discussing options and "
+#~ "behaviours of gdalwarp "
+#~ "<https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Wiki page discussing options and "
+#~ "behaviours of gdalwarp: "
+#~ "https://trac.osgeo.org/gdal/wiki/UserDocs/GdalWarp"
+#~ msgstr ""
 

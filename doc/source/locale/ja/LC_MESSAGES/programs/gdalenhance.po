@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/programs/gdalenhance.rst:5
+msgid "gdalenhance"
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:9
+msgid "Enhance the contrast of raster images using histogram equalization."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:14
+msgid "Synopsis"
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:27
+msgid "Description"
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:29
+msgid ""
+"The :program:`gdalenhance` utility enhances the contrast of raster images"
+" using histogram equalization. It can either generate a LUT (look-up-"
+"table) that can later be applied to enhance contrast, or it can write the"
+" enhanced image directly."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:36
+msgid "Original image."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:40
+msgid "Image after histogram equalization using :program:`gdalenhance`."
+msgstr ""
+
+#: ../../source/programs/options/help.rst:3
+msgid "Show this help message and exit"
+msgstr ""
+
+#: ../../source/programs/options/help_general.rst:3
+msgid ""
+"Gives a brief usage message for the generic GDAL commandline options and "
+"exit."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:49
+msgid "Select the output format. The default is GeoTIFF (GTiff)."
+msgstr ""
+
+#: ../../source/programs/options/co.rst:5
+msgid ""
+"Many formats have one or more optional creation options that can be used "
+"to control particulars about the file created. For instance, the GeoTIFF "
+"driver supports creation options to control compression, and whether the "
+"file should be tiled."
+msgstr ""
+
+#: ../../source/programs/options/co.rst:10
+msgid ""
+"The creation options available vary by format driver, and some simple "
+"formats have no creation options at all. A list of options supported for "
+"a format can be listed with the :ref:`--formats "
+"<raster_common_options_formats>` command line option but the "
+"documentation for the format is the definitive source of information on "
+"driver creation options. See :ref:`raster_drivers` format specific "
+"documentation for legal creation options for each format."
+msgstr ""
+
+#: ../../source/programs/options/ot.rst:3
+msgid ""
+"Force the output image bands to have a specific data type supported by "
+"the driver, which may be one of the following: ``Byte``, ``Int8``, "
+"``UInt16``, ``Int16``, ``UInt32``, ``Int32``, ``UInt64``, ``Int64``, "
+"``Float32``, ``Float64``, ``CInt16``, ``CInt32``, ``CFloat32`` or "
+"``CFloat64``."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:57
+msgid "Get source image histogram and compute equalization LUTs from it."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:62
+msgid ""
+"Apply a specified LUT to enhance the contrast of the image. The number of"
+" lines in the LUT file should be equal to the number of bands of the "
+"images. Example of LUT file:"
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:74
+msgid "Example"
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:80
+msgid "Apply equalization histogram to enhance the contrast of the image."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:87
+msgid "Write an equalization LUT to the console."
+msgstr ""
+
+#: ../../source/programs/gdalenhance.rst:94
+msgid "Apply a custom LUT (look up-table) to enhance the contrast of the image."
+msgstr ""
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/vector_common_options.rst:5
 msgid "Common options for vector programs"
@@ -87,12 +87,18 @@ msgstr ""
 
 #: ../../source/programs/vector_common_options.rst:27
 msgid ""
+"List all drivers. Can be combined with ``-json`` switch of "
+":program:`ogrinfo` of since GDAL 3.10"
+msgstr ""
+
+#: ../../source/programs/vector_common_options.rst:31
+msgid ""
 "Read the named file and substitute the contents into the command line "
 "options list. Lines beginning with ``#`` will be ignored. Multi-word "
 "arguments may be kept together with double quotes."
 msgstr ""
 
-#: ../../source/programs/vector_common_options.rst:33
+#: ../../source/programs/vector_common_options.rst:37
 msgid ""
 "Sets the named configuration keyword to the given value, as opposed to "
 "setting them as environment variables. Some common configuration keywords"
@@ -102,7 +108,7 @@ msgid ""
 "other :ref:`configuration options <list_config_options>`."
 msgstr ""
 
-#: ../../source/programs/vector_common_options.rst:41
+#: ../../source/programs/vector_common_options.rst:45
 msgid ""
 "Control what debugging messages are emitted. A value of ON will enable "
 "all debug messages. A value of OFF will disable all debug messages. "
@@ -110,7 +116,7 @@ msgid ""
 "somewhere in the value string."
 msgstr ""
 
-#: ../../source/programs/vector_common_options.rst:49
+#: ../../source/programs/vector_common_options.rst:53
 msgid ""
 "Gives a brief usage message for the generic GDAL OGR command line options"
 " and exit."

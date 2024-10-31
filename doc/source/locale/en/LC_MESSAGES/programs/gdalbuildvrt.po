@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/programs/gdalbuildvrt.rst:5
 msgid "gdalbuildvrt"
@@ -31,11 +31,11 @@ msgstr ""
 msgid "Synopsis"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:36
+#: ../../source/programs/gdalbuildvrt.rst:37
 msgid "Description"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:38
+#: ../../source/programs/gdalbuildvrt.rst:39
 msgid ""
 "This program builds a VRT (Virtual Dataset) that is a mosaic of the list "
 "of input GDAL datasets. The list of input GDAL datasets can be specified "
@@ -45,7 +45,7 @@ msgid ""
 "index will be added to the VRT."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:46
+#: ../../source/programs/gdalbuildvrt.rst:47
 msgid ""
 "Starting with GDAL 3.9, for virtual mosaic with a very large number of "
 "source rasters (typically hundreds of thousands of source rasters, or "
@@ -53,21 +53,21 @@ msgid ""
 "tile index compatible of the :ref:`GTI <raster.gti>` driver."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:51
+#: ../../source/programs/gdalbuildvrt.rst:52
 msgid ""
 "With -separate, each files goes into a separate band in the VRT dataset. "
 "Otherwise, the files are considered as source rasters of a larger mosaic "
 "and the VRT file has as many bands as one of the input files."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:55
+#: ../../source/programs/gdalbuildvrt.rst:56
 msgid ""
 "If one GDAL dataset is made of several subdatasets and has 0 raster "
 "bands, all the subdatasets will be added to the VRT rather than the "
 "dataset itself."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:58
+#: ../../source/programs/gdalbuildvrt.rst:59
 msgid ""
 "gdalbuildvrt does some amount of checks to assure that all files that "
 "will be put in the resulting VRT have similar characteristics : number of"
@@ -76,7 +76,7 @@ msgid ""
 "the default mode, and not when using the -separate option)"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:63
+#: ../../source/programs/gdalbuildvrt.rst:64
 msgid ""
 "If there is some amount of spatial overlapping between files, the order "
 "of files appearing in the list of source matter: files that are listed at"
@@ -98,44 +98,44 @@ msgid ""
 "exit."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:77
+#: ../../source/programs/gdalbuildvrt.rst:78
 msgid ""
 "Use the specified value as the tile index field, instead of the default "
 "value which is 'location'."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:82
+#: ../../source/programs/gdalbuildvrt.rst:83
 msgid ""
 "In case the resolution of all input files is not the same, the "
 "-resolution flag enables the user to control the way the output "
 "resolution is computed."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:85
+#: ../../source/programs/gdalbuildvrt.rst:86
 msgid ""
 "`highest` will pick the smallest values of pixel dimensions within the "
 "set of source rasters."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:87
+#: ../../source/programs/gdalbuildvrt.rst:88
 msgid ""
 "`lowest` will pick the largest values of pixel dimensions within the set "
 "of source rasters."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:89
+#: ../../source/programs/gdalbuildvrt.rst:90
 msgid ""
 "`average` is the default and will compute an average of pixel dimensions "
 "within the set of source rasters."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:91
+#: ../../source/programs/gdalbuildvrt.rst:92
 msgid ""
 "`user` must be used in combination with the :option:`-tr` option to "
 "specify the target resolution."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:95
+#: ../../source/programs/gdalbuildvrt.rst:96
 msgid ""
 "Set target resolution. The values must be expressed in georeferenced "
 "units. Both must be positive values. Specifying those values is of course"
@@ -143,7 +143,7 @@ msgid ""
 ":option:`-resolution` option."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:102
+#: ../../source/programs/gdalbuildvrt.rst:103
 msgid ""
 "(target aligned pixels) align the coordinates of the extent of the output"
 " file to the values of the :option:`-tr`, such that the aligned extent "
@@ -151,14 +151,14 @@ msgid ""
 "resy, xmax / resx and ymax / resy are integer values."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:109
+#: ../../source/programs/gdalbuildvrt.rst:110
 msgid ""
 "Set georeferenced extents of VRT file. The values must be expressed in "
 "georeferenced units. If not specified, the extent of the VRT is the "
 "minimum bounding box of the set of source rasters."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:114
+#: ../../source/programs/gdalbuildvrt.rst:115
 msgid ""
 "Adds an alpha mask band to the VRT when the source raster have none. "
 "Mainly useful for RGB sources (or grey-level sources). The alpha band is "
@@ -169,7 +169,7 @@ msgid ""
 ":option:`-separate`."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:122
+#: ../../source/programs/gdalbuildvrt.rst:123
 msgid ""
 "Even if any band contains nodata value, giving this option makes the VRT "
 "band not report the NoData. Useful when you want to control the "
@@ -178,7 +178,7 @@ msgid ""
 "is transparent in areas with no data."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:130
+#: ../../source/programs/gdalbuildvrt.rst:131
 msgid ""
 "Set nodata values for input bands (different values can be supplied for "
 "each band). If more than one value is supplied all values should be "
@@ -189,7 +189,7 @@ msgid ""
 "of `None` to ignore intrinsic nodata settings on the source datasets."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:141
+#: ../../source/programs/gdalbuildvrt.rst:142
 msgid ""
 "Starting with GDAL 3.3, if a source has a mask band (internal/external "
 "mask band, or alpha band), a <ComplexSource> element is created by "
@@ -201,7 +201,7 @@ msgid ""
 "the last one will override previous ones in areas of overlap."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:154
+#: ../../source/programs/gdalbuildvrt.rst:155
 msgid ""
 "Insert a <NoDataFromMaskSource> source, which replaces the value of the "
 "source with the value of :option:`-vrtnodata` (or 0 if not specified) "
@@ -210,21 +210,21 @@ msgid ""
 "R,G,B one with a NoData value."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:161
+#: ../../source/programs/gdalbuildvrt.rst:162
 msgid ""
 "Select an input <band> to be processed. Bands are numbered from 1. If "
 "input bands not set all bands will be added to vrt. Multiple :option:`-b`"
 " switches may be used to select a set of input bands."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:167
+#: ../../source/programs/gdalbuildvrt.rst:168
 msgid ""
 "If the input dataset contains several subdatasets, use a subdataset with "
 "the specified number (starting from 1). This is an alternative of giving "
 "the full subdataset name as an input to the utility."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:173
+#: ../../source/programs/gdalbuildvrt.rst:174
 msgid ""
 "Set nodata values at the VRT band level (different values can be supplied"
 " for each band).  If more than one value is supplied all values should be"
@@ -236,13 +236,13 @@ msgid ""
 "datasets."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:182
+#: ../../source/programs/gdalbuildvrt.rst:183
 msgid ""
 "Place each input file into a separate band. Contrary to the default mode,"
 " it is not required that all bands have the same datatype."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:185
+#: ../../source/programs/gdalbuildvrt.rst:186
 msgid ""
 "Starting with GDAL 3.8, all bands of each input file are added as "
 "separate VRT bands, unless :option:`-b` is specified to select a subset "
@@ -250,7 +250,7 @@ msgid ""
 "placed into a new VRT band, and :option:`-b` was ignored."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:192
+#: ../../source/programs/gdalbuildvrt.rst:193
 msgid ""
 "When this option is specified, the utility will accept to make a VRT even"
 " if the input datasets have not the same projection. Note: this does not "
@@ -258,70 +258,74 @@ msgid ""
 "ignored."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:198
+#: ../../source/programs/gdalbuildvrt.rst:199
 msgid ""
 "Override the projection for the output file.  The <srs_def> may be any of"
 " the usual GDAL/OGR forms, complete WKT, PROJ.4, EPSG:n or a file "
 "containing the WKT. No reprojection is done."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:203
+#: ../../source/programs/gdalbuildvrt.rst:204
 msgid "Select a resampling algorithm. Nearest is the default"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:207
+#: ../../source/programs/gdalbuildvrt.rst:208
 msgid "Dataset open option (format specific)"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:213
+#: ../../source/programs/gdalbuildvrt.rst:214
+msgid "Specify a :ref:`VRT driver creation option <raster_vrt_creation_options>`."
+msgstr ""
+
+#: ../../source/programs/gdalbuildvrt.rst:220
 msgid "To specify a text file with an input filename on each line"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:217
+#: ../../source/programs/gdalbuildvrt.rst:224
 msgid "To disable the progress bar on the console"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:221
+#: ../../source/programs/gdalbuildvrt.rst:228
 msgid "Overwrite the VRT if it already exists."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:225
+#: ../../source/programs/gdalbuildvrt.rst:232
 msgid ""
 "Turn warnings as failures. This is mutually exclusive with -non_strict, "
 "the latter which is the default."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:231
+#: ../../source/programs/gdalbuildvrt.rst:238
 msgid ""
 "Skip source datasets that have issues with warnings, and continue "
 "processing. This is the default."
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:236
+#: ../../source/programs/gdalbuildvrt.rst:243
 msgid "Examples"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:238
+#: ../../source/programs/gdalbuildvrt.rst:245
 msgid "Make a virtual mosaic from all TIFF files contained in a directory :"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:244
+#: ../../source/programs/gdalbuildvrt.rst:251
 msgid "Make a virtual mosaic from files whose name is specified in a text file :"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:251
+#: ../../source/programs/gdalbuildvrt.rst:258
 msgid "Make a RGB virtual mosaic from 3 single-band input files :"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:257
+#: ../../source/programs/gdalbuildvrt.rst:264
 msgid "Make a virtual mosaic with blue background colour (RGB: 0 0 255) :"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:264
+#: ../../source/programs/gdalbuildvrt.rst:271
 msgid "C API"
 msgstr ""
 
-#: ../../source/programs/gdalbuildvrt.rst:266
+#: ../../source/programs/gdalbuildvrt.rst:273
 msgid "This utility is also callable from C with :cpp:func:`GDALBuildVRT`."
 msgstr ""
 

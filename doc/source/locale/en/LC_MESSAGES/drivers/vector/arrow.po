@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 10:14+0900\n"
+"POT-Creation-Date: 2024-10-31 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -178,10 +178,10 @@ msgstr ""
 
 #: ../../source/drivers/vector/arrow.rst:160
 msgid ""
-"Prefixing any GDAL file name with the ``vsi://`` URI scheme prefix. In "
-"addition to any potential vsi prefix in the GDAL file name. So the "
+"Prefixing any GDAL file name with the ``gdalvsi://`` URI scheme prefix. "
+"In addition to any potential vsi prefix in the GDAL file name. So the "
 "``/vsicurl/http://example.com`` GDAL file name becomes the "
-"``vsi:///vsicurl/http://example.com`` Arrow URI."
+"``gdalvsi:///vsicurl/http://example.com`` Arrow URI."
 msgstr ""
 
 #: ../../source/drivers/vector/arrow.rst:165
@@ -201,4 +201,14 @@ msgstr ""
 #: ../../source/drivers/vector/arrow.rst:171
 msgid "Related driver: :ref:`Parquet driver <vector.parquet>`"
 msgstr ""
+
+#~ msgid ""
+#~ "Prefixing any GDAL file name with "
+#~ "the ``vsi://`` URI scheme prefix. In "
+#~ "addition to any potential vsi prefix "
+#~ "in the GDAL file name. So the "
+#~ "``/vsicurl/http://example.com`` GDAL file name "
+#~ "becomes the ``vsi:///vsicurl/http://example.com`` "
+#~ "Arrow URI."
+#~ msgstr ""
 
