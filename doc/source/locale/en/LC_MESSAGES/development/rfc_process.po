@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-09 02:47+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/development/rfc_process.rst:5
+msgid "Request For Comments (RFC) process for code changes"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:7
+msgid ""
+"While most bug fixes and small enhancements following the existing logic "
+"of code do not require a RFC and can be done using pull requests, we "
+"require contributors to write a RFC and go through a formal adoption "
+"process in the following cases:"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:11
+msgid "Anything that could cause backward compatibility issues."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:12
+msgid "Adding substantial amounts of new code (see :ref:`rfc-85`)"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:13
+msgid "Changing inter-subsystem APIs, or objects."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:14
+msgid "Anything that might be controversial."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:16
+msgid ""
+"A good rule of thumb is that if you wonder \"does this require a RFC?\", "
+"the answer is generally \"yes\"."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:19
+msgid "The RFC process is the following one:"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:21
+msgid ""
+"add a new .rst file in :file:`doc/source/development/rfc` with the RFC "
+"text, and references it in :file:`doc/source/development/rfc/index.rst`, "
+"and issue a pull request. You can look at "
+"https://github.com/OSGeo/gdal/pull/10913 as a potential example for the "
+"expected content. Typical sections are:"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:27
+msgid "Title: RFC {XYZ}: {Description of the RFC in a short sentence}"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:28
+msgid "Author: your name."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:29
+msgid "Contact: your email."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:30
+msgid "Started: date at which this is started."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:31
+msgid "Status: \"Draft\", when the RFC is started."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:32
+msgid "Summary: what the RFC accomplishes in a few sentences."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:33
+msgid "Motivation: Paragraph describing why this RFC is needed."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:34
+msgid ""
+"Technical solution: organized in several sub-paragraph depending on the "
+"complexity of the RFC. You may need to mention new API calls, impacted "
+"files, etc., and other needed details."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:37
+msgid "Backward compatibility: API, ABI, and other compatibility concerns."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:38
+msgid "Performance impacts."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:39
+msgid "Documentation: how this will be documented."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:40
+msgid "Testing: how this will be tested."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:41
+msgid ""
+"Related issues and PRs: points at potential existing tickets about the "
+"topic, and pull request with a candidate implementation"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:43
+msgid "Voting history: \"TBD\" (to be defined), when the RFC is started"
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:45
+msgid ""
+"Send an email to the :ref:`gdal-dev mailing list <mailing_list>` with a "
+"title like: \"Call for discussion on RFC {XYZ}: {Description of the RFC "
+"in a short sentence}\" where you point to the pull request. You may get "
+"feedback both in the pull request or in the mailing list."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:50
+msgid ""
+"Wait for feedback (give readers at least one week, or more if holiday "
+"season). If it seems positive and reasonable consensus can be reached, "
+"you can start working on a candidate implementation, and issue a pull "
+"request for it, separate for the pull request with the RFC text. "
+"Reference this candidate implementation pull request in the \"Related "
+"issues and PRs\" section of the RFC text."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:57
+msgid ""
+"Once your candidate implementation is representative enough, and you and "
+"other contributors can have a good confidence that the RFC can be "
+"implemented in the way it has been described, send an email to the gdal-"
+"dev mailing list with a title like \"Motion: adopt RFC {XYZ}: "
+"{Description of the RFC in a short sentence}\" where you point to the "
+"pull request. All subscribers can vote, but only votes from members of "
+"the GDAL Project Steering Committee are binding. The voting rules are "
+"covered by :ref:`rfc-1`."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:65
+msgid ""
+"Once the RFC is approved, finish your candidate implementation if not "
+"already finished, and wait for the review process and for it to be "
+"merged."
+msgstr ""
+
+#: ../../source/development/rfc_process.rst:68
+msgid ""
+"Update the Status to \"Adopted, implemented\" and Voting history sections"
+" of the RFC text."
+msgstr ""
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-01 04:49+0900\n"
+"POT-Creation-Date: 2024-11-09 02:47+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/drivers/raster/nitf_advanced.rst:5
 msgid "NITF -- Advanced Driver Information"
@@ -32,11 +32,11 @@ msgid ""
 "advanced users."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:14
+#: ../../source/drivers/raster/nitf_advanced.rst:16
 msgid "CGM Segments"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:16
+#: ../../source/drivers/raster/nitf_advanced.rst:18
 msgid ""
 "NITF files that have CGM data (that is segment type GR - graphics, or SY "
 "with an STYPE value of 'C') will make that information available as "
@@ -44,7 +44,7 @@ msgid ""
 "like:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:32
+#: ../../source/drivers/raster/nitf_advanced.rst:34
 msgid ""
 "The SLOC_ROW and SLOC_COL values are the placement of the CGM object "
 "relative to the base (SALVL) image. The CCS_ROW/COL values are relative "
@@ -56,19 +56,19 @@ msgid ""
 " format using scheme CPLES_BackslashQuotable."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:41
+#: ../../source/drivers/raster/nitf_advanced.rst:43
 msgid ""
 "To add CGM data to a NITF image, you can pass creation options in the "
 "following format:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:53
+#: ../../source/drivers/raster/nitf_advanced.rst:55
 msgid ""
 "Notice that passing CGM as creation options will overwrite existing CGM "
 "segment read in the CGM metadata domain."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:56
+#: ../../source/drivers/raster/nitf_advanced.rst:58
 msgid ""
 "While GDAL does not support parsing or rendering CGM data, at least one "
 "user has found the `UniConverter "
@@ -76,11 +76,11 @@ msgid ""
 " library useful for this purpose."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:62
+#: ../../source/drivers/raster/nitf_advanced.rst:64
 msgid "Multi-Image NITF Files"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:64
+#: ../../source/drivers/raster/nitf_advanced.rst:66
 msgid ""
 "NITF files with more than one image segment (IM) will present the image "
 "segments as subdatasets. Opening a multiple NITF file by filename will "
@@ -88,7 +88,7 @@ msgid ""
 "3 image NITF file might look like:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:79
+#: ../../source/drivers/raster/nitf_advanced.rst:81
 msgid ""
 "In this case opening \"multi_image_jpeg_2.0.ntf\" directly will give "
 "access to \"NITF_IM:0:multi_image_jpeg_2.0.ntf\". To open the others use "
@@ -96,24 +96,24 @@ msgid ""
 "GDAL concept discussed in the :ref:`raster_data_model` document."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:85
+#: ../../source/drivers/raster/nitf_advanced.rst:89
 msgid "Text Segments"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:87
+#: ../../source/drivers/raster/nitf_advanced.rst:91
 msgid ""
 "NITF files that have text segments (that is segment type TX) will make "
 "that information available as metadata in the TEXT domain. The returned "
 "metadata will look something like:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:108
+#: ../../source/drivers/raster/nitf_advanced.rst:112
 msgid ""
 "The argument to DATA_n is the raw text of the n'th (zero based) text "
 "segment with no escaping of any kind applied."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:111
+#: ../../source/drivers/raster/nitf_advanced.rst:115
 msgid ""
 "The TEXT segment header data is preserved in HEADER_n metadata item. The "
 "CreateCopy() method on the NITF driver also supports creating text "
@@ -121,23 +121,23 @@ msgid ""
 " TEXT domain as defined above."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:116
+#: ../../source/drivers/raster/nitf_advanced.rst:120
 msgid ""
 "To add TEXT data to a NITF image, you can also pass creation options in "
 "the following format:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:126
+#: ../../source/drivers/raster/nitf_advanced.rst:130
 msgid ""
 "Notice that passing TEXT as creation options will overwrite existing text"
 " segment read in the TEXT metadata domain."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:130
+#: ../../source/drivers/raster/nitf_advanced.rst:134
 msgid "TREs"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:132
+#: ../../source/drivers/raster/nitf_advanced.rst:136
 msgid ""
 "NITF files with registered (or unregistered?) extensions on the file "
 "header, or the referenced image header will make them available in a raw "
@@ -147,18 +147,18 @@ msgid ""
 "\"backslash escaped\" like CGM data above."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:139
+#: ../../source/drivers/raster/nitf_advanced.rst:143
 msgid ""
 "In case of multiple occurrences of the same TRE, the second occurrence "
 "will be named \"TRENAME_2\", the third \"TRENAME_3\" where TRENAME is the"
 " TRE name."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:157
+#: ../../source/drivers/raster/nitf_advanced.rst:161
 msgid "TREs as xml:TRE"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:159
+#: ../../source/drivers/raster/nitf_advanced.rst:163
 msgid ""
 "All TREs found in file and matching one of the TRE description of the "
 "`nitf_spec.xml "
@@ -167,11 +167,11 @@ msgid ""
 "metadata domain."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:217
+#: ../../source/drivers/raster/nitf_advanced.rst:221
 msgid "TRE creation from hexadecimal data"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:219
+#: ../../source/drivers/raster/nitf_advanced.rst:223
 msgid ""
 "TRE data can be added to a newly created NITF file in hexadecimal format "
 "to encode binary data such as unsigned int or floating point types.  The "
@@ -180,28 +180,28 @@ msgid ""
 "\"FILE_TRE=HEX/<tre_name>=<hex_tre_data>"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:229
+#: ../../source/drivers/raster/nitf_advanced.rst:233
 msgid "TRE creation as TRE_OVERFLOW DES"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:231
+#: ../../source/drivers/raster/nitf_advanced.rst:235
 msgid ""
 "The following example shows how to create a CSEPHA TRE as a TRE_OVERFLOW "
 "DES:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:262
+#: ../../source/drivers/raster/nitf_advanced.rst:266
 msgid ""
 "Note the use of the RESERVE_SPACE_FOR_TRE_OVERFLOW=YES creation option to"
 " reserve space for the IXSOFL field in the image subheader pointed by "
 "DESITEM."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:267
+#: ../../source/drivers/raster/nitf_advanced.rst:271
 msgid "Data Extension Segments (xml:DES)"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:268
+#: ../../source/drivers/raster/nitf_advanced.rst:272
 msgid ""
 "Data Extension Segments (DESs) are user-defined metadata extensions to "
 "the NITF format. The DES metadata is available through the xml\\:DES "
@@ -211,11 +211,11 @@ msgid ""
 "structure:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:289
+#: ../../source/drivers/raster/nitf_advanced.rst:293
 msgid "Raw File / Image Headers"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:291
+#: ../../source/drivers/raster/nitf_advanced.rst:295
 msgid ""
 "In some cases application may need to recover very specific information "
 "from the image or file headers that isn't normally available as metadata."
@@ -224,27 +224,27 @@ msgid ""
 "in base64 encoded format. Something like:"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:303
+#: ../../source/drivers/raster/nitf_advanced.rst:307
 msgid ""
 "Note that the ascii encoded numeric values prefixing the base64 encoded "
 "header is the length (decoded) in bytes, followed by one space."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:307
+#: ../../source/drivers/raster/nitf_advanced.rst:313
 msgid "Writing multiple Image Segments"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:309
+#: ../../source/drivers/raster/nitf_advanced.rst:315
 msgid "(GDAL >= 3.4)"
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:311
+#: ../../source/drivers/raster/nitf_advanced.rst:317
 msgid ""
 "Writing a NITF file with several image segments is done with the "
 "``APPEND_SUBDATASET=YES`` creation option but requires some care."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:314
+#: ../../source/drivers/raster/nitf_advanced.rst:320
 msgid ""
 "The file must be created with the content of the first image segment with"
 " the ``NUMI`` creation option to specify the total number of image "
@@ -254,24 +254,36 @@ msgid ""
 "NOT be specified."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:320
+#: ../../source/drivers/raster/nitf_advanced.rst:326
 msgid ""
 "Subsequent images are appended with the ``APPEND_SUBDATASET=YES`` "
 "creation option. The ``IDLVL``, ``IALVL``, ``ILOCROW`` and ``ILOCCOL`` "
 "creation option may be specified."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:323
+#: ../../source/drivers/raster/nitf_advanced.rst:329
 msgid ""
 "On the last image segment, the DES content, if any must be specified with"
 " the ``DES`` creation option."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:326
+#: ../../source/drivers/raster/nitf_advanced.rst:332
 msgid "The file will only be valid if all NUMI images have been actually written."
 msgstr ""
 
-#: ../../source/drivers/raster/nitf_advanced.rst:328
+#: ../../source/drivers/raster/nitf_advanced.rst:334
 msgid "Example:"
+msgstr ""
+
+#: ../../source/drivers/raster/nitf_advanced.rst:343
+msgid "Reading SAR products"
+msgstr ""
+
+#: ../../source/drivers/raster/nitf_advanced.rst:345
+msgid ""
+"Starting with GDAL 3.11, NITF products whose ``ICAT`` field is set to "
+"``SAR`` and which have bands with ``I`` (in-phase) and ``Q`` (quadrature)"
+" ``ISUBCAT`` values will be represented as a single-band of complex type "
+"where in-phase is the real part and quadrature the imaginary part."
 msgstr ""
 

@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-09 02:47+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/drivers/vector/aivector.rst:4
+msgid "Artificial intelligence powered vector driver"
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:-1
+msgid "Driver short name"
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:8
+msgid "AIVector"
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:12
+msgid ""
+"This driver builds on many years of self-funded investments from the GDAL"
+" team on AI technologies to bring you the ultimate driver that can read "
+"any vector format. After that one, no need for any new vector driver!"
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:16
+msgid ""
+"The open syntax is ``AIVector:{filename}``, or directly specify the "
+"filename and force the use of the AIVector driver with the ``-if`` flag "
+"of ogrinfo or ogr2ogr. No options at all. Just enjoy the true power of "
+"AI."
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:20
+msgid "We are open to external investors to develop the write side of the driver."
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:23
+msgid "Examples"
+msgstr ""
+
+#: ../../source/drivers/vector/aivector.rst:31
+msgid ""
+"The above works even if you make a typo in the filename. The driver will "
+"automatically figure out the filename you meant."
+msgstr ""
+

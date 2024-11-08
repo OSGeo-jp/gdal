@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 20:26+0900\n"
+"POT-Creation-Date: 2024-11-09 02:47+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
@@ -44,36 +44,98 @@ msgid "Build requirements"
 msgstr ""
 
 #: ../../source/drivers/vector/driver_summary.rst:16
-msgid ":ref:`AmigoCloud <vector.amigocloud>`"
+msgid ":ref:`ADBC <vector.adbc>`"
 msgstr ""
 
 #: ../../source/drivers/vector/driver_summary.rst:17
-msgid "AmigoCloud"
+msgid "Arrow Database Connectivity"
 msgstr ""
 
 #: ../../source/drivers/vector/driver_summary.rst:18
 #: ../../source/drivers/vector/driver_summary.rst:19
+#: ../../source/drivers/vector/driver_summary.rst:33
+#: ../../source/drivers/vector/driver_summary.rst:38
+#: ../../source/drivers/vector/driver_summary.rst:43
+#: ../../source/drivers/vector/driver_summary.rst:58
+#: ../../source/drivers/vector/driver_summary.rst:73
+#: ../../source/drivers/vector/driver_summary.rst:74
+#: ../../source/drivers/vector/driver_summary.rst:79
+#: ../../source/drivers/vector/driver_summary.rst:83
+#: ../../source/drivers/vector/driver_summary.rst:88
+#: ../../source/drivers/vector/driver_summary.rst:98
+#: ../../source/drivers/vector/driver_summary.rst:138
+#: ../../source/drivers/vector/driver_summary.rst:163
+#: ../../source/drivers/vector/driver_summary.rst:164
+#: ../../source/drivers/vector/driver_summary.rst:168
+#: ../../source/drivers/vector/driver_summary.rst:169
+#: ../../source/drivers/vector/driver_summary.rst:183
+#: ../../source/drivers/vector/driver_summary.rst:218
+#: ../../source/drivers/vector/driver_summary.rst:219
+#: ../../source/drivers/vector/driver_summary.rst:243
+#: ../../source/drivers/vector/driver_summary.rst:263
+#: ../../source/drivers/vector/driver_summary.rst:273
+#: ../../source/drivers/vector/driver_summary.rst:278
+#: ../../source/drivers/vector/driver_summary.rst:283
+#: ../../source/drivers/vector/driver_summary.rst:293
+#: ../../source/drivers/vector/driver_summary.rst:299
+#: ../../source/drivers/vector/driver_summary.rst:303
+#: ../../source/drivers/vector/driver_summary.rst:313
+#: ../../source/drivers/vector/driver_summary.rst:328
+#: ../../source/drivers/vector/driver_summary.rst:329
+#: ../../source/drivers/vector/driver_summary.rst:343
+#: ../../source/drivers/vector/driver_summary.rst:348
+#: ../../source/drivers/vector/driver_summary.rst:349
+#: ../../source/drivers/vector/driver_summary.rst:363
+#: ../../source/drivers/vector/driver_summary.rst:378
+#: ../../source/drivers/vector/driver_summary.rst:379
+#: ../../source/drivers/vector/driver_summary.rst:388
+#: ../../source/drivers/vector/driver_summary.rst:393
+#: ../../source/drivers/vector/driver_summary.rst:398
+#: ../../source/drivers/vector/driver_summary.rst:404
+#: ../../source/drivers/vector/driver_summary.rst:408
+#: ../../source/drivers/vector/driver_summary.rst:418
+#: ../../source/drivers/vector/driver_summary.rst:423
+#: ../../source/drivers/vector/driver_summary.rst:433
+#: ../../source/drivers/vector/driver_summary.rst:438
+#: ../../source/drivers/vector/driver_summary.rst:439
+#: ../../source/drivers/vector/driver_summary.rst:444
+#: ../../source/drivers/vector/driver_summary.rst:448
+msgid "No"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:20
+msgid "???"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:21
+msgid ":ref:`AmigoCloud <vector.amigocloud>`"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:22
+msgid "AmigoCloud"
+msgstr ""
+
 #: ../../source/drivers/vector/driver_summary.rst:23
 #: ../../source/drivers/vector/driver_summary.rst:24
+#: ../../source/drivers/vector/driver_summary.rst:28
 #: ../../source/drivers/vector/driver_summary.rst:29
 #: ../../source/drivers/vector/driver_summary.rst:34
 #: ../../source/drivers/vector/driver_summary.rst:39
-#: ../../source/drivers/vector/driver_summary.rst:43
 #: ../../source/drivers/vector/driver_summary.rst:44
 #: ../../source/drivers/vector/driver_summary.rst:48
 #: ../../source/drivers/vector/driver_summary.rst:49
+#: ../../source/drivers/vector/driver_summary.rst:53
 #: ../../source/drivers/vector/driver_summary.rst:54
-#: ../../source/drivers/vector/driver_summary.rst:58
 #: ../../source/drivers/vector/driver_summary.rst:59
 #: ../../source/drivers/vector/driver_summary.rst:63
 #: ../../source/drivers/vector/driver_summary.rst:64
-#: ../../source/drivers/vector/driver_summary.rst:73
-#: ../../source/drivers/vector/driver_summary.rst:79
+#: ../../source/drivers/vector/driver_summary.rst:68
+#: ../../source/drivers/vector/driver_summary.rst:69
+#: ../../source/drivers/vector/driver_summary.rst:78
 #: ../../source/drivers/vector/driver_summary.rst:84
-#: ../../source/drivers/vector/driver_summary.rst:88
 #: ../../source/drivers/vector/driver_summary.rst:89
+#: ../../source/drivers/vector/driver_summary.rst:93
 #: ../../source/drivers/vector/driver_summary.rst:94
-#: ../../source/drivers/vector/driver_summary.rst:98
 #: ../../source/drivers/vector/driver_summary.rst:99
 #: ../../source/drivers/vector/driver_summary.rst:103
 #: ../../source/drivers/vector/driver_summary.rst:104
@@ -87,8 +149,8 @@ msgstr ""
 #: ../../source/drivers/vector/driver_summary.rst:124
 #: ../../source/drivers/vector/driver_summary.rst:128
 #: ../../source/drivers/vector/driver_summary.rst:129
+#: ../../source/drivers/vector/driver_summary.rst:133
 #: ../../source/drivers/vector/driver_summary.rst:134
-#: ../../source/drivers/vector/driver_summary.rst:138
 #: ../../source/drivers/vector/driver_summary.rst:139
 #: ../../source/drivers/vector/driver_summary.rst:143
 #: ../../source/drivers/vector/driver_summary.rst:144
@@ -96,12 +158,12 @@ msgstr ""
 #: ../../source/drivers/vector/driver_summary.rst:149
 #: ../../source/drivers/vector/driver_summary.rst:153
 #: ../../source/drivers/vector/driver_summary.rst:154
-#: ../../source/drivers/vector/driver_summary.rst:168
-#: ../../source/drivers/vector/driver_summary.rst:169
+#: ../../source/drivers/vector/driver_summary.rst:158
+#: ../../source/drivers/vector/driver_summary.rst:159
 #: ../../source/drivers/vector/driver_summary.rst:173
 #: ../../source/drivers/vector/driver_summary.rst:174
+#: ../../source/drivers/vector/driver_summary.rst:178
 #: ../../source/drivers/vector/driver_summary.rst:179
-#: ../../source/drivers/vector/driver_summary.rst:183
 #: ../../source/drivers/vector/driver_summary.rst:184
 #: ../../source/drivers/vector/driver_summary.rst:188
 #: ../../source/drivers/vector/driver_summary.rst:189
@@ -113,975 +175,927 @@ msgstr ""
 #: ../../source/drivers/vector/driver_summary.rst:204
 #: ../../source/drivers/vector/driver_summary.rst:208
 #: ../../source/drivers/vector/driver_summary.rst:209
-#: ../../source/drivers/vector/driver_summary.rst:218
-#: ../../source/drivers/vector/driver_summary.rst:219
+#: ../../source/drivers/vector/driver_summary.rst:213
+#: ../../source/drivers/vector/driver_summary.rst:214
 #: ../../source/drivers/vector/driver_summary.rst:223
 #: ../../source/drivers/vector/driver_summary.rst:224
 #: ../../source/drivers/vector/driver_summary.rst:228
 #: ../../source/drivers/vector/driver_summary.rst:229
 #: ../../source/drivers/vector/driver_summary.rst:233
 #: ../../source/drivers/vector/driver_summary.rst:234
+#: ../../source/drivers/vector/driver_summary.rst:238
 #: ../../source/drivers/vector/driver_summary.rst:239
-#: ../../source/drivers/vector/driver_summary.rst:243
 #: ../../source/drivers/vector/driver_summary.rst:244
 #: ../../source/drivers/vector/driver_summary.rst:248
 #: ../../source/drivers/vector/driver_summary.rst:249
 #: ../../source/drivers/vector/driver_summary.rst:253
 #: ../../source/drivers/vector/driver_summary.rst:254
+#: ../../source/drivers/vector/driver_summary.rst:258
 #: ../../source/drivers/vector/driver_summary.rst:259
-#: ../../source/drivers/vector/driver_summary.rst:263
 #: ../../source/drivers/vector/driver_summary.rst:264
+#: ../../source/drivers/vector/driver_summary.rst:268
 #: ../../source/drivers/vector/driver_summary.rst:269
 #: ../../source/drivers/vector/driver_summary.rst:274
 #: ../../source/drivers/vector/driver_summary.rst:279
-#: ../../source/drivers/vector/driver_summary.rst:283
 #: ../../source/drivers/vector/driver_summary.rst:284
+#: ../../source/drivers/vector/driver_summary.rst:288
 #: ../../source/drivers/vector/driver_summary.rst:289
-#: ../../source/drivers/vector/driver_summary.rst:293
-#: ../../source/drivers/vector/driver_summary.rst:299
-#: ../../source/drivers/vector/driver_summary.rst:303
+#: ../../source/drivers/vector/driver_summary.rst:294
+#: ../../source/drivers/vector/driver_summary.rst:298
 #: ../../source/drivers/vector/driver_summary.rst:304
+#: ../../source/drivers/vector/driver_summary.rst:308
 #: ../../source/drivers/vector/driver_summary.rst:309
-#: ../../source/drivers/vector/driver_summary.rst:313
 #: ../../source/drivers/vector/driver_summary.rst:314
 #: ../../source/drivers/vector/driver_summary.rst:318
 #: ../../source/drivers/vector/driver_summary.rst:319
-#: ../../source/drivers/vector/driver_summary.rst:328
-#: ../../source/drivers/vector/driver_summary.rst:329
+#: ../../source/drivers/vector/driver_summary.rst:323
+#: ../../source/drivers/vector/driver_summary.rst:324
 #: ../../source/drivers/vector/driver_summary.rst:333
 #: ../../source/drivers/vector/driver_summary.rst:334
+#: ../../source/drivers/vector/driver_summary.rst:338
 #: ../../source/drivers/vector/driver_summary.rst:339
-#: ../../source/drivers/vector/driver_summary.rst:348
-#: ../../source/drivers/vector/driver_summary.rst:349
+#: ../../source/drivers/vector/driver_summary.rst:344
 #: ../../source/drivers/vector/driver_summary.rst:353
 #: ../../source/drivers/vector/driver_summary.rst:354
+#: ../../source/drivers/vector/driver_summary.rst:358
 #: ../../source/drivers/vector/driver_summary.rst:359
-#: ../../source/drivers/vector/driver_summary.rst:363
 #: ../../source/drivers/vector/driver_summary.rst:364
 #: ../../source/drivers/vector/driver_summary.rst:368
 #: ../../source/drivers/vector/driver_summary.rst:369
-#: ../../source/drivers/vector/driver_summary.rst:378
-#: ../../source/drivers/vector/driver_summary.rst:379
-#: ../../source/drivers/vector/driver_summary.rst:384
-#: ../../source/drivers/vector/driver_summary.rst:389
-#: ../../source/drivers/vector/driver_summary.rst:394
-#: ../../source/drivers/vector/driver_summary.rst:398
-#: ../../source/drivers/vector/driver_summary.rst:404
-#: ../../source/drivers/vector/driver_summary.rst:408
-#: ../../source/drivers/vector/driver_summary.rst:409
-#: ../../source/drivers/vector/driver_summary.rst:414
-#: ../../source/drivers/vector/driver_summary.rst:419
-#: ../../source/drivers/vector/driver_summary.rst:423
-#: ../../source/drivers/vector/driver_summary.rst:424
-#: ../../source/drivers/vector/driver_summary.rst:429
-#: ../../source/drivers/vector/driver_summary.rst:438
-#: ../../source/drivers/vector/driver_summary.rst:444
-msgid "**Yes**"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:20
-#: ../../source/drivers/vector/driver_summary.rst:45
-#: ../../source/drivers/vector/driver_summary.rst:55
-#: ../../source/drivers/vector/driver_summary.rst:85
-#: ../../source/drivers/vector/driver_summary.rst:90
-#: ../../source/drivers/vector/driver_summary.rst:270
-#: ../../source/drivers/vector/driver_summary.rst:280
-#: ../../source/drivers/vector/driver_summary.rst:345
-#: ../../source/drivers/vector/driver_summary.rst:430
-msgid "libcurl"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:21
-msgid ":ref:`Arrow <vector.arrow>`"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:22
-msgid "(Geo)Arrow IPC File Format / Stream"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:25
-msgid "Apache Arrow C++ library"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:26
-msgid ":ref:`AVCBIN <vector.avcbin>`"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:27
-msgid "Arc/Info Binary Coverage"
-msgstr ""
-
-#: ../../source/drivers/vector/driver_summary.rst:28
-#: ../../source/drivers/vector/driver_summary.rst:33
-#: ../../source/drivers/vector/driver_summary.rst:38
-#: ../../source/drivers/vector/driver_summary.rst:53
-#: ../../source/drivers/vector/driver_summary.rst:68
-#: ../../source/drivers/vector/driver_summary.rst:69
-#: ../../source/drivers/vector/driver_summary.rst:74
-#: ../../source/drivers/vector/driver_summary.rst:78
-#: ../../source/drivers/vector/driver_summary.rst:83
-#: ../../source/drivers/vector/driver_summary.rst:93
-#: ../../source/drivers/vector/driver_summary.rst:133
-#: ../../source/drivers/vector/driver_summary.rst:158
-#: ../../source/drivers/vector/driver_summary.rst:159
-#: ../../source/drivers/vector/driver_summary.rst:163
-#: ../../source/drivers/vector/driver_summary.rst:164
-#: ../../source/drivers/vector/driver_summary.rst:178
-#: ../../source/drivers/vector/driver_summary.rst:213
-#: ../../source/drivers/vector/driver_summary.rst:214
-#: ../../source/drivers/vector/driver_summary.rst:238
-#: ../../source/drivers/vector/driver_summary.rst:258
-#: ../../source/drivers/vector/driver_summary.rst:268
-#: ../../source/drivers/vector/driver_summary.rst:273
-#: ../../source/drivers/vector/driver_summary.rst:278
-#: ../../source/drivers/vector/driver_summary.rst:288
-#: ../../source/drivers/vector/driver_summary.rst:294
-#: ../../source/drivers/vector/driver_summary.rst:298
-#: ../../source/drivers/vector/driver_summary.rst:308
-#: ../../source/drivers/vector/driver_summary.rst:323
-#: ../../source/drivers/vector/driver_summary.rst:324
-#: ../../source/drivers/vector/driver_summary.rst:338
-#: ../../source/drivers/vector/driver_summary.rst:343
-#: ../../source/drivers/vector/driver_summary.rst:344
-#: ../../source/drivers/vector/driver_summary.rst:358
 #: ../../source/drivers/vector/driver_summary.rst:373
 #: ../../source/drivers/vector/driver_summary.rst:374
 #: ../../source/drivers/vector/driver_summary.rst:383
-#: ../../source/drivers/vector/driver_summary.rst:388
-#: ../../source/drivers/vector/driver_summary.rst:393
+#: ../../source/drivers/vector/driver_summary.rst:384
+#: ../../source/drivers/vector/driver_summary.rst:389
+#: ../../source/drivers/vector/driver_summary.rst:394
 #: ../../source/drivers/vector/driver_summary.rst:399
 #: ../../source/drivers/vector/driver_summary.rst:403
+#: ../../source/drivers/vector/driver_summary.rst:409
 #: ../../source/drivers/vector/driver_summary.rst:413
-#: ../../source/drivers/vector/driver_summary.rst:418
+#: ../../source/drivers/vector/driver_summary.rst:414
+#: ../../source/drivers/vector/driver_summary.rst:419
+#: ../../source/drivers/vector/driver_summary.rst:424
 #: ../../source/drivers/vector/driver_summary.rst:428
-#: ../../source/drivers/vector/driver_summary.rst:433
+#: ../../source/drivers/vector/driver_summary.rst:429
 #: ../../source/drivers/vector/driver_summary.rst:434
-#: ../../source/drivers/vector/driver_summary.rst:439
 #: ../../source/drivers/vector/driver_summary.rst:443
-msgid "No"
+#: ../../source/drivers/vector/driver_summary.rst:449
+msgid "**Yes**"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:25
+#: ../../source/drivers/vector/driver_summary.rst:50
+#: ../../source/drivers/vector/driver_summary.rst:60
+#: ../../source/drivers/vector/driver_summary.rst:90
+#: ../../source/drivers/vector/driver_summary.rst:95
+#: ../../source/drivers/vector/driver_summary.rst:275
+#: ../../source/drivers/vector/driver_summary.rst:285
+#: ../../source/drivers/vector/driver_summary.rst:350
+#: ../../source/drivers/vector/driver_summary.rst:435
+msgid "libcurl"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:26
+msgid ":ref:`Arrow <vector.arrow>`"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:27
+msgid "(Geo)Arrow IPC File Format / Stream"
 msgstr ""
 
 #: ../../source/drivers/vector/driver_summary.rst:30
+msgid "Apache Arrow C++ library"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:31
+msgid ":ref:`AVCBIN <vector.avcbin>`"
+msgstr ""
+
+#: ../../source/drivers/vector/driver_summary.rst:32
+msgid "Arc/Info Binary Coverage"
+msgstr ""
+
 #: ../../source/drivers/vector/driver_summary.rst:35
-#: ../../source/drivers/vector/driver_summary.rst:50
-#: ../../source/drivers/vector/driver_summary.rst:60
-#: ../../source/drivers/vector/driver_summary.rst:75
+#: ../../source/drivers/vector/driver_summary.rst:40
+#: ../../source/drivers/vector/driver_summary.rst:55
+#: ../../source/drivers/vector/driver_summary.rst:65
 #: ../../source/drivers/vector/driver_summary.rst:80
-#: ../../source/drivers/vector/driver_summary.rst:95
-#: ../../source/drivers/vector/driver_summary.rst:105
+#: ../../source/drivers/vector/driver_summary.rst:85
+#: ../../source/drivers/vector/driver_summary.rst:100
 #: ../../source/drivers/vector/driver_summary.rst:110
 #: ../../source/drivers/vector/driver_summary.rst:115
 #: ../../source/drivers/vector/driver_summary.rst:120
-#: ../../source/drivers/vector/driver_summary.rst:140
-#: ../../source/drivers/vector/driver_summary.rst:165
-#: ../../source/drivers/vector/driver_summary.rst:180
-#: ../../source/drivers/vector/driver_summary.rst:200
-#: ../../source/drivers/vector/driver_summary.rst:220
+#: ../../source/drivers/vector/driver_summary.rst:125
+#: ../../source/drivers/vector/driver_summary.rst:145
+#: ../../source/drivers/vector/driver_summary.rst:170
+#: ../../source/drivers/vector/driver_summary.rst:185
+#: ../../source/drivers/vector/driver_summary.rst:205
 #: ../../source/drivers/vector/driver_summary.rst:225
 #: ../../source/drivers/vector/driver_summary.rst:230
 #: ../../source/drivers/vector/driver_summary.rst:235
-#: ../../source/drivers/vector/driver_summary.rst:275
-#: ../../source/drivers/vector/driver_summary.rst:305
-#: ../../source/drivers/vector/driver_summary.rst:325
-#: ../../source/drivers/vector/driver_summary.rst:335
-#: ../../source/drivers/vector/driver_summary.rst:350
+#: ../../source/drivers/vector/driver_summary.rst:240
+#: ../../source/drivers/vector/driver_summary.rst:280
+#: ../../source/drivers/vector/driver_summary.rst:310
+#: ../../source/drivers/vector/driver_summary.rst:330
+#: ../../source/drivers/vector/driver_summary.rst:340
 #: ../../source/drivers/vector/driver_summary.rst:355
 #: ../../source/drivers/vector/driver_summary.rst:360
 #: ../../source/drivers/vector/driver_summary.rst:365
 #: ../../source/drivers/vector/driver_summary.rst:370
-#: ../../source/drivers/vector/driver_summary.rst:390
+#: ../../source/drivers/vector/driver_summary.rst:375
 #: ../../source/drivers/vector/driver_summary.rst:395
-#: ../../source/drivers/vector/driver_summary.rst:405
+#: ../../source/drivers/vector/driver_summary.rst:400
 #: ../../source/drivers/vector/driver_summary.rst:410
-#: ../../source/drivers/vector/driver_summary.rst:420
+#: ../../source/drivers/vector/driver_summary.rst:415
 #: ../../source/drivers/vector/driver_summary.rst:425
+#: ../../source/drivers/vector/driver_summary.rst:430
 msgid "Built-in by default"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:31
+#: ../../source/drivers/vector/driver_summary.rst:36
 msgid ":ref:`AVCE00 <vector.avce00>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:32
+#: ../../source/drivers/vector/driver_summary.rst:37
 msgid "Arc/Info E00 (ASCII) Coverage"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:36
+#: ../../source/drivers/vector/driver_summary.rst:41
 msgid ":ref:`CAD <vector.cad>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:37
-#: ../../source/drivers/vector/driver_summary.rst:67
+#: ../../source/drivers/vector/driver_summary.rst:42
+#: ../../source/drivers/vector/driver_summary.rst:72
 msgid "AutoCAD DWG"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:40
+#: ../../source/drivers/vector/driver_summary.rst:45
 msgid "(internal libopencad provided)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:41
+#: ../../source/drivers/vector/driver_summary.rst:46
 msgid ":ref:`CARTO <vector.carto>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:42
+#: ../../source/drivers/vector/driver_summary.rst:47
 msgid "Carto"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:46
+#: ../../source/drivers/vector/driver_summary.rst:51
 msgid ":ref:`CSV <vector.csv>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:47
+#: ../../source/drivers/vector/driver_summary.rst:52
 msgid "Comma Separated Value (.csv)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:51
+#: ../../source/drivers/vector/driver_summary.rst:56
 msgid ":ref:`CSW <vector.csw>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:52
+#: ../../source/drivers/vector/driver_summary.rst:57
 msgid "OGC CSW (Catalog Service for the Web)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:56
+#: ../../source/drivers/vector/driver_summary.rst:61
 msgid ":ref:`DGN <vector.dgn>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:57
+#: ../../source/drivers/vector/driver_summary.rst:62
 msgid "Microstation DGN"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:61
+#: ../../source/drivers/vector/driver_summary.rst:66
 msgid ":ref:`DGNv8 <vector.dgnv8>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:62
+#: ../../source/drivers/vector/driver_summary.rst:67
 msgid "Microstation DGN v8"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:65
 #: ../../source/drivers/vector/driver_summary.rst:70
+#: ../../source/drivers/vector/driver_summary.rst:75
 msgid "Open Design Alliance Teigha library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:66
+#: ../../source/drivers/vector/driver_summary.rst:71
 msgid ":ref:`DWG <vector.dwg>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:71
+#: ../../source/drivers/vector/driver_summary.rst:76
 msgid ":ref:`DXF <vector.dxf>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:72
+#: ../../source/drivers/vector/driver_summary.rst:77
 msgid "AutoCAD DXF"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:76
+#: ../../source/drivers/vector/driver_summary.rst:81
 msgid ":ref:`EDIGEO <vector.edigeo>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:77
+#: ../../source/drivers/vector/driver_summary.rst:82
 msgid "EDIGEO"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:81
+#: ../../source/drivers/vector/driver_summary.rst:86
 msgid ":ref:`EEDA <vector.eeda>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:82
+#: ../../source/drivers/vector/driver_summary.rst:87
 msgid "Google Earth Engine Data API"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:86
+#: ../../source/drivers/vector/driver_summary.rst:91
 msgid ":ref:`Elasticsearch <vector.elasticsearch>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:87
+#: ../../source/drivers/vector/driver_summary.rst:92
 msgid "Elasticsearch: Geographically Encoded Objects for Elasticsearch"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:91
+#: ../../source/drivers/vector/driver_summary.rst:96
 msgid ":ref:`ESRIJSON <vector.esrijson>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:92
+#: ../../source/drivers/vector/driver_summary.rst:97
 msgid "ESRIJSON / FeatureService driver"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:96
+#: ../../source/drivers/vector/driver_summary.rst:101
 msgid ":ref:`FileGDB <vector.filegdb>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:97
+#: ../../source/drivers/vector/driver_summary.rst:102
 msgid "ESRI File Geodatabase (FileGDB)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:100
+#: ../../source/drivers/vector/driver_summary.rst:105
 msgid "FileGDB API library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:101
+#: ../../source/drivers/vector/driver_summary.rst:106
 msgid ":ref:`FlatGeobuf <vector.flatgeobuf>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:102
+#: ../../source/drivers/vector/driver_summary.rst:107
 msgid "FlatGeobuf"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:106
+#: ../../source/drivers/vector/driver_summary.rst:111
 msgid ":ref:`Geoconcept <vector.geoconcept>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:107
+#: ../../source/drivers/vector/driver_summary.rst:112
 msgid "GeoConcept text export"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:111
+#: ../../source/drivers/vector/driver_summary.rst:116
 msgid ":ref:`GeoJSON <vector.geojson>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:112
+#: ../../source/drivers/vector/driver_summary.rst:117
 msgid "GeoJSON"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:116
+#: ../../source/drivers/vector/driver_summary.rst:121
 msgid ":ref:`GeoJSONSeq <vector.geojsonseq>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:117
+#: ../../source/drivers/vector/driver_summary.rst:122
 msgid "GeoJSONSeq: sequence of GeoJSON features"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:121
+#: ../../source/drivers/vector/driver_summary.rst:126
 msgid ":ref:`GeoRSS <vector.georss>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:122
+#: ../../source/drivers/vector/driver_summary.rst:127
 msgid "GeoRSS : Geographically Encoded Objects for RSS feeds"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:125
-#: ../../source/drivers/vector/driver_summary.rst:155
-#: ../../source/drivers/vector/driver_summary.rst:195
-#: ../../source/drivers/vector/driver_summary.rst:205
+#: ../../source/drivers/vector/driver_summary.rst:130
+#: ../../source/drivers/vector/driver_summary.rst:160
+#: ../../source/drivers/vector/driver_summary.rst:200
+#: ../../source/drivers/vector/driver_summary.rst:210
 msgid "(read support needs libexpat)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:126
+#: ../../source/drivers/vector/driver_summary.rst:131
 msgid ":ref:`GML <vector.gml>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:127
+#: ../../source/drivers/vector/driver_summary.rst:132
 msgid "Geography Markup Language"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:130
+#: ../../source/drivers/vector/driver_summary.rst:135
 msgid "(read support needs Xerces or libexpat)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:131
+#: ../../source/drivers/vector/driver_summary.rst:136
 msgid ":ref:`GMLAS <vector.gmlas>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:132
+#: ../../source/drivers/vector/driver_summary.rst:137
 msgid "Geography Markup Language (GML) driven by application schemas"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:135
-#: ../../source/drivers/vector/driver_summary.rst:185
+#: ../../source/drivers/vector/driver_summary.rst:140
 #: ../../source/drivers/vector/driver_summary.rst:190
-#: ../../source/drivers/vector/driver_summary.rst:260
+#: ../../source/drivers/vector/driver_summary.rst:195
+#: ../../source/drivers/vector/driver_summary.rst:265
 msgid "Xerces"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:136
+#: ../../source/drivers/vector/driver_summary.rst:141
 msgid ":ref:`GMT <vector.gmt>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:137
+#: ../../source/drivers/vector/driver_summary.rst:142
 msgid "GMT ASCII Vectors (.gmt)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:141
+#: ../../source/drivers/vector/driver_summary.rst:146
 msgid ":ref:`GPKG <vector.gpkg>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:142
+#: ../../source/drivers/vector/driver_summary.rst:147
 msgid "GeoPackage vector"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:145
-#: ../../source/drivers/vector/driver_summary.rst:415
+#: ../../source/drivers/vector/driver_summary.rst:150
+#: ../../source/drivers/vector/driver_summary.rst:420
 msgid "libsqlite3"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:146
+#: ../../source/drivers/vector/driver_summary.rst:151
 msgid ":ref:`GPSBabel <vector.gpsbabel>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:147
+#: ../../source/drivers/vector/driver_summary.rst:152
 msgid "GPSBabel"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:150
+#: ../../source/drivers/vector/driver_summary.rst:155
 msgid "(read support needs GPX driver and libexpat)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:151
+#: ../../source/drivers/vector/driver_summary.rst:156
 msgid ":ref:`GPX <vector.gpx>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:152
+#: ../../source/drivers/vector/driver_summary.rst:157
 msgid "GPS Exchange Format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:156
+#: ../../source/drivers/vector/driver_summary.rst:161
 msgid ":ref:`GRASS <vector.grass>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:157
+#: ../../source/drivers/vector/driver_summary.rst:162
 msgid "GRASS Vector Format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:160
+#: ../../source/drivers/vector/driver_summary.rst:165
 msgid "gdal-grass-driver"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:161
+#: ../../source/drivers/vector/driver_summary.rst:166
 msgid ":ref:`GTFS <vector.gtfs>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:162
+#: ../../source/drivers/vector/driver_summary.rst:167
 msgid "General Transit Feed Specification"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:166
+#: ../../source/drivers/vector/driver_summary.rst:171
 msgid ":ref:`HANA <vector.hana>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:167
+#: ../../source/drivers/vector/driver_summary.rst:172
 msgid "SAP HANA"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:170
+#: ../../source/drivers/vector/driver_summary.rst:175
 msgid "odbc-cpp-wrapper"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:171
+#: ../../source/drivers/vector/driver_summary.rst:176
 msgid ":ref:`IDB <vector.idb>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:172
+#: ../../source/drivers/vector/driver_summary.rst:177
 msgid "IDB"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:175
+#: ../../source/drivers/vector/driver_summary.rst:180
 msgid "Informix DataBlade"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:176
+#: ../../source/drivers/vector/driver_summary.rst:181
 msgid ":ref:`IDRISI <vector.idrisi>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:177
+#: ../../source/drivers/vector/driver_summary.rst:182
 msgid "Idrisi Vector (.VCT)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:181
+#: ../../source/drivers/vector/driver_summary.rst:186
 msgid ":ref:`INTERLIS 1 <vector.ili>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:182
 #: ../../source/drivers/vector/driver_summary.rst:187
+#: ../../source/drivers/vector/driver_summary.rst:192
 msgid "\"INTERLIS 1\" and \"INTERLIS 2\" drivers"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:186
+#: ../../source/drivers/vector/driver_summary.rst:191
 msgid ":ref:`INTERLIS 2 <vector.ili>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:191
+#: ../../source/drivers/vector/driver_summary.rst:196
 msgid ":ref:`JML <vector.jml>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:192
+#: ../../source/drivers/vector/driver_summary.rst:197
 msgid "JML: OpenJUMP JML format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:196
+#: ../../source/drivers/vector/driver_summary.rst:201
 msgid ":ref:`JSONFG <vector.jsonfg>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:197
+#: ../../source/drivers/vector/driver_summary.rst:202
 msgid "OGC Features and Geometries JSON"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:201
+#: ../../source/drivers/vector/driver_summary.rst:206
 msgid ":ref:`KML <vector.kml>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:202
+#: ../../source/drivers/vector/driver_summary.rst:207
 msgid "Keyhole Markup Language"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:206
+#: ../../source/drivers/vector/driver_summary.rst:211
 msgid ":ref:`LIBKML <vector.libkml>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:207
+#: ../../source/drivers/vector/driver_summary.rst:212
 msgid "LIBKML Driver (.kml .kmz)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:210
+#: ../../source/drivers/vector/driver_summary.rst:215
 msgid "libkml"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:211
+#: ../../source/drivers/vector/driver_summary.rst:216
 msgid ":ref:`LVBAG <vector.lvbag>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:212
+#: ../../source/drivers/vector/driver_summary.rst:217
 msgid "Dutch Kadaster LV BAG 2.0 Extract"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:215
-#: ../../source/drivers/vector/driver_summary.rst:295
-#: ../../source/drivers/vector/driver_summary.rst:385
-#: ../../source/drivers/vector/driver_summary.rst:440
+#: ../../source/drivers/vector/driver_summary.rst:220
+#: ../../source/drivers/vector/driver_summary.rst:300
+#: ../../source/drivers/vector/driver_summary.rst:390
+#: ../../source/drivers/vector/driver_summary.rst:445
 msgid "libexpat"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:216
+#: ../../source/drivers/vector/driver_summary.rst:221
 msgid ":ref:`MapML <vector.mapml>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:217
+#: ../../source/drivers/vector/driver_summary.rst:222
 msgid "MapML"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:221
+#: ../../source/drivers/vector/driver_summary.rst:226
 msgid ":ref:`Memory <vector.memory>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:222
+#: ../../source/drivers/vector/driver_summary.rst:227
 msgid "Memory"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:226
+#: ../../source/drivers/vector/driver_summary.rst:231
 msgid ":ref:`MiraMonVector <vector.miramon>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:227
+#: ../../source/drivers/vector/driver_summary.rst:232
 msgid "MiraMon Vector"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:231
+#: ../../source/drivers/vector/driver_summary.rst:236
 msgid ":ref:`MapInfo File <vector.mitab>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:232
+#: ../../source/drivers/vector/driver_summary.rst:237
 msgid "MapInfo TAB and MIF/MID"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:236
+#: ../../source/drivers/vector/driver_summary.rst:241
 msgid ":ref:`MongoDBv3 <vector.mongodbv3>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:237
+#: ../../source/drivers/vector/driver_summary.rst:242
 msgid "MongoDBv3"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:240
+#: ../../source/drivers/vector/driver_summary.rst:245
 msgid "Mongo CXX >= 3.4.0 client library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:241
+#: ../../source/drivers/vector/driver_summary.rst:246
 msgid ":ref:`MSSQLSpatial <vector.mssqlspatial>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:242
+#: ../../source/drivers/vector/driver_summary.rst:247
 msgid "Microsoft SQL Server Spatial Database"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:245
-#: ../../source/drivers/vector/driver_summary.rst:290
-#: ../../source/drivers/vector/driver_summary.rst:340
+#: ../../source/drivers/vector/driver_summary.rst:250
+#: ../../source/drivers/vector/driver_summary.rst:295
+#: ../../source/drivers/vector/driver_summary.rst:345
 msgid "ODBC library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:246
+#: ../../source/drivers/vector/driver_summary.rst:251
 msgid ":ref:`MVT <vector.mvt>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:247
+#: ../../source/drivers/vector/driver_summary.rst:252
 msgid "MVT: Mapbox Vector Tiles"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:250
+#: ../../source/drivers/vector/driver_summary.rst:255
 msgid "(requires SQLite and GEOS for write support)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:251
+#: ../../source/drivers/vector/driver_summary.rst:256
 msgid ":ref:`MySQL <vector.mysql>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:252
+#: ../../source/drivers/vector/driver_summary.rst:257
 msgid "MySQL"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:255
+#: ../../source/drivers/vector/driver_summary.rst:260
 msgid "MySQL library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:256
+#: ../../source/drivers/vector/driver_summary.rst:261
 msgid ":ref:`NAS <vector.nas>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:257
+#: ../../source/drivers/vector/driver_summary.rst:262
 msgid "ALKIS"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:261
+#: ../../source/drivers/vector/driver_summary.rst:266
 msgid ":ref:`netCDF <vector.netcdf>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:262
+#: ../../source/drivers/vector/driver_summary.rst:267
 msgid "Vector"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:265
+#: ../../source/drivers/vector/driver_summary.rst:270
 msgid "libnetcdf"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:266
+#: ../../source/drivers/vector/driver_summary.rst:271
 msgid ":ref:`NGW <vector.ngw>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:267
+#: ../../source/drivers/vector/driver_summary.rst:272
 msgid "NextGIS Web"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:271
+#: ../../source/drivers/vector/driver_summary.rst:276
 msgid ":ref:`UK .NTF <vector.ntf>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:272
+#: ../../source/drivers/vector/driver_summary.rst:277
 msgid "UK .NTF"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:276
+#: ../../source/drivers/vector/driver_summary.rst:281
 msgid ":ref:`OAPIF <vector.oapif>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:277
+#: ../../source/drivers/vector/driver_summary.rst:282
 msgid "OGC API - Features"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:281
+#: ../../source/drivers/vector/driver_summary.rst:286
 msgid ":ref:`OCI <vector.oci>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:282
+#: ../../source/drivers/vector/driver_summary.rst:287
 msgid "Oracle Spatial"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:285
+#: ../../source/drivers/vector/driver_summary.rst:290
 msgid "OCI library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:286
+#: ../../source/drivers/vector/driver_summary.rst:291
 msgid ":ref:`ODBC <vector.odbc>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:287
+#: ../../source/drivers/vector/driver_summary.rst:292
 msgid "ODBC RDBMS"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:291
+#: ../../source/drivers/vector/driver_summary.rst:296
 msgid ":ref:`ODS <vector.ods>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:292
+#: ../../source/drivers/vector/driver_summary.rst:297
 msgid "Open Document Spreadsheet"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:296
+#: ../../source/drivers/vector/driver_summary.rst:301
 msgid ":ref:`OGDI <vector.ogdi>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:297
+#: ../../source/drivers/vector/driver_summary.rst:302
 msgid "OGDI Vectors"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:300
+#: ../../source/drivers/vector/driver_summary.rst:305
 msgid "OGDI library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:301
+#: ../../source/drivers/vector/driver_summary.rst:306
 msgid ":ref:`OpenFileGDB <vector.openfilegdb>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:302
+#: ../../source/drivers/vector/driver_summary.rst:307
 msgid "ESRI File Geodatabase vector (OpenFileGDB)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:306
+#: ../../source/drivers/vector/driver_summary.rst:311
 msgid ":ref:`OSM <vector.osm>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:307
+#: ../../source/drivers/vector/driver_summary.rst:312
 msgid "OpenStreetMap XML and PBF"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:310
+#: ../../source/drivers/vector/driver_summary.rst:315
 msgid "libsqlite3 (and libexpat for OSM XML)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:311
+#: ../../source/drivers/vector/driver_summary.rst:316
 msgid ":ref:`Parquet <vector.parquet>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:312
+#: ../../source/drivers/vector/driver_summary.rst:317
 msgid "(Geo)Parquet"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:315
+#: ../../source/drivers/vector/driver_summary.rst:320
 msgid "Parquet component of the Apache Arrow C++ library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:316
+#: ../../source/drivers/vector/driver_summary.rst:321
 msgid ":ref:`PDF <vector.pdf>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:317
+#: ../../source/drivers/vector/driver_summary.rst:322
 msgid "Geospatial PDF"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:320
+#: ../../source/drivers/vector/driver_summary.rst:325
 msgid "none for write support, Poppler/PoDoFo/PDFium for read support"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:321
+#: ../../source/drivers/vector/driver_summary.rst:326
 msgid ":ref:`PDS <vector.pds>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:322
+#: ../../source/drivers/vector/driver_summary.rst:327
 msgid "Planetary Data Systems TABLE"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:326
+#: ../../source/drivers/vector/driver_summary.rst:331
 msgid ":ref:`PostgreSQL <vector.pg>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:327
+#: ../../source/drivers/vector/driver_summary.rst:332
 msgid "PostgreSQL / PostGIS"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:330
+#: ../../source/drivers/vector/driver_summary.rst:335
 msgid "PostgreSQL client library (libpq)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:331
+#: ../../source/drivers/vector/driver_summary.rst:336
 msgid ":ref:`PGDump <vector.pgdump>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:332
+#: ../../source/drivers/vector/driver_summary.rst:337
 msgid "PostgreSQL SQL Dump"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:336
+#: ../../source/drivers/vector/driver_summary.rst:341
 msgid ":ref:`PGeo <vector.pgeo>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:337
+#: ../../source/drivers/vector/driver_summary.rst:342
 msgid "ESRI Personal GeoDatabase"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:341
+#: ../../source/drivers/vector/driver_summary.rst:346
 msgid ":ref:`PLScenes <vector.plscenes>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:342
+#: ../../source/drivers/vector/driver_summary.rst:347
 msgid "PLScenes (Planet Labs Scenes/Catalog API)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:346
+#: ../../source/drivers/vector/driver_summary.rst:351
 msgid ":ref:`PMTiles <vector.pmtiles>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:347
+#: ../../source/drivers/vector/driver_summary.rst:352
 msgid "ProtoMaps Tiles"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:351
+#: ../../source/drivers/vector/driver_summary.rst:356
 msgid ":ref:`S57 <vector.s57>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:352
+#: ../../source/drivers/vector/driver_summary.rst:357
 msgid "IHO S-57 (ENC)"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:356
+#: ../../source/drivers/vector/driver_summary.rst:361
 msgid ":ref:`SDTS <vector.sdts>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:357
+#: ../../source/drivers/vector/driver_summary.rst:362
 msgid "SDTS"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:361
+#: ../../source/drivers/vector/driver_summary.rst:366
 msgid ":ref:`Selafin <vector.selafin>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:362
+#: ../../source/drivers/vector/driver_summary.rst:367
 msgid "Selafin files"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:366
+#: ../../source/drivers/vector/driver_summary.rst:371
 msgid ":ref:`ESRI Shapefile <vector.shapefile>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:367
+#: ../../source/drivers/vector/driver_summary.rst:372
 msgid "ESRI Shapefile / DBF"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:371
+#: ../../source/drivers/vector/driver_summary.rst:376
 msgid ":ref:`SOSI <vector.sosi>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:372
+#: ../../source/drivers/vector/driver_summary.rst:377
 msgid "Norwegian SOSI Standard"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:375
+#: ../../source/drivers/vector/driver_summary.rst:380
 msgid "FYBA library"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:376
+#: ../../source/drivers/vector/driver_summary.rst:381
 msgid ":ref:`SQLite <vector.sqlite>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:377
+#: ../../source/drivers/vector/driver_summary.rst:382
 msgid "SQLite / Spatialite RDBMS"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:380
+#: ../../source/drivers/vector/driver_summary.rst:385
 msgid "libsqlite3 or libspatialite"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:381
+#: ../../source/drivers/vector/driver_summary.rst:386
 msgid ":ref:`SVG <vector.svg>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:382
+#: ../../source/drivers/vector/driver_summary.rst:387
 msgid "Scalable Vector Graphics"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:386
+#: ../../source/drivers/vector/driver_summary.rst:391
 msgid ":ref:`SXF <vector.sxf>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:387
+#: ../../source/drivers/vector/driver_summary.rst:392
 msgid "SXF"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:391
+#: ../../source/drivers/vector/driver_summary.rst:396
 msgid ":ref:`TIGER <vector.tiger>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:392
+#: ../../source/drivers/vector/driver_summary.rst:397
 msgid "U.S. Census TIGER/Line"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:396
+#: ../../source/drivers/vector/driver_summary.rst:401
 msgid ":ref:`TileDB <vector.tiledb>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:397
+#: ../../source/drivers/vector/driver_summary.rst:402
 msgid "TileDB vector"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:400
+#: ../../source/drivers/vector/driver_summary.rst:405
 msgid "TileDB >= 2.7"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:401
+#: ../../source/drivers/vector/driver_summary.rst:406
 msgid ":ref:`TopoJSON <vector.topojson>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:402
+#: ../../source/drivers/vector/driver_summary.rst:407
 msgid "TopoJSON driver"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:406
+#: ../../source/drivers/vector/driver_summary.rst:411
 msgid ":ref:`VDV <vector.vdv>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:407
+#: ../../source/drivers/vector/driver_summary.rst:412
 msgid "VDV-451/VDV-452/INTREST Data Format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:411
+#: ../../source/drivers/vector/driver_summary.rst:416
 msgid ":ref:`VFK <vector.vfk>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:412
+#: ../../source/drivers/vector/driver_summary.rst:417
 msgid "Czech Cadastral Exchange Data Format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:416
+#: ../../source/drivers/vector/driver_summary.rst:421
 msgid ":ref:`VRT <vector.vrt>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:417
+#: ../../source/drivers/vector/driver_summary.rst:422
 msgid "Virtual Format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:421
+#: ../../source/drivers/vector/driver_summary.rst:426
 msgid ":ref:`WAsP <vector.wasp>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:422
+#: ../../source/drivers/vector/driver_summary.rst:427
 msgid "WAsP .map format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:426
+#: ../../source/drivers/vector/driver_summary.rst:431
 msgid ":ref:`WFS <vector.wfs>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:427
+#: ../../source/drivers/vector/driver_summary.rst:432
 msgid "OGC WFS service"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:431
+#: ../../source/drivers/vector/driver_summary.rst:436
 msgid ":ref:`XLS <vector.xls>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:432
+#: ../../source/drivers/vector/driver_summary.rst:437
 msgid "MS Excel format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:435
+#: ../../source/drivers/vector/driver_summary.rst:440
 msgid "libfreexl"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:436
+#: ../../source/drivers/vector/driver_summary.rst:441
 msgid ":ref:`XLSX <vector.xlsx>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:437
+#: ../../source/drivers/vector/driver_summary.rst:442
 msgid "MS Office Open XML spreadsheet"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:441
+#: ../../source/drivers/vector/driver_summary.rst:446
 msgid ":ref:`XODR <vector.xodr>`"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:442
+#: ../../source/drivers/vector/driver_summary.rst:447
 msgid "OpenDRIVE Road Description Format"
 msgstr ""
 
-#: ../../source/drivers/vector/driver_summary.rst:445
+#: ../../source/drivers/vector/driver_summary.rst:450
 msgid "libOpenDRIVE >= 0.6.0, GEOS"
 msgstr ""
 

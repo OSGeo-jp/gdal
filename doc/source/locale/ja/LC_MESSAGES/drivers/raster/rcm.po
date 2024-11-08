@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998-2024
+# This file is distributed under the same license as the GDAL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GDAL \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-09 02:47+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/drivers/raster/rcm.rst:5
+msgid "RCM -- RADARSAT Constellation Mission Product"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:-1
+msgid "Driver short name"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:9
+msgid "RCM"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:13
+msgid ""
+"This driver will read RADARSAT Constellation Mission polarimetric "
+"products."
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:15
+msgid ""
+"The RADARSAT Constellation Mission XML products are distributed with a "
+"primary XML file called product.xml, and a set of supporting XML data "
+"files with the actual imagery stored in TIFF files. The RCM driver will "
+"be used if the product.xml or the containing directory is selected, and "
+"it can treat all the imagery as one consistent dataset."
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:21
+msgid ""
+"The RCM driver also reads geolocation tiepoints from the product.xml file"
+" and represents them as GCPs on the dataset."
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:25
+msgid "Driver capabilities"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:32
+msgid "Data Calibration"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:34
+msgid ""
+"If you wish to have GDAL apply a particular calibration LUT to the data "
+"when you open it, you have to open the appropriate subdatasets. The "
+"following subdatasets exist within the SUBDATASET domain for RCM "
+"products:"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:38
+msgid "uncalibrated: open with ``RCM_CALIB:UNCALIB:`` prepended to filename"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:39
+msgid "beta\\ :sub:`0`: open with ``RCM_CALIB:BETA0:`` prepended to filename"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:40
+msgid "sigma\\ :sub:`0`: open with ``RCM_CALIB:SIGMA0:`` prepended to filename"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:41
+msgid "Gamma: open with  ``RCM_CALIB:GAMMA:`` prepended to filename"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:43
+msgid ""
+"Note that geocoded (GCC/GCD) products do not have this functionality "
+"available. Also be aware that the LUTs must be in the product directory "
+"where specified in the product.xml, otherwise loading the product with "
+"the calibration LUT applied will fail."
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:48
+msgid ""
+"One caveat worth noting is that the RCM driver will supply the calibrated"
+" data as GDT_Float32 or GDT_CFloat32 depending on the type of calibration"
+" selected. The uncalibrated data is provided as "
+"GDT_Int16/GDT_Byte/GDT_CInt16, also depending on the type of product "
+"selected."
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:54
+msgid "See Also"
+msgstr ""
+
+#: ../../source/drivers/raster/rcm.rst:56
+msgid "RADARSAT Constellation Mission Product Specification RCM-SP-52-9092"
+msgstr ""
+

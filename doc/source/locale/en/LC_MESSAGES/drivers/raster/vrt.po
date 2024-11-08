@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDAL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-26 03:03+0900\n"
+"POT-Creation-Date: 2024-11-09 02:47+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -97,22 +97,22 @@ msgid ""
 "programmatically for developers."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:62
+#: ../../source/drivers/raster/vrt.rst:64
 msgid "Creation options"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:64
+#: ../../source/drivers/raster/vrt.rst:66
 msgid "|about-creation-options| The following creation options are supported:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:77
+#: ../../source/drivers/raster/vrt.rst:79
 msgid ""
 "Setting explicitly the block size is an advanced setting that should only"
 " be used when the user has determined that it is needed. By default the "
 "block size is set to:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:81
+#: ../../source/drivers/raster/vrt.rst:83
 msgid ""
 "128x128 for a source-based VRT raster band. Unless the VRT is made of a "
 "single source and this single source is not subsetted, in which case the "
@@ -120,34 +120,34 @@ msgid ""
 "size)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:85
+#: ../../source/drivers/raster/vrt.rst:87
 msgid "512x128 for a warped VRT."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:88
+#: ../../source/drivers/raster/vrt.rst:90
 msgid ".vrt Format"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:90
+#: ../../source/drivers/raster/vrt.rst:92
 msgid ""
 "A `XML schema of the GDAL VRT format "
 "<https://raw.githubusercontent.com/OSGeo/gdal/master/frmts/vrt/data/gdalvrt.xsd>`_"
 " is available."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:93
+#: ../../source/drivers/raster/vrt.rst:95
 msgid ""
 "Note, .vrt files starting with - <OGRVRTDataSource> open with ogrinfo, "
 "etc. - <VRTDataset> open with gdalinfo, etc."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:97
+#: ../../source/drivers/raster/vrt.rst:99
 msgid ""
 "Virtual files stored on disk are kept in an XML format with the following"
 " elements."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:100
+#: ../../source/drivers/raster/vrt.rst:102
 msgid ""
 "**VRTDataset**: This is the root element for the whole GDAL dataset. It "
 "must have the attributes rasterXSize and rasterYSize describing the width"
@@ -157,15 +157,15 @@ msgid ""
 "GeoTransform, GCPList, Metadata, MaskBand and VRTRasterBand subelements."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:107
+#: ../../source/drivers/raster/vrt.rst:109
 msgid "VRTDataset"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:109
+#: ../../source/drivers/raster/vrt.rst:111
 msgid "The allowed subelements for VRTDataset are :"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:111
+#: ../../source/drivers/raster/vrt.rst:113
 msgid ""
 "**SRS**: This element contains the spatial reference system (coordinate "
 "system) in OGC WKT format.  Note that this must be appropriately escaped "
@@ -176,7 +176,7 @@ msgid ""
 "element."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:117
+#: ../../source/drivers/raster/vrt.rst:119
 msgid ""
 "The **dataAxisToSRSAxisMapping** attribute is allowed since GDAL 3.0 to "
 "describe the relationship between the axis indicated in the CRS "
@@ -189,7 +189,7 @@ msgid ""
 "mapping strategy is implied."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:119
+#: ../../source/drivers/raster/vrt.rst:121
 msgid ""
 "**GeoTransform**: This element contains a six value affine "
 "geotransformation for the dataset, mapping between pixel/line coordinates"
@@ -202,7 +202,7 @@ msgid ""
 "about that mapping."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:125
+#: ../../source/drivers/raster/vrt.rst:127
 msgid ""
 "**GCPList**: This element contains a list of Ground Control Points for "
 "the dataset, mapping between pixel/line coordinates and georeferenced "
@@ -211,7 +211,7 @@ msgid ""
 "dataAxisToSRSAxisMapping attribute is the same as in the SRS element."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:134
+#: ../../source/drivers/raster/vrt.rst:136
 msgid ""
 "**Metadata**: This element contains a list of metadata name/value pairs "
 "associated with the VRTDataset as a whole, or a VRTRasterBand. It has "
@@ -221,7 +221,7 @@ msgid ""
 "attribute to indicate the name of the metadata domain."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:142
+#: ../../source/drivers/raster/vrt.rst:144
 msgid ""
 "**MaskBand**: This element represents a mask band that is shared between "
 "all bands on the dataset (see GMF_PER_DATASET in RFC 15). It must contain"
@@ -229,7 +229,7 @@ msgid ""
 "mask band itself."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:157
+#: ../../source/drivers/raster/vrt.rst:159
 msgid ""
 "**OverviewList**: (GDAL >= 3.2.0, not valid for VRTPansharpenedDataset) "
 "This elements contains a list of overview factors, separated by space, to"
@@ -246,49 +246,49 @@ msgid ""
 ":config:`VRT_VIRTUAL_OVERVIEWS` configuration option set to ``YES``:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:175
+#: ../../source/drivers/raster/vrt.rst:177
 msgid ""
 "Virtual overviews have the least priority compared to the **Overview** "
 "element at the **VRTRasterBand** level, or to materialized .vrt.ovr "
 "files."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:179
+#: ../../source/drivers/raster/vrt.rst:181
 msgid "**VRTRasterBand**: This represents one band of a dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:182
+#: ../../source/drivers/raster/vrt.rst:184
 msgid "VRTRasterBand"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:184
+#: ../../source/drivers/raster/vrt.rst:186
 msgid "The attributes for VRTRasterBand are:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:186
+#: ../../source/drivers/raster/vrt.rst:188
 msgid ""
 "**dataType** (optional): type of the pixel data associated with this band"
 " (use names Byte, UInt16, Int16, UInt32, Int32, Float32, Float64, CInt16,"
 " CInt32, CFloat32 or CFloat64). If not specified, defaults to 1"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:190
+#: ../../source/drivers/raster/vrt.rst:192
 msgid "**band** (optional): band number this element represents (1 based)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:192
+#: ../../source/drivers/raster/vrt.rst:194
 msgid ""
 "**blockXSize** (optional, GDAL >= 3.3): block width. If not specified, "
 "defaults to the minimum of the raster width and 128."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:195
+#: ../../source/drivers/raster/vrt.rst:197
 msgid ""
 "**blockYSize** (optional, GDAL >= 3.3): block height. If not specified, "
 "defaults to the minimum of the raster height and 128."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:198
+#: ../../source/drivers/raster/vrt.rst:200
 msgid ""
 "This element may have Metadata, ColorInterp, NoDataValue, "
 "HideNoDataValue, ColorTable, GDALRasterAttributeTable, Description and "
@@ -299,18 +299,18 @@ msgid ""
 "from, and how it should be mapped into the raster bands pixel space."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:200
+#: ../../source/drivers/raster/vrt.rst:202
 msgid "The allowed subelements for VRTRasterBand are :"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:202
+#: ../../source/drivers/raster/vrt.rst:204
 msgid ""
 "**ColorInterp**: The data of this element should be the name of a color "
 "interpretation type.  One of Gray, Palette, Red, Green, Blue, Alpha, Hue,"
 " Saturation, Lightness, Cyan, Magenta, Yellow, Black, or Unknown."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:208
+#: ../../source/drivers/raster/vrt.rst:210
 msgid ""
 "**NoDataValue**: If the input datasets to be composed have a nodata value"
 " for this raster band, set this element's value to that nodata value for "
@@ -318,7 +318,7 @@ msgid ""
 "element of a VRTComplexSource element."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:214
+#: ../../source/drivers/raster/vrt.rst:216
 msgid ""
 "**HideNoDataValue**: If this value is 1, the nodata value will not be "
 "reported.  Essentially, the caller will not be aware of a nodata pixel "
@@ -329,7 +329,7 @@ msgid ""
 "element is absent."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:220
+#: ../../source/drivers/raster/vrt.rst:222
 msgid ""
 "**ColorTable**: This element is parent to a set of Entry elements "
 "defining the entries in a color table.  Currently only RGBA color tables "
@@ -338,7 +338,7 @@ msgid ""
 "color table entry 0."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:229
+#: ../../source/drivers/raster/vrt.rst:231
 msgid ""
 "**GDALRasterAttributeTable**: (GDAL >=2.3) This element is parent to a "
 "set of FieldDefn elements defining the columns of a raster attribute "
@@ -346,34 +346,34 @@ msgid ""
 "columns of each row."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:268
+#: ../../source/drivers/raster/vrt.rst:270
 msgid ""
 "**Description**: This element contains the optional description of a "
 "raster band as its text value."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:274
+#: ../../source/drivers/raster/vrt.rst:276
 msgid ""
 "**UnitType**: This optional element contains the vertical units for "
 "elevation band data.  One of \"m\" for meters or \"ft\" for feet. Default"
 " assumption is meters."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:280
+#: ../../source/drivers/raster/vrt.rst:282
 msgid ""
 "**Offset**: This optional element contains the offset that should be "
 "applied when computing \"real\" pixel values from scaled pixel values on "
 "a raster band.   The default is 0.0."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:286
+#: ../../source/drivers/raster/vrt.rst:288
 msgid ""
 "**Scale**: This optional element contains the scale that should be "
 "applied when computing \"real\" pixel values from scaled pixel values on "
 "a raster band.   The default is 1.0."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:292
+#: ../../source/drivers/raster/vrt.rst:294
 msgid ""
 "**Overview**: This optional element describes one overview level for the "
 "band.  It should have a child SourceFilename and SourceBand element.  The"
@@ -381,20 +381,20 @@ msgid ""
 "elements may be used to describe multiple overviews."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:301
+#: ../../source/drivers/raster/vrt.rst:303
 msgid ""
 "**CategoryNames**: This optional element contains a list of Category "
 "subelements with the names of the categories for classified raster band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:313
+#: ../../source/drivers/raster/vrt.rst:315
 msgid ""
 "**SimpleSource**: The SimpleSource_ indicates that raster data should be "
 "read from a separate dataset, indicating the dataset, and band to be read"
 " from, and how the data should map into this band's raster space."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:315
+#: ../../source/drivers/raster/vrt.rst:317
 msgid ""
 "**AveragedSource**: The AveragedSource is derived from the SimpleSource "
 "and shares the same properties except that it uses an averaging "
@@ -405,7 +405,7 @@ msgid ""
 "'resampling' attribute."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:317
+#: ../../source/drivers/raster/vrt.rst:319
 msgid ""
 "**NoDataFromMaskSource**: (GDAL >= 3.9) The NoDataFromMaskSource is "
 "derived from the SimpleSource and shares the same properties except that "
@@ -415,7 +415,7 @@ msgid ""
 "transform a R,G,B,A image into a R,G,B one with a NoData value."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:319
+#: ../../source/drivers/raster/vrt.rst:321
 msgid ""
 "**ComplexSource**: The ComplexSource_ is derived from the SimpleSource "
 "(so it shares the SourceFilename, SourceBand, SrcRect and DstRect "
@@ -425,7 +425,7 @@ msgid ""
 "<UseMaskBand>true</UseMaskBand> element."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:321
+#: ../../source/drivers/raster/vrt.rst:323
 msgid ""
 "**KernelFilteredSource**: The KernelFilteredSource_ is a pixel source "
 "derived from the Simple Source (so it shares the SourceFilename, "
@@ -433,28 +433,28 @@ msgid ""
 "through a simple filtering kernel specified with the Kernel element."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:323
+#: ../../source/drivers/raster/vrt.rst:325
 msgid ""
 "**ArraySource**: The ArraySource_ indicates that raster data should be "
 "read from a 2D array using the multidimensional API."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:325
+#: ../../source/drivers/raster/vrt.rst:327
 msgid ""
 "**MaskBand**: This element represents a mask band that is specific to the"
 " VRTRasterBand it contains. It must contain a single VRTRasterBand child "
 "element, that is the description of the mask band itself."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:328
+#: ../../source/drivers/raster/vrt.rst:330
 msgid "Sources"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:331
+#: ../../source/drivers/raster/vrt.rst:333
 msgid "SimpleSource"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:333
+#: ../../source/drivers/raster/vrt.rst:335
 msgid ""
 "The SimpleSource may have the SourceFilename, SourceBand, SrcRect, and "
 "DstRect subelements.  The SrcRect element will indicate what rectangle on"
@@ -463,7 +463,7 @@ msgid ""
 "VRTRasterBands space."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:338
+#: ../../source/drivers/raster/vrt.rst:340
 msgid ""
 "SrcRect and DstRect are expressed in pixel/line coordinate space. Their "
 "relationship with the geospatial coordinate space is given by the "
@@ -473,14 +473,14 @@ msgid ""
 "mapping."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:344
+#: ../../source/drivers/raster/vrt.rst:346
 msgid ""
 "The relativeToVRT attribute on the SourceFilename indicates whether the "
 "filename should be interpreted as relative to the .vrt file (value is 1) "
 "or not relative to the .vrt file (value is 0).  The default is 0."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:348
+#: ../../source/drivers/raster/vrt.rst:350
 msgid ""
 "Some characteristics of the source band can be specified in the optional "
 "``SourceProperties`` element to enable the VRT driver to defer the "
@@ -492,19 +492,19 @@ msgid ""
 "itself."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:357
+#: ../../source/drivers/raster/vrt.rst:359
 msgid ""
 "Starting with GDAL 3.4, the ``SourceProperties`` element is no longer "
 "necessary for deferred opening of the source datasets."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:360
+#: ../../source/drivers/raster/vrt.rst:362
 msgid ""
 "The content of the SourceBand subelement can refer to a mask band. For "
 "example mask,1 means the mask band of the first band of the source."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:373
+#: ../../source/drivers/raster/vrt.rst:375
 msgid ""
 "A OpenOptions subelement can be added to specify the open options to "
 "apply when opening the source dataset. It has <OOI> (open option item) "
@@ -512,7 +512,7 @@ msgid ""
 "the element."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:390
+#: ../../source/drivers/raster/vrt.rst:392
 msgid ""
 "A resampling attribute can be specified on a SimpleSource or "
 "ComplexSource element to specified the resampling algorithm used when the"
@@ -521,11 +521,17 @@ msgid ""
 "nearest,bilinear,cubic, cubicspline,lanczos,average,mode."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:407
+#: ../../source/drivers/raster/vrt.rst:409
+msgid ""
+"Starting with GDAL 3.11, it is also possible to use a in-line VRTDataset "
+"as the source by using the VRTDataset element instead of SourceFilename."
+msgstr ""
+
+#: ../../source/drivers/raster/vrt.rst:434
 msgid "ComplexSource"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:409
+#: ../../source/drivers/raster/vrt.rst:436
 msgid ""
 "Alternatively to linear scaling, non-linear scaling using a power "
 "function can be used by specifying the Exponent, SrcMin, SrcMax, DstMin "
@@ -536,14 +542,14 @@ msgid ""
 "gdal_translate.)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:417
+#: ../../source/drivers/raster/vrt.rst:444
 msgid ""
 "The ComplexSource supports adding a custom lookup table to transform the "
 "source values to the destination. The LUT can be specified using the "
 "following form:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:425
+#: ../../source/drivers/raster/vrt.rst:452
 msgid ""
 "The intermediary values are calculated using a linear interpolation "
 "between the bounding destination values of the corresponding range. "
@@ -556,7 +562,7 @@ msgid ""
 " an input pixel value that is greater than the maximum source value."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:434
+#: ../../source/drivers/raster/vrt.rst:461
 msgid ""
 "The ComplexSource supports fetching a color component from a source "
 "raster band that has a color table. The ColorTableComponent value is the "
@@ -564,13 +570,13 @@ msgid ""
 "green band, 3 for the blue band or 4 for the alpha band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:439
+#: ../../source/drivers/raster/vrt.rst:466
 msgid ""
 "When transforming the source values the operations are executed in the "
 "following order:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:442
+#: ../../source/drivers/raster/vrt.rst:469
 msgid ""
 "Masking, if the NODATA element is set or, starting with GDAL 3.3, if the "
 "UseMaskBand is set to true and the source band has a mask band. Note that"
@@ -578,33 +584,33 @@ msgid ""
 "band is actually an alpha band with non-0 or non-255 values."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:446
+#: ../../source/drivers/raster/vrt.rst:473
 msgid "Color table expansion"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:447
+#: ../../source/drivers/raster/vrt.rst:474
 msgid "For linear scaling, applying the scale ratio, then scale offset"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:448
+#: ../../source/drivers/raster/vrt.rst:475
 msgid ""
 "For non-linear scaling, apply (DstMax-DstMin) * pow( (SrcValue-SrcMin) / "
 "(SrcMax-SrcMin), Exponent) + DstMin"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:449
+#: ../../source/drivers/raster/vrt.rst:476
 msgid "Table lookup"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:465
+#: ../../source/drivers/raster/vrt.rst:492
 msgid "Non-linear scaling:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:483
+#: ../../source/drivers/raster/vrt.rst:510
 msgid "KernelFilteredSource"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:485
+#: ../../source/drivers/raster/vrt.rst:512
 msgid ""
 "The Kernel element should have two child elements, Size and Coefs and "
 "optionally the boolean attribute normalized (defaults to false=0).  The "
@@ -613,7 +619,7 @@ msgid ""
 "sampled or over-sampled data."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:502
+#: ../../source/drivers/raster/vrt.rst:529
 msgid ""
 "Starting with GDAL 2.3, a separable kernel may also be used.  In this "
 "case the number of Coefs entries should correspond to the Size.  The "
@@ -622,11 +628,11 @@ msgid ""
 "processing filters are separable. For example, a Gaussian blur:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:520
+#: ../../source/drivers/raster/vrt.rst:547
 msgid "NoDataFromMaskSource"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:524
+#: ../../source/drivers/raster/vrt.rst:551
 msgid ""
 "The NoDataFromMaskSource is derived from the SimpleSource and shares the "
 "same properties except that it replaces the value of the source with the "
@@ -640,11 +646,11 @@ msgid ""
 " NODATA+1."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:540
+#: ../../source/drivers/raster/vrt.rst:567
 msgid "ArraySource"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:544
+#: ../../source/drivers/raster/vrt.rst:571
 msgid ""
 "The ArraySource_ indicates that raster data should be read from a 2D "
 "array using the multidimensional API. If the original array is not a 3D "
@@ -652,29 +658,29 @@ msgid ""
 " 2D slice."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:548
+#: ../../source/drivers/raster/vrt.rst:575
 msgid "ArraySource can have the following child elements:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:550
+#: ../../source/drivers/raster/vrt.rst:577
 msgid ""
 "``SingleSourceArray``, ``DerivedArray`` or ``Array``: required as first "
 "child element"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:551
+#: ../../source/drivers/raster/vrt.rst:578
 msgid "``SrcRect`` (same syntax and semantics as in SimpleSource): optional"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:552
+#: ../../source/drivers/raster/vrt.rst:579
 msgid "``DstRect`` (same syntax and semantics as in SimpleSource): optional"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:555
+#: ../../source/drivers/raster/vrt.rst:582
 msgid "SingleSourceArray"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:557
+#: ../../source/drivers/raster/vrt.rst:584
 msgid ""
 "SingleSourceArray references a multidimensional raster through a "
 "SourceFilename element and an array through its full path within it with "
@@ -682,22 +688,22 @@ msgid ""
 "ArraySource, it must be a 2-dimensional array."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:562
+#: ../../source/drivers/raster/vrt.rst:589
 msgid "Example:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:573
+#: ../../source/drivers/raster/vrt.rst:600
 msgid ""
 "Be careful that quite often arrays in the multidimensional API use a "
 "\"bottom-up\" approach, and it might thus be needed to reverse the Y "
 "axis, with a View expression with a DerivedArray (cf below example)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:578
+#: ../../source/drivers/raster/vrt.rst:605
 msgid "DerivedArray"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:580
+#: ../../source/drivers/raster/vrt.rst:607
 msgid ""
 "A DerivedArray starts with an array coming from a SingleSourceArray (but "
 "it could also be a DerivedArray or a Array), which must be the first "
@@ -705,91 +711,91 @@ msgid ""
 "more Step elements."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:585
+#: ../../source/drivers/raster/vrt.rst:612
 msgid "View step: applies the :cpp:func:`GDALMDArray::GetView` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:587
+#: ../../source/drivers/raster/vrt.rst:614
 msgid ""
 "The ``View`` element must have an ``expr`` attribute, which is the "
 "argument of :cpp:func:`GDALMDArray::GetView` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:590
+#: ../../source/drivers/raster/vrt.rst:617
 msgid ""
 "The following example slices the 3D dimension at index 0 and flips the "
 "vertical axis (assuming 1st dimension is a non-spatial one, 2nd dimension"
 " is the Y dimension and 3rd dimension is the X dimension)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:608
+#: ../../source/drivers/raster/vrt.rst:635
 msgid "``Transpose`` step: applies the :cpp:func:`GDALMDArray::Transpose` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:610
+#: ../../source/drivers/raster/vrt.rst:637
 msgid ""
 "The ``Transpose`` element must have a ``newOrder`` attribute, which is "
 "the argument of :cpp:func:`GDALMDArray::Transpose` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:613
+#: ../../source/drivers/raster/vrt.rst:640
 msgid "The following example transposes the 2 axis of a 2D array"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:629
+#: ../../source/drivers/raster/vrt.rst:656
 msgid "Resample step: applies the :cpp:func:`GDALMDArray::GetResampled` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:631
+#: ../../source/drivers/raster/vrt.rst:658
 msgid ""
 "The ``Resample`` element may have the following child elements, which "
 "correspond to the arguments of the :cpp:func:`GDALMDArray::GetResampled` "
 "method:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:634
+#: ../../source/drivers/raster/vrt.rst:661
 msgid ""
 "``Dimension``: with a ``name`` and ``size`` attribute. This element may "
 "be repeated."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:635
+#: ../../source/drivers/raster/vrt.rst:662
 msgid ""
 "``ResampleAlg``: whose value is ``NearestNeighbour`` (default), "
 "``Cubic``, ``CubicSpline``, ``Bilinear``, ``Lanczos``, ``Average``, "
 "``RMS`` or ``Mode``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:636
+#: ../../source/drivers/raster/vrt.rst:663
 msgid ""
 "``SRS``: target SRS (string recognized by "
 ":cpp:func:`OGRSpatialReference::SetFromUserInput`)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:637
-#: ../../source/drivers/raster/vrt.rst:667
-#: ../../source/drivers/raster/vrt.rst:721
+#: ../../source/drivers/raster/vrt.rst:664
+#: ../../source/drivers/raster/vrt.rst:694
+#: ../../source/drivers/raster/vrt.rst:748
 msgid ""
 "``Option`` with a ``name`` attribute and the value as the content of the "
 "element. This element may be repeated."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:659
+#: ../../source/drivers/raster/vrt.rst:686
 msgid "Grid step: applies the :cpp:func:`GDALMDArray::GetGridded` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:661
+#: ../../source/drivers/raster/vrt.rst:688
 msgid ""
 "The ``Grid`` element may have the following child elements, which "
 "correspond to the arguments of the :cpp:func:`GDALMDArray::GetGridded` "
 "method:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:664
+#: ../../source/drivers/raster/vrt.rst:691
 msgid "``GridOptions`` (required): name and options of the gridding algorithm"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:665
+#: ../../source/drivers/raster/vrt.rst:692
 msgid ""
 "``XArray`` (optional): its child value should be a SingleSourceArray, "
 "DerivedArray or Array pointing to the array to use for the X dimension. "
@@ -797,7 +803,7 @@ msgid ""
 "attribute."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:666
+#: ../../source/drivers/raster/vrt.rst:693
 msgid ""
 "``YArray`` (optional): its child value should be a SingleSourceArray, "
 "DerivedArray or Array pointing to the array to use for the Y dimension. "
@@ -805,42 +811,42 @@ msgid ""
 "attribute."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:698
+#: ../../source/drivers/raster/vrt.rst:725
 msgid ""
 "``GetUnscaled`` step: applies the :cpp:func:`GDALMDArray::GetUnscaled` "
 "method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:700
+#: ../../source/drivers/raster/vrt.rst:727
 msgid "It does not have any child elements."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:716
+#: ../../source/drivers/raster/vrt.rst:743
 msgid "``GetMask`` step: applies the :cpp:func:`GDALMDArray::GetMask` method"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:718
+#: ../../source/drivers/raster/vrt.rst:745
 msgid ""
 "The ``GetMask`` element may have the following child elements, which "
 "correspond to the arguments of the :cpp:func:`GDALMDArray::GetMask` "
 "method:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:740
+#: ../../source/drivers/raster/vrt.rst:767
 msgid "Array"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:742
+#: ../../source/drivers/raster/vrt.rst:769
 msgid ""
 ":ref:`Array <vrt_multidimensional>` can be used to mosaic several "
 "multidimensional arrays."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:746
+#: ../../source/drivers/raster/vrt.rst:773
 msgid "Overviews"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:748
+#: ../../source/drivers/raster/vrt.rst:775
 msgid ""
 "GDAL can make efficient use of overviews available in the sources that "
 "compose the bands when dealing with RasterIO() requests that involve "
@@ -848,21 +854,21 @@ msgid ""
 "expose overviews."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:752
+#: ../../source/drivers/raster/vrt.rst:779
 msgid "Except if (from top priority to lesser priority) :"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:754
+#: ../../source/drivers/raster/vrt.rst:781
 msgid ""
 "The **Overview** element is present in the VRTRasterBand element. See "
 "above."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:755
+#: ../../source/drivers/raster/vrt.rst:782
 msgid "or external .vrt.ovr overviews are built"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:756
+#: ../../source/drivers/raster/vrt.rst:783
 msgid ""
 "(starting with GDAL 3.2) explicit virtual overviews, if a "
 "**OverviewList** element is declared in the VRTDataset element (see "
@@ -870,7 +876,7 @@ msgid ""
 "overviews that might be built later."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:759
+#: ../../source/drivers/raster/vrt.rst:786
 msgid ""
 "(starting with GDAL 2.1) implicit virtual overviews, if the VRTRasterBand"
 " are made of a single SimpleSource or ComplexSource that has overviews. "
@@ -878,11 +884,11 @@ msgid ""
 "that might be built later."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:764
+#: ../../source/drivers/raster/vrt.rst:791
 msgid ".vrt Descriptions for Raw Files"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:766
+#: ../../source/drivers/raster/vrt.rst:793
 msgid ""
 "So far we have described how to derive new virtual datasets from existing"
 " files supported by GDAL.  However, it is also common to need to utilize "
@@ -891,7 +897,7 @@ msgid ""
 "accomplished by writing a .vrt file describing the raw file."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:772
+#: ../../source/drivers/raster/vrt.rst:799
 msgid ""
 "For example, the following .vrt describes a raw raster file containing "
 "floating point complex pixels in a file called *l2p3hhsso.img*.  The "
@@ -902,7 +908,7 @@ msgid ""
 "(8)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:791
+#: ../../source/drivers/raster/vrt.rst:818
 msgid ""
 "Some things to note are that the VRTRasterBand has a subClass specifier "
 "of \"VRTRawRasterBand\".  Also, the VRTRawRasterBand contains a number of"
@@ -912,34 +918,34 @@ msgid ""
 " elements previously described which are still supported."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:798
+#: ../../source/drivers/raster/vrt.rst:825
 msgid ""
 "**SourceFilename**: The name of the raw file containing the data for this"
 " band.  The relativeToVRT attribute can be used to indicate if the "
 "SourceFilename is relative to the .vrt file (1) or not (0)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:800
+#: ../../source/drivers/raster/vrt.rst:827
 msgid ""
 "**ImageOffset**: The offset in bytes to the beginning of the first pixel "
 "of data of this image band.   Defaults to zero."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:802
+#: ../../source/drivers/raster/vrt.rst:829
 msgid ""
 "**PixelOffset**: The offset in bytes from the beginning of one pixel and "
 "the next on the same line.  In packed single band data this will be the "
 "size of the **dataType** in bytes."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:804
+#: ../../source/drivers/raster/vrt.rst:831
 msgid ""
 "**LineOffset**: The offset in bytes from the beginning of one scanline of"
 " data and the next scanline of data.  In packed single band data this "
 "will be PixelOffset * rasterXSize."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:806
+#: ../../source/drivers/raster/vrt.rst:833
 msgid ""
 "**ByteOrder**: Defines the byte order of the data on disk. Either LSB "
 "(Least Significant Byte first) such as the natural byte order on Intel "
@@ -948,52 +954,52 @@ msgid ""
 " order."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:808
+#: ../../source/drivers/raster/vrt.rst:835
 msgid "A few other notes:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:810
+#: ../../source/drivers/raster/vrt.rst:837
 msgid ""
 "The image data on disk is assumed to be of the same data type as the band"
 " **dataType** of the VRTRawRasterBand."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:812
+#: ../../source/drivers/raster/vrt.rst:839
 msgid ""
 "All the non-source attributes of the VRTRasterBand are supported, "
 "including color tables, metadata, nodata values, and color "
 "interpretation."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:814
+#: ../../source/drivers/raster/vrt.rst:841
 msgid ""
 "The VRTRawRasterBand supports in place update of the raster, whereas the "
 "source based VRTRasterBand is always read-only."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:816
+#: ../../source/drivers/raster/vrt.rst:843
 msgid ""
 "The OpenEV tool includes a File menu option to input parameters "
 "describing a raw raster file in a GUI and create the corresponding .vrt "
 "file."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:818
+#: ../../source/drivers/raster/vrt.rst:845
 msgid ""
 "Multiple bands in the one .vrt file can come from the same raw file. Just"
 " ensure that the ImageOffset, PixelOffset, and LineOffset definition for "
 "each band is appropriate for the pixels of that particular band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:820
+#: ../../source/drivers/raster/vrt.rst:847
 msgid "Another example, in this case a 400x300 RGB pixel interleaved image."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:849
+#: ../../source/drivers/raster/vrt.rst:876
 msgid "Creation of VRT Datasets"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:851
+#: ../../source/drivers/raster/vrt.rst:878
 msgid ""
 "The VRT driver supports several methods of creating VRT datasets. The "
 ":file:`vrtdataset.h` include file should be installed with the core GDAL "
@@ -1002,7 +1008,7 @@ msgid ""
 "interfaces."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:857
+#: ../../source/drivers/raster/vrt.rst:884
 msgid ""
 "To create a VRT dataset that is a clone of an existing dataset use the "
 ":cpp:func:`GDALDriver::CreateCopy` method.  For example to clone "
@@ -1010,7 +1016,7 @@ msgid ""
 " used:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:873
+#: ../../source/drivers/raster/vrt.rst:900
 msgid ""
 "Note the use of :cpp:func:`GDALOpenShared` when opening the source "
 "dataset. It is advised to use :cpp:func:`GDALOpenShared` in this "
@@ -1021,7 +1027,7 @@ msgid ""
 "dataset before closing the source dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:880
+#: ../../source/drivers/raster/vrt.rst:907
 msgid ""
 "To obtain the resulting VRT XML of :file:`wrk.vrt` without having to read"
 " the text from an actual file, you can modify the above code to open the "
@@ -1029,7 +1035,7 @@ msgid ""
 "domain."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:892
+#: ../../source/drivers/raster/vrt.rst:919
 msgid ""
 "To create a virtual copy of a dataset with some attributes added or "
 "changed such as metadata or coordinate system that are often hard to "
@@ -1039,14 +1045,14 @@ msgid ""
 ":cpp:func:`GDALDriver::CreateCopy` written out in TIFF format."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:915
+#: ../../source/drivers/raster/vrt.rst:942
 msgid ""
 "In the above example the nodata value is set as -999. You can set the "
 "HideNoDataValue element in the VRT dataset's band using "
 ":cpp:func:`GDALRasterBand::SetMetadataItem` on that band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:923
+#: ../../source/drivers/raster/vrt.rst:950
 msgid ""
 "In this example a virtual dataset is created with the "
 ":cpp:func:`GDALDriver::Create` method, and adding bands and sources "
@@ -1060,7 +1066,7 @@ msgid ""
 "instead of using the simple source."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:949
+#: ../../source/drivers/raster/vrt.rst:976
 msgid ""
 "A more general form of this that will produce a 3x3 average filtered "
 "clone of any input datasource might look like the following.  In this "
@@ -1072,7 +1078,7 @@ msgid ""
 "only thing we are changing is the data source for each band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:986
+#: ../../source/drivers/raster/vrt.rst:1013
 msgid ""
 "The :cpp:class:`VRTDataset` class is one of the few dataset "
 "implementations that supports the :cpp:func:`GDALDataset::AddBand` "
@@ -1084,11 +1090,11 @@ msgid ""
 ":cpp:func:`GDALRasterBand::SetMetadataItem` examples."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1014
+#: ../../source/drivers/raster/vrt.rst:1041
 msgid "Using Derived Bands (with pixel functions in C/C++)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1016
+#: ../../source/drivers/raster/vrt.rst:1043
 msgid ""
 "A specialized type of band is a 'derived' band which derives its pixel "
 "information from its source bands.  With this type of band you must also "
@@ -1097,7 +1103,7 @@ msgid ""
 "registered with GDAL using a unique key."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1022
+#: ../../source/drivers/raster/vrt.rst:1049
 msgid ""
 "Using derived bands you can create VRT datasets that manipulate bands on "
 "the fly without having to create new band files on disk.  For example, "
@@ -1105,20 +1111,20 @@ msgid ""
 "band input dataset (x0, x3, x4, and x8) and some constant y:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1031
+#: ../../source/drivers/raster/vrt.rst:1058
 msgid ""
 "You could write the pixel function to compute this value and then "
 "register it with GDAL with the name \"MyFirstFunction\".  Then, the "
 "following VRT XML could be used to display this derived band:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1072
+#: ../../source/drivers/raster/vrt.rst:1099
 msgid ""
 "PixelFunctionArguments can only be used with C++ pixel functions in GDAL "
 "versions 3.4 and greater."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1075
+#: ../../source/drivers/raster/vrt.rst:1102
 msgid ""
 "In addition to the subclass specification (VRTDerivedRasterBand) and the "
 "PixelFunctionType value, there is another new parameter that can come in "
@@ -1133,93 +1139,93 @@ msgid ""
 "function, and the imaginary portion would be lost."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1097
+#: ../../source/drivers/raster/vrt.rst:1124
 msgid "Default Pixel Functions"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1099
+#: ../../source/drivers/raster/vrt.rst:1126
 msgid ""
 "GDAL provides a set of default pixel functions that can be used without "
 "writing new code:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1106
+#: ../../source/drivers/raster/vrt.rst:1133
 msgid "PixelFunctionType"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1107
+#: ../../source/drivers/raster/vrt.rst:1134
 msgid "Number of input sources"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1108
+#: ../../source/drivers/raster/vrt.rst:1135
 msgid "PixelFunctionArguments"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1109
+#: ../../source/drivers/raster/vrt.rst:1136
 msgid "Description"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1110
+#: ../../source/drivers/raster/vrt.rst:1137
 msgid "**cmul**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1111
-#: ../../source/drivers/raster/vrt.rst:1115
-#: ../../source/drivers/raster/vrt.rst:1135
-#: ../../source/drivers/raster/vrt.rst:1139
-#: ../../source/drivers/raster/vrt.rst:1143
-#: ../../source/drivers/raster/vrt.rst:1195
+#: ../../source/drivers/raster/vrt.rst:1138
+#: ../../source/drivers/raster/vrt.rst:1142
+#: ../../source/drivers/raster/vrt.rst:1162
+#: ../../source/drivers/raster/vrt.rst:1166
+#: ../../source/drivers/raster/vrt.rst:1170
+#: ../../source/drivers/raster/vrt.rst:1222
 msgid "2"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1113
+#: ../../source/drivers/raster/vrt.rst:1140
 msgid "multiply the first band for the complex conjugate of the second"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1114
+#: ../../source/drivers/raster/vrt.rst:1141
 msgid "**complex**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1117
+#: ../../source/drivers/raster/vrt.rst:1144
 msgid "make a complex band merging two bands used as real and imag values"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1118
+#: ../../source/drivers/raster/vrt.rst:1145
 msgid "**conj**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1119
-#: ../../source/drivers/raster/vrt.rst:1123
-#: ../../source/drivers/raster/vrt.rst:1127
-#: ../../source/drivers/raster/vrt.rst:1131
-#: ../../source/drivers/raster/vrt.rst:1147
-#: ../../source/drivers/raster/vrt.rst:1151
-#: ../../source/drivers/raster/vrt.rst:1155
-#: ../../source/drivers/raster/vrt.rst:1167
-#: ../../source/drivers/raster/vrt.rst:1171
-#: ../../source/drivers/raster/vrt.rst:1183
-#: ../../source/drivers/raster/vrt.rst:1191
-#: ../../source/drivers/raster/vrt.rst:1199
-#: ../../source/drivers/raster/vrt.rst:1203
-#: ../../source/drivers/raster/vrt.rst:1207
+#: ../../source/drivers/raster/vrt.rst:1146
+#: ../../source/drivers/raster/vrt.rst:1150
+#: ../../source/drivers/raster/vrt.rst:1154
+#: ../../source/drivers/raster/vrt.rst:1158
+#: ../../source/drivers/raster/vrt.rst:1174
+#: ../../source/drivers/raster/vrt.rst:1178
+#: ../../source/drivers/raster/vrt.rst:1182
+#: ../../source/drivers/raster/vrt.rst:1194
+#: ../../source/drivers/raster/vrt.rst:1198
+#: ../../source/drivers/raster/vrt.rst:1210
+#: ../../source/drivers/raster/vrt.rst:1218
+#: ../../source/drivers/raster/vrt.rst:1226
+#: ../../source/drivers/raster/vrt.rst:1230
+#: ../../source/drivers/raster/vrt.rst:1234
 msgid "1"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1121
+#: ../../source/drivers/raster/vrt.rst:1148
 msgid ""
 "computes the complex conjugate of a single raster band (just a copy if "
 "the input is non-complex)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1122
+#: ../../source/drivers/raster/vrt.rst:1149
 msgid "**dB**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1124
+#: ../../source/drivers/raster/vrt.rst:1151
 msgid "``fact`` (optional)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1125
+#: ../../source/drivers/raster/vrt.rst:1152
 msgid ""
 "perform conversion to dB of the abs of a single raster band (real or "
 "complex): ``20. * log10( abs( x ) )``. The optional ``fact`` parameter "
@@ -1227,11 +1233,11 @@ msgid ""
 "x ) )``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1126
+#: ../../source/drivers/raster/vrt.rst:1153
 msgid "**dB2amp**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1129
+#: ../../source/drivers/raster/vrt.rst:1156
 msgid ""
 "perform scale conversion from logarithmic to linear (amplitude) (i.e. "
 "``10 ^ ( x / 20 )`` ) of a single raster band (real only). Deprecated in "
@@ -1239,11 +1245,11 @@ msgid ""
 "``fact = 0.05`` i.e. ``1./20``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1130
+#: ../../source/drivers/raster/vrt.rst:1157
 msgid "**dB2pow**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1133
+#: ../../source/drivers/raster/vrt.rst:1160
 msgid ""
 "perform scale conversion from logarithmic to linear (power) (i.e. ``10 ^ "
 "( x / 10 )`` ) of a single raster band (real only). Deprecated in GDAL "
@@ -1251,41 +1257,41 @@ msgid ""
 "``fact = 0.1`` i.e. ``1./10``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1134
+#: ../../source/drivers/raster/vrt.rst:1161
 msgid "**diff**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1137
+#: ../../source/drivers/raster/vrt.rst:1164
 msgid "computes the difference between 2 raster bands (``b1 - b2``)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1138
+#: ../../source/drivers/raster/vrt.rst:1165
 msgid "**div**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1141
+#: ../../source/drivers/raster/vrt.rst:1168
 msgid "divide one raster band by another (``b1 / b2``)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1142
+#: ../../source/drivers/raster/vrt.rst:1169
 msgid "**norm_diff**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1145
+#: ../../source/drivers/raster/vrt.rst:1172
 msgid ""
 "computes the normalized difference between two raster bands: ``(b1 - "
 "b2)/(b1 + b2)``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1146
+#: ../../source/drivers/raster/vrt.rst:1173
 msgid "**exp**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1148
+#: ../../source/drivers/raster/vrt.rst:1175
 msgid "``base`` (optional), ``fact`` (optional)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1149
+#: ../../source/drivers/raster/vrt.rst:1176
 msgid ""
 "computes the exponential of each element in the input band ``x`` (of real"
 " values): ``e ^ x``. The function also accepts two optional parameters: "
@@ -1295,95 +1301,95 @@ msgid ""
 "this case ``base = 10.`` and ``fact = 0.05`` i.e. ``1. / 20``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1150
+#: ../../source/drivers/raster/vrt.rst:1177
 msgid "**imag**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1153
+#: ../../source/drivers/raster/vrt.rst:1180
 msgid "extract imaginary part from a single raster band (0 for non-complex)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1154
+#: ../../source/drivers/raster/vrt.rst:1181
 msgid "**intensity**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1157
+#: ../../source/drivers/raster/vrt.rst:1184
 msgid ""
 "computes the intensity ``Re( x * conj(x) )`` of a single raster band "
 "(real or complex)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1158
+#: ../../source/drivers/raster/vrt.rst:1185
 msgid "**interpolate_exp**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1159
-#: ../../source/drivers/raster/vrt.rst:1163
-#: ../../source/drivers/raster/vrt.rst:1175
-#: ../../source/drivers/raster/vrt.rst:1179
-#: ../../source/drivers/raster/vrt.rst:1187
-#: ../../source/drivers/raster/vrt.rst:1211
+#: ../../source/drivers/raster/vrt.rst:1186
+#: ../../source/drivers/raster/vrt.rst:1190
+#: ../../source/drivers/raster/vrt.rst:1202
+#: ../../source/drivers/raster/vrt.rst:1206
+#: ../../source/drivers/raster/vrt.rst:1214
+#: ../../source/drivers/raster/vrt.rst:1238
 msgid ">= 2"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1160
-#: ../../source/drivers/raster/vrt.rst:1164
+#: ../../source/drivers/raster/vrt.rst:1187
+#: ../../source/drivers/raster/vrt.rst:1191
 msgid "``t0``, ``dt``, ``t``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1161
+#: ../../source/drivers/raster/vrt.rst:1188
 msgid ""
 "interpolate a value at time (or position) ``t`` given input sources "
 "beginning at position ``t0`` with spacing ``dt`` using exponential "
 "interpolation"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1162
+#: ../../source/drivers/raster/vrt.rst:1189
 msgid "**interpolate_linear**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1165
+#: ../../source/drivers/raster/vrt.rst:1192
 msgid ""
 "interpolate a value at time (or position) ``t`` given input sources "
 "beginning at ``t0`` with spacing ``dt`` using linear interpolation"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1166
+#: ../../source/drivers/raster/vrt.rst:1193
 msgid "**inv**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1168
-#: ../../source/drivers/raster/vrt.rst:1188
-#: ../../source/drivers/raster/vrt.rst:1212
+#: ../../source/drivers/raster/vrt.rst:1195
+#: ../../source/drivers/raster/vrt.rst:1215
+#: ../../source/drivers/raster/vrt.rst:1239
 msgid "``k`` (optional)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1169
+#: ../../source/drivers/raster/vrt.rst:1196
 msgid ""
 "inverse (``1./x``). If the optional ``k`` parameter is set then the "
 "result is multiplied by ``k`` (``k / x``)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1170
+#: ../../source/drivers/raster/vrt.rst:1197
 msgid "**log10**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1173
+#: ../../source/drivers/raster/vrt.rst:1200
 msgid ""
 "compute the logarithm (base 10) of the abs of a single raster band (real "
 "or complex): ``log10( abs( x ) )``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1174
+#: ../../source/drivers/raster/vrt.rst:1201
 msgid "**max**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1176
-#: ../../source/drivers/raster/vrt.rst:1180
+#: ../../source/drivers/raster/vrt.rst:1203
+#: ../../source/drivers/raster/vrt.rst:1207
 msgid "``propagateNoData`` (optional)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1177
+#: ../../source/drivers/raster/vrt.rst:1204
 msgid ""
 "(GDAL >= 3.8) maximum of 2 or more raster bands, ignoring by default "
 "pixels at nodata. If the optional ``propagateNoData`` parameter is set to"
@@ -1391,11 +1397,11 @@ msgid ""
 "be propagated to the output value."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1178
+#: ../../source/drivers/raster/vrt.rst:1205
 msgid "**min**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1181
+#: ../../source/drivers/raster/vrt.rst:1208
 msgid ""
 "(GDAL >= 3.8) minimum of 2 or more raster bands, ignoring by default "
 "pixels at nodata. If the optional ``propagateNoData`` parameter is set to"
@@ -1403,41 +1409,41 @@ msgid ""
 "be propagated to the output value."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1182
+#: ../../source/drivers/raster/vrt.rst:1209
 msgid "**mod**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1185
+#: ../../source/drivers/raster/vrt.rst:1212
 msgid "extract module from a single raster band (real or complex)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1186
+#: ../../source/drivers/raster/vrt.rst:1213
 msgid "**mul**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1189
+#: ../../source/drivers/raster/vrt.rst:1216
 msgid ""
 "multiply 2 or more raster bands. If the optional ``k`` parameter is "
 "provided then the result is multiplied by the scalar ``k``."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1190
+#: ../../source/drivers/raster/vrt.rst:1217
 msgid "**phase**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1193
+#: ../../source/drivers/raster/vrt.rst:1220
 msgid "extract phase from a single raster band [-PI,PI] (0 or PI for non-complex)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1194
+#: ../../source/drivers/raster/vrt.rst:1221
 msgid "**polar**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1196
+#: ../../source/drivers/raster/vrt.rst:1223
 msgid "``amplitude_type`` (optional)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1197
+#: ../../source/drivers/raster/vrt.rst:1224
 msgid ""
 "make a complex band using input bands for amplitude and phase values ``b1"
 " * exp( j * b2 )``. The optional (string) parameter ``amplitude_type`` "
@@ -1446,82 +1452,82 @@ msgid ""
 "clipped to zero."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1198
+#: ../../source/drivers/raster/vrt.rst:1225
 msgid "**pow**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1200
+#: ../../source/drivers/raster/vrt.rst:1227
 msgid "``power``"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1201
+#: ../../source/drivers/raster/vrt.rst:1228
 msgid ""
 "raise a single raster band to a constant power, specified with argument "
 "``power`` (real only)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1202
+#: ../../source/drivers/raster/vrt.rst:1229
 msgid "**real**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1205
+#: ../../source/drivers/raster/vrt.rst:1232
 msgid ""
 "extract real part from a single raster band (just a copy if the input is "
 "non-complex)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1206
+#: ../../source/drivers/raster/vrt.rst:1233
 msgid "**sqrt**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1209
+#: ../../source/drivers/raster/vrt.rst:1236
 msgid "perform the square root of a single raster band (real only)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1210
+#: ../../source/drivers/raster/vrt.rst:1237
 msgid "**sum**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1213
+#: ../../source/drivers/raster/vrt.rst:1240
 msgid ""
 "sum 2 or more raster bands. If the optional ``k`` parameter is provided "
 "then it is added to each element of the result"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1214
+#: ../../source/drivers/raster/vrt.rst:1241
 msgid "**replace_nodata**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1215
-#: ../../source/drivers/raster/vrt.rst:1219
+#: ../../source/drivers/raster/vrt.rst:1242
+#: ../../source/drivers/raster/vrt.rst:1246
 msgid "= 1"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1216
+#: ../../source/drivers/raster/vrt.rst:1243
 msgid "``to`` (optional)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1217
+#: ../../source/drivers/raster/vrt.rst:1244
 msgid ""
 "convert incoming ``NoData`` values to a new value, IEEE 754 `nan` by "
 "default"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1218
+#: ../../source/drivers/raster/vrt.rst:1245
 msgid "**scale**"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1221
+#: ../../source/drivers/raster/vrt.rst:1248
 msgid ""
 "perform scaling according to the ``offset`` and ``scale`` values of the "
 "raster band"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1224
+#: ../../source/drivers/raster/vrt.rst:1251
 msgid "Writing Pixel Functions"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1226
+#: ../../source/drivers/raster/vrt.rst:1253
 msgid ""
 "To register this function with GDAL (prior to accessing any VRT datasets "
 "with derived bands that use this function), an application calls "
@@ -1529,7 +1535,7 @@ msgid ""
 ":cpp:type:`GDALDerivedPixelFuncWithArgs`:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1242
+#: ../../source/drivers/raster/vrt.rst:1269
 msgid ""
 "A good time to do this is at the beginning of an application when the "
 "GDAL drivers are registered. ``pszMetadata`` is optional and can be "
@@ -1538,7 +1544,7 @@ msgid ""
 "Dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1247
+#: ../../source/drivers/raster/vrt.rst:1274
 msgid ""
 "A :cpp:type:`GDALDerivedPixelFuncWithArgs` is defined with a signature "
 "similar to :cpp:func:`GDALRasterBand::IRasterIO`:"
@@ -1548,17 +1554,17 @@ msgstr ""
 msgid "Parameters"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1252
+#: ../../source/drivers/raster/vrt.rst:1279
 msgid ""
 "A pointer to packed rasters; one per source.  The datatype of all will be"
 " the same, specified in the ``eSrcType`` parameter."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1255
+#: ../../source/drivers/raster/vrt.rst:1282
 msgid "The number of source rasters."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1257
+#: ../../source/drivers/raster/vrt.rst:1284
 msgid ""
 "The buffer into which the data should be read, or from which it should be"
 " written.  This buffer must contain at least ``nBufXSize * nBufYSize`` "
@@ -1567,61 +1573,61 @@ msgid ""
 "``nLineSpace`` parameters."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1263
+#: ../../source/drivers/raster/vrt.rst:1290
 msgid ""
 "The width of the buffer image into which the desired region is to be "
 "read, or from which it is to be written."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1266
+#: ../../source/drivers/raster/vrt.rst:1293
 msgid ""
 "The height of the buffer image into which the desired region is to be "
 "read, or from which it is to be written."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1269
+#: ../../source/drivers/raster/vrt.rst:1296
 msgid "The type of the pixel values in the ``papoSources`` raster array."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1272
+#: ../../source/drivers/raster/vrt.rst:1299
 msgid ""
 "The type of the pixel values that the pixel function must generate in the"
 " ``pData`` data buffer."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1275
+#: ../../source/drivers/raster/vrt.rst:1302
 msgid ""
 "The byte offset from the start of one pixel value in ``pData`` to the "
 "start of the next pixel value within a scanline.  If defaulted (0) the "
 "size of the datatype eBufType is used."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1279
+#: ../../source/drivers/raster/vrt.rst:1306
 msgid ""
 "The byte offset from the start of one scanline in pData to the start of "
 "the next."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1282
+#: ../../source/drivers/raster/vrt.rst:1309
 msgid "An optional string list of named function arguments (e.g. ``y=4``)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1285
+#: ../../source/drivers/raster/vrt.rst:1312
 msgid ""
 "It is also possible to register a :cpp:type:`GDALDerivedPixelFunc` (which"
 " omits the final :cpp:type:`CSLConstList` argument) using "
 ":cpp:func:`GDALAddDerivedBandPixelFunc`."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1287
+#: ../../source/drivers/raster/vrt.rst:1314
 msgid "The following is an implementation of the pixel function:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1349
+#: ../../source/drivers/raster/vrt.rst:1376
 msgid "Using Derived Bands (with pixel functions in Python)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1351
+#: ../../source/drivers/raster/vrt.rst:1378
 msgid ""
 "Starting with GDAL 2.2, in addition to pixel functions written in C/C++ "
 "as documented in the :ref:`vrt_derived_bands` section, it is possible to "
@@ -1630,13 +1636,13 @@ msgid ""
 "requirements at run-time."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1356
+#: ../../source/drivers/raster/vrt.rst:1383
 msgid ""
 "The subelements for VRTRasterBand (whose subclass specification must be "
 "set to VRTDerivedRasterBand) are :"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1359
+#: ../../source/drivers/raster/vrt.rst:1386
 msgid ""
 "**PixelFunctionType** (required): Must be set to a function name that "
 "will be defined as a inline Python module in PixelFunctionCode element or"
@@ -1644,11 +1650,11 @@ msgid ""
 "external Python module"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1361
+#: ../../source/drivers/raster/vrt.rst:1388
 msgid "**PixelFunctionLanguage** (required): Must be set to Python."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1363
+#: ../../source/drivers/raster/vrt.rst:1390
 msgid ""
 "**PixelFunctionCode** (required if PixelFunctionType is of the form "
 "\"function_name\", ignored otherwise). The in-lined code of a Python "
@@ -1656,7 +1662,7 @@ msgid ""
 "PixelFunctionType."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1365
+#: ../../source/drivers/raster/vrt.rst:1392
 msgid ""
 "**BufferRadius** (optional, defaults to 0): Amount of extra pixels, with "
 "respect to the original RasterIO() request to satisfy, that are fetched "
@@ -1665,7 +1671,7 @@ msgid ""
 " buffer zone will be ignored."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1367
+#: ../../source/drivers/raster/vrt.rst:1394
 msgid ""
 "**SkipNonContributingSources** (optional, added in GDAL 3.7, defaults to "
 "false) = true/false: Whether sources that do not intersect the "
@@ -1675,61 +1681,61 @@ msgid ""
 "that intersect the requested region will be passed."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1369
+#: ../../source/drivers/raster/vrt.rst:1396
 msgid ""
 "The signature of the Python pixel function must have the following "
 "arguments:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1371
+#: ../../source/drivers/raster/vrt.rst:1398
 msgid ""
 "**in_ar**: list of input NumPy arrays. One NumPy array for each source. "
 "If SkipNonContributingSources=true, only contributing sources will be "
 "passed."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1372
+#: ../../source/drivers/raster/vrt.rst:1399
 msgid ""
 "**out_ar**: output NumPy array to fill. The array is initialized at the "
 "right dimensions and with the VRTRasterBand.dataType."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1373
+#: ../../source/drivers/raster/vrt.rst:1400
 msgid ""
 "**xoff**: pixel offset to the top left corner of the accessed region of "
 "the band. Generally not needed except if the processing depends on the "
 "pixel position in the raster."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1374
+#: ../../source/drivers/raster/vrt.rst:1401
 msgid ""
 "**yoff** line offset to the top left corner of the accessed region of the"
 " band. Generally not needed."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1375
+#: ../../source/drivers/raster/vrt.rst:1402
 msgid ""
 "**xsize**: width of the region of the accessed region of the band. Can be"
 " used together with out_ar.shape[1] to determine the horizontal "
 "resampling ratio of the request."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1376
+#: ../../source/drivers/raster/vrt.rst:1403
 msgid ""
 "**ysize**: height of the region of the accessed region of the band. Can "
 "be used together with out_ar.shape[0] to determine the vertical "
 "resampling ratio of the request."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1377
+#: ../../source/drivers/raster/vrt.rst:1404
 msgid "**raster_xsize**: total width of the raster band. Generally not needed."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1378
+#: ../../source/drivers/raster/vrt.rst:1405
 msgid "**raster_ysize**: total height of the raster band. Generally not needed."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1379
+#: ../../source/drivers/raster/vrt.rst:1406
 msgid ""
 "**buf_radius**: radius of the buffer (in pixels) added to the left, "
 "right, top and bottom of in_ar / out_ar. This is the value of the "
@@ -1737,53 +1743,53 @@ msgid ""
 "request is extended by a given amount of pixels."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1380
+#: ../../source/drivers/raster/vrt.rst:1407
 msgid "**gt**: geotransform. Array of 6 double values."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1381
+#: ../../source/drivers/raster/vrt.rst:1408
 msgid ""
 "**kwargs**: dictionary with user arguments defined in "
 "PixelFunctionArguments"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1383
+#: ../../source/drivers/raster/vrt.rst:1410
 msgid ""
 "The provided ``out_ar`` array must be modified in-place. Any value "
 "currently returned by the pixel function is ignored."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1388
+#: ../../source/drivers/raster/vrt.rst:1415
 msgid ""
 "If wanting to fill ``out_ar`` from another array, use the ``out_ar[:] = "
 "...`` syntax."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1392
+#: ../../source/drivers/raster/vrt.rst:1419
 msgid "Examples"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1395
+#: ../../source/drivers/raster/vrt.rst:1422
 msgid "VRT that multiplies the values of the source file by a factor of 1.5"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1421
+#: ../../source/drivers/raster/vrt.rst:1448
 msgid "VRT that adds 2 (or more) rasters"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1449
+#: ../../source/drivers/raster/vrt.rst:1476
 msgid "VRT that computes hillshading using an external library"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1470
+#: ../../source/drivers/raster/vrt.rst:1497
 msgid "with hillshading.py:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1529
+#: ../../source/drivers/raster/vrt.rst:1556
 msgid "Python module path"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1531
+#: ../../source/drivers/raster/vrt.rst:1558
 msgid ""
 "When importing modules from inline Python code or when relying on out-of-"
 "line code (PixelFunctionType of the form \"module_name.function_name\"), "
@@ -1794,11 +1800,11 @@ msgid ""
 "ModuleNotFoundError exceptions."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1539
+#: ../../source/drivers/raster/vrt.rst:1568
 msgid "Security implications"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1541
+#: ../../source/drivers/raster/vrt.rst:1570
 msgid ""
 "The ability to run Python code potentially opens the door to many "
 "potential vulnerabilities if the user of GDAL may process untrusted "
@@ -1807,19 +1813,19 @@ msgid ""
 "the following configuration options:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1553
+#: ../../source/drivers/raster/vrt.rst:1582
 msgid ""
 "YES: all VRT scripts are considered as trusted and their Python pixel "
 "functions will be run when pixel operations are involved."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1554
+#: ../../source/drivers/raster/vrt.rst:1583
 msgid ""
 "NO: all VRT scripts are considered untrusted, and none Python "
 "pixelfunction will be run."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1555
+#: ../../source/drivers/raster/vrt.rst:1584
 msgid ""
 "TRUSTED_MODULES (default setting): all VRT scripts with inline Python "
 "code in their PixelFunctionCode elements will be considered untrusted and"
@@ -1829,11 +1835,11 @@ msgid ""
 ":config:`GDAL_VRT_PYTHON_TRUSTED_MODULES` configuration option."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1564
+#: ../../source/drivers/raster/vrt.rst:1593
 msgid "Linking mechanism to a Python interpreter"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1566
+#: ../../source/drivers/raster/vrt.rst:1595
 msgid ""
 "Currently only CPython 2 and 3 is supported. The GDAL shared object is "
 "not explicitly linked at build time to any of the CPython library. When "
@@ -1859,11 +1865,11 @@ msgid ""
 " Python version is used."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1587
+#: ../../source/drivers/raster/vrt.rst:1616
 msgid "Just-in-time compilation"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1589
+#: ../../source/drivers/raster/vrt.rst:1618
 msgid ""
 "The use of a just-in-time compiler may significantly speed up execution "
 "times. `Numba <http://numba.pydata.org/>`_ has been successfully tested. "
@@ -1871,29 +1877,29 @@ msgid ""
 " so that the just-in-time compiler may cache its compilation."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1594
+#: ../../source/drivers/raster/vrt.rst:1623
 msgid "Given the following :file:`mandelbrot.py` file :"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1646
+#: ../../source/drivers/raster/vrt.rst:1675
 msgid "The following VRT file can be used (to be opened with QGIS for example)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1683
+#: ../../source/drivers/raster/vrt.rst:1712
 msgid "Warped VRT"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1685
+#: ../../source/drivers/raster/vrt.rst:1714
 msgid ""
 "A warped VRT is a VRTDataset with subClass=\"VRTWarpedDataset\". It has a"
 " GDALWarpOptions element which describe the warping options."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1729
+#: ../../source/drivers/raster/vrt.rst:1758
 msgid "Pansharpened VRT"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1733
+#: ../../source/drivers/raster/vrt.rst:1762
 msgid ""
 "A VRT can describe a dataset resulting from a `pansharpening operation "
 "<https://en.wikipedia.org/wiki/Pansharpened_image>`_ The pansharpening "
@@ -1902,7 +1908,7 @@ msgid ""
 "the panchromatic band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1739
+#: ../../source/drivers/raster/vrt.rst:1768
 msgid ""
 "VRT pansharpening assumes that the panchromatic and spectral bands have "
 "the same projection (or no projection). If that is not the case, "
@@ -1911,7 +1917,7 @@ msgid ""
 "will have as extent the union of all extents."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1744
+#: ../../source/drivers/raster/vrt.rst:1773
 msgid ""
 "Currently the only supported pansharpening algorithm is a \"weighted\" "
 "Brovey algorithm. The general principle of this algorithm is that, after "
@@ -1922,11 +1928,11 @@ msgid ""
 "over the pseudo panchromatic intensity."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1751
+#: ../../source/drivers/raster/vrt.rst:1780
 msgid "Corresponding pseudo code:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1760
+#: ../../source/drivers/raster/vrt.rst:1789
 msgid ""
 "A valid pansharpened VRT must declare subClass=\"VRTPansharpenedDataset\""
 " as an attribute of the VRTDataset top element. The VRTDataset element "
@@ -1940,7 +1946,7 @@ msgid ""
 "assumed. **OpenOptions** can also be specified"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1770
+#: ../../source/drivers/raster/vrt.rst:1799
 msgid ""
 "The SpectralBand element must generally have a **dstBand** attribute to "
 "specify the number of the output band (starting with 1) to which the "
@@ -1949,7 +1955,7 @@ msgid ""
 "pansharpening, but not exposed as an output band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1775
+#: ../../source/drivers/raster/vrt.rst:1804
 msgid ""
 "Panchromatic and spectral bands should generally come from different "
 "datasets, since bands of a GDAL dataset are assumed to have all the same "
@@ -1958,14 +1964,14 @@ msgid ""
 "and geotransform."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1780
+#: ../../source/drivers/raster/vrt.rst:1809
 msgid ""
 "An example of a minimalist working VRT is the following. It will "
 "generates a dataset with 3 output bands corresponding to the 3 input "
 "spectral bands of multispectral.tif, pansharpened with panchromatic.tif."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1819
+#: ../../source/drivers/raster/vrt.rst:1848
 msgid ""
 "In the above example, 3 output pansharpend bands will be created from the"
 " 3 declared input spectral bands. The weights will be 1/3. Cubic "
@@ -1973,7 +1979,7 @@ msgid ""
 "panchromatic band will be reused for the VRT dataset."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1824
+#: ../../source/drivers/raster/vrt.rst:1853
 msgid ""
 "It is possible to create more explicit and declarative pansharpened VRT, "
 "allowing for example to only output part of the input spectral bands "
@@ -1982,20 +1988,20 @@ msgid ""
 "pansharpened bands."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1829
+#: ../../source/drivers/raster/vrt.rst:1858
 msgid ""
 "In addition to the above mentioned required PanchroBand and SpectralBand "
 "elements, the PansharpeningOptions element may have the following "
 "children elements :"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1832
+#: ../../source/drivers/raster/vrt.rst:1861
 msgid ""
 "**Algorithm**: to specify the pansharpening algorithm. Currently, only "
 "WeightedBrovey is supported."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1833
+#: ../../source/drivers/raster/vrt.rst:1862
 msgid ""
 "**AlgorithmOptions**: to specify the options of the pansharpening "
 "algorithm. With WeightedBrovey algorithm, the only supported option is a "
@@ -2004,14 +2010,14 @@ msgid ""
 "bands. There must be as many values as declared input spectral bands."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1834
+#: ../../source/drivers/raster/vrt.rst:1863
 msgid ""
 "**Resampling**: the resampling kernel used to resample the spectral bands"
 " to the resolution of the panchromatic band. Can be one of Cubic "
 "(default), Average, Near, CubicSpline, Bilinear, Lanczos."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1835
+#: ../../source/drivers/raster/vrt.rst:1864
 msgid ""
 "**NumThreads**: Number of worker threads. Integer number or ALL_CPUS. If "
 "this option is not set, the :config:`GDAL_NUM_THREADS` configuration "
@@ -2019,14 +2025,14 @@ msgid ""
 "ALL_CPUS)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1836
+#: ../../source/drivers/raster/vrt.rst:1865
 msgid ""
 "**BitDepth**: Can be used to specify the bit depth of the panchromatic "
 "and spectral bands (e.g. 12). If not specified, the NBITS metadata item "
 "from the panchromatic band will be used if it exists."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1837
+#: ../../source/drivers/raster/vrt.rst:1866
 msgid ""
 "**NoData**: Nodata value to take into account for panchromatic and "
 "spectral bands. It will be also used as the output nodata value. If not "
@@ -2035,7 +2041,7 @@ msgid ""
 "prevent that)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1838
+#: ../../source/drivers/raster/vrt.rst:1867
 msgid ""
 "**SpatialExtentAdjustment**: Can be one of **Union** (default), "
 "**Intersection**, **None** or **NoneWithoutWarning**. Controls the "
@@ -2046,7 +2052,7 @@ msgid ""
 "NoneWithoutWarning is the same as None, but in a silent way."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1840
+#: ../../source/drivers/raster/vrt.rst:1869
 msgid ""
 "The below examples creates a VRT dataset with 4 bands. The first band is "
 "the panchromatic band. The 3 following bands are than red, green, blue "
@@ -2056,34 +2062,34 @@ msgid ""
 " bound to an output band."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1906
+#: ../../source/drivers/raster/vrt.rst:1935
 msgid "Multidimensional VRT"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1910
+#: ../../source/drivers/raster/vrt.rst:1939
 msgid "See the dedicated :ref:`vrt_multidimensional` page."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1919
+#: ../../source/drivers/raster/vrt.rst:1948
 msgid "Processed dataset VRT"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1923
+#: ../../source/drivers/raster/vrt.rst:1952
 msgid ""
 "A VRT processed dataset is a specific variant of the :ref:`raster.vrt` "
 "format, to apply chained processing steps that may apply to several bands"
 " at the same time."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1926
+#: ../../source/drivers/raster/vrt.rst:1955
 msgid "See the dedicated :ref:`vrt_processed_dataset` page."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1935
+#: ../../source/drivers/raster/vrt.rst:1964
 msgid "vrt:// connection string"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1939
+#: ../../source/drivers/raster/vrt.rst:1968
 msgid ""
 "In some contexts, it might be useful to benefit from features of VRT "
 "without having to create a file or to provide the rather verbose VRT XML "
@@ -2091,11 +2097,11 @@ msgid ""
 "syntax is supported for the dataset name since GDAL 3.1"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1957
+#: ../../source/drivers/raster/vrt.rst:1986
 msgid "For example:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1980
+#: ../../source/drivers/raster/vrt.rst:2009
 msgid ""
 "The supported options currently are ``bands``, ``a_nodata``, ``a_srs``, "
 "``a_ullr``, ``ovr``, ``expand``, ``a_scale``, ``a_offset``, ``ot``, "
@@ -2105,11 +2111,11 @@ msgid ""
 " and ``sd``."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1984
+#: ../../source/drivers/raster/vrt.rst:2013
 msgid "Other options may be added in the future."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1986
+#: ../../source/drivers/raster/vrt.rst:2015
 msgid ""
 "The effect of the ``bands`` option is to change the band composition. The"
 " values specified are the source band numbers (between 1 and N), possibly"
@@ -2118,14 +2124,14 @@ msgid ""
 "running `gdal_translate -of VRT -b num1 ... -b numN`."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1991
+#: ../../source/drivers/raster/vrt.rst:2020
 msgid ""
 "The effect of the ``a_nodata`` option (added in GDAL 3.9) is to assign "
 "(override) the nodata value of the source in the same way as "
 "(:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1994
+#: ../../source/drivers/raster/vrt.rst:2023
 msgid ""
 "The effect of the ``a_srs`` option (added in GDAL 3.7) is to assign "
 "(override) the coordinate reference system of the source in the same way "
@@ -2134,7 +2140,7 @@ msgid ""
 "definition."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:1999
+#: ../../source/drivers/raster/vrt.rst:2028
 msgid ""
 "The effect of the ``a_ullr`` option (added in GDAL 3.7) is to assign "
 "(override) the georeferenced bounds of the source in the same way as "
@@ -2143,42 +2149,42 @@ msgid ""
 "lower right x,y)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2003
+#: ../../source/drivers/raster/vrt.rst:2032
 msgid ""
 "The effect of the ``ovr`` option (added in GDAL 3.7) is to specify which "
 "overview level of source file must be used, with the first overview level"
 " being 0 (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2006
+#: ../../source/drivers/raster/vrt.rst:2035
 msgid ""
 "The effect of the ``expand`` option (added in GDAL 3.7) is to expose a "
 "dataset with 1 band with a color table as a dataset with 3 (RGB) or 4 "
 "(RGBA) bands, as with (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2009
+#: ../../source/drivers/raster/vrt.rst:2038
 msgid ""
 "The effect of the ``a_scale`` option (added in GDAL 3.7) is to set band "
 "scaling value (no modification of pixel values is done), as with "
 "(:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2012
+#: ../../source/drivers/raster/vrt.rst:2041
 msgid ""
 "The effect of the ``a_offset`` option (added in GDAL 3.7) is to set band "
 "offset value (no modification of pixel values is done), as with "
 "(:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2015
+#: ../../source/drivers/raster/vrt.rst:2044
 msgid ""
 "The effect of the ``ot`` option (added in GDAL 3.7) is to force the "
 "output image bands to have a specific data type supported by the driver "
 "as with (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2018
+#: ../../source/drivers/raster/vrt.rst:2047
 msgid ""
 "The effect of the ``gcp`` option (added in GDAL 3.7) is to add the "
 "indicated ground control point to the output dataset. Values are a set of"
@@ -2190,7 +2196,7 @@ msgid ""
 "eastingN northingN [elevationN]`."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2023
+#: ../../source/drivers/raster/vrt.rst:2052
 msgid ""
 "The effect of the ``if`` option (added in GDAL 3.7) is to specify the "
 "format/driver name/s to be attempted to open the input file "
@@ -2199,7 +2205,7 @@ msgid ""
 "DRV1 -if DRV2 ... -if DRVN`."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2027
+#: ../../source/drivers/raster/vrt.rst:2056
 msgid ""
 "The effect of the ``scale`` option (added in GDAL 3.7) is to rescale the "
 "input pixel values from the range **src_min** to **src_max** to the range"
@@ -2213,7 +2219,7 @@ msgid ""
 "option in order to accommodate the intended output range."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2031
+#: ../../source/drivers/raster/vrt.rst:2060
 msgid ""
 "The effect of the ``exponent`` option (added in GDAL 3.7) is to apply "
 "non-linear scaling with a power function, a single value to be used with "
@@ -2222,14 +2228,14 @@ msgid ""
 "(:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2035
+#: ../../source/drivers/raster/vrt.rst:2064
 msgid ""
 "The effect of the ``outsize`` option (added in GDAL 3.7) is to set the "
 "size of the output, in numbers `pixel,line` or in fraction `pixel%,line%`"
 " as per (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2037
+#: ../../source/drivers/raster/vrt.rst:2066
 msgid ""
 "The effect of the ``projwin`` option (added in GDAL 3.8) is to select a "
 "subwindow from the source image in georeferenced coordinates in the same "
@@ -2239,7 +2245,7 @@ msgid ""
 " is also provided."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2042
+#: ../../source/drivers/raster/vrt.rst:2071
 msgid ""
 "The effect of the ``projwin_srs`` option (added in GDAL 3.8) is to "
 "specify the SRS in which to interpret the coordinates given with "
@@ -2247,7 +2253,7 @@ msgid ""
 "applies if ``projwin`` is also supplied."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2044
+#: ../../source/drivers/raster/vrt.rst:2073
 msgid ""
 "The effect of the ``tr`` option (added in GDAL 3.8) is to set the target "
 "resolution, two positive values in georeferenced coordinates, applied in "
@@ -2255,14 +2261,14 @@ msgid ""
 "numeric values separated by commas in the order 'xres,yres'."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2046
+#: ../../source/drivers/raster/vrt.rst:2075
 msgid ""
 "The effect of the ``r`` option (added in GDAL 3.8) is to set the "
 "resampling algorithm used, with 'nearest' as the default. This is applied"
 " in the same way as (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2048
+#: ../../source/drivers/raster/vrt.rst:2077
 msgid ""
 "The effect of the ``srcwin`` option (added in GDAL 3.8) is to select a "
 "subwindow from the source image based on pixel/line location as with "
@@ -2270,7 +2276,7 @@ msgid ""
 "separated by commas, in the order 'xoff,yoff,xsize,ysize'."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2051
+#: ../../source/drivers/raster/vrt.rst:2080
 msgid ""
 "The effect of the ``a_gt`` option (added in GDAL 3.8) is to "
 "override/assign the geotransform of the output as with "
@@ -2278,7 +2284,7 @@ msgid ""
 "separated by commas, in the order 'gt(0),gt(1),gt(2),gt(3),gt(4),gt(5)'."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2054
+#: ../../source/drivers/raster/vrt.rst:2083
 msgid ""
 "The effect of the ``oo`` option (added in GDAL 3.8) is to set driver-"
 "specific dataset open options, multiple values are allowed. The value "
@@ -2288,7 +2294,7 @@ msgid ""
 "as (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2057
+#: ../../source/drivers/raster/vrt.rst:2086
 msgid ""
 "The effect of the ``unscale`` option (added in GDAL 3.8) is to apply the "
 "scale/offset metadata for the bands to convert scaled values to unscaled "
@@ -2298,14 +2304,14 @@ msgid ""
 "see more details for the same argument as with (:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2059
+#: ../../source/drivers/raster/vrt.rst:2088
 msgid ""
 "The effect of the ``a_coord_epoch`` option (added in GDAL 3.8) is to "
 "assign a coordinate epoch, linked with the output SRS as with "
 "(:ref:`gdal_translate`)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2062
+#: ../../source/drivers/raster/vrt.rst:2091
 msgid ""
 "The effect of the ``nogcp`` option (added in GDAL 3.8) is to not copy the"
 " GCPs in the source dataset to the output dataset "
@@ -2313,7 +2319,7 @@ msgid ""
 "``nogcp=false`` (which is the default if not specified)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2065
+#: ../../source/drivers/raster/vrt.rst:2094
 msgid ""
 "The effect of the ``epo`` option (added in GDAL 3.8) is that ``srcwin`` "
 "or ``projwin`` values that fall partially outside the source raster "
@@ -2322,7 +2328,7 @@ msgid ""
 "default if not specified)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2067
+#: ../../source/drivers/raster/vrt.rst:2096
 msgid ""
 "The effect of the ``eco`` option (added in GDAL 3.8) is that ``srcwin`` "
 "or ``projwin`` values that fall completely outside the source raster "
@@ -2331,7 +2337,7 @@ msgid ""
 "default if not specified)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2069
+#: ../../source/drivers/raster/vrt.rst:2098
 msgid ""
 "The effect of the ``sd_name`` option (added in GDAL 3.9) is to choose an "
 "individual subdataset by name for sources that have multiple subdatasets."
@@ -2341,7 +2347,7 @@ msgid ""
 "with ``sd``."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2074
+#: ../../source/drivers/raster/vrt.rst:2103
 msgid ""
 "The effect of the ``sd`` option (added in GDAL 3.9) is to choose an "
 "individual subdataset by number for sources that have multiple "
@@ -2355,17 +2361,17 @@ msgid ""
 "option is mutually exclusive with ``sd_name``."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2083
+#: ../../source/drivers/raster/vrt.rst:2112
 msgid ""
 "The options may be chained together separated by '&'. (Beware the need "
 "for quoting to protect the ampersand)."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2093
+#: ../../source/drivers/raster/vrt.rst:2122
 msgid "Multi-threading optimizations"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2095
+#: ../../source/drivers/raster/vrt.rst:2124
 msgid ""
 "Starting with GDAL 3.6, the ComputeStatistics() implementation can "
 "benefit from multi-threading if the sources are not overlapping and "
@@ -2374,7 +2380,7 @@ msgid ""
 "``ALL_CPUS``."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2100
+#: ../../source/drivers/raster/vrt.rst:2129
 msgid ""
 "Starting with GDAL 3.10, the :oo:`NUM_THREADS` open option can be set to "
 "control specifically the multi-threading of VRT datasets. It defaults to "
@@ -2389,23 +2395,23 @@ msgid ""
 "SimpleSource belonging to different datasets."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2119
+#: ../../source/drivers/raster/vrt.rst:2148
 msgid ""
 "This can also be specified globally with the :config:`VRT_NUM_THREADS` "
 "configuration option."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2129
+#: ../../source/drivers/raster/vrt.rst:2158
 msgid ""
 "Note that the number of threads actually used is also limited by the "
 ":config:`GDAL_MAX_DATASET_POOL_SIZE` configuration option."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2133
+#: ../../source/drivers/raster/vrt.rst:2162
 msgid "Multi-threading issues"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2137
+#: ../../source/drivers/raster/vrt.rst:2166
 msgid ""
 "The below section applies to GDAL <= 2.2. Starting with GDAL 2.3, the use"
 " of VRT datasets is subject to the standard GDAL dataset multi-threaded "
@@ -2414,7 +2420,7 @@ msgid ""
 " use them in different threads)"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2143
+#: ../../source/drivers/raster/vrt.rst:2172
 msgid ""
 "When using VRT datasets in a multi-threading environment, you should be "
 "careful to open the VRT dataset by the thread that will use it "
@@ -2424,7 +2430,7 @@ msgid ""
 " will share the same handles to the underlying datasets."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2150
+#: ../../source/drivers/raster/vrt.rst:2179
 msgid ""
 "The shared attribute, on the SourceFilename indicates whether the dataset"
 " should be shared (value is 1) or not (value is 0). The default is 1. If "
@@ -2434,11 +2440,11 @@ msgid ""
 "force non-shared mode:"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2166
+#: ../../source/drivers/raster/vrt.rst:2195
 msgid "Performance considerations"
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2168
+#: ../../source/drivers/raster/vrt.rst:2197
 msgid ""
 "A VRT can reference many (hundreds, thousands, or more) datasets. Due to "
 "operating system limitations, and for performance at opening time, it is "
@@ -2455,14 +2461,14 @@ msgid ""
 "increase the pool size to 450."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2181
+#: ../../source/drivers/raster/vrt.rst:2210
 msgid ""
 "Starting with GDAL 3.7, the :config:`GDAL_MAX_DATASET_POOL_RAM_USAGE` "
 "configuration option to a number of bytes, to limit the RAM usage of "
 "opened datasets in the pool."
 msgstr ""
 
-#: ../../source/drivers/raster/vrt.rst:2186
+#: ../../source/drivers/raster/vrt.rst:2215
 msgid "Driver capabilities"
 msgstr ""
 
