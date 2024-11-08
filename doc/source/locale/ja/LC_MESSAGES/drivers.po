@@ -269,7 +269,7 @@ msgstr ""
 #: ../../source/drivers/vector/xlsx.rst:-1
 #: ../../source/drivers/vector/xodr.rst:-1
 msgid "Driver short name"
-msgstr ""
+msgstr "ドライバー短縮名"
 
 #: ../../source/drivers/raster/Idrisi.rst:7
 msgid "RST"

@@ -76,6 +76,11 @@ msgid ""
 "licensing terms than MIT, and it is the responsibility of users to check "
 "that they comply with the overall licensing terms."
 msgstr ""
+"ただし, GDAL は多くの依存関係に対してビルドできます.それぞれの依存関係には,"
+"それぞれのライセンス条項（おそらく LGPL, GPL またはプロプライエタリ）があります."
+"したがって, GDAL バイナリの使用は MIT よりも許可が少ないライセンス条項の対象となる"
+"可能性があります.ユーザーは,全体のライセンス条項に準拠しているかどうかを確認する責任があります."
+
 
 #~ msgid "The full licensing terms are available in the `LICENSE.TXT`_ file."
 #~ msgstr "完全なライセンス条項は `LICENSE.TXT`_ ファイルで利用できます."

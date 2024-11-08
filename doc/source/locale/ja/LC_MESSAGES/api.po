@@ -271,7 +271,7 @@ msgstr ""
 
 #: ../../source/api/cpl.rst
 msgid "Param input_data"
-msgstr ""
+msgstr "入力データパラメータ
 
 #: ../../source/api/cpl.rst
 msgid "Param input_size"

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/thanks.rst:5
 msgid "Thanks"
-msgstr ""
+msgstr "謝辞"
 
 #: ../../source/thanks.rst:7
 msgid ""
@@ -30,6 +30,8 @@ msgid ""
 "success. While it is always difficult to properly acknowledge all "
 "contributions, a few individuals particularly stand out:"
 msgstr ""
+"2024年でGDALは26年の歴史を持ち,多くの個人,企業、:ref:`sponsors` がその開発と成功に貢献してきました."
+"すべての貢献を適切に認識するのは常に難しいですが,いくつかの個人が特に目立っています:"
 
 #: ../../source/thanks.rst:12
 msgid ""

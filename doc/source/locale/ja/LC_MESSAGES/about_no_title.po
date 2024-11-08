@@ -31,8 +31,8 @@ msgid ""
 msgstr ""
 "GDAL はラスターとベクターの空間データ形式をを変換するライブラリです。これは MIT スタイル :ref:`license` の "
 "オープンソースとして `Open Source Geospatial Foundation`_ から公開されています. "
-"ライブラリとしてのGDALはすべてのサポートする形式をアプリケーションから単一のラスタ抽象データモデルか単一のベクター抽象モデルとして利用する機能を提供しています。またGDALではデータ変換やデータ加工をするための多彩で便利なコマンドラインユーティリティを提供しています."
-"  `NEWS`_ ページには 2024年 8月の GDAL/OGR 3.9.2 リリースについての情報があります."
+"ライブラリとしてのGDALはすべてのサポートする形式をアプリケーションから単一のラスタ抽象データモデルか単一のベクター抽象モデルとして利用する機能を提供しています.またGDALではデータ変換やデータ加工をするための多彩で便利なコマンドラインユーティリティを提供しています."
+"  `NEWS`_ ページには 2024年 10月の GDAL/OGR 3.9.3 リリースについての情報があります."
 
 #: ../../source/about_no_title.rst:5
 msgid ""
@@ -43,6 +43,10 @@ msgid ""
 " that  will provide guidance about priorities for the program's resources"
 " (open until November 11th, 2024)."
 msgstr ""
+"GDALプロジェクトは現在, :ref:`GDAL Sponsorship Program <rfc-83>` 活動に焦点を当てるためのフィードバックを募集しています."
+"プログラムのリソースの優先順位についてのガイダンスを提供する `アンケート "
+"<https://docs.google.com/forms/d/e/1FAIpQLSdMXygtDb5M0Ov0KK0u2wKkev1rMqAjRdTlwMeCl7Z1TGJTLw/viewform>`__ "
+" にご協力いただけると大変ありがたいです(2024年11月11日まで受け付けています)."
 
 #: ../../source/about_no_title.rst:13
 msgid "|offline-download|"
